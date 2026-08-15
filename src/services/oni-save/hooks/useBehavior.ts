@@ -35,7 +35,7 @@ export default function useBehavior<T extends GameObjectBehavior>(gameObjectId: 
       BehaviorDataTarget.Template,
       data
     ));
-  }, [dispatch]);
+  }, [dispatch, gameObjectId, behaviorName]);
 
   const onExtraDataModify = React.useCallback((data: Partial<T["extraData"]>) => {
     dispatch(modifyBehavior(
@@ -44,7 +44,7 @@ export default function useBehavior<T extends GameObjectBehavior>(gameObjectId: 
       BehaviorDataTarget.Extra,
       data
     ));
-  }, [dispatch]);
+  }, [dispatch, gameObjectId, behaviorName]);
 
   return {
     templateData,

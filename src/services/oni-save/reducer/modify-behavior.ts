@@ -24,7 +24,7 @@ export default function modifyBehaviorReducer(
     return state;
   }
 
-  let { gameObjectId, behaviorId, target, value, merge } = action.payload;
+  const { gameObjectId, behaviorId, target, value, merge } = action.payload;
 
   return tryModifySaveGame(state, saveGame =>
     performModifyBehavior(

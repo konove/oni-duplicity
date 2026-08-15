@@ -1,3 +1,4 @@
+import { AnyAction, Dispatch } from "redux";
 import { connect } from "react-redux";
 
 import { AppState } from "@/state";
@@ -7,8 +8,8 @@ export interface ImportMenuItemInputProps {
   gameObjectId: number;
 }
 
-const mapDispatchToProps = function(
-  dispatch: Function,
+const mapDispatchToProps = function (
+  dispatch: Dispatch<AnyAction>,
   props: ImportMenuItemInputProps
 ) {
   return {

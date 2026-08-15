@@ -22,7 +22,6 @@ import Tab from "@mui/material/Tab";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 
 import HeadPortrait from "./components/HeadPortrait";
-import Portrait from "./components/Portrait";
 
 export interface AppearanceProps {
   gameObjectId: number;

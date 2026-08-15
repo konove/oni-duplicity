@@ -3,13 +3,7 @@ import { AccessorizerBehavior, getAccessoryOfType } from "oni-save-parser";
 
 import { createStyles, withStyles, WithStyles } from "@/styles";
 
-import {
-  DuplicantContainer,
-  Hair,
-  Head,
-  Eyes,
-  Body,
-} from "@/components/duplicant";
+import { DuplicantContainer, Hair, Head, Eyes } from "@/components/duplicant";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 
 export interface DuplicantPortraitProps {

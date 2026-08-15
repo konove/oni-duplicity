@@ -36,7 +36,7 @@ export const RecoverableElement: React.FC<RecoverableElementProps> = ({
       });
       setTransientValue(-1);
     },
-    [planet?.recoverableElements, onModifyPlanet, planetId]
+    [planet?.recoverableElements, onModifyPlanet, resourceId]
   );
 
   if (!planet) {

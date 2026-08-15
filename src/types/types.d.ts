@@ -13,8 +13,8 @@ type PropsOfComponent<T> = T extends React.Component<infer P> ? P : never;
 interface Window {
   __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: any;
   __REDUX_DEVTOOLS_EXTENSION__?: any;
-  loadMockSave?: Function;
-  loadMockError?: Function;
+  loadMockSave?: () => void;
+  loadMockError?: () => void;
 }
 
 declare module "@changelog" {

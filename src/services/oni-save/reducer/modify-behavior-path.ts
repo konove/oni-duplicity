@@ -20,7 +20,7 @@ export default function modifyBehaviorPathReducer(
     return state;
   }
 
-  let { gameObjectId, behaviorName, behaviorPath, value } = action.payload;
+  const { gameObjectId, behaviorName, behaviorPath, value } = action.payload;
 
   return tryModifySaveGame(state, saveGame =>
     performModifyBehaviorPath(

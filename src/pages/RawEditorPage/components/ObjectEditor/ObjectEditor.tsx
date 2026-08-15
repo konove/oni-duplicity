@@ -25,7 +25,7 @@ const ObjectEditor: React.FC<ObjectEditorProps> = ({ saveGame, path }) => {
         },
         {} as Record<string, string>
       ),
-    [target]
+    [target, saveGame, path]
   );
 
   const editorFields = Object.keys(editors)

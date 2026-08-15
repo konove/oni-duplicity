@@ -21,10 +21,13 @@ const AddTraitButton: React.FC<Props> = ({
   t
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const chipRef = React.useRef<HTMLDivElement | null>(null);
+  // A callback ref into state rather than a useRef: the Menu needs the anchor
+  // during render, and reading `ref.current` there can position against a
+  // stale node.
+  const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
   return (
     <div className={className}>
-      <div ref={chipRef}>
+      <div ref={setAnchorEl}>
         <Chip
           color="primary"
           label={t(`duplicant_trait.verbs.add_titlecase`)}
@@ -34,7 +37,7 @@ const AddTraitButton: React.FC<Props> = ({
       </div>
       <Menu
         open={isOpen}
-        anchorEl={chipRef.current}
+        anchorEl={anchorEl}
         onClose={() => setIsOpen(false)}
       >
         {isOpen &&

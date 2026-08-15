@@ -1,7 +1,7 @@
 import platform from "platform";
 
 const OS_WINDOWS = /windows/i;
-const OS_MAC = /Mac|iOS|(OS\ X)/;
+const OS_MAC = /Mac|iOS|(OS X)/;
 const OS_LINUX = /linux/i;
 
 export type OSType = "windows" | "mac" | "linux" | "unknown";

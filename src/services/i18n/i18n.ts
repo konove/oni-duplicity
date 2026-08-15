@@ -7,7 +7,9 @@ import { isProd } from "@/runtime-env";
 //  Deferring until I get a chance to focus on splitting the bundles.
 // import Backend from "i18next-xhr-backend";
 
-i18n.use(initReactI18next).init({
+// Initialisation is asynchronous but nothing awaits it; react-i18next
+// re-renders consumers once resources are ready.
+void i18n.use(initReactI18next).init({
   fallbackLng: "en",
 
   ns: ["common", "oni"],

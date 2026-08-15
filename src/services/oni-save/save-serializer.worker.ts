@@ -81,7 +81,7 @@ function progressReporter(
   };
 }
 
-let lastProgress: number = 0;
+const lastProgress: number = 0;
 function onProgress(message: string) {
   const elapsed = Date.now() - lastProgress;
   if (elapsed > 200) {

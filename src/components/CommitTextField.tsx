@@ -61,9 +61,18 @@ const CommitTextField: React.FC<CommitTextFieldProps> = props => {
     [propsOnBlur, commit]
   );
 
+  // Hold the latest commit in a ref so the unmount effect can call it without
+  // listing it as a dependency. Depending on `commit` directly would tear down
+  // and re-run the effect on every change, committing on each re-render rather
+  // than only on unmount.
+  const commitRef = React.useRef(commit);
+  React.useEffect(() => {
+    commitRef.current = commit;
+  }, [commit]);
+
   React.useEffect(() => {
     // On unmount, try to commit.
-    return () => commit();
+    return () => commitRef.current();
   }, []);
 
   const displayValue = editValue == null ? prevValue : editValue;

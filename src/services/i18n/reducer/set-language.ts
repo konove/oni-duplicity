@@ -19,7 +19,9 @@ export default function setLanguageReducer(
 
   const lang = (action as SetLanguageAction).payload;
 
-  i18n.changeLanguage(lang);
+  // Fire and forget: reducers must stay synchronous, and the language switch
+  // resolving late is fine.
+  void i18n.changeLanguage(lang);
 
   return {
     ...state,

@@ -21,7 +21,7 @@ const AbstractLoadButton: React.FC<Props> = ({
     if (inputRef.current) {
       inputRef.current.click();
     }
-  }, [inputRef]);
+  }, []);
 
   const onFileChange = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,6 +38,10 @@ const AbstractLoadButton: React.FC<Props> = ({
 
   return (
     <>
+      {/* `onClick` reads inputRef only when the consumer invokes it as an
+          event handler, never during render. The rule cannot see that through
+          the render-prop call, so this is a false positive. */}
+      {/* eslint-disable-next-line react-hooks/refs */}
       {children({ disabled, onClick })}
       <input
         ref={inputRef}

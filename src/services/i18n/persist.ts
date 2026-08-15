@@ -14,7 +14,9 @@ export function loadState(
   state: I18NState,
   persisted: PersistedState
 ): I18NState {
-  i18n.changeLanguage(persisted.language);
+  // Fire and forget: this runs while rehydrating state, and a failure to
+  // switch language must not block the load.
+  void i18n.changeLanguage(persisted.language);
 
   return {
     ...state,

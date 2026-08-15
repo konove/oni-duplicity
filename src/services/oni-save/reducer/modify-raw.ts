@@ -16,7 +16,7 @@ export default function modifyRawReducer(
     return state;
   }
 
-  let { path, data } = action.payload;
+  const { path, data } = action.payload;
 
   return tryModifySaveGame(state, saveGame =>
     performModifyRaw(saveGame, path, data)

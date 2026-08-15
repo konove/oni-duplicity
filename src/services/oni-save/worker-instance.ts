@@ -18,6 +18,18 @@ const worker = new Worker(
   new URL("./save-serializer.worker.ts", import.meta.url)
 );
 
+/**
+ * `worker.onerror` hands back an ErrorEvent, not an Error. Rejecting with a
+ * non-Error loses the stack and breaks anything doing `instanceof Error`
+ * downstream, so unwrap it here.
+ */
+function toError(event: ErrorEvent): Error {
+  if (event.error instanceof Error) {
+    return event.error;
+  }
+  return new Error(event.message || "Save worker failed");
+}
+
 export function parseSave(
   data: ArrayBuffer,
   bypassVersionCheck: boolean,
@@ -30,13 +42,15 @@ export function parseSave(
     };
 
     worker.onerror = (error) => {
-      reject(error);
+      reject(toError(error));
     };
     worker.onmessage = (message: SaveParserResultEvent) => {
       const { data } = message;
       switch (data.type) {
         case RESPONSE_PROGRESS:
-          onProgress && onProgress(data.message);
+          if (onProgress) {
+            onProgress(data.message);
+          }
           break;
         case RESPONSE_PARSE_SUCCESS:
           unhook();
@@ -65,12 +79,14 @@ export function writeSave(
       worker.onmessage = null;
     };
 
-    worker.onerror = (error) => reject(error);
+    worker.onerror = (error) => reject(toError(error));
     worker.onmessage = (message: SaveParserResultEvent) => {
       const { data } = message;
       switch (data.type) {
         case RESPONSE_PROGRESS:
-          onProgress && onProgress(data.message);
+          if (onProgress) {
+            onProgress(data.message);
+          }
           break;
         case RESPONSE_WRITE_SUCCESS:
           unhook();

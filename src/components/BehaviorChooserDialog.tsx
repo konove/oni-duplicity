@@ -50,7 +50,7 @@ const BehaviorChooserDialog: React.FC<Props> = ({
   );
   const onApplyClick = React.useCallback(() => {
     onApply(selectedTargets);
-  }, [selectedTargets]);
+  }, [selectedTargets, onApply]);
   return (
     <Dialog open={open} airia-labeledby="behavior-chooser-dialog-title">
       {open && (

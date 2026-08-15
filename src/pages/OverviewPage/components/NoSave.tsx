@@ -17,7 +17,6 @@ import { OSType } from "@/runtime-env";
 
 import PageContainer from "@/components/PageContainer";
 import LoadButton from "@/components/LoadButton";
-import LoadExampleButton from "@/components/LoadExampleButton";
 
 const styles = (theme: Theme) =>
   createStyles({

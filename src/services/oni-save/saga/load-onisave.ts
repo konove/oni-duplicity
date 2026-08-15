@@ -83,7 +83,7 @@ function readFile(file: File): Promise<ArrayBuffer> {
       accept(reader.result as ArrayBuffer);
     };
     reader.onerror = () => {
-      reject(reader.error);
+      reject(reader.error ?? new Error("Failed to read save file."));
     };
     reader.readAsArrayBuffer(file);
   });

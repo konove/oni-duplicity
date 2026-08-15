@@ -36,7 +36,7 @@ const Difficulty: React.FC<Props> = ({ className, classes }) => {
             <Select
               value={difficulty[name]}
               onChange={e =>
-                onModifyDifficulty(name, e.target.value as string)
+                onModifyDifficulty(name, e.target.value)
               }
             >
               {QualityLevelSettingValues[name].map(value => (

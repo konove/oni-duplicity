@@ -44,7 +44,7 @@ export function addGameObject(
   gameObjectType: string,
   gameObject: GameObject
 ): SaveGame {
-  let groupIndex = findIndex(
+  const groupIndex = findIndex(
     saveGame.gameObjects,
     (x) => x.name === gameObjectType
   );
@@ -83,7 +83,7 @@ export function removeGameObject(
   // We need to use basic spread here instead of merge(), as merge treats
   //  empty array the same as empty object and will use the source value.
   // We want to directly set an empty array if we remove the last object.
-  let newSaveGame = {
+  const newSaveGame = {
     ...saveGame,
     gameObjects: replace(saveGame.gameObjects, groupIndex, {
       ...saveGame.gameObjects[groupIndex],
@@ -144,7 +144,7 @@ export function replaceGameObject(
     gameObjectId
   );
 
-  let newSaveGame = {
+  const newSaveGame = {
     ...saveGame,
     gameObjects: replace(saveGame.gameObjects, groupIndex, {
       ...saveGame.gameObjects[groupIndex],
@@ -239,10 +239,9 @@ function getGameObjectLocationById(
   gameObjectId: number
 ): [number, number] {
   const { gameObjects: gameObjectGroups } = saveGame;
-  let gameObjectIndex = -1;
   for (let groupIndex = 0; groupIndex < gameObjectGroups.length; groupIndex++) {
     const group = gameObjectGroups[groupIndex];
-    gameObjectIndex = getGameObjectIndexById(group, gameObjectId);
+    const gameObjectIndex = getGameObjectIndexById(group, gameObjectId);
     if (gameObjectIndex !== -1) {
       return [groupIndex, gameObjectIndex];
     }

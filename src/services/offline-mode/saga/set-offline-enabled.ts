@@ -19,7 +19,7 @@ function* handleSetOfflineEnabled(action: SetOfflineEnabledAction) {
       yield call(disableOfflineMode);
     }
     yield put(offlineSwitchCompleted(enabled));
-  } catch (e: any) {
+  } catch {
     yield put(offlineSwitchCompleted(false));
     return;
   }
@@ -35,7 +35,7 @@ async function disableOfflineMode() {
   validateServiceWorkerSupported();
   const registration = await navigator.serviceWorker.getRegistration();
   if (registration) {
-    registration.unregister();
+    await registration.unregister();
   }
 }
 

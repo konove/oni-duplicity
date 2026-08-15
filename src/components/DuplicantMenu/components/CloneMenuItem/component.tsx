@@ -12,7 +12,7 @@ const CloneMenuItem: React.FC<Props> = ({ onCloneDuplicant, onClick }) => {
   const onMenuItemClick = React.useCallback(() => {
     onCloneDuplicant();
     onClick();
-  }, []);
+  }, [onCloneDuplicant, onClick]);
   return <MenuItem onClick={onMenuItemClick}>Clone</MenuItem>;
 };
 

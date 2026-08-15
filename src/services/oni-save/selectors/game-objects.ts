@@ -21,7 +21,7 @@ export const gameObjectTypesByIdSelector = createServiceSelector(
   createSelector(
     gameObjectGroupsSelector.local,
     groups => {
-      let gameObjectTypesById: Record<number, string> = {};
+      const gameObjectTypesById: Record<number, string> = {};
       if (groups) {
         for (const group of groups) {
           const gameObjectIds = group.gameObjects

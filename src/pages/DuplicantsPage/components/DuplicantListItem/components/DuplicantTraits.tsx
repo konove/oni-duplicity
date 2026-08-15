@@ -17,7 +17,7 @@ export interface DuplicantTraitsProps {
   gameObjectId: number;
 }
 
-const styles = (theme: Theme) =>
+const styles = (_theme: Theme) =>
   createStyles({
     root: {
       display: "flex",

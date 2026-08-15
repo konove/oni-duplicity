@@ -1,6 +1,6 @@
 import { AnyAction } from "redux";
 
-import { OniSaveState, defaultOniSaveState, LoadingStatus } from "../state";
+import { OniSaveState, defaultOniSaveState } from "../state";
 import { isLoadOniSaveAction } from "../actions/load-onisave";
 
 export default function loadExampleSaveReducer(

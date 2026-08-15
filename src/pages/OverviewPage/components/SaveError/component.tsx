@@ -30,14 +30,14 @@ const useStyles = makeStyles((theme: Theme) =>
 const SaveError: React.FC = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  let saveError: any = useSelector(loadingErrorSelector);
+  const saveError: any = useSelector(loadingErrorSelector);
   const saveFile = useSelector(loadingFileSelector);
 
   const onForceLoad = React.useCallback(() => {
     if (saveFile) {
       dispatch(loadOniSave(saveFile, true));
     }
-  }, [saveFile]);
+  }, [saveFile, dispatch]);
 
   let errorContent: React.JSX.Element;
   if (saveError.code === E_VERSION_MAJOR) {

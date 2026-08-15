@@ -8,7 +8,10 @@ import SettingsIcon from "@mui/icons-material/Settings";
 
 const SettingsButton: React.FC = () => {
   const navigate = useNavigate();
-  const onClick = React.useCallback(() => navigate("/settings"), [navigate]);
+  // Wrapped so the handler returns void rather than react-router's promise.
+  const onClick = React.useCallback(() => {
+    void navigate("/settings");
+  }, [navigate]);
 
   return (
     <IconButton color="inherit" onClick={onClick}>

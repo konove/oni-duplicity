@@ -34,7 +34,8 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({
       }
       if (shouldNavigate(event, target)) {
         event.preventDefault();
-        navigate(to);
+        // navigate() returns a promise in react-router 7; nothing here awaits it.
+        void navigate(to);
       }
     },
     [onClick, target, navigate, to]

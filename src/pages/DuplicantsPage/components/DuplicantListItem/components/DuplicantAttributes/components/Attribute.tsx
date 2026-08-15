@@ -22,7 +22,7 @@ const AttributeName: React.FC<Props> = ({ gameObjectId, attributeId, t }) => {
     return <div>Error: No Data</div>;
   }
 
-  let attribute = find(
+  const attribute = find(
     templateData.saveLoadLevels,
     x => x.attributeId === attributeId
   );

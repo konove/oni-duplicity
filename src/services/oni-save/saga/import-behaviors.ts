@@ -31,7 +31,7 @@ function* handleImportBehaviorsSaga(
   let content: any;
   try {
     content = JSON.parse(contentStr);
-  } catch (e: any) {
+  } catch {
     onError("Invalid import data.");
     return;
   }
@@ -68,7 +68,7 @@ function readFile(file: File): Promise<string> {
       accept(reader.result as string);
     };
     reader.onerror = () => {
-      reject(reader.error);
+      reject(reader.error ?? new Error("Failed to read import file."));
     };
     reader.readAsText(file);
   });
