@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import {
   sortTraitIdsByName,
-  traitDescKey,
+  traitTooltip,
   traitNameKey,
 } from "@/services/oni-save/traits";
 
@@ -56,7 +56,7 @@ const DuplicantTraits: React.FC<Props> = ({
           className={classes.trait}
           variant="body2"
           component="div"
-          title={t(traitDescKey(trait), { defaultValue: "" })}
+          title={traitTooltip(trait, t)}
         >
           {t(traitNameKey(trait), { defaultValue: trait })}
         </Typography>

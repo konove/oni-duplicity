@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 import {
   sortTraitIdsByName,
-  traitDescKey,
+  traitTooltip,
   traitNameKey,
 } from "@/services/oni-save/traits";
 
@@ -52,7 +52,7 @@ const AddTraitButton: React.FC<Props> = ({
             <MenuItem
               key={trait}
               value={trait}
-              title={t(traitDescKey(trait), { defaultValue: "" })}
+              title={traitTooltip(trait, t)}
               onClick={() => {
                 setIsOpen(false);
                 onAddTrait(trait);

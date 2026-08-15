@@ -13,9 +13,40 @@ export function traitDescKey(traitId: string): string {
   return `oni:DUPLICANTS.TRAITS.${traitId.toUpperCase()}.DESC`;
 }
 
+export function traitEffectsKey(traitId: string): string {
+  return `oni:DUPLICANTS.TRAITS.${traitId.toUpperCase()}.EFFECTS`;
+}
+
 /** The translated name, falling back to the raw id for unknown traits. */
 export function traitName(traitId: string, t: TFunction): string {
   return t(traitNameKey(traitId), { defaultValue: traitId });
+}
+
+/**
+ * The hover text for a trait: its flavour description followed by what it
+ * actually does.
+ *
+ * The game assembles this the same way (Klei.AI.Trait.GetTooltip) - only the
+ * description is a plain string, while the attribute modifiers, disabled
+ * errands and effect immunities are built from the trait's data. Those lines
+ * are extracted from the game and stored under EFFECTS.
+ *
+ * Not every trait has them: 41 of 146 do nothing a line can describe, or are
+ * implemented purely as behaviour.
+ */
+export function traitTooltip(traitId: string, t: TFunction): string {
+  const description = t(traitDescKey(traitId), { defaultValue: "" });
+
+  // returnObjects gives back the array; a missing key yields the key itself.
+  const effects = t(traitEffectsKey(traitId), {
+    returnObjects: true,
+    defaultValue: [],
+  }) as unknown;
+
+  const lines = Array.isArray(effects) ? (effects as string[]) : [];
+  return [description, ...lines.map((line) => `• ${line}`)]
+    .filter(Boolean)
+    .join("\n");
 }
 
 /**

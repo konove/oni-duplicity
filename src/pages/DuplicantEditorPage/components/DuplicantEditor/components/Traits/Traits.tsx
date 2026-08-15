@@ -15,7 +15,7 @@ import Chip from "@mui/material/Chip";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import {
   sortTraitsByName,
-  traitDescKey,
+  traitTooltip,
   traitNameKey,
 } from "@/services/oni-save/traits";
 
@@ -61,7 +61,7 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
           key={trait}
           className={classes.chip}
           label={t(traitNameKey(trait), { defaultValue: trait })}
-          title={t(traitDescKey(trait), { defaultValue: "" })}
+          title={traitTooltip(trait, t)}
           onDelete={() => {
             const newTraitIds = [...TraitIds];
             newTraitIds.splice(index, 1);

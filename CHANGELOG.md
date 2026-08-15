@@ -1,3 +1,16 @@
+## 3.23.0
+
+- Trait tooltips now say what the trait actually does, not just its flavour
+  text. Rock Fan reads "During meteor showers: +3 bonus to all Attributes";
+  Unpracticed Artist reads "Creativity: -3" and "Decor Morale Bonus: +5";
+  Trypophobia reads "Cannot do Digging Errands".
+- 105 of 146 traits carry effect lines. The rest are implemented purely as
+  behaviour and have nothing a line can state.
+
+The numbers are not in the game's string table - the game builds them at
+runtime from each trait's data - so they are extracted from the assembly by
+`tools/extract-trait-effects.py`, which is re-runnable when the game updates.
+
 ## 3.22.0
 
 - Add the missing "Pilot" interest. Rocketry arrived with Spaced Out! and was

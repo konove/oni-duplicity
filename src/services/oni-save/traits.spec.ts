@@ -6,6 +6,7 @@ import {
   traitDescKey,
   traitName,
   traitNameKey,
+  traitTooltip,
 } from "./traits";
 
 // Real ids and labels from the game: every one of these sorts differently by
@@ -101,5 +102,37 @@ describe("sortTraitsByName", () => {
     for (const item of ordered) {
       expect(traitIds[item.index]).toBe(item.trait);
     }
+  });
+});
+
+describe("traitTooltip", () => {
+  // `t` here resolves DESC and EFFECTS the way i18next does, including
+  // returnObjects for the array.
+  const tt = ((key: string, opts?: any) => {
+    if (key === "oni:DUPLICANTS.TRAITS.METEORPHILE.DESC") {
+      return "Meteor showers get this Duplicant really, really hyped";
+    }
+    if (key === "oni:DUPLICANTS.TRAITS.METEORPHILE.EFFECTS") {
+      return ["During meteor showers: +3 bonus to all Attributes"];
+    }
+    if (key === "oni:DUPLICANTS.TRAITS.PLAIN.DESC") {
+      return "Just a description";
+    }
+    return opts?.defaultValue ?? key;
+  }) as unknown as TFunction;
+
+  it("puts the effects under the description as bullets", () => {
+    expect(traitTooltip("Meteorphile", tt)).toBe(
+      "Meteor showers get this Duplicant really, really hyped\n" +
+        "• During meteor showers: +3 bonus to all Attributes",
+    );
+  });
+
+  it("returns just the description when a trait has no effect lines", () => {
+    expect(traitTooltip("Plain", tt)).toBe("Just a description");
+  });
+
+  it("returns nothing for a trait it knows nothing about", () => {
+    expect(traitTooltip("SomeModdedTrait", tt)).toBe("");
   });
 });
