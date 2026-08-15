@@ -1,8 +1,9 @@
 import * as React from "react";
-import { MinionResumeBehavior, MinionSkillNames } from "oni-save-parser";
+import { useSelector } from "react-redux";
+import { MinionIdentityBehavior, MinionResumeBehavior } from "oni-save-parser";
 import { find, findIndex } from "lodash";
 
-import { Trans } from "react-i18next";
+import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
@@ -12,14 +13,20 @@ import TableCell from "@mui/material/TableCell";
 import Checkbox from "@mui/material/Checkbox";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import { dlcIdsSelector } from "@/services/oni-save/selectors/dlc";
+import { availableSkills, skillName } from "@/services/oni-save/skills";
 
 export interface MasteriesProps {
   gameObjectId: number;
 }
 
-type Props = MasteriesProps;
-const Masteries: React.FC<Props> = ({ gameObjectId }) => {
+type Props = MasteriesProps & WithTranslation;
+const Masteries: React.FC<Props> = ({ gameObjectId, t }) => {
   const { templateData: { MasteryBySkillID }, onTemplateDataModify } = useBehavior(gameObjectId, MinionResumeBehavior);
+  const { templateData: identity } = useBehavior(gameObjectId, MinionIdentityBehavior);
+  const dlcIds = useSelector(dlcIdsSelector);
+
+  const skills = availableSkills(dlcIds, identity?.model?.name);
 
   function onChangeMastery(skillName: string, value: boolean) {
     const index = findIndex(MasteryBySkillID, x => x[0] === skillName);
@@ -62,13 +69,13 @@ const Masteries: React.FC<Props> = ({ gameObjectId }) => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {MinionSkillNames.map(skillName => (
-          <TableRow key={skillName}>
-            <TableCell>{skillName}</TableCell>
+        {skills.map(({ id }) => (
+          <TableRow key={id}>
+            <TableCell>{skillName(id, t)}</TableCell>
             <TableCell>
               <Checkbox
-                checked={getMastery(MasteryBySkillID, skillName)}
-                onChange={(_, value) => onChangeMastery(skillName, value)}
+                checked={getMastery(MasteryBySkillID, id)}
+                onChange={(_, value) => onChangeMastery(id, value)}
               />
             </TableCell>
           </TableRow>
@@ -77,7 +84,7 @@ const Masteries: React.FC<Props> = ({ gameObjectId }) => {
     </Table>
   );
 }
-export default Masteries;
+export default withTranslation()(Masteries);
 
 function getMastery(masteries: [string, boolean][], mastery: string): boolean {
   const entry = find(masteries, x => x[0] === mastery);

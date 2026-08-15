@@ -33,3 +33,24 @@ Two decor tiers are pinned by hand at the top: the `EffectorValues` scan cannot
 pair a declaration with its `amount` once `MONUMENT`'s nested entries
 interleave. Re-check them against `TUNING/BUILDINGS.cs` class `DECOR` when the
 game updates.
+
+## extract-skills.py
+
+Regenerates the skill table in the parser
+(`src/save-structure/const-data/skills/skills.ts`) and the `DUPLICANTS.SKILLS`
+names in `src/translations/en/oni.json`.
+
+Skills are not a flat list. Each records the content packs it needs and the
+duplicant model it applies to, and both come from `Database/Skills.cs` - partly
+as a `requiredDlcIds` constructor argument, partly as enclosing
+`if (DlcManager.IsContentSubscribed(...))` blocks. Needs the same `decomp`
+directory as the trait extractor above.
+
+Two things to watch after a game update:
+
+- A skill built in more than one branch takes the *intersection* of the
+  requirements, since it exists whenever any branch would build it.
+  `Astronauting1` is one of these.
+- Only a whole argument counts as the DLC list. Several skills switch their
+  *perks* on a DLC inline (`Farming1`), and matching a DLC id anywhere in the
+  call would wrongly gate the skill itself.

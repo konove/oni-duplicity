@@ -1,3 +1,13 @@
+## 3.25.0
+
+- The Skills tab now offers the right skills for the save. It listed a fixed
+  32, so the Aquatic Planet Pack's Basic Swimming and Divemaster were missing
+  entirely, and so were the ten Bionic Booster Pack skills.
+- Skills are filtered by the save's active content packs and by the duplicant's
+  model, matching the game: a standard duplicant in a five-pack save sees 44,
+  and a bionic one sees its own ten and nothing else.
+- Skills show their real names - "Hazmat Digging" rather than `Mining4`.
+
 ## 3.24.0
 
 - Rework the Attributes tab. Values were clipped inside fixed 50px fields,

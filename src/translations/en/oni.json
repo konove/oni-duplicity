@@ -1241,6 +1241,170 @@
         "NAME": "Operator",
         "DESC": ""
       }
+    },
+    "SKILLS": {
+      "Mining1": {
+        "NAME": "Hard Digging"
+      },
+      "Mining2": {
+        "NAME": "Superhard Digging"
+      },
+      "Mining3": {
+        "NAME": "Super-Duperhard Digging"
+      },
+      "Mining4": {
+        "NAME": "Hazmat Digging"
+      },
+      "Building1": {
+        "NAME": "Improved Construction I"
+      },
+      "Building2": {
+        "NAME": "Improved Construction II"
+      },
+      "Building3": {
+        "NAME": "Demolition"
+      },
+      "Farming1": {
+        "NAME": "Improved Farming I"
+      },
+      "Farming2": {
+        "NAME": "Crop Tending"
+      },
+      "Farming3": {
+        "NAME": "Improved Farming II"
+      },
+      "Ranching1": {
+        "NAME": "Critter Ranching I"
+      },
+      "Ranching2": {
+        "NAME": "Critter Ranching II"
+      },
+      "Researching1": {
+        "NAME": "Advanced Research"
+      },
+      "Researching2": {
+        "NAME": "Field Research"
+      },
+      "AtomicResearch": {
+        "NAME": "Applied Sciences Research"
+      },
+      "Researching4": {
+        "NAME": "Applied Sciences Research"
+      },
+      "Researching3": {
+        "NAME": "Astronomy"
+      },
+      "Astronomy": {
+        "NAME": "Astronomy"
+      },
+      "SpaceResearch": {
+        "NAME": "Data Analysis Researcher"
+      },
+      "RocketPiloting1": {
+        "NAME": "Rocket Piloting"
+      },
+      "RocketPiloting2": {
+        "NAME": "Rocket Piloting II"
+      },
+      "Cooking1": {
+        "NAME": "Grilling"
+      },
+      "Cooking2": {
+        "NAME": "Enhanced Seasoning"
+      },
+      "Cooking3": {
+        "NAME": "Fine Dining"
+      },
+      "Arting1": {
+        "NAME": "Art Fundamentals"
+      },
+      "Arting2": {
+        "NAME": "Aesthetic Design"
+      },
+      "Arting3": {
+        "NAME": "Masterworks"
+      },
+      "Hauling1": {
+        "NAME": "Improved Carrying I"
+      },
+      "Hauling2": {
+        "NAME": "Improved Carrying II"
+      },
+      "ThermalSuits": {
+        "NAME": "Suit Sustainability Training"
+      },
+      "Suits1": {
+        "NAME": "Exosuit Training"
+      },
+      "Technicals1": {
+        "NAME": "Improved Tinkering"
+      },
+      "Technicals2": {
+        "NAME": "Electrical Engineering"
+      },
+      "Engineering1": {
+        "NAME": "Mechatronics Engineering"
+      },
+      "Basekeeping1": {
+        "NAME": "Improved Strength"
+      },
+      "Basekeeping2": {
+        "NAME": "Plumbing"
+      },
+      "Pyrotechnics": {
+        "NAME": "Pyrotechnics"
+      },
+      "Astronauting1": {
+        "NAME": "Rocket Piloting"
+      },
+      "Astronauting2": {
+        "NAME": "Rocket Navigation"
+      },
+      "Medicine1": {
+        "NAME": "Medicine Compounding"
+      },
+      "Medicine2": {
+        "NAME": "Bedside Manner"
+      },
+      "Medicine3": {
+        "NAME": "Advanced Medical Care"
+      },
+      "Swimming": {
+        "NAME": "Basic Swimming"
+      },
+      "Swimming2": {
+        "NAME": "Divemaster"
+      },
+      "BionicsA1": {
+        "NAME": "Booster Processing I"
+      },
+      "BionicsA2": {
+        "NAME": "Booster Processing II"
+      },
+      "BionicsA3": {
+        "NAME": "Complex Processing"
+      },
+      "BionicsB1": {
+        "NAME": "Improved Gears I"
+      },
+      "BionicsB2": {
+        "NAME": "Improved Gears II"
+      },
+      "BionicsC1": {
+        "NAME": "Schematics"
+      },
+      "BionicsC2": {
+        "NAME": "Advanced Schematics"
+      },
+      "BionicsC3": {
+        "NAME": "Power Banking"
+      },
+      "BionicsD1": {
+        "NAME": "Improved Hardware"
+      },
+      "BionicsD2": {
+        "NAME": "Climate Control"
+      }
     }
   }
 }
