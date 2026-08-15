@@ -1,8 +1,8 @@
 import * as React from "react";
 import { entries, sortBy } from "lodash";
 
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 const languages: Record<string, string> = {
   en: "English",
@@ -21,8 +21,8 @@ const Language: React.FC<LanguageProps> = ({
   onChangeLanguage
 }) => {
   const onChange = React.useCallback(
-    (e: React.ChangeEvent<{ value: unknown }>) => {
-      onChangeLanguage(e.target.value as string);
+    (e: SelectChangeEvent<string>) => {
+      onChangeLanguage(e.target.value);
     },
     [onChangeLanguage]
   );

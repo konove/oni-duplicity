@@ -17,15 +17,11 @@ interface Window {
   loadMockError?: Function;
 }
 
-declare module "worker-loader!*" {
-  class WebpackWorker extends Worker {
-    constructor();
-  }
-
-  export = WebpackWorker;
-}
-
 declare module "@changelog" {
   const content: string;
   export = content;
 }
+
+// Stylesheets are handled by webpack's css/style loaders and imported purely
+// for their side effect.
+declare module "*.css";

@@ -6,11 +6,11 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
+} from "@/styles";
 
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import Paper from "@mui/material/Paper";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 
 import usePlanet from "@/services/oni-save/hooks/usePlanet";
 

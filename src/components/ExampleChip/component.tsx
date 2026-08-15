@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import Chip from "@material-ui/core/Chip";
+import Chip from "@mui/material/Chip";
 
 export interface ExampleChipChipProps {
   isExample: boolean;

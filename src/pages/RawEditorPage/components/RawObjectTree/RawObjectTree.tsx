@@ -2,10 +2,10 @@ import * as React from "react";
 import { get } from "lodash";
 import { SaveGame } from "oni-save-parser";
 
-import TreeView from "@material-ui/lab/TreeView";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import TreeItem from "@material-ui/lab/TreeItem";
+import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import { getSegmentName } from "../../editor-data";
 
 export interface RawObjectTreeProps {
@@ -20,17 +20,19 @@ const RawObjectTree: React.FC<RawObjectTreeProps> = ({
   onChangePath
 }) => {
   return (
-    <TreeView
+    <SimpleTreeView
       className={className}
-      defaultCollapseIcon={<ExpandMoreIcon />}
-      defaultExpandIcon={<ChevronRightIcon />}
+      slots={{
+        collapseIcon: ExpandMoreIcon,
+        expandIcon: ChevronRightIcon
+      }}
     >
       <RawTreeChildren
         saveGame={saveGame}
         path={[]}
         onChangePath={onChangePath}
       />
-    </TreeView>
+    </SimpleTreeView>
   );
 };
 
@@ -82,7 +84,7 @@ const RawTreeChild: React.FC<RawTreeChildProps> = ({
   const segmentName = getSegmentName(saveGame, path);
 
   return (
-    <TreeItem nodeId={path.join(".")} label={segmentName} onClick={onClick}>
+    <TreeItem itemId={path.join(".")} label={segmentName} onClick={onClick}>
       <RawTreeChildren
         saveGame={saveGame}
         path={path}

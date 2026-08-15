@@ -1,7 +1,7 @@
 import * as React from "react";
 import { AccessorizerBehavior, getAccessoryOfType } from "oni-save-parser";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
+import { createStyles, withStyles, WithStyles } from "@/styles";
 
 import {
   DuplicantContainer,
@@ -9,7 +9,7 @@ import {
   Head,
   Eyes,
   Body,
-} from "react-oni-duplicant";
+} from "@/components/duplicant";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 
 export interface DuplicantPortraitProps {

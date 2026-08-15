@@ -2,13 +2,13 @@ import * as React from "react";
 
 import { Trans } from "react-i18next";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Dialog from "@material-ui/core/Dialog";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
-import Button from "@material-ui/core/Button";
+import { createStyles, withStyles, WithStyles } from "@/styles";
+import Typography from "@mui/material/Typography";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogActions from "@mui/material/DialogActions";
+import Button from "@mui/material/Button";
 
 export interface ImportWarningDialogProps {
   isOpen: boolean;

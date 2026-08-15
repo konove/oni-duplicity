@@ -6,7 +6,7 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
+} from "@/styles";
 
 import usePlanets from "@/services/oni-save/hooks/usePlanets";
 

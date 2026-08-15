@@ -4,7 +4,7 @@ import { difference } from "lodash";
 
 import { Trans } from "react-i18next";
 
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

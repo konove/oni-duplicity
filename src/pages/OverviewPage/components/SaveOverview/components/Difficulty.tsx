@@ -1,11 +1,11 @@
 import * as React from "react";
 import { QualityLevelSettingValues } from "oni-save-parser";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
+import { createStyles, withStyles, WithStyles } from "@/styles";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 import useDifficulty from "@/services/oni-save/hooks/useDifficulty";
 import { keysOfType } from "@/utils";

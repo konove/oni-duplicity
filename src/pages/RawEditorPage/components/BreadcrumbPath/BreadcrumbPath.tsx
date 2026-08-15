@@ -1,8 +1,8 @@
 import * as React from "react";
 import { SaveGame } from "oni-save-parser";
 
-import Typography from "@material-ui/core/Typography";
-import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import Typography from "@mui/material/Typography";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
 
 import { getSegmentName } from "../../editor-data";
 

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 
 export interface AttributeNameProps {
   attributeId: string;

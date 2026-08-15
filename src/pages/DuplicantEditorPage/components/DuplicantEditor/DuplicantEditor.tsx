@@ -7,12 +7,12 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Divider from "@material-ui/core/Divider";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+} from "@/styles";
+import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
 import PageContainer from "@/components/PageContainer";
 import DuplicantPortrait from "@/components/DuplicantPortrait";
@@ -69,7 +69,9 @@ const styles = (theme: Theme) =>
     tabRow: {
       display: "flex",
       flexDirection: "column",
-      marginLeft: -theme.spacing(),
+      // See DuplicantAttributes: spacing() returns a string since MUI v5, so
+      // the negation has to go through the argument.
+      marginLeft: theme.spacing(-1),
       height: "100%"
     },
     tabContent: {

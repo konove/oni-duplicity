@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SaveGame } from "oni-save-parser";
 
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, Theme } from "@/styles";
 
 import PageContainer from "@/components/PageContainer";
 import RedirectIfNoSave from "@/components/RedirectIfNoSave";

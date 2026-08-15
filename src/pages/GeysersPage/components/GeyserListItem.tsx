@@ -4,13 +4,13 @@ import classnames from "classnames";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { Theme, makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
-import Slider from "@material-ui/core/Slider";
+import { Theme, makeStyles } from "@/styles";
+import Paper from "@mui/material/Paper";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Slider from "@mui/material/Slider";
 
 import useGeyser from "@/services/oni-save/hooks/useGeyser";
 
@@ -65,8 +65,8 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
   } = useGeyser(gameObjectId);
 
   const onGeyserTypeSelected = React.useCallback(
-    (e: React.ChangeEvent<{ value: unknown }>) => {
-      onChangeGeyserType(e.target.value as string);
+    (e: SelectChangeEvent<string>) => {
+      onChangeGeyserType(e.target.value);
     },
     [onChangeGeyserType]
   );

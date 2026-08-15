@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 
 import { Trans } from "react-i18next";
 
-import List from "@material-ui/core/List";
-import ListItemText from "@material-ui/core/ListItemText";
+import List from "@mui/material/List";
+import ListItemText from "@mui/material/ListItemText";
 
 import { hasSaveSelector } from "@/services/oni-save/selectors/save-game";
 import { dlcIdSelector } from "@/services/oni-save/selectors/dlc";
@@ -22,7 +22,6 @@ const Nav: React.FC = () => {
         <ListItemLink
           key={name}
           to={path}
-          button
           autoselect
           disabled={saveRequired ? !hasSave : false}
         >

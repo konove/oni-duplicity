@@ -1,11 +1,13 @@
 import * as React from "react";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
 
-import { ConnectedRouter } from "connected-react-router";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 
-import history from "@/history";
+import { HashRouter } from "react-router";
+
 import theme from "@/theme";
 
 import StoreProvider from "@/store/components/StoreProvider";
@@ -17,19 +19,27 @@ import ImportWarningDialog from "@/components/ImportWarningDialog";
 
 import Routes from "@/routes";
 
+// `prepend` puts MUI's own component styles at the top of <head>, so the
+// classes produced by @/styles (inserted afterwards by emotion's default
+// cache) win on equal specificity. This reproduces the JSS ordering the
+// `classes` overrides throughout this app were written against.
+const muiCache = createCache({ key: "mui", prepend: true });
+
 const Root: React.FC = () => (
-  <I18NProvider>
-    <StoreProvider>
-      <ConnectedRouter history={history}>
-        <MuiThemeProvider theme={theme}>
-          <CssBaseline />
-          <LoadingDialog />
-          <ImportWarningDialog />
-          <Routes />
-        </MuiThemeProvider>
-      </ConnectedRouter>
-    </StoreProvider>
-  </I18NProvider>
+  <CacheProvider value={muiCache}>
+    <I18NProvider>
+      <StoreProvider>
+        <HashRouter>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <LoadingDialog />
+            <ImportWarningDialog />
+            <Routes />
+          </ThemeProvider>
+        </HashRouter>
+      </StoreProvider>
+    </I18NProvider>
+  </CacheProvider>
 );
 
 export default Root;

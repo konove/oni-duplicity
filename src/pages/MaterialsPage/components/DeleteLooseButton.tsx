@@ -3,8 +3,8 @@ import { SimHashName } from "oni-save-parser";
 
 import { withTranslation, WithTranslation } from "react-i18next";
 
-import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from "@material-ui/icons/Delete";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 import { useDeleteMaterials } from "@/services/oni-save/hooks/useMaterials";
 

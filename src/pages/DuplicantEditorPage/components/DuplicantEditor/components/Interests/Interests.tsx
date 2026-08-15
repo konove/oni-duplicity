@@ -14,8 +14,8 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Chip from "@material-ui/core/Chip";
+} from "@/styles";
+import Chip from "@mui/material/Chip";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

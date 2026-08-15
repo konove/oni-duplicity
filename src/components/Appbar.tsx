@@ -1,15 +1,15 @@
 import * as React from "react";
 
-import MaterialAppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import MaterialAppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 import {
   createStyles,
   withStyles,
   WithStyles,
   Theme,
-} from "@material-ui/core/styles";
+} from "@/styles";
 
 import SettingsButton from "./SettingsButton";
 import SaveIconButton from "./SaveIconButton";

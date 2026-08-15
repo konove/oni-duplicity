@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { Theme, makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import { Theme, makeStyles } from "@/styles";
+import Typography from "@mui/material/Typography";
 
 import PageContainer from "@/components/PageContainer";
 

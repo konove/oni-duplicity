@@ -12,9 +12,11 @@ import {
   jsonToError,
 } from "./worker-messages";
 
-import SaveLoadWorker from "worker-loader!./save-serializer.worker";
-
-const worker = new SaveLoadWorker();
+// webpack 5 picks this pattern up natively and emits the worker as its own
+// chunk, which is what `worker-loader` used to do.
+const worker = new Worker(
+  new URL("./save-serializer.worker.ts", import.meta.url)
+);
 
 export function parseSave(
   data: ArrayBuffer,

@@ -9,9 +9,9 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Slider from "@material-ui/core/Slider";
+} from "@/styles";
+import Typography from "@mui/material/Typography";
+import Slider from "@mui/material/Slider";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

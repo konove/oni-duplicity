@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { makeStyles, Theme } from "@/styles";
 
 import ChangelogContent from "@changelog";
 
@@ -21,7 +21,11 @@ const ChangelogPage: React.FC<Props> = ({ t }) => {
   const styles = useStyles();
   return (
     <PageContainer title={t("changelog.title")} back>
-      <Markdown className={styles.markdown} children={ChangelogContent} />;
+      {/* react-markdown no longer takes a className, so the spacing lives on
+          a wrapper instead. */}
+      <div className={styles.markdown}>
+        <Markdown>{ChangelogContent}</Markdown>
+      </div>
     </PageContainer>
   );
 };

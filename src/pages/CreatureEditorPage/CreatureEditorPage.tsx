@@ -1,5 +1,5 @@
 import * as React from "react";
-import { RouteComponentProps } from "react-router";
+import { useParams } from "react-router";
 import { includes } from "lodash";
 
 import useGameObject from "@/services/oni-save/hooks/useGameObject";
@@ -12,15 +12,12 @@ import CreatureEditor from "./components/CreatureEditor";
 
 export interface RouteParams {
   gameObjectId: string;
+  [key: string]: string | undefined;
 }
 
-type Props = RouteComponentProps<RouteParams>;
+const CreatureEditorPage: React.FC = () => {
+  const { gameObjectId } = useParams<RouteParams>();
 
-const CreatureEditorPage: React.FC<Props> = ({
-  match: {
-    params: { gameObjectId }
-  }
-}) => {
   const goid = Number(gameObjectId);
   const { gameObjectType } = useGameObject(goid);
 

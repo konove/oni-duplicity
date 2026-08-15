@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { Trans } from "react-i18next";
 
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 export interface ExperienceProps {
   experience: number;

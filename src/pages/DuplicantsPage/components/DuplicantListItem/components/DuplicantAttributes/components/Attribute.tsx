@@ -4,8 +4,8 @@ import { find } from "lodash";
 
 import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
-import Typography from "@material-ui/core/Typography";
-import ErrorIcon from "@material-ui/icons/Error";
+import Typography from "@mui/material/Typography";
+import ErrorIcon from "@mui/icons-material/Error";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

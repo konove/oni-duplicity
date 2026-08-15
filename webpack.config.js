@@ -4,7 +4,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WebpackPwaManifest = require("webpack-pwa-manifest");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const isDev = process.env["NODE_ENV"] === "development";
@@ -14,156 +14,191 @@ const root = path.resolve(__dirname);
 const PATHS = {
   appPackageJson: path.resolve(root, "package.json"),
   appSrc: path.resolve(root, "./src"),
+  appPublic: path.resolve(root, "./public"),
   appDist: path.resolve(root, "./dist"),
   nodeModules: path.resolve(root, "./node_modules"),
-  changelog: path.resolve(root, "./CHANGELOG.md")
+  changelog: path.resolve(root, "./CHANGELOG.md"),
 };
 
 const { friendlyName, description } = require(PATHS.appPackageJson);
 
 const PUBLIC_URL_PATH = "/oni-duplicity/";
+const publicPath = isDev ? "/" : PUBLIC_URL_PATH;
 
 console.log("Webpack build", isDev ? "[development]" : "[production]");
 
 module.exports = {
   mode: isDev ? "development" : "production",
 
-  devtool: "source-map",
+  devtool: isDev ? "eval-source-map" : "source-map",
 
   devServer: {
-    contentBase: PATHS.appDist,
+    static: {
+      directory: PATHS.appPublic,
+    },
     hot: isDev,
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 8080,
   },
 
   entry: {
-    client: [path.join(PATHS.appSrc, "./index.tsx")]
+    client: [path.join(PATHS.appSrc, "./index.tsx")],
   },
 
   output: {
-    filename: "[name].[hash].bundle.js",
-    path: PATHS.appBuild,
-    publicPath: isDev ? "/" : PUBLIC_URL_PATH,
+    filename: "[name].[contenthash].bundle.js",
+    chunkFilename: "[name].[contenthash].chunk.js",
+    assetModuleFilename: "assets/[hash][ext][query]",
+    path: PATHS.appDist,
+    publicPath,
+    clean: true,
 
-    // Fix hot-reload interfering with worker-loader
-    globalObject: "this"
+    // Fix hot-reload interfering with web workers
+    globalObject: "self",
   },
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
     alias: {
       "@": PATHS.appSrc,
-      "@changelog": PATHS.changelog
-    }
+      "@changelog": PATHS.changelog,
+
+      // webpack 5 no longer polyfills node core modules. oni-save-parser
+      // reaches for `util.isObject`; see the shim for why we don't pull in
+      // the full `util` polyfill.
+      util: path.resolve(PATHS.appSrc, "./node-shims/util.ts"),
+    },
   },
 
   module: {
     rules: [
-      // Process source maps in input sources
-      //  All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      // Process source maps in input sources.
       {
         enforce: "pre",
         test: /\.(jsx?|tsx?)$/,
         loader: "source-map-loader",
-        include: [/src\/.+\.tsx?/]
+        include: [PATHS.appSrc],
       },
 
       {
         test: /\.tsx?$/,
+        include: [PATHS.appSrc],
         use: [
           {
-            loader: "ts-loader"
-          }
-        ]
+            loader: "ts-loader",
+            options: {
+              configFile: path.resolve(PATHS.appSrc, "tsconfig.json"),
+              transpileOnly: false,
+            },
+          },
+        ],
       },
 
       {
         test: /\.css$/,
-        loader: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
 
+      // Asset modules replace file-loader / url-loader / raw-loader.
       {
         test: /\.(woff|woff2)$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            name: "fonts/[hash].[ext]",
-            limit: 5000,
-            mimetype: "application/font-woff"
-          }
-        }
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 5000,
+          },
+        },
+        generator: {
+          filename: "fonts/[hash][ext][query]",
+        },
       },
       {
         test: /\.(ttf|eot|svg)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "fonts/[hash].[ext]"
-          }
-        }
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[hash][ext][query]",
+        },
       },
-
       {
-        test: /\.png/,
-        loader: "file-loader",
-        options: {
-          name: "images/[hash].[ext]"
-        }
+        test: /\.png$/,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[hash][ext][query]",
+        },
       },
-
       {
         test: /\.(txt|md)$/,
-        loader: "raw-loader"
-      }
-    ]
+        type: "asset/source",
+      },
+    ],
   },
 
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify(isDev ? "development" : "production")
-      }
+      "process.env.NODE_ENV": JSON.stringify(
+        isDev ? "development" : "production"
+      ),
     }),
 
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(PATHS.appSrc, "index.ejs")
+      template: path.resolve(PATHS.appSrc, "index.ejs"),
+      templateParameters: {
+        publicPath,
+        friendlyName,
+        description,
+      },
     }),
 
-    new WebpackPwaManifest({
-      name: `${friendlyName}: ${description}`,
-      short_name: friendlyName,
-      description,
-      background_color: "#000000",
-      crossorigin: null,
-      display: "standalone",
-      inject: true
+    new CopyWebpackPlugin({
+      patterns: [{ from: PATHS.appPublic, to: PATHS.appDist }],
     }),
 
-    new WorkboxPlugin.GenerateSW({
-      clientsClaim: true,
-      skipWaiting: true
-    })
+    // Production only. GenerateSW warns on every rebuild under --watch, and
+    // webpack-dev-server renders warnings as a full-screen overlay.
+    // Consequence: the Settings page's "Enable Offline Mode" toggle cannot be
+    // exercised via `npm start` (no /service-worker.js to register, and
+    // historyApiFallback serves index.html instead, failing the MIME check).
+    // Use `npm run build` and serve dist/ to test offline mode.
+    ...(isDev
+      ? []
+      : [
+          new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+            // The save-parser worker chunk is large; don't silently drop it.
+            maximumFileSizeToCacheInBytes: 12 * 1024 * 1024,
+          }),
+        ]),
   ],
 
   optimization: {
-    runtimeChunk: true,
+    runtimeChunk: "single",
     splitChunks: {
       chunks: "all",
       cacheGroups: {
         npm: {
-          test: /node_modules/,
-          name: mod => {
+          test: /[\\/]node_modules[\\/]/,
+          name(mod) {
+            if (!mod.context) {
+              return "npm.vendor";
+            }
             const relToModule = path.relative(PATHS.nodeModules, mod.context);
-            const moduleName = relToModule.substring(
-              0,
-              relToModule.indexOf(path.sep)
-            );
-            return `npm.${moduleName}`;
-          }
-        }
-      }
-    }
-  }
+            const [scopeOrName, maybeName] = relToModule.split(path.sep);
+            const moduleName = scopeOrName.startsWith("@")
+              ? `${scopeOrName}-${maybeName}`
+              : scopeOrName;
+            // Sanitise for use as a filename.
+            return `npm.${String(moduleName).replace(/[^a-z0-9_-]/gi, "-")}`;
+          },
+        },
+      },
+    },
+  },
+
+  performance: {
+    // This is a save editor; the parser bundle is inherently chunky.
+    hints: false,
+  },
 };

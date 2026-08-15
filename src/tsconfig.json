@@ -1,31 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "jsx": "react",
+    "target": "ES2020",
+    "jsx": "react-jsx",
 
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
 
-    "downlevelIteration": true,
-
-    "lib": [
-      "dom",
-      "es5",
-      "webworker",
-      "es2015.promise",
-      "es2015.generator",
-      "es2015.iterable"
-    ],
+    // DOM and WebWorker libs declare overlapping globals; skipLibCheck keeps
+    // those duplicate-identifier errors out of the build.
+    "lib": ["DOM", "DOM.Iterable", "ES2020", "WebWorker"],
+    "skipLibCheck": true,
 
     "strict": true,
 
-    "baseUrl": "../node_modules",
+    // Resolved relative to this file (src/), so "@/foo" -> "src/foo".
     "paths": {
-      "@/*": ["../src/*"]
+      "@/*": ["./*"]
     },
+    "types": ["webpack-env", "jest"],
 
     "sourceMap": true
-  }
+  },
+  "include": ["."]
 }

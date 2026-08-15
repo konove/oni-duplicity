@@ -1,7 +1,7 @@
 import * as React from "react";
 import { MinionIdentityBehavior } from "oni-save-parser";
 
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

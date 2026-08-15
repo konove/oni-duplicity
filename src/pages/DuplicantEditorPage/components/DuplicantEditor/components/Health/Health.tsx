@@ -7,9 +7,9 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+} from "@/styles";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 import Value from "./components/Value";
 

@@ -1,5 +1,3 @@
-import { RouterState } from "connected-react-router";
-
 import { I18NState, defaultI18NState } from "@/services/i18n/state";
 import { OniSaveState, defaultOniSaveState } from "@/services/oni-save/state";
 import {
@@ -9,8 +7,9 @@ import {
 
 export * from "./utils";
 
+// Routing state is owned by react-router, not redux; nothing in the app ever
+// selected off it, so there is no router slice here.
 export interface AppState {
-  router: RouterState;
   services: {
     i18n: I18NState;
     oniSave: OniSaveState;
@@ -19,7 +18,6 @@ export interface AppState {
 }
 
 export const defaultAppState: Readonly<AppState> = {
-  router: undefined as any,
   services: {
     i18n: defaultI18NState,
     oniSave: defaultOniSaveState,

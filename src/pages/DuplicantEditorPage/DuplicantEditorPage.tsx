@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { RouteComponentProps } from "react-router";
+import { useParams } from "react-router";
 
 import useGameObject from "@/services/oni-save/hooks/useGameObject";
 
@@ -11,17 +11,12 @@ import DuplicantNotFound from "./components/DuplicantNotFound";
 
 export interface DuplicantEditorRouteParams {
   gameObjectId: string;
+  [key: string]: string | undefined;
 }
 
-export interface DuplicantEditorProps
-  extends RouteComponentProps<DuplicantEditorRouteParams> {}
+const DuplicantEditorPage: React.FC = () => {
+  const { gameObjectId } = useParams<DuplicantEditorRouteParams>();
 
-type Props = DuplicantEditorProps;
-const DuplicantEditorPage: React.FC<Props> = ({
-  match: {
-    params: { gameObjectId }
-  }
-}) => {
   const { gameObjectType } = useGameObject(Number(gameObjectId));
   return (
     <>

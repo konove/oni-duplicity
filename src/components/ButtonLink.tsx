@@ -1,47 +1,62 @@
 import * as React from "react";
 
-import { withRouter, RouteComponentProps } from "react-router";
+import { useHref, useNavigate } from "react-router";
 
-import Button, { ButtonProps } from "@material-ui/core/Button";
+import Button, { ButtonProps } from "@mui/material/Button";
 
-import { onLinkClick } from "./utils";
+import { shouldNavigate } from "./utils";
 
 export interface ButtonLinkProps {
   className?: string;
   size?: ButtonProps["size"];
   title?: string;
   to: string;
+  target?: string;
   disabled?: boolean;
+  onClick?(e: React.MouseEvent<HTMLElement>): void;
+  children?: React.ReactNode;
 }
 
-type Props = ButtonLinkProps & RouteComponentProps;
+const ButtonLink: React.FC<ButtonLinkProps> = ({
+  className,
+  size,
+  title,
+  to,
+  target,
+  disabled,
+  onClick,
+  children,
+}) => {
+  const navigate = useNavigate();
+  const href = useHref(to);
 
-class ButtonLink extends React.Component<Props> {
-  private _onClick = onLinkClick.bind(this);
+  const handleClick = React.useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (onClick) {
+        onClick(event);
+      }
+      if (shouldNavigate(event, target)) {
+        event.preventDefault();
+        navigate(to);
+      }
+    },
+    [onClick, target, navigate, to]
+  );
 
-  render() {
-    const {
-      className,
-      size,
-      title,
-      history,
-      to,
-      disabled,
-      children
-    } = this.props;
-    return (
-      <Button
-        className={className}
-        size={size}
-        title={title}
-        component="a"
-        href={history.createHref({ pathname: to })}
-        disabled={disabled}
-        onClick={this._onClick}
-      >
-        {children}
-      </Button>
-    );
-  }
-}
-export default withRouter(ButtonLink);
+  return (
+    <Button
+      className={className}
+      size={size}
+      title={title}
+      component="a"
+      href={href}
+      target={target}
+      disabled={disabled}
+      onClick={handleClick}
+    >
+      {children}
+    </Button>
+  );
+};
+
+export default ButtonLink;

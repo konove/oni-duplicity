@@ -2,7 +2,7 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
-import Chip from "@material-ui/core/Chip";
+import Chip from "@mui/material/Chip";
 
 import { isSaveModifiedSelector } from "@/services/oni-save/selectors/save-game";
 

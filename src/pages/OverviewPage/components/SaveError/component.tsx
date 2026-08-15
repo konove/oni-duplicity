@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
+import { Theme, createStyles, makeStyles } from "@/styles";
 
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
 
 import {
   loadingErrorSelector,
@@ -39,7 +39,7 @@ const SaveError: React.FC = () => {
     }
   }, [saveFile]);
 
-  let errorContent: JSX.Element;
+  let errorContent: React.JSX.Element;
   if (saveError.code === E_VERSION_MAJOR) {
     errorContent = (
       <>

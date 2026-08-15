@@ -2,10 +2,10 @@ import * as React from "react";
 
 import classnames from "classnames";
 
-import { Theme, makeStyles } from "@material-ui/core/styles";
-import Divider from "@material-ui/core/Divider";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
+import { Theme, makeStyles } from "@/styles";
+import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 
 import useGameObject from "@/services/oni-save/hooks/useGameObject";
 

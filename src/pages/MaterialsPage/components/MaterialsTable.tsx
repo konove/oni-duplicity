@@ -2,13 +2,13 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { makeStyles, Theme } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import Table from "@material-ui/core/Table";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import TableCell from "@material-ui/core/TableCell";
-import TableBody from "@material-ui/core/TableBody";
+import { makeStyles, Theme } from "@/styles";
+import TextField from "@mui/material/TextField";
+import Table from "@mui/material/Table";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+import TableBody from "@mui/material/TableBody";
 
 import { useMaterialList } from "@/services/oni-save/hooks/useMaterials";
 

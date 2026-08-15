@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
+import { createStyles, withStyles, WithStyles } from "@/styles";
 
-import Drawer from "@material-ui/core/Drawer";
+import Drawer from "@mui/material/Drawer";
 
 import Sidebar from "@/components/Sidebar";
 import Appbar from "@/components/Appbar";
@@ -37,6 +37,7 @@ const styles = createStyles({
 export interface PageContainerProps {
   title: string;
   back?: boolean;
+  children?: React.ReactNode;
 }
 
 type Props = PageContainerProps & WithStyles<typeof styles>;

@@ -5,10 +5,10 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+} from "@/styles";
+import Typography from "@mui/material/Typography";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
 import useOfflineModeSettings from "@/services/offline-mode/hooks/useOfflineModeSettings";
 

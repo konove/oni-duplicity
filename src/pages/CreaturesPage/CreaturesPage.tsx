@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@/styles";
 
 import PageContainer from "@/components/PageContainer";
 import RedirectIfNoSave from "@/components/RedirectIfNoSave";

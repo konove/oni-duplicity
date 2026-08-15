@@ -1,14 +1,11 @@
 import {
   compose,
-  createStore as createReduxStore,
+  legacy_createStore as createReduxStore,
   applyMiddleware
 } from "redux";
 
 import createSagaMiddleware from "redux-saga";
 
-import { routerMiddleware } from "connected-react-router";
-
-import history from "@/history";
 import { defaultAppState } from "@/state";
 import { initialize } from "@/actions/initialize";
 
@@ -40,7 +37,7 @@ function createStore() {
   const store = createReduxStore(
     reducer,
     initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware, routerMiddleware(history)))
+    composeEnhancers(applyMiddleware(sagaMiddleware))
   );
 
   sagaMiddleware.run(saga);

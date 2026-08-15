@@ -7,8 +7,8 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+} from "@/styles";
+import Typography from "@mui/material/Typography";
 
 import PageContainer from "@/components/PageContainer";
 

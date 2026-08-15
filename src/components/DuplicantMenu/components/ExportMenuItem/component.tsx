@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { withTranslation, WithTranslation } from "react-i18next";
 
-import MenuItem from "@material-ui/core/MenuItem";
+import MenuItem from "@mui/material/MenuItem";
 
 import { MinionExportableBehaviors } from "@/exportable-behaviors";
 

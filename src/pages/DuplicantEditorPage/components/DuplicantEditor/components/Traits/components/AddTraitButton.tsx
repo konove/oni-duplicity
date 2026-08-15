@@ -2,9 +2,9 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation, Trans } from "react-i18next";
 
-import Chip from "@material-ui/core/Chip";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Chip from "@mui/material/Chip";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
 export interface AddTraitButtonProps {
   availableTraits: string[];

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import MenuItem from "@material-ui/core/MenuItem";
+import MenuItem from "@mui/material/MenuItem";
 
 export interface CloneMenuItemProps {
   onCloneDuplicant(): void;

@@ -8,9 +8,9 @@ import {
   Head,
   Eyes,
   Body
-} from "react-oni-duplicant";
+} from "@/components/duplicant";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
+import { createStyles, withStyles, WithStyles } from "@/styles";
 
 export interface PortraitProps {
   className?: string;

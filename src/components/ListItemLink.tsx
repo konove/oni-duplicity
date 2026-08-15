@@ -1,52 +1,68 @@
 import * as React from "react";
 
-import { withRouter, RouteComponentProps } from "react-router";
+import { useHref, useLocation, useNavigate } from "react-router";
 
-import ListItem from "@material-ui/core/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
 
-import { onLinkClick } from "./utils";
+import { shouldNavigate } from "./utils";
 
 export interface ListItemLinkProps {
   to: string;
   autoselect?: boolean;
-  button?: boolean;
+  target?: string;
   disabled?: boolean;
+  onClick?(e: React.MouseEvent<HTMLElement>): void;
+  children?: React.ReactNode;
 }
 
-type Props = ListItemLinkProps & RouteComponentProps;
-class ListItemLink extends React.Component<Props> {
-  private _onClick = onLinkClick.bind(this);
+const ListItemLink: React.FC<ListItemLinkProps> = ({
+  to,
+  autoselect,
+  target,
+  disabled,
+  onClick,
+  children,
+}) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const href = useHref(to);
 
-  render() {
-    const {
-      history,
-      location,
-      to,
-      autoselect,
-      button,
-      disabled,
-      children
-    } = this.props;
-    return (
-      <ListItem
-        selected={autoselect && pathStartsWith(location.pathname, to)}
-        component="a"
-        button={button as any} // typings are weird here.  `button` works fine, `button={true}` does not.
-        href={history.createHref({ pathname: to })}
-        disabled={disabled}
-        onClick={this._onClick}
-      >
-        {children}
-      </ListItem>
-    );
-  }
-}
-export default withRouter(ListItemLink);
+  const handleClick = React.useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (onClick) {
+        onClick(event);
+      }
+      if (shouldNavigate(event, target)) {
+        event.preventDefault();
+        navigate(to);
+      }
+    },
+    [onClick, target, navigate, to]
+  );
+
+  // Replaces MUI v4's `<ListItem button component="a">`. Deliberately not
+  // wrapped in a ListItem: the only consumer is Nav, whose <List component="nav">
+  // renders a <nav> rather than a <ul>, so an <li> here would be invalid markup.
+  return (
+    <ListItemButton
+      selected={autoselect && pathStartsWith(location.pathname, to)}
+      component="a"
+      href={href}
+      target={target}
+      disabled={disabled}
+      onClick={handleClick}
+    >
+      {children}
+    </ListItemButton>
+  );
+};
+
+export default ListItemLink;
 
 function pathStartsWith(path: string, startsWith: string): boolean {
   if (path === startsWith) {
     return true;
   }
 
-  return path.substr(0, startsWith.length + 1) === `${startsWith}/`;
+  return path.slice(0, startsWith.length + 1) === `${startsWith}/`;
 }

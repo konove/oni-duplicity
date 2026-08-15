@@ -1,7 +1,7 @@
 import * as React from "react";
 import classnames from "classnames";
 
-import { Theme, makeStyles } from "@material-ui/core/styles";
+import { Theme, makeStyles } from "@/styles";
 
 import useGameObjects from "@/services/oni-save/hooks/useGameObjects";
 import { CREATURE_GAMEOBJECT_TYPES } from "@/services/oni-save/creatures";

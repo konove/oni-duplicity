@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import IconButton from "@material-ui/core/IconButton";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export interface BackButtonProps {
   className?: string;

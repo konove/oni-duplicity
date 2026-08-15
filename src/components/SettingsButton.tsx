@@ -1,25 +1,20 @@
 import * as React from "react";
-import { connect } from "react-redux";
 
-import { push } from "connected-react-router";
+import { useNavigate } from "react-router";
 
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from "@mui/material/IconButton";
 
-import SettingsIcon from "@material-ui/icons/Settings";
+import SettingsIcon from "@mui/icons-material/Settings";
 
-const mapDispatchToProps = {
-  onClick: () => push("/settings")
+const SettingsButton: React.FC = () => {
+  const navigate = useNavigate();
+  const onClick = React.useCallback(() => navigate("/settings"), [navigate]);
+
+  return (
+    <IconButton color="inherit" onClick={onClick}>
+      <SettingsIcon />
+    </IconButton>
+  );
 };
-type DispatchProps = typeof mapDispatchToProps;
 
-type Props = DispatchProps;
-const SettingsButton: React.FC<Props> = ({ onClick }) => (
-  <IconButton color="inherit" onClick={onClick}>
-    <SettingsIcon />
-  </IconButton>
-);
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(SettingsButton);
+export default SettingsButton;

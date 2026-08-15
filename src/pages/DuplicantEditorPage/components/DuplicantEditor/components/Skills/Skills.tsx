@@ -5,7 +5,7 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
+} from "@/styles";
 
 import Experience from "./components/Experience";
 import Masteries from "./components/Masteries";

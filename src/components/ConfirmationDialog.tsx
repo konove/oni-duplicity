@@ -2,19 +2,19 @@ import * as React from "react";
 
 import { Trans } from "react-i18next";
 
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 export interface ConfirmationDialogProps {
   title: string;
   message: string;
   onConfirm(): void;
   onCancel?(): void;
-  children(props: ConfirmationDialogRenderProps): React.ReactChild;
+  children(props: ConfirmationDialogRenderProps): React.ReactNode;
 }
 export interface ConfirmationDialogRenderProps {
   onClick(): void;

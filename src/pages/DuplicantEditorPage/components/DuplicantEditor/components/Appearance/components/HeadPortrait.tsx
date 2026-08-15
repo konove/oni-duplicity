@@ -2,9 +2,9 @@ import * as React from "react";
 
 import classnames from "classnames";
 
-import { DuplicantContainer, Hair, Head, Eyes } from "react-oni-duplicant";
+import { DuplicantContainer, Hair, Head, Eyes } from "@/components/duplicant";
 
-import { createStyles, withStyles, WithStyles } from "@material-ui/core/styles";
+import { createStyles, withStyles, WithStyles } from "@/styles";
 
 export interface HeadPortraitProps {
   className?: string;

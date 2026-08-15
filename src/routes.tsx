@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Routes as RouterRoutes, Route, Navigate } from "react-router";
 
 import OverviewPage from "@/pages/OverviewPage";
 import DuplicantsPage from "@/pages/DuplicantsPage";
@@ -15,27 +15,19 @@ import SettingsPage from "@/pages/SettingsPage";
 import ChangelogPage from "@/pages/ChangelogPage";
 
 const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={OverviewPage} />
-    <Route path="/duplicants" exact component={DuplicantsPage} />
-    <Route
-      path="/duplicants/:gameObjectId"
-      exact
-      component={DuplicantEditorPage}
-    />
-    <Route path="/creatures" exact component={CreaturesPage} />
-    <Route
-      path="/creatures/:gameObjectId"
-      exact
-      component={CreatureEditorPage}
-    />
-    <Route path="/geysers" exact component={GeysersPage} />
-    {/* <Route path="/planets" exact component={PlanetsPage} /> */}
-    {/* <Route path="/materials" exact component={MaterialsPage} /> */}
-    <Route path="/raw" exact component={RawEditorPage} />
-    <Route path="/settings" exact component={SettingsPage} />
-    <Route path="/changelog" exact component={ChangelogPage} />
-    <Redirect to="/" />
-  </Switch>
+  <RouterRoutes>
+    <Route path="/" element={<OverviewPage />} />
+    <Route path="/duplicants" element={<DuplicantsPage />} />
+    <Route path="/duplicants/:gameObjectId" element={<DuplicantEditorPage />} />
+    <Route path="/creatures" element={<CreaturesPage />} />
+    <Route path="/creatures/:gameObjectId" element={<CreatureEditorPage />} />
+    <Route path="/geysers" element={<GeysersPage />} />
+    {/* <Route path="/planets" element={<PlanetsPage />} /> */}
+    {/* <Route path="/materials" element={<MaterialsPage />} /> */}
+    <Route path="/raw" element={<RawEditorPage />} />
+    <Route path="/settings" element={<SettingsPage />} />
+    <Route path="/changelog" element={<ChangelogPage />} />
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </RouterRoutes>
 );
 export default Routes;

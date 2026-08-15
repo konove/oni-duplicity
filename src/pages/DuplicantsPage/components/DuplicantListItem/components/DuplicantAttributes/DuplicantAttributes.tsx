@@ -6,7 +6,7 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
+} from "@/styles";
 
 import Attribute from "./components/Attribute";
 
@@ -23,8 +23,10 @@ const styles = (theme: Theme) =>
       flexWrap: "wrap",
       width: theme.spacing(30),
       height: theme.spacing(20),
-      marginLeft: -theme.spacing(0.5),
-      marginRight: -theme.spacing(0.5)
+      // Negate via spacing's own argument: since MUI v5 spacing() returns a
+      // string ("4px"), negating the result yields NaN.
+      marginLeft: theme.spacing(-0.5),
+      marginRight: theme.spacing(-0.5)
     },
     item: {
       marginLeft: theme.spacing(0.5),

@@ -1,15 +1,9 @@
 import * as React from "react";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles,
-  StyleRulesCallback,
-} from "@material-ui/core/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 
 import Nav from "./Nav";
 import GithubButton from "./GithubButton";
@@ -18,11 +12,12 @@ export interface SidebarProps {
   className?: string;
 }
 
-// Note: The old dependencies are rotting away.  Using the injected theme now creates baffling typescript errors.
-const styles: StyleRulesCallback<Theme, {}> = ((theme: Theme) =>
+const styles = (theme: Theme) =>
   createStyles({
     toolbar: {
-      ...theme.mixins.toolbar,
+      // MUI types this mixin with its own CSS shape, whose `@font-face` entry
+      // does not line up with emotion's CSSObject index signature.
+      ...(theme.mixins.toolbar as Record<string, any>),
       display: "flex",
       paddingLeft: theme.spacing(3),
       alignItems: "center",
@@ -31,7 +26,7 @@ const styles: StyleRulesCallback<Theme, {}> = ((theme: Theme) =>
       marginLeft: "auto",
       marginRight: theme.spacing(),
     },
-  })) as any;
+  });
 
 type Props = SidebarProps & WithStyles<typeof styles>;
 

@@ -7,11 +7,11 @@ import {
   createStyles,
   withStyles,
   WithStyles,
-} from "@material-ui/core/styles";
+} from "@/styles";
 
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
 
 import { OSType } from "@/runtime-env";
 
@@ -78,8 +78,11 @@ const NoSave: React.FC<Props> = ({ classes, t }) => (
       </div>
       {SaveFilePaths[OSType] && (
         <Typography component="div" variant="body1">
-          <Trans i18nKey="overview-page.no-save.save-location">
-            Save files can be found at <code>{{ path: saveFilePath }}</code>
+          <Trans
+            i18nKey="overview-page.no-save.save-location"
+            values={{ path: saveFilePath }}
+          >
+            Save files can be found at <code>{"{{path}}"}</code>
           </Trans>
         </Typography>
       )}

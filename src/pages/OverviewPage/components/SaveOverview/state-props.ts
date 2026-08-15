@@ -1,6 +1,6 @@
-import { createStructuredSelector, createSelector } from "reselect";
+import { createSelector } from "reselect";
 
-import { AppState } from "@/state";
+import { createStructuredSelector } from "@/state";
 
 import { saveGameSelector } from "@/services/oni-save/selectors/save-game";
 
@@ -9,7 +9,7 @@ export interface StateProps {
   cycleCount: number;
 }
 
-const mapDispatchToProps = createStructuredSelector<AppState, StateProps>({
+const mapDispatchToProps = createStructuredSelector({
   saveName: createSelector(
     saveGameSelector,
     game => (game && game.header.gameInfo.baseName) || ""

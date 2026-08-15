@@ -1,8 +1,8 @@
 import * as React from "react";
 import { SimHashes } from "oni-save-parser";
 
-import Typography from "@material-ui/core/Typography";
-import Slider from "@material-ui/core/Slider";
+import Typography from "@mui/material/Typography";
+import Slider from "@mui/material/Slider";
 
 import usePlanet from "@/services/oni-save/hooks/usePlanet";
 

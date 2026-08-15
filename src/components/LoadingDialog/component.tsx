@@ -7,10 +7,10 @@ import {
   createStyles,
   withStyles,
   WithStyles
-} from "@material-ui/core/styles";
+} from "@/styles";
 
-import Dialog from "@material-ui/core/Dialog";
-import Typography from "@material-ui/core/Typography";
+import Dialog from "@mui/material/Dialog";
+import Typography from "@mui/material/Typography";
 
 export interface LoadingDialogProps {
   isLoading: boolean;
