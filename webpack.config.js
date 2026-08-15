@@ -63,11 +63,6 @@ module.exports = {
     alias: {
       "@": PATHS.appSrc,
       "@changelog": PATHS.changelog,
-
-      // webpack 5 no longer polyfills node core modules. oni-save-parser
-      // reaches for `util.isObject`; see the shim for why we don't pull in
-      // the full `util` polyfill.
-      util: path.resolve(PATHS.appSrc, "./node-shims/util.ts"),
     },
   },
 
