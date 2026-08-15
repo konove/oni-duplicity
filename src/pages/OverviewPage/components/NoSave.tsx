@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles,
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -47,24 +42,13 @@ const NoSave: React.FC<Props> = ({ classes, t }) => (
   <PageContainer title={t("overview-page.no-save.title")}>
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <Typography variant="h5" color="error">
-          WARNING: This project is no longer supported. While it may load saves,
-          it has not been updated since before Spaced Out, and might corrupt or
-          otherwise mangle saves.
+        <Typography variant="h6" color="error">
+          Always back up a save before editing it. Editing can corrupt a colony,
+          and a clean load here is no guarantee the game will accept the result.
         </Typography>
-        <Typography variant="h5">
-          If you are familiar with React, and want to take over mantainership or
-          fork this project, the source code is at:{" "}
-          <a href="https://github.com/RoboPhred/oni-duplicity">
-            github:RoboPhred/oni-duplicity
-          </a>
-        </Typography>
-        <Typography variant="h5">
-          If you want to create your own editor and can work in javascript, the
-          save parser is still fully operational and is located at{" "}
-          <a href="https://github.com/RoboPhred/oni-save-parser">
-            github:RoboPhred/oni-save-parser
-          </a>
+        <Typography variant="body1">
+          Reads and writes base game and Spaced Out! saves, including the Frosty
+          Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet packs.
         </Typography>
       </Paper>
       <Divider />

@@ -1,21 +1,27 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
 
-import { dlcIdSelector } from "@/services/oni-save/selectors/dlc";
+import { dlcIdsSelector, hasDLCs } from "@/services/oni-save/selectors/dlc";
 
-export interface RedirectIfNoDLCProps {
-  dlcId: string;
+export interface RequireDLCProps {
+  /**
+   * The content pack, or packs, the children need.
+   *
+   * Several ids mean "all of these", not "any of these". `DLCIds.None` means
+   * the save must have no content packs at all.
+   */
+  dlcId: string | string[];
   fallback?: React.ReactNode;
   children?: React.ReactNode;
 }
 
-const RequireDLC: React.FC<RedirectIfNoDLCProps> = ({
+const RequireDLC: React.FC<RequireDLCProps> = ({
   dlcId,
   fallback,
   children,
 }) => {
-  const currentDlcId = useSelector(dlcIdSelector);
-  if (currentDlcId === dlcId) {
+  const dlcIds = useSelector(dlcIdsSelector);
+  if (hasDLCs(dlcIds, dlcId)) {
     return <>{children}</>;
   }
 

@@ -8,8 +8,8 @@ import DuplicantEditorPage from "@/pages/DuplicantEditorPage";
 import CreaturesPage from "@/pages/CreaturesPage";
 import CreatureEditorPage from "@/pages/CreatureEditorPage";
 import GeysersPage from "@/pages/GeysersPage";
-// import PlanetsPage from "@/pages/PlanetsPage";
-// import MaterialsPage from "@/pages/MaterialsPage";
+import WorldsPage from "@/pages/WorldsPage";
+import MaterialsPage from "@/pages/MaterialsPage";
 import RawEditorPage from "@/pages/RawEditorPage";
 import SettingsPage from "@/pages/SettingsPage";
 import ChangelogPage from "@/pages/ChangelogPage";
@@ -22,8 +22,8 @@ const Routes: React.FC = () => (
     <Route path="/creatures" element={<CreaturesPage />} />
     <Route path="/creatures/:gameObjectId" element={<CreatureEditorPage />} />
     <Route path="/geysers" element={<GeysersPage />} />
-    {/* <Route path="/planets" element={<PlanetsPage />} /> */}
-    {/* <Route path="/materials" element={<MaterialsPage />} /> */}
+    <Route path="/worlds" element={<WorldsPage />} />
+    <Route path="/materials" element={<MaterialsPage />} />
     <Route path="/raw" element={<RawEditorPage />} />
     <Route path="/settings" element={<SettingsPage />} />
     <Route path="/changelog" element={<ChangelogPage />} />

@@ -1,3 +1,42 @@
+## 3.20.0
+
+Brings the editor up to date with the content packs released since Spaced Out!.
+
+- Detect active content packs correctly. The header has recorded them three
+  different ways over the game's life, and the editor only understood the
+  oldest, so on every save since July 2024 it saw no DLC at all. Reads the
+  modern `dlcIds` array, falls back to the legacy `dlcId` string, and treats
+  the result as a set.
+- Recognise Frosty Planet Pack, Bionic Booster Pack, Prehistoric Planet Pack
+  and Aquatic Planet Pack alongside Spaced Out!, and show one chip per active
+  pack.
+- Geysers page now lists all 27 generic geyser types, up from 19. The 8 new
+  types were missing entirely, so DLC geysers such as the Cool Chlorine Gas
+  Vent were invisible and could not be edited.
+- Trait editor now knows 146 traits, up from 59. DLC traits previously showed
+  as raw ids and, once removed from a duplicant, could never be added back.
+  Trait and attribute names now come from the game's own string table.
+- New Worlds page for Spaced Out! saves, listing every asteroid in the cluster
+  with its name, discovery and visit state, sunlight and cosmic radiation.
+- Removed the Planets page. It edited the pre-Spaced Out! starmap, which no
+  longer exists - the underlying data is null in every DLC save.
+- Re-enabled the Materials page and added Creatures to the navigation.
+- Creatures page lists 52 critters, up from 3.
+- Bionic duplicants are listed, edited and cloned. Duplicant pages no longer
+  assume `Minion` is the only duplicant prefab, and cloning now returns the
+  copy to whichever group the original came from.
+- Portraits show a placeholder instead of a headless duplicant. The bundled
+  sprites predate several packs, and duplicants now routinely use parts past
+  the highest asset available - a bionic one here wants hair_035 against a
+  maximum of hair_033.
+- Overview shows duplicant count, cluster and save version.
+- Replaced the dev fixture behind `loadMockSave()`. The old one was a 7.8 base
+  game save that exercised none of this; the new one is a five-pack 7.38
+  cluster with a bionic duplicant, two asteroids and a DLC geyser, and is a
+  third of the size.
+- Dropped the "no longer supported, may corrupt saves" banner, and clarified
+  the unrecognised-version message.
+
 ## 3.19.0
 
 - Hack out nonfunctional editors that no longer apply to save version 4.31

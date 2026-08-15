@@ -4,6 +4,7 @@ import classnames from "classnames";
 import { Theme, makeStyles } from "@/styles";
 
 import useGameObjects from "@/services/oni-save/hooks/useGameObjects";
+import { DUPLICANT_GAMEOBJECT_TYPES } from "@/services/oni-save/duplicants";
 
 import DuplicantListItem from "./DuplicantListItem";
 
@@ -27,7 +28,7 @@ type Props = DuplicantListProps;
 
 const DuplicantList: React.FC<Props> = ({ className }) => {
   const classes = useStyles();
-  const gameObjectIds = useGameObjects("Minion");
+  const gameObjectIds = useGameObjects(DUPLICANT_GAMEOBJECT_TYPES);
   return (
     <div className={classnames(className, classes.root)}>
       {gameObjectIds.map(id => (

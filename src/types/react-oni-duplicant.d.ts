@@ -74,3 +74,22 @@ declare module "react-oni-duplicant/dist/components/Body" {
   const Body: React.FC<BodyProps>;
   export default Body;
 }
+
+/**
+ * Range checks for the sprite sets. Each leaf component already calls its own
+ * before rendering and returns null when the ordinal is out of range, so
+ * these exist so callers can anticipate a blank portrait rather than discover
+ * one — a duplicant from a content pack newer than these sprites (a bionic
+ * one, say) can use parts well past the highest asset shipped here.
+ */
+declare module "react-oni-duplicant/dist/assets/headshape" {
+  export function isValidHead(ordinal: number): boolean;
+}
+
+declare module "react-oni-duplicant/dist/assets/hair" {
+  export function isValidHair(ordinal: number): boolean;
+}
+
+declare module "react-oni-duplicant/dist/assets/eyes" {
+  export function isValidEyes(ordinal: number): boolean;
+}

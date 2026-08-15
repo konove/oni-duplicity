@@ -12,7 +12,6 @@ import mergeBehaviorsReducer from "./merge-behaviors";
 import modifyBehaviorPathReducer from "./modify-behavior-path";
 import modifyBehaviorReducer from "./modify-behavior";
 import modifyDifficultyReducer from "./modify-difficulty";
-import modifyPlanetReducer from "./modify-planet";
 import modifyRawReducer from "./modify-raw";
 import parseProgressReducer from "./parse-progress";
 import pasteBehaviorsReducer from "./paste-behaviors";
@@ -31,7 +30,6 @@ export default reduceReducers(
   modifyBehaviorPathReducer,
   modifyBehaviorReducer,
   modifyDifficultyReducer,
-  modifyPlanetReducer,
   modifyRawReducer,
   parseProgressReducer,
   pasteBehaviorsReducer,

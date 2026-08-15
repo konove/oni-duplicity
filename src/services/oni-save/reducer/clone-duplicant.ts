@@ -4,23 +4,25 @@ import {
   GameObject,
   MinionIdentityBehavior,
   GameObjectBehavior,
-  SaveGame
+  SaveGame,
+  getBehavior,
 } from "oni-save-parser";
 
 import { defaultOniSaveState, OniSaveState } from "../state";
 import { isCloneDuplicantAction } from "../actions/clone-duplicant";
+import { isDuplicantType } from "../duplicants";
 
 import {
   changeStateBehaviorData,
   requireGameObject,
   requireBehavior,
   addGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 
 export default function cloneDuplicantReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isCloneDuplicantAction(action)) {
     return state;
@@ -28,8 +30,8 @@ export default function cloneDuplicantReducer(
 
   const { gameObjectId } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
-    performCloneDuplicant(saveGame, gameObjectId)
+  return tryModifySaveGame(state, (saveGame) =>
+    performCloneDuplicant(saveGame, gameObjectId),
   );
 }
 
@@ -38,19 +40,30 @@ function shouldCloneBehavior(behavior: GameObjectBehavior): boolean {
   return BEHAVIOR_BLACKLIST.indexOf(behavior.name) === -1;
 }
 
-
 function performCloneDuplicant(
   saveGame: SaveGame,
-  gameObjectId: number
+  gameObjectId: number,
 ): SaveGame {
-  const gameObject = requireGameObject(saveGame, gameObjectId, "Minion");
+  // Clone back into whichever duplicant group the original came from, so a
+  // bionic duplicant does not end up among the standard Minions.
+  const group = saveGame.gameObjects.find((g) =>
+    g.gameObjects.some(
+      (o) =>
+        getBehavior(o, KPrefabIDBehavior)?.templateData.InstanceID ===
+        gameObjectId,
+    ),
+  );
+  const gameObjectType =
+    group && isDuplicantType(group.name) ? group.name : "Minion";
+
+  const gameObject = requireGameObject(saveGame, gameObjectId, gameObjectType);
 
   // Look up the old duplicant's name
   const oldIdentity = requireBehavior(gameObject, MinionIdentityBehavior);
 
   let newMinion: GameObject | null = {
     ...gameObject,
-    behaviors: gameObject.behaviors.filter(shouldCloneBehavior)
+    behaviors: gameObject.behaviors.filter(shouldCloneBehavior),
   };
 
   const newPrefabId = saveGame.settings.nextUniqueID;
@@ -60,8 +73,8 @@ function performCloneDuplicant(
     KPrefabIDBehavior,
     "templateData",
     {
-      InstanceID: newPrefabId
-    }
+      InstanceID: newPrefabId,
+    },
   );
 
   newMinion = changeStateBehaviorData(
@@ -70,9 +83,9 @@ function performCloneDuplicant(
     "templateData",
     {
       assignableProxy: {
-        id: -1
-      }
-    }
+        id: -1,
+      },
+    },
   );
 
   // Increment the next unique id; we used the current one.
@@ -80,8 +93,8 @@ function performCloneDuplicant(
     ...saveGame,
     settings: {
       ...saveGame.settings,
-      nextUniqueID: newPrefabId + 1
-    }
+      nextUniqueID: newPrefabId + 1,
+    },
   };
 
   // Give the new duplicate a new name to differentiate it.
@@ -90,11 +103,11 @@ function performCloneDuplicant(
     MinionIdentityBehavior,
     "templateData",
     {
-      name: `Clone of ${oldIdentity.templateData.name}`
-    }
+      name: `Clone of ${oldIdentity.templateData.name}`,
+    },
   );
 
-  saveGame = addGameObject(saveGame, "Minion", newMinion);
+  saveGame = addGameObject(saveGame, gameObjectType, newMinion);
 
   return saveGame;
 }

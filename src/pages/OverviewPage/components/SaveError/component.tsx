@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
     errorMessage: {
       marginTop: theme.spacing(),
     },
-  })
+  }),
 );
 
 const SaveError: React.FC = () => {
@@ -55,17 +55,21 @@ const SaveError: React.FC = () => {
     errorContent = (
       <>
         <p>
-          This save file indicates it is for a version of the game that
-          different than the editor expects.
+          This save is from a version of the game the editor has not been
+          checked against.
         </p>
-        <p>However, it may still be possible to edit.</p>
+        <p>
+          Saves describe their own structure, so a version that only adds or
+          reorders fields usually still reads correctly. It may well be
+          editable.
+        </p>
         <Typography color="error">
-          WARNING: Editing this save file may result in corrupt data, which
-          could lead to crashes and game breaking bugs further down the line.
-          Load this save at your own risk.
+          WARNING: Editing it may still produce corrupt data, leading to crashes
+          and game breaking bugs later. Back up the save first, and load it at
+          your own risk.
         </Typography>
         <Button onClick={onForceLoad}>
-          Override safty checks and load the save
+          Override safety checks and load the save
         </Button>
         <Divider />
         <Typography variant="caption" className={classes.errorMessage}>

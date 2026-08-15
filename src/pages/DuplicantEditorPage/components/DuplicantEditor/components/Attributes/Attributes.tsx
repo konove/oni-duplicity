@@ -3,12 +3,7 @@ import { AIAttributeLevelsBehavior, AttributeLevel } from "oni-save-parser";
 
 import { Trans } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 
@@ -17,6 +12,8 @@ import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import AttributeName from "./components/AttributeName";
 import AttributeField from "./components/AttributeField";
 
+// The attributes duplicants level up through work. Everything else a save
+// carries renders under "secondary".
 const PRIMARY_ATTRIBUTES = [
   "Athletics",
   "Cooking",
@@ -28,7 +25,9 @@ const PRIMARY_ATTRIBUTES = [
   "Art",
   "Botanist",
   "Learning",
-  "Strength"
+  "Strength",
+  // Spaced Out's rocket piloting attribute, shown in game as "Piloting".
+  "SpaceNavigation",
 ];
 
 export interface AttributesProps {
@@ -41,38 +40,40 @@ const styles = (theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      height: "100%"
+      height: "100%",
     },
     header: {
       marginTop: theme.spacing(),
-      marginLeft: theme.spacing()
+      marginLeft: theme.spacing(),
     },
     divider: {
       marginTop: theme.spacing(),
-      marginBottom: theme.spacing()
+      marginBottom: theme.spacing(),
     },
     attributeList: {
       display: "flex",
       flexDirection: "column",
       flexWrap: "wrap",
       height: theme.spacing(20),
-      padding: theme.spacing()
+      padding: theme.spacing(),
     },
     attributeItem: {
       margin: theme.spacing(0.5),
       display: "flex",
-      flexDirection: "row"
+      flexDirection: "row",
     },
     attributeInput: {
       width: 50,
-      marginRight: theme.spacing()
-    }
+      marginRight: theme.spacing(),
+    },
   });
 
 type Props = AttributesProps & WithStyles<typeof styles>;
 
 const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
-  const { templateData: { saveLoadLevels } } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
+  const {
+    templateData: { saveLoadLevels },
+  } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
   return (
     <div className={classes.root}>
       <Typography className={classes.header} variant="h6">
@@ -80,7 +81,7 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
       </Typography>
       <Divider className={classes.divider} />
       <div className={classes.attributeList}>
-        {PRIMARY_ATTRIBUTES.map(attributeId => (
+        {PRIMARY_ATTRIBUTES.map((attributeId) => (
           <div key={attributeId} className={classes.attributeItem}>
             <AttributeField
               className={classes.attributeInput}
@@ -94,11 +95,11 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
       <Typography className={classes.header} variant="h6">
         <Trans i18nKey="duplicant_attribute.secondary_titlecase">
           Secondary
-          </Trans>
+        </Trans>
       </Typography>
       <Divider className={classes.divider} />
       <div className={classes.attributeList}>
-        {nonPrimaryAttributeIds(saveLoadLevels).map(attributeId => (
+        {nonPrimaryAttributeIds(saveLoadLevels).map((attributeId) => (
           <div key={attributeId} className={classes.attributeItem}>
             <AttributeField
               className={classes.attributeInput}
@@ -111,12 +112,12 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
       </div>
     </div>
   );
-}
+};
 
 export default withStyles(styles)(Attributes);
 
 function nonPrimaryAttributeIds(attributes: AttributeLevel[]): string[] {
   return attributes
-    .map(x => x.attributeId)
-    .filter(x => PRIMARY_ATTRIBUTES.indexOf(x) === -1);
+    .map((x) => x.attributeId)
+    .filter((x) => PRIMARY_ATTRIBUTES.indexOf(x) === -1);
 }

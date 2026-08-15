@@ -3,6 +3,7 @@ import * as React from "react";
 import { useParams } from "react-router";
 
 import useGameObject from "@/services/oni-save/hooks/useGameObject";
+import { isDuplicantType } from "@/services/oni-save/duplicants";
 
 import RedirectIfNoSave from "@/components/RedirectIfNoSave";
 
@@ -18,13 +19,12 @@ const DuplicantEditorPage: React.FC = () => {
   const { gameObjectId } = useParams<DuplicantEditorRouteParams>();
 
   const { gameObjectType } = useGameObject(Number(gameObjectId));
+  const isDuplicant = isDuplicantType(gameObjectType);
   return (
     <>
       <RedirectIfNoSave />
-      {gameObjectType === "Minion" && (
-        <DuplicantEditor gameObjectId={Number(gameObjectId)} />
-      )}
-      {gameObjectType !== "Minion" && <DuplicantNotFound />}
+      {isDuplicant && <DuplicantEditor gameObjectId={Number(gameObjectId)} />}
+      {!isDuplicant && <DuplicantNotFound />}
     </>
   );
 };

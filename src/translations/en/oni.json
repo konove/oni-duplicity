@@ -1,343 +1,855 @@
 {
   "dlc_id": {
-    "EXPANSION1_ID": "Spaced Out"
+    "VANILLA_ID": "Base Game",
+    "EXPANSION1_ID": "Spaced Out!",
+    "DLC2_ID": "Frosty Planet Pack",
+    "DLC3_ID": "Bionic Booster Pack",
+    "DLC4_ID": "Prehistoric Planet Pack",
+    "DLC5_ID": "Aquatic Planet Pack"
   },
   "DUPLICANTS": {
     "TRAITS": {
-      "CLAUSTROPHOBIC": {
-        "NAME": "Claustrophobic",
-        "DESC": "This Duplicant feels suffocated in spaces less than four tiles high or three tiles wide"
-      },
-
-      "FASHIONABLE": {
-        "NAME": "Fashionista",
-        "DESC": "This Duplicant dies a bit inside when forced to wear unstylish clothing"
-      },
-
-      "CLIMACOPHOBIC": {
-        "NAME": "Vertigo Prone",
-        "DESC": "Climbing ladders more than four tiles tall makes this Duplicant's stomach do flips"
-      },
-
-      "SOLITARYSLEEPER": {
-        "NAME": "Solitary Sleeper",
-        "DESC": "This Duplicant prefers to sleep alone"
-      },
-
-      "PREFERSWARMER": {
-        "NAME": "Skinny",
-        "DESC": "This Duplicant doesn't have much insulation, so they are more temperature sensitive than others"
-      },
-
-      "PREFERSCOOLER": {
-        "NAME": "Pudgy",
-        "DESC": "This Duplicant has some extra insulation, so the room temperature affects them a little less"
-      },
-
-      "SENSITIVEFEET": {
-        "NAME": "Delicate Feetsies",
-        "DESC": "This Duplicant is a sensitive sole and would rather walk on tile than raw bedrock"
-      },
-
-      "WORKAHOLIC": {
-        "NAME": "Workaholic",
-        "DESC": "This Duplicant gets antsy when left idle"
-      },
-
-      "CANTRESEARCH": {
-        "NAME": "Yokel",
-        "DESC": "This Duplicant isn't the brightest star in the solar system"
-      },
-
-      "CANTBUILD": {
-        "NAME": "Unconstructive",
-        "DESC": "This Duplicant is incapable of building even the most basic of structures"
-      },
-
-      "CANTCOOK": {
-        "NAME": "Gastrophobia",
-        "DESC": "This Duplicant has a deep-seated distrust of the culinary arts"
-      },
-
-      "CANTDIG": {
-        "NAME": "Trypophobia",
-        "DESC": "This Duplicant's fear of holes makes it impossible for them to dig"
-      },
-
-      "HEMOPHOBIA": {
-        "NAME": "Squeamish",
-        "DESC": "This Duplicant is of delicate disposition and cannot tend to the sick"
-      },
-
-      "BEDSIDEMANNER": {
-        "NAME": "Caregiver",
-        "DESC": "This Duplicant has good bedside manner and a healing touch"
-      },
-
-      "MOUTHBREATHER": {
-        "NAME": "Mouth Breather",
-        "DESC": "This Duplicant sucks up way more than their fair share of Oxygen"
-      },
-
-      "FUSSY": {
-        "NAME": "Fussy",
-        "DESC": "Nothing's ever quite good enough for this Duplicant"
-      },
-
-      "TWINKLETOES": {
-        "NAME": "Twinkletoes",
-        "DESC": "This Duplicant is light as a feather on their feet"
-      },
-
-      "STRONGARM": {
-        "NAME": "Buff",
-        "DESC": "This Duplicant has muscles on their muscles"
-      },
-
-      "NOODLEARMS": {
-        "NAME": "Noodle Arms",
-        "DESC": "This Duplicant's arms have all the tensile strength of overcooked linguine"
-      },
-
       "AGGRESSIVE": {
         "NAME": "Destructive",
         "DESC": "This Duplicant handles stress by taking their frustrations out on defenseless machines"
       },
-
-      "UGLYCRIER": {
-        "NAME": "Ugly Crier",
-        "DESC": "If this Duplicant gets too stressed it won't be pretty"
-      },
-
-      "BINGEEATER": {
-        "NAME": "Binge Eater",
-        "DESC": "This Duplicant will dangerously overeat when stressed"
-      },
-
-      "ANXIOUS": {
-        "NAME": "Anxious",
-        "DESC": "This Duplicant collapses when put under too much pressure"
-      },
-
-      "STRESSVOMITER": {
-        "NAME": "Vomiter",
-        "DESC": "This Duplicant is liable to puke everywhere when stressed"
-      },
-
-      "IRONGUT": {
-        "NAME": "Iron Gut",
-        "DESC": "This Duplicant can eat just about anything without getting sick"
-      },
-
-      "STRONGIMMUNESYSTEM": {
-        "NAME": "Germ Resistant",
-        "DESC": "This Duplicant's immune system bounces back faster than most"
-      },
-
-      "SCAREDYCAT": {
-        "NAME": "Pacifist",
-        "DESC": "This Duplicant abhors violence"
-      },
-
       "ALLERGIES": {
         "NAME": "Allergies",
         "DESC": "This Duplicant will sneeze uncontrollably when exposed to the pollen present in Floral Scent"
       },
-
-      "WEAKIMMUNESYSTEM": {
-        "NAME": "Biohazardous",
-        "DESC": "All the vitamin C in space couldn't stop this Duplicant from getting sick"
+      "ANCIENTKNOWLEDGE": {
+        "NAME": "Ancient Knowledge",
+        "DESC": "This Duplicant has knowledge from the before times • Starts with 3 skill points"
       },
-
-      "IRRITABLEBOWEL": {
-        "NAME": "Irritable Bowel",
-        "DESC": "This Duplicant needs a little extra time to \"do their business\""
-      },
-
-      "CALORIEBURNER": {
-        "NAME": "Bottomless Stomach",
-        "DESC": "This Duplicant might actually be several black holes in a trench coat"
-      },
-
-      "SMALLBLADDER": {
-        "NAME": "Small Bladder",
-        "DESC": "This Duplicant has a tiny, pea-sized bladder. Adorable!"
-      },
-
       "ANEMIC": {
         "NAME": "Anemic",
         "DESC": "This Duplicant has trouble keeping up with the others"
       },
-
-      "GREASEMONKEY": {
-        "NAME": "Grease Monkey",
-        "DESC": "This Duplicant likes to throw a wrench into the colony's plans... in a good way"
+      "ANXIOUS": {
+        "NAME": "Anxious",
+        "DESC": "This Duplicant collapses when put under too much pressure"
       },
-
-      "MOLEHANDS": {
-        "NAME": "Mole Hands",
-        "DESC": "They're great for tunneling, but finding good gloves is a nightmare"
+      "ARCHAEOLOGIST": {
+        "NAME": "Relic Hunter",
+        "DESC": "This Duplicant was never taught the phrase \"take only pictures, leave only footprints\""
       },
-
-      "FASTLEARNER": {
-        "NAME": "Quick Learner",
-        "DESC": "This Duplicant's sharp as a tack and learns new skills with amazing speed"
+      "ARTDOWN": {
+        "NAME": "Unpracticed Artist",
+        "DESC": "This Duplicant proudly proclaims they \"can't even draw a stick figure\""
       },
-
-      "SLOWLEARNER": {
-        "NAME": "Slow Learner",
-        "DESC": "This Duplicant's a little slow on the uptake, but gosh do they try"
+      "BALLOONARTIST": {
+        "NAME": "Balloon Artist",
+        "DESC": "This Duplicant hands out balloons when they are Overjoyed"
       },
-
+      "BANSHEE": {
+        "NAME": "Banshee",
+        "DESC": "This Duplicant wails uncontrollably when Stressed"
+      },
+      "BEDSIDEMANNER": {
+        "NAME": "Caregiver",
+        "DESC": "This Duplicant has good bedside manner and a healing touch"
+      },
+      "BINGEEATER": {
+        "NAME": "Binge Eater",
+        "DESC": "This Duplicant will dangerously overeat when Stressed"
+      },
+      "BIONICBUG1": {
+        "NAME": "Bionic Bug: Rigid Thinking",
+        "DESC": "This Duplicant's bionic systems are quite inflexible"
+      },
+      "BIONICBUG2": {
+        "NAME": "Bionic Bug: Dissociative",
+        "DESC": "This Duplicant's bionic systems are built without \"connector\" parts"
+      },
+      "BIONICBUG3": {
+        "NAME": "Bionic Bug: All Thumbs",
+        "DESC": "This Duplicant's bionic systems aren't designed to operate other systems"
+      },
+      "BIONICBUG4": {
+        "NAME": "Bionic Bug: Overengineered",
+        "DESC": "This Duplicant's bionic systems rarely get past the processing stage"
+      },
+      "BIONICBUG5": {
+        "NAME": "Bionic Bug: Late Bloomer",
+        "DESC": "This Duplicant's bionic systems weren't built for speed"
+      },
+      "BIONICBUG6": {
+        "NAME": "Bionic Bug: Urbanite",
+        "DESC": "This Duplicant's bionic systems were designed by someone who'd never seen a plant in real life"
+      },
+      "BIONICBUG7": {
+        "NAME": "Bionic Bug: Error Prone",
+        "DESC": "This Duplicant's bionic systems err on the side of erring"
+      },
+      "BOTANISTDOWN": {
+        "NAME": "Plant Murderer",
+        "DESC": "Never ask this Duplicant to watch your ferns when you go on vacation"
+      },
+      "CALORIEBURNER": {
+        "NAME": "Bottomless Stomach",
+        "DESC": "This Duplicant might actually be several black holes in a trench coat"
+      },
+      "CANTBUILD": {
+        "NAME": "Unconstructive",
+        "DESC": "This Duplicant is incapable of building even the most basic of structures"
+      },
+      "CANTCOOK": {
+        "NAME": "Gastrophobia",
+        "DESC": "This Duplicant has a deep-seated distrust of the culinary arts"
+      },
+      "CANTDIG": {
+        "NAME": "Trypophobia",
+        "DESC": "This Duplicant's fear of holes makes it impossible for them to dig"
+      },
+      "CANTRESEARCH": {
+        "NAME": "Yokel",
+        "DESC": "This Duplicant isn't the brightest star in the solar system"
+      },
+      "CARINGDOWN": {
+        "NAME": "Unempathetic",
+        "DESC": "This Duplicant's lack of bedside manner makes it difficult for them to nurse peers back to health"
+      },
+      "CHATTY": {
+        "NAME": "Charismatic",
+        "DESC": "This Duplicant's so charming, chatting with them is sometimes enough to trigger an Overjoyed response"
+      },
+      "CLAUSTROPHOBIC": {
+        "NAME": "Claustrophobic",
+        "DESC": "This Duplicant feels suffocated in spaces fewer than four tiles high or three tiles wide"
+      },
+      "CLIMACOPHOBIC": {
+        "NAME": "Vertigo Prone",
+        "DESC": "Climbing ladders more than four tiles tall makes this Duplicant's stomach do flips"
+      },
+      "CONSTRUCTIONDOWN": {
+        "NAME": "Building Impaired",
+        "DESC": "This Duplicant has trouble constructing anything besides meaningful friendships"
+      },
+      "CONSTRUCTIONUP": {
+        "NAME": "Handy",
+        "DESC": "This Duplicant is a swift and skilled builder"
+      },
+      "COOKINGDOWN": {
+        "NAME": "Kitchen Menace",
+        "DESC": "This Duplicant could probably figure out a way to burn ice cream"
+      },
+      "DATARAINER": {
+        "NAME": "Rainmaker",
+        "DESC": "This Duplicant distributes microchips when they are Overjoyed"
+      },
+      "DECORDOWN": {
+        "NAME": "Shabby Dresser",
+        "DESC": "This Duplicant's clearly never heard of ironing"
+      },
+      "DECORUP": {
+        "NAME": "Innately Stylish",
+        "DESC": "This Duplicant's radiant self-confidence makes even the rattiest outfits look trendy"
+      },
+      "DEEPERDIVERSLUNGS": {
+        "NAME": "Deep Diver's Lungs",
+        "DESC": "This Duplicant has a frankly impressive ability to hold their breath"
+      },
+      "DIGGINGDOWN": {
+        "NAME": "Undigging",
+        "DESC": "This Duplicant couldn't dig themselves out of a paper bag"
+      },
       "DIVERSLUNG": {
         "NAME": "Diver's Lungs",
         "DESC": "This Duplicant could have been a talented opera singer in another life"
       },
-
-      "FLATULENCE": {
-        "NAME": "Flatulent",
-        "DESC": "Some Duplicants are just full of it"
-      },
-
-      "SNORER": {
-        "NAME": "Loud Sleeper",
-        "DESC": "In space, everyone can hear you snore"
-      },
-
-      "NARCOLEPSY": {
-        "NAME": "Narcoleptic",
-        "DESC": "This Duplicant can and will fall asleep anytime, anyplace"
-      },
-
-      "INTERIORDECORATOR": {
-        "NAME": "Interior Decorator",
-        "DESC": "\"Move it a little to the left...\""
-      },
-
-      "UNCULTURED": {
-        "NAME": "Uncultured",
-        "DESC": "This Duplicant has simply no appreciation for the arts"
-      },
-
-      "ARCHAEOLOGIST": {
-        "NAME": "Archeologist",
-        "DESC": "This Duplicant will always bring back an artifact from space expeditions."
-      },
-
       "EARLYBIRD": {
         "NAME": "Early Bird",
         "DESC": "This Duplicant always wakes up feeling fresh and efficient!"
       },
-
+      "ELLIE": {
+        "NAME": "Fastidious",
+        "DESC": "This Duplicant needs things done in a very particular way"
+      },
+      "FASHIONABLE": {
+        "NAME": "Fashionista",
+        "DESC": "This Duplicant dies a bit inside when forced to wear unstylish clothing"
+      },
+      "FASTLEARNER": {
+        "NAME": "Quick Learner",
+        "DESC": "This Duplicant's sharp as a tack and learns new skills with amazing speed"
+      },
+      "FLATULENCE": {
+        "NAME": "Flatulent",
+        "DESC": "Some Duplicants are just full of it"
+      },
+      "FOODIE": {
+        "NAME": "Gourmet",
+        "DESC": "This Duplicant's refined palate demands only the most luxurious dishes the colony can offer"
+      },
+      "FROSTPROOF": {
+        "NAME": "Frost Proof",
+        "DESC": "This Duplicant is too cool to be bothered by the cold"
+      },
+      "FUSSY": {
+        "NAME": "Fussy",
+        "DESC": "Nothing's ever quite good enough for this Duplicant"
+      },
+      "GLOWSTICK": {
+        "NAME": "Glow Stick",
+        "DESC": "This Duplicant is positively glowing"
+      },
+      "GRANTSKILL_ARTING1": {
+        "NAME": "Skilled: Art Fundamentals",
+        "DESC": "Teaches the most basic level of art skill"
+      },
+      "GRANTSKILL_ARTING2": {
+        "NAME": "Skilled: Aesthetic Design",
+        "DESC": "Allows moderately attractive art to be created"
+      },
+      "GRANTSKILL_ARTING3": {
+        "NAME": "Skilled: Masterworks",
+        "DESC": "Enables the painting and sculpting of masterpieces"
+      },
+      "GRANTSKILL_ASTRONAUTING1": {
+        "NAME": "Skilled: Rocket Piloting",
+        "DESC": "Allows a Duplicant to operate a Command Capsule to pilot a rocket ship"
+      },
+      "GRANTSKILL_ASTRONAUTING2": {
+        "NAME": "Skilled: Rocket Navigation",
+        "DESC": "Improves the speed that space missions are completed"
+      },
+      "GRANTSKILL_BASEKEEPING1": {
+        "NAME": "Skilled: Improved Strength",
+        "DESC": "Minorly improves a Duplicant's physical strength"
+      },
+      "GRANTSKILL_BASEKEEPING2": {
+        "NAME": "Skilled: Plumbing",
+        "DESC": "Allows a Duplicant to empty Pipes without making a mess"
+      },
+      "GRANTSKILL_BUILDING1": {
+        "NAME": "Skilled: Improved Construction I",
+        "DESC": "Marginally improves a Duplicant's construction speeds"
+      },
+      "GRANTSKILL_BUILDING2": {
+        "NAME": "Skilled: Improved Construction II",
+        "DESC": "Further increases a Duplicant's construction speeds"
+      },
+      "GRANTSKILL_BUILDING3": {
+        "NAME": "Skilled: Demolition",
+        "DESC": "Enables a Duplicant to deconstruct Gravitas buildings"
+      },
+      "GRANTSKILL_COOKING1": {
+        "NAME": "Skilled: Grilling",
+        "DESC": "Allows Duplicants to cook using the Electric Grill"
+      },
+      "GRANTSKILL_COOKING2": {
+        "NAME": "Skilled: Enhanced Seasoning",
+        "DESC": "Allows Duplicants to cook using the Gas Range, Smoker, Deep Fryer, Sushi Bar, and Spice Grinder"
+      },
+      "GRANTSKILL_ENGINEERING1": {
+        "NAME": "Skilled: Mechatronics Engineering",
+        "DESC": "Allows the construction and maintenance of Conveyor Rail systems"
+      },
+      "GRANTSKILL_FARMING1": {
+        "NAME": "Skilled: Improved Farming I",
+        "DESC": "Minorly increase a Duplicant's farming skills, increasing their chances of harvesting new plant Seeds"
+      },
+      "GRANTSKILL_FARMING2": {
+        "NAME": "Skilled: Crop Tending",
+        "DESC": "Enables tending Plants, which will increase their growth speed"
+      },
+      "GRANTSKILL_FARMING3": {
+        "NAME": "Skilled: Improved Farming II",
+        "DESC": "Enables a Duplicant to gather Plant Husks as a byproduct when harvesting certain Plants"
+      },
+      "GRANTSKILL_HAULING1": {
+        "NAME": "Skilled: Improved Carrying I",
+        "DESC": "Minorly increase a Duplicant's strength and carrying capacity"
+      },
+      "GRANTSKILL_HAULING2": {
+        "NAME": "Skilled: Improved Carrying II",
+        "DESC": "Further increases a Duplicant's strength and carrying capacity for even swifter deliveries"
+      },
+      "GRANTSKILL_MEDICINE1": {
+        "NAME": "Skilled: Medicine Compounding",
+        "DESC": "Allows Duplicants to produce medicines at the Apothecary"
+      },
+      "GRANTSKILL_MEDICINE2": {
+        "NAME": "Skilled: Bedside Manner",
+        "DESC": "Trains Duplicants to administer medicine at the Sick Bay"
+      },
+      "GRANTSKILL_MEDICINE3": {
+        "NAME": "Skilled: Advanced Medical Care",
+        "DESC": "Trains Duplicants to operate the Disease Clinic"
+      },
+      "GRANTSKILL_MINING1": {
+        "NAME": "Skilled: Hard Digging",
+        "DESC": "Allows the excavation of Very Firm materials such as Granite"
+      },
+      "GRANTSKILL_MINING2": {
+        "NAME": "Skilled: Superhard Digging",
+        "DESC": "Allows the excavation of the element Abyssalite"
+      },
+      "GRANTSKILL_MINING3": {
+        "NAME": "Skilled: Super-Duperhard Digging",
+        "DESC": "Allows the excavation of Nearly Impenetrable elements, including Diamond and Obsidian"
+      },
+      "GRANTSKILL_MINING4": {
+        "NAME": "Skilled: Hazmat Digging",
+        "DESC": "Allows the excavation of dangerous materials like Corium"
+      },
+      "GRANTSKILL_PYROTECHNICS": {
+        "NAME": "Skilled: Pyrotechnics",
+        "DESC": "Allows a Duplicant to make Blastshot for the Meteor Blaster"
+      },
+      "GRANTSKILL_RANCHING1": {
+        "NAME": "Skilled: Critter Ranching I",
+        "DESC": "Allows a Duplicant to handle and care for Critters"
+      },
+      "GRANTSKILL_RANCHING2": {
+        "NAME": "Skilled: Critter Ranching II",
+        "DESC": "Improves a Duplicant's Ranching skills"
+      },
+      "GRANTSKILL_RESEARCHING1": {
+        "NAME": "Skilled: Advanced Research",
+        "DESC": "Allows Duplicants to perform research using a Super Computer"
+      },
+      "GRANTSKILL_RESEARCHING2": {
+        "NAME": "Skilled: Field Research",
+        "DESC": "Duplicants can perform studies on Geysers, Planetoid, and other geographical phenomena"
+      },
+      "GRANTSKILL_RESEARCHING3": {
+        "NAME": "Skilled: Astronomy",
+        "DESC": "Enables Duplicants to study outer space using the Telescope"
+      },
+      "GRANTSKILL_RESEARCHING4": {
+        "NAME": "Skilled: Applied Sciences Research",
+        "DESC": "Enables Duplicants to study matter using the Materials Study Terminal"
+      },
+      "GRANTSKILL_SUITS1": {
+        "NAME": "Skilled: Exosuit Training",
+        "DESC": "Eliminates the runspeed loss experienced while wearing exosuits"
+      },
+      "GRANTSKILL_SWIMMING": {
+        "NAME": "Skilled: Basic Swimming",
+        "DESC": "Allows Duplicants to safely navigate liquid environments."
+      },
+      "GRANTSKILL_SWIMMING2": {
+        "NAME": "Skilled: Divemaster",
+        "DESC": "Grants Duplicants expert proficiency in liquid environment navigation."
+      },
+      "GRANTSKILL_TECHNICALS1": {
+        "NAME": "Skilled: Improved Tinkering",
+        "DESC": "Marginally improves a Duplicant's tinkering speeds"
+      },
+      "GRANTSKILL_TECHNICALS2": {
+        "NAME": "Skilled: Electrical Engineering",
+        "DESC": "Enables generator Tune-Up, which will temporarily provide improved Power output"
+      },
+      "GREASEMONKEY": {
+        "NAME": "Grease Monkey",
+        "DESC": "This Duplicant likes to throw a wrench into the colony's plans... in a good way"
+      },
+      "GREENTHUMB": {
+        "NAME": "Green Thumb",
+        "DESC": "This Duplicant regards every plant as a potential friend"
+      },
+      "HAPPYSINGER": {
+        "NAME": "Yodeler",
+        "DESC": "This Duplicant belts out catchy tunes when they are Overjoyed"
+      },
+      "HEMOPHOBIA": {
+        "NAME": "Squeamish",
+        "DESC": "This Duplicant is of delicate disposition and cannot tend to the sick"
+      },
+      "INTERIORDECORATOR": {
+        "NAME": "Interior Decorator",
+        "DESC": "\"Move it a little to the left...\""
+      },
+      "IRONGUT": {
+        "NAME": "Iron Gut",
+        "DESC": "This Duplicant can eat just about anything without getting sick"
+      },
+      "IRRITABLEBOWEL": {
+        "NAME": "Irritable Bowel",
+        "DESC": "This Duplicant needs a little extra time to \"do their business\""
+      },
+      "JOSHUA": {
+        "NAME": "Cheery Disposition",
+        "DESC": "This Duplicant brightens others' days wherever he goes"
+      },
+      "LIAM": {
+        "NAME": "Germaphobe",
+        "DESC": "This Duplicant has an all-consuming fear of bacteria"
+      },
+      "LONER": {
+        "NAME": "Loner",
+        "DESC": "This Duplicant prefers solitary pursuits"
+      },
+      "MACHINERYDOWN": {
+        "NAME": "Luddite",
+        "DESC": "This Duplicant always invites friends over just to make them hook up their electronics"
+      },
+      "METEORPHILE": {
+        "NAME": "Rock Fan",
+        "DESC": "Meteor showers get this Duplicant really, really hyped"
+      },
+      "MINNOW": {
+        "NAME": "Freediver",
+        "DESC": "This Duplicant is practically amphibious  • +4 to all attributes when swimming"
+      },
+      "MOLEHANDS": {
+        "NAME": "Mole Hands",
+        "DESC": "They're great for tunneling, but finding good gloves is a nightmare"
+      },
+      "MOUTHBREATHER": {
+        "NAME": "Mouth Breather",
+        "DESC": "This Duplicant sucks up way more than their fair share of Oxygen"
+      },
+      "NARCOLEPSY": {
+        "NAME": "Narcoleptic",
+        "DESC": "This Duplicant can and will fall asleep anytime, anyplace"
+      },
+      "NIGHTLIGHT": {
+        "NAME": "Nyctophobic",
+        "DESC": "This Duplicant will imagine scary shapes in the dark all night if no one leaves a light on"
+      },
       "NIGHTOWL": {
         "NAME": "Night Owl",
         "DESC": "This Duplicant does their best work when they'd ought to be sleeping"
       },
-
+      "NONE": {
+        "NAME": "None",
+        "DESC": "This Duplicant seems pretty average overall"
+      },
+      "NOODLEARMS": {
+        "NAME": "Noodle Arms",
+        "DESC": "This Duplicant's arms have all the tensile strength of overcooked linguine"
+      },
+      "PREFERSCOLDER": {
+        "NAME": "Pudgy",
+        "DESC": "This Duplicant has some extra Insulation, so the room Temperature affects them a little less"
+      },
+      "PREFERSCOOLER": {
+        "NAME": "Pudgy",
+        "DESC": "This Duplicant has some extra insulation, so the room temperature affects them a little less"
+      },
+      "PREFERSWARMER": {
+        "NAME": "Skinny",
+        "DESC": "This Duplicant doesn't have much Insulation, so they are more Temperature sensitive than others"
+      },
+      "RADIATIONEATER": {
+        "NAME": "Radiation Eater",
+        "DESC": "This Duplicant eats radiation for breakfast (and dinner)"
+      },
+      "RANCHINGDOWN": {
+        "NAME": "Critter Aversion",
+        "DESC": "This Duplicant just doesn't trust those beady little eyes"
+      },
+      "RANCHINGUP": {
+        "NAME": "Animal Lover",
+        "DESC": "The fuzzy snoots! The little claws! The chitinous exoskeletons! This Duplicant's never met a critter they didn't like"
+      },
       "REGENERATION": {
         "NAME": "Regenerative",
-        "DESC": "This Duplicant is constantly regenerating health."
+        "DESC": "This robust Duplicant is constantly regenerating health"
       },
-
-      "DEEPERDIVERSLUNGS": {
-        "NAME": "Deeper Diver's Lungs",
-        "DESC": "This Duplicant was a talented opera singer and a snorkeling instructor."
+      "ROBODANCER": {
+        "NAME": "Flash Mobber",
+        "DESC": "This Duplicant breaks into dance when they are Overjoyed"
       },
-
+      "ROCKCRUSHER": {
+        "NAME": "Beefsteak",
+        "DESC": "This Duplicant's got muscles on their muscles!"
+      },
+      "SCAREDYCAT": {
+        "NAME": "Pacifist",
+        "DESC": "This Duplicant abhors violence"
+      },
+      "SENSITIVEFEET": {
+        "NAME": "Delicate Feetsies",
+        "DESC": "This Duplicant is a sensitive sole and would rather walk on tile than raw bedrock"
+      },
+      "SIMPLETASTES": {
+        "NAME": "Shrivelled Tastebuds",
+        "DESC": "This Duplicant could lick a Puft's backside and taste nothing"
+      },
+      "SLOWLEARNER": {
+        "NAME": "Slow Learner",
+        "DESC": "This Duplicant's a little slow on the uptake, but gosh do they try"
+      },
+      "SMALLBLADDER": {
+        "NAME": "Small Bladder",
+        "DESC": "This Duplicant has a tiny, pea-sized Bladder. Adorable!"
+      },
+      "SNORER": {
+        "NAME": "Loud Sleeper",
+        "DESC": "In space, everyone can hear you snore"
+      },
+      "SOLITARYSLEEPER": {
+        "NAME": "Solitary Sleeper",
+        "DESC": "This Duplicant prefers to sleep alone"
+      },
+      "SPARKLESTREAKER": {
+        "NAME": "Sparkle Streaker",
+        "DESC": "This Duplicant leaves a trail of happy sparkles when they are Overjoyed"
+      },
+      "STARRYEYED": {
+        "NAME": "Starry Eyed",
+        "DESC": "This Duplicant loves being in space"
+      },
+      "STARTWITHBOOSTER_ART1": {
+        "NAME": "Masterworks Art Booster",
+        "DESC": "Grants a Bionic Duplicant flawless decorating skills."
+      },
+      "STARTWITHBOOSTER_CARRY1": {
+        "NAME": "Strength Booster",
+        "DESC": "Grants a Bionic Duplicant increased carrying capacity and athletic prowess."
+      },
+      "STARTWITHBOOSTER_CONSTRUCT1": {
+        "NAME": "Construction Booster",
+        "DESC": "Grants a Bionic Duplicant the ability to build fast, and demolish buildings that others cannot."
+      },
+      "STARTWITHBOOSTER_COOK1": {
+        "NAME": "Grilling Booster",
+        "DESC": "Grants a Bionic Duplicant deliciously professional culinary skills."
+      },
+      "STARTWITHBOOSTER_DIG1": {
+        "NAME": "Digging Booster",
+        "DESC": "Grants a Bionic Duplicant the skill required to dig hard things."
+      },
+      "STARTWITHBOOSTER_DIG2": {
+        "NAME": "Extreme Digging Booster",
+        "DESC": "Grants a Bionic Duplicant the digging skill required to get through anything."
+      },
+      "STARTWITHBOOSTER_FARM1": {
+        "NAME": "Crop Tending Booster",
+        "DESC": "Grants a Bionic Duplicant unparalleled farming and botanical analysis skills."
+      },
+      "STARTWITHBOOSTER_MEDICINE1": {
+        "NAME": "Advanced Medical Booster",
+        "DESC": "Grants a Bionic Duplicant the ability to perform all doctoring errands."
+      },
+      "STARTWITHBOOSTER_OP1": {
+        "NAME": "Electrical Engineering Booster",
+        "DESC": "Grants a Bionic Duplicant the skills requried to tinker and solder to their heart's content."
+      },
+      "STARTWITHBOOSTER_RANCH1": {
+        "NAME": "Ranching Booster",
+        "DESC": "Grants a Bionic Duplicant the skills required to care for Critters in every way."
+      },
+      "STARTWITHBOOSTER_SUITS1": {
+        "NAME": "Suit Training Booster",
+        "DESC": "Enables a Bionic Duplicant to maximize durability of equipped Exosuits and maintain their runspeed."
+      },
+      "STICKERBOMBER": {
+        "NAME": "Sticker Bomber",
+        "DESC": "This Duplicant will spontaneously redecorate a room when they are Overjoyed"
+      },
+      "STINKY": {
+        "NAME": "Stinkiness",
+        "DESC": "This Duplicant is genetically cursed by a pungent bodily odor"
+      },
+      "STRESSSHOCKER": {
+        "NAME": "Stunner",
+        "DESC": "This Duplicant emits electrical shocks when Stressed"
+      },
+      "STRESSVOMITER": {
+        "NAME": "Vomiter",
+        "DESC": "This Duplicant is liable to puke everywhere when Stressed"
+      },
+      "STRONGARM": {
+        "NAME": "Buff",
+        "DESC": "This Duplicant has muscles on their muscles"
+      },
+      "STRONGIMMUNESYSTEM": {
+        "NAME": "Germ Resistant",
+        "DESC": "This Duplicant's immune system bounces back faster than most"
+      },
       "SUNNYDISPOSITION": {
         "NAME": "Sunny Disposition",
-        "DESC": "This Duplicant has an unwaveringly positive outlook on life."
+        "DESC": "This Duplicant has an unwaveringly positive outlook on life"
       },
-
-      "ROCKCRUSHER": {
-        "NAME": "Rock Crusher",
-        "DESC": "This Duplicant is incredibly strong."
+      "SUPERPRODUCTIVE": {
+        "NAME": "Super Productive",
+        "DESC": "This Duplicant is super productive when they are Overjoyed"
       },
-
-      "SIMPLETASTES": {
-        "NAME": "Simple Tastes",
-        "DESC": "This Duplicant finds pleasure in even the blandest of foods."
+      "THRIVER": {
+        "NAME": "Duress to Impress",
+        "DESC": "This Duplicant kicks into hyperdrive when the stress is on"
       },
-
-      "FOODIE": {
-        "NAME": "Gourmet",
-        "DESC": "This Duplicant has a highly refined palate and desires luxurious foods."
+      "TWINKLETOES": {
+        "NAME": "Twinkletoes",
+        "DESC": "This Duplicant is light as a feather on their feet"
+      },
+      "UGLYCRIER": {
+        "NAME": "Ugly Crier",
+        "DESC": "If this Duplicant gets too Stressed it won't be pretty"
+      },
+      "UNCULTURED": {
+        "NAME": "Uncultured",
+        "DESC": "This Duplicant has simply no appreciation for the arts"
+      },
+      "WEAKIMMUNESYSTEM": {
+        "NAME": "Biohazardous",
+        "DESC": "All the vitamin C in space couldn't stop this Duplicant from getting sick"
+      },
+      "WORKAHOLIC": {
+        "NAME": "Workaholic",
+        "DESC": "This Duplicant gets antsy when left idle"
       }
     },
     "ATTRIBUTES": {
-      "Construction": {
-        "NAME": "Construction",
-        "DESC": "Determines a Duplicant's building speed."
+      "AirConsumptionRate": {
+        "NAME": "Air Consumption Rate",
+        "DESC": "Air Consumption determines how much Oxygen a Duplicant requires per minute to live."
       },
-
-      "Digging": {
-        "NAME": "Digging",
-        "DESC": "Determines a Duplicant's mining speed."
+      "Art": {
+        "NAME": "Creativity",
+        "DESC": "Determines how quickly a Duplicant produces Artwork."
       },
-
-      "Machinery": {
-        "NAME": "Tinkering",
-        "DESC": "Determines how quickly a Duplicant uses machines."
-      },
-
-      "LifeSupport": {
-        "NAME": "Life Support",
-        "DESC": "Determines how efficiently a Duplicant maintains algae terrariums, deodorizers, and water sieves."
-      },
-
-      "Toggle": {
-        "NAME": "Toggle",
-        "DESC": "Determines how efficiently a Duplicant tunes machinery, flips switches, and sets sensors."
-      },
-
       "Athletics": {
         "NAME": "Athletics",
         "DESC": "Determines a Duplicant's default runspeed."
       },
-
-      "Learning": {
-        "NAME": "Learning",
-        "DESC": "Determines how quickly a Duplicant conducts Research and gains skills."
+      "BionicBatteryCountCapacity": {
+        "NAME": "Power Banks",
+        "DESC": "The number of power banks this Bionic Duplicant can store"
       },
-
+      "BionicBoosterSlots": {
+        "NAME": "Booster Slots",
+        "DESC": "The number of boosters this Bionic Duplicant can install at once"
+      },
+      "BladderDelta": {
+        "NAME": "Bladder",
+        "DESC": "Determines how quickly a Duplicant's Bladder fills or depletes."
+      },
+      "Botanist": {
+        "NAME": "Agriculture",
+        "DESC": "Determines how quickly and efficiently a Duplicant cultivates Plants."
+      },
+      "BreathDelta": {
+        "NAME": "Breath",
+        "DESC": "Determines how quickly a Duplicant gains or reduces Breath."
+      },
+      "BreathMax": {
+        "NAME": "Maximum Breath",
+        "DESC": ""
+      },
+      "CaloriesDelta": {
+        "NAME": "Calories",
+        "DESC": "Determines how quickly a Duplicant burns or stores Calories."
+      },
+      "Caring": {
+        "NAME": "Medicine",
+        "DESC": "Determines a Duplicant's ability to care for sick peers."
+      },
+      "CarryAmount": {
+        "NAME": "Carrying Capacity",
+        "DESC": "Determines the maximum weight that a Duplicant can carry."
+      },
+      "Construction": {
+        "NAME": "Construction",
+        "DESC": "Determines a Duplicant's building Speed."
+      },
       "Cooking": {
-        "NAME": "Cooking",
+        "NAME": "Cuisine",
         "DESC": "Determines how quickly a Duplicant prepares Food."
       },
-
-      "Strength": {
-        "NAME": "Strength",
-        "DESC": "Determines a Duplicant's carrying capacity and cleaning speed."
-      },
-
-      "Caring": {
-        "NAME": "Kindness",
-        "DESC": "Determines medical skill and sociability with peers and critters."
-      },
-
-      "Immunity": {
-        "NAME": "Immunity",
-        "DESC": "Determines a Duplicant's disease susceptibility and recovery time."
-      },
-
-      "Botanist": {
-        "NAME": "Farming",
-        "DESC": "Determines how quickly and efficiently a Duplicant cultivates plants."
-      },
-
-      "Ranching": {
-        "NAME": "Ranching",
-        "DESC": "Determines how quickly and efficiently a Duplicant tends critters."
-      },
-
-      "Art": {
-        "NAME": "Creativity",
-        "DESC": "Determines how quickly a Duplicant can produce artwork."
-      },
-
       "Decor": {
         "NAME": "Decor",
-        "DESC": "Decor affects a Duplicant's Stress and their opinion of their surroundings."
+        "DESC": "Affects a Duplicant's Morale and their opinion of their surroundings."
+      },
+      "DecorBonus": {
+        "NAME": "Decor Bonus",
+        "DESC": "Change in Decor value relative to the base crop"
+      },
+      "DecorExpectation": {
+        "NAME": "Decor Morale Bonus",
+        "DESC": "A Decor Morale Bonus allows Duplicants to receive Morale boosts from lower Decor values.  Maintaining high Morale will allow Duplicants to learn more Skills."
+      },
+      "DecorRadius": {
+        "NAME": "Decor Radius",
+        "DESC": "The influence range of an object's Decor value."
+      },
+      "Digging": {
+        "NAME": "Excavation",
+        "DESC": "Determines a Duplicant's mining speed."
+      },
+      "DiseaseCureSpeed": {
+        "NAME": "Disease Recovery Speed Bonus",
+        "DESC": "Recovery speed bonus is increased when another Duplicant provides medical care to the patient"
+      },
+      "DoctoredLevel": {
+        "NAME": "Treatment Received Effect",
+        "DESC": "Duplicants who receive medical care while in a Sick Bay or Disease Clinic will gain the Treatment Received effect  This effect reduces the severity of Disease symptoms"
+      },
+      "FarmTinker": {
+        "NAME": "Farmer's Touch",
+        "DESC": "A skilled Duplicant has encouraged this Plant to grow a little bit faster  Applying this effect consumed one dose of Micronutrient Fertilizer"
+      },
+      "FatalTemperature": {
+        "NAME": "Break Down Temperature",
+        "DESC": "A building at break down Temperature will lose functionality and take damage"
+      },
+      "FertilizerUsageMod": {
+        "NAME": "Fertilizer Usage",
+        "DESC": "Fertilizer and irrigation amounts this plant requires relative to the base crop"
+      },
+      "FoodExpectation": {
+        "NAME": "Food Morale Bonus",
+        "DESC": "A Food Morale Bonus allows Duplicants to receive Morale boosts from lower quality Food.  Maintaining high Morale will allow Duplicants to learn more Skills."
+      },
+      "GeneratorOutput": {
+        "NAME": "Power Output",
+        "DESC": ""
+      },
+      "GermResistance": {
+        "NAME": "Germ Resistance",
+        "DESC": "Duplicants with a higher Germ Resistance rating are less likely to contract germ-based Diseases."
+      },
+      "HarvestTime": {
+        "NAME": "Harvest Duration",
+        "DESC": "Time it takes an unskilled Duplicant to harvest this plant"
+      },
+      "Height": {
+        "NAME": "Height",
+        "DESC": ""
+      },
+      "HitPointsDelta": {
+        "NAME": "Health",
+        "DESC": "Health regeneration is increased when another Duplicant provides medical care to the patient"
+      },
+      "Hygiene": {
+        "NAME": "Hygiene",
+        "DESC": "Affects a Duplicant's sense of cleanliness."
+      },
+      "Immunity": {
+        "NAME": "Immunity",
+        "DESC": "Determines a Duplicant's Disease susceptibility and recovery time."
+      },
+      "Insulation": {
+        "NAME": "Insulation",
+        "DESC": "Highly Insulated Duplicants retain body heat easily, while low Insulation Duplicants are easier to keep cool."
+      },
+      "Learning": {
+        "NAME": "Science",
+        "DESC": "Determines how quickly a Duplicant conducts Research and levels up their Attributes."
+      },
+      "LifeSupport": {
+        "NAME": "Life Support",
+        "DESC": "Determines how efficiently a Duplicant maintains Algae Terrariums, Deodorizers, and Water Sieves"
+      },
+      "Luminescence": {
+        "NAME": "Luminescence",
+        "DESC": "Determines how much light a Duplicant emits."
+      },
+      "Machinery": {
+        "NAME": "Machinery",
+        "DESC": "Determines how quickly a Duplicant uses machines."
+      },
+      "MachinerySpeed": {
+        "NAME": "Machinery Speed",
+        "DESC": "Speed Bonus"
+      },
+      "MaxRadiationThreshold": {
+        "NAME": "Maximum Radiation",
+        "DESC": "Largest amount of ambient Radiation this plant can tolerate"
+      },
+      "MaxUnderwaterTravelCost": {
+        "NAME": "Underwater Movement",
+        "DESC": "Determines a Duplicant's runspeed when submerged in Liquid"
+      },
+      "Metabolism": {
+        "NAME": "Critter Metabolism",
+        "DESC": "Affects the rate at which a critter burns Calories and produces materials"
+      },
+      "MinLightLux": {
+        "NAME": "Light",
+        "DESC": "Minimum lux this plant requires for growth"
+      },
+      "MinRadiationThreshold": {
+        "NAME": "Minimum Radiation",
+        "DESC": "Smallest amount of ambient Radiation required for this plant to grow"
+      },
+      "OverheatTemperature": {
+        "NAME": "Overheat Temperature",
+        "DESC": "A building at Overheat Temperature will take damage and break down if not cooled"
+      },
+      "PowerTinker": {
+        "NAME": "Engie's Tune-Up",
+        "DESC": "A skilled Duplicant has improved this generator's Power output efficiency  Applying this effect consumed one Microchip"
+      },
+      "QualityOfLife": {
+        "NAME": "Morale",
+        "DESC": "A Duplicant's Morale must exceed their Morale Need, or they'll begin to accumulate Stress.  Morale can be increased by providing Duplicants higher quality Food, allotting more Downtime in the colony schedule, or building better Bathrooms and Bedrooms for them to live in."
+      },
+      "QualityOfLifeExpectation": {
+        "NAME": "Morale Need",
+        "DESC": "Dictates how high a Duplicant's Morale must be kept to prevent them from gaining Stress"
+      },
+      "RadiationRecovery": {
+        "NAME": "Radiation Absorption",
+        "DESC": "The rate at which Radiation is neutralized within a Duplicant body."
+      },
+      "RadiationResistance": {
+        "NAME": "Radiation Resistance",
+        "DESC": "Determines how easily a Duplicant repels Radiation Sickness."
+      },
+      "Ranching": {
+        "NAME": "Husbandry",
+        "DESC": "Determines how efficiently a Duplicant tends Critters."
+      },
+      "RoomTemperaturePreference": {
+        "NAME": "Temperature Preference",
+        "DESC": "Determines the minimum body Temperature a Duplicant prefers to maintain."
+      },
+      "ScaldingThreshold": {
+        "NAME": "Scalding Threshold",
+        "DESC": "Determines the Temperature at which a Duplicant will get burned."
+      },
+      "ScoldingThreshold": {
+        "NAME": "Frostbite Threshold",
+        "DESC": "Determines the Temperature at which a Duplicant will get frostbitten."
+      },
+      "Sneezyness": {
+        "NAME": "Sneeziness",
+        "DESC": "Determines how frequently a Duplicant sneezes."
+      },
+      "SpaceNavigation": {
+        "NAME": "Piloting",
+        "DESC": "Determines how long it takes a Duplicant to complete a space mission."
+      },
+      "StaminaDelta": {
+        "NAME": "Stamina",
+        "DESC": ""
+      },
+      "Strength": {
+        "NAME": "Strength",
+        "DESC": "Determines a Duplicant's Carrying Capacity and cleaning speed."
+      },
+      "StressDelta": {
+        "NAME": "Stress",
+        "DESC": "Determines how quickly a Duplicant gains or reduces Stress"
+      },
+      "ThermalConductivityBarrier": {
+        "NAME": "Insulation Thickness",
+        "DESC": "Determines how quickly a Duplicant retains or loses body Heat in any given area.  It is the sum of a Duplicant's Equipment and their natural Insulation values."
+      },
+      "Toggle": {
+        "NAME": "Toggle",
+        "DESC": "Determines how efficiently a Duplicant tunes machinery, flips switches, and sets sensors."
+      },
+      "ToiletEfficiency": {
+        "NAME": "Bathroom Use Speed",
+        "DESC": "Determines how long a Duplicant needs to do their \"business\"."
+      },
+      "TransitTubeTravelSpeed": {
+        "NAME": "Transit Speed",
+        "DESC": "Determines a Duplicant's default Transit Tube travel speed."
+      },
+      "WiltTempRangeMod": {
+        "NAME": "Viable Temperature Range",
+        "DESC": "Variance growth temperature relative to the base crop"
+      },
+      "YieldAmount": {
+        "NAME": "Yield Amount",
+        "DESC": "Plant production relative to the base crop"
       }
     }
   }

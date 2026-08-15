@@ -12,7 +12,11 @@ Windows: `C:\Users\Your users name\Documents\Klei\OxygenNotIncluded\save_files\`
 
 # Compatibility
 
-Supports save file version 7.15 (Recreation Pack). Future versions may not be compatible until the editor is updated. Previous versions may need to be updated by re-saving them in the newest version of the game.
+Supports save versions 7.28, 7.31, 7.32, 7.34, 7.36 and 7.38, covering the base game and every content pack through the Aquatic Planet Pack: Spaced Out!, Frosty Planet Pack, Bionic Booster Pack, Prehistoric Planet Pack and Aquatic Planet Pack.
+
+Saves describe their own structure, so a new game version that only adds or reorders fields usually reads fine. The editor still refuses unrecognised versions by default and offers an explicit override, because "usually" is not "always". Older saves may need re-saving in a current version of the game first.
+
+**Back up any save before editing it.** Loading and writing a save here does not prove the game will accept the result.
 
 # V3
 

@@ -6,6 +6,8 @@ import {
 } from "oni-save-parser";
 import objectHash from "object-hash";
 
+import { isDuplicantType } from "../duplicants";
+
 import { saveAs } from "file-saver";
 
 import {
@@ -47,7 +49,7 @@ function* handleExportBehaviorsActionSaga(action: ExportBehaviorsAction) {
 
   // TODO: Should have a config file defining valid behavior exports and file name source.
   let fileName = "export.json";
-  if (gameObjectType === "Minion") {
+  if (isDuplicantType(gameObjectType)) {
     const identity = getBehavior(gameObject, MinionIdentityBehavior);
     if (identity) {
       fileName = `${identity.templateData.name}.json`;

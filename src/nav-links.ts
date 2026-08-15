@@ -3,7 +3,12 @@ import { DLCIds } from "oni-save-parser";
 export interface NavItem {
   name: string;
   path: string;
-  requireDLC?: string;
+
+  /**
+   * Only show this item when the save has these content packs active.
+   * Several ids mean "all of these". `DLCIds.None` means base game only.
+   */
+  requireDLC?: string | string[];
   i18nKey: string;
   saveRequired?: boolean;
 }
@@ -27,10 +32,18 @@ const NavItems: NavItem[] = [
     saveRequired: true,
   },
   {
-    name: "Planets",
-    path: "/planets",
-    requireDLC: DLCIds.None,
-    i18nKey: "planet.noun_titlecase_plural",
+    name: "Creatures",
+    path: "/creatures",
+    i18nKey: "creature.noun_titlecase_plural",
+    saveRequired: true,
+  },
+  {
+    // Spaced Out! replaced the classic starmap with a cluster of asteroids.
+    // Every later pack builds on it, so this is the one gate that matters.
+    name: "Worlds",
+    path: "/worlds",
+    requireDLC: DLCIds.SpacedOut,
+    i18nKey: "world.noun_titlecase_plural",
     saveRequired: true,
   },
   {

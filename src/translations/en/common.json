@@ -61,8 +61,8 @@
     "emission_length": "Emission Length",
     "emission_rate": "Emission Rate"
   },
-  "planet": {
-    "noun_titlecase_plural": "Planets"
+  "world": {
+    "noun_titlecase_plural": "Worlds"
   },
   "material": {
     "noun_titlecase": "Material",
