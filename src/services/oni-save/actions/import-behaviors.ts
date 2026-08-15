@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 export const ACTION_ONISAVE_IMPORT_BEHAVIORS = "oni-save/import-behaviors";
 export const importBehaviors = (gameObjectId: number, file: File) => ({
@@ -14,7 +14,7 @@ export const importWarnChecksum = () => ({
 });
 export type ImportWarnChecksumAction = ReturnType<typeof importWarnChecksum>;
 export function isImportWarnChecksumAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is ImportWarnChecksumAction {
   return action.type === ACTION_ONISAVE_IMPORT_WARN_CHECKSUM;
 }
@@ -26,7 +26,7 @@ export const importConfirm = (doImport: boolean) => ({
 });
 export type ImportConfirmAction = ReturnType<typeof importConfirm>;
 export function isImportConfirmAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is ImportWarnChecksumAction {
   return action.type === ACTION_ONISAVE_IMPORT_CONFIRM;
 }

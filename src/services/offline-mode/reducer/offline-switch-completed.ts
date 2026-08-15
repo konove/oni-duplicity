@@ -1,11 +1,11 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 import { defaultOfflineModeState, OfflineModeState } from "../state";
 import { isOfflineSwitchCompletedAction } from "../actions/offline-switch-completed";
 
 export default function offlineSwitchCompletedReducer(
   state: OfflineModeState = defaultOfflineModeState,
-  action: AnyAction
+  action: UnknownAction
 ): OfflineModeState {
   if (!isOfflineSwitchCompletedAction(action)) {
     return state;

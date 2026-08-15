@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { getBehavior } from "oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState, BehaviorCopyData } from "../state";
@@ -10,7 +10,7 @@ import {
 
 export default function copyBehaviorsReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isCopyBehaviorsAction(action)) {
     return state;

@@ -1,4 +1,4 @@
-import { combineReducers, AnyAction } from "redux";
+import { combineReducers, UnknownAction } from "redux";
 
 import { AppState, defaultAppState } from "@/state";
 
@@ -14,7 +14,7 @@ const servicesReducer = combineReducers({
 
 export default function reducer(
   state: AppState = defaultAppState,
-  action: AnyAction
+  action: UnknownAction
 ): AppState {
   return {
     services: servicesReducer(state.services, action)

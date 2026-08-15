@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 import { SaveGame } from "oni-save-parser";
 
@@ -13,11 +13,11 @@ export const actionsBlacklist: string[] = [
   ACTION_ONISAVE_PARSE_PROGRESS
 ];
 
-export function actionSanitizer(action: AnyAction): AnyAction {
+export function actionSanitizer(action: UnknownAction): UnknownAction {
   if (action.type === ACTION_RECEIVE_ONISAVE_SUCCESS) {
     return {
       ...action,
-      payload: sanitizeSave(action.payload)
+      payload: sanitizeSave(action.payload as SaveGame | null)
     };
   }
   return action;

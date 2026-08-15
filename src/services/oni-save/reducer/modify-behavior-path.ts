@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { SaveGame } from "oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState } from "../state";
@@ -14,7 +14,7 @@ import {
 
 export default function modifyBehaviorPathReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isModifyBehaviorPathAction(action)) {
     return state;

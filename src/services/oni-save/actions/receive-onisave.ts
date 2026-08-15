@@ -1,6 +1,6 @@
 import { SaveGame } from "oni-save-parser";
 import { LoadingStatus } from "../state";
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 export const ACTION_RECEIVE_ONISAVE_BEGIN = "oni-save/receive:begin";
 export const receiveOniSaveBegin = (
@@ -48,7 +48,7 @@ const types = [
   ACTION_RECEIVE_ONISAVE_SUCCESS
 ];
 export function isReceiveOniSaveAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is ReceiveOniSaveAction {
   return types.indexOf(action.type) !== -1;
 }

@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 export const ACTION_OFFLINE_SWITCH_COMPLETED = "@offline-mode/offline-switch-completed" as const;
 export const offlineSwitchCompleted = (offlineEnabled: boolean) => ({
@@ -9,7 +9,7 @@ export type OfflineSwitchCompletedAction = ReturnType<
   typeof offlineSwitchCompleted
 >;
 export function isOfflineSwitchCompletedAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is OfflineSwitchCompletedAction {
   return action.type === ACTION_OFFLINE_SWITCH_COMPLETED;
 }

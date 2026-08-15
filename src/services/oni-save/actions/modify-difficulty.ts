@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { QualityLevelSettings } from "oni-save-parser";
 
 export const ACTION_ONISAVE_MODIFY_DIFFICULTY = "oni-save/modify-difficulty";
@@ -11,7 +11,7 @@ export const modifyDifficulty = (
 });
 export type ModifyDifficultyAction = ReturnType<typeof modifyDifficulty>;
 export function isModifyDifficultyAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is ModifyDifficultyAction {
   return action.type === ACTION_ONISAVE_MODIFY_DIFFICULTY;
 }

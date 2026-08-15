@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { SimHashName } from "oni-save-parser";
 
 export const ACTION_ONISAVE_DELETE_LOOSE_MATERIAL =
@@ -9,7 +9,7 @@ export const deleteLooseMaterial = (materialType?: SimHashName) => ({
 });
 export type DeleteLooseMaterialAction = ReturnType<typeof deleteLooseMaterial>;
 export function isDeleteLooseMaterialAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is DeleteLooseMaterialAction {
   return action.type === ACTION_ONISAVE_DELETE_LOOSE_MATERIAL;
 }

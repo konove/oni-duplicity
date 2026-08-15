@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { SaveGame } from "oni-save-parser";
 import { merge } from "lodash";
 
@@ -18,7 +18,7 @@ import {
 
 export default function modifyBehaviorReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isModifyBehaviorAction(action)) {
     return state;

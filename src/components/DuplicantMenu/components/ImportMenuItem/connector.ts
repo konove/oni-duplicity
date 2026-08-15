@@ -1,4 +1,4 @@
-import { AnyAction, Dispatch } from "redux";
+import { UnknownAction, Dispatch } from "redux";
 import { connect } from "react-redux";
 
 import { AppState } from "@/state";
@@ -9,7 +9,7 @@ export interface ImportMenuItemInputProps {
 }
 
 const mapDispatchToProps = function (
-  dispatch: Dispatch<AnyAction>,
+  dispatch: Dispatch<UnknownAction>,
   props: ImportMenuItemInputProps
 ) {
   return {

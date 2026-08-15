@@ -1,11 +1,11 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 import { OniSaveState, defaultOniSaveState, LoadingStatus } from "../state";
 import { isLoadExampleSaveAction } from "../actions/load-example";
 
 export default function loadExampleSaveReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isLoadExampleSaveAction(action)) {
     return state;

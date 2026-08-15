@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 import { LoadingStatus, OniSaveState, defaultOniSaveState } from "../state";
 
@@ -11,7 +11,7 @@ import {
 
 export default function receiveOniSaveReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isReceiveOniSaveAction(action)) {
     return state;

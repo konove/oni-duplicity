@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 import { OniSaveState, defaultOniSaveState } from "../state";
 
@@ -9,7 +9,7 @@ import {
 
 export default function importWarnChecksumReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (isImportWarnChecksumAction(action)) {
     return {

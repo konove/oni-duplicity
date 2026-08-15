@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { SaveGame } from "oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState } from "../state";
@@ -16,7 +16,7 @@ import {
 
 export default function mergeBehaviorsReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isMergeBehaviorsAction(action)) {
     return state;

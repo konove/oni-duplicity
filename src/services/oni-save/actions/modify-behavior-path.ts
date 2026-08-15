@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { GameObjectBehavior, BehaviorName } from "oni-save-parser";
 
 export const ACTION_MODIFY_BEHAVIOR_PATH = "oni-save/modify-behavior-path";
@@ -53,7 +53,11 @@ export function modifyBehaviorPath(
   };
 }
 
-export interface ModifyBehaviorPathAction {
+// A type alias, not an interface: interfaces get no implicit index signature,
+// so an interface here would not be assignable to redux's UnknownAction and
+// isModifyBehaviorPathAction could not narrow to it. Every other action in
+// this folder is a ReturnType<typeof ...> alias and gets this for free.
+export type ModifyBehaviorPathAction = {
   type: typeof ACTION_MODIFY_BEHAVIOR_PATH;
   payload: {
     gameObjectId: number;
@@ -61,9 +65,9 @@ export interface ModifyBehaviorPathAction {
     behaviorPath: readonly string[];
     value: any;
   };
-}
+};
 export function isModifyBehaviorPathAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is ModifyBehaviorPathAction {
   return action.type === ACTION_MODIFY_BEHAVIOR_PATH;
 }

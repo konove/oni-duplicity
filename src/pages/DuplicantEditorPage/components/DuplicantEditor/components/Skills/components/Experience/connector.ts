@@ -1,6 +1,6 @@
 import { MinionResumeBehavior } from "oni-save-parser";
 import { createSelector } from "reselect";
-import { AnyAction, Dispatch } from "redux";
+import { UnknownAction, Dispatch } from "redux";
 import { connect } from "react-redux";
 
 import { createStructuredSelector } from "@/state";
@@ -26,7 +26,7 @@ const mapStateToProps = createStructuredSelector({
 });
 
 function mapDispatchToProps(
-  dispatch: Dispatch<AnyAction>,
+  dispatch: Dispatch<UnknownAction>,
   ownProps: ExperienceConnectorProps
 ) {
   const { gameObjectId } = ownProps;

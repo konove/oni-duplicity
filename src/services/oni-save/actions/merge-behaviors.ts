@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 
 export interface BehaviorMergeData {
   templateData?: any;
@@ -16,7 +16,7 @@ export const mergeBehaviors = (
 export type MergeBehaviorsAction = ReturnType<typeof mergeBehaviors>;
 
 export function isMergeBehaviorsAction(
-  action: AnyAction
+  action: UnknownAction
 ): action is MergeBehaviorsAction {
   return action.type === ACTION_ONISAVE_MERGE_BEHAVIORS;
 }

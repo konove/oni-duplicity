@@ -1,4 +1,4 @@
-import { AnyAction } from "redux";
+import { UnknownAction } from "redux";
 import { find, findIndex } from "lodash";
 import { SpacecraftManagerBehavior } from "oni-save-parser";
 
@@ -13,7 +13,7 @@ import {
 
 export default function modifyPlanetReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: AnyAction
+  action: UnknownAction
 ): OniSaveState {
   if (!isModifyPlanetAction(action)) {
     return state;
