@@ -1,3 +1,10 @@
+## 3.26.1
+
+- The Geysers page says why it is empty instead of rendering nothing. A colony
+  can legitimately have no geysers, and an Aquatic Planet Pack one can have
+  Tidal Springs and Thermal Gas Fissures, which are their own prefabs and store
+  no emission settings to edit. Both cases previously showed a blank page.
+
 ## 3.26.0
 
 - New "Make Mega Duplicant" action, in the duplicant list's overflow menu and
