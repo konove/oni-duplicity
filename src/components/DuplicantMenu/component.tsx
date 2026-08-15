@@ -11,6 +11,7 @@ import ImportMenuItem from "./components/ImportMenuItem";
 import ExportMenuItem from "./components/ExportMenuItem";
 import PasteMenuItem from "./components/PasteMenuItem";
 import CloneMenuItem from "./components/CloneMenuItem";
+import MegaMenuItem from "./components/MegaMenuItem";
 
 export interface DuplicantMenuProps {
   gameObjectId: number;
@@ -50,6 +51,7 @@ const DuplicantMenu: React.FC<Props> = ({ gameObjectId }) => {
         <ExportMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <Divider />
         <CloneMenuItem gameObjectId={gameObjectId} onClick={onClose} />
+        <MegaMenuItem gameObjectId={gameObjectId} onClick={onClose} />
       </Menu>
     </div>
   );

@@ -1,3 +1,18 @@
+## 3.26.0
+
+- New "Make Mega Duplicant" action, in the duplicant list's overflow menu and
+  on the editor page. It maxes every attribute to 9999, replaces the
+  duplicant's traits with the good ones, takes every interest, and sets
+  experience to 999999.
+- The editor page now carries the same overflow menu as the list, so Copy,
+  Paste, Import, Export and Clone are reachable there too.
+
+Two notes on what "the good ones" means. It is the game's own `positiveTrait`
+flag, which covers 29 traits and excludes the joy and stress reactions. And
+three of those 29 conflict in pairs - Early Bird with Night Owl, Shriveled
+Tastebuds with Gourmet, Uncultured with Interior Decorator - so one of each
+pair is taken rather than both, which would leave a duplicant the game rejects.
+
 ## 3.25.0
 
 - The Skills tab now offers the right skills for the save. It listed a fixed

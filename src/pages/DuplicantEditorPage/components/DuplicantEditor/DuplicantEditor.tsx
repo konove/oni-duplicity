@@ -16,6 +16,7 @@ import Tab from "@mui/material/Tab";
 
 import PageContainer from "@/components/PageContainer";
 import DuplicantPortrait from "@/components/DuplicantPortrait";
+import DuplicantMenu from "@/components/DuplicantMenu";
 
 import DuplicantName from "./components/DuplicantName";
 import Traits from "./components/Traits";
@@ -45,8 +46,14 @@ const styles = (theme: Theme) =>
       marginBottom: theme.spacing()
     },
     nameRow: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
       flexGrow: 0,
       flexShrink: 0
+    },
+    nameRowMenu: {
+      marginLeft: "auto"
     },
     portraitRow: {
       display: "flex",
@@ -90,6 +97,9 @@ const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => {
       <div className={classes.root}>
         <div className={classes.nameRow}>
           <DuplicantName gameObjectId={gameObjectId} />
+          <div className={classes.nameRowMenu}>
+            <DuplicantMenu gameObjectId={gameObjectId} />
+          </div>
         </div>
         <Divider className={classes.divider} />
         <div className={classes.portraitRow}>

@@ -374,6 +374,14 @@ def float_array(arg, unresolved):
     return [evaluate(x, unresolved) for x in split_args(inner.group(1))]
 
 
+DLC_ALIASES = {
+    "DlcManager.DLC2": ["DLC2_ID"],
+    "DlcManager.DLC3": ["DLC3_ID"],
+    "DlcManager.DLC4": ["DLC4_ID"],
+    "DlcManager.DLC5": ["DLC5_ID"],
+    "DlcManager.EXPANSION1": ["EXPANSION1_ID"],
+}
+
 unresolved = set()
 traits = {}
 
@@ -386,7 +394,26 @@ for m in re.finditer(r"TraitUtil\.(\w+)(?:<\w+>)?\s*\(", traits_cs):
     if not trait_id:
         continue
 
-    rec = traits.setdefault(trait_id, {"modifiers": [], "chores": [], "immunities": []})
+    rec = traits.setdefault(
+        trait_id,
+        {
+            "modifiers": [],
+            "chores": [],
+            "immunities": [],
+            "positive": False,
+            "requiredDlcIds": [],
+        },
+    )
+
+    # The game's own verdict on whether a trait is good for the duplicant, and
+    # which packs it needs. Both are plain arguments on the factory call.
+    if any(re.search(r"positiveTrait:\s*true", a) for a in args):
+        rec["positive"] = True
+    for arg in args[1:]:
+        if arg.strip() in DLC_ALIASES:
+            rec["requiredDlcIds"] = sorted(
+                set(rec["requiredDlcIds"]) | set(DLC_ALIASES[arg.strip()])
+            )
 
     if fn == "CreateAttributeEffectTrait":
         # Overloads: (id,name,desc, attr, delta, ...) |
@@ -474,6 +501,50 @@ for trait_id, rec in traits.items():
         out[key] = lines
 
 (SCRATCH / "trait-effects.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+
+# --- trait metadata --------------------------------------------------------
+# Which traits are good for a duplicant, which packs they need, and which
+# cannot be held together. The exclusions live with the character-generation
+# data in DUPLICANTSTATS rather than beside the definitions.
+dup_stats = (DECOMP / "TUNING/DUPLICANTSTATS.cs").read_text(
+    encoding="utf-8", errors="replace"
+)
+
+exclusive = {}
+for block in re.finditer(
+    r'id\s*=\s*"([A-Za-z0-9_]+)"([^{}]*(?:\{[^{}]*\}[^{}]*)*)', dup_stats
+):
+    tid, body = block.group(1), block.group(2)
+    listed = re.search(
+        r"mutuallyExclusiveTraits\s*=\s*new List<string>\s*\{([^}]*)\}", body
+    )
+    if listed:
+        others = re.findall(r'"([A-Za-z0-9_]+)"', listed.group(1))
+        if others:
+            exclusive.setdefault(tid, set()).update(others)
+
+# Exclusion is mutual in effect even where only one side declares it.
+for tid, others in list(exclusive.items()):
+    for other in others:
+        exclusive.setdefault(other, set()).add(tid)
+
+meta = {
+    trait_id: {
+        "positive": rec["positive"],
+        "requiredDlcIds": rec["requiredDlcIds"],
+        "mutuallyExclusive": sorted(exclusive.get(trait_id, [])),
+    }
+    for trait_id, rec in traits.items()
+}
+(SCRATCH / "trait-meta.json").write_text(
+    json.dumps(meta, indent=2), encoding="utf-8"
+)
+print(
+    f"\nmetadata for {len(meta)} traits: "
+    f"{sum(1 for v in meta.values() if v['positive'])} positive, "
+    f"{sum(1 for v in meta.values() if v['mutuallyExclusive'])} with exclusions, "
+    f"{sum(1 for v in meta.values() if v['requiredDlcIds'])} DLC gated"
+)
 
 print(f"traits with effects: {len(out)}")
 print(f"constants resolved: {len(CONSTS)}")
