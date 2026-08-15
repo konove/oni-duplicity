@@ -6,6 +6,12 @@ import Chip from "@mui/material/Chip";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
+import {
+  skillGroupDescKey,
+  skillGroupNameKey,
+  sortSkillGroupsByName,
+} from "@/services/oni-save/skill-groups";
+
 export interface AddAptitudeButtonProps {
   availableAptitudes: string[];
   className?: string;
@@ -18,7 +24,8 @@ const AddAptitudeButton: React.FC<Props> = ({
   className,
   availableAptitudes,
   onAddAptitude,
-  t
+  t,
+  i18n,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   // A callback ref into state rather than a useRef: the Menu needs the anchor
@@ -35,31 +42,23 @@ const AddAptitudeButton: React.FC<Props> = ({
           onClick={() => setIsOpen(true)}
         />
       </div>
-      <Menu
-        open={isOpen}
-        anchorEl={anchorEl}
-        onClose={() => setIsOpen(false)}
-      >
+      <Menu open={isOpen} anchorEl={anchorEl} onClose={() => setIsOpen(false)}>
         {isOpen &&
-          [...availableAptitudes].sort().map(trait => (
-            <MenuItem
-              key={trait}
-              value={trait}
-              title={t(`oni:DUPLICANTS.APTITUDES.${trait.toUpperCase()}.DESC`, {
-                defaultValue: ""
-              })}
-              onClick={() => {
-                setIsOpen(false);
-                onAddAptitude(trait);
-              }}
-            >
-              <Trans
-                i18nKey={`oni:DUPLICANTS.APTITUDES.${trait.toUpperCase()}.NAME`}
+          sortSkillGroupsByName(availableAptitudes, t, i18n.language).map(
+            (trait) => (
+              <MenuItem
+                key={trait}
+                value={trait}
+                title={t(skillGroupDescKey(trait), { defaultValue: "" })}
+                onClick={() => {
+                  setIsOpen(false);
+                  onAddAptitude(trait);
+                }}
               >
-                {trait}
-              </Trans>
-            </MenuItem>
-          ))}
+                <Trans i18nKey={skillGroupNameKey(trait)}>{trait}</Trans>
+              </MenuItem>
+            ),
+          )}
       </Menu>
     </div>
   );

@@ -1,3 +1,14 @@
+## 3.22.0
+
+- Add the missing "Pilot" interest. Rocketry arrived with Spaced Out! and was
+  never added to the skill-group list, so a duplicant's aptitude in it was
+  invisible and could not be granted.
+- Interests show their real names instead of raw ids. Both the chips and the
+  add menu looked up translation keys that did not exist - and two different
+  ones at that - so every interest fell back to its id. They now read "Digger",
+  "Doctor", "Pilot" rather than "Mining", "MedicalAid", "Rocketry".
+- Interests sort by name, matching the traits change in 3.21.0.
+
 ## 3.21.0
 
 - Sort traits by name everywhere they are listed. The add-trait menu did sort,

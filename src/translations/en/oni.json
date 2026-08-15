@@ -851,6 +851,60 @@
         "NAME": "Yield Amount",
         "DESC": "Plant production relative to the base crop"
       }
+    },
+    "SKILLGROUPS": {
+      "Art": {
+        "NAME": "Decorator",
+        "DESC": ""
+      },
+      "Basekeeping": {
+        "NAME": "Tidier",
+        "DESC": ""
+      },
+      "Building": {
+        "NAME": "Builder",
+        "DESC": ""
+      },
+      "Cooking": {
+        "NAME": "Cooker",
+        "DESC": ""
+      },
+      "Farming": {
+        "NAME": "Farmer",
+        "DESC": ""
+      },
+      "Hauling": {
+        "NAME": "Supplier",
+        "DESC": ""
+      },
+      "MedicalAid": {
+        "NAME": "Doctor",
+        "DESC": ""
+      },
+      "Mining": {
+        "NAME": "Digger",
+        "DESC": ""
+      },
+      "Ranching": {
+        "NAME": "Rancher",
+        "DESC": ""
+      },
+      "Research": {
+        "NAME": "Researcher",
+        "DESC": ""
+      },
+      "Rocketry": {
+        "NAME": "Pilot",
+        "DESC": ""
+      },
+      "Suits": {
+        "NAME": "Suit Wearer",
+        "DESC": ""
+      },
+      "Technicals": {
+        "NAME": "Operator",
+        "DESC": ""
+      }
     }
   }
 }
