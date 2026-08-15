@@ -13,6 +13,11 @@ import {
 import Chip from "@mui/material/Chip";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import {
+  sortTraitsByName,
+  traitDescKey,
+  traitNameKey,
+} from "@/services/oni-save/traits";
 
 import AddTraitButton from "./components/AddTraitButton";
 
@@ -36,25 +41,30 @@ const styles = (theme: Theme) =>
 
 type Props = TraitsProps & WithStyles<typeof styles> & WithTranslation;
 
-const Traits: React.FC<Props> = ({ classes, gameObjectId, t }) => {
+const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
   const { templateData, onTemplateDataModify } = useBehavior(gameObjectId, AITraitsBehavior);
   const { TraitIds } = templateData;
   const availableTraits = difference(CANDIDATE_TRAITS, TraitIds);
+
+  // Display order only - the save keeps its own order, and removal below still
+  // works off the original index so a duplicated id cannot delete the wrong one.
+  const ordered = sortTraitsByName(
+    TraitIds.map((trait: string, index: number) => ({ trait, index })),
+    ({ trait }) => trait,
+    t,
+    i18n.language
+  );
   return (
     <div className={classes.root}>
-      {TraitIds.map((trait, i) => (
+      {ordered.map(({ trait, index }) => (
         <Chip
           key={trait}
           className={classes.chip}
-          label={t(`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.NAME`, {
-            defaultValue: trait
-          })}
-          title={t(`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.DESC`, {
-            defaultValue: ""
-          })}
+          label={t(traitNameKey(trait), { defaultValue: trait })}
+          title={t(traitDescKey(trait), { defaultValue: "" })}
           onDelete={() => {
             const newTraitIds = [...TraitIds];
-            newTraitIds.splice(i, 1);
+            newTraitIds.splice(index, 1);
             onTemplateDataModify({
               TraitIds: newTraitIds
             });

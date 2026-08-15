@@ -1,3 +1,12 @@
+## 3.21.0
+
+- Sort traits by name everywhere they are listed. The add-trait menu did sort,
+  but on the trait id rather than the label, which is not the same order: the
+  id `Aggressive` displays as "Destructive" and `ConstructionUp` as "Handy", so
+  entries landed under the wrong letter. Trait chips and the duplicant list
+  followed save order, which is arbitrary. All three now collate by the
+  displayed name in the active language.
+
 ## 3.20.0
 
 Brings the editor up to date with the content packs released since Spaced Out!.

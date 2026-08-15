@@ -12,6 +12,11 @@ import {
 import Typography from "@mui/material/Typography";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import {
+  sortTraitIdsByName,
+  traitDescKey,
+  traitNameKey,
+} from "@/services/oni-save/traits";
 
 export interface DuplicantTraitsProps {
   gameObjectId: number;
@@ -31,23 +36,29 @@ const styles = (_theme: Theme) =>
 
 type Props = DuplicantTraitsProps & WithStyles<typeof styles> & WithTranslation;
 
-const DuplicantTraits: React.FC<Props> = ({ classes, gameObjectId, t }) => {
+const DuplicantTraits: React.FC<Props> = ({
+  classes,
+  gameObjectId,
+  t,
+  i18n
+}) => {
   const { templateData } = useBehavior(gameObjectId, AITraitsBehavior);
+  const traits = sortTraitIdsByName(
+    (templateData || { TraitIds: [] }).TraitIds,
+    t,
+    i18n.language
+  );
   return (
     <div className={classes.root}>
-      {(templateData || { TraitIds: [] }).TraitIds.map(trait => (
+      {traits.map(trait => (
         <Typography
           key={trait}
           className={classes.trait}
           variant="body2"
           component="div"
-          title={t(`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.DESC`, {
-            defaultValue: ""
-          })}
+          title={t(traitDescKey(trait), { defaultValue: "" })}
         >
-          {t(`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.NAME`, {
-            defaultValue: trait
-          })}
+          {t(traitNameKey(trait), { defaultValue: trait })}
         </Typography>
       ))}
     </div>

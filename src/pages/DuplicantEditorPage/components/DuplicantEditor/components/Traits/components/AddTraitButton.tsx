@@ -6,6 +6,12 @@ import Chip from "@mui/material/Chip";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
+import {
+  sortTraitIdsByName,
+  traitDescKey,
+  traitNameKey,
+} from "@/services/oni-save/traits";
+
 export interface AddTraitButtonProps {
   availableTraits: string[];
   className?: string;
@@ -18,7 +24,8 @@ const AddTraitButton: React.FC<Props> = ({
   className,
   availableTraits,
   onAddTrait,
-  t
+  t,
+  i18n
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   // A callback ref into state rather than a useRef: the Menu needs the anchor
@@ -41,23 +48,17 @@ const AddTraitButton: React.FC<Props> = ({
         onClose={() => setIsOpen(false)}
       >
         {isOpen &&
-          [...availableTraits].sort().map(trait => (
+          sortTraitIdsByName(availableTraits, t, i18n.language).map(trait => (
             <MenuItem
               key={trait}
               value={trait}
-              title={t(`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.DESC`, {
-                defaultValue: ""
-              })}
+              title={t(traitDescKey(trait), { defaultValue: "" })}
               onClick={() => {
                 setIsOpen(false);
                 onAddTrait(trait);
               }}
             >
-              <Trans
-                i18nKey={`oni:DUPLICANTS.TRAITS.${trait.toUpperCase()}.NAME`}
-              >
-                {trait}
-              </Trans>
+              <Trans i18nKey={traitNameKey(trait)}>{trait}</Trans>
             </MenuItem>
           ))}
       </Menu>
