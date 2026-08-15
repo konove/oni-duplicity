@@ -1,3 +1,16 @@
+## 3.24.0
+
+- Rework the Attributes tab. Values were clipped inside fixed 50px fields,
+  left-aligned against their labels, and would have overflowed on anything
+  wider than two digits. Fields are now sized from their value, so a six-digit
+  level fits, and the value is centred.
+- Attributes sort by name. They had followed a hand-written array order, which
+  read as random once the labels differ from the ids - `Digging` shows as
+  "Excavation", `Ranching` as "Husbandry".
+- The list is a responsive grid instead of a fixed-height column wrap, which
+  had spread items into columns with large gaps and could not reflow. Long
+  labels ellipsise rather than wrapping onto three lines.
+
 ## 3.23.0
 
 - Trait tooltips now say what the trait actually does, not just its flavour

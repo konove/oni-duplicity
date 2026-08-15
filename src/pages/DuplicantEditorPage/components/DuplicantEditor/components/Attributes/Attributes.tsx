@@ -1,13 +1,14 @@
 import * as React from "react";
 import { AIAttributeLevelsBehavior, AttributeLevel } from "oni-save-parser";
 
-import { Trans } from "react-i18next";
+import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import { sortAttributesByName } from "@/services/oni-save/attributes";
 
 import AttributeName from "./components/AttributeName";
 import AttributeField from "./components/AttributeField";
@@ -50,30 +51,58 @@ const styles = (theme: Theme) =>
       marginTop: theme.spacing(),
       marginBottom: theme.spacing(),
     },
+    // A grid rather than a fixed-height column wrap: that laid columns out
+    // from the tallest item and left huge gaps between them, and it could not
+    // reflow when a name or value grew.
     attributeList: {
-      display: "flex",
-      flexDirection: "column",
-      flexWrap: "wrap",
-      height: theme.spacing(20),
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+      gap: theme.spacing(),
       padding: theme.spacing(),
     },
     attributeItem: {
-      margin: theme.spacing(0.5),
       display: "flex",
       flexDirection: "row",
+      alignItems: "center",
+      gap: theme.spacing(),
+      minWidth: 0,
     },
+    // Width comes from the value's length, set by AttributeField itself.
     attributeInput: {
-      width: 50,
-      marginRight: theme.spacing(),
+      flexShrink: 0,
+    },
+    attributeInputText: {
+      textAlign: "center",
+      // The number spinners appear on hover and eat ~17px, which is enough to
+      // clip a long value in a field sized to its content.
+      MozAppearance: "textfield",
+      "&::-webkit-outer-spin-button": { WebkitAppearance: "none", margin: 0 },
+      "&::-webkit-inner-spin-button": { WebkitAppearance: "none", margin: 0 },
+    },
+    // Takes the rest of the cell, and ellipsises rather than wrapping to three
+    // lines the way "Engie's Tune-Up" did.
+    attributeLabel: {
+      flex: 1,
+      minWidth: 0,
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
     },
   });
 
-type Props = AttributesProps & WithStyles<typeof styles>;
+type Props = AttributesProps & WithStyles<typeof styles> & WithTranslation;
 
-const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
+const Attributes: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
   const {
     templateData: { saveLoadLevels },
   } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
+
+  const primary = sortAttributesByName(PRIMARY_ATTRIBUTES, t, i18n.language);
+  const secondary = sortAttributesByName(
+    nonPrimaryAttributeIds(saveLoadLevels),
+    t,
+    i18n.language
+  );
   return (
     <div className={classes.root}>
       <Typography className={classes.header} variant="h6">
@@ -81,14 +110,18 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
       </Typography>
       <Divider className={classes.divider} />
       <div className={classes.attributeList}>
-        {PRIMARY_ATTRIBUTES.map((attributeId) => (
+        {primary.map((attributeId) => (
           <div key={attributeId} className={classes.attributeItem}>
             <AttributeField
               className={classes.attributeInput}
+              inputClassName={classes.attributeInputText}
               gameObjectId={gameObjectId}
               attributeId={attributeId}
             />
-            <AttributeName attributeId={attributeId} />
+            <AttributeName
+              className={classes.attributeLabel}
+              attributeId={attributeId}
+            />
           </div>
         ))}
       </div>
@@ -99,14 +132,18 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
       </Typography>
       <Divider className={classes.divider} />
       <div className={classes.attributeList}>
-        {nonPrimaryAttributeIds(saveLoadLevels).map((attributeId) => (
+        {secondary.map((attributeId) => (
           <div key={attributeId} className={classes.attributeItem}>
             <AttributeField
               className={classes.attributeInput}
+              inputClassName={classes.attributeInputText}
               gameObjectId={gameObjectId}
               attributeId={attributeId}
             />
-            <AttributeName attributeId={attributeId} />
+            <AttributeName
+              className={classes.attributeLabel}
+              attributeId={attributeId}
+            />
           </div>
         ))}
       </div>
@@ -114,7 +151,7 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId }) => {
   );
 };
 
-export default withStyles(styles)(Attributes);
+export default withStyles(styles)(withTranslation()(Attributes));
 
 function nonPrimaryAttributeIds(attributes: AttributeLevel[]): string[] {
   return attributes

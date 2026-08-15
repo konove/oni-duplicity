@@ -3,9 +3,14 @@
  * `createStyles`), which were dropped in MUI v5+ along with `@mui/styles`.
  *
  * These are backed by emotion — the same engine MUI itself uses — rather than
- * the old JSS pipeline, so they work under React 19. The surface here covers
- * exactly what this codebase uses: single-argument `withStyles(styles)(C)`,
- * zero-argument `useStyles()`, and flat rule objects with no nested selectors.
+ * the old JSS pipeline, so they work under React 19. The API surface here
+ * covers exactly what this codebase uses: single-argument
+ * `withStyles(styles)(C)` and zero-argument `useStyles()`.
+ *
+ * Rule objects are handed to emotion untouched, so anything emotion accepts
+ * works — including nested selectors such as `"&::-webkit-inner-spin-button"`.
+ * What is *not* supported is the JSS-specific syntax MUI v4 layered on top,
+ * like `$ruleName` references between rules.
  *
  * Note on specificity: emotion appends these classes after MUI's own component
  * styles, which are inserted by the prepending cache configured in `root.tsx`.
@@ -51,7 +56,7 @@ export function createStyles<T extends StyleRules>(styles: T): T {
 
 function resolveStyles<T extends StyleRules>(
   styles: Styles<T>,
-  theme: Theme
+  theme: Theme,
 ): T {
   return typeof styles === "function" ? styles(theme) : styles;
 }
@@ -65,13 +70,13 @@ function toClassNames<T extends StyleRules>(rules: T): ClassNameMap<T> {
 }
 
 export function makeStyles<T extends StyleRules>(
-  styles: Styles<T>
+  styles: Styles<T>,
 ): () => ClassNameMap<T> {
   return function useStyles(): ClassNameMap<T> {
     const theme = useTheme();
     return React.useMemo(
       () => toClassNames(resolveStyles(styles, theme)),
-      [theme]
+      [theme],
     );
   };
 }
@@ -80,7 +85,7 @@ export function withStyles<T extends StyleRules>(styles: Styles<T>) {
   const useStyles = makeStyles(styles);
 
   return function wrap<P extends { classes: ClassNameMap<T> }>(
-    Component: React.ComponentType<P>
+    Component: React.ComponentType<P>,
   ): React.FC<Omit<P, "classes">> {
     const Styled: React.FC<Omit<P, "classes">> = (props) => {
       const classes = useStyles();

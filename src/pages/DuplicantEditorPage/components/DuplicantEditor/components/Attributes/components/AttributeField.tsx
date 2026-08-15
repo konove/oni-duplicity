@@ -10,6 +10,8 @@ import CommitTextField from "@/components/CommitTextField";
 
 export interface AttributeFieldProps {
   className?: string;
+  /** Applied to the <input> itself, for centring the value. */
+  inputClassName?: string;
   gameObjectId: number;
   attributeId: string;
 }
@@ -17,6 +19,7 @@ export interface AttributeFieldProps {
 type Props = AttributeFieldProps;
 const AttributeField: React.FC<Props> = ({
   className,
+  inputClassName,
   gameObjectId,
   attributeId
 }) => {
@@ -38,6 +41,14 @@ const AttributeField: React.FC<Props> = ({
     <CommitTextField
       className={className}
       type="number"
+      // A FormControl is block level, so left alone it stretches to the grid
+      // column and the value swims in it. Size it from the value instead, in
+      // `ch`, which keeps short values compact and lets long ones grow rather
+      // than clip. The added padding covers MUI's outlined input inset.
+      style={{
+        width: `calc(${Math.max(String(level).length, 2)}ch + 42px)`
+      }}
+      slotProps={{ htmlInput: { className: inputClassName } }}
       value={level}
       onCommit={value => {
         const newLevels = [...saveLoadLevels];

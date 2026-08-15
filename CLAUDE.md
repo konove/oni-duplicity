@@ -22,7 +22,8 @@ The TypeScript project lives at `src/tsconfig.json`, **not** the repo root. Any 
 `makeStyles`, `withStyles`, `createStyles` and `WithStyles` come from **`@/styles`** (`src/styles.tsx`), a local reimplementation on top of emotion. MUI removed these APIs along with `@mui/styles`; the shim exists so ~40 components and 147 `classes.*` call sites didn't need rewriting to `sx`.
 
 - Never import them from `@mui/material/styles` or add `@mui/styles`.
-- It supports only what the codebase uses: single-argument `withStyles(styles)(C)`, zero-argument `useStyles()`, flat rule objects, no nested selectors. Extend the shim rather than working around it.
+- It supports only what the codebase uses: single-argument `withStyles(styles)(C)` and zero-argument `useStyles()`. Extend the shim rather than working around it.
+- Rule objects go to emotion untouched, so nested selectors (`"&::-webkit-inner-spin-button"`, `"&:hover"`) do work. What does not is MUI v4's JSS-only syntax, such as `$ruleName` cross-references.
 - `root.tsx` installs an emotion cache with `prepend: true` so MUI's own styles are inserted first and `className={classes.x}` overrides still win. Don't remove it.
 
 New components should prefer `sx`; the shim is for the existing ones.
@@ -32,8 +33,8 @@ New components should prefer `sx`; the shim is for the existing ones.
 Since MUI v5 it returns `"8px"`, not `8`. `-theme.spacing(1)` evaluates to `NaN`, TypeScript does not flag it, and emotion silently drops the declaration. Negate through the argument instead:
 
 ```ts
-marginLeft: theme.spacing(-1)    // "-8px"
-marginLeft: -theme.spacing(1)    // NaN — rule vanishes
+marginLeft: theme.spacing(-1); // "-8px"
+marginLeft: -theme.spacing(1); // NaN — rule vanishes
 ```
 
 ## Duplicant sprites
