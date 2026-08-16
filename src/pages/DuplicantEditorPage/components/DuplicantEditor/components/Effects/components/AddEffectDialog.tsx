@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Dialog from "@mui/material/Dialog";
 import FormGroup from "@mui/material/FormGroup";
 import Select from "@mui/material/Select";
@@ -20,6 +15,8 @@ import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 
+import { effectName, sortEffectsByName } from "@/services/oni-save/effects";
+
 export interface AddEffectDialogProps {
   open: boolean;
   availableEffects: string[];
@@ -30,8 +27,8 @@ export interface AddEffectDialogProps {
 const styles = (theme: Theme) =>
   createStyles({
     cycleTime: {
-      marginTop: theme.spacing()
-    }
+      marginTop: theme.spacing(),
+    },
   });
 
 type Props = AddEffectDialogProps & WithTranslation & WithStyles<typeof styles>;
@@ -42,7 +39,8 @@ const AddEffectDialog: React.FC<Props> = ({
   availableEffects,
   onClose,
   onAddEffect,
-  t
+  t,
+  i18n,
 }) => {
   const [selectedEffect, setSelectedEffect] = React.useState("");
   const [timeRemaining, setTimeRemaining] = React.useState(5);
@@ -61,16 +59,16 @@ const AddEffectDialog: React.FC<Props> = ({
             </InputLabel>
             <Select
               value={selectedEffect}
-              onChange={e => setSelectedEffect(e.target.value)}
+              onChange={(e) => setSelectedEffect(e.target.value)}
               inputProps={{ id: "duplicant-effect" }}
             >
-              {availableEffects.map(effect => (
-                <MenuItem key={effect} value={effect}>
-                  <Trans i18nKey={`oni:todo-trans.effects.${effect}`}>
-                    {effect}
-                  </Trans>
-                </MenuItem>
-              ))}
+              {sortEffectsByName(availableEffects, t, i18n.language).map(
+                (effect) => (
+                  <MenuItem key={effect} value={effect}>
+                    {effectName(effect, t)}
+                  </MenuItem>
+                ),
+              )}
             </Select>
           </FormControl>
           <TextField
@@ -78,7 +76,7 @@ const AddEffectDialog: React.FC<Props> = ({
             label={t("time_cycles.noun_titlecase")}
             type="number"
             value={timeRemaining}
-            onChange={e => setTimeRemaining(Number(e.target.value))}
+            onChange={(e) => setTimeRemaining(Number(e.target.value))}
           />
         </FormGroup>
       </DialogContent>

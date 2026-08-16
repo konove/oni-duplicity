@@ -54,3 +54,25 @@ Two things to watch after a game update:
 - Only a whole argument counts as the DLC list. Several skills switch their
   *perks* on a DLC inline (`Farming1`), and matching a DLC id anywhere in the
   call would wrongly gate the skill itself.
+
+## extract-effect-ids.py
+
+Regenerates `AI_EFFECT_IDS` in the parser and the `DUPLICANTS.EFFECTS` names in
+`src/translations/en/oni.json`.
+
+There is no single list of effects in the game. Many are constructed with a
+literal id, but whole families are built at runtime - `Decor0` through
+`Decor5`, the `Edible` tiers, the room bonuses - so scanning code alone misses
+exactly the ones duplicants carry most. Three sources are merged: `new
+Effect("...")` literals from `decomp`, the ids in `save-effects.json`, and
+whatever the parser already listed.
+
+`save-effects.json` is committed because it cannot be regenerated without a
+library of real saves. It was produced by parsing every colony and collecting
+`Klei.AI.Effects` ids from `Minion` and `BionicMinion` objects only - sweeping
+all game objects instead pulls in critter effects, which mean nothing on a
+duplicant.
+
+Effects from the assembly are kept only if they have a name in the game's
+player-facing MODIFIERS strings, which is what filters the critter ones out.
+Ten duplicant effects have no such name and fall back to their id.

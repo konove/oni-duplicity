@@ -2,7 +2,7 @@ import * as React from "react";
 import { AIEffectsBehavior } from "oni-save-parser";
 import { merge } from "lodash";
 
-import { Trans } from "react-i18next";
+import { Trans, WithTranslation, withTranslation } from "react-i18next";
 
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
@@ -11,6 +11,7 @@ import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import { effectName, sortEffectsByName } from "@/services/oni-save/effects";
 
 import CommitTextField from "@/components/CommitTextField";
 
@@ -20,9 +21,23 @@ export interface EffectsProps {
   gameObjectId: number;
 }
 
-type Props = EffectsProps;
-const Effects: React.FC<Props> = ({ gameObjectId }) => {
-  const { templateData, onTemplateDataModify } = useBehavior(gameObjectId, AIEffectsBehavior);
+type Props = EffectsProps & WithTranslation;
+const Effects: React.FC<Props> = ({ gameObjectId, t, i18n }) => {
+  const { templateData, onTemplateDataModify } = useBehavior(
+    gameObjectId,
+    AIEffectsBehavior,
+  );
+
+  // Display order only. Committing below still uses each effect's original
+  // index, so reordering the rows cannot edit the wrong entry.
+  const ordered = sortEffectsByName(
+    templateData.saveLoadEffects.map((x) => x.id),
+    t,
+    i18n.language,
+  ).map((id) => {
+    const index = templateData.saveLoadEffects.findIndex((x) => x.id === id);
+    return { ...templateData.saveLoadEffects[index], index };
+  });
   return (
     <Table>
       <TableHead>
@@ -31,31 +46,25 @@ const Effects: React.FC<Props> = ({ gameObjectId }) => {
             <Trans i18nKey="duplicant_effect.noun_titlecase">Effect</Trans>
           </TableCell>
           <TableCell align="right">
-            <Trans i18nKey="time_cycles.noun_titlecase">
-              Time (cycles)
-                </Trans>
+            <Trans i18nKey="time_cycles.noun_titlecase">Time (cycles)</Trans>
           </TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
-        {templateData.saveLoadEffects.map(({ id, timeRemaining }, i) => (
+        {ordered.map(({ id, timeRemaining, index: i }) => (
           <TableRow key={id}>
             <TableCell component="th" scope="row">
-              <Trans i18nKey={`oni:todo-trans.effects.${id}`}>{id}</Trans>
+              {effectName(id, t)}
             </TableCell>
             <TableCell align="right">
               <CommitTextField
                 type="number"
                 value={timeRemaining / 200}
-                onCommit={value =>
+                onCommit={(value) =>
                   onTemplateDataModify({
-                    saveLoadEffects: merge(
-                      [],
-                      templateData.saveLoadEffects,
-                      {
-                        [i]: { id, timeRemaining: Number(value) * 200 }
-                      }
-                    )
+                    saveLoadEffects: merge([], templateData.saveLoadEffects, {
+                      [i]: { id, timeRemaining: Number(value) * 200 },
+                    }),
                   })
                 }
               />
@@ -72,4 +81,4 @@ const Effects: React.FC<Props> = ({ gameObjectId }) => {
   );
 };
 
-export default Effects;
+export default withTranslation()(Effects);

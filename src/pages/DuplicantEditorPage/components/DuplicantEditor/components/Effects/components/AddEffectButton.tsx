@@ -17,9 +17,12 @@ export interface AddEffectButtonProps {
 type Props = AddEffectButtonProps;
 const AddEffectButton: React.FC<Props> = ({ gameObjectId }) => {
   const [isAddingEffect, setIsAddingEffect] = React.useState(false);
-  const { templateData, onTemplateDataModify } = useBehavior(gameObjectId, AIEffectsBehavior);
+  const { templateData, onTemplateDataModify } = useBehavior(
+    gameObjectId,
+    AIEffectsBehavior,
+  );
 
-  const currentEffects = templateData.saveLoadEffects.map(x => x.id);
+  const currentEffects = templateData.saveLoadEffects.map((x) => x.id);
   const availableEffects = difference(AI_EFFECT_IDS, currentEffects);
 
   return (
@@ -27,7 +30,7 @@ const AddEffectButton: React.FC<Props> = ({ gameObjectId }) => {
       <Button color="primary" onClick={() => setIsAddingEffect(true)}>
         <Trans i18nKey="duplicant_effects.verbs.add_titlecase">
           Add Effect
-              </Trans>
+        </Trans>
       </Button>
       <AddEffectDialog
         open={isAddingEffect}
@@ -38,8 +41,8 @@ const AddEffectButton: React.FC<Props> = ({ gameObjectId }) => {
           onTemplateDataModify({
             saveLoadEffects: [
               ...templateData.saveLoadEffects,
-              { id, timeRemaining }
-            ]
+              { id, timeRemaining },
+            ],
           });
         }}
       />

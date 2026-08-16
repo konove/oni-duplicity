@@ -1,0 +1,11 @@
+# Decompiled game sources, produced by ilspycmd. Large, and reproducible from
+# an installed copy of the game.
+decomp/
+
+# Generated intermediates. Their content lands in the parser and in
+# src/translations/en/oni.json, which are committed.
+trait-effects.json
+trait-meta.json
+skills.json
+effect-ids.json
+effect-names.json

@@ -1405,6 +1405,254 @@
       "BionicsD2": {
         "NAME": "Climate Control"
       }
+    },
+    "EFFECTS": {
+      "AnewHope": {
+        "NAME": "New Hope"
+      },
+      "BeachChairUnlit": {
+        "NAME": "Passably Relaxed"
+      },
+      "Binge_Eating": {
+        "NAME": "Insatiable Hunger"
+      },
+      "BionicBedTimeEffect": {
+        "NAME": "Defragmenting"
+      },
+      "BionicOffline": {
+        "NAME": "Powerless"
+      },
+      "BionicWaterStress": {
+        "NAME": "Liquid Exposure"
+      },
+      "CarpetFeet": {
+        "NAME": "Tickled Tootsies"
+      },
+      "CenterOfAttention": {
+        "NAME": "Center of Attention"
+      },
+      "ColdAir": {
+        "NAME": "Chilly Surroundings"
+      },
+      "ContaminatedLungs": {
+        "NAME": "Yucky Lungs"
+      },
+      "CoolingDown": {
+        "NAME": "Cooling Down"
+      },
+      "Danced": {
+        "NAME": "Recently Danced"
+      },
+      "Darkness": {
+        "NAME": "Darkness"
+      },
+      "Decor0": {
+        "NAME": "Last Cycle's Decor: Poor"
+      },
+      "Decor1": {
+        "NAME": "Last Cycle's Decor: Mediocre"
+      },
+      "Decor2": {
+        "NAME": "Last Cycle's Decor: Average"
+      },
+      "Decor3": {
+        "NAME": "Last Cycle's Decor: Nice"
+      },
+      "Decor5": {
+        "NAME": "Last Cycle's Decor: Gorgeous"
+      },
+      "DecorMinus1": {
+        "NAME": "Last Cycle's Decor: Ugly"
+      },
+      "DuplicantDrankInk": {
+        "NAME": "Extra Hydrated: Squid Ink"
+      },
+      "Edible0": {
+        "NAME": "Standard Meal"
+      },
+      "Edible1": {
+        "NAME": "Good Meal"
+      },
+      "Edible2": {
+        "NAME": "Great Meal"
+      },
+      "Edible3": {
+        "NAME": "Superb Meal"
+      },
+      "EdibleMinus1": {
+        "NAME": "Poor Meal"
+      },
+      "EdibleMinus2": {
+        "NAME": "Terrible Meal"
+      },
+      "EdibleMinus3": {
+        "NAME": "Grisly Meal"
+      },
+      "ExpellingGunk": {
+        "NAME": "Making a mess"
+      },
+      "FullBladder": {
+        "NAME": "Full Bladder"
+      },
+      "GoodConversation": {
+        "NAME": "Pleasant Chitchat"
+      },
+      "GoodEats": {
+        "NAME": "Soul Food"
+      },
+      "Greeting": {
+        "NAME": "Saw Friend"
+      },
+      "GunkHungover": {
+        "NAME": "Gunk Mouth"
+      },
+      "GunkSick": {
+        "NAME": "Gunk Extraction Required"
+      },
+      "Juicer": {
+        "NAME": "Drank Juice"
+      },
+      "LightWounds": {
+        "NAME": "Light Wounds"
+      },
+      "MajorIrritation": {
+        "NAME": "Major Eye Irritation"
+      },
+      "MegaBrainTankBonus": {
+        "NAME": "Maximum Aptitude"
+      },
+      "MessTableSalt": {
+        "NAME": "Salted Food"
+      },
+      "MinorIrritation": {
+        "NAME": "Minor Eye Irritation"
+      },
+      "ModerateWounds": {
+        "NAME": "Moderate Wounds"
+      },
+      "Mourning": {
+        "NAME": "Mourning"
+      },
+      "NarcolepticSleep": {
+        "NAME": "Narcoleptic Nap"
+      },
+      "NewCrewArrival": {
+        "NAME": "New Friend"
+      },
+      "NoLubricationMajor": {
+        "NAME": "Grinding Gears"
+      },
+      "NoLubricationMinor": {
+        "NAME": "Grinding Gears (Reduced)"
+      },
+      "PassedOutSleep": {
+        "NAME": "Exhausted"
+      },
+      "PoppedEarDrums": {
+        "NAME": "Popped Eardrums"
+      },
+      "RedAlert": {
+        "NAME": "Red Alert!"
+      },
+      "RefreshingTouch": {
+        "NAME": "Heat Resistant"
+      },
+      "RestfulSleep": {
+        "NAME": "Sleeping Peacefully"
+      },
+      "RoomBarracks": {
+        "NAME": "Barracks"
+      },
+      "RoomBathroom": {
+        "NAME": "Washroom"
+      },
+      "RoomBedroom": {
+        "NAME": "Luxury Barracks"
+      },
+      "RoomGreatHall": {
+        "NAME": "Great Hall"
+      },
+      "RoomLatrine": {
+        "NAME": "Latrine"
+      },
+      "RoomMessHall": {
+        "NAME": "Mess Hall"
+      },
+      "SawSparkleStreaker": {
+        "NAME": "Sparkle Flattered"
+      },
+      "SeafoodRadiationResistance": {
+        "NAME": "Radiation Resistant: Aquatic Diet"
+      },
+      "SevereWounds": {
+        "NAME": "Severe Wounds"
+      },
+      "Showered": {
+        "NAME": "Showered"
+      },
+      "Sleep": {
+        "NAME": "Sleeping"
+      },
+      "SmelledFlowers": {
+        "NAME": "Smelled Flowers"
+      },
+      "SmelledPutridOdour": {
+        "NAME": "Smelled a putrid odor"
+      },
+      "SoakingWet": {
+        "NAME": "Sopping Wet"
+      },
+      "Socialized": {
+        "NAME": "Socialized"
+      },
+      "SoreBack": {
+        "NAME": "Sore Back"
+      },
+      "StaleFood": {
+        "NAME": "Bad leftovers"
+      },
+      "SteppedInContaminatedWater": {
+        "NAME": "Stepped in polluted water"
+      },
+      "StressReduction": {
+        "NAME": "Receiving Massage"
+      },
+      "StressfulyEmptyingBladder": {
+        "NAME": "Making a mess"
+      },
+      "UncomfortableSleep": {
+        "NAME": "Sleeping Uncomfortably"
+      },
+      "UnderWater": {
+        "NAME": "Underwater"
+      },
+      "Vomiting": {
+        "NAME": "Vomiting"
+      },
+      "WarmAir": {
+        "NAME": "Toasty Surroundings"
+      },
+      "WarmTouch": {
+        "NAME": "Frost Resistant"
+      },
+      "WarmTouchFood": {
+        "NAME": "Frost Resistant: Spicy Diet"
+      },
+      "WarmingUp": {
+        "NAME": "Warming Up"
+      },
+      "WasAttacked": {
+        "NAME": "Recently assailed"
+      },
+      "WellFed": {
+        "NAME": "Well fed"
+      },
+      "WetFeet": {
+        "NAME": "Soggy Feet"
+      },
+      "WorkEncouraged": {
+        "NAME": "Appreciated"
+      }
     }
   }
 }

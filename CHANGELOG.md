@@ -1,3 +1,13 @@
+## 3.27.0
+
+- The Effects tab shows real names instead of raw ids - "Sore Back" and "Mess
+  Hall" rather than `SoreBack` and `RoomMessHall`. Both the table and the add
+  dialog looked up a placeholder translation key that had never existed.
+- The add list goes from 33 effects to 92. The old list was largely wrong: only
+  5 of its 33 appear on a duplicant in any real save, while 48 that duplicants
+  do carry - every Decor and Edible tier, the room bonuses - were missing.
+- Effects sort by name, matching the other tabs.
+
 ## 3.26.2
 
 - Fix the Raw Editor showing the wrong node. Selecting anything nested - a
