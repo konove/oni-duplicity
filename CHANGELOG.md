@@ -1,3 +1,11 @@
+## 3.26.2
+
+- Fix the Raw Editor showing the wrong node. Selecting anything nested - a
+  game object's `position`, say - edited its outermost ancestor instead,
+  because the click bubbled through every enclosing tree item and the last
+  handler to run won. The editor pane looked empty because that ancestor had
+  no editable fields of its own.
+
 ## 3.26.1
 
 - The Geysers page says why it is empty instead of rendering nothing. A colony

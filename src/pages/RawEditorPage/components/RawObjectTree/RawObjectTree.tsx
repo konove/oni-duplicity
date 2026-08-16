@@ -17,14 +17,14 @@ export interface RawObjectTreeProps {
 const RawObjectTree: React.FC<RawObjectTreeProps> = ({
   className,
   saveGame,
-  onChangePath
+  onChangePath,
 }) => {
   return (
     <SimpleTreeView
       className={className}
       slots={{
         collapseIcon: ExpandMoreIcon,
-        expandIcon: ChevronRightIcon
+        expandIcon: ChevronRightIcon,
       }}
     >
       <RawTreeChildren
@@ -46,13 +46,13 @@ interface RawTreeChildrenProps {
 const RawTreeChildren: React.FC<RawTreeChildrenProps> = ({
   saveGame,
   path,
-  onChangePath
+  onChangePath,
 }) => {
   const target = path.length == 0 ? saveGame : get(saveGame, path);
-  const childrenKeys = Object.keys(target).filter(key =>
-    isObjectKey(target, key)
+  const childrenKeys = Object.keys(target).filter((key) =>
+    isObjectKey(target, key),
   );
-  const children = childrenKeys.map(key => {
+  const children = childrenKeys.map((key) => {
     const childPath = [...path, key];
     return (
       <RawTreeChild
@@ -75,11 +75,18 @@ interface RawTreeChildProps {
 const RawTreeChild: React.FC<RawTreeChildProps> = ({
   saveGame,
   path,
-  onChangePath
+  onChangePath,
 }) => {
-  const onClick = React.useCallback(() => {
-    onChangePath(path);
-  }, [onChangePath, path]);
+  // Tree items nest, so a click on a deep item bubbles through every ancestor
+  // item's handler and the outermost one wins - selecting `position` would
+  // leave the editor showing `gameObjects`. Claim the click here.
+  const onClick = React.useCallback(
+    (e: React.MouseEvent) => {
+      e.stopPropagation();
+      onChangePath(path);
+    },
+    [onChangePath, path],
+  );
 
   const segmentName = getSegmentName(saveGame, path);
 
