@@ -1248,5 +1248,454 @@
         "NAME": "受赞赏"
       }
     }
+  },
+  "ELEMENTS": {
+    "CrushedIce": {
+      "NAME": "碎冰"
+    },
+    "SulfurGas": {
+      "NAME": "硫蒸气"
+    },
+    "Diamond": {
+      "NAME": "钻石"
+    },
+    "Aerogel": {
+      "NAME": "气凝胶"
+    },
+    "Isoresin": {
+      "NAME": "异构树液"
+    },
+    "SaltGas": {
+      "NAME": "气态盐"
+    },
+    "LiquidHelium": {
+      "NAME": "液态氦"
+    },
+    "LiquidOxygen": {
+      "NAME": "液态氧"
+    },
+    "PhosphateNodules": {
+      "NAME": "磷酸盐结晶"
+    },
+    "Algae": {
+      "NAME": "藻类"
+    },
+    "Propane": {
+      "NAME": "丙烷"
+    },
+    "Niobium": {
+      "NAME": "铌"
+    },
+    "Cuprite": {
+      "NAME": "铜矿"
+    },
+    "Copper": {
+      "NAME": "铜"
+    },
+    "CrushedRock": {
+      "NAME": "碎岩"
+    },
+    "SuperInsulator": {
+      "NAME": "隔热质"
+    },
+    "ViscoGel": {
+      "NAME": "粘性凝胶流体"
+    },
+    "MoltenAluminum": {
+      "NAME": "熔融铝"
+    },
+    "Yellowcake": {
+      "NAME": "黄饼"
+    },
+    "NiobiumGas": {
+      "NAME": "气态铌"
+    },
+    "BrineIce": {
+      "NAME": "浓盐冰"
+    },
+    "MoltenLead": {
+      "NAME": "熔融铅"
+    },
+    "Helium": {
+      "NAME": "氦气"
+    },
+    "Oxygen": {
+      "NAME": "氧气"
+    },
+    "LiquidCarbonDioxide": {
+      "NAME": "液态二氧化碳"
+    },
+    "SolidViscoGel": {
+      "NAME": "固态粘性凝胶"
+    },
+    "Ceramic": {
+      "NAME": "陶瓷"
+    },
+    "Void": {
+      "NAME": "虚空"
+    },
+    "CrudeOil": {
+      "NAME": "原油"
+    },
+    "SteelGas": {
+      "NAME": "气态钢"
+    },
+    "Fertilizer": {
+      "NAME": "肥料"
+    },
+    "ChlorineGas": {
+      "NAME": "氯气"
+    },
+    "MoltenGlass": {
+      "NAME": "熔融玻璃"
+    },
+    "SolidCrudeOil": {
+      "NAME": "固态原油"
+    },
+    "Wolframite": {
+      "NAME": "黑钨矿"
+    },
+    "SlimeMold": {
+      "NAME": "菌泥"
+    },
+    "Polypropylene": {
+      "NAME": "塑料"
+    },
+    "SolidNaphtha": {
+      "NAME": "固态石脑油"
+    },
+    "LiquidSulfur": {
+      "NAME": "液态硫"
+    },
+    "MoltenGold": {
+      "NAME": "熔融金"
+    },
+    "Magma": {
+      "NAME": "岩浆"
+    },
+    "Tungsten": {
+      "NAME": "钨"
+    },
+    "Hydrogen": {
+      "NAME": "氢气"
+    },
+    "SandCement": {
+      "NAME": "砂水泥"
+    },
+    "SourGas": {
+      "NAME": "高硫天然气"
+    },
+    "RefinedCarbon": {
+      "NAME": "精炼碳"
+    },
+    "Steam": {
+      "NAME": "蒸汽"
+    },
+    "Steel": {
+      "NAME": "钢"
+    },
+    "Chlorine": {
+      "NAME": "液态氯"
+    },
+    "Phosphorite": {
+      "NAME": "磷矿"
+    },
+    "SolidHydrogen": {
+      "NAME": "固态氢"
+    },
+    "Methane": {
+      "NAME": "天然气"
+    },
+    "MercuryGas": {
+      "NAME": "汞蒸气"
+    },
+    "BleachStone": {
+      "NAME": "漂白石"
+    },
+    "GoldGas": {
+      "NAME": "气态金"
+    },
+    "EthanolGas": {
+      "NAME": "气态乙醇"
+    },
+    "Lead": {
+      "NAME": "铅"
+    },
+    "LiquidHydrogen": {
+      "NAME": "液态氢"
+    },
+    "Sulfur": {
+      "NAME": "硫"
+    },
+    "Lime": {
+      "NAME": "石灰"
+    },
+    "SolidSyngas": {
+      "NAME": "固态合成气"
+    },
+    "SolidChlorine": {
+      "NAME": "固态氯"
+    },
+    "LiquidPropane": {
+      "NAME": "液态丙烷"
+    },
+    "SolidMercury": {
+      "NAME": "固态汞"
+    },
+    "MoltenTungsten": {
+      "NAME": "熔融钨"
+    },
+    "Petroleum": {
+      "NAME": "石油"
+    },
+    "Obsidian": {
+      "NAME": "黑曜石"
+    },
+    "SolidPetroleum": {
+      "NAME": "固态石油"
+    },
+    "RockGas": {
+      "NAME": "气态岩"
+    },
+    "MoltenSalt": {
+      "NAME": "熔融盐"
+    },
+    "SolidSuperCoolant": {
+      "NAME": "固态超级冷却剂"
+    },
+    "IgneousRock": {
+      "NAME": "火成岩"
+    },
+    "EnrichedUranium": {
+      "NAME": "浓缩铀"
+    },
+    "Brick": {
+      "NAME": "红砖"
+    },
+    "Brine": {
+      "NAME": "浓盐水"
+    },
+    "CarbonGas": {
+      "NAME": "气态碳"
+    },
+    "Gold": {
+      "NAME": "金"
+    },
+    "Rust": {
+      "NAME": "铁锈"
+    },
+    "NuclearWaste": {
+      "NAME": "液态核废料"
+    },
+    "Phosphorus": {
+      "NAME": "精炼磷"
+    },
+    "SuperCoolant": {
+      "NAME": "超级冷却剂"
+    },
+    "Granite": {
+      "NAME": "花岗岩"
+    },
+    "Ethanol": {
+      "NAME": "乙醇"
+    },
+    "Radium": {
+      "NAME": "镭"
+    },
+    "SuperCoolantGas": {
+      "NAME": "气态超级冷却剂"
+    },
+    "Electrum": {
+      "NAME": "银金矿"
+    },
+    "SolidCarbonDioxide": {
+      "NAME": "固态二氧化碳"
+    },
+    "AluminumGas": {
+      "NAME": "气态铝"
+    },
+    "CarbonFibre": {
+      "NAME": "碳纤维"
+    },
+    "UraniumOre": {
+      "NAME": "铀矿"
+    },
+    "SolidPropane": {
+      "NAME": "固态丙烷"
+    },
+    "AluminumOre": {
+      "NAME": "铝矿"
+    },
+    "SedimentaryRock": {
+      "NAME": "沉积岩"
+    },
+    "Fullerene": {
+      "NAME": "富勒烯"
+    },
+    "GoldAmalgam": {
+      "NAME": "金汞齐"
+    },
+    "LiquidMethane": {
+      "NAME": "液态甲烷"
+    },
+    "Salt": {
+      "NAME": "盐"
+    },
+    "Sand": {
+      "NAME": "沙子"
+    },
+    "TungstenGas": {
+      "NAME": "气态钨"
+    },
+    "Snow": {
+      "NAME": "雪"
+    },
+    "SandStone": {
+      "NAME": "砂岩"
+    },
+    "MoltenIron": {
+      "NAME": "熔融铁"
+    },
+    "MoltenCarbon": {
+      "NAME": "熔融碳"
+    },
+    "Glass": {
+      "NAME": "玻璃"
+    },
+    "MoltenSyngas": {
+      "NAME": "熔融合成气"
+    },
+    "ContaminatedOxygen": {
+      "NAME": "污染氧"
+    },
+    "Vacuum": {
+      "NAME": "真空"
+    },
+    "Clay": {
+      "NAME": "粘土"
+    },
+    "ToxicSand": {
+      "NAME": "污染土"
+    },
+    "Ice": {
+      "NAME": "冰"
+    },
+    "LeadGas": {
+      "NAME": "气态铅"
+    },
+    "Carbon": {
+      "NAME": "煤炭"
+    },
+    "SolidOxygen": {
+      "NAME": "固态氧"
+    },
+    "Creature": {
+      "NAME": "遗传生物软泥"
+    },
+    "DepletedUranium": {
+      "NAME": "贫铀"
+    },
+    "Katairite": {
+      "NAME": "深渊晶石"
+    },
+    "Syngas": {
+      "NAME": "合成气"
+    },
+    "Naphtha": {
+      "NAME": "液态石脑油"
+    },
+    "SolidMethane": {
+      "NAME": "固态甲烷"
+    },
+    "OxyRock": {
+      "NAME": "氧石"
+    },
+    "MaficRock": {
+      "NAME": "镁铁质岩"
+    },
+    "Iron": {
+      "NAME": "铁"
+    },
+    "LiquidPhosphorus": {
+      "NAME": "液态磷"
+    },
+    "Regolith": {
+      "NAME": "浮土"
+    },
+    "Slabs": {
+      "NAME": "建筑板材"
+    },
+    "Bitumen": {
+      "NAME": "沥青"
+    },
+    "MoltenSteel": {
+      "NAME": "熔融钢"
+    },
+    "MoltenNiobium": {
+      "NAME": "熔融铌"
+    },
+    "IronGas": {
+      "NAME": "气态铁"
+    },
+    "TempConductorSolid": {
+      "NAME": "导热质"
+    },
+    "IronOre": {
+      "NAME": "铁矿"
+    },
+    "Dirt": {
+      "NAME": "泥土"
+    },
+    "Cement": {
+      "NAME": "水泥"
+    },
+    "DirtyIce": {
+      "NAME": "污染冰"
+    },
+    "CementMix": {
+      "NAME": "水泥混合料"
+    },
+    "Mercury": {
+      "NAME": "汞"
+    },
+    "Fossil": {
+      "NAME": "化石"
+    },
+    "DirtyWater": {
+      "NAME": "污染水"
+    },
+    "Water": {
+      "NAME": "水"
+    },
+    "Unobtanium": {
+      "NAME": "中子质"
+    },
+    "PhosphorusGas": {
+      "NAME": "气态磷"
+    },
+    "SaltWater": {
+      "NAME": "盐水"
+    },
+    "SolidEthanol": {
+      "NAME": "固态乙醇"
+    },
+    "MoltenUranium": {
+      "NAME": "熔融铀"
+    },
+    "CarbonDioxide": {
+      "NAME": "二氧化碳"
+    },
+    "CopperGas": {
+      "NAME": "气态铜"
+    },
+    "FoolsGold": {
+      "NAME": "黄铁矿"
+    },
+    "Aluminum": {
+      "NAME": "铝"
+    },
+    "MoltenCopper": {
+      "NAME": "熔融铜"
+    }
   }
 }

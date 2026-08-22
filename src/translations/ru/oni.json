@@ -1216,5 +1216,454 @@
         "NAME": "Оцененный"
       }
     }
+  },
+  "ELEMENTS": {
+    "CrushedIce": {
+      "NAME": "Дробленый лед"
+    },
+    "SulfurGas": {
+      "NAME": "Газообразная сера"
+    },
+    "Diamond": {
+      "NAME": "Алмаз"
+    },
+    "Aerogel": {
+      "NAME": "Аэрогель"
+    },
+    "Isoresin": {
+      "NAME": "Изосмола"
+    },
+    "SaltGas": {
+      "NAME": "Соленый газ"
+    },
+    "LiquidHelium": {
+      "NAME": "Гелий"
+    },
+    "LiquidOxygen": {
+      "NAME": "Жидкий кислород"
+    },
+    "PhosphateNodules": {
+      "NAME": "Фосфатные конкреции"
+    },
+    "Algae": {
+      "NAME": "Водоросли"
+    },
+    "Propane": {
+      "NAME": "Газообразный пропан"
+    },
+    "Niobium": {
+      "NAME": "Ниобий"
+    },
+    "Cuprite": {
+      "NAME": "Медная руда"
+    },
+    "Copper": {
+      "NAME": "Медь"
+    },
+    "CrushedRock": {
+      "NAME": "Дробленый камень"
+    },
+    "SuperInsulator": {
+      "NAME": "Теплоизолит"
+    },
+    "ViscoGel": {
+      "NAME": "Жидкий вискогель"
+    },
+    "MoltenAluminum": {
+      "NAME": "Расплавленный алюминий"
+    },
+    "Yellowcake": {
+      "NAME": "Урановый концентрат"
+    },
+    "NiobiumGas": {
+      "NAME": "Газообразный ниобий"
+    },
+    "BrineIce": {
+      "NAME": "Лед из рапы"
+    },
+    "MoltenLead": {
+      "NAME": "Расплавленный свинец"
+    },
+    "Helium": {
+      "NAME": "Гелий"
+    },
+    "Oxygen": {
+      "NAME": "Кислород"
+    },
+    "LiquidCarbonDioxide": {
+      "NAME": "Жидкий углекислый газ"
+    },
+    "SolidViscoGel": {
+      "NAME": "Твердый вискогель"
+    },
+    "Ceramic": {
+      "NAME": "Керамика"
+    },
+    "Void": {
+      "NAME": "Пустота"
+    },
+    "CrudeOil": {
+      "NAME": "Неочищенная нефть"
+    },
+    "SteelGas": {
+      "NAME": "Газообразная сталь"
+    },
+    "Fertilizer": {
+      "NAME": "Удобрение"
+    },
+    "ChlorineGas": {
+      "NAME": "Газообразный хлор"
+    },
+    "MoltenGlass": {
+      "NAME": "Расплавленное стекло"
+    },
+    "SolidCrudeOil": {
+      "NAME": "Твердая неочищенная нефть"
+    },
+    "Wolframite": {
+      "NAME": "Вольфрамит"
+    },
+    "SlimeMold": {
+      "NAME": "Слизь"
+    },
+    "Polypropylene": {
+      "NAME": "Пластмасса"
+    },
+    "SolidNaphtha": {
+      "NAME": "Твердый лигроин"
+    },
+    "LiquidSulfur": {
+      "NAME": "Жидкая сера"
+    },
+    "MoltenGold": {
+      "NAME": "Расплавленное золото"
+    },
+    "Magma": {
+      "NAME": "Магма"
+    },
+    "Tungsten": {
+      "NAME": "Вольфрам"
+    },
+    "Hydrogen": {
+      "NAME": "Газообразный водород"
+    },
+    "SandCement": {
+      "NAME": "Песчаный цемент"
+    },
+    "SourGas": {
+      "NAME": "Серосодержащий газ"
+    },
+    "RefinedCarbon": {
+      "NAME": "Очищенный углерод"
+    },
+    "Steam": {
+      "NAME": "Пар"
+    },
+    "Steel": {
+      "NAME": "Сталь"
+    },
+    "Chlorine": {
+      "NAME": "Жидкий хлор"
+    },
+    "Phosphorite": {
+      "NAME": "Апатит"
+    },
+    "SolidHydrogen": {
+      "NAME": "Твердый водород"
+    },
+    "Methane": {
+      "NAME": "Природный газ"
+    },
+    "MercuryGas": {
+      "NAME": "Газообразная ртуть"
+    },
+    "BleachStone": {
+      "NAME": "Хлорный камень"
+    },
+    "GoldGas": {
+      "NAME": "Газообразное золото"
+    },
+    "EthanolGas": {
+      "NAME": "Газообразный этанол"
+    },
+    "Lead": {
+      "NAME": "Свинец"
+    },
+    "LiquidHydrogen": {
+      "NAME": "Жидкий водород"
+    },
+    "Sulfur": {
+      "NAME": "Сера"
+    },
+    "Lime": {
+      "NAME": "Известь"
+    },
+    "SolidSyngas": {
+      "NAME": "Десублимированный синтез-газ"
+    },
+    "SolidChlorine": {
+      "NAME": "Твердый хлор"
+    },
+    "LiquidPropane": {
+      "NAME": "Жидкий пропан"
+    },
+    "SolidMercury": {
+      "NAME": "Ртуть"
+    },
+    "MoltenTungsten": {
+      "NAME": "Расплавленный вольфрам"
+    },
+    "Petroleum": {
+      "NAME": "Нефть"
+    },
+    "Obsidian": {
+      "NAME": "Обсидиан"
+    },
+    "SolidPetroleum": {
+      "NAME": "Твердая нефть"
+    },
+    "RockGas": {
+      "NAME": "Каменный газ"
+    },
+    "MoltenSalt": {
+      "NAME": "Расплавленная соль"
+    },
+    "SolidSuperCoolant": {
+      "NAME": "Твердый суперхладагент"
+    },
+    "IgneousRock": {
+      "NAME": "Магматическая порода"
+    },
+    "EnrichedUranium": {
+      "NAME": "Обогащенный уран"
+    },
+    "Brick": {
+      "NAME": "Кирпич"
+    },
+    "Brine": {
+      "NAME": "Рапа"
+    },
+    "CarbonGas": {
+      "NAME": "Газообразный углерод"
+    },
+    "Gold": {
+      "NAME": "Золото"
+    },
+    "Rust": {
+      "NAME": "Ржавчина"
+    },
+    "NuclearWaste": {
+      "NAME": "Жидкие ядерные отходы"
+    },
+    "Phosphorus": {
+      "NAME": "Обработанный фосфор"
+    },
+    "SuperCoolant": {
+      "NAME": "Суперхладагент"
+    },
+    "Granite": {
+      "NAME": "Гранит"
+    },
+    "Ethanol": {
+      "NAME": "Этанол"
+    },
+    "Radium": {
+      "NAME": "Радий"
+    },
+    "SuperCoolantGas": {
+      "NAME": "Газообразный суперхладагент"
+    },
+    "Electrum": {
+      "NAME": "Электрум"
+    },
+    "SolidCarbonDioxide": {
+      "NAME": "Твердый углекислый газ"
+    },
+    "AluminumGas": {
+      "NAME": "Газообразный алюминий"
+    },
+    "CarbonFibre": {
+      "NAME": "Углеткань"
+    },
+    "UraniumOre": {
+      "NAME": "Урановая руда"
+    },
+    "SolidPropane": {
+      "NAME": "Твердый пропан"
+    },
+    "AluminumOre": {
+      "NAME": "Алюминиевая руда"
+    },
+    "SedimentaryRock": {
+      "NAME": "Осадочная порода"
+    },
+    "Fullerene": {
+      "NAME": "Фуллерен"
+    },
+    "GoldAmalgam": {
+      "NAME": "Золотой сплав"
+    },
+    "LiquidMethane": {
+      "NAME": "Жидкий метан"
+    },
+    "Salt": {
+      "NAME": "Соль"
+    },
+    "Sand": {
+      "NAME": "Песок"
+    },
+    "TungstenGas": {
+      "NAME": "Газообразный вольфрам"
+    },
+    "Snow": {
+      "NAME": "Снег"
+    },
+    "SandStone": {
+      "NAME": "Песчаник"
+    },
+    "MoltenIron": {
+      "NAME": "Расплавленное железо"
+    },
+    "MoltenCarbon": {
+      "NAME": "Жидкий углерод"
+    },
+    "Glass": {
+      "NAME": "Стекло"
+    },
+    "MoltenSyngas": {
+      "NAME": "Конденсированный синтез-газ"
+    },
+    "ContaminatedOxygen": {
+      "NAME": "Загрязненный кислород"
+    },
+    "Vacuum": {
+      "NAME": "Вакуум"
+    },
+    "Clay": {
+      "NAME": "Глина"
+    },
+    "ToxicSand": {
+      "NAME": "Загрязненная земля"
+    },
+    "Ice": {
+      "NAME": "Лед"
+    },
+    "LeadGas": {
+      "NAME": "Газообразный свинец"
+    },
+    "Carbon": {
+      "NAME": "Уголь"
+    },
+    "SolidOxygen": {
+      "NAME": "Твердый кислород"
+    },
+    "Creature": {
+      "NAME": "Генная слизь"
+    },
+    "DepletedUranium": {
+      "NAME": "Обедненный уран"
+    },
+    "Katairite": {
+      "NAME": "Безднолит"
+    },
+    "Syngas": {
+      "NAME": "Синтез-газ"
+    },
+    "Naphtha": {
+      "NAME": "Жидкий лигроин"
+    },
+    "SolidMethane": {
+      "NAME": "Твердый метан"
+    },
+    "OxyRock": {
+      "NAME": "Кислолит"
+    },
+    "MaficRock": {
+      "NAME": "Мафическая порода"
+    },
+    "Iron": {
+      "NAME": "Железо"
+    },
+    "LiquidPhosphorus": {
+      "NAME": "Жидкий фосфор"
+    },
+    "Regolith": {
+      "NAME": "Реголит"
+    },
+    "Slabs": {
+      "NAME": "Строительный блок"
+    },
+    "Bitumen": {
+      "NAME": "Битум"
+    },
+    "MoltenSteel": {
+      "NAME": "Расплавленная сталь"
+    },
+    "MoltenNiobium": {
+      "NAME": "Расплавленный ниобий"
+    },
+    "IronGas": {
+      "NAME": "Газообразное железо"
+    },
+    "TempConductorSolid": {
+      "NAME": "Термий"
+    },
+    "IronOre": {
+      "NAME": "Железная руда"
+    },
+    "Dirt": {
+      "NAME": "Грязь"
+    },
+    "Cement": {
+      "NAME": "Цемент"
+    },
+    "DirtyIce": {
+      "NAME": "Загрязненный лед"
+    },
+    "CementMix": {
+      "NAME": "Цементная смесь"
+    },
+    "Mercury": {
+      "NAME": "Ртуть"
+    },
+    "Fossil": {
+      "NAME": "Ископаемые"
+    },
+    "DirtyWater": {
+      "NAME": "Загрязненная вода"
+    },
+    "Water": {
+      "NAME": "Вода"
+    },
+    "Unobtanium": {
+      "NAME": "Нейтроний"
+    },
+    "PhosphorusGas": {
+      "NAME": "Газообразный фосфор"
+    },
+    "SaltWater": {
+      "NAME": "Соленая вода"
+    },
+    "SolidEthanol": {
+      "NAME": "Твердый этанол"
+    },
+    "MoltenUranium": {
+      "NAME": "Жидкий уран"
+    },
+    "CarbonDioxide": {
+      "NAME": "Углекислый газ"
+    },
+    "CopperGas": {
+      "NAME": "Газообразная медь"
+    },
+    "FoolsGold": {
+      "NAME": "Пирит"
+    },
+    "Aluminum": {
+      "NAME": "Алюминий"
+    },
+    "MoltenCopper": {
+      "NAME": "Расплавленная медь"
+    }
   }
 }

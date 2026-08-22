@@ -1455,5 +1455,454 @@
         "NAME": "Appreciated"
       }
     }
+  },
+  "ELEMENTS": {
+    "CrushedIce": {
+      "NAME": "Crushed Ice"
+    },
+    "SulfurGas": {
+      "NAME": "Sulfur Gas"
+    },
+    "Diamond": {
+      "NAME": "Diamond"
+    },
+    "Aerogel": {
+      "NAME": "Aerogel"
+    },
+    "Isoresin": {
+      "NAME": "Isosap"
+    },
+    "SaltGas": {
+      "NAME": "Salt Gas"
+    },
+    "LiquidHelium": {
+      "NAME": "Helium"
+    },
+    "LiquidOxygen": {
+      "NAME": "Liquid Oxygen"
+    },
+    "PhosphateNodules": {
+      "NAME": "Phosphate Nodules"
+    },
+    "Algae": {
+      "NAME": "Algae"
+    },
+    "Propane": {
+      "NAME": "Propane Gas"
+    },
+    "Niobium": {
+      "NAME": "Niobium"
+    },
+    "Cuprite": {
+      "NAME": "Copper Ore"
+    },
+    "Copper": {
+      "NAME": "Copper"
+    },
+    "CrushedRock": {
+      "NAME": "Crushed Rock"
+    },
+    "SuperInsulator": {
+      "NAME": "Insulite"
+    },
+    "ViscoGel": {
+      "NAME": "Visco-Gel Fluid"
+    },
+    "MoltenAluminum": {
+      "NAME": "Molten Aluminum"
+    },
+    "Yellowcake": {
+      "NAME": "Yellowcake"
+    },
+    "NiobiumGas": {
+      "NAME": "Niobium Gas"
+    },
+    "BrineIce": {
+      "NAME": "Brine Ice"
+    },
+    "MoltenLead": {
+      "NAME": "Molten Lead"
+    },
+    "Helium": {
+      "NAME": "Helium"
+    },
+    "Oxygen": {
+      "NAME": "Oxygen"
+    },
+    "LiquidCarbonDioxide": {
+      "NAME": "Liquid Carbon Dioxide"
+    },
+    "SolidViscoGel": {
+      "NAME": "Solid Visco-Gel"
+    },
+    "Ceramic": {
+      "NAME": "Ceramic"
+    },
+    "Void": {
+      "NAME": "Void"
+    },
+    "CrudeOil": {
+      "NAME": "Crude Oil"
+    },
+    "SteelGas": {
+      "NAME": "Steel Gas"
+    },
+    "Fertilizer": {
+      "NAME": "Fertilizer"
+    },
+    "ChlorineGas": {
+      "NAME": "Chlorine Gas"
+    },
+    "MoltenGlass": {
+      "NAME": "Molten Glass"
+    },
+    "SolidCrudeOil": {
+      "NAME": "Solid Crude Oil"
+    },
+    "Wolframite": {
+      "NAME": "Wolframite"
+    },
+    "SlimeMold": {
+      "NAME": "Slime"
+    },
+    "Polypropylene": {
+      "NAME": "Plastic"
+    },
+    "SolidNaphtha": {
+      "NAME": "Solid Naphtha"
+    },
+    "LiquidSulfur": {
+      "NAME": "Liquid Sulfur"
+    },
+    "MoltenGold": {
+      "NAME": "Molten Gold"
+    },
+    "Magma": {
+      "NAME": "Magma"
+    },
+    "Tungsten": {
+      "NAME": "Tungsten"
+    },
+    "Hydrogen": {
+      "NAME": "Hydrogen Gas"
+    },
+    "SandCement": {
+      "NAME": "Sand Cement"
+    },
+    "SourGas": {
+      "NAME": "Sour Gas"
+    },
+    "RefinedCarbon": {
+      "NAME": "Refined Carbon"
+    },
+    "Steam": {
+      "NAME": "Steam"
+    },
+    "Steel": {
+      "NAME": "Steel"
+    },
+    "Chlorine": {
+      "NAME": "Liquid Chlorine"
+    },
+    "Phosphorite": {
+      "NAME": "Phosphorite"
+    },
+    "SolidHydrogen": {
+      "NAME": "Solid Hydrogen"
+    },
+    "Methane": {
+      "NAME": "Natural Gas"
+    },
+    "MercuryGas": {
+      "NAME": "Mercury Gas"
+    },
+    "BleachStone": {
+      "NAME": "Bleach Stone"
+    },
+    "GoldGas": {
+      "NAME": "Gold Gas"
+    },
+    "EthanolGas": {
+      "NAME": "Ethanol Gas"
+    },
+    "Lead": {
+      "NAME": "Lead"
+    },
+    "LiquidHydrogen": {
+      "NAME": "Liquid Hydrogen"
+    },
+    "Sulfur": {
+      "NAME": "Sulfur"
+    },
+    "Lime": {
+      "NAME": "Lime"
+    },
+    "SolidSyngas": {
+      "NAME": "Solid Synthesis Gas"
+    },
+    "SolidChlorine": {
+      "NAME": "Solid Chlorine"
+    },
+    "LiquidPropane": {
+      "NAME": "Liquid Propane"
+    },
+    "SolidMercury": {
+      "NAME": "Mercury"
+    },
+    "MoltenTungsten": {
+      "NAME": "Molten Tungsten"
+    },
+    "Petroleum": {
+      "NAME": "Petroleum"
+    },
+    "Obsidian": {
+      "NAME": "Obsidian"
+    },
+    "SolidPetroleum": {
+      "NAME": "Solid Petroleum"
+    },
+    "RockGas": {
+      "NAME": "Rock Gas"
+    },
+    "MoltenSalt": {
+      "NAME": "Molten Salt"
+    },
+    "SolidSuperCoolant": {
+      "NAME": "Solid Super Coolant"
+    },
+    "IgneousRock": {
+      "NAME": "Igneous Rock"
+    },
+    "EnrichedUranium": {
+      "NAME": "Enriched Uranium"
+    },
+    "Brick": {
+      "NAME": "Brick"
+    },
+    "Brine": {
+      "NAME": "Brine"
+    },
+    "CarbonGas": {
+      "NAME": "Carbon Gas"
+    },
+    "Gold": {
+      "NAME": "Gold"
+    },
+    "Rust": {
+      "NAME": "Rust"
+    },
+    "NuclearWaste": {
+      "NAME": "Liquid Nuclear Waste"
+    },
+    "Phosphorus": {
+      "NAME": "Refined Phosphorus"
+    },
+    "SuperCoolant": {
+      "NAME": "Super Coolant"
+    },
+    "Granite": {
+      "NAME": "Granite"
+    },
+    "Ethanol": {
+      "NAME": "Ethanol"
+    },
+    "Radium": {
+      "NAME": "Radium"
+    },
+    "SuperCoolantGas": {
+      "NAME": "Super Coolant Gas"
+    },
+    "Electrum": {
+      "NAME": "Electrum"
+    },
+    "SolidCarbonDioxide": {
+      "NAME": "Solid Carbon Dioxide"
+    },
+    "AluminumGas": {
+      "NAME": "Aluminum Gas"
+    },
+    "CarbonFibre": {
+      "NAME": "Carbon Fiber"
+    },
+    "UraniumOre": {
+      "NAME": "Uranium Ore"
+    },
+    "SolidPropane": {
+      "NAME": "Solid Propane"
+    },
+    "AluminumOre": {
+      "NAME": "Aluminum Ore"
+    },
+    "SedimentaryRock": {
+      "NAME": "Sedimentary Rock"
+    },
+    "Fullerene": {
+      "NAME": "Fullerene"
+    },
+    "GoldAmalgam": {
+      "NAME": "Gold Amalgam"
+    },
+    "LiquidMethane": {
+      "NAME": "Liquid Methane"
+    },
+    "Salt": {
+      "NAME": "Salt"
+    },
+    "Sand": {
+      "NAME": "Sand"
+    },
+    "TungstenGas": {
+      "NAME": "Tungsten Gas"
+    },
+    "Snow": {
+      "NAME": "Snow"
+    },
+    "SandStone": {
+      "NAME": "Sandstone"
+    },
+    "MoltenIron": {
+      "NAME": "Molten Iron"
+    },
+    "MoltenCarbon": {
+      "NAME": "Liquid Carbon"
+    },
+    "Glass": {
+      "NAME": "Glass"
+    },
+    "MoltenSyngas": {
+      "NAME": "Molten Synthesis Gas"
+    },
+    "ContaminatedOxygen": {
+      "NAME": "Polluted Oxygen"
+    },
+    "Vacuum": {
+      "NAME": "Vacuum"
+    },
+    "Clay": {
+      "NAME": "Clay"
+    },
+    "ToxicSand": {
+      "NAME": "Polluted Dirt"
+    },
+    "Ice": {
+      "NAME": "Ice"
+    },
+    "LeadGas": {
+      "NAME": "Lead Gas"
+    },
+    "Carbon": {
+      "NAME": "Coal"
+    },
+    "SolidOxygen": {
+      "NAME": "Solid Oxygen"
+    },
+    "Creature": {
+      "NAME": "Genetic Ooze"
+    },
+    "DepletedUranium": {
+      "NAME": "Depleted Uranium"
+    },
+    "Katairite": {
+      "NAME": "Abyssalite"
+    },
+    "Syngas": {
+      "NAME": "Synthesis Gas"
+    },
+    "Naphtha": {
+      "NAME": "Liquid Naphtha"
+    },
+    "SolidMethane": {
+      "NAME": "Solid Methane"
+    },
+    "OxyRock": {
+      "NAME": "Oxylite"
+    },
+    "MaficRock": {
+      "NAME": "Mafic Rock"
+    },
+    "Iron": {
+      "NAME": "Iron"
+    },
+    "LiquidPhosphorus": {
+      "NAME": "Liquid Phosphorus"
+    },
+    "Regolith": {
+      "NAME": "Regolith"
+    },
+    "Slabs": {
+      "NAME": "Building Slab"
+    },
+    "Bitumen": {
+      "NAME": "Bitumen"
+    },
+    "MoltenSteel": {
+      "NAME": "Molten Steel"
+    },
+    "MoltenNiobium": {
+      "NAME": "Molten Niobium"
+    },
+    "IronGas": {
+      "NAME": "Iron Gas"
+    },
+    "TempConductorSolid": {
+      "NAME": "Thermium"
+    },
+    "IronOre": {
+      "NAME": "Iron Ore"
+    },
+    "Dirt": {
+      "NAME": "Dirt"
+    },
+    "Cement": {
+      "NAME": "Cement"
+    },
+    "DirtyIce": {
+      "NAME": "Polluted Ice"
+    },
+    "CementMix": {
+      "NAME": "Cement Mix"
+    },
+    "Mercury": {
+      "NAME": "Mercury"
+    },
+    "Fossil": {
+      "NAME": "Fossil"
+    },
+    "DirtyWater": {
+      "NAME": "Polluted Water"
+    },
+    "Water": {
+      "NAME": "Water"
+    },
+    "Unobtanium": {
+      "NAME": "Neutronium"
+    },
+    "PhosphorusGas": {
+      "NAME": "Phosphorus Gas"
+    },
+    "SaltWater": {
+      "NAME": "Salt Water"
+    },
+    "SolidEthanol": {
+      "NAME": "Solid Ethanol"
+    },
+    "MoltenUranium": {
+      "NAME": "Liquid Uranium"
+    },
+    "CarbonDioxide": {
+      "NAME": "Carbon Dioxide"
+    },
+    "CopperGas": {
+      "NAME": "Copper Gas"
+    },
+    "FoolsGold": {
+      "NAME": "Pyrite"
+    },
+    "Aluminum": {
+      "NAME": "Aluminum"
+    },
+    "MoltenCopper": {
+      "NAME": "Molten Copper"
+    }
   }
 }

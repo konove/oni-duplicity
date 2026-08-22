@@ -50,8 +50,17 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
     return t("material.kilogram", { count: kg });
   }
 
+  // Materials arrive as SimHashes ids - "SandStone", "CrushedIce" - which is
+  // not what the game calls them in any language, English included.
+  const materialName = React.useCallback(
+    (name: string) =>
+      t(`oni:ELEMENTS.${name}.NAME`, { defaultValue: name }),
+    [t],
+  );
+
+  // Search the displayed name, so it matches what the reader can see.
   const displayMaterials = materials.filter(
-    (x) => search === "" || x.name.toLowerCase().indexOf(search) !== -1,
+    (x) => search === "" || materialName(x.name).toLowerCase().includes(search),
   );
 
   return (
@@ -76,7 +85,7 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
           {displayMaterials.map(
             ({ name, looseGrams, looseCount, storedGrams, storedCount }) => (
               <TableRow className={styles.row} key={name}>
-                <TableCell>{name}</TableCell>
+                <TableCell>{materialName(name)}</TableCell>
                 <TableCell>
                   {looseGrams > 0 && (
                     <>

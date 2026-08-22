@@ -25,7 +25,11 @@ const DeleteLooseButton: React.FC<Props> = ({ className, materialType, t }) => {
   return (
     <ConfirmationDialog
       title={t("material_loose.verbs.delete_name", {
-        name: materialType || t("material.all_titlecase"),
+        name: materialType
+          ? t(`oni:ELEMENTS.${materialType}.NAME`, {
+              defaultValue: materialType,
+            })
+          : t("material.all_titlecase"),
       })}
       message={t("material_loose.prompts.delete")}
       onConfirm={onDeleteConfirm}

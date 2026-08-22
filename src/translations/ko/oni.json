@@ -1216,5 +1216,454 @@
         "NAME": "인정받음"
       }
     }
+  },
+  "ELEMENTS": {
+    "CrushedIce": {
+      "NAME": "으깨진 얼음"
+    },
+    "SulfurGas": {
+      "NAME": "황 기체"
+    },
+    "Diamond": {
+      "NAME": "다이아몬드"
+    },
+    "Aerogel": {
+      "NAME": "에어로젤"
+    },
+    "Isoresin": {
+      "NAME": "이소샙"
+    },
+    "SaltGas": {
+      "NAME": "소금 기체"
+    },
+    "LiquidHelium": {
+      "NAME": "헬륨"
+    },
+    "LiquidOxygen": {
+      "NAME": "액체 산소"
+    },
+    "PhosphateNodules": {
+      "NAME": "인산염 단괴"
+    },
+    "Algae": {
+      "NAME": "조류"
+    },
+    "Propane": {
+      "NAME": "프로판 기체"
+    },
+    "Niobium": {
+      "NAME": "나이오븀"
+    },
+    "Cuprite": {
+      "NAME": "동광석"
+    },
+    "Copper": {
+      "NAME": "구리"
+    },
+    "CrushedRock": {
+      "NAME": "으깬 바위"
+    },
+    "SuperInsulator": {
+      "NAME": "절연석"
+    },
+    "ViscoGel": {
+      "NAME": "비스코-젤 유체"
+    },
+    "MoltenAluminum": {
+      "NAME": "용융 알루미늄"
+    },
+    "Yellowcake": {
+      "NAME": "옐로케이크"
+    },
+    "NiobiumGas": {
+      "NAME": "나이오븀 기체"
+    },
+    "BrineIce": {
+      "NAME": "염수 얼음"
+    },
+    "MoltenLead": {
+      "NAME": "녹은 납"
+    },
+    "Helium": {
+      "NAME": "헬륨"
+    },
+    "Oxygen": {
+      "NAME": "산소"
+    },
+    "LiquidCarbonDioxide": {
+      "NAME": "액체 이산화탄소"
+    },
+    "SolidViscoGel": {
+      "NAME": "고체 비스코-젤"
+    },
+    "Ceramic": {
+      "NAME": "세라믹"
+    },
+    "Void": {
+      "NAME": "공허"
+    },
+    "CrudeOil": {
+      "NAME": "원유"
+    },
+    "SteelGas": {
+      "NAME": "강철 기체"
+    },
+    "Fertilizer": {
+      "NAME": "비료"
+    },
+    "ChlorineGas": {
+      "NAME": "염소 기체"
+    },
+    "MoltenGlass": {
+      "NAME": "용융된 유리"
+    },
+    "SolidCrudeOil": {
+      "NAME": "고체 원유"
+    },
+    "Wolframite": {
+      "NAME": "철망간 중석"
+    },
+    "SlimeMold": {
+      "NAME": "는지렁이"
+    },
+    "Polypropylene": {
+      "NAME": "플라스틱"
+    },
+    "SolidNaphtha": {
+      "NAME": "고체 나프타"
+    },
+    "LiquidSulfur": {
+      "NAME": "액체 황"
+    },
+    "MoltenGold": {
+      "NAME": "용융 금"
+    },
+    "Magma": {
+      "NAME": "마그마"
+    },
+    "Tungsten": {
+      "NAME": "텅스텐"
+    },
+    "Hydrogen": {
+      "NAME": "수소 기체"
+    },
+    "SandCement": {
+      "NAME": "모래 시멘트"
+    },
+    "SourGas": {
+      "NAME": "사워 가스"
+    },
+    "RefinedCarbon": {
+      "NAME": "정제 탄소"
+    },
+    "Steam": {
+      "NAME": "증기"
+    },
+    "Steel": {
+      "NAME": "강철"
+    },
+    "Chlorine": {
+      "NAME": "액체 염소"
+    },
+    "Phosphorite": {
+      "NAME": "인광석"
+    },
+    "SolidHydrogen": {
+      "NAME": "고체 수소"
+    },
+    "Methane": {
+      "NAME": "천연가스"
+    },
+    "MercuryGas": {
+      "NAME": "수은 기체"
+    },
+    "BleachStone": {
+      "NAME": "표백석"
+    },
+    "GoldGas": {
+      "NAME": "금 기체"
+    },
+    "EthanolGas": {
+      "NAME": "에탄올 기체"
+    },
+    "Lead": {
+      "NAME": "납"
+    },
+    "LiquidHydrogen": {
+      "NAME": "액체 수소"
+    },
+    "Sulfur": {
+      "NAME": "황"
+    },
+    "Lime": {
+      "NAME": "석회"
+    },
+    "SolidSyngas": {
+      "NAME": "고체 합성 기체"
+    },
+    "SolidChlorine": {
+      "NAME": "고체 염소"
+    },
+    "LiquidPropane": {
+      "NAME": "액체 프로판"
+    },
+    "SolidMercury": {
+      "NAME": "수은"
+    },
+    "MoltenTungsten": {
+      "NAME": "용융 텅스텐"
+    },
+    "Petroleum": {
+      "NAME": "석유"
+    },
+    "Obsidian": {
+      "NAME": "흑요석"
+    },
+    "SolidPetroleum": {
+      "NAME": "고체 석유"
+    },
+    "RockGas": {
+      "NAME": "바위 가스"
+    },
+    "MoltenSalt": {
+      "NAME": "용융염"
+    },
+    "SolidSuperCoolant": {
+      "NAME": "고체 초냉각제"
+    },
+    "IgneousRock": {
+      "NAME": "화성암"
+    },
+    "EnrichedUranium": {
+      "NAME": "농축 우라늄"
+    },
+    "Brick": {
+      "NAME": "벽돌"
+    },
+    "Brine": {
+      "NAME": "염수"
+    },
+    "CarbonGas": {
+      "NAME": "탄소 기체"
+    },
+    "Gold": {
+      "NAME": "금"
+    },
+    "Rust": {
+      "NAME": "녹"
+    },
+    "NuclearWaste": {
+      "NAME": "액체 핵 폐기물"
+    },
+    "Phosphorus": {
+      "NAME": "정제된 인"
+    },
+    "SuperCoolant": {
+      "NAME": "초냉각제"
+    },
+    "Granite": {
+      "NAME": "화강암"
+    },
+    "Ethanol": {
+      "NAME": "에탄올"
+    },
+    "Radium": {
+      "NAME": "라듐"
+    },
+    "SuperCoolantGas": {
+      "NAME": "초냉각제 기체"
+    },
+    "Electrum": {
+      "NAME": "엘렉트럼"
+    },
+    "SolidCarbonDioxide": {
+      "NAME": "고체 이산화탄소"
+    },
+    "AluminumGas": {
+      "NAME": "알루미늄 기체"
+    },
+    "CarbonFibre": {
+      "NAME": "탄소 섬유"
+    },
+    "UraniumOre": {
+      "NAME": "우라늄 광석"
+    },
+    "SolidPropane": {
+      "NAME": "고체 프로판"
+    },
+    "AluminumOre": {
+      "NAME": "알루미늄 광석"
+    },
+    "SedimentaryRock": {
+      "NAME": "퇴적암"
+    },
+    "Fullerene": {
+      "NAME": "풀러린"
+    },
+    "GoldAmalgam": {
+      "NAME": "금 아말감"
+    },
+    "LiquidMethane": {
+      "NAME": "액체 메탄"
+    },
+    "Salt": {
+      "NAME": "소금"
+    },
+    "Sand": {
+      "NAME": "모래"
+    },
+    "TungstenGas": {
+      "NAME": "텅스텐 기체"
+    },
+    "Snow": {
+      "NAME": "눈"
+    },
+    "SandStone": {
+      "NAME": "사암"
+    },
+    "MoltenIron": {
+      "NAME": "용융 철"
+    },
+    "MoltenCarbon": {
+      "NAME": "액체 탄소"
+    },
+    "Glass": {
+      "NAME": "유리"
+    },
+    "MoltenSyngas": {
+      "NAME": "용해 합성 기체"
+    },
+    "ContaminatedOxygen": {
+      "NAME": "오염된 산소"
+    },
+    "Vacuum": {
+      "NAME": "진공"
+    },
+    "Clay": {
+      "NAME": "점토"
+    },
+    "ToxicSand": {
+      "NAME": "오염된 흙"
+    },
+    "Ice": {
+      "NAME": "얼음"
+    },
+    "LeadGas": {
+      "NAME": "납 기체"
+    },
+    "Carbon": {
+      "NAME": "석탄"
+    },
+    "SolidOxygen": {
+      "NAME": "고체 산소"
+    },
+    "Creature": {
+      "NAME": "유전적 무른감탕"
+    },
+    "DepletedUranium": {
+      "NAME": "고갈된 우라늄"
+    },
+    "Katairite": {
+      "NAME": "심성석"
+    },
+    "Syngas": {
+      "NAME": "합성 기체"
+    },
+    "Naphtha": {
+      "NAME": "액체 나프타"
+    },
+    "SolidMethane": {
+      "NAME": "고체 메탄"
+    },
+    "OxyRock": {
+      "NAME": "산소석"
+    },
+    "MaficRock": {
+      "NAME": "고철질암"
+    },
+    "Iron": {
+      "NAME": "철"
+    },
+    "LiquidPhosphorus": {
+      "NAME": "액체 인"
+    },
+    "Regolith": {
+      "NAME": "표토"
+    },
+    "Slabs": {
+      "NAME": "건조판"
+    },
+    "Bitumen": {
+      "NAME": "역청"
+    },
+    "MoltenSteel": {
+      "NAME": "용융 강철"
+    },
+    "MoltenNiobium": {
+      "NAME": "용융 나이오븀"
+    },
+    "IronGas": {
+      "NAME": "철 기체"
+    },
+    "TempConductorSolid": {
+      "NAME": "서미움"
+    },
+    "IronOre": {
+      "NAME": "철광석"
+    },
+    "Dirt": {
+      "NAME": "흙"
+    },
+    "Cement": {
+      "NAME": "시멘트"
+    },
+    "DirtyIce": {
+      "NAME": "오염된 얼음"
+    },
+    "CementMix": {
+      "NAME": "시멘트 믹스"
+    },
+    "Mercury": {
+      "NAME": "수은"
+    },
+    "Fossil": {
+      "NAME": "화석"
+    },
+    "DirtyWater": {
+      "NAME": "오염된 물"
+    },
+    "Water": {
+      "NAME": "물"
+    },
+    "Unobtanium": {
+      "NAME": "뉴트로늄"
+    },
+    "PhosphorusGas": {
+      "NAME": "인 기체"
+    },
+    "SaltWater": {
+      "NAME": "소금물"
+    },
+    "SolidEthanol": {
+      "NAME": "고체 에탄올"
+    },
+    "MoltenUranium": {
+      "NAME": "액체 우라늄"
+    },
+    "CarbonDioxide": {
+      "NAME": "이산화탄소"
+    },
+    "CopperGas": {
+      "NAME": "구리 기체"
+    },
+    "FoolsGold": {
+      "NAME": "황철광"
+    },
+    "Aluminum": {
+      "NAME": "알루미늄"
+    },
+    "MoltenCopper": {
+      "NAME": "용융 구리"
+    }
   }
 }
