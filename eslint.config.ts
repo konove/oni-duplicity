@@ -22,7 +22,7 @@ export default defineConfig([
       // rules. The cast works around an upstream typing mismatch: the plugin
       // nests a `configs.flat` namespace inside `configs`, which ESLint 10's
       // `Plugin` type does not allow. The rules themselves run correctly.
-      reactHooks.configs.flat.recommended as ConfigObject,
+      reactHooks.configs.flat["recommended-latest"] as ConfigObject,
     ],
     languageOptions: {
       parserOptions: {
