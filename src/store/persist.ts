@@ -2,7 +2,7 @@ import { AppState, createStructuredSelector } from "@/state";
 
 import {
   loadState as loadI18nState,
-  persistState as persistI18nState
+  persistState as persistI18nState,
 } from "@/services/i18n/persist";
 
 export function loadPersistedState(state: AppState): AppState {
@@ -12,8 +12,8 @@ export function loadPersistedState(state: AppState): AppState {
     ...state,
     services: {
       ...state.services,
-      i18n: loadI18nState(state.services.i18n, persistedState.i18n || {})
-    }
+      i18n: loadI18nState(state.services.i18n, persistedState.i18n || {}),
+    },
   };
 }
 
@@ -22,7 +22,7 @@ export function loadPersistedState(state: AppState): AppState {
 let lastPersistedState: any = null;
 
 const buildPersistedState = createStructuredSelector({
-  i18n: persistI18nState
+  i18n: persistI18nState,
 });
 
 export function savePersistedState(state: AppState) {

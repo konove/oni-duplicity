@@ -25,7 +25,7 @@ const AddTraitButton: React.FC<Props> = ({
   availableTraits,
   onAddTrait,
   t,
-  i18n
+  i18n,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   // A callback ref into state rather than a useRef: the Menu needs the anchor
@@ -42,13 +42,9 @@ const AddTraitButton: React.FC<Props> = ({
           onClick={() => setIsOpen(true)}
         />
       </div>
-      <Menu
-        open={isOpen}
-        anchorEl={anchorEl}
-        onClose={() => setIsOpen(false)}
-      >
+      <Menu open={isOpen} anchorEl={anchorEl} onClose={() => setIsOpen(false)}>
         {isOpen &&
-          sortTraitIdsByName(availableTraits, t, i18n.language).map(trait => (
+          sortTraitIdsByName(availableTraits, t, i18n.language).map((trait) => (
             <MenuItem
               key={trait}
               value={trait}

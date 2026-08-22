@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { Trans } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import Dialog from "@mui/material/Dialog";
 import Typography from "@mui/material/Typography";
@@ -22,17 +17,17 @@ const styles = (theme: Theme) =>
   createStyles({
     root: {
       width: theme.spacing(60),
-      height: theme.spacing(20)
+      height: theme.spacing(20),
     },
     content: {
-      verticalAlign: "middle"
+      verticalAlign: "middle",
     },
     loadingText: {
-      textAlign: "center"
+      textAlign: "center",
     },
     message: {
-      textAlign: "center"
-    }
+      textAlign: "center",
+    },
   });
 
 type Props = LoadingDialogProps & WithStyles<typeof styles>;
@@ -41,7 +36,7 @@ const LoadingDialog: React.FC<Props> = ({
   isLoading,
   isSaving,
   message,
-  classes
+  classes,
 }) => (
   <Dialog open={isLoading || isSaving}>
     <div className={classes.root}>

@@ -22,11 +22,11 @@ type Props = MaterialsPageProps & WithTranslation;
 
 const useStyles = makeStyles((theme: Theme) => ({
   searchBox: {
-    margin: theme.spacing()
+    margin: theme.spacing(),
   },
   row: {
-    height: "64px"
-  }
+    height: "64px",
+  },
 }));
 
 const MaterialsTable: React.FC<Props> = ({ className, t }) => {
@@ -37,7 +37,7 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setSearch(e.target.value.toLowerCase());
     },
-    []
+    [],
   );
 
   function formatWeight(weight: number) {
@@ -51,7 +51,7 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
   }
 
   const displayMaterials = materials.filter(
-    x => search === "" || x.name.toLowerCase().indexOf(search) !== -1
+    (x) => search === "" || x.name.toLowerCase().indexOf(search) !== -1,
   );
 
   return (
@@ -91,13 +91,13 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
                     <>
                       {formatWeight(storedGrams)}&nbsp;|&nbsp;
                       {t("material_storage.container_count", {
-                        count: storedCount
+                        count: storedCount,
                       })}
                     </>
                   )}
                 </TableCell>
               </TableRow>
-            )
+            ),
           )}
         </TableBody>
       </Table>

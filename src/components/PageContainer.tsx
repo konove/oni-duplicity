@@ -14,24 +14,24 @@ const styles = createStyles({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
   sidebar: {
-    width: SIDEBAR_WIDTH
+    width: SIDEBAR_WIDTH,
   },
   appRoot: {
     display: "flex",
     flexDirection: "column",
     width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
     height: "100%",
-    marginLeft: SIDEBAR_WIDTH
+    marginLeft: SIDEBAR_WIDTH,
   },
   content: {
     minHeight: 0,
     width: "100%",
     height: "100%",
-    overflow: "auto"
-  }
+    overflow: "auto",
+  },
 });
 
 export interface PageContainerProps {

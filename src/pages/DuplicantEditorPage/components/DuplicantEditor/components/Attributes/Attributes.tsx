@@ -101,7 +101,7 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
   const secondary = sortAttributesByName(
     nonPrimaryAttributeIds(saveLoadLevels),
     t,
-    i18n.language
+    i18n.language,
   );
   return (
     <div className={classes.root}>

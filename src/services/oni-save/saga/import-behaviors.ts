@@ -17,7 +17,7 @@ export default function* importBehaviorsSaga() {
 }
 
 function* handleImportBehaviorsSaga(
-  action: ImportBehaviorsAction
+  action: ImportBehaviorsAction,
 ): SagaIterator {
   const { gameObjectId, file } = action.payload;
 

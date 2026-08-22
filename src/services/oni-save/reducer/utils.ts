@@ -19,7 +19,7 @@ export class ModifySaveError extends Error {
 
 export function tryModifySaveGame(
   state: OniSaveState,
-  modifier: (saveGame: SaveGame) => SaveGame
+  modifier: (saveGame: SaveGame) => SaveGame,
 ): OniSaveState {
   let { saveGame } = state;
   if (saveGame) {
@@ -42,11 +42,11 @@ export function tryModifySaveGame(
 export function addGameObject(
   saveGame: SaveGame,
   gameObjectType: string,
-  gameObject: GameObject
+  gameObject: GameObject,
 ): SaveGame {
   const groupIndex = findIndex(
     saveGame.gameObjects,
-    (x) => x.name === gameObjectType
+    (x) => x.name === gameObjectType,
   );
   if (groupIndex === -1) {
     const group: GameObjectGroup = {
@@ -73,11 +73,11 @@ export function addGameObject(
 
 export function removeGameObject(
   saveGame: SaveGame,
-  gameObjectId: number
+  gameObjectId: number,
 ): SaveGame {
   const [groupIndex, gameObjectIndex] = getGameObjectLocationById(
     saveGame,
-    gameObjectId
+    gameObjectId,
   );
 
   // We need to use basic spread here instead of merge(), as merge treats
@@ -89,7 +89,7 @@ export function removeGameObject(
       ...saveGame.gameObjects[groupIndex],
       gameObjects: drop(
         saveGame.gameObjects[groupIndex].gameObjects,
-        gameObjectIndex
+        gameObjectIndex,
       ),
     }),
   };
@@ -100,18 +100,18 @@ export function removeGameObject(
 export function requireGameObject(
   saveGame: SaveGame,
   gameObjectId: number,
-  gameObjectType?: string
+  gameObjectType?: string,
 ): GameObject {
   const [groupIndex, gameObjectIndex] = getGameObjectLocationById(
     saveGame,
-    gameObjectId
+    gameObjectId,
   );
   if (
     gameObjectType &&
     saveGame.gameObjects[groupIndex].name !== gameObjectType
   ) {
     throw new ModifySaveError(
-      `Expected GameObject ${gameObjectId} to be type ${gameObjectType}.`
+      `Expected GameObject ${gameObjectId} to be type ${gameObjectType}.`,
     );
   }
   return saveGame.gameObjects[groupIndex].gameObjects[gameObjectIndex];
@@ -119,12 +119,12 @@ export function requireGameObject(
 
 export function requireBehavior<T extends GameObjectBehavior>(
   gameObject: GameObject,
-  behaviorName: BehaviorName<T>
+  behaviorName: BehaviorName<T>,
 ): T {
   const behavior = getBehavior(gameObject, behaviorName);
   if (!behavior) {
     throw new ModifySaveError(
-      `Expected GameObject to have behavior ${behaviorName}.`
+      `Expected GameObject to have behavior ${behaviorName}.`,
     );
   }
   return behavior;
@@ -132,7 +132,7 @@ export function requireBehavior<T extends GameObjectBehavior>(
 
 export function replaceGameObject(
   saveGame: SaveGame,
-  gameObject: GameObject
+  gameObject: GameObject,
 ): SaveGame {
   const gameObjectId = getGameObjectId(gameObject);
   if (!gameObjectId) {
@@ -141,7 +141,7 @@ export function replaceGameObject(
 
   const [groupIndex, gameObjectIndex] = getGameObjectLocationById(
     saveGame,
-    gameObjectId
+    gameObjectId,
   );
 
   const newSaveGame = {
@@ -151,7 +151,7 @@ export function replaceGameObject(
       gameObjects: replace(
         saveGame.gameObjects[groupIndex].gameObjects,
         gameObjectIndex,
-        gameObject
+        gameObject,
       ),
     }),
   };
@@ -162,20 +162,20 @@ export function replaceGameObject(
 export type DataModifier<T> = Partial<T> | ((data: T) => T);
 export function changeStateBehaviorData<
   T extends GameObjectBehavior,
-  K extends "templateData" | "extraData"
+  K extends "templateData" | "extraData",
 >(
   gameObject: GameObject,
   behaviorName: BehaviorName<T>,
   dataKey: K,
-  modifier: DataModifier<T[K]>
+  modifier: DataModifier<T[K]>,
 ): GameObject {
   const behaviorIndex = findIndex(
     gameObject.behaviors,
-    (x) => x.name === behaviorName
+    (x) => x.name === behaviorName,
   );
   if (behaviorIndex === -1) {
     throw new ModifySaveError(
-      `GameObject does not have behavior "${behaviorName}".`
+      `GameObject does not have behavior "${behaviorName}".`,
     );
   }
 
@@ -211,7 +211,7 @@ export function set(obj: any, path: string[], value: any): any {
 export function setArrayDict<TKey, TValue>(
   arrayDict: [TKey, TValue][],
   key: TKey,
-  value: TValue
+  value: TValue,
 ): [TKey, TValue][] {
   const index = findIndex(arrayDict, (x) => x[0] === key);
   if (index === -1) {
@@ -236,7 +236,7 @@ function applyModifier<T>(data: T, modifier: DataModifier<T>): T {
 
 function getGameObjectLocationById(
   saveGame: SaveGame,
-  gameObjectId: number
+  gameObjectId: number,
 ): [number, number] {
   const { gameObjects: gameObjectGroups } = saveGame;
   for (let groupIndex = 0; groupIndex < gameObjectGroups.length; groupIndex++) {
@@ -248,7 +248,7 @@ function getGameObjectLocationById(
   }
 
   throw new ModifySaveError(
-    `GameObject ${gameObjectId} does not exist in the save.`
+    `GameObject ${gameObjectId} does not exist in the save.`,
   );
 }
 

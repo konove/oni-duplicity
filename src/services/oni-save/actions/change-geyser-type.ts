@@ -9,11 +9,11 @@ export const ACTION_ONISAVE_CHANGE_GEYSER_TYPE = "oni-save/change-geyser-type";
  */
 export const changeGeyserType = (gameObjectId: number, geyserType: string) => ({
   type: ACTION_ONISAVE_CHANGE_GEYSER_TYPE as typeof ACTION_ONISAVE_CHANGE_GEYSER_TYPE,
-  payload: { gameObjectId, geyserType }
+  payload: { gameObjectId, geyserType },
 });
 export type ChangeGeyserTypeAction = ReturnType<typeof changeGeyserType>;
 export function isChangeGeyserTypeAction(
-  action: UnknownAction
+  action: UnknownAction,
 ): action is ChangeGeyserTypeAction {
   return action.type === ACTION_ONISAVE_CHANGE_GEYSER_TYPE;
 }

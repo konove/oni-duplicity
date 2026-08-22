@@ -10,7 +10,7 @@ export default function* initializeSaga() {
 function* handleInitialize() {
   if ("serviceWorker" in navigator) {
     const registration: ServiceWorkerRegistration | undefined = yield call(() =>
-      navigator.serviceWorker.getRegistration()
+      navigator.serviceWorker.getRegistration(),
     );
     yield put(offlineProbeCompleted(true, registration != null));
   } else {

@@ -29,7 +29,7 @@ const ImportMenuItem: React.FC<Props> = ({ onImportDuplicant, onClose }) => {
       onImportDuplicant(file);
       onClose();
     },
-    [onImportDuplicant, onClose]
+    [onImportDuplicant, onClose],
   );
 
   return (

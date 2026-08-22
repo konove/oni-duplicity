@@ -4,13 +4,13 @@ export const ACTION_ONISAVE_PARSE_PROGRESS = "onisave/parse-progress";
 
 export const parseProgress = (message: string) => ({
   type: ACTION_ONISAVE_PARSE_PROGRESS as typeof ACTION_ONISAVE_PARSE_PROGRESS,
-  payload: { message }
+  payload: { message },
 });
 
 export type ParseProgressAction = ReturnType<typeof parseProgress>;
 
 export function isParseProgressAction(
-  action: UnknownAction
+  action: UnknownAction,
 ): action is ParseProgressAction {
   return action.type === ACTION_ONISAVE_PARSE_PROGRESS;
 }

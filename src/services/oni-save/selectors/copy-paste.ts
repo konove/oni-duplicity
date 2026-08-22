@@ -3,7 +3,7 @@ import { createServiceSelector } from "./utils";
 import { OniSaveState } from "../state";
 
 export const copyPasteDataSelector = createServiceSelector(
-  (state: OniSaveState) => state.copyPasteData
+  (state: OniSaveState) => state.copyPasteData,
 );
 
 export const copyPasteGameObjectTypeSelect = createServiceSelector(
@@ -12,7 +12,7 @@ export const copyPasteGameObjectTypeSelect = createServiceSelector(
       return null;
     }
     return state.copyPasteData.gameObjectType;
-  }
+  },
 );
 
 export const copyPasteAvailableBehaviorsSelector = createServiceSelector(
@@ -21,5 +21,5 @@ export const copyPasteAvailableBehaviorsSelector = createServiceSelector(
       return null;
     }
     return Object.keys(state.copyPasteData.behaviors);
-  }
+  },
 );

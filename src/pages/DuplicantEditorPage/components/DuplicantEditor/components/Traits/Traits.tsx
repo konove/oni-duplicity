@@ -4,12 +4,7 @@ import { difference } from "lodash";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Chip from "@mui/material/Chip";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
@@ -21,7 +16,7 @@ import {
 
 import AddTraitButton from "./components/AddTraitButton";
 
-const CANDIDATE_TRAITS = AI_TRAIT_IDS.filter(x => x !== "None");
+const CANDIDATE_TRAITS = AI_TRAIT_IDS.filter((x) => x !== "None");
 
 export interface TraitsProps {
   gameObjectId: number;
@@ -32,17 +27,20 @@ const styles = (theme: Theme) =>
     root: {
       display: "flex",
       flexDirection: "row",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
     },
     chip: {
-      margin: theme.spacing(0.5)
-    }
+      margin: theme.spacing(0.5),
+    },
   });
 
 type Props = TraitsProps & WithStyles<typeof styles> & WithTranslation;
 
 const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
-  const { templateData, onTemplateDataModify } = useBehavior(gameObjectId, AITraitsBehavior);
+  const { templateData, onTemplateDataModify } = useBehavior(
+    gameObjectId,
+    AITraitsBehavior,
+  );
   const { TraitIds } = templateData;
   const availableTraits = difference(CANDIDATE_TRAITS, TraitIds);
 
@@ -52,7 +50,7 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     TraitIds.map((trait: string, index: number) => ({ trait, index })),
     ({ trait }) => trait,
     t,
-    i18n.language
+    i18n.language,
   );
   return (
     <div className={classes.root}>
@@ -66,7 +64,7 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
             const newTraitIds = [...TraitIds];
             newTraitIds.splice(index, 1);
             onTemplateDataModify({
-              TraitIds: newTraitIds
+              TraitIds: newTraitIds,
             });
           }}
         />
@@ -74,7 +72,7 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
       <AddTraitButton
         className={classes.chip}
         availableTraits={availableTraits}
-        onAddTrait={trait =>
+        onAddTrait={(trait) =>
           onTemplateDataModify({ TraitIds: [...TraitIds, trait] })
         }
       />

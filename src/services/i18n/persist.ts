@@ -5,14 +5,14 @@ import i18n from "./i18n";
 import { currentLanguageSelector } from "./selectors/language";
 
 export const persistState = createStructuredSelector({
-  language: currentLanguageSelector
+  language: currentLanguageSelector,
 });
 
 type PersistedState = ReturnType<typeof persistState>;
 
 export function loadState(
   state: I18NState,
-  persisted: PersistedState
+  persisted: PersistedState,
 ): I18NState {
   // Fire and forget: this runs while rehydrating state, and a failure to
   // switch language must not block the load.
@@ -20,6 +20,6 @@ export function loadState(
 
   return {
     ...state,
-    ...persisted
+    ...persisted,
   };
 }

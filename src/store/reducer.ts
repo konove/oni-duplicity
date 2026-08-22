@@ -9,14 +9,14 @@ import offlineModeReducer from "@/services/offline-mode/reducer";
 const servicesReducer = combineReducers({
   i18n: i18nReducer,
   oniSave: oniSaveReducer,
-  offlineMode: offlineModeReducer
+  offlineMode: offlineModeReducer,
 });
 
 export default function reducer(
   state: AppState = defaultAppState,
-  action: UnknownAction
+  action: UnknownAction,
 ): AppState {
   return {
-    services: servicesReducer(state.services, action)
+    services: servicesReducer(state.services, action),
   };
 }

@@ -3,6 +3,6 @@ export interface I18NState {
 }
 
 export const defaultI18NState: Readonly<I18NState> = {
-  language: "en"
+  language: "en",
 };
 Object.freeze(defaultI18NState);

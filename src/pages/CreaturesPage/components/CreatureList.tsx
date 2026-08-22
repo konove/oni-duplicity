@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    margin: theme.spacing()
+    margin: theme.spacing(),
   },
   item: {
-    margin: theme.spacing(0.5)
-  }
+    margin: theme.spacing(0.5),
+  },
 }));
 
 type Props = DuplicantListProps;
@@ -31,7 +31,7 @@ const CreatureList: React.FC<Props> = ({ className }) => {
   const gameObjectIds = useGameObjects(CREATURE_GAMEOBJECT_TYPES);
   return (
     <div className={classnames(className, classes.root)}>
-      {gameObjectIds.map(id => (
+      {gameObjectIds.map((id) => (
         <CreatureListItem key={id} className={classes.item} gameObjectId={id} />
       ))}
     </div>

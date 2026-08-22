@@ -10,9 +10,9 @@ export interface DuplicantNameProps {
 }
 
 const DuplicantName: React.FC<DuplicantNameProps> = ({ gameObjectId }) => {
-  const { templateData: { name } } = useBehavior(gameObjectId, MinionIdentityBehavior);
-  return (
-    <Typography variant="h5">{name}</Typography>
-  );
-}
+  const {
+    templateData: { name },
+  } = useBehavior(gameObjectId, MinionIdentityBehavior);
+  return <Typography variant="h5">{name}</Typography>;
+};
 export default DuplicantName;

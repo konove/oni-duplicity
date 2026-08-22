@@ -57,7 +57,7 @@ function writeSave(command: WriteSaveCommand) {
 let messageQueueTime = 0;
 let messageQueue: string | null = null;
 function progressReporter(
-  onProgress: (message: string) => void
+  onProgress: (message: string) => void,
 ): (value: any) => any {
   return (instruction: { type: "progress"; message: string }) => {
     // Check if its time to emit a message.

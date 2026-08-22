@@ -20,18 +20,15 @@ const disabledSelector = createSelector(
       return true;
     }
     return false;
-  }
+  },
 );
 
 const mapStateToProps = createStructuredSelector({
-  disabled: disabledSelector
+  disabled: disabledSelector,
 });
 
 const mapDispatchToProps = {
-  onSave: () => saveOniSave()
+  onSave: () => saveOniSave(),
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-);
+export default connect(mapStateToProps, mapDispatchToProps);

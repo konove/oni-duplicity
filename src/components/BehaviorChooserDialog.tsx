@@ -33,7 +33,7 @@ const BehaviorChooserDialog: React.FC<Props> = ({
   choices,
   onApply,
   onCancel,
-  t
+  t,
 }) => {
   const [selectedTargets, setSelectedTargets] = React.useState<string[]>([]);
   const onCheckboxChange = React.useCallback(
@@ -43,10 +43,10 @@ const BehaviorChooserDialog: React.FC<Props> = ({
         setSelectedTargets([...selectedTargets, e.target.value]);
       } else {
         // Remove item
-        setSelectedTargets(selectedTargets.filter(x => x !== e.target.value));
+        setSelectedTargets(selectedTargets.filter((x) => x !== e.target.value));
       }
     },
-    [selectedTargets, setSelectedTargets]
+    [selectedTargets, setSelectedTargets],
   );
   const onApplyClick = React.useCallback(() => {
     onApply(selectedTargets);

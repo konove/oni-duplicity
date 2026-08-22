@@ -17,16 +17,16 @@ export const ACTION_ONISAVE_CHANGE_GEYSER_PARAMETER =
 export const changeGeyserParameter = <K extends keyof GeyserConfiguration>(
   gameObjectId: number,
   parameter: K,
-  value: GeyserConfiguration[K]
+  value: GeyserConfiguration[K],
 ) => ({
   type: ACTION_ONISAVE_CHANGE_GEYSER_PARAMETER as typeof ACTION_ONISAVE_CHANGE_GEYSER_PARAMETER,
-  payload: { gameObjectId, parameter, value }
+  payload: { gameObjectId, parameter, value },
 });
 export type ChangeGeyserParameterAction = ReturnType<
   typeof changeGeyserParameter
 >;
 export function isChangeGeyserParameterAction(
-  action: UnknownAction
+  action: UnknownAction,
 ): action is ChangeGeyserParameterAction {
   return action.type === ACTION_ONISAVE_CHANGE_GEYSER_PARAMETER;
 }

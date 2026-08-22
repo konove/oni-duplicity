@@ -9,7 +9,7 @@ const languages: Record<string, string> = {
   zh: "Chinese",
   ru: "Russian",
   cs: "Czech",
-  es: "Spanish"
+  es: "Spanish",
 };
 
 export interface LanguageProps {
@@ -18,17 +18,17 @@ export interface LanguageProps {
 }
 const Language: React.FC<LanguageProps> = ({
   currentLanguage,
-  onChangeLanguage
+  onChangeLanguage,
 }) => {
   const onChange = React.useCallback(
     (e: SelectChangeEvent<string>) => {
       onChangeLanguage(e.target.value);
     },
-    [onChangeLanguage]
+    [onChangeLanguage],
   );
 
   let langEntries = entries(languages);
-  langEntries = sortBy(langEntries, x => x[1]);
+  langEntries = sortBy(langEntries, (x) => x[1]);
 
   return (
     <Select value={currentLanguage} onChange={onChange}>

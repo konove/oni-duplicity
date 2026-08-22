@@ -10,14 +10,14 @@ import { ACTION_ONISAVE_PARSE_PROGRESS } from "@/services/oni-save/actions/parse
 
 export const actionsBlacklist: string[] = [
   ACTION_ONISAVE_LOAD,
-  ACTION_ONISAVE_PARSE_PROGRESS
+  ACTION_ONISAVE_PARSE_PROGRESS,
 ];
 
 export function actionSanitizer(action: UnknownAction): UnknownAction {
   if (action.type === ACTION_RECEIVE_ONISAVE_SUCCESS) {
     return {
       ...action,
-      payload: sanitizeSave(action.payload as SaveGame | null)
+      payload: sanitizeSave(action.payload as SaveGame | null),
     };
   }
   return action;
@@ -30,9 +30,9 @@ export function stateSanitizer(state: AppState): any {
       ...state.services,
       oniSave: {
         ...state.services.oniSave,
-        saveGame: sanitizeSave(state.services.oniSave.saveGame)
-      }
-    }
+        saveGame: sanitizeSave(state.services.oniSave.saveGame),
+      },
+    },
   };
 }
 
@@ -44,7 +44,7 @@ function sanitizeSave(save: SaveGame | null): any {
     ...save,
     world: {
       ...save.world,
-      streamed: "~snip~"
-    }
+      streamed: "~snip~",
+    },
   };
 }

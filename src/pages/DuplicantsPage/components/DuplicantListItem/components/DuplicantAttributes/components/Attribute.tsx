@@ -24,16 +24,15 @@ const AttributeName: React.FC<Props> = ({ gameObjectId, attributeId, t }) => {
 
   const attribute = find(
     templateData.saveLoadLevels,
-    x => x.attributeId === attributeId
+    (x) => x.attributeId === attributeId,
   );
 
   return (
-
     <Typography
       component="span"
       variant="body2"
       title={t(`oni:DUPLICANTS.ATTRIBUTES.${attributeId}.DESC`, {
-        defaultValue: ""
+        defaultValue: "",
       })}
     >
       {attribute && signPrefix(attribute.level)}
@@ -43,7 +42,7 @@ const AttributeName: React.FC<Props> = ({ gameObjectId, attributeId, t }) => {
       </Trans>
     </Typography>
   );
-}
+};
 
 export default withTranslation()(AttributeName);
 

@@ -3,12 +3,7 @@ import { AITraitsBehavior } from "oni-save-parser";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
@@ -26,12 +21,12 @@ const styles = (_theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
-      flexDirection: "column"
+      flexDirection: "column",
     },
     trait: {
       textAlign: "center",
-      whiteSpace: "nowrap"
-    }
+      whiteSpace: "nowrap",
+    },
   });
 
 type Props = DuplicantTraitsProps & WithStyles<typeof styles> & WithTranslation;
@@ -40,17 +35,17 @@ const DuplicantTraits: React.FC<Props> = ({
   classes,
   gameObjectId,
   t,
-  i18n
+  i18n,
 }) => {
   const { templateData } = useBehavior(gameObjectId, AITraitsBehavior);
   const traits = sortTraitIdsByName(
     (templateData || { TraitIds: [] }).TraitIds,
     t,
-    i18n.language
+    i18n.language,
   );
   return (
     <div className={classes.root}>
-      {traits.map(trait => (
+      {traits.map((trait) => (
         <Typography
           key={trait}
           className={classes.trait}
@@ -63,6 +58,6 @@ const DuplicantTraits: React.FC<Props> = ({
       ))}
     </div>
   );
-}
+};
 
 export default withStyles(styles)(withTranslation()(DuplicantTraits));

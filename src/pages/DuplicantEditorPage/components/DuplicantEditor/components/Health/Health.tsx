@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { Trans } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 
@@ -23,28 +18,28 @@ const styles = (theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      height: "100%"
+      height: "100%",
     },
     header: {
       marginTop: theme.spacing(),
-      marginLeft: theme.spacing()
+      marginLeft: theme.spacing(),
     },
     divider: {
       marginTop: theme.spacing(),
-      marginBottom: theme.spacing()
+      marginBottom: theme.spacing(),
     },
     group: {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      padding: theme.spacing()
+      padding: theme.spacing(),
     },
     value: {
       width: 300,
       marginTop: theme.spacing(),
       marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2)
-    }
+      marginRight: theme.spacing(2),
+    },
   });
 
 type Props = HealthProps & WithStyles<typeof styles>;

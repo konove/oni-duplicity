@@ -21,13 +21,16 @@ const AttributeField: React.FC<Props> = ({
   className,
   inputClassName,
   gameObjectId,
-  attributeId
+  attributeId,
 }) => {
-  const { templateData: { saveLoadLevels }, onTemplateDataModify } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
+  const {
+    templateData: { saveLoadLevels },
+    onTemplateDataModify,
+  } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
 
   const attrIndex = findIndex(
     saveLoadLevels,
-    x => x.attributeId === attributeId
+    (x) => x.attributeId === attributeId,
   );
 
   if (attrIndex === -1) {
@@ -46,15 +49,15 @@ const AttributeField: React.FC<Props> = ({
       // `ch`, which keeps short values compact and lets long ones grow rather
       // than clip. The added padding covers MUI's outlined input inset.
       style={{
-        width: `calc(${Math.max(String(level).length, 2)}ch + 42px)`
+        width: `calc(${Math.max(String(level).length, 2)}ch + 42px)`,
       }}
       slotProps={{ htmlInput: { className: inputClassName } }}
       value={level}
-      onCommit={value => {
+      onCommit={(value) => {
         const newLevels = [...saveLoadLevels];
         newLevels[attrIndex] = { ...attr, level: Number(value) };
         onTemplateDataModify({
-          saveLoadLevels: newLevels
+          saveLoadLevels: newLevels,
         });
       }}
     />

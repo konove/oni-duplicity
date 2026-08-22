@@ -11,8 +11,8 @@ import CreatureList from "./components/CreatureList";
 
 const useStyles = makeStyles({
   creatureList: {
-    overflow: "auto"
-  }
+    overflow: "auto",
+  },
 });
 
 type Props = WithTranslation;

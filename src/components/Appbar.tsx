@@ -4,12 +4,7 @@ import MaterialAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
-import {
-  createStyles,
-  withStyles,
-  WithStyles,
-  Theme,
-} from "@/styles";
+import { createStyles, withStyles, WithStyles, Theme } from "@/styles";
 
 import SettingsButton from "./SettingsButton";
 import SaveIconButton from "./SaveIconButton";

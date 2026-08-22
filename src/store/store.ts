@@ -1,7 +1,7 @@
 import {
   compose,
   legacy_createStore as createReduxStore,
-  applyMiddleware
+  applyMiddleware,
 } from "redux";
 
 import createSagaMiddleware from "redux-saga";
@@ -17,7 +17,7 @@ import { loadPersistedState, savePersistedState } from "./persist";
 import {
   actionSanitizer,
   stateSanitizer,
-  actionsBlacklist
+  actionsBlacklist,
 } from "./devtool-sanitizer";
 
 function createStore() {
@@ -26,7 +26,7 @@ function createStore() {
       window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         actionSanitizer,
         stateSanitizer,
-        actionsBlacklist
+        actionsBlacklist,
       })) ||
     compose;
 
@@ -37,7 +37,7 @@ function createStore() {
   const store = createReduxStore(
     reducer,
     initialState,
-    composeEnhancers(applyMiddleware(sagaMiddleware))
+    composeEnhancers(applyMiddleware(sagaMiddleware)),
   );
 
   sagaMiddleware.run(saga);

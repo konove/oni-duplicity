@@ -6,7 +6,7 @@ import { isDeleteLooseMaterialAction } from "../actions/delete-loose-material";
 
 export default function deleteLooseMaterialReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isDeleteLooseMaterialAction(action)) {
     return state;
@@ -31,7 +31,7 @@ export default function deleteLooseMaterialReducer(
     ...state,
     saveGame: {
       ...state.saveGame,
-      gameObjects: state.saveGame.gameObjects.filter(shouldRemoveMaterial)
-    }
+      gameObjects: state.saveGame.gameObjects.filter(shouldRemoveMaterial),
+    },
   };
 }

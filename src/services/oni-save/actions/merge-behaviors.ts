@@ -8,15 +8,15 @@ export interface BehaviorMergeData {
 export const ACTION_ONISAVE_MERGE_BEHAVIORS = "oni-save/merge-behaviors";
 export const mergeBehaviors = (
   gameObjectId: number,
-  behaviors: Record<string, BehaviorMergeData>
+  behaviors: Record<string, BehaviorMergeData>,
 ) => ({
   type: ACTION_ONISAVE_MERGE_BEHAVIORS as typeof ACTION_ONISAVE_MERGE_BEHAVIORS,
-  payload: { gameObjectId, behaviors }
+  payload: { gameObjectId, behaviors },
 });
 export type MergeBehaviorsAction = ReturnType<typeof mergeBehaviors>;
 
 export function isMergeBehaviorsAction(
-  action: UnknownAction
+  action: UnknownAction,
 ): action is MergeBehaviorsAction {
   return action.type === ACTION_ONISAVE_MERGE_BEHAVIORS;
 }

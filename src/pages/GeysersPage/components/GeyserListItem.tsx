@@ -26,24 +26,24 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(45),
     display: "flex",
     flexDirection: "column",
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   titleBar: {
     display: "flex",
     flexDirection: "row",
-    marginBottom: theme.spacing()
+    marginBottom: theme.spacing(),
   },
   titleControls: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
   sliderSection: {
-    marginTop: theme.spacing()
+    marginTop: theme.spacing(),
   },
   valueLabel: {
-    marginBottom: theme.spacing()
-  }
+    marginBottom: theme.spacing(),
+  },
 }));
 
 type Props = GeyserListItemProps & WithTranslation;
@@ -61,14 +61,14 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
     onChangeGeyserType,
     onChangeYearLength,
     onChangeYearActive,
-    onChangeEmitActive
+    onChangeEmitActive,
   } = useGeyser(gameObjectId);
 
   const onGeyserTypeSelected = React.useCallback(
     (e: SelectChangeEvent<string>) => {
       onChangeGeyserType(e.target.value);
     },
-    [onChangeGeyserType]
+    [onChangeGeyserType],
   );
 
   const onGeyserRateChanged = React.useCallback(
@@ -76,7 +76,7 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
       const emitRate = (value as number) / 100;
       onChangeEmitRate(emitRate);
     },
-    [onChangeEmitRate]
+    [onChangeEmitRate],
   );
 
   const onGeyserYearLengthChanged = React.useCallback(
@@ -84,7 +84,7 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
       const fraction = (value as number) / 100;
       onChangeYearLength(fraction);
     },
-    [onChangeYearLength]
+    [onChangeYearLength],
   );
 
   const onGeyserYearActiveChanged = React.useCallback(
@@ -92,7 +92,7 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
       const fraction = (value as number) / 100;
       onChangeYearActive(fraction);
     },
-    [onChangeYearActive]
+    [onChangeYearActive],
   );
 
   const onGeyserEmissionLengthChanged = React.useCallback(
@@ -100,7 +100,7 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
       const fraction = (value as number) / 100;
       onChangeEmitActive(fraction);
     },
-    [onChangeEmitActive]
+    [onChangeEmitActive],
   );
 
   return (
@@ -111,7 +111,7 @@ const GeyserListItem: React.FC<Props> = ({ className, gameObjectId, t }) => {
       </div>
       <Divider />
       <Select value={geyserType || ""} onChange={onGeyserTypeSelected}>
-        {keysOfType(GeyserType).map(typeName => (
+        {keysOfType(GeyserType).map((typeName) => (
           <MenuItem key={typeName} value={typeName}>
             {typeName}
           </MenuItem>

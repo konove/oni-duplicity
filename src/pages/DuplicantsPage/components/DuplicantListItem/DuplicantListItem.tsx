@@ -24,32 +24,32 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(45),
     display: "flex",
     flexDirection: "column",
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   titleBar: {
     display: "flex",
     flexDirection: "row",
-    marginBottom: theme.spacing()
+    marginBottom: theme.spacing(),
   },
   titleControls: {
     display: "flex",
     flexDirection: "row",
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
   content: {
     display: "flex",
     flexDirection: "row",
-    marginTop: theme.spacing()
+    marginTop: theme.spacing(),
   },
   portraitColumn: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   attributes: {
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
   editButton: {
-    marginLeft: "auto"
-  }
+    marginLeft: "auto",
+  },
 }));
 
 type Props = DuplicantListItemProps;

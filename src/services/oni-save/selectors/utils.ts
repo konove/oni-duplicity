@@ -8,7 +8,7 @@ export interface OniSaveServiceSelector<T> {
 }
 
 export function createServiceSelector<T>(
-  selector: (state: OniSaveState) => T
+  selector: (state: OniSaveState) => T,
 ): OniSaveServiceSelector<T> {
   const rootSelector = (state: AppState) => selector(state.services.oniSave);
   rootSelector.local = selector;

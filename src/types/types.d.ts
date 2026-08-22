@@ -2,8 +2,8 @@ type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends Array<infer U>
     ? Array<DeepPartial<U>>
     : T[P] extends ReadonlyArray<infer U>
-    ? ReadonlyArray<DeepPartial<U>>
-    : DeepPartial<T[P]>;
+      ? ReadonlyArray<DeepPartial<U>>
+      : DeepPartial<T[P]>;
 };
 
 type ArrayValues<T> = T extends Array<infer U> ? U : never;

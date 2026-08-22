@@ -22,11 +22,14 @@ function isBusy(status: LoadingStatus) {
 export default function useLoadFile(): UseLoadFile {
   const dispatch = useDispatch();
   const loadingStatus = useSelector(loadingStatusSelector);
-  const onLoadSave = React.useCallback((file: File) => {
-    dispatch(loadOniSave(file));
-  }, [dispatch]);
+  const onLoadSave = React.useCallback(
+    (file: File) => {
+      dispatch(loadOniSave(file));
+    },
+    [dispatch],
+  );
   return {
     disabled: isBusy(loadingStatus),
-    onLoadSave
+    onLoadSave,
   };
 }

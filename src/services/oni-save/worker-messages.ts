@@ -30,9 +30,7 @@ export const parseSaveError = (error: Error) => ({
 export type ParseSaveErrorResponse = ReturnType<typeof parseSaveError>;
 
 export type ParseSaveResponse =
-  | ParseSaveSuccessResponse
-  | ParseSaveErrorResponse
-  | ProgressResponse;
+  ParseSaveSuccessResponse | ParseSaveErrorResponse | ProgressResponse;
 
 const COMMAND_WRITE = "write-save";
 export const writeSave = (saveGame: SaveGame) => ({
@@ -56,9 +54,7 @@ export const writeSaveError = (error: Error) => ({
 export type WriteSaveErrorResponse = ReturnType<typeof writeSaveError>;
 
 export type WriteSaveResult =
-  | WriteSaveSuccessResponse
-  | WriteSaveErrorResponse
-  | ProgressResponse;
+  WriteSaveSuccessResponse | WriteSaveErrorResponse | ProgressResponse;
 
 export type SaveParserCommand = ParseSaveCommand | WriteSaveCommand;
 export type SaveParserResponse = ParseSaveResponse | WriteSaveResult;

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Vector3 } from "oni-save-parser";
 import {
   gameObjectTypesByIdSelector,
-  gameObjectsByIdSelector
+  gameObjectsByIdSelector,
 } from "../selectors/game-objects";
 
 export interface UseGameObject {
@@ -16,6 +16,6 @@ export default function useGameObject(gameObjectId: number): UseGameObject {
   const { position } = gameObjectsById[gameObjectId] || {};
   return {
     gameObjectType,
-    position
+    position,
   };
 }

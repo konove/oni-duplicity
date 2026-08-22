@@ -24,7 +24,7 @@ const ExportMenuItem: React.FC<Props> = ({ onExportBehaviors, onClose, t }) => {
       onExportBehaviors(behaviors);
       onClose();
     },
-    [onExportBehaviors, onClose]
+    [onExportBehaviors, onClose],
   );
   const exportText = t("data.verbs.export_titlecase");
   return (

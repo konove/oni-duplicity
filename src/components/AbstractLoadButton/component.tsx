@@ -11,9 +11,7 @@ export interface AbstractLoadButtonRenderProps {
 }
 
 type Props = AbstractLoadButtonProps;
-const AbstractLoadButton: React.FC<Props> = ({
-  children
-}) => {
+const AbstractLoadButton: React.FC<Props> = ({ children }) => {
   const { disabled, onLoadSave } = useLoadFile();
   const inputRef = React.useRef<HTMLInputElement | null>(null);
 
@@ -33,7 +31,7 @@ const AbstractLoadButton: React.FC<Props> = ({
 
       onLoadSave(file);
     },
-    [onLoadSave]
+    [onLoadSave],
   );
 
   return (

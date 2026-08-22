@@ -10,12 +10,12 @@ export interface MegaMenuItemInputProps {
 
 function mapDispatchToProps(dispatch: Dispatch, props: MegaMenuItemInputProps) {
   return {
-    onMegaDuplicant: () => dispatch(megaDuplicant(props.gameObjectId))
+    onMegaDuplicant: () => dispatch(megaDuplicant(props.gameObjectId)),
   };
 }
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 export default connect<{}, DispatchProps, MegaMenuItemInputProps, AppState>(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 );

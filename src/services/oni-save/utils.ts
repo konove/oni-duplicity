@@ -2,12 +2,12 @@ import {
   SaveGame,
   getBehavior,
   KPrefabIDBehavior,
-  GameObject
+  GameObject,
 } from "oni-save-parser";
 
 export function getGameObjectById(
   saveGame: SaveGame,
-  gameObjectId: number
+  gameObjectId: number,
 ): GameObject | null {
   for (const group of saveGame.gameObjects) {
     for (const gameObject of group.gameObjects) {

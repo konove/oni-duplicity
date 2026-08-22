@@ -35,5 +35,5 @@ export default reduceReducers(
   modifyRawReducer,
   parseProgressReducer,
   pasteBehaviorsReducer,
-  receiveOniSaveReducer
+  receiveOniSaveReducer,
 );

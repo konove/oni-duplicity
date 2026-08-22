@@ -6,19 +6,19 @@ import { OniSaveState, defaultOniSaveState } from "../state";
 
 import {
   isModifyBehaviorAction,
-  BehaviorDataTarget
+  BehaviorDataTarget,
 } from "../actions/modify-behavior";
 
 import {
   requireGameObject,
   changeStateBehaviorData,
   replaceGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 
 export default function modifyBehaviorReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isModifyBehaviorAction(action)) {
     return state;
@@ -26,15 +26,15 @@ export default function modifyBehaviorReducer(
 
   const { gameObjectId, behaviorId, target, value, merge } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
+  return tryModifySaveGame(state, (saveGame) =>
     performModifyBehavior(
       saveGame,
       gameObjectId,
       behaviorId,
       target,
       value,
-      merge
-    )
+      merge,
+    ),
   );
 }
 
@@ -44,7 +44,7 @@ function performModifyBehavior(
   behaviorName: string,
   target: BehaviorDataTarget,
   value: any,
-  mergeData: boolean
+  mergeData: boolean,
 ) {
   let gameObject = requireGameObject(saveGame, gameObjectId);
 
@@ -58,7 +58,7 @@ function performModifyBehavior(
         gameObject,
         behaviorName,
         "templateData",
-        performMerge
+        performMerge,
       );
       break;
     case BehaviorDataTarget.Extra:
@@ -66,7 +66,7 @@ function performModifyBehavior(
         gameObject,
         behaviorName,
         "extraData",
-        performMerge
+        performMerge,
       );
       break;
   }

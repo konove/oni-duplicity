@@ -5,14 +5,11 @@ import { setLanguage } from "@/services/i18n/actions/set-language";
 import { createStructuredSelector } from "@/state";
 
 const mapStateToProps = createStructuredSelector({
-  currentLanguage: currentLanguageSelector
+  currentLanguage: currentLanguageSelector,
 });
 
 const mapDispatchToProps = {
-  onChangeLanguage: setLanguage
+  onChangeLanguage: setLanguage,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-);
+export default connect(mapStateToProps, mapDispatchToProps);

@@ -23,14 +23,14 @@ const ObjectEditor: React.FC<ObjectEditorProps> = ({ saveGame, path }) => {
           }
           return obj;
         },
-        {} as Record<string, string>
+        {} as Record<string, string>,
       ),
-    [target, saveGame, path]
+    [target, saveGame, path],
   );
 
   const editorFields = Object.keys(editors)
     .sort()
-    .map(key => {
+    .map((key) => {
       const editorType = editors[key];
       if (editorType === "undefined") {
         return null;
@@ -48,7 +48,8 @@ const ObjectEditor: React.FC<ObjectEditorProps> = ({ saveGame, path }) => {
           <EditorField path={[...path, key]} />
         </div>
       );
-    }).filter(x => x != null);
+    })
+    .filter((x) => x != null);
 
   return <div>{editorFields}</div>;
 };

@@ -5,18 +5,18 @@ import { OniSaveState, defaultOniSaveState } from "../state";
 
 import {
   isMergeBehaviorsAction,
-  BehaviorMergeData
+  BehaviorMergeData,
 } from "../actions/merge-behaviors";
 import {
   requireGameObject,
   changeStateBehaviorData,
   replaceGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 
 export default function mergeBehaviorsReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isMergeBehaviorsAction(action)) {
     return state;
@@ -24,15 +24,15 @@ export default function mergeBehaviorsReducer(
 
   const { gameObjectId, behaviors } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
-    performMergeBehaviors(saveGame, gameObjectId, behaviors)
+  return tryModifySaveGame(state, (saveGame) =>
+    performMergeBehaviors(saveGame, gameObjectId, behaviors),
   );
 }
 
 function performMergeBehaviors(
   saveGame: SaveGame,
   gameObjectId: number,
-  behaviors: Record<string, BehaviorMergeData>
+  behaviors: Record<string, BehaviorMergeData>,
 ): SaveGame {
   let gameObject = requireGameObject(saveGame, gameObjectId);
 
@@ -44,7 +44,7 @@ function performMergeBehaviors(
         gameObject,
         behaviorName,
         "templateData",
-        _ => behavior.templateData
+        (_) => behavior.templateData,
       );
     }
 
@@ -53,7 +53,7 @@ function performMergeBehaviors(
         gameObject,
         behaviorName,
         "extraData",
-        _ => behavior.extraData
+        (_) => behavior.extraData,
       );
     }
   }

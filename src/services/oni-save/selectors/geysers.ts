@@ -16,5 +16,5 @@ export const geyserConfigSelector = createCachedSelector(
       return null;
     }
     return geyserBehavior.templateData.configuration;
-  }
+  },
 )((_: any, gameObjectId: number) => gameObjectId);

@@ -26,7 +26,7 @@ const CopyMenuItem: React.FC<Props> = ({ onCopyBehaviors, onClose, t }) => {
       onCopyBehaviors(behaviors);
       onClose();
     },
-    [onCopyBehaviors, onClose]
+    [onCopyBehaviors, onClose],
   );
 
   const copyText = t("data.verbs.copy_titlecase");

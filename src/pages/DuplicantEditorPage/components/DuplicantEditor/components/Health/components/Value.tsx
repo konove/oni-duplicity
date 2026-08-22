@@ -4,12 +4,7 @@ import { find, findIndex, merge } from "lodash";
 
 import { Trans } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Slider from "@mui/material/Slider";
 
@@ -18,8 +13,8 @@ import useBehavior from "@/services/oni-save/hooks/useBehavior";
 const styles = (theme: Theme) =>
   createStyles({
     valueLabel: {
-      marginBottom: theme.spacing()
-    }
+      marginBottom: theme.spacing(),
+    },
   });
 
 export interface ValueProps {
@@ -36,29 +31,38 @@ const Value: React.FC<Props> = ({
   classes,
   gameObjectId,
   modifier,
-  max
+  max,
 }) => {
   const [transientValue, setTransientValue] = React.useState(-1);
-  const { extraData: { amounts }, onExtraDataModify } = useBehavior(gameObjectId, MinionModifiersBehavior);
+  const {
+    extraData: { amounts },
+    onExtraDataModify,
+  } = useBehavior(gameObjectId, MinionModifiersBehavior);
 
-  const amount = find(amounts, x => x.name === modifier);
+  const amount = find(amounts, (x) => x.name === modifier);
   const value = (amount && amount.value.value) || 0;
 
-  const setAmount = React.useCallback((_: any, value: number | number[]) => {
-    const i = findIndex(amounts, x => x.name === modifier);
-    if (i === -1) {
-      return;
-    }
-    onExtraDataModify({
-      amounts: merge([], amounts, {
-        [i]: { name: modifier, value: { value: value as number } }
-      })
-    });
-  }, [onExtraDataModify, amounts, modifier]);
+  const setAmount = React.useCallback(
+    (_: any, value: number | number[]) => {
+      const i = findIndex(amounts, (x) => x.name === modifier);
+      if (i === -1) {
+        return;
+      }
+      onExtraDataModify({
+        amounts: merge([], amounts, {
+          [i]: { name: modifier, value: { value: value as number } },
+        }),
+      });
+    },
+    [onExtraDataModify, amounts, modifier],
+  );
 
-  const setTransientAmount = React.useCallback((_: any, value: number | number[]) => {
-    setTransientValue(value as number);
-  }, []);
+  const setTransientAmount = React.useCallback(
+    (_: any, value: number | number[]) => {
+      setTransientValue(value as number);
+    },
+    [],
+  );
 
   return (
     <div className={className}>
@@ -79,6 +83,6 @@ const Value: React.FC<Props> = ({
       />
     </div>
   );
-}
+};
 
 export default withStyles(styles)(Value);

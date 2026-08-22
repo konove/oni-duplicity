@@ -12,13 +12,13 @@ export interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({
   experience,
-  setExperience
+  setExperience,
 }) => {
   const onSetExperience = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setExperience(Number(e.target.value));
     },
-    [setExperience]
+    [setExperience],
   );
 
   return (

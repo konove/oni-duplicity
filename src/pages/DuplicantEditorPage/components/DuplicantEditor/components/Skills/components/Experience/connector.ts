@@ -13,21 +13,21 @@ export interface ExperienceConnectorProps {
 
 const experienceSelector = createSelector(
   getBehaviorSelector(MinionResumeBehavior),
-  resume => {
+  (resume) => {
     if (!resume) {
       return 0;
     }
     return resume.templateData.totalExperienceGained;
-  }
+  },
 );
 
 const mapStateToProps = createStructuredSelector({
-  experience: experienceSelector
+  experience: experienceSelector,
 });
 
 function mapDispatchToProps(
   dispatch: Dispatch<UnknownAction>,
-  ownProps: ExperienceConnectorProps
+  ownProps: ExperienceConnectorProps,
 ) {
   const { gameObjectId } = ownProps;
   return {
@@ -40,15 +40,12 @@ function mapDispatchToProps(
         gameObjectId,
         MinionResumeBehavior,
         ["templateData", "totalExperienceGained"],
-        experience
+        experience,
       );
 
       dispatch(action);
-    }
+    },
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-);
+export default connect(mapStateToProps, mapDispatchToProps);

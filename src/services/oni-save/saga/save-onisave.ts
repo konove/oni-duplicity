@@ -60,8 +60,8 @@ function* handleOniSaveWrite(action: SaveOniSaveAction): SagaIterator {
             message: msg.error.message,
             stack: msg.error.stack,
           },
-          LoadingStatus.Saving
-        )
+          LoadingStatus.Saving,
+        ),
       );
       return;
     }

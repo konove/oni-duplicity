@@ -12,7 +12,9 @@
  */
 export const DUPLICANT_GAMEOBJECT_TYPES = ["Minion", "BionicMinion"];
 
-export function isDuplicantType(gameObjectType: string | null | undefined): boolean {
+export function isDuplicantType(
+  gameObjectType: string | null | undefined,
+): boolean {
   return (
     gameObjectType != null &&
     DUPLICANT_GAMEOBJECT_TYPES.indexOf(gameObjectType) !== -1

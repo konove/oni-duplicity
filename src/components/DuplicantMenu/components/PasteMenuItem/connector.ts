@@ -15,17 +15,17 @@ function mapStateToProps(state: AppState, props: PasteMenuItemInputProps) {
   return {
     disabled:
       !typesById[props.gameObjectId] ||
-      copyPasteGameObjectTypeSelect(state) !== typesById[props.gameObjectId]
+      copyPasteGameObjectTypeSelect(state) !== typesById[props.gameObjectId],
   };
 }
 export type StateProps = ReturnType<typeof mapStateToProps>;
 
-const mapDispatchToProps = function(
+const mapDispatchToProps = function (
   dispatch: Dispatch,
-  props: PasteMenuItemInputProps
+  props: PasteMenuItemInputProps,
 ) {
   return {
-    onPasteBehaviors: () => dispatch(pasteBehaviors(props.gameObjectId))
+    onPasteBehaviors: () => dispatch(pasteBehaviors(props.gameObjectId)),
   };
 };
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
@@ -35,7 +35,4 @@ export default connect<
   DispatchProps,
   PasteMenuItemInputProps,
   AppState
->(
-  mapStateToProps,
-  mapDispatchToProps
-);
+>(mapStateToProps, mapDispatchToProps);

@@ -5,7 +5,7 @@ interface ConstrainedArrayConstructor {
 }
 
 function createClamp(
-  type: ConstrainedArrayConstructor
+  type: ConstrainedArrayConstructor,
 ): (value: number) => number {
   const clampArray = new type(1);
   return (value: number) => {
@@ -36,19 +36,17 @@ export const clampUInt32 = createClamp(Uint32Array);
 export const clampSingle = createClamp(Float32Array);
 export const clampDouble = createClamp(Float64Array);
 
-const CLAMPS_BY_PRECISION: Record<
-  NumberPrecision,
-  (value: number) => number
-> = {
-  int8: clampInt8,
-  uint8: clampUInt8,
-  int16: clampInt16,
-  uint16: clampUInt16,
-  int32: clampInt32,
-  uint32: clampUInt32,
-  single: clampSingle,
-  double: clampDouble
-};
+const CLAMPS_BY_PRECISION: Record<NumberPrecision, (value: number) => number> =
+  {
+    int8: clampInt8,
+    uint8: clampUInt8,
+    int16: clampInt16,
+    uint16: clampUInt16,
+    int32: clampInt32,
+    uint32: clampUInt32,
+    single: clampSingle,
+    double: clampDouble,
+  };
 
 export function clamp(precision: NumberPrecision, value: number): number {
   const clamper = CLAMPS_BY_PRECISION[precision];
@@ -60,7 +58,7 @@ export function clamp(precision: NumberPrecision, value: number): number {
 }
 
 export function isFloatingPoint(
-  precision: NumberPrecision
+  precision: NumberPrecision,
 ): precision is "single" | "double" {
   return precision === "single" || precision === "double";
 }

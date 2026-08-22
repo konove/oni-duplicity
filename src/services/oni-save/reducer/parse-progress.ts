@@ -6,7 +6,7 @@ import { OniSaveState, defaultOniSaveState } from "../state";
 
 export default function parseProgressReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isParseProgressAction(action)) {
     return state;
@@ -14,6 +14,6 @@ export default function parseProgressReducer(
 
   return {
     ...state,
-    loadingProgressMessage: action.payload.message
+    loadingProgressMessage: action.payload.message,
   };
 }

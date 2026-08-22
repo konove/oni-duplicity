@@ -15,7 +15,7 @@ import {
 // webpack 5 picks this pattern up natively and emits the worker as its own
 // chunk, which is what `worker-loader` used to do.
 const worker = new Worker(
-  new URL("./save-serializer.worker.ts", import.meta.url)
+  new URL("./save-serializer.worker.ts", import.meta.url),
 );
 
 /**
@@ -33,7 +33,7 @@ function toError(event: ErrorEvent): Error {
 export function parseSave(
   data: ArrayBuffer,
   bypassVersionCheck: boolean,
-  onProgress?: (message: string) => void
+  onProgress?: (message: string) => void,
 ): Promise<SaveGame> {
   const promise = new Promise<SaveGame>((accept, reject) => {
     const unhook = () => {
@@ -71,7 +71,7 @@ export function parseSave(
 
 export function writeSave(
   saveGame: SaveGame,
-  onProgress?: (message: string) => void
+  onProgress?: (message: string) => void,
 ): Promise<ArrayBuffer> {
   const promise = new Promise<ArrayBuffer>((accept, reject) => {
     const unhook = () => {

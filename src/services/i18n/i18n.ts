@@ -18,30 +18,30 @@ void i18n.use(initReactI18next).init({
   resources: {
     cs: {
       common: require("@/translations/cs/common.json"),
-      oni: require("@/translations/cs/oni.json")
+      oni: require("@/translations/cs/oni.json"),
     },
     en: {
       common: require("@/translations/en/common.json"),
-      oni: require("@/translations/en/oni.json")
+      oni: require("@/translations/en/oni.json"),
     },
     es: {
       common: require("@/translations/es/common.json"),
-      oni: require("@/translations/es/oni.json")
+      oni: require("@/translations/es/oni.json"),
     },
     ru: {
-      common: require("@/translations/ru/common.json")
+      common: require("@/translations/ru/common.json"),
     },
     zh: {
       common: require("@/translations/zh/common.json"),
-      oni: require("@/translations/zh/oni.json")
-    }
+      oni: require("@/translations/zh/oni.json"),
+    },
   },
 
   debug: !isProd,
 
   interpolation: {
-    escapeValue: false // not needed for react!!
-  }
+    escapeValue: false, // not needed for react!!
+  },
 });
 
 export default i18n;

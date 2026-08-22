@@ -5,5 +5,5 @@ import offlineSwitchCompletedReducer from "./offline-switch-completed";
 
 export default reduceReducers(
   offlineProbeCompletedReducer,
-  offlineSwitchCompletedReducer
+  offlineSwitchCompletedReducer,
 );

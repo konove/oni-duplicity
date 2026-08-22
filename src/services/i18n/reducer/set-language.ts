@@ -4,14 +4,14 @@ import { I18NState, defaultI18NState } from "../state";
 
 import {
   ACTION_SET_LANGUAGE,
-  SetLanguageAction
+  SetLanguageAction,
 } from "../actions/set-language";
 
 import i18n from "../i18n";
 
 export default function setLanguageReducer(
   state: I18NState = defaultI18NState,
-  action: Action
+  action: Action,
 ): I18NState {
   if (action.type !== ACTION_SET_LANGUAGE) {
     return state;
@@ -25,6 +25,6 @@ export default function setLanguageReducer(
 
   return {
     ...state,
-    language: lang
+    language: lang,
   };
 }

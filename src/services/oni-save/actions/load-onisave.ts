@@ -7,7 +7,7 @@ export const loadOniSave = (file: File, bypassVersionCheck = false) => ({
 });
 export type LoadOniSaveAction = ReturnType<typeof loadOniSave>;
 export function isLoadOniSaveAction(
-  action: UnknownAction
+  action: UnknownAction,
 ): action is LoadOniSaveAction {
   return action.type === ACTION_ONISAVE_LOAD;
 }

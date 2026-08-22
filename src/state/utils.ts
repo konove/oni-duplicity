@@ -5,7 +5,7 @@ import { AppState } from "@/state";
 
 export type StructuredStateProps<
   TSelectors extends Record<string, Selector<AppState, TOwnProps, any>>,
-  TOwnProps = {}
+  TOwnProps = {},
 > = { [K in keyof TSelectors]: ReturnType<TSelectors[K]> };
 
 /**
@@ -17,9 +17,9 @@ export type StructuredStateProps<
  * and generate the state props from its return types.
  */
 export function createStructuredSelector<
-  TSelectors extends Record<string, Selector<AppState, any, any>>
+  TSelectors extends Record<string, Selector<AppState, any, any>>,
 >(
-  selectors: TSelectors
+  selectors: TSelectors,
 ): (state: AppState) => StructuredStateProps<TSelectors> {
   return createSS(selectors as any) as any;
 }

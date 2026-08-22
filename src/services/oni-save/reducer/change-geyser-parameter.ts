@@ -7,13 +7,13 @@ import {
   replaceGameObject,
   changeStateBehaviorData,
   requireGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 import { SaveGame, GeyserBehavior } from "oni-save-parser";
 
 export default function changeGeyserParameterReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isChangeGeyserParameterAction(action)) {
     return state;
@@ -21,8 +21,8 @@ export default function changeGeyserParameterReducer(
 
   const { gameObjectId, parameter, value } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
-    changeGeyserParameter(saveGame, gameObjectId, parameter, value)
+  return tryModifySaveGame(state, (saveGame) =>
+    changeGeyserParameter(saveGame, gameObjectId, parameter, value),
   );
 }
 
@@ -30,20 +30,20 @@ function changeGeyserParameter(
   saveGame: SaveGame,
   gameObjectId: number,
   parameter: string,
-  value: any
+  value: any,
 ) {
   let gameObject = requireGameObject(saveGame, gameObjectId);
   gameObject = changeStateBehaviorData(
     gameObject,
     GeyserBehavior,
     "templateData",
-    templateData => ({
+    (templateData) => ({
       ...templateData,
       configuration: {
         ...templateData.configuration!,
-        [parameter]: value
-      }
-    })
+        [parameter]: value,
+      },
+    }),
   );
 
   saveGame = replaceGameObject(saveGame, gameObject);

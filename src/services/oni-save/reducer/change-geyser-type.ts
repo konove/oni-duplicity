@@ -10,12 +10,12 @@ import {
   removeGameObject,
   changeStateBehaviorData,
   requireGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 
 export default function changeGeyserTypeReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isChangeGeyserTypeAction(action)) {
     return state;
@@ -23,15 +23,15 @@ export default function changeGeyserTypeReducer(
 
   const { gameObjectId, geyserType } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
-    changeGeyserType(saveGame, gameObjectId, geyserType)
+  return tryModifySaveGame(state, (saveGame) =>
+    changeGeyserType(saveGame, gameObjectId, geyserType),
   );
 }
 
 function changeGeyserType(
   saveGame: SaveGame,
   gameObjectId: number,
-  geyserType: string
+  geyserType: string,
 ): SaveGame {
   let gameObject = requireGameObject(saveGame, gameObjectId);
 
@@ -39,13 +39,13 @@ function changeGeyserType(
     gameObject,
     GeyserBehavior,
     "templateData",
-    templateData => ({
+    (templateData) => ({
       ...templateData,
       configuration: {
         ...templateData.configuration!,
-        typeId: HashedString(geyserType)
-      }
-    })
+        typeId: HashedString(geyserType),
+      },
+    }),
   );
 
   saveGame = removeGameObject(saveGame, gameObjectId);

@@ -17,8 +17,8 @@ export interface ImportWarningDialogProps {
 }
 const styles = createStyles({
   description: {
-    whiteSpace: "pre-line"
-  }
+    whiteSpace: "pre-line",
+  },
 });
 
 type Props = ImportWarningDialogProps & WithStyles<typeof styles>;
@@ -26,7 +26,7 @@ const ImportWarningDialog: React.FC<Props> = ({
   classes,
   isOpen,
   onConfirm,
-  onCancel
+  onCancel,
 }) => (
   <Dialog open={isOpen}>
     <DialogTitle>

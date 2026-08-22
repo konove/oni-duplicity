@@ -5,7 +5,7 @@ import { isLoadOniSaveAction } from "../actions/load-onisave";
 
 export default function loadExampleSaveReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isLoadOniSaveAction(action)) {
     return state;

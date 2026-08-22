@@ -6,7 +6,7 @@ export type CommitTextFieldProps = TextFieldProps & {
   onCommit?(value: string): void;
 };
 
-const CommitTextField: React.FC<CommitTextFieldProps> = props => {
+const CommitTextField: React.FC<CommitTextFieldProps> = (props) => {
   const {
     onCommit,
     onChange: propsOnChange,
@@ -34,7 +34,7 @@ const CommitTextField: React.FC<CommitTextFieldProps> = props => {
 
       setValue(e.target.value);
     },
-    [propsOnChange]
+    [propsOnChange],
   );
 
   const onKeyPress = React.useCallback(
@@ -47,7 +47,7 @@ const CommitTextField: React.FC<CommitTextFieldProps> = props => {
         commit();
       }
     },
-    [propsOnKeyPress, commit]
+    [propsOnKeyPress, commit],
   );
 
   const onBlur = React.useCallback(
@@ -58,7 +58,7 @@ const CommitTextField: React.FC<CommitTextFieldProps> = props => {
 
       commit();
     },
-    [propsOnBlur, commit]
+    [propsOnBlur, commit],
   );
 
   // Hold the latest commit in a ref so the unmount effect can call it without

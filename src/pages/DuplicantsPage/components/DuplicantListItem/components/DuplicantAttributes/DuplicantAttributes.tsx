@@ -1,12 +1,7 @@
 import * as React from "react";
 import classnames from "classnames";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import Attribute from "./components/Attribute";
 
@@ -26,12 +21,12 @@ const styles = (theme: Theme) =>
       // Negate via spacing's own argument: since MUI v5 spacing() returns a
       // string ("4px"), negating the result yields NaN.
       marginLeft: theme.spacing(-0.5),
-      marginRight: theme.spacing(-0.5)
+      marginRight: theme.spacing(-0.5),
     },
     item: {
       marginLeft: theme.spacing(0.5),
-      marginRight: theme.spacing(0.5)
-    }
+      marginRight: theme.spacing(0.5),
+    },
   });
 
 type Props = DuplicantAttributesProps & WithStyles<typeof styles>;
@@ -39,7 +34,7 @@ type Props = DuplicantAttributesProps & WithStyles<typeof styles>;
 const DuplicantAttributes: React.FC<Props> = ({
   className,
   classes,
-  gameObjectId
+  gameObjectId,
 }) => (
   <div className={classnames(className, classes.root)}>
     <Attribute gameObjectId={gameObjectId} attributeId="Athletics" />

@@ -5,12 +5,12 @@ import { OniSaveState, defaultOniSaveState, BehaviorCopyData } from "../state";
 import { isCopyBehaviorsAction } from "../actions/copy-behaviors";
 import {
   gameObjectsByIdSelector,
-  gameObjectTypesByIdSelector
+  gameObjectTypesByIdSelector,
 } from "../selectors/game-objects";
 
 export default function copyBehaviorsReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isCopyBehaviorsAction(action)) {
     return state;
@@ -38,7 +38,7 @@ export default function copyBehaviorsReducer(
     }
     copyBehaviors[behaviorName] = {
       templateData: behavior.templateData,
-      extraData: behavior.extraData
+      extraData: behavior.extraData,
     };
   }
 
@@ -46,7 +46,7 @@ export default function copyBehaviorsReducer(
     ...state,
     copyPasteData: {
       gameObjectType,
-      behaviors: copyBehaviors
-    }
+      behaviors: copyBehaviors,
+    },
   };
 }

@@ -7,7 +7,7 @@
  */
 export function shouldNavigate(
   event: React.MouseEvent<HTMLElement>,
-  target?: string
+  target?: string,
 ): boolean {
   return (
     !event.defaultPrevented &&

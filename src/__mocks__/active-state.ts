@@ -11,8 +11,8 @@ const state: AppState = {
     oniSave: {
       ...defaultAppState.services.oniSave,
       loadingStatus: LoadingStatus.Ready,
-      saveGame
-    }
-  }
+      saveGame,
+    },
+  },
 };
 export default state;

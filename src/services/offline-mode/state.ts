@@ -5,7 +5,7 @@ export interface OfflineModeState {
 
 const _defaultState: OfflineModeState = {
   supported: false,
-  enabled: false
+  enabled: false,
 };
 
 export const defaultOfflineModeState = Object.freeze(_defaultState);

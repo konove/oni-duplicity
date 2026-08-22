@@ -11,8 +11,8 @@ import DuplicantList from "./components/DuplicantList";
 
 const useStyles = makeStyles({
   duplicantList: {
-    overflow: "auto"
-  }
+    overflow: "auto",
+  },
 });
 
 type Props = WithTranslation;

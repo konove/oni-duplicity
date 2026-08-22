@@ -8,18 +8,18 @@ export interface CopyMenuItemInputProps {
   gameObjectId: number;
 }
 
-const mapDispatchToProps = function(
+const mapDispatchToProps = function (
   dispatch: Dispatch,
-  props: CopyMenuItemInputProps
+  props: CopyMenuItemInputProps,
 ) {
   return {
     onCopyBehaviors: (behaviors: string[]) =>
-      dispatch(copyBehaviors(props.gameObjectId, behaviors))
+      dispatch(copyBehaviors(props.gameObjectId, behaviors)),
   };
 };
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 export default connect<{}, DispatchProps, CopyMenuItemInputProps, AppState>(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 );

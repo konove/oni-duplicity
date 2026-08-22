@@ -18,7 +18,7 @@ describe("modifyBehaviorPathReducer", () => {
         1,
         KPrefabIDBehavior,
         ["templateData", "InstanceID"],
-        1
+        1,
       );
 
       const resultState = modifyBehaviorPathReducer(state, action);
@@ -33,9 +33,9 @@ describe("modifyBehaviorPathReducer", () => {
           1,
           KPrefabIDBehavior,
           ["templateData", "InstanceID"],
-          1
+          1,
         ),
-        type: "another-action"
+        type: "another-action",
       };
 
       const resultState = modifyBehaviorPathReducer(state, action);
@@ -54,7 +54,7 @@ describe("modifyBehaviorPathReducer", () => {
       mockGameObjectId,
       behaviorName,
       behaviorPath as any,
-      newValue
+      newValue,
     );
 
     let mockSaveGame: DeepPartial<SaveGame>;
@@ -69,34 +69,34 @@ describe("modifyBehaviorPathReducer", () => {
                 behaviors: [
                   createBehavior(KPrefabIDBehavior, {
                     templateData: {
-                      InstanceID: mockGameObjectId
-                    }
+                      InstanceID: mockGameObjectId,
+                    },
                   }),
                   {
                     name: behaviorName,
                     templateData: {
-                      foo: 1
-                    } as any
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+                      foo: 1,
+                    } as any,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       };
       state = {
         ...defaultOniSaveState,
         loadingStatus: LoadingStatus.Ready,
-        saveGame: mockSaveGame as SaveGame
+        saveGame: mockSaveGame as SaveGame,
       };
     });
 
-    it("sets a template value", function() {
+    it("sets a template value", function () {
       const resultState = modifyBehaviorPathReducer(state, action);
 
       const gameObject = getGameObjectById(
         resultState.saveGame!,
-        mockGameObjectId
+        mockGameObjectId,
       );
       const behavior = getBehavior(gameObject!, behaviorName)!;
 

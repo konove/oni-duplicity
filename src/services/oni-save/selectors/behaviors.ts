@@ -16,7 +16,7 @@ const behaviorSelectorCache: Record<
   ParametricSelector<AppState, BehaviorSelectorProps, any>
 > = {};
 export function getBehaviorSelector<T extends GameObjectBehavior>(
-  behaviorName: BehaviorName<T>
+  behaviorName: BehaviorName<T>,
 ): ParametricSelector<AppState, BehaviorSelectorProps, T | null> {
   if (!has(behaviorSelectorCache, behaviorName)) {
     behaviorSelectorCache[behaviorName] = createCachedSelector(
@@ -29,7 +29,7 @@ export function getBehaviorSelector<T extends GameObjectBehavior>(
         }
 
         return getBehavior(gameObject, behaviorName);
-      }
+      },
     )(gameObjectIdSelector);
   }
 

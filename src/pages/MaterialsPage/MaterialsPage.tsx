@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import PageContainer from "@/components/PageContainer";
 
@@ -17,8 +12,8 @@ import MaterialsTable from "./components/MaterialsTable";
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      padding: theme.spacing()
-    }
+      padding: theme.spacing(),
+    },
   });
 
 type Props = WithStyles<typeof styles> & WithTranslation;

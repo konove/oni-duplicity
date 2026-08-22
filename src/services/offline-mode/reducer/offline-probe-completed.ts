@@ -5,7 +5,7 @@ import { isOfflineProbeCompletedAction } from "../actions/offline-probe-complete
 
 export default function offlineProbeCompletedReducer(
   state: OfflineModeState = defaultOfflineModeState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OfflineModeState {
   if (!isOfflineProbeCompletedAction(action)) {
     return state;
@@ -15,6 +15,6 @@ export default function offlineProbeCompletedReducer(
   return {
     ...state,
     enabled: offlineEnabled,
-    supported: offlineSupported
+    supported: offlineSupported,
   };
 }

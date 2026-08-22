@@ -10,7 +10,7 @@ import { tryModifySaveGame } from "./utils";
 
 export default function modifyRawReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isModifyRawAction(action)) {
     return state;
@@ -18,8 +18,8 @@ export default function modifyRawReducer(
 
   const { path, data } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
-    performModifyRaw(saveGame, path, data)
+  return tryModifySaveGame(state, (saveGame) =>
+    performModifyRaw(saveGame, path, data),
   );
 }
 

@@ -19,19 +19,19 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
   tree: {
     width: "500px",
-    overflow: "auto"
+    overflow: "auto",
   },
   content: {
     display: "flex",
     flexDirection: "column",
     width: "100%",
     height: "100%",
-    margin: theme.spacing()
-  }
+    margin: theme.spacing(),
+  },
 }));
 
 const RawEditorPage: React.FC<RawEditorPageProps> = ({ saveGame }) => {

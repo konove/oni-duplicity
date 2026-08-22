@@ -11,13 +11,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     display: "flex",
     width: "100%",
-    height: "100%"
+    height: "100%",
   },
   text: {
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: theme.spacing()
-  }
+    marginTop: theme.spacing(),
+  },
 }));
 
 type Props = WithTranslation;

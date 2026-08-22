@@ -19,7 +19,7 @@ const styles = createStyles({
   portraitContainer: {
     position: "relative",
     width: 110,
-    height: 100
+    height: 100,
   },
   portrait: {
     position: "absolute",
@@ -28,11 +28,11 @@ const styles = createStyles({
     width: 250,
     height: 250,
     transform: "scale(.4)",
-    transformOrigin: "top left"
+    transformOrigin: "top left",
   },
   clickable: {
-    cursor: "pointer"
-  }
+    cursor: "pointer",
+  },
 });
 
 type Props = HeadPortraitProps & WithStyles<typeof styles>;
@@ -44,7 +44,7 @@ const HeadPortrait: React.FC<Props> = ({
   headOrdinal,
   eyesOrdinal,
   clickable,
-  onClick
+  onClick,
 }) => (
   <div
     className={classnames(className, classes.portraitContainer)}

@@ -11,7 +11,7 @@ import {
 
 export default function receiveOniSaveReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isReceiveOniSaveAction(action)) {
     return state;

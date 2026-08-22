@@ -12,17 +12,14 @@ function mapStateToProps(state: AppState, props: EditorProps) {
   const saveGame = saveGameSelector(state);
   const value = get(saveGame, props.path);
   return {
-    value
+    value,
   };
 }
 
 function mapDispatchToProps(dispatch: Dispatch, props: EditorProps) {
   return {
-    onValueChanged: (value: any) => dispatch(modifyRaw(props.path, value))
+    onValueChanged: (value: any) => dispatch(modifyRaw(props.path, value)),
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-);
+export default connect(mapStateToProps, mapDispatchToProps);

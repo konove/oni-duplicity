@@ -10,15 +10,15 @@ export interface CloneMenuItemInputProps {
 
 function mapDispatchToProps(
   dispatch: Dispatch,
-  props: CloneMenuItemInputProps
+  props: CloneMenuItemInputProps,
 ) {
   return {
-    onCloneDuplicant: () => dispatch(cloneDuplicant(props.gameObjectId))
+    onCloneDuplicant: () => dispatch(cloneDuplicant(props.gameObjectId)),
   };
 }
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 export default connect<{}, DispatchProps, CloneMenuItemInputProps, AppState>(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 );

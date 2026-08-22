@@ -10,16 +10,16 @@ export interface ImportMenuItemInputProps {
 
 const mapDispatchToProps = function (
   dispatch: Dispatch<UnknownAction>,
-  props: ImportMenuItemInputProps
+  props: ImportMenuItemInputProps,
 ) {
   return {
     onImportDuplicant: (file: File) =>
-      dispatch(importBehaviors(props.gameObjectId, file))
+      dispatch(importBehaviors(props.gameObjectId, file)),
   };
 };
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 export default connect<{}, DispatchProps, ImportMenuItemInputProps, AppState>(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 );

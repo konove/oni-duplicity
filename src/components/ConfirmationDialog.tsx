@@ -26,7 +26,7 @@ const ConfirmationDialog: React.FC<Props> = ({
   message,
   onConfirm,
   onCancel,
-  children
+  children,
 }) => {
   const [isOpen, setOpen] = React.useState(false);
 

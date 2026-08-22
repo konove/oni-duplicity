@@ -20,7 +20,7 @@ export function useDeleteMaterials() {
     (materialType?: SimHashName) => {
       dispatch(deleteLooseMaterial(materialType));
     },
-    [dispatch]
+    [dispatch],
   );
   return deleteMaterial;
 }

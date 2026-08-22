@@ -1,11 +1,6 @@
 import * as React from "react";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -19,8 +14,8 @@ import Language from "./components/Language";
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      padding: theme.spacing()
-    }
+      padding: theme.spacing(),
+    },
   });
 
 type Props = WithStyles<typeof styles>;
@@ -31,7 +26,7 @@ const SettingsPage: React.FC<Props> = ({ classes }) => {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setEnabled(e.target.checked);
     },
-    [setEnabled]
+    [setEnabled],
   );
 
   return (

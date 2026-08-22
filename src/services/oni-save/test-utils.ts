@@ -7,10 +7,10 @@ import { BehaviorName, GameObjectBehavior } from "oni-save-parser";
  */
 export function createBehavior<T extends GameObjectBehavior>(
   behaviorName: BehaviorName<T>,
-  data: DeepPartial<T>
+  data: DeepPartial<T>,
 ): DeepPartial<T> {
   return {
     name: behaviorName,
-    ...data
+    ...data,
   };
 }

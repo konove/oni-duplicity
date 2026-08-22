@@ -8,13 +8,13 @@ import {
   tryModifySaveGame,
   setArrayDict,
   changeStateBehaviorData,
-  replaceGameObject
+  replaceGameObject,
 } from "./utils";
 import { getGameObjectGroup, getBehavior } from "oni-save-parser";
 
 export default function modifyDifficultyReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isModifyDifficultyAction(action)) {
     return state;
@@ -22,7 +22,7 @@ export default function modifyDifficultyReducer(
 
   const { difficultyType, value } = action.payload;
 
-  state = tryModifySaveGame(state, saveGame => ({
+  state = tryModifySaveGame(state, (saveGame) => ({
     ...saveGame,
     gameData: {
       ...saveGame.gameData,
@@ -31,17 +31,17 @@ export default function modifyDifficultyReducer(
         CurrentQualityLevelsBySetting: setArrayDict(
           saveGame.gameData.customGameSettings.CurrentQualityLevelsBySetting,
           difficultyType,
-          value
-        ) as any
-      }
-    }
+          value,
+        ) as any,
+      },
+    },
   }));
 
   if (difficultyType === "SandboxMode") {
-    state = tryModifySaveGame(state, saveGame => {
+    state = tryModifySaveGame(state, (saveGame) => {
       const saveGameGroup = getGameObjectGroup(
         saveGame.gameObjects,
-        "SaveGame"
+        "SaveGame",
       );
       if (!saveGameGroup || saveGameGroup.gameObjects.length !== 1) {
         return saveGame;
@@ -56,8 +56,8 @@ export default function modifyDifficultyReducer(
         "SaveGame",
         "templateData",
         {
-          sandboxEnabled: value === "Enabled"
-        }
+          sandboxEnabled: value === "Enabled",
+        },
       );
 
       saveGame = replaceGameObject(saveGame, saveGameObj);

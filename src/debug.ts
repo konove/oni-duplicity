@@ -4,7 +4,7 @@ import store from "@/store/store";
 
 import {
   receiveOniSaveSuccess,
-  receiveOniSaveError
+  receiveOniSaveError,
 } from "@/services/oni-save/actions/receive-onisave";
 import { LoadingStatus } from "@/services/oni-save/state";
 
@@ -17,8 +17,8 @@ if (!isProd) {
     store.dispatch(
       receiveOniSaveError(
         new Error("This is a test error"),
-        LoadingStatus.Loading
-      )
+        LoadingStatus.Loading,
+      ),
     );
   };
 }

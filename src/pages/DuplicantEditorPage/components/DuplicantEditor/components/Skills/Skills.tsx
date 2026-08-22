@@ -1,11 +1,6 @@
 import * as React from "react";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import Experience from "./components/Experience";
 import Masteries from "./components/Masteries";
@@ -19,8 +14,8 @@ const styles = (theme: Theme) =>
     root: {
       display: "flex",
       flexDirection: "column",
-      padding: theme.spacing()
-    }
+      padding: theme.spacing(),
+    },
   });
 
 type Props = SkillsProps & WithStyles<typeof styles>;

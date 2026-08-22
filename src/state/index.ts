@@ -2,7 +2,7 @@ import { I18NState, defaultI18NState } from "@/services/i18n/state";
 import { OniSaveState, defaultOniSaveState } from "@/services/oni-save/state";
 import {
   OfflineModeState,
-  defaultOfflineModeState
+  defaultOfflineModeState,
 } from "@/services/offline-mode/state";
 
 export * from "./utils";
@@ -21,7 +21,7 @@ export const defaultAppState: Readonly<AppState> = {
   services: {
     i18n: defaultI18NState,
     oniSave: defaultOniSaveState,
-    offlineMode: defaultOfflineModeState
-  }
+    offlineMode: defaultOfflineModeState,
+  },
 };
 Object.freeze(defaultAppState);

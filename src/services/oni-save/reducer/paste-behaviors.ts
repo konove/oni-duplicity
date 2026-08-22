@@ -11,12 +11,12 @@ import {
   requireGameObject,
   changeStateBehaviorData,
   replaceGameObject,
-  tryModifySaveGame
+  tryModifySaveGame,
 } from "./utils";
 
 export default function pasteBehaviorsReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isPasteBehaviorsAction(action)) {
     return state;
@@ -38,15 +38,15 @@ export default function pasteBehaviorsReducer(
     return state;
   }
 
-  return tryModifySaveGame(state, saveGame =>
-    performPasteBehaviors(saveGame, gameObjectId, behaviors)
+  return tryModifySaveGame(state, (saveGame) =>
+    performPasteBehaviors(saveGame, gameObjectId, behaviors),
   );
 }
 
 function performPasteBehaviors(
   saveGame: SaveGame,
   gameObjectId: number,
-  behaviors: Record<string, BehaviorCopyData>
+  behaviors: Record<string, BehaviorCopyData>,
 ): SaveGame {
   let gameObject = requireGameObject(saveGame, gameObjectId);
 
@@ -59,7 +59,7 @@ function performPasteBehaviors(
     gameObject = copyBehavior(
       gameObject,
       behaviorName,
-      behaviors[behaviorName]
+      behaviors[behaviorName],
     );
   }
 
@@ -70,7 +70,7 @@ function performPasteBehaviors(
 function copyBehavior(
   gameObject: GameObject,
   behaviorName: string,
-  behavior: BehaviorCopyData
+  behavior: BehaviorCopyData,
 ): GameObject {
   const { templateData, extraData } = behavior;
 
@@ -79,7 +79,7 @@ function copyBehavior(
       gameObject,
       behaviorName,
       "templateData",
-      templateData
+      templateData,
     );
   }
 
@@ -88,7 +88,7 @@ function copyBehavior(
       gameObject,
       behaviorName,
       "extraData",
-      extraData
+      extraData,
     );
   }
 

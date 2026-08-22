@@ -5,7 +5,7 @@ import { isOfflineSwitchCompletedAction } from "../actions/offline-switch-comple
 
 export default function offlineSwitchCompletedReducer(
   state: OfflineModeState = defaultOfflineModeState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OfflineModeState {
   if (!isOfflineSwitchCompletedAction(action)) {
     return state;
@@ -14,6 +14,6 @@ export default function offlineSwitchCompletedReducer(
   const { offlineEnabled } = action.payload;
   return {
     ...state,
-    enabled: offlineEnabled
+    enabled: offlineEnabled,
   };
 }

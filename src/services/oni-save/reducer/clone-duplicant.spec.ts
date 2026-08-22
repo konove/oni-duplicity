@@ -3,7 +3,7 @@ import {
   MinionIdentityBehavior,
   getBehavior,
   GameObjectGroup,
-  GameObject
+  GameObject,
 } from "oni-save-parser";
 
 import mockState from "@/__mocks__/active-state";
@@ -31,7 +31,7 @@ describe("cloneDuplicantReducer", () => {
       const state = mockState.services.oniSave;
       const action = {
         ...cloneDuplicant(1),
-        type: "another-action"
+        type: "another-action",
       };
 
       const resultState = cloneDuplicantReducer(state, action);
@@ -47,7 +47,7 @@ describe("cloneDuplicantReducer", () => {
     const initialState: DeepPartial<OniSaveState> = {
       saveGame: {
         settings: {
-          nextUniqueID
+          nextUniqueID,
         },
         gameObjects: [
           {
@@ -57,20 +57,20 @@ describe("cloneDuplicantReducer", () => {
                 behaviors: [
                   createBehavior(KPrefabIDBehavior, {
                     templateData: {
-                      InstanceID: duplicantId
-                    }
+                      InstanceID: duplicantId,
+                    },
                   }),
                   createBehavior(MinionIdentityBehavior, {
                     templateData: {
-                      name: duplicantName
-                    }
-                  })
-                ]
-              }
-            ]
-          }
-        ]
-      }
+                      name: duplicantName,
+                    },
+                  }),
+                ],
+              },
+            ],
+          },
+        ],
+      },
     };
     const action = cloneDuplicant(duplicantId);
 
@@ -82,18 +82,18 @@ describe("cloneDuplicantReducer", () => {
       finalState = cloneDuplicantReducer(initialState as OniSaveState, action);
 
       minionGroup = finalState.saveGame!.gameObjects.find(
-        x => x.name === "Minion"
+        (x) => x.name === "Minion",
       )!;
 
       // Choose the duplicant with the original ID.
       //  If the original's ID is changed, cloneMinion will be null and fail tests
       originalMinion = minionGroup.gameObjects.find(
-        x => getGameObjectId(x) === duplicantId
+        (x) => getGameObjectId(x) === duplicantId,
       );
 
       // Choose the duplicant that has a differing ID.
       clonedMinion = minionGroup.gameObjects.find(
-        x => getGameObjectId(x) !== duplicantId
+        (x) => getGameObjectId(x) !== duplicantId,
       );
     });
 
@@ -121,10 +121,10 @@ describe("cloneDuplicantReducer", () => {
 
       const identityBehavior = getBehavior(
         clonedMinion!,
-        MinionIdentityBehavior
+        MinionIdentityBehavior,
       );
       expect(identityBehavior!.templateData.name).toEqual(
-        `Clone of ${duplicantName}`
+        `Clone of ${duplicantName}`,
       );
     });
   });

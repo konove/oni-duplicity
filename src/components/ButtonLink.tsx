@@ -41,7 +41,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
         void navigate(to);
       }
     },
-    [onClick, target, navigate, to]
+    [onClick, target, navigate, to],
   );
 
   return (

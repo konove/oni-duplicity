@@ -15,14 +15,18 @@ export interface BreadcrumbPathProps {
 const BreadcrumbPath: React.FC<BreadcrumbPathProps> = ({
   path,
   saveGame,
-  onChangePath
+  onChangePath,
 }) => {
   return (
     <Breadcrumbs>
       {path.map((_, i) => {
         const segmentPath = path.slice(0, i + 1);
         return (
-          <Typography key={i} color="inherit" onClick={() => onChangePath(segmentPath)}>
+          <Typography
+            key={i}
+            color="inherit"
+            onClick={() => onChangePath(segmentPath)}
+          >
             {getSegmentName(saveGame, segmentPath)}
           </Typography>
         );

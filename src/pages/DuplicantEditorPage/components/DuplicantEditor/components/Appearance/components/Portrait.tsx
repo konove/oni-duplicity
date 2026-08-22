@@ -7,7 +7,7 @@ import {
   Hair,
   Head,
   Eyes,
-  Body
+  Body,
 } from "@/components/duplicant";
 
 import { createStyles, withStyles, WithStyles } from "@/styles";
@@ -26,7 +26,7 @@ const styles = createStyles({
   portraitContainer: {
     position: "relative",
     width: 110,
-    height: 140
+    height: 140,
   },
   portrait: {
     position: "absolute",
@@ -35,11 +35,11 @@ const styles = createStyles({
     width: 250,
     height: 250,
     transform: "scale(.4)",
-    transformOrigin: "top left"
+    transformOrigin: "top left",
   },
   clickable: {
-    cursor: "pointer"
-  }
+    cursor: "pointer",
+  },
 });
 
 type Props = PortraitProps & WithStyles<typeof styles>;
@@ -52,7 +52,7 @@ const Portrait: React.FC<Props> = ({
   eyesOrdinal,
   bodyOrdinal,
   clickable,
-  onClick
+  onClick,
 }) => (
   <div
     className={classnames(className, classes.portraitContainer)}

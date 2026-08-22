@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation, Trans } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -39,39 +34,39 @@ const styles = (theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      height: "100%"
+      height: "100%",
     },
     divider: {
       marginTop: theme.spacing(),
-      marginBottom: theme.spacing()
+      marginBottom: theme.spacing(),
     },
     nameRow: {
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
       flexGrow: 0,
-      flexShrink: 0
+      flexShrink: 0,
     },
     nameRowMenu: {
-      marginLeft: "auto"
+      marginLeft: "auto",
     },
     portraitRow: {
       display: "flex",
       flexDirection: "row",
       marginBottom: theme.spacing(),
       flexGrow: 0,
-      flexShrink: 0
+      flexShrink: 0,
     },
     portraitRowColumn: {
-      marginRight: theme.spacing()
+      marginRight: theme.spacing(),
     },
     portraitRowTweakables: {
-      width: "100%"
+      width: "100%",
     },
     row: {
       marginBottom: theme.spacing(),
       flexGrow: 0,
-      flexShrink: 0
+      flexShrink: 0,
     },
     tabRow: {
       display: "flex",
@@ -79,13 +74,13 @@ const styles = (theme: Theme) =>
       // See DuplicantAttributes: spacing() returns a string since MUI v5, so
       // the negation has to go through the argument.
       marginLeft: theme.spacing(-1),
-      height: "100%"
+      height: "100%",
     },
     tabContent: {
       width: "100%",
       height: "100%",
-      overflow: "auto"
-    }
+      overflow: "auto",
+    },
   });
 
 type Props = DuplicantEditorProps & WithTranslation & WithStyles<typeof styles>;
@@ -136,27 +131,27 @@ const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => {
             >
               <Tab
                 label={t("duplicant_attribute.noun_titlecase_plural", {
-                  defaultValue: "Attributes"
+                  defaultValue: "Attributes",
                 })}
               />
               <Tab
                 label={t("duplicant_appearance.noun_titlecase", {
-                  defaultValue: "Appearance"
+                  defaultValue: "Appearance",
                 })}
               />
               <Tab
                 label={t("duplicant_health.noun_titlecase", {
-                  defaultValue: "Health"
+                  defaultValue: "Health",
                 })}
               />
               <Tab
                 label={t("duplicant_skills.noun_titlecase_plural", {
-                  defaultValue: "Skills"
+                  defaultValue: "Skills",
                 })}
               />
               <Tab
                 label={t("duplicant_effect.noun_titlecase", {
-                  defaultValue: "Effects"
+                  defaultValue: "Effects",
                 })}
               />
             </Tabs>

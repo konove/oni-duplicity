@@ -4,22 +4,22 @@ import { OniSaveState, defaultOniSaveState } from "../state";
 
 import {
   isImportWarnChecksumAction,
-  isImportConfirmAction
+  isImportConfirmAction,
 } from "../actions/import-behaviors";
 
 export default function importWarnChecksumReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (isImportWarnChecksumAction(action)) {
     return {
       ...state,
-      warnInputChecksum: true
+      warnInputChecksum: true,
     };
   } else if (isImportConfirmAction(action)) {
     return {
       ...state,
-      warnInputChecksum: false
+      warnInputChecksum: false,
     };
   }
 

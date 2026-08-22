@@ -9,12 +9,12 @@ import {
   requireGameObject,
   changeStateBehaviorData,
   set,
-  replaceGameObject
+  replaceGameObject,
 } from "./utils";
 
 export default function modifyBehaviorPathReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isModifyBehaviorPathAction(action)) {
     return state;
@@ -22,14 +22,14 @@ export default function modifyBehaviorPathReducer(
 
   const { gameObjectId, behaviorName, behaviorPath, value } = action.payload;
 
-  return tryModifySaveGame(state, saveGame =>
+  return tryModifySaveGame(state, (saveGame) =>
     performModifyBehaviorPath(
       saveGame,
       gameObjectId,
       behaviorName,
       behaviorPath,
-      value
-    )
+      value,
+    ),
   );
 }
 
@@ -38,7 +38,7 @@ function performModifyBehaviorPath(
   gameObjectId: number,
   behaviorName: string,
   behaviorPath: readonly string[],
-  value: any
+  value: any,
 ): SaveGame {
   let gameObject = requireGameObject(saveGame, gameObjectId);
 
@@ -46,7 +46,7 @@ function performModifyBehaviorPath(
     gameObject,
     behaviorName,
     behaviorPath[0] as any,
-    data => set(data, behaviorPath.slice(1), value)
+    (data) => set(data, behaviorPath.slice(1), value),
   );
 
   saveGame = replaceGameObject(saveGame, gameObject);

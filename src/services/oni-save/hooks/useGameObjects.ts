@@ -19,8 +19,8 @@ export default function useGameObjects(gameObjectType: string | string[]) {
   }
 
   return gameObjects
-    .map(x => getBehavior(x, KPrefabIDBehavior))
+    .map((x) => getBehavior(x, KPrefabIDBehavior))
     .filter(isNotNull)
-    .map(x => x.templateData.InstanceID)
+    .map((x) => x.templateData.InstanceID)
     .sort();
 }

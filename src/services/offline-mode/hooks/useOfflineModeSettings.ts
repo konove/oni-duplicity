@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setOfflineEnabled } from "../actions/set-offline-enabled";
 import {
   isOfflineModeEnabled as isOfflineModeEnabledSelector,
-  isOfflineModeSupported as isOfflineModeSupportedSelector
+  isOfflineModeSupported as isOfflineModeSupportedSelector,
 } from "../selectors";
 
 export interface UseOfflineModeSettings {
@@ -20,12 +20,12 @@ export default function useOfflineModeSettings(): UseOfflineModeSettings {
     (enabled: boolean) => {
       dispatch(setOfflineEnabled(enabled));
     },
-    [dispatch]
+    [dispatch],
   );
 
   return {
     enabled,
     supported,
-    setEnabled
+    setEnabled,
   };
 }

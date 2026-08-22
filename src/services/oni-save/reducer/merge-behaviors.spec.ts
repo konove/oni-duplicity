@@ -24,9 +24,9 @@ describe("mergeBehaviorsReducer", () => {
       const state = mockState.services.oniSave;
       const action = {
         ...mergeBehaviors(1, {
-          [KPrefabIDBehavior]: { templateData: { InstanceID: 1 } }
+          [KPrefabIDBehavior]: { templateData: { InstanceID: 1 } },
         }),
-        type: "another-action"
+        type: "another-action",
       };
 
       const resultState = mergeBehaviorsReducer(state, action);
@@ -49,24 +49,24 @@ describe("mergeBehaviorsReducer", () => {
                 behaviors: [
                   createBehavior(KPrefabIDBehavior, {
                     templateData: {
-                      InstanceID: mockObjectId
-                    }
+                      InstanceID: mockObjectId,
+                    },
                   }),
                   createBehavior(AITraitsBehavior, {
                     templateData: {
-                      TraitIds: ["Trait1", "Trait2"]
-                    }
-                  })
-                ]
-              }
-            ]
-          }
-        ]
+                      TraitIds: ["Trait1", "Trait2"],
+                    },
+                  }),
+                ],
+              },
+            ],
+          },
+        ],
       };
       state = {
         ...defaultOniSaveState,
         loadingStatus: LoadingStatus.Ready,
-        saveGame: mockSaveGame as SaveGame
+        saveGame: mockSaveGame as SaveGame,
       };
     });
 
@@ -75,9 +75,9 @@ describe("mergeBehaviorsReducer", () => {
       const action = mergeBehaviors(mockObjectId, {
         [AITraitsBehavior]: {
           templateData: {
-            TraitIds: newTraits
-          }
-        }
+            TraitIds: newTraits,
+          },
+        },
       });
 
       const newState = mergeBehaviorsReducer(state, action);
@@ -87,9 +87,9 @@ describe("mergeBehaviorsReducer", () => {
       expect(gameObject.behaviors).toContainEqual(
         createBehavior(AITraitsBehavior, {
           templateData: {
-            TraitIds: newTraits
-          }
-        })
+            TraitIds: newTraits,
+          },
+        }),
       );
     });
 
@@ -98,9 +98,9 @@ describe("mergeBehaviorsReducer", () => {
       const action = mergeBehaviors(mockObjectId, {
         [AITraitsBehavior]: {
           templateData: {
-            TraitIds: newTraits
-          }
-        }
+            TraitIds: newTraits,
+          },
+        },
       });
 
       const newState = mergeBehaviorsReducer(state, action);

@@ -22,34 +22,40 @@ export interface MasteriesProps {
 
 type Props = MasteriesProps & WithTranslation;
 const Masteries: React.FC<Props> = ({ gameObjectId, t }) => {
-  const { templateData: { MasteryBySkillID }, onTemplateDataModify } = useBehavior(gameObjectId, MinionResumeBehavior);
-  const { templateData: identity } = useBehavior(gameObjectId, MinionIdentityBehavior);
+  const {
+    templateData: { MasteryBySkillID },
+    onTemplateDataModify,
+  } = useBehavior(gameObjectId, MinionResumeBehavior);
+  const { templateData: identity } = useBehavior(
+    gameObjectId,
+    MinionIdentityBehavior,
+  );
   const dlcIds = useSelector(dlcIdsSelector);
 
   const skills = availableSkills(dlcIds, identity?.model?.name);
 
   function onChangeMastery(skillName: string, value: boolean) {
-    const index = findIndex(MasteryBySkillID, x => x[0] === skillName);
+    const index = findIndex(MasteryBySkillID, (x) => x[0] === skillName);
     if (value) {
       if (index !== -1) {
         onTemplateDataModify({
           MasteryBySkillID: [
             ...MasteryBySkillID.slice(0, index),
             [skillName, true],
-            ...MasteryBySkillID.slice(index + 1)
-          ]
+            ...MasteryBySkillID.slice(index + 1),
+          ],
         });
       } else {
         onTemplateDataModify({
-          MasteryBySkillID: [...MasteryBySkillID, [skillName, true]]
+          MasteryBySkillID: [...MasteryBySkillID, [skillName, true]],
         });
       }
     } else if (index !== -1) {
       onTemplateDataModify({
         MasteryBySkillID: [
           ...MasteryBySkillID.slice(0, index),
-          ...MasteryBySkillID.slice(index + 1)
-        ]
+          ...MasteryBySkillID.slice(index + 1),
+        ],
       });
     }
   }
@@ -62,9 +68,7 @@ const Masteries: React.FC<Props> = ({ gameObjectId, t }) => {
             <Trans i18nKey="duplicant_skills.noun_titlecase">Skill</Trans>
           </TableCell>
           <TableCell>
-            <Trans i18nKey="duplicant_skills.mastery_titlecase">
-              Mastery
-                </Trans>
+            <Trans i18nKey="duplicant_skills.mastery_titlecase">Mastery</Trans>
           </TableCell>
         </TableRow>
       </TableHead>
@@ -83,11 +87,11 @@ const Masteries: React.FC<Props> = ({ gameObjectId, t }) => {
       </TableBody>
     </Table>
   );
-}
+};
 export default withTranslation()(Masteries);
 
 function getMastery(masteries: [string, boolean][], mastery: string): boolean {
-  const entry = find(masteries, x => x[0] === mastery);
+  const entry = find(masteries, (x) => x[0] === mastery);
   if (!entry) {
     return false;
   }

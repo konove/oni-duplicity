@@ -9,12 +9,7 @@ import {
 } from "oni-save-parser";
 import { merge, padStart } from "lodash";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles,
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Paper from "@mui/material/Paper";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -78,13 +73,13 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
       const hatHair = getIndexOfAccessoryType(accessories, "hat_hair");
       if (hatHair !== -1) {
         accessoryMod[hatHair] = Accessory(
-          `hat_hair_${padStart(String(ordinal), 3, "0")}`
+          `hat_hair_${padStart(String(ordinal), 3, "0")}`,
         );
       }
       const hairAlways = getIndexOfAccessoryType(accessories, "hair_always");
       if (hairAlways !== -1) {
         accessoryMod[hairAlways] = Accessory(
-          `hair_always_${padStart(String(ordinal), 3, "0")}`
+          `hair_always_${padStart(String(ordinal), 3, "0")}`,
         );
       }
     }
@@ -191,7 +186,7 @@ export default withStyles(styles)(Appearance);
 
 function getOrdinalOfType(
   accessories: Accessory[],
-  type: AccessoryType
+  type: AccessoryType,
 ): number {
   const accessory = getAccessoryOfType(accessories, type);
   if (accessory == null) {

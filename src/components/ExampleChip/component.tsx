@@ -16,7 +16,7 @@ const ExampleChip: React.FC<Props> = ({ className, isExample, t }) => (
       <Chip
         color="secondary"
         label={t("save-file.conditions.example", {
-          defaultValue: "Example"
+          defaultValue: "Example",
         })}
         title={t("save-file.conditions.example_description")}
       />

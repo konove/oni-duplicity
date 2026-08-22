@@ -8,18 +8,18 @@ export interface ExportMenuItemInputProps {
   gameObjectId: number;
 }
 
-const mapDispatchToProps = function(
+const mapDispatchToProps = function (
   dispatch: Dispatch,
-  props: ExportMenuItemInputProps
+  props: ExportMenuItemInputProps,
 ) {
   return {
     onExportBehaviors: (behaviors: string[]) =>
-      dispatch(exportBehaviors(props.gameObjectId, behaviors))
+      dispatch(exportBehaviors(props.gameObjectId, behaviors)),
   };
 };
 type DispatchProps = ReturnType<typeof mapDispatchToProps>;
 
 export default connect<{}, DispatchProps, ExportMenuItemInputProps, AppState>(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 );

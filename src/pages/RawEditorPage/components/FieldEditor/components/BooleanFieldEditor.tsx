@@ -9,12 +9,15 @@ import { UnconnectedEditorProps } from "../EditorProps";
 const BooleanFieldEditor: React.FC<UnconnectedEditorProps> = ({
   path,
   value,
-  onValueChanged
+  onValueChanged,
 }) => {
   const label = last(path)!;
-  const onChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    onValueChanged(e.target.checked)
-  }, [onValueChanged]);
+  const onChange = React.useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      onValueChanged(e.target.checked);
+    },
+    [onValueChanged],
+  );
   return (
     <FormControlLabel
       control={
@@ -26,7 +29,6 @@ const BooleanFieldEditor: React.FC<UnconnectedEditorProps> = ({
       }
       label={label}
     />
-
   );
 };
 

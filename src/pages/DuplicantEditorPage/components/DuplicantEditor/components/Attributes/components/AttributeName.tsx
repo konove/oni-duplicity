@@ -16,11 +16,11 @@ const AttributeName: React.FC<Props> = ({ className, attributeId, t }) => (
     component="span"
     variant="body1"
     title={t(`oni:DUPLICANTS.ATTRIBUTES.${attributeId}.DESC`, {
-      defaultValue: ""
+      defaultValue: "",
     })}
   >
     {t(`oni:DUPLICANTS.ATTRIBUTES.${attributeId}.NAME`, {
-      defaultValue: attributeId
+      defaultValue: attributeId,
     })}
   </Typography>
 );

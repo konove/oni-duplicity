@@ -18,7 +18,7 @@ describe("modifyBehaviorReducer", () => {
         1,
         KPrefabIDBehavior,
         BehaviorDataTarget.Template,
-        {}
+        {},
       );
 
       const resultState = modifyBehaviorReducer(state, action);
@@ -33,9 +33,9 @@ describe("modifyBehaviorReducer", () => {
           1,
           KPrefabIDBehavior,
           BehaviorDataTarget.Template,
-          {}
+          {},
         ),
-        type: "another-action"
+        type: "another-action",
       };
 
       const resultState = modifyBehaviorReducer(state, action);
@@ -47,23 +47,23 @@ describe("modifyBehaviorReducer", () => {
   describe("operational cases", () => {
     describe.each<any>([
       ["TemplateData", BehaviorDataTarget.Template, "templateData"],
-      ["ExtraData", BehaviorDataTarget.Extra, "extraData"]
+      ["ExtraData", BehaviorDataTarget.Extra, "extraData"],
     ])("%s", (_, dataTarget: BehaviorDataTarget, dataKey: string) => {
       const mockGameObjectId = 1;
       const behaviorName = "TestBehavior";
       const modifyContent = {
-        valueA: 42
+        valueA: 42,
       };
       const action = modifyBehavior(
         mockGameObjectId,
         behaviorName,
         dataTarget,
-        modifyContent
+        modifyContent,
       );
 
       const behaviorData = {
         valueA: 1,
-        valueB: 1
+        valueB: 1,
       };
 
       let mockSaveGame: DeepPartial<SaveGame>;
@@ -78,20 +78,20 @@ describe("modifyBehaviorReducer", () => {
                   behaviors: [
                     createBehavior(KPrefabIDBehavior, {
                       templateData: {
-                        InstanceID: mockGameObjectId
-                      }
+                        InstanceID: mockGameObjectId,
+                      },
                     }),
-                    { name: behaviorName, [dataKey]: behaviorData }
-                  ]
-                }
-              ]
-            }
-          ]
+                    { name: behaviorName, [dataKey]: behaviorData },
+                  ],
+                },
+              ],
+            },
+          ],
         };
         state = {
           ...defaultOniSaveState,
           loadingStatus: LoadingStatus.Ready,
-          saveGame: mockSaveGame as SaveGame
+          saveGame: mockSaveGame as SaveGame,
         };
       });
 
@@ -100,13 +100,13 @@ describe("modifyBehaviorReducer", () => {
 
         const gameObject = getGameObjectById(
           resultState.saveGame!,
-          mockGameObjectId
+          mockGameObjectId,
         );
         const behavior = getBehavior(gameObject!, behaviorName);
 
         expect((behavior as any)[dataKey]).toEqual({
           ...behaviorData,
-          ...modifyContent
+          ...modifyContent,
         });
       });
 

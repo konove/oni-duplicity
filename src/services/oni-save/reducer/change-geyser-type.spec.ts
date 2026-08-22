@@ -5,7 +5,7 @@ import {
   KPrefabIDBehavior,
   GeyserBehavior,
   GeyserType,
-  getBehavior
+  getBehavior,
 } from "oni-save-parser";
 
 import mockState from "@/__mocks__/active-state";
@@ -34,7 +34,7 @@ describe("changeGeyserTypeReducer", () => {
       const state = mockState.services.oniSave;
       const action = {
         ...changeGeyserType(1, GeyserTypeNames[1]),
-        type: "another-action"
+        type: "another-action",
       };
 
       const resultState = changeGeyserTypeReducer(state, action);
@@ -61,8 +61,8 @@ describe("changeGeyserTypeReducer", () => {
                 behaviors: [
                   createBehavior(KPrefabIDBehavior, {
                     templateData: {
-                      InstanceID: mockGameObjectId
-                    }
+                      InstanceID: mockGameObjectId,
+                    },
                   }),
                   createBehavior(GeyserBehavior, {
                     templateData: {
@@ -72,20 +72,20 @@ describe("changeGeyserTypeReducer", () => {
                         iterationPercentRoll: 1,
                         rateRoll: 1,
                         yearLengthRoll: 1,
-                        yearPercentRoll: 1
-                      }
-                    }
-                  })
-                ]
-              }
-            ]
-          }
-        ]
+                        yearPercentRoll: 1,
+                      },
+                    },
+                  }),
+                ],
+              },
+            ],
+          },
+        ],
       };
       state = {
         ...defaultOniSaveState,
         loadingStatus: LoadingStatus.Ready,
-        saveGame: mockSaveGame as SaveGame
+        saveGame: mockSaveGame as SaveGame,
       };
     });
 
@@ -94,13 +94,13 @@ describe("changeGeyserTypeReducer", () => {
 
       const gameObject = getGameObjectById(
         resultState.saveGame!,
-        mockGameObjectId
+        mockGameObjectId,
       );
       expect(gameObject).toBeDefined();
 
       const geyserBehavior = getBehavior(gameObject!, GeyserBehavior);
       expect(geyserBehavior!.templateData.configuration!.typeId.hash).toBe(
-        GeyserType[newGeyserType].hash
+        GeyserType[newGeyserType].hash,
       );
     });
 
@@ -110,21 +110,21 @@ describe("changeGeyserTypeReducer", () => {
       const typeName = `GeyserGeneric_${newGeyserType}`;
       const gameObjectGroups = resultState.saveGame!.gameObjects;
       expect(gameObjectGroups).toContainEqual(
-        expect.objectContaining({ name: typeName })
+        expect.objectContaining({ name: typeName }),
       );
 
       // Ensure the group contains our moved object by id.
-      const group = find(gameObjectGroups, x => x.name === typeName)!;
+      const group = find(gameObjectGroups, (x) => x.name === typeName)!;
       expect(group.gameObjects).toContainEqual(
         expect.objectContaining({
           behaviors: expect.arrayContaining([
             createBehavior(KPrefabIDBehavior, {
               templateData: {
-                InstanceID: mockGameObjectId
-              }
-            })
-          ])
-        })
+                InstanceID: mockGameObjectId,
+              },
+            }),
+          ]),
+        }),
       );
     });
 

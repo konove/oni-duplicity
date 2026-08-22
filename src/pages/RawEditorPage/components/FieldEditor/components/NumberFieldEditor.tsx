@@ -8,7 +8,7 @@ import { UnconnectedEditorProps } from "../EditorProps";
 const NumberFieldEditor: React.FC<UnconnectedEditorProps> = ({
   path,
   value,
-  onValueChanged
+  onValueChanged,
 }) => {
   const label = last(path)!;
   return (

@@ -14,7 +14,7 @@ type Props = PasteMenuItemProps;
 const PasteMenuItem: React.FC<Props> = ({
   disabled,
   onPasteBehaviors,
-  onClose
+  onClose,
 }) => {
   const onClick = React.useCallback(() => {
     onClose();

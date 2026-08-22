@@ -5,7 +5,7 @@ import { isLoadExampleSaveAction } from "../actions/load-example";
 
 export default function loadExampleSaveReducer(
   state: OniSaveState = defaultOniSaveState,
-  action: UnknownAction
+  action: UnknownAction,
 ): OniSaveState {
   if (!isLoadExampleSaveAction(action)) {
     return state;
@@ -17,6 +17,6 @@ export default function loadExampleSaveReducer(
     ...state,
     saveGame: mockSaveGame,
     loadingStatus: LoadingStatus.Ready,
-    isMock: true
+    isMock: true,
   };
 }

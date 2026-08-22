@@ -10,7 +10,7 @@ import { EditorProps } from "./EditorProps";
 const Editors: Record<string, React.ComponentType<EditorProps>> = {
   string: connectEditor(TextFieldEditor),
   number: connectEditor(NumberFieldEditor),
-  boolean: connectEditor(BooleanFieldEditor)
+  boolean: connectEditor(BooleanFieldEditor),
 };
 
 export default Editors;

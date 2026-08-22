@@ -38,7 +38,7 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({
         void navigate(to);
       }
     },
-    [onClick, target, navigate, to]
+    [onClick, target, navigate, to],
   );
 
   // Replaces MUI v4's `<ListItem button component="a">`. Deliberately not

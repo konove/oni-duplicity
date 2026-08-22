@@ -13,8 +13,8 @@ import { keysOfType } from "@/utils";
 const styles = createStyles({
   table: {
     display: "grid",
-    gridTemplateColumns: "minmax(min-content, 200px) auto"
-  }
+    gridTemplateColumns: "minmax(min-content, 200px) auto",
+  },
 });
 
 export interface DifficultyProps {
@@ -24,22 +24,20 @@ export interface DifficultyProps {
 type Props = DifficultyProps & WithStyles<typeof styles>;
 
 const Difficulty: React.FC<Props> = ({ className, classes }) => {
-  const { difficulty, onModifyDifficulty } = useDifficulty()
+  const { difficulty, onModifyDifficulty } = useDifficulty();
   return (
     <div className={className}>
       <Typography variant="h6">Difficulty</Typography>
       <Divider />
       <div className={classes.table}>
-        {keysOfType(difficulty).map(name => (
+        {keysOfType(difficulty).map((name) => (
           <React.Fragment key={name}>
             <Typography>{name}</Typography>
             <Select
               value={difficulty[name]}
-              onChange={e =>
-                onModifyDifficulty(name, e.target.value)
-              }
+              onChange={(e) => onModifyDifficulty(name, e.target.value)}
             >
-              {QualityLevelSettingValues[name].map(value => (
+              {QualityLevelSettingValues[name].map((value) => (
                 <MenuItem key={value} value={value}>
                   {value}
                 </MenuItem>
@@ -50,6 +48,6 @@ const Difficulty: React.FC<Props> = ({ className, classes }) => {
       </div>
     </div>
   );
-}
+};
 
 export default withStyles(styles)(Difficulty);

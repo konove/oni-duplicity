@@ -48,11 +48,11 @@ directory as the trait extractor above.
 
 Two things to watch after a game update:
 
-- A skill built in more than one branch takes the *intersection* of the
+- A skill built in more than one branch takes the _intersection_ of the
   requirements, since it exists whenever any branch would build it.
   `Astronauting1` is one of these.
 - Only a whole argument counts as the DLC list. Several skills switch their
-  *perks* on a DLC inline (`Farming1`), and matching a DLC id anywhere in the
+  _perks_ on a DLC inline (`Farming1`), and matching a DLC id anywhere in the
   call would wrongly gate the skill itself.
 
 ## extract-effect-ids.py

@@ -4,7 +4,7 @@ import {
   getBehavior,
   StorageBehavior,
   PrimaryElementBehavior,
-  SimHashName
+  SimHashName,
 } from "oni-save-parser";
 import { createSelector } from "reselect";
 import { values, orderBy, flatMap } from "lodash";
@@ -22,7 +22,7 @@ export interface MaterialListItem {
 
 export const materialsSelector = createSelector(
   gameObjectGroupsSelector,
-  groups => {
+  (groups) => {
     const rowsByMaterial: Record<string, MaterialListItem> = {};
 
     if (groups) {
@@ -33,12 +33,12 @@ export const materialsSelector = createSelector(
 
     const rows = values(rowsByMaterial);
     return orderBy(rows, ["name"]);
-  }
+  },
 );
 
 function countMaterialGroup(
   group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>
+  rowsByMaterial: Record<string, MaterialListItem>,
 ) {
   const loose = isMaterialGameObject(group.name);
   if (loose) {
@@ -50,21 +50,21 @@ function countMaterialGroup(
 
 function countLooseMaterialGroup(
   group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>
+  rowsByMaterial: Record<string, MaterialListItem>,
 ) {
   for (const gameObject of group.gameObjects) {
     addMaterialObject(
       group.name as SimHashName,
       gameObject,
       true,
-      rowsByMaterial
+      rowsByMaterial,
     );
   }
 }
 
 function countStorageGroup(
   group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>
+  rowsByMaterial: Record<string, MaterialListItem>,
 ) {
   const storedObjects = flatMap(group.gameObjects, getStoredObjects);
   for (const storedObject of storedObjects) {
@@ -79,7 +79,7 @@ function countStorageGroup(
 }
 
 function getStoredObjects(
-  gameObject: GameObject
+  gameObject: GameObject,
 ): { type: string; gameObject: GameObject }[] {
   const storage = getBehavior(gameObject, StorageBehavior);
   if (!storage) {
@@ -88,13 +88,13 @@ function getStoredObjects(
 
   return storage.extraData.map(({ name, ...gameObject }) => ({
     type: name,
-    gameObject
+    gameObject,
   }));
 }
 
 function getMaterialRow(
   name: MaterialObjectName,
-  rowsByMaterial: Record<string, MaterialListItem>
+  rowsByMaterial: Record<string, MaterialListItem>,
 ) {
   if (!rowsByMaterial[name]) {
     rowsByMaterial[name] = {
@@ -102,7 +102,7 @@ function getMaterialRow(
       looseCount: 0,
       looseGrams: 0,
       storedCount: 0,
-      storedGrams: 0
+      storedGrams: 0,
     };
   }
   return rowsByMaterial[name];
@@ -118,7 +118,7 @@ function addMaterialObject(
   name: MaterialObjectName,
   gameObject: GameObject,
   loose: boolean,
-  rowsByMaterial: Record<string, MaterialListItem>
+  rowsByMaterial: Record<string, MaterialListItem>,
 ) {
   const elementBehavior = getBehavior(gameObject, PrimaryElementBehavior);
   if (!elementBehavior) {

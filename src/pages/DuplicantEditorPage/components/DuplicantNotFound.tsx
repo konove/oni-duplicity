@@ -2,12 +2,7 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import {
-  Theme,
-  createStyles,
-  withStyles,
-  WithStyles
-} from "@/styles";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 
 import PageContainer from "@/components/PageContainer";
@@ -17,13 +12,13 @@ const styles = (theme: Theme) =>
     root: {
       display: "flex",
       width: "100%",
-      height: "100%"
+      height: "100%",
     },
     text: {
       marginLeft: "auto",
       marginRight: "auto",
-      marginTop: theme.spacing()
-    }
+      marginTop: theme.spacing(),
+    },
   });
 
 type Props = WithTranslation & WithStyles<typeof styles>;

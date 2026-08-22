@@ -25,7 +25,7 @@ export interface UseGeyser {
 export default function useGeyser(gameObjectId: number): UseGeyser {
   const dispatch = useDispatch();
   const config = useSelector((state: AppState) =>
-    geyserConfigSelector(state, gameObjectId)
+    geyserConfigSelector(state, gameObjectId),
   );
 
   const onChangeEmitRate = React.useCallback(
@@ -37,46 +37,46 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
           BehaviorDataTarget.Template,
           {
             configuration: {
-              rateRoll: rate
-            }
+              rateRoll: rate,
+            },
           },
-          true
-        )
+          true,
+        ),
       );
     },
-    [dispatch, gameObjectId]
+    [dispatch, gameObjectId],
   );
 
   const onChangeGeyserType = React.useCallback(
     (type: string) => {
       dispatch(changeGeyserType(gameObjectId, type));
     },
-    [dispatch, gameObjectId]
+    [dispatch, gameObjectId],
   );
 
   const onChangeYearLength = React.useCallback(
     (fraction: number) => {
       dispatch(changeGeyserParameter(gameObjectId, "yearLengthRoll", fraction));
     },
-    [dispatch, gameObjectId]
+    [dispatch, gameObjectId],
   );
 
   const onChangeYearActive = React.useCallback(
     (fraction: number) => {
       dispatch(
-        changeGeyserParameter(gameObjectId, "yearPercentRoll", fraction)
+        changeGeyserParameter(gameObjectId, "yearPercentRoll", fraction),
       );
     },
-    [dispatch, gameObjectId]
+    [dispatch, gameObjectId],
   );
 
   const onChangeEmitActive = React.useCallback(
     (fraction: number) => {
       dispatch(
-        changeGeyserParameter(gameObjectId, "iterationPercentRoll", fraction)
+        changeGeyserParameter(gameObjectId, "iterationPercentRoll", fraction),
       );
     },
-    [dispatch, gameObjectId]
+    [dispatch, gameObjectId],
   );
 
   return {
@@ -89,6 +89,6 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
     onChangeGeyserType,
     onChangeYearLength,
     onChangeYearActive,
-    onChangeEmitActive
+    onChangeEmitActive,
   };
 }

@@ -2,7 +2,7 @@ import { takeEvery, select } from "redux-saga/effects";
 import {
   getBehavior,
   MinionIdentityBehavior,
-  GameObject
+  GameObject,
 } from "oni-save-parser";
 import objectHash from "object-hash";
 
@@ -12,35 +12,33 @@ import { saveAs } from "file-saver";
 
 import {
   ACTION_ONISAVE_EXPORT_BEHAVIORS,
-  ExportBehaviorsAction
+  ExportBehaviorsAction,
 } from "../actions/export-behaviors";
 
 import {
   gameObjectTypesByIdSelector,
-  gameObjectsByIdSelector
+  gameObjectsByIdSelector,
 } from "../selectors/game-objects";
 
 export default function* exportBehaviorsSaga() {
   yield takeEvery(
     ACTION_ONISAVE_EXPORT_BEHAVIORS,
-    handleExportBehaviorsActionSaga
+    handleExportBehaviorsActionSaga,
   );
 }
 
 function* handleExportBehaviorsActionSaga(action: ExportBehaviorsAction) {
   const { gameObjectId, behaviors } = action.payload;
 
-  const typesById: ReturnType<
-    typeof gameObjectTypesByIdSelector
-  > = yield select(gameObjectTypesByIdSelector);
+  const typesById: ReturnType<typeof gameObjectTypesByIdSelector> =
+    yield select(gameObjectTypesByIdSelector);
   if (!typesById || !typesById[gameObjectId]) {
     return;
   }
   const gameObjectType = typesById[gameObjectId];
 
-  const gameObjectsById: ReturnType<
-    typeof gameObjectsByIdSelector
-  > = yield select(gameObjectsByIdSelector);
+  const gameObjectsById: ReturnType<typeof gameObjectsByIdSelector> =
+    yield select(gameObjectsByIdSelector);
   if (!gameObjectsById || !gameObjectsById[gameObjectId]) {
     return;
   }
@@ -60,7 +58,7 @@ function* handleExportBehaviorsActionSaga(action: ExportBehaviorsAction) {
   const content = JSON.stringify(exportObject, null, 2);
 
   const blob = new Blob([content], {
-    type: "application/javascript;charset=utf-8"
+    type: "application/javascript;charset=utf-8",
   });
 
   saveAs(blob, fileName);
@@ -69,7 +67,7 @@ function* handleExportBehaviorsActionSaga(action: ExportBehaviorsAction) {
 function buildExportObject(
   gameObject: GameObject,
   gameObjectType: string,
-  targetBehaviors: string[]
+  targetBehaviors: string[],
 ): any {
   const exportBehaviors: Record<string, any> = {};
   for (const behaviorName of targetBehaviors) {
@@ -90,7 +88,7 @@ function buildExportObject(
 
   const exportObject: any = {
     gameObjectType,
-    behaviors: exportBehaviors
+    behaviors: exportBehaviors,
   };
 
   const hash = objectHash(exportObject, { algorithm: "sha1" });
