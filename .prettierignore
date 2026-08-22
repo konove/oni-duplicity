@@ -1,0 +1,8 @@
+# npm owns this file's formatting and rewrites it on every install.
+package-lock.json
+
+# A 1.2MB save fixture, not source.
+src/__mocks__/save-game.json
+
+# Build output.
+dist/
