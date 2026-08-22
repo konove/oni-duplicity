@@ -3,10 +3,15 @@
     "noun_titlecase_plural": "Duplicants",
     "noun_titlecase": "Duplicant",
     "verbs": {
-      "edit_titlecase": "Edit Duplicant"
+      "edit_titlecase": "Edit Duplicant",
+      "clone_titlecase": "Clone",
+      "paste_titlecase": "Paste",
+      "mega_titlecase": "Make Mega Duplicant",
+      "mega_description": "Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience"
     },
     "conditions": {
-      "missing_titlecase": "Duplicant Not Found"
+      "missing_titlecase": "Duplicant Not Found",
+      "no_portrait": "No portrait art for this duplicant's appearance"
     }
   },
   "duplicant_effect": {
@@ -31,7 +36,10 @@
   "duplicant_attribute": {
     "noun_titlecase_plural": "Attributes",
     "primary_titlecase": "Primary",
-    "secondary_titlecase": "Secondary"
+    "secondary_titlecase": "Secondary",
+    "conditions": {
+      "missing_titlecase": "Attribute Not Found"
+    }
   },
   "duplicant_skills": {
     "noun_titlecase": "Skill",
@@ -40,7 +48,10 @@
     "mastery_titlecase": "Mastery"
   },
   "duplicant_appearance": {
-    "noun_titlecase": "Appearance"
+    "noun_titlecase": "Appearance",
+    "hair_titlecase": "Hair",
+    "head_titlecase": "Head",
+    "eyes_titlecase": "Eyes"
   },
   "duplicant_health": {
     "noun_titlecase": "Health"
@@ -51,7 +62,8 @@
       "edit_titlecase": "Edit Creature"
     },
     "conditions": {
-      "missing_titlecase": "Creature Not Found"
+      "missing_titlecase": "Creature Not Found",
+      "not_implemented": "Not Implemented."
     }
   },
   "geyser": {
@@ -62,7 +74,19 @@
     "emission_rate": "Emission Rate"
   },
   "world": {
-    "noun_titlecase_plural": "Worlds"
+    "noun_titlecase_plural": "Worlds",
+    "starting_world": "Starting world",
+    "rocket_interior": "Rocket interior",
+    "name_titlecase": "Name",
+    "sunlight_titlecase": "Sunlight",
+    "cosmic_radiation_titlecase": "Cosmic radiation",
+    "discovered": "Discovered",
+    "dupe_visited": "Visited by a duplicant",
+    "rover_visited": "Visited by a rover",
+    "surface_revealed": "Surface revealed",
+    "conditions": {
+      "none": "This save has no asteroids. Only Spaced Out! saves model the colony as a cluster of worlds."
+    }
   },
   "material": {
     "noun_titlecase": "Material",
@@ -115,7 +139,9 @@
   "save-file": {
     "verbs": {
       "load_titlecase": "Load",
-      "save_titlecase": "Save"
+      "save_titlecase": "Save",
+      "load_example_titlecase": "Load Example",
+      "force_load": "Override safety checks and load the save"
     },
     "conditions": {
       "loading": "Loading",
@@ -123,7 +149,13 @@
       "modified": "Modified",
       "modified_description": "The file has been modified since it was last saved.",
       "example": "Example",
-      "example_description": "This is example content and cannot be saved."
+      "example_description": "This is example content and cannot be saved.",
+      "load_failed_titlecase": "Failed to Load",
+      "load_failed": "Error loading save",
+      "version_major": "This save file indicates it is for a version of the game that is incompatible with this editor.",
+      "version_minor": "This save is from a version of the game the editor has not been checked against.",
+      "version_minor_detail": "Saves describe their own structure, so a version that only adds or reorders fields usually still reads correctly. It may well be editable.",
+      "version_minor_warning": "WARNING: Editing it may still produce corrupt data, leading to crashes and game breaking bugs later. Back up the save first, and load it at your own risk."
     }
   },
   "overview-page": {
@@ -131,8 +163,13 @@
     "no-save": {
       "title": "Choose a Save",
       "prompt": "No save file has been loaded.",
-      "save-location": "Save files can be found at <1>{{path}}</1>."
-    }
+      "save-location": "Save files can be found at <1>{{path}}</1>.",
+      "backup_warning": "Always back up a save before editing it. Editing can corrupt a colony, and a clean load here is no guarantee the game will accept the result.",
+      "supported_saves": "Reads and writes base game and Spaced Out! saves, including the Frosty Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet packs."
+    },
+    "difficulty_titlecase": "Difficulty",
+    "colony_summary": "{{cycles}} cycles, {{duplicants}} duplicants.",
+    "save_version": "Save version {{version}}"
   },
   "raw-editor-page": {
     "title": "Raw Editor"
@@ -140,5 +177,21 @@
   "view-github": "View project on GitHub",
   "changelog": {
     "title": "Changelog"
+  },
+  "verbs": {
+    "back_titlecase": "Back",
+    "search_titlecase": "Search"
+  },
+  "conditions": {
+    "no_data": "Error: No Data"
+  },
+  "settings-page": {
+    "title": "Settings",
+    "offline_titlecase": "Offline Mode",
+    "offline_unsupported": "Offline mode is not supported in your browser.",
+    "offline_supported": "Your browser supports offline mode.",
+    "offline_enable": "Enable Offline Mode",
+    "offline_enabled": "Offline Mode is now enabled. This web page will be available without internet access.",
+    "language_titlecase": "Language"
   }
 }

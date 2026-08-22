@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { Trans, useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Theme, createStyles, makeStyles } from "@/styles";
@@ -28,6 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const SaveError: React.FC = () => {
+  const { t } = useTranslation();
   const classes = useStyles();
   const dispatch = useDispatch();
   const saveError: any = useSelector(loadingErrorSelector);
@@ -43,8 +46,10 @@ const SaveError: React.FC = () => {
   if (saveError.code === E_VERSION_MAJOR) {
     errorContent = (
       <>
-        This save file indicates it is for a version of the game that is
-        incompatible with this editor.
+        <Trans i18nKey="save-file.conditions.version_major">
+          This save file indicates it is for a version of the game that is
+          incompatible with this editor.
+        </Trans>
         <Divider />
         <Typography variant="caption" className={classes.errorMessage}>
           {saveError.message}
@@ -55,21 +60,29 @@ const SaveError: React.FC = () => {
     errorContent = (
       <>
         <p>
-          This save is from a version of the game the editor has not been
-          checked against.
+          <Trans i18nKey="save-file.conditions.version_minor">
+            This save is from a version of the game the editor has not been
+            checked against.
+          </Trans>
         </p>
         <p>
-          Saves describe their own structure, so a version that only adds or
-          reorders fields usually still reads correctly. It may well be
-          editable.
+          <Trans i18nKey="save-file.conditions.version_minor_detail">
+            Saves describe their own structure, so a version that only adds or
+            reorders fields usually still reads correctly. It may well be
+            editable.
+          </Trans>
         </p>
         <Typography color="error">
-          WARNING: Editing it may still produce corrupt data, leading to crashes
-          and game breaking bugs later. Back up the save first, and load it at
-          your own risk.
+          <Trans i18nKey="save-file.conditions.version_minor_warning">
+            WARNING: Editing it may still produce corrupt data, leading to
+            crashes and game breaking bugs later. Back up the save first, and
+            load it at your own risk.
+          </Trans>
         </Typography>
         <Button onClick={onForceLoad}>
-          Override safety checks and load the save
+          <Trans i18nKey="save-file.verbs.force_load">
+            Override safety checks and load the save
+          </Trans>
         </Button>
         <Divider />
         <Typography variant="caption" className={classes.errorMessage}>
@@ -86,9 +99,13 @@ const SaveError: React.FC = () => {
   }
 
   return (
-    <PageContainer title="Failed to Load">
+    <PageContainer title={t("save-file.conditions.load_failed_titlecase")}>
       <div className={classes.root}>
-        <Typography variant="h5">Error loading save</Typography>
+        <Typography variant="h5">
+          <Trans i18nKey="save-file.conditions.load_failed">
+            Error loading save
+          </Trans>
+        </Typography>
         <Divider />
         {errorContent}
       </div>

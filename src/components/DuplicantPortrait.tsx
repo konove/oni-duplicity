@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { Trans, useTranslation } from "react-i18next";
 import {
   AccessorizerBehavior,
   getAccessoryOfType,
@@ -51,9 +53,14 @@ const DuplicantPortrait: React.FC<Props> = ({
   gameObjectId,
   scale,
 }) => {
+  const { t } = useTranslation();
   const { templateData } = useBehavior(gameObjectId, AccessorizerBehavior);
   if (!templateData) {
-    return <div>Error: No Data</div>;
+    return (
+      <div>
+        <Trans i18nKey="conditions.no_data">Error: No Data</Trans>
+      </div>
+    );
   }
 
   // These sprites predate several content packs, and a bionic duplicant in
@@ -77,7 +84,7 @@ const DuplicantPortrait: React.FC<Props> = ({
       <div
         className={classes.portraitContainer}
         style={{ width: 240 * scale, height: 270 * scale }}
-        title="No portrait art for this duplicant's appearance"
+        title={t("duplicant.conditions.no_portrait")}
       >
         <div className={classes.placeholder}>
           <svg viewBox="0 0 24 24" width={120 * scale} height={120 * scale}>

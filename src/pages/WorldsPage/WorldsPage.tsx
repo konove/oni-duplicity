@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Trans, useTranslation } from "react-i18next";
+
 import { Theme, makeStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 
@@ -28,16 +30,19 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const WorldsPage: React.FC = () => {
+  const { t } = useTranslation();
   const classes = useStyles();
   const gameObjectIds = useGameObjects(WORLD_GAMEOBJECT_TYPE);
 
   return (
-    <PageContainer title="Worlds">
+    <PageContainer title={t("world.noun_titlecase_plural")}>
       <RedirectIfNoSave />
       {gameObjectIds.length === 0 && (
         <Typography className={classes.empty}>
-          This save has no asteroids. Only Spaced Out! saves model the colony as
-          a cluster of worlds.
+          <Trans i18nKey="world.conditions.none">
+            This save has no asteroids. Only Spaced Out! saves model the colony
+            as a cluster of worlds.
+          </Trans>
         </Typography>
       )}
       <div className={classes.root}>

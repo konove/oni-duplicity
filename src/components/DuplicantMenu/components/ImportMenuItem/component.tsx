@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Trans } from "react-i18next";
+
 import MenuItem from "@mui/material/MenuItem";
 
 export interface ImportMenuItemProps {
@@ -34,7 +36,9 @@ const ImportMenuItem: React.FC<Props> = ({ onImportDuplicant, onClose }) => {
 
   return (
     <>
-      <MenuItem onClick={onMenuItemClick}>Import</MenuItem>
+      <MenuItem onClick={onMenuItemClick}>
+        <Trans i18nKey="data.verbs.import_titlecase">Import</Trans>
+      </MenuItem>
       <input
         ref={inputRef}
         style={{ display: "none" }}

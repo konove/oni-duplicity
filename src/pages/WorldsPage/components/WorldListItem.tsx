@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { useTranslation } from "react-i18next";
 import classnames from "classnames";
 
 import { Theme, makeStyles } from "@/styles";
@@ -44,16 +46,17 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const TOGGLES = [
-  { key: "isDiscovered", label: "Discovered" },
-  { key: "isDupeVisited", label: "Visited by a duplicant" },
-  { key: "isRoverVisited", label: "Visited by a rover" },
-  { key: "isSurfaceRevealed", label: "Surface revealed" },
+  { key: "isDiscovered", i18nKey: "world.discovered" },
+  { key: "isDupeVisited", i18nKey: "world.dupe_visited" },
+  { key: "isRoverVisited", i18nKey: "world.rover_visited" },
+  { key: "isSurfaceRevealed", i18nKey: "world.surface_revealed" },
 ] as const;
 
 const WorldListItem: React.FC<WorldListItemProps> = ({
   className,
   gameObjectId,
 }) => {
+  const { t } = useTranslation();
   const styles = useStyles();
   const { templateData, onTemplateDataModify } =
     useBehavior<WorldContainerBehavior>(gameObjectId, WorldContainerBehavior);
@@ -77,8 +80,12 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
     <Paper className={classnames(className, styles.root)}>
       <div className={styles.titleBar}>
         <Typography variant="h6">{worldDisplayName(templateData)}</Typography>
-        {isStartWorld && <Chip size="small" label="Starting world" />}
-        {isModuleInterior && <Chip size="small" label="Rocket interior" />}
+        {isStartWorld && (
+          <Chip size="small" label={t("world.starting_world")} />
+        )}
+        {isModuleInterior && (
+          <Chip size="small" label={t("world.rocket_interior")} />
+        )}
       </div>
       <Typography
         className={styles.subtitle}
@@ -91,7 +98,7 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
 
       <TextField
         className={styles.field}
-        label="Name"
+        label={t("world.name_titlecase")}
         variant="standard"
         // The game falls back to the world's own name when this is empty, so
         // an empty field is meaningful rather than missing.
@@ -100,7 +107,7 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
         onChange={(e) => onTemplateDataModify({ overrideName: e.target.value })}
       />
 
-      {TOGGLES.map(({ key, label }) => (
+      {TOGGLES.map(({ key, i18nKey }) => (
         <FormControlLabel
           key={key}
           control={
@@ -111,13 +118,13 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
               }
             />
           }
-          label={label}
+          label={t(i18nKey)}
         />
       ))}
 
       <TextField
         className={styles.field}
-        label="Sunlight"
+        label={t("world.sunlight_titlecase")}
         variant="standard"
         type="number"
         value={templateData.sunlight}
@@ -127,7 +134,7 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
       />
       <TextField
         className={styles.field}
-        label="Cosmic radiation"
+        label={t("world.cosmic_radiation_titlecase")}
         variant="standard"
         type="number"
         value={templateData.cosmicRadiation}

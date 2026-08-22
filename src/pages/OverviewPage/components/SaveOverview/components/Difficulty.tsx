@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { Trans } from "react-i18next";
 import { QualityLevelSettingValues } from "oni-save-parser";
 
 import { createStyles, withStyles, WithStyles } from "@/styles";
@@ -27,7 +29,9 @@ const Difficulty: React.FC<Props> = ({ className, classes }) => {
   const { difficulty, onModifyDifficulty } = useDifficulty();
   return (
     <div className={className}>
-      <Typography variant="h6">Difficulty</Typography>
+      <Typography variant="h6">
+        <Trans i18nKey="overview-page.difficulty_titlecase">Difficulty</Trans>
+      </Typography>
       <Divider />
       <div className={classes.table}>
         {keysOfType(difficulty).map((name) => (

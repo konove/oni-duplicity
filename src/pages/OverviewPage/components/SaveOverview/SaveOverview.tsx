@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { useTranslation } from "react-i18next";
 import { connect } from "react-redux";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
@@ -30,27 +32,33 @@ const SaveOverview: React.FC<Props> = ({
   duplicantCount,
   clusterId,
   saveVersion,
-}) => (
-  <PageContainer title="Overview">
-    <div className={classes.root}>
-      <Typography variant="h4">{saveName}</Typography>
-      <Divider />
-      <Typography>
-        {cycleCount} cycles, {duplicantCount} duplicants.
-      </Typography>
-      {clusterId && (
-        <Typography variant="body2" color="textSecondary">
-          {clusterId}
+}) => {
+  const { t } = useTranslation();
+  return (
+    <PageContainer title={t("overview-page.title")}>
+      <div className={classes.root}>
+        <Typography variant="h4">{saveName}</Typography>
+        <Divider />
+        <Typography>
+          {t("overview-page.colony_summary", {
+            cycles: cycleCount,
+            duplicants: duplicantCount,
+          })}
         </Typography>
-      )}
-      {saveVersion && (
-        <Typography variant="body2" color="textSecondary">
-          Save version {saveVersion}
-        </Typography>
-      )}
-      <Difficulty className={classes.difficulty} />
-    </div>
-  </PageContainer>
-);
+        {clusterId && (
+          <Typography variant="body2" color="textSecondary">
+            {clusterId}
+          </Typography>
+        )}
+        {saveVersion && (
+          <Typography variant="body2" color="textSecondary">
+            {t("overview-page.save_version", { version: saveVersion })}
+          </Typography>
+        )}
+        <Difficulty className={classes.difficulty} />
+      </div>
+    </PageContainer>
+  );
+};
 
 export default connect(mapStateToProps)(withStyles(styles)(SaveOverview));

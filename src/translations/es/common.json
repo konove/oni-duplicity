@@ -3,10 +3,15 @@
     "noun_titlecase_plural": "Duplicantes",
     "noun_titlecase": "Duplicante",
     "verbs": {
-      "edit_titlecase": "Editar Duplicante"
+      "edit_titlecase": "Editar Duplicante",
+      "clone_titlecase": "Clonar",
+      "paste_titlecase": "Pegar",
+      "mega_titlecase": "Crear Duplicante Mega",
+      "mega_description": "Maximiza todos los atributos, reemplaza todos los rasgos por los buenos, añade todos los intereses y otorga experiencia completa"
     },
     "conditions": {
-      "missing_titlecase": "Duplicante No Encontrado"
+      "missing_titlecase": "Duplicante No Encontrado",
+      "no_portrait": "No hay ilustración para la apariencia de este Duplicante"
     }
   },
   "duplicant_effect": {
@@ -31,7 +36,10 @@
   "duplicant_attribute": {
     "noun_titlecase_plural": "Atributos",
     "primary_titlecase": "Primario",
-    "secondary_titlecase": "Secundario"
+    "secondary_titlecase": "Secundario",
+    "conditions": {
+      "missing_titlecase": "Atributo No Encontrado"
+    }
   },
   "duplicant_skills": {
     "noun_titlecase": "Habilidad",
@@ -40,7 +48,10 @@
     "mastery_titlecase": "Maestría"
   },
   "duplicant_appearance": {
-    "noun_titlecase": "Apariencia"
+    "noun_titlecase": "Apariencia",
+    "hair_titlecase": "Pelo",
+    "head_titlecase": "Cabeza",
+    "eyes_titlecase": "Ojos"
   },
   "duplicant_health": {
     "noun_titlecase": "Salud"
@@ -51,7 +62,8 @@
       "edit_titlecase": "Editar Criatura"
     },
     "conditions": {
-      "missing_titlecase": "Criatura No Encontrada"
+      "missing_titlecase": "Criatura No Encontrada",
+      "not_implemented": "No implementado."
     }
   },
   "geyser": {
@@ -62,7 +74,19 @@
     "emission_rate": "Tasa de emisión"
   },
   "world": {
-    "noun_titlecase_plural": "Mundos"
+    "noun_titlecase_plural": "Mundos",
+    "starting_world": "Mundo inicial",
+    "rocket_interior": "Interior del cohete",
+    "name_titlecase": "Nombre",
+    "sunlight_titlecase": "Luz solar",
+    "cosmic_radiation_titlecase": "Radiación cósmica",
+    "discovered": "Descubierto",
+    "dupe_visited": "Visitado por un Duplicante",
+    "rover_visited": "Visitado por un vehículo",
+    "surface_revealed": "Superficie revelada",
+    "conditions": {
+      "none": "Esta partida no tiene asteroides. Solo las partidas de Spaced Out! representan la colonia como un grupo de mundos."
+    }
   },
   "material": {
     "noun_titlecase": "Material",
@@ -115,7 +139,9 @@
   "save-file": {
     "verbs": {
       "load_titlecase": "Cargar",
-      "save_titlecase": "Guardar"
+      "save_titlecase": "Guardar",
+      "load_example_titlecase": "Cargar Ejemplo",
+      "force_load": "Omitir las comprobaciones y cargar la partida"
     },
     "conditions": {
       "loading": "Cargando",
@@ -123,7 +149,13 @@
       "modified": "Modificado",
       "modified_description": "El archivo se ha modificado despues de haber sido guardado.",
       "example": "Ejemplo",
-      "example_description": "Este es un contenido de ejemplo y no puede ser guardado."
+      "example_description": "Este es un contenido de ejemplo y no puede ser guardado.",
+      "load_failed_titlecase": "Error Al Cargar",
+      "load_failed": "Error al cargar la partida",
+      "version_major": "Este archivo indica que es de una versión del juego incompatible con este editor.",
+      "version_minor": "Esta partida es de una versión del juego con la que no se ha probado el editor.",
+      "version_minor_detail": "Las partidas describen su propia estructura, así que una versión que solo añade o reordena campos suele leerse correctamente. Es probable que se pueda editar.",
+      "version_minor_warning": "ADVERTENCIA: editarla puede corromper los datos y provocar cierres y errores graves más adelante. Haz una copia de seguridad y cárgala bajo tu propia responsabilidad."
     }
   },
   "overview-page": {
@@ -131,8 +163,13 @@
     "no-save": {
       "title": "Elige un archivo de guardado",
       "prompt": "Ningun archivo de guardado ha sido cargado.",
-      "save-location": "Los archivos de guardado pueden encontrarse en <1>{{path}}</1>."
-    }
+      "save-location": "Los archivos de guardado pueden encontrarse en <1>{{path}}</1>.",
+      "backup_warning": "Haz siempre una copia de seguridad antes de editar. La edición puede corromper una colonia, y que cargue bien aquí no garantiza que el juego acepte el resultado.",
+      "supported_saves": "Lee y escribe partidas del juego base y de Spaced Out!, incluidos los packs Frosty Planet, Bionic Booster, Prehistoric Planet y Aquatic Planet."
+    },
+    "difficulty_titlecase": "Dificultad",
+    "colony_summary": "{{cycles}} ciclos, {{duplicants}} duplicantes.",
+    "save_version": "Versión de la partida {{version}}"
   },
   "raw-editor-page": {
     "title": "Edición manual"
@@ -140,5 +177,21 @@
   "view-github": "Ver projecto en GitHub",
   "changelog": {
     "title": "Registro de cambios"
+  },
+  "verbs": {
+    "back_titlecase": "Atrás",
+    "search_titlecase": "Buscar"
+  },
+  "conditions": {
+    "no_data": "Error: Sin datos"
+  },
+  "settings-page": {
+    "title": "Ajustes",
+    "offline_titlecase": "Modo sin conexión",
+    "offline_unsupported": "Tu navegador no admite el modo sin conexión.",
+    "offline_supported": "Tu navegador admite el modo sin conexión.",
+    "offline_enable": "Activar el modo sin conexión",
+    "offline_enabled": "El modo sin conexión está activado. Esta página estará disponible sin acceso a internet.",
+    "language_titlecase": "Idioma"
   }
 }

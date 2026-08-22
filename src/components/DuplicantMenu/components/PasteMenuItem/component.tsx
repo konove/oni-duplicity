@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Trans } from "react-i18next";
+
 import MenuItem from "@mui/material/MenuItem";
 
 export interface PasteMenuItemProps {
@@ -22,7 +24,7 @@ const PasteMenuItem: React.FC<Props> = ({
   }, [onClose, onPasteBehaviors]);
   return (
     <MenuItem disabled={disabled} onClick={onClick}>
-      Paste
+      <Trans i18nKey="duplicant.verbs.paste_titlecase">Paste</Trans>
     </MenuItem>
   );
 };

@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Trans, useTranslation } from "react-i18next";
+
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
@@ -21,6 +23,7 @@ const styles = (theme: Theme) =>
 type Props = WithStyles<typeof styles>;
 
 const SettingsPage: React.FC<Props> = ({ classes }) => {
+  const { t } = useTranslation();
   const { enabled, supported, setEnabled } = useOfflineModeSettings();
   const onOfflineChecked = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,35 +33,49 @@ const SettingsPage: React.FC<Props> = ({ classes }) => {
   );
 
   return (
-    <PageContainer title="Settings" back>
+    <PageContainer title={t("settings-page.title")} back>
       <div className={classes.root}>
         <div>
-          <Typography variant="h5">Offline Mode</Typography>
+          <Typography variant="h5">
+            <Trans i18nKey="settings-page.offline_titlecase">
+              Offline Mode
+            </Trans>
+          </Typography>
           {!supported && (
             <Typography>
-              Offline mode is not supported in your browser.
+              <Trans i18nKey="settings-page.offline_unsupported">
+                Offline mode is not supported in your browser.
+              </Trans>
             </Typography>
           )}
           {supported && (
             <>
-              <Typography>Your browser supports offline mode.</Typography>
+              <Typography>
+                <Trans i18nKey="settings-page.offline_supported">
+                  Your browser supports offline mode.
+                </Trans>
+              </Typography>
               <FormControlLabel
                 control={
                   <Checkbox checked={enabled} onChange={onOfflineChecked} />
                 }
-                label="Enable Offline Mode"
+                label={t("settings-page.offline_enable")}
               />
               {enabled && (
                 <Typography>
-                  Offline Mode is now enabled. This web page will be available
-                  without internet access.
+                  <Trans i18nKey="settings-page.offline_enabled">
+                    Offline Mode is now enabled. This web page will be available
+                    without internet access.
+                  </Trans>
                 </Typography>
               )}
             </>
           )}
         </div>
         <div>
-          <Typography variant="h5">Language</Typography>
+          <Typography variant="h5">
+            <Trans i18nKey="settings-page.language_titlecase">Language</Trans>
+          </Typography>
           <Language />
         </div>
       </div>

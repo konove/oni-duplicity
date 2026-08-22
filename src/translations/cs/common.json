@@ -3,10 +3,15 @@
     "noun_titlecase_plural": "Duplikanti",
     "noun_titlecase": "Duplikant",
     "verbs": {
-      "edit_titlecase": "Upravit Duplikanta"
+      "edit_titlecase": "Upravit Duplikanta",
+      "clone_titlecase": "Klonovat",
+      "paste_titlecase": "Vložit",
+      "mega_titlecase": "Vytvořit mega duplikanta",
+      "mega_description": "Nastaví všechny vlastnosti na maximum, nahradí všechny rysy dobrými, přidá všechny zájmy a plné zkušenosti"
     },
     "conditions": {
-      "missing_titlecase": "Duplikant nenalezen"
+      "missing_titlecase": "Duplikant nenalezen",
+      "no_portrait": "Pro vzhled tohoto duplikanta není portrét"
     }
   },
   "duplicant_effect": {
@@ -31,7 +36,10 @@
   "duplicant_attribute": {
     "noun_titlecase_plural": "Vlastnosti",
     "primary_titlecase": "Primární",
-    "secondary_titlecase": "Sekundární"
+    "secondary_titlecase": "Sekundární",
+    "conditions": {
+      "missing_titlecase": "Vlastnost nenalezena"
+    }
   },
   "duplicant_skills": {
     "noun_titlecase": "Schopnost",
@@ -40,7 +48,10 @@
     "mastery_titlecase": "Zběhlost"
   },
   "duplicant_appearance": {
-    "noun_titlecase": "Vzhled"
+    "noun_titlecase": "Vzhled",
+    "hair_titlecase": "Vlasy",
+    "head_titlecase": "Hlava",
+    "eyes_titlecase": "Oči"
   },
   "duplicant_health": {
     "noun_titlecase": "Život"
@@ -51,7 +62,8 @@
       "edit_titlecase": "Upravit tvora"
     },
     "conditions": {
-      "missing_titlecase": "Tvor nenalezen"
+      "missing_titlecase": "Tvor nenalezen",
+      "not_implemented": "Není implementováno."
     }
   },
   "geyser": {
@@ -62,7 +74,19 @@
     "emission_rate": "Rychlost výronu"
   },
   "world": {
-    "noun_titlecase_plural": "Světy"
+    "noun_titlecase_plural": "Světy",
+    "starting_world": "Startovní svět",
+    "rocket_interior": "Interiér rakety",
+    "name_titlecase": "Název",
+    "sunlight_titlecase": "Sluneční svit",
+    "cosmic_radiation_titlecase": "Kosmické záření",
+    "discovered": "Objeveno",
+    "dupe_visited": "Navštíveno duplikantem",
+    "rover_visited": "Navštíveno vozítkem",
+    "surface_revealed": "Povrch odhalen",
+    "conditions": {
+      "none": "Tato uložená hra nemá asteroidy. Kolonii jako shluk světů modelují jen uložené hry Spaced Out!."
+    }
   },
   "material": {
     "noun_titlecase": "Materiál",
@@ -115,7 +139,9 @@
   "save-file": {
     "verbs": {
       "load_titlecase": "Načíst",
-      "save_titlecase": "Uložit"
+      "save_titlecase": "Uložit",
+      "load_example_titlecase": "Načíst příklad",
+      "force_load": "Obejít kontroly a načíst uloženou hru"
     },
     "conditions": {
       "loading": "Načítání",
@@ -123,7 +149,13 @@
       "modified": "Upraveno",
       "modified_description": "Soubor byl od posledního uložení upraven.",
       "example": "Příklad",
-      "example_description": "Tohle je příklad, který nelze uložit."
+      "example_description": "Tohle je příklad, který nelze uložit.",
+      "load_failed_titlecase": "Načtení selhalo",
+      "load_failed": "Chyba při načítání uložené hry",
+      "version_major": "Tento soubor uvádí verzi hry, která není s tímto editorem kompatibilní.",
+      "version_minor": "Tato uložená hra je z verze hry, se kterou editor nebyl ověřen.",
+      "version_minor_detail": "Uložené hry popisují svou vlastní strukturu, takže verze, která pouze přidává nebo přeskupuje pole, se obvykle načte správně. Nejspíš půjde upravit.",
+      "version_minor_warning": "VAROVÁNÍ: úprava může i tak poškodit data a později způsobit pády a chyby ve hře. Nejdřív si soubor zazálohuj a načti jej na vlastní riziko."
     }
   },
   "overview-page": {
@@ -131,8 +163,13 @@
     "no-save": {
       "title": "Vybrat save",
       "prompt": "Žádný save nebyl načten.",
-      "save-location": "Save můžete nalézt v <1>{{path}}</1>."
-    }
+      "save-location": "Save můžete nalézt v <1>{{path}}</1>.",
+      "backup_warning": "Před úpravou si uloženou hru vždy zazálohuj. Úprava může kolonii poškodit a čisté načtení tady není zárukou, že hra výsledek přijme.",
+      "supported_saves": "Čte a zapisuje uložené hry základní hry i Spaced Out!, včetně balíčků Frosty Planet, Bionic Booster, Prehistoric Planet a Aquatic Planet."
+    },
+    "difficulty_titlecase": "Obtížnost",
+    "colony_summary": "{{cycles}} cyklů, {{duplicants}} duplikantů.",
+    "save_version": "Verze uložené hry {{version}}"
   },
   "raw-editor-page": {
     "title": "Editor dat"
@@ -140,5 +177,21 @@
   "view-github": "Zobrazit projekt na GitHub",
   "changelog": {
     "title": "Seznam změn"
+  },
+  "verbs": {
+    "back_titlecase": "Zpět",
+    "search_titlecase": "Hledat"
+  },
+  "conditions": {
+    "no_data": "Chyba: žádná data"
+  },
+  "settings-page": {
+    "title": "Nastavení",
+    "offline_titlecase": "Offline režim",
+    "offline_unsupported": "Tvůj prohlížeč offline režim nepodporuje.",
+    "offline_supported": "Tvůj prohlížeč offline režim podporuje.",
+    "offline_enable": "Zapnout offline režim",
+    "offline_enabled": "Offline režim je zapnutý. Tato stránka bude dostupná i bez připojení k internetu.",
+    "language_titlecase": "Jazyk"
   }
 }

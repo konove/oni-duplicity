@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { useTranslation } from "react-i18next";
 import { SaveGame } from "oni-save-parser";
 
 import { makeStyles, Theme } from "@/styles";
@@ -35,10 +37,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 }));
 
 const RawEditorPage: React.FC<RawEditorPageProps> = ({ saveGame }) => {
+  const { t } = useTranslation();
   const classes = useStyles();
   const [path, setPath] = React.useState(["header"]);
   return (
-    <PageContainer title="Raw Editor">
+    <PageContainer title={t("raw-editor-page.title")}>
       <RedirectIfNoSave />
       <div className={classes.root}>
         {saveGame && (

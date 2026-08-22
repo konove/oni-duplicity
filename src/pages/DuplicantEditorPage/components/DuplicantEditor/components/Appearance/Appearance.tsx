@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { useTranslation } from "react-i18next";
 import {
   AccessorizerBehavior,
   getAccessoryOfType,
@@ -51,6 +53,7 @@ const styles = (theme: Theme) =>
 type Props = AppearanceProps & WithStyles<typeof styles>;
 
 const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
+  const { t } = useTranslation();
   const [tab, setTab] = React.useState(0);
   const {
     templateData: { accessories },
@@ -108,9 +111,9 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
           value={tab}
           onChange={(_, value) => setTab(value)}
         >
-          <Tab label="Hair" />
-          <Tab label="Head" />
-          <Tab label="Eyes" />
+          <Tab label={t("duplicant_appearance.hair_titlecase")} />
+          <Tab label={t("duplicant_appearance.head_titlecase")} />
+          <Tab label={t("duplicant_appearance.eyes_titlecase")} />
           {/* Body has now been broken into more parts */}
           {/* <Tab label="Body" /> */}
         </Tabs>

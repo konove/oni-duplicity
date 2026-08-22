@@ -3,10 +3,15 @@
     "noun_titlecase_plural": "Дубликанты",
     "noun_titlecase": "Дубликант",
     "verbs": {
-      "edit_titlecase": "Редактировать дубликанта"
+      "edit_titlecase": "Редактировать дубликанта",
+      "clone_titlecase": "Клонировать",
+      "paste_titlecase": "Вставить",
+      "mega_titlecase": "Сделать мега-дубликанта",
+      "mega_description": "Максимум по всем атрибутам, все черты заменяются на хорошие, все интересы и полный опыт"
     },
     "conditions": {
-      "missing_titlecase": "Дубликант не найден"
+      "missing_titlecase": "Дубликант не найден",
+      "no_portrait": "Для этой внешности дубликанта нет портрета"
     }
   },
   "duplicant_effect": {
@@ -31,7 +36,10 @@
   "duplicant_attribute": {
     "noun_titlecase_plural": "Атрибуты",
     "primary_titlecase": "Основные",
-    "secondary_titlecase": "Вторичные"
+    "secondary_titlecase": "Вторичные",
+    "conditions": {
+      "missing_titlecase": "Атрибут не найден"
+    }
   },
   "duplicant_skills": {
     "noun_titlecase": "Навык",
@@ -40,7 +48,10 @@
     "mastery_titlecase": "Мастерство"
   },
   "duplicant_appearance": {
-    "noun_titlecase": "Внешний вид"
+    "noun_titlecase": "Внешний вид",
+    "hair_titlecase": "Волосы",
+    "head_titlecase": "Голова",
+    "eyes_titlecase": "Глаза"
   },
   "duplicant_health": {
     "noun_titlecase": "Здоровье"
@@ -51,7 +62,8 @@
       "edit_titlecase": "Редактировать существо"
     },
     "conditions": {
-      "missing_titlecase": "Существо не найдено"
+      "missing_titlecase": "Существо не найдено",
+      "not_implemented": "Не реализовано."
     }
   },
   "geyser": {
@@ -62,7 +74,19 @@
     "emission_rate": "Скорость извержения"
   },
   "world": {
-    "noun_titlecase_plural": "Миры"
+    "noun_titlecase_plural": "Миры",
+    "starting_world": "Стартовый мир",
+    "rocket_interior": "Внутри ракеты",
+    "name_titlecase": "Название",
+    "sunlight_titlecase": "Освещённость",
+    "cosmic_radiation_titlecase": "Космическая радиация",
+    "discovered": "Обнаружен",
+    "dupe_visited": "Посещён дубликантом",
+    "rover_visited": "Посещён ровером",
+    "surface_revealed": "Поверхность открыта",
+    "conditions": {
+      "none": "В этом сейве нет астероидов. Только сейвы Spaced Out! описывают колонию как кластер миров."
+    }
   },
   "material": {
     "noun_titlecase": "Материал",
@@ -115,7 +139,9 @@
   "save-file": {
     "verbs": {
       "load_titlecase": "Загрузить",
-      "save_titlecase": "Сохранить"
+      "save_titlecase": "Сохранить",
+      "load_example_titlecase": "Загрузить пример",
+      "force_load": "Обойти проверки и загрузить сейв"
     },
     "conditions": {
       "loading": "Загрузка",
@@ -123,7 +149,13 @@
       "modified": "Изменено",
       "modified_description": "Файл был изменён с момента последнего сохранения.",
       "example": "Пример",
-      "example_description": "Это демонстрационный сейв, его нельзя сохранить."
+      "example_description": "Это демонстрационный сейв, его нельзя сохранить.",
+      "load_failed_titlecase": "Не удалось загрузить",
+      "load_failed": "Ошибка загрузки сейва",
+      "version_major": "Этот сейв сделан в версии игры, несовместимой с редактором.",
+      "version_minor": "Этот сейв сделан в версии игры, с которой редактор не проверяли.",
+      "version_minor_detail": "Сейвы описывают свою структуру сами, поэтому версия, которая лишь добавляет или переставляет поля, обычно читается нормально. Скорее всего, его можно редактировать.",
+      "version_minor_warning": "ВНИМАНИЕ: правка всё равно может испортить данные и позже привести к вылетам и поломкам. Сначала сделай резервную копию и загружай на свой страх и риск."
     }
   },
   "overview-page": {
@@ -131,8 +163,13 @@
     "no-save": {
       "title": "Выбери сейв",
       "prompt": "Никакой файл не загружен.",
-      "save-location": "Сейвы лежат тут: <1>{{path}}</1>."
-    }
+      "save-location": "Сейвы лежат тут: <1>{{path}}</1>.",
+      "backup_warning": "Всегда делай резервную копию сейва перед правкой. Правка может испортить колонию, и успешная загрузка здесь не гарантирует, что игра примет результат.",
+      "supported_saves": "Читает и пишет сейвы базовой игры и Spaced Out!, включая наборы Frosty Planet, Bionic Booster, Prehistoric Planet и Aquatic Planet."
+    },
+    "difficulty_titlecase": "Сложность",
+    "colony_summary": "Циклов: {{cycles}}, дубликантов: {{duplicants}}.",
+    "save_version": "Версия сейва {{version}}"
   },
   "raw-editor-page": {
     "title": "Свойства сейва"
@@ -140,5 +177,21 @@
   "view-github": "Посмотреть проект на GitHub",
   "changelog": {
     "title": "История изменений"
+  },
+  "verbs": {
+    "back_titlecase": "Назад",
+    "search_titlecase": "Поиск"
+  },
+  "conditions": {
+    "no_data": "Ошибка: нет данных"
+  },
+  "settings-page": {
+    "title": "Настройки",
+    "offline_titlecase": "Автономный режим",
+    "offline_unsupported": "Твой браузер не поддерживает автономный режим.",
+    "offline_supported": "Твой браузер поддерживает автономный режим.",
+    "offline_enable": "Включить автономный режим",
+    "offline_enabled": "Автономный режим включён. Эта страница будет доступна без интернета.",
+    "language_titlecase": "Язык"
   }
 }

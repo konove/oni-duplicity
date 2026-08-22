@@ -53,8 +53,7 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
   // Materials arrive as SimHashes ids - "SandStone", "CrushedIce" - which is
   // not what the game calls them in any language, English included.
   const materialName = React.useCallback(
-    (name: string) =>
-      t(`oni:ELEMENTS.${name}.NAME`, { defaultValue: name }),
+    (name: string) => t(`oni:ELEMENTS.${name}.NAME`, { defaultValue: name }),
     [t],
   );
 
@@ -67,7 +66,7 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
     <div>
       <TextField
         className={styles.searchBox}
-        label="Search"
+        label={t("verbs.search_titlecase")}
         onChange={onSearchChange}
       />
       <Table className={className} size="small">

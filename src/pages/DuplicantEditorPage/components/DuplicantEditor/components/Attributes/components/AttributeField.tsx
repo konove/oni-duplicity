@@ -1,4 +1,6 @@
 import * as React from "react";
+
+import { Trans } from "react-i18next";
 import { AIAttributeLevelsBehavior } from "oni-save-parser";
 import { findIndex } from "lodash";
 
@@ -34,7 +36,13 @@ const AttributeField: React.FC<Props> = ({
   );
 
   if (attrIndex === -1) {
-    return <Typography>Attribute Not Found</Typography>;
+    return (
+      <Typography>
+        <Trans i18nKey="duplicant_attribute.conditions.missing_titlecase">
+          Attribute Not Found
+        </Trans>
+      </Typography>
+    );
   }
 
   const attr = saveLoadLevels[attrIndex];

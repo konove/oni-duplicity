@@ -3,10 +3,15 @@
     "noun_titlecase_plural": "复制人们",
     "noun_titlecase": "复制人",
     "verbs": {
-      "edit_titlecase": "编辑复制人"
+      "edit_titlecase": "编辑复制人",
+      "clone_titlecase": "克隆",
+      "paste_titlecase": "粘贴",
+      "mega_titlecase": "创建超级复制人",
+      "mega_description": "将所有属性拉满，把所有特质替换为有利特质，获得全部兴趣并给予满经验"
     },
     "conditions": {
-      "missing_titlecase": "复制人未找到"
+      "missing_titlecase": "复制人未找到",
+      "no_portrait": "没有与该复制人外观对应的立绘"
     }
   },
   "duplicant_effect": {
@@ -31,7 +36,10 @@
   "duplicant_attribute": {
     "noun_titlecase_plural": "属性",
     "primary_titlecase": "主要属性",
-    "secondary_titlecase": "次要属性"
+    "secondary_titlecase": "次要属性",
+    "conditions": {
+      "missing_titlecase": "未找到属性"
+    }
   },
   "duplicant_skills": {
     "noun_titlecase": "技能",
@@ -40,7 +48,10 @@
     "mastery_titlecase": "精通"
   },
   "duplicant_appearance": {
-    "noun_titlecase": "外观"
+    "noun_titlecase": "外观",
+    "hair_titlecase": "头发",
+    "head_titlecase": "头型",
+    "eyes_titlecase": "眼睛"
   },
   "duplicant_health": {
     "noun_titlecase": "健康值"
@@ -51,7 +62,8 @@
       "edit_titlecase": "编辑小动物"
     },
     "conditions": {
-      "missing_titlecase": "小动物未找到"
+      "missing_titlecase": "小动物未找到",
+      "not_implemented": "尚未实现。"
     }
   },
   "geyser": {
@@ -62,7 +74,19 @@
     "emission_rate": "喷发速率"
   },
   "world": {
-    "noun_titlecase_plural": "星球"
+    "noun_titlecase_plural": "星球",
+    "starting_world": "初始星球",
+    "rocket_interior": "火箭内部",
+    "name_titlecase": "名称",
+    "sunlight_titlecase": "光照",
+    "cosmic_radiation_titlecase": "宇宙辐射",
+    "discovered": "已发现",
+    "dupe_visited": "复制人已到访",
+    "rover_visited": "探测车已到访",
+    "surface_revealed": "地表已揭示",
+    "conditions": {
+      "none": "此存档没有小行星。只有 Spaced Out! 存档才会把殖民地建模为星群。"
+    }
   },
   "material": {
     "noun_titlecase": "材料",
@@ -115,7 +139,9 @@
   "save-file": {
     "verbs": {
       "load_titlecase": "加载存档",
-      "save_titlecase": "保存"
+      "save_titlecase": "保存",
+      "load_example_titlecase": "加载示例",
+      "force_load": "跳过安全检查并加载存档"
     },
     "conditions": {
       "loading": "加载中...",
@@ -123,7 +149,13 @@
       "modified": "已修改",
       "modified_description": "文件自上次保存后已被修改。",
       "example": "示例",
-      "example_description": "这是示例内容，无法保存。"
+      "example_description": "这是示例内容，无法保存。",
+      "load_failed_titlecase": "加载失败",
+      "load_failed": "加载存档出错",
+      "version_major": "此存档标记的游戏版本与本编辑器不兼容。",
+      "version_minor": "此存档来自尚未验证过的游戏版本。",
+      "version_minor_detail": "存档会描述自身结构，因此仅新增或调整字段顺序的版本通常仍可正确读取，很可能可以编辑。",
+      "version_minor_warning": "警告：编辑仍可能损坏数据，导致之后崩溃或出现破坏性错误。请先备份存档，风险自负。"
     }
   },
   "overview-page": {
@@ -131,8 +163,13 @@
     "no-save": {
       "title": "选择存档",
       "prompt": "存档未读取",
-      "save-location": "存档保存路径：<1>{{path}}</1>."
-    }
+      "save-location": "存档保存路径：<1>{{path}}</1>.",
+      "backup_warning": "编辑前请务必备份存档。编辑可能损坏殖民地，这里能正常加载也不保证游戏会接受结果。",
+      "supported_saves": "可读写本体与 Spaced Out! 存档，包括冰霜星球、仿生人强化、史前星球与水生星球扩展包。"
+    },
+    "difficulty_titlecase": "难度",
+    "colony_summary": "{{cycles}} 个周期，{{duplicants}} 名复制人。",
+    "save_version": "存档版本 {{version}}"
   },
   "raw-editor-page": {
     "title": "原始数据编辑器"
@@ -140,5 +177,21 @@
   "view-github": "在 GitHub 上查看项目",
   "changelog": {
     "title": "更新日志"
+  },
+  "verbs": {
+    "back_titlecase": "返回",
+    "search_titlecase": "搜索"
+  },
+  "conditions": {
+    "no_data": "错误：无数据"
+  },
+  "settings-page": {
+    "title": "设置",
+    "offline_titlecase": "离线模式",
+    "offline_unsupported": "你的浏览器不支持离线模式。",
+    "offline_supported": "你的浏览器支持离线模式。",
+    "offline_enable": "启用离线模式",
+    "offline_enabled": "离线模式已启用。此网页在没有网络时也可访问。",
+    "language_titlecase": "语言"
   }
 }

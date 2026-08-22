@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Trans, useTranslation } from "react-i18next";
+
 import MenuItem from "@mui/material/MenuItem";
 
 export interface MegaMenuItemProps {
@@ -9,6 +11,7 @@ export interface MegaMenuItemProps {
 
 type Props = MegaMenuItemProps;
 const MegaMenuItem: React.FC<Props> = ({ onMegaDuplicant, onClick }) => {
+  const { t } = useTranslation();
   const onMenuItemClick = React.useCallback(() => {
     onMegaDuplicant();
     onClick();
@@ -16,9 +19,11 @@ const MegaMenuItem: React.FC<Props> = ({ onMegaDuplicant, onClick }) => {
   return (
     <MenuItem
       onClick={onMenuItemClick}
-      title="Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience"
+      title={t("duplicant.verbs.mega_description")}
     >
-      Make Mega Duplicant
+      <Trans i18nKey="duplicant.verbs.mega_titlecase">
+        Make Mega Duplicant
+      </Trans>
     </MenuItem>
   );
 };

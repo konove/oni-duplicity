@@ -43,12 +43,18 @@ const NoSave: React.FC<Props> = ({ classes, t }) => (
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Typography variant="h6" color="error">
-          Always back up a save before editing it. Editing can corrupt a colony,
-          and a clean load here is no guarantee the game will accept the result.
+          <Trans i18nKey="overview-page.no-save.backup_warning">
+            Always back up a save before editing it. Editing can corrupt a
+            colony, and a clean load here is no guarantee the game will accept
+            the result.
+          </Trans>
         </Typography>
         <Typography variant="body1">
-          Reads and writes base game and Spaced Out! saves, including the Frosty
-          Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet packs.
+          <Trans i18nKey="overview-page.no-save.supported_saves">
+            Reads and writes base game and Spaced Out! saves, including the
+            Frosty Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet
+            packs.
+          </Trans>
         </Typography>
       </Paper>
       <Divider />

@@ -19,7 +19,11 @@ const AttributeName: React.FC<Props> = ({ gameObjectId, attributeId, t }) => {
   const { templateData } = useBehavior(gameObjectId, AIAttributeLevelsBehavior);
 
   if (!templateData) {
-    return <div>Error: No Data</div>;
+    return (
+      <div>
+        <Trans i18nKey="conditions.no_data">Error: No Data</Trans>
+      </div>
+    );
   }
 
   const attribute = find(
