@@ -1,3 +1,4 @@
+// @ts-check
 "use strict";
 const path = require("path");
 
@@ -27,7 +28,8 @@ const publicPath = isDev ? "/" : PUBLIC_URL_PATH;
 
 console.log("Webpack build", isDev ? "[development]" : "[production]");
 
-module.exports = {
+/** @type {import("webpack").Configuration} */
+const config = {
   mode: isDev ? "development" : "production",
 
   devtool: isDev ? "eval-source-map" : "source-map",
@@ -197,3 +199,5 @@ module.exports = {
     hints: false,
   },
 };
+
+module.exports = config;

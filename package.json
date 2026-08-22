@@ -11,7 +11,7 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
-    "typecheck": "tsc -p src --noEmit",
+    "typecheck": "tsc -p src --noEmit && tsc -p tsconfig.node.json",
     "lint": "eslint .",
     "test": "jest",
     "start": "cross-env NODE_ENV=development webpack serve --config ./webpack.config.js",
