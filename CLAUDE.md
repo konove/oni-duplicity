@@ -51,6 +51,12 @@ Supported save versions are the `CURRENT_VERSION_MINOR` array in the fork's `src
 
 Tests are `*.spec.ts` files sitting **next to the code they test** (e.g. `src/services/oni-save/reducer/modify-behavior.spec.ts`), not in `__tests__/` directories. A glob for `*.test.ts` finds nothing and will make you think the repo is untested. `src/__mocks__/` holds fixture data, not jest module mocks.
 
+The default `testEnvironment` is **`node`** — every existing suite is pure logic. A test that needs a DOM opts in per file with a `@jest-environment jsdom` docblock; `jest-environment-jsdom` stays installed for exactly that.
+
+CSS and asset imports are mapped to stubs in `test/` so a component can be imported at all. Those mappings must stay **above** the `^@/(.*)$` alias in `moduleNameMapper` — jest applies mappers in order, and `@/style.css` would otherwise resolve to the real file and be parsed as JavaScript.
+
+The stubs do not make the duplicant sprite components testable. `react-oni-duplicant` ships untranspiled ESM (jest skips `node_modules` transforms) and reaches for `require.context`, which only webpack provides. Testing those needs `transformIgnorePatterns` plus a `require.context` shim, neither of which is set up.
+
 ## Gotchas
 
 - **Hash routing.** URLs are `/#/duplicants`, and `HashRouter` lives in `root.tsx`. Routing state is not in redux — `connected-react-router` was removed and nothing selects off a router slice.

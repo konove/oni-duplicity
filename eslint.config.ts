@@ -90,7 +90,7 @@ export default defineConfig([
   // sit outside src/tsconfig.json, so type-aware rules must be off or the
   // parser errors that the file is not part of any project.
   {
-    files: ["*.js", ".claude/**/*.js"],
+    files: ["*.js", "test/**/*.js", ".claude/**/*.js"],
     extends: [tseslint.configs.disableTypeChecked],
     languageOptions: {
       sourceType: "commonjs",

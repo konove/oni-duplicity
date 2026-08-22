@@ -1,8 +1,8 @@
 {
   // Build tooling only; the application's project is src/tsconfig.json. This
-  // exists so `webpack.config.js` (checked via its `// @ts-check` pragma) and
-  // `eslint.config.ts` are type-checked by `npm run typecheck`, not just in
-  // the editor.
+  // exists so the config files (`webpack.config.js` and `jest.config.js`, both
+  // checked via their `// @ts-check` pragma, plus `eslint.config.ts`) are
+  // type-checked by `npm run typecheck`, not just in the editor.
   "compilerOptions": {
     "target": "ES2023",
     "module": "node16",
@@ -15,5 +15,5 @@
     "types": ["node", "webpack-dev-server"],
     "noEmit": true
   },
-  "include": ["webpack.config.js", "eslint.config.ts"]
+  "include": ["webpack.config.js", "jest.config.js", "eslint.config.ts"]
 }
