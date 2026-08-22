@@ -2,8 +2,6 @@
 "use strict";
 const path = require("path");
 
-const webpack = require("webpack");
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
@@ -17,7 +15,6 @@ const PATHS = {
   appSrc: path.resolve(root, "./src"),
   appPublic: path.resolve(root, "./public"),
   appDist: path.resolve(root, "./dist"),
-  nodeModules: path.resolve(root, "./node_modules"),
   changelog: path.resolve(root, "./CHANGELOG.md"),
 };
 
@@ -34,29 +31,28 @@ const config = {
 
   devtool: isDev ? "eval-source-map" : "source-map",
 
+  cache: {
+    type: "filesystem",
+  },
+
   devServer: {
     static: {
       directory: PATHS.appPublic,
     },
     hot: isDev,
-    historyApiFallback: true,
     port: 8080,
   },
 
   entry: {
-    client: [path.join(PATHS.appSrc, "./index.tsx")],
+    client: path.join(PATHS.appSrc, "./index.tsx"),
   },
 
   output: {
     filename: "[name].[contenthash].bundle.js",
     chunkFilename: "[name].[contenthash].chunk.js",
-    assetModuleFilename: "assets/[hash][ext][query]",
     path: PATHS.appDist,
     publicPath,
     clean: true,
-
-    // Fix hot-reload interfering with web workers
-    globalObject: "self",
   },
 
   resolve: {
@@ -70,14 +66,6 @@ const config = {
 
   module: {
     rules: [
-      // Process source maps in input sources.
-      {
-        enforce: "pre",
-        test: /\.(jsx?|tsx?)$/,
-        loader: "source-map-loader",
-        include: [PATHS.appSrc],
-      },
-
       {
         test: /\.tsx?$/,
         include: [PATHS.appSrc],
@@ -86,7 +74,6 @@ const config = {
             loader: "ts-loader",
             options: {
               configFile: path.resolve(PATHS.appSrc, "tsconfig.json"),
-              transpileOnly: false,
             },
           },
         ],
@@ -111,13 +98,6 @@ const config = {
         },
       },
       {
-        test: /\.(ttf|eot|svg)$/,
-        type: "asset/resource",
-        generator: {
-          filename: "fonts/[hash][ext][query]",
-        },
-      },
-      {
         test: /\.png$/,
         type: "asset/resource",
         generator: {
@@ -132,12 +112,6 @@ const config = {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(
-        isDev ? "development" : "production"
-      ),
-    }),
-
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(PATHS.appSrc, "index.ejs"),
@@ -155,8 +129,7 @@ const config = {
     // Production only. GenerateSW warns on every rebuild under --watch, and
     // webpack-dev-server renders warnings as a full-screen overlay.
     // Consequence: the Settings page's "Enable Offline Mode" toggle cannot be
-    // exercised via `npm start` (no /service-worker.js to register, and
-    // historyApiFallback serves index.html instead, failing the MIME check).
+    // exercised via `npm start` - there is no /service-worker.js to register.
     // Use `npm run build` and serve dist/ to test offline mode.
     ...(isDev
       ? []
@@ -175,20 +148,39 @@ const config = {
     splitChunks: {
       chunks: "all",
       cacheGroups: {
+        // Named groups rather than a chunk per package. Per-package naming
+        // silently collided with webpack's own defaults - `maxInitialRequests`
+        // (30) and `minSize` (20000) - so only the packages that happened to be
+        // large enough won a chunk and the rest pooled into an anonymous one.
+        // Which packages fell on which side moved with their sizes, so an
+        // unrelated dependency bump reshuffled the pool and invalidated it for
+        // everyone. These boundaries are fixed instead.
+
+        // Versioned on its own schedule, and the only dependency the worker
+        // needs.
+        parser: {
+          test: /[\\/]node_modules[\\/](oni-save-parser|pako|text-encoding|jsonschema)[\\/]/,
+          name: "npm.save-parser",
+          priority: 30,
+        },
+
+        // Emotion is MUI's styling engine, so the two always move together.
+        ui: {
+          test: /[\\/]node_modules[\\/](@mui|@emotion|@base-ui|stylis)[\\/]/,
+          name: "npm.ui",
+          priority: 20,
+        },
+
+        framework: {
+          test: /[\\/]node_modules[\\/](react|react-dom|scheduler|react-router|react-router-dom|react-redux|redux|redux-saga|@redux-saga)[\\/]/,
+          name: "npm.framework",
+          priority: 10,
+        },
+
         npm: {
           test: /[\\/]node_modules[\\/]/,
-          name(mod) {
-            if (!mod.context) {
-              return "npm.vendor";
-            }
-            const relToModule = path.relative(PATHS.nodeModules, mod.context);
-            const [scopeOrName, maybeName] = relToModule.split(path.sep);
-            const moduleName = scopeOrName.startsWith("@")
-              ? `${scopeOrName}-${maybeName}`
-              : scopeOrName;
-            // Sanitise for use as a filename.
-            return `npm.${String(moduleName).replace(/[^a-z0-9_-]/gi, "-")}`;
-          },
+          name: "npm.vendor",
+          priority: 0,
         },
       },
     },
