@@ -45,8 +45,24 @@
   "duplicant_health": {
     "noun_titlecase": "Salud"
   },
+  "creature": {
+    "noun_titlecase_plural": "Criaturas",
+    "verbs": {
+      "edit_titlecase": "Editar Criatura"
+    },
+    "conditions": {
+      "missing_titlecase": "Criatura No Encontrada"
+    }
+  },
   "geyser": {
-    "noun_titlecase_plural": "Géiseres"
+    "noun_titlecase_plural": "Géiseres",
+    "total_lifecycle_time": "Duración total del ciclo (inactivo + activo)",
+    "active_time": "Tiempo activo",
+    "emission_length": "Duración de la emisión",
+    "emission_rate": "Tasa de emisión"
+  },
+  "world": {
+    "noun_titlecase_plural": "Mundos"
   },
   "material": {
     "noun_titlecase": "Material",
@@ -121,5 +137,8 @@
   "raw-editor-page": {
     "title": "Edición manual"
   },
-  "view-github": "Ver projecto en GitHub"
+  "view-github": "Ver projecto en GitHub",
+  "changelog": {
+    "title": "Registro de cambios"
+  }
 }

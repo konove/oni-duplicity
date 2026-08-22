@@ -29,8 +29,7 @@ void i18n.use(initReactI18next).init({
       oni: require("@/translations/es/oni.json"),
     },
     ko: {
-      // No common.json yet: the game catalogue covers its own strings, not this
-      // app's UI, so the chrome around the editor falls back to English.
+      common: require("@/translations/ko/common.json"),
       oni: require("@/translations/ko/oni.json"),
     },
     ru: {

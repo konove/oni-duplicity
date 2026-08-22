@@ -1,0 +1,144 @@
+{
+  "duplicant": {
+    "noun_titlecase_plural": "복제체",
+    "noun_titlecase": "복제체",
+    "verbs": {
+      "edit_titlecase": "복제체 편집"
+    },
+    "conditions": {
+      "missing_titlecase": "복제체를 찾을 수 없음"
+    }
+  },
+  "duplicant_effect": {
+    "noun_titlecase": "효과",
+    "verbs": {
+      "add_titlecase": "효과 추가"
+    }
+  },
+  "duplicant_trait": {
+    "noun_titlecase": "특성",
+    "noun_titlecase_plural": "특성",
+    "verbs": {
+      "add_titlecase": "특성 추가"
+    }
+  },
+  "duplicant_interest": {
+    "noun_titlecase": "관심 분야",
+    "verbs": {
+      "add_titlecase": "관심 분야 추가"
+    }
+  },
+  "duplicant_attribute": {
+    "noun_titlecase_plural": "속성",
+    "primary_titlecase": "주요",
+    "secondary_titlecase": "보조"
+  },
+  "duplicant_skills": {
+    "noun_titlecase": "기술",
+    "noun_titlecase_plural": "기술",
+    "experience_titlecase": "경험치",
+    "mastery_titlecase": "숙련도"
+  },
+  "duplicant_appearance": {
+    "noun_titlecase": "외형"
+  },
+  "duplicant_health": {
+    "noun_titlecase": "건강"
+  },
+  "creature": {
+    "noun_titlecase_plural": "크리터",
+    "verbs": {
+      "edit_titlecase": "크리터 편집"
+    },
+    "conditions": {
+      "missing_titlecase": "크리터를 찾을 수 없음"
+    }
+  },
+  "geyser": {
+    "noun_titlecase_plural": "분출구",
+    "total_lifecycle_time": "전체 주기 시간 (휴면 + 활성)",
+    "active_time": "활성 시간",
+    "emission_length": "분출 지속 시간",
+    "emission_rate": "분출 속도"
+  },
+  "world": {
+    "noun_titlecase_plural": "세계"
+  },
+  "material": {
+    "noun_titlecase": "재료",
+    "noun_titlecase_plural": "재료",
+    "all_titlecase": "모든 재료",
+    "gram": "{{count}} g",
+    "kilogram": "{{count}} kg"
+  },
+  "material_loose": {
+    "noun_titlecase": "흩어진 재료",
+    "clump_count": "{{count}} 덩어리",
+    "clump_count_plural": "{{count}} 덩어리",
+    "verbs": {
+      "delete_name": "{{name}} 삭제"
+    },
+    "prompts": {
+      "delete": "게임에서 흩어진 재료를 모두 제거합니다. 제거된 재료는 복구할 수 없습니다."
+    }
+  },
+  "material_storage": {
+    "noun_titlecase": "저장소",
+    "container_count": "{{count}}개 용기",
+    "container_count_plural": "{{count}}개 용기"
+  },
+  "time_cycles": {
+    "noun_titlecase": "주기 시간"
+  },
+  "dialog": {
+    "queries": {
+      "continue": "계속하시겠습니까?"
+    },
+    "verbs": {
+      "cancel_titlecase": "취소",
+      "confirm_titlecase": "확인"
+    }
+  },
+  "data": {
+    "conditions": {
+      "modified_titlecase": "데이터 수정됨"
+    },
+    "prompts": {
+      "modified-description": "이 파일의 데이터는 내보낸 이후 수정되었습니다.\n가져온 데이터는 검증되지 않으며, 잘못된 데이터를 가져오면 저장 파일이 손상될 수 있습니다."
+    },
+    "verbs": {
+      "copy_titlecase": "복사",
+      "export_titlecase": "내보내기",
+      "import_titlecase": "가져오기"
+    }
+  },
+  "save-file": {
+    "verbs": {
+      "load_titlecase": "로드",
+      "save_titlecase": "저장"
+    },
+    "conditions": {
+      "loading": "로드 중",
+      "saving": "저장 중",
+      "modified": "수정됨",
+      "modified_description": "이 파일은 마지막으로 저장한 이후 수정되었습니다.",
+      "example": "예시",
+      "example_description": "예시 콘텐츠이므로 저장할 수 없습니다."
+    }
+  },
+  "overview-page": {
+    "title": "개요",
+    "no-save": {
+      "title": "저장 파일 선택",
+      "prompt": "불러온 저장 파일이 없습니다.",
+      "save-location": "저장 파일은 <1>{{path}}</1>에 있습니다."
+    }
+  },
+  "raw-editor-page": {
+    "title": "원본 편집기"
+  },
+  "view-github": "GitHub에서 프로젝트 보기",
+  "changelog": {
+    "title": "변경 사항"
+  }
+}

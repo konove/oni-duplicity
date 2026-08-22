@@ -17,6 +17,7 @@
   },
   "duplicant_trait": {
     "noun_titlecase": "特质",
+    "noun_titlecase_plural": "特质",
     "verbs": {
       "add_titlecase": "添加特质"
     }
@@ -34,6 +35,7 @@
   },
   "duplicant_skills": {
     "noun_titlecase": "技能",
+    "noun_titlecase_plural": "技能",
     "experience_titlecase": "经验值",
     "mastery_titlecase": "精通"
   },
@@ -43,8 +45,24 @@
   "duplicant_health": {
     "noun_titlecase": "健康值"
   },
+  "creature": {
+    "noun_titlecase_plural": "小动物",
+    "verbs": {
+      "edit_titlecase": "编辑小动物"
+    },
+    "conditions": {
+      "missing_titlecase": "小动物未找到"
+    }
+  },
   "geyser": {
-    "noun_titlecase_plural": "间歇泉"
+    "noun_titlecase_plural": "间歇泉",
+    "total_lifecycle_time": "完整周期时间（休眠 + 活跃）",
+    "active_time": "活跃时间",
+    "emission_length": "喷发时长",
+    "emission_rate": "喷发速率"
+  },
+  "world": {
+    "noun_titlecase_plural": "星球"
   },
   "material": {
     "noun_titlecase": "材料",
@@ -96,11 +114,16 @@
   },
   "save-file": {
     "verbs": {
-      "load_titlecase": "加载存档"
+      "load_titlecase": "加载存档",
+      "save_titlecase": "保存"
     },
     "conditions": {
       "loading": "加载中...",
-      "modified": "已修改"
+      "saving": "保存中",
+      "modified": "已修改",
+      "modified_description": "文件自上次保存后已被修改。",
+      "example": "示例",
+      "example_description": "这是示例内容，无法保存。"
     }
   },
   "overview-page": {
@@ -111,5 +134,11 @@
       "save-location": "存档保存路径：<1>{{path}}</1>."
     }
   },
-  "view-github": "View project on GitHub"
+  "raw-editor-page": {
+    "title": "原始数据编辑器"
+  },
+  "view-github": "在 GitHub 上查看项目",
+  "changelog": {
+    "title": "更新日志"
+  }
 }

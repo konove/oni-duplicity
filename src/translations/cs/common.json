@@ -45,8 +45,24 @@
   "duplicant_health": {
     "noun_titlecase": "Život"
   },
+  "creature": {
+    "noun_titlecase_plural": "Tvorové",
+    "verbs": {
+      "edit_titlecase": "Upravit tvora"
+    },
+    "conditions": {
+      "missing_titlecase": "Tvor nenalezen"
+    }
+  },
   "geyser": {
-    "noun_titlecase_plural": "Gejzíry"
+    "noun_titlecase_plural": "Gejzíry",
+    "total_lifecycle_time": "Celková délka cyklu (spánek + aktivita)",
+    "active_time": "Doba aktivity",
+    "emission_length": "Délka výronu",
+    "emission_rate": "Rychlost výronu"
+  },
+  "world": {
+    "noun_titlecase_plural": "Světy"
   },
   "material": {
     "noun_titlecase": "Materiál",
@@ -119,7 +135,10 @@
     }
   },
   "raw-editor-page": {
-    "title": "Raw Editor"
+    "title": "Editor dat"
   },
-  "view-github": "Zobrazit projekt na GitHub"
+  "view-github": "Zobrazit projekt na GitHub",
+  "changelog": {
+    "title": "Seznam změn"
+  }
 }
