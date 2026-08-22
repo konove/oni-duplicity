@@ -6,7 +6,7 @@ A web-based Oxygen Not Included save editor. React 19 + MUI v9 + redux-saga, bun
 
 ## Commands
 
-Node 20.19+ required (developed on 24 LTS).
+Node 22.15+ required (developed on 24 LTS). The floor is set by `webpack-dev-server@6`, the only package in the tree that needs more than 20.19 — below it everything except `npm start` still works, which is a confusing way to fail.
 
 - `npm start` — dev server on :8080
 - `npm run build` — production bundle to `dist/`

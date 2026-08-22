@@ -3,22 +3,25 @@
   "friendlyName": "Duplicity",
   "version": "3.27.0",
   "description": "A web-based Oxygen Not Included save file editor.",
-  "main": "lib/index.js",
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.15.0"
   },
   "scripts": {
     "clean": "rimraf dist",
-    "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
     "typecheck": "tsc -p src --noEmit && tsc -p tsconfig.node.json",
     "lint": "eslint .",
     "test": "jest",
     "start": "cross-env NODE_ENV=development webpack serve --config ./webpack.config.js",
     "start:prod": "cross-env NODE_ENV=production webpack serve --config ./webpack.config.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist -r https://github.com/konove/oni-duplicity"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konove/oni-duplicity.git"
+  },
   "keywords": [
     "ONI",
     "OxygenNotIncluded",
@@ -87,7 +90,6 @@
     "react-oni-duplicant": "^0.1.3",
     "react-redux": "^9.3.0",
     "react-router": "^7.18.2",
-    "react-router-dom": "^7.18.2",
     "redux": "^5.0.1",
     "redux-saga": "^1.5.1",
     "reselect": "^5.2.0"
