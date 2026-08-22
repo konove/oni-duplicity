@@ -1,335 +1,1251 @@
 {
   "DUPLICANTS": {
     "TRAITS": {
-      "CLAUSTROPHOBIC": {
-        "NAME": "幽闭恐惧症",
-        "DESC": "在矮于四块砖块或窄于三块砖块的空间里，这名复制人会感到要窒息"
+      "AGGRESSIVE": {
+        "NAME": "毁坏",
+        "DESC": "这名复制人压力大时会把气撒在毫无还手之力的机器上"
       },
-
-      "FASHIONABLE": {
-        "NAME": "时尚达人",
-        "DESC": "穿上不够实时的服装会让这名复制人内心崩溃"
+      "ALLERGIES": {
+        "NAME": "过敏症",
+        "DESC": "这名复制人闻到花香时会不受控制地打喷嚏"
       },
-
-      "CLIMACOPHOBIC": {
-        "NAME": "恐高",
-        "DESC": "爬上高于四块砖块的梯子时，这名复制人会觉得胃里难受"
+      "ANCIENTKNOWLEDGE": {
+        "NAME": "远古学识",
+        "DESC": "这名复制人具有来自过去的知识 • 初始具有3个技能点"
       },
-
-      "SOLITARYSLEEPER": {
-        "NAME": "独步梦乡",
-        "DESC": "这名复制人更喜欢自己一个人睡"
+      "ANEMIC": {
+        "NAME": "运动贫血症",
+        "DESC": "这名复制人想在跑步时跟上别人相当困难"
       },
-
-      "PREFERSWARMER": {
-        "NAME": "皮包骨头",
-        "DESC": "这名复制人比别人少一层脂肪，因此对于温度比其他人更为敏感"
+      "ANXIOUS": {
+        "NAME": "焦虑症",
+        "DESC": "过度的压力会让这名复制人精神崩溃"
       },
-
-      "PREFERSCOOLER": {
-        "NAME": "无端三粗",
-        "DESC": "这名复制人比别人多一层脂肪，因此室温对自己的影响要小一些"
+      "ARCHAEOLOGIST": {
+        "NAME": "文物猎人",
+        "DESC": "这名复制人从没有被教导过“只带走照片，只留下脚印”"
       },
-
-      "SENSITIVEFEET": {
-        "NAME": "纤纤细足",
-        "DESC": "这名复制人脚底十分敏感，相比于裸露的地面，他更喜欢在铺砖的地面上行走"
+      "ARTDOWN": {
+        "NAME": "理论艺术家",
+        "DESC": "这名复制人自豪地声明，他“连火柴人都画不出来”"
       },
-
-      "WORKAHOLIC": {
-        "NAME": "工作狂人",
-        "DESC": "这名复制人一闲下来就浑身难受"
+      "BALLOONARTIST": {
+        "NAME": "气球艺术家",
+        "DESC": "这名复制人在喜悦时会分发气球"
       },
-
-      "CANTRESEARCH": {
-        "NAME": "粗人",
-        "DESC": "这名复制人可不是天才"
+      "BANSHEE": {
+        "NAME": "鬼嚎",
+        "DESC": "这名复制人在压力过大时会不受控制地大声嚎叫"
       },
-
+      "BEDSIDEMANNER": {
+        "NAME": "护理员",
+        "DESC": "这名复制人对病人态度友好，而且能够帮助病人治愈"
+      },
+      "BINGEEATER": {
+        "NAME": "狂吃",
+        "DESC": "这名复制人在压力过大时会暴饮暴食"
+      },
+      "BIONICBUG1": {
+        "NAME": "仿生漏洞：僵化思维",
+        "DESC": "这名复制人的仿生系统相当不灵活"
+      },
+      "BIONICBUG2": {
+        "NAME": "仿生漏洞：情感解离",
+        "DESC": "这名复制人的仿生系统没有所谓的“连结器”部件"
+      },
+      "BIONICBUG3": {
+        "NAME": "仿生漏洞：笨手笨脚",
+        "DESC": "这名复制人的仿生系统并非用于操作其他系统"
+      },
+      "BIONICBUG4": {
+        "NAME": "仿生漏洞：过度设计",
+        "DESC": "这名复制人的仿生系统很难能通过处理阶段"
+      },
+      "BIONICBUG5": {
+        "NAME": "仿生漏洞：大器晚成",
+        "DESC": "这名复制人的仿生系统不是为了速度而构建的"
+      },
+      "BIONICBUG6": {
+        "NAME": "仿生漏洞：都市头脑",
+        "DESC": "这名复制人的仿生系统是由完全没有在现实生活中见过植物的人设计的"
+      },
+      "BIONICBUG7": {
+        "NAME": "仿生漏洞：错误倾向",
+        "DESC": "这名复制人的仿生系统的错误也有发生错误的倾向"
+      },
+      "BOTANISTDOWN": {
+        "NAME": "植物杀手",
+        "DESC": "如果你要度假，千万别让这名复制人照顾你的植物"
+      },
+      "CALORIEBURNER": {
+        "NAME": "无底洞之胃",
+        "DESC": "这名复制人的风衣下面大概藏了几个黑洞吧"
+      },
       "CANTBUILD": {
-        "NAME": "不善建设",
-        "DESC": "这名复制人无法造出最普通的结构"
+        "NAME": "无建设力",
+        "DESC": "这名复制人对于最基础的建筑也没法建造"
       },
-
       "CANTCOOK": {
-        "NAME": "害怕做饭",
+        "NAME": "烹饪恐惧症",
         "DESC": "这名复制人害怕进入厨房"
       },
-
       "CANTDIG": {
         "NAME": "密集恐惧症",
-        "DESC": "这名复制人对洞怀有畏惧，因此不会使用挖掘工具"
+        "DESC": "这名复制人害怕窟窿，让他挖掘根本不可能"
       },
-
-      "HEMOPHOBIA": {
-        "NAME": "神经脆弱",
-        "DESC": "这名复制人天性脆弱，是照顾不了病人的"
+      "CANTRESEARCH": {
+        "NAME": "乡下佬",
+        "DESC": "这名复制人不是太阳系中最亮的星"
       },
-
-      "BEDSIDEMANNER": {
-        "NAME": "护理者",
-        "DESC": "这名复制人对病人态度友好，而且能够帮助病人恢复"
+      "CARINGDOWN": {
+        "NAME": "冷漠",
+        "DESC": "这名复制人缺乏病床礼仪，很难照顾同伴"
       },
-
-      "MOUTHBREATHER": {
-        "NAME": "大口呼吸",
-        "DESC": "这名复制人呼吸的氧气比平均要多得多"
+      "CHATTY": {
+        "NAME": "魅力超凡",
+        "DESC": "这名复制人非常迷人，和他聊天有时甚至能触发喜悦反应"
       },
-
+      "CONSTRUCTIONDOWN": {
+        "NAME": "建造障碍",
+        "DESC": "这名复制人除了建立友谊外建立什么都有问题"
+      },
+      "CONSTRUCTIONUP": {
+        "NAME": "心灵手巧",
+        "DESC": "这名复制人是个迅速而熟练的建造者"
+      },
+      "COOKINGDOWN": {
+        "NAME": "厨房祸害",
+        "DESC": "这名复制人可能做个冰淇淋都能弄着火"
+      },
+      "DATARAINER": {
+        "NAME": "呼风唤雨者",
+        "DESC": "这名复制人在喜悦时会分发微芯片"
+      },
+      "DECORDOWN": {
+        "NAME": "寒酸装扮",
+        "DESC": "这名复制人显然从没听说过熨烫"
+      },
+      "DECORUP": {
+        "NAME": "天生时尚",
+        "DESC": "这名复制人容光焕发的自信使得最古怪的衣服穿在他身上看起来也会很时尚"
+      },
+      "DEEPERDIVERSLUNGS": {
+        "NAME": "深潜员之肺",
+        "DESC": "这名复制人屏息能力令人印象深刻"
+      },
+      "DIGGINGDOWN": {
+        "NAME": "挖掘困难",
+        "DESC": "这名复制人套个纸袋就出不来了"
+      },
+      "DIVERSLUNG": {
+        "NAME": "潜水员之肺",
+        "DESC": "这名复制人上辈子可能是个歌剧名家"
+      },
+      "EARLYBIRD": {
+        "NAME": "早起鸟",
+        "DESC": "一觉醒来后，这名复制人总是神清气爽，效率惊人！"
+      },
+      "FASTLEARNER": {
+        "NAME": "快速学习者",
+        "DESC": "这名复制人脑子特别灵光，学什么都特别快"
+      },
+      "FLATULENCE": {
+        "NAME": "胃肠胀气",
+        "DESC": "有些复制人简直是一肚子气"
+      },
+      "FOODIE": {
+        "NAME": "美食家",
+        "DESC": "这名复制人有着精致的味觉，需要殖民地为他提供最好吃的菜肴"
+      },
+      "FROSTPROOF": {
+        "NAME": "抗寒皮肤",
+        "DESC": "这名复制人又冷又酷以至于不会被寒冷困扰"
+      },
       "FUSSY": {
         "NAME": "挑剔",
         "DESC": "这名复制人看什么都不爽"
       },
-
-      "TWINKLETOES": {
-        "NAME": "健步如飞",
-        "DESC": "这名复制人的双脚轻如羽毛"
+      "GLOWSTICK": {
+        "NAME": "荧光棒",
+        "DESC": "这名复制人“容光焕发”"
       },
-
-      "STRONGARM": {
-        "NAME": "肌肉鼓鼓",
-        "DESC": "这名复制人的肌肉真是硕大无比"
+      "GRANTSKILL_ARTING1": {
+        "NAME": "掌握技能：艺术基础",
+        "DESC": "教导最基本的艺术技能"
       },
-
-      "NOODLEARMS": {
-        "NAME": "面条胳膊",
-        "DESC": "这名复制人的双臂像煮软了的面条一样，可能拽啦"
+      "GRANTSKILL_ARTING2": {
+        "NAME": "掌握技能：美学设计",
+        "DESC": "允许创作中等吸引力的艺术品"
       },
-
-      "AGGRESSIVE": {
-        "NAME": "破坏力强大",
-        "DESC": "这名复制人压力大时把气撒在毫无还手之力的机器上"
+      "GRANTSKILL_ARTING3": {
+        "NAME": "掌握技能：大师技艺",
+        "DESC": "能够做出绘画和雕塑的杰作"
       },
-
-      "UGLYCRIER": {
-        "NAME": "爱哭鼻子",
-        "DESC": "如果这名复制人压力过大，你们就完了"
+      "GRANTSKILL_ASTRONAUTING1": {
+        "NAME": "掌握技能：火箭驾驶",
+        "DESC": "允许复制人操作指挥舱以驾驶火箭"
       },
-
-      "BINGEEATER": {
-        "NAME": "暴食者",
-        "DESC": "这名复制人在压力过大时会吃太多"
+      "GRANTSKILL_ASTRONAUTING2": {
+        "NAME": "掌握技能：火箭导航",
+        "DESC": "提高完成太空任务的速度"
       },
-
-      "ANXIOUS": {
-        "NAME": "心理脆弱",
-        "DESC": "过度的压力会让这名复制人精神崩溃"
+      "GRANTSKILL_BASEKEEPING1": {
+        "NAME": "掌握技能：改良力量",
+        "DESC": "稍微提高复制人的力量"
       },
-
-      "STRESSVOMITER": {
-        "NAME": "呕吐大王",
-        "DESC": "只要来点压力，这名复制人妥妥能吐得到处都是"
+      "GRANTSKILL_BASEKEEPING2": {
+        "NAME": "掌握技能：管路工作",
+        "DESC": "允许复制人清空管道而不把水漏得到处都是"
       },
-
+      "GRANTSKILL_BUILDING1": {
+        "NAME": "掌握技能：改良建造 I",
+        "DESC": "稍微提高复制人的建造速度"
+      },
+      "GRANTSKILL_BUILDING2": {
+        "NAME": "掌握技能：改良建造 II",
+        "DESC": "进一步提高复制人的建造速度"
+      },
+      "GRANTSKILL_BUILDING3": {
+        "NAME": "掌握技能：拆毁",
+        "DESC": "允许复制人拆解庄严科技建筑"
+      },
+      "GRANTSKILL_COOKING1": {
+        "NAME": "掌握技能：烧烤",
+        "DESC": "允许复制人使用电动烤炉进行烹饪"
+      },
+      "GRANTSKILL_COOKING2": {
+        "NAME": "掌握技能：增强香料",
+        "DESC": "允许复制人使用燃气灶、熏炉、油炸锅、寿司台和香料研磨器进行烹饪"
+      },
+      "GRANTSKILL_ENGINEERING1": {
+        "NAME": "掌握技能：机电工程",
+        "DESC": "允许复制人建造和维护运输轨道系统"
+      },
+      "GRANTSKILL_FARMING1": {
+        "NAME": "掌握技能：改良耕种 I",
+        "DESC": "稍微提高复制人的耕种技能，提高收获植物种子的几率"
+      },
+      "GRANTSKILL_FARMING2": {
+        "NAME": "掌握技能：作物照料",
+        "DESC": "允许植物照料，从而加快植物的生长速度"
+      },
+      "GRANTSKILL_FARMING3": {
+        "NAME": "掌握技能：改良耕种 II",
+        "DESC": "允许复制人收获某些植物时，产生植物外壳作为副产物"
+      },
+      "GRANTSKILL_HAULING1": {
+        "NAME": "掌握技能：改良携带 I",
+        "DESC": "稍微提高复制人的力量和承载能力"
+      },
+      "GRANTSKILL_HAULING2": {
+        "NAME": "掌握技能：改良携带 II",
+        "DESC": "进一步提高复制人的力量和承载能力，使运送更快"
+      },
+      "GRANTSKILL_MEDICINE1": {
+        "NAME": "掌握技能：药物配制",
+        "DESC": "允许复制人在配药桌生产药物"
+      },
+      "GRANTSKILL_MEDICINE2": {
+        "NAME": "掌握技能：病床礼仪",
+        "DESC": "训练复制人在医务站向其他复制人施用药物"
+      },
+      "GRANTSKILL_MEDICINE3": {
+        "NAME": "掌握技能：高级医疗护理",
+        "DESC": "训练复制人能操作病诊站"
+      },
+      "GRANTSKILL_MINING1": {
+        "NAME": "掌握技能：坚硬材料挖掘",
+        "DESC": "允许挖掘非常坚硬的材料，比如花岗岩"
+      },
+      "GRANTSKILL_MINING2": {
+        "NAME": "掌握技能：超坚硬材料挖掘",
+        "DESC": "允许挖掘深渊晶石"
+      },
+      "GRANTSKILL_MINING3": {
+        "NAME": "掌握技能：极坚硬材料挖掘",
+        "DESC": "允许挖掘几乎坚不可摧的材料，包括钻石和黑曜石"
+      },
+      "GRANTSKILL_MINING4": {
+        "NAME": "掌握技能：危险物挖掘",
+        "DESC": "允许挖掘危险的材料，比如堆芯熔融物"
+      },
+      "GRANTSKILL_PYROTECHNICS": {
+        "NAME": "掌握技能：火工技艺",
+        "DESC": "允许复制人为流星爆破炮制作爆破弹"
+      },
+      "GRANTSKILL_RANCHING1": {
+        "NAME": "掌握技能：小动物养殖 I",
+        "DESC": "允许复制人处理与照顾小动物"
+      },
+      "GRANTSKILL_RANCHING2": {
+        "NAME": "掌握技能：小动物养殖 II",
+        "DESC": "提高复制人的养殖技能"
+      },
+      "GRANTSKILL_RESEARCHING1": {
+        "NAME": "掌握技能：高级研究",
+        "DESC": "允许复制人使用超级计算机进行研究"
+      },
+      "GRANTSKILL_RESEARCHING2": {
+        "NAME": "掌握技能：实地研究",
+        "DESC": "允许复制人研究间歇泉、小行星，和其他地理现象"
+      },
+      "GRANTSKILL_RESEARCHING3": {
+        "NAME": "掌握技能：天文学",
+        "DESC": "允许复制人使用望远镜进一步研究外太空"
+      },
+      "GRANTSKILL_RESEARCHING4": {
+        "NAME": "掌握技能：应用科学研究",
+        "DESC": "允许复制人使用材料研究终端研究物质"
+      },
+      "GRANTSKILL_SUITS1": {
+        "NAME": "掌握技能：太空服训练",
+        "DESC": "消除穿着太空服时行走速度的损失"
+      },
+      "GRANTSKILL_SWIMMING": {
+        "NAME": "掌握技能：基础游泳",
+        "DESC": "允许复制人安全地穿越液体环境。"
+      },
+      "GRANTSKILL_SWIMMING2": {
+        "NAME": "掌握技能：潜水大师",
+        "DESC": "授予复制人穿越液体环境的专家熟练度。"
+      },
+      "GRANTSKILL_TECHNICALS1": {
+        "NAME": "掌握技能：改良操作",
+        "DESC": "稍微提高复制人的操作速度"
+      },
+      "GRANTSKILL_TECHNICALS2": {
+        "NAME": "掌握技能：电气工程",
+        "DESC": "允许进行发电机的调校，从而暂时提高电力输出"
+      },
+      "GREASEMONKEY": {
+        "NAME": "机灵鬼",
+        "DESC": "这名复制人总喜欢给殖民地的计划补充一些不错的建议"
+      },
+      "GREENTHUMB": {
+        "NAME": "园艺能手",
+        "DESC": "这名复制人将每株植物都视为潜在的朋友"
+      },
+      "HAPPYSINGER": {
+        "NAME": "轻曲哼唱者",
+        "DESC": "这名复制人在喜悦时会唱出朗朗上口的曲调"
+      },
+      "HEMOPHOBIA": {
+        "NAME": "神经脆弱",
+        "DESC": "这名复制人性格脆弱，是照顾不了病人的"
+      },
+      "INTERIORDECORATOR": {
+        "NAME": "装饰达人",
+        "DESC": "“再往左一点儿，就一点儿……”"
+      },
       "IRONGUT": {
-        "NAME": "胃肠好",
-        "DESC": "这名复制人啥都能吃，也不会吃出毛病"
+        "NAME": "铁石胃肠",
+        "DESC": "这名复制人几乎吃什么都不生病"
       },
-
-      "STRONGIMMUNESYSTEM": {
-        "NAME": "细菌抗性",
-        "DESC": "相对于其他人，这名复制人的免疫系统特别强力"
+      "IRRITABLEBOWEL": {
+        "NAME": "肠易激综合征",
+        "DESC": "这名复制人需要更多时间“方便”"
       },
-
+      "LONER": {
+        "NAME": "独行客",
+        "DESC": "这名复制人更喜欢单独工作"
+      },
+      "MACHINERYDOWN": {
+        "NAME": "技术保守",
+        "DESC": "这名复制人总是叫朋友过来，只是为了帮他连接电子设备"
+      },
+      "METEORPHILE": {
+        "NAME": "岩石迷",
+        "DESC": "流星雨真的会让这名复制人十分激动"
+      },
+      "MOLEHANDS": {
+        "NAME": "鼹鼠之手",
+        "DESC": "挖地道是一把好手，但就是找不到合适的手套"
+      },
+      "MOUTHBREATHER": {
+        "NAME": "大口呼吸者",
+        "DESC": "这名复制人呼吸的氧气比平均量要多得多"
+      },
+      "NARCOLEPSY": {
+        "NAME": "发作性睡病",
+        "DESC": "这名复制人随时随地都可能睡着"
+      },
+      "NIGHTLIGHT": {
+        "NAME": "黑暗恐惧症",
+        "DESC": "如果没人留盏灯，这名复制人会整夜地想象黑暗中可怕的形状"
+      },
+      "NIGHTOWL": {
+        "NAME": "夜猫子",
+        "DESC": "在应该睡觉的时候，这名复制人却效率惊人"
+      },
+      "NOODLEARMS": {
+        "NAME": "面条臂",
+        "DESC": "这名复制人手臂的抗张强度像煮烂的面条一样"
+      },
+      "RADIATIONEATER": {
+        "NAME": "辐射吸收者",
+        "DESC": "这名复制人会将辐射作为早餐（和晚餐）"
+      },
+      "RANCHINGDOWN": {
+        "NAME": "小动物反感",
+        "DESC": "这名复制人不相信这些闪亮亮的小眼睛"
+      },
+      "RANCHINGUP": {
+        "NAME": "动物热爱者",
+        "DESC": "毛茸茸的鼻子！小小的爪子！硬硬的外甲壳！这名复制人就没见过他不喜欢的小动物"
+      },
+      "REGENERATION": {
+        "NAME": "再生性",
+        "DESC": "这名强大的复制人会不断地恢复生命"
+      },
+      "ROBODANCER": {
+        "NAME": "快闪族",
+        "DESC": "这名复制人在喜悦时会跳起舞来"
+      },
+      "ROCKCRUSHER": {
+        "NAME": "大力士",
+        "DESC": "这名复制人的肌肉上面还有肌肉！"
+      },
       "SCAREDYCAT": {
         "NAME": "和平主义者",
-        "DESC": "这名复制人害怕暴力"
+        "DESC": "这名复制人憎恨暴力"
       },
-
-      "WEAKIMMUNESYSTEM": {
-        "NAME": "病如山倒",
-        "DESC": "全宇宙的维生素C都挡不住这名复制人生病"
+      "SIMPLETASTES": {
+        "NAME": "粗茶淡饭",
+        "DESC": "这名复制人就算舔喷浮飞鱼的后背也尝不出什么味道"
       },
-
-      "IRRITABLEBOWEL": {
-        "NAME": "消化不良",
-        "DESC": "这名复制人需要更多时间来\"解决个人问题\""
-      },
-
-      "CALORIEBURNER": {
-        "NAME": "大胃王",
-        "DESC": "这名复制人的风衣下面大概藏了几个黑洞吧"
-      },
-
-      "SMALLBLADDER": {
-        "NAME": "膀胱小",
-        "DESC": "这名复制人的膀胱跟豌豆一个尺寸，太可爱啦！"
-      },
-
-      "ANEMIC": {
-        "NAME": "缺乏活力",
-        "DESC": "这名复制人很难跟上其他人"
-      },
-
-      "GREASEMONKEY": {
-        "NAME": "有点小聪明",
-        "DESC": "这名复制人总喜欢给新大陆的计划补充一些不错的建议"
-      },
-
-      "MOLEHANDS": {
-        "NAME": "擅长挖掘",
-        "DESC": "挖地道倒是一把好手，就是找不到合适的手套"
-      },
-
-      "FASTLEARNER": {
-        "NAME": "学习速度快",
-        "DESC": "这名复制人脑子特别灵光，学什么都特别快"
-      },
-
       "SLOWLEARNER": {
-        "NAME": "学习效率低",
+        "NAME": "缓慢学习者",
         "DESC": "这名复制人上手略慢，可是人家努力啊"
       },
-
-      "DIVERSLUNG": {
-        "NAME": "肺活量大",
-        "DESC": "这名复制人估计上辈子是个歌剧名家"
+      "SMALLBLADDER": {
+        "NAME": "尿频",
+        "DESC": "这名复制人的膀胱跟豌豆一个尺寸。太可爱啦！"
       },
-
-      "FLATULENCE": {
-        "NAME": "喜欢放屁",
-        "DESC": "有些复制人简直是一肚子气"
-      },
-
       "SNORER": {
         "NAME": "鼾声如雷",
         "DESC": "全宇宙都听得见你打鼾"
       },
-
-      "NARCOLEPSY": {
-        "NAME": "瞌睡虫",
-        "DESC": "这名复制人不分时间场合，想睡就睡"
+      "SPARKLESTREAKER": {
+        "NAME": "闪光飞奔者",
+        "DESC": "这名复制人当喜悦时会留下开心的光耀痕迹"
       },
-
-      "INTERIORDECORATOR": {
-        "NAME": "装修达人",
-        "DESC": "\"再往左一点儿，就一点儿...\""
+      "STARRYEYED": {
+        "NAME": "观星者",
+        "DESC": "这名复制人喜欢在太空中"
       },
-
-      "UNCULTURED": {
-        "NAME": "没有文化",
-        "DESC": "这名复制人欣赏不来阳春白雪"
+      "STARTWITHBOOSTER_ART1": {
+        "NAME": "大师技艺增幅块",
+        "DESC": "赋予仿生复制人完美无瑕的装饰技能。"
       },
-
-      "EARLYBIRD": {
-        "NAME": "早起鸟",
-        "DESC": "这名复制人活力满满地开始新的一天！"
+      "STARTWITHBOOSTER_CARRY1": {
+        "NAME": "力量增幅块",
+        "DESC": "赋予仿生复制人更高的携带能力和运动能力。"
       },
-
-      "NIGHTOWL": {
-        "NAME": "夜猫子",
-        "DESC": "在应该睡觉的时间，这名复制人却效率惊人"
+      "STARTWITHBOOSTER_CONSTRUCT1": {
+        "NAME": "建造增幅块",
+        "DESC": "赋予仿生复制人快速建造、拆毁其他人无法拆解的建筑的能力。"
       },
-
-      "REGENERATION": {
-        "NAME": "再生",
-        "DESC": "这名复制人会不断恢复生命值"
+      "STARTWITHBOOSTER_COOK1": {
+        "NAME": "烧烤增幅块",
+        "DESC": "赋予仿生复制人专业级烹饪技能。"
       },
-
-      "DEEPERDIVERSLUNGS": {
-        "NAME": "肺活量超大",
-        "DESC": "这名复制人曾是一名颇具天分的歌剧演唱家和浮潜教练"
+      "STARTWITHBOOSTER_DIG1": {
+        "NAME": "挖掘增幅块",
+        "DESC": "赋予仿生复制人挖掘坚硬物体所需的技能。"
       },
-
+      "STARTWITHBOOSTER_DIG2": {
+        "NAME": "极硬挖掘增幅块",
+        "DESC": "赋予仿生复制人挖穿任何东西所需的技能。"
+      },
+      "STARTWITHBOOSTER_FARM1": {
+        "NAME": "作物照料增幅块",
+        "DESC": "赋予仿生复制人无与伦比的耕种和植物分析技能。"
+      },
+      "STARTWITHBOOSTER_MEDICINE1": {
+        "NAME": "高级医疗增幅块",
+        "DESC": "赋予仿生复制人执行所有医疗任务的能力。"
+      },
+      "STARTWITHBOOSTER_OP1": {
+        "NAME": "电气工程增幅块",
+        "DESC": "赋予仿生复制人尽情修补和焊接所需的技能。"
+      },
+      "STARTWITHBOOSTER_RANCH1": {
+        "NAME": "养殖增幅块",
+        "DESC": "赋予仿生复制人照顾小动物的各种方法所需的技能。"
+      },
+      "STARTWITHBOOSTER_SUITS1": {
+        "NAME": "太空服训练增幅块",
+        "DESC": "使仿生复制人能够最大程度提高装备的太空服的耐久并维持其行走速度。"
+      },
+      "STICKERBOMBER": {
+        "NAME": "贴纸炸弹人",
+        "DESC": "这名复制人在喜悦时会自己重新装饰房间"
+      },
+      "STRESSSHOCKER": {
+        "NAME": "漏电",
+        "DESC": "这名复制人在压力过大时会释放电击"
+      },
+      "STRESSVOMITER": {
+        "NAME": "呕吐",
+        "DESC": "当压力过大时，这名复制人容易呕吐得到处都是"
+      },
+      "STRONGARM": {
+        "NAME": "健美者",
+        "DESC": "这名复制人的肌肉上面还有肌肉"
+      },
+      "STRONGIMMUNESYSTEM": {
+        "NAME": "病菌抗性",
+        "DESC": "相对于其他人，这名复制人的免疫系统恢复能力更强"
+      },
       "SUNNYDISPOSITION": {
         "NAME": "乐观阳光",
         "DESC": "这名复制人对生活抱有绝对积极的态度"
       },
-
-      "ROCKCRUSHER": {
-        "NAME": "碎石大师",
-        "DESC": "这名复制人非常强壮"
+      "SUPERPRODUCTIVE": {
+        "NAME": "超级生产力",
+        "DESC": "这名复制人在喜悦时生产力超高"
       },
-
-      "SIMPLETASTES": {
-        "NAME": "粗茶淡饭者",
-        "DESC": "这名复制人即使吃着最清淡乏味的食物也会感觉到快乐"
+      "THRIVER": {
+        "NAME": "受迫激励",
+        "DESC": "这名复制人压力上来时会进入“超光速”状态"
       },
-
-      "FOODIE": {
-        "NAME": "美食家",
-        "DESC": "这名复制人拥有相当挑剔的味蕾，渴望美味的食物"
+      "TWINKLETOES": {
+        "NAME": "健步如飞",
+        "DESC": "这名复制人的双脚轻如羽毛"
       },
-
-      "ARCHAEOLOGIST": {
-        "NAME": "考古学家",
-        "DESC": "这名复制人将总是能够从太空冒险中带回艺术品"
+      "UGLYCRIER": {
+        "NAME": "大哭",
+        "DESC": "要是这名复制人压力过大就肯定不会有好事发生"
+      },
+      "UNCULTURED": {
+        "NAME": "艺术拙劣",
+        "DESC": "这名复制人根本没有对艺术的欣赏能力"
+      },
+      "WEAKIMMUNESYSTEM": {
+        "NAME": "生物危害",
+        "DESC": "全宇宙的维生素C都挡不住这名复制人生病"
+      },
+      "CLAUSTROPHOBIC": {
+        "NAME": "幽闭恐惧症",
+        "DESC": "在矮于四块砖块或窄于三块砖块的空间里，这名复制人会感到要窒息"
+      },
+      "FASHIONABLE": {
+        "NAME": "时尚达人",
+        "DESC": "穿上不够实时的服装会让这名复制人内心崩溃"
+      },
+      "CLIMACOPHOBIC": {
+        "NAME": "恐高",
+        "DESC": "爬上高于四块砖块的梯子时，这名复制人会觉得胃里难受"
+      },
+      "SOLITARYSLEEPER": {
+        "NAME": "独步梦乡",
+        "DESC": "这名复制人更喜欢自己一个人睡"
+      },
+      "PREFERSWARMER": {
+        "NAME": "皮包骨头",
+        "DESC": "这名复制人比别人少一层脂肪，因此对于温度比其他人更为敏感"
+      },
+      "PREFERSCOOLER": {
+        "NAME": "无端三粗",
+        "DESC": "这名复制人比别人多一层脂肪，因此室温对自己的影响要小一些"
+      },
+      "SENSITIVEFEET": {
+        "NAME": "纤纤细足",
+        "DESC": "这名复制人脚底十分敏感，相比于裸露的地面，他更喜欢在铺砖的地面上行走"
+      },
+      "WORKAHOLIC": {
+        "NAME": "工作狂人",
+        "DESC": "这名复制人一闲下来就浑身难受"
       }
     },
     "ATTRIBUTES": {
-      "Construction": {
-        "NAME": "建造",
-        "DESC": "决定了复制人的建造速度"
+      "AirConsumptionRate": {
+        "NAME": "空气消耗速率",
+        "DESC": "空气消耗速率决定了复制人每分钟需要多少氧气来存活。"
       },
-
-      "Digging": {
-        "NAME": "挖掘",
-        "DESC": "决定了复制人的采矿速度"
-      },
-
-      "Machinery": {
-        "NAME": "操作",
-        "DESC": "决定复制人操作机械装置的速度"
-      },
-
-      "LifeSupport": {
-        "NAME": "维生",
-        "DESC": "维持藻类容器、除臭剂和滤水筛子以支持殖民地的生活"
-      },
-
-      "Toggle": {
-        "NAME": "切换",
-        "DESC": "调试机械且设置或拨动开关和传感器"
-      },
-
-      "Athletics": {
-        "NAME": "健壮",
-        "DESC": "决定了复制人的默认奔跑速度"
-      },
-
-      "Learning": {
-        "NAME": "学习",
-        "DESC": "决定复制人进行研究和习得技能的速度"
-      },
-
-      "Cooking": {
-        "NAME": "烹饪",
-        "DESC": "决定了复制人准备食物的速度"
-      },
-
-      "Strength": {
-        "NAME": "力量",
-        "DESC": "决定复制人的携带能力和清洁速度"
-      },
-
-      "Caring": {
-        "NAME": "亲和",
-        "DESC": "决定医疗技能以及与同伴和小动物的社交能力"
-      },
-
-      "Immunity": {
-        "NAME": "免疫",
-        "DESC": "决定了复制人疾病的感染几率和恢复时间"
-      },
-
-      "Botanist": {
-        "NAME": "耕作",
-        "DESC": "决定复制人培育植物的速度和效率"
-      },
-
-      "Ranching": {
-        "NAME": "放牧",
-        "DESC": "决定复制人照料小动物的速度和效率"
-      },
-
       "Art": {
         "NAME": "创作",
-        "DESC": "决定复制人制作艺术品的速度"
+        "DESC": "决定了复制人制作艺术品的速度。"
       },
-
+      "Athletics": {
+        "NAME": "运动",
+        "DESC": "决定了复制人的默认行走速度。"
+      },
+      "BionicBatteryCountCapacity": {
+        "NAME": "移动电源",
+        "DESC": "这名仿生复制人能存储的移动电源数量"
+      },
+      "BionicBoosterSlots": {
+        "NAME": "增幅块槽位",
+        "DESC": "这名仿生复制人能同时安装的增幅块数量"
+      },
+      "BladderDelta": {
+        "NAME": "膀胱",
+        "DESC": "决定了复制人膀胱充盈或排空的速度。"
+      },
+      "Botanist": {
+        "NAME": "农业",
+        "DESC": "决定了复制人培育植物的速度和效率。"
+      },
+      "BreathDelta": {
+        "NAME": "呼吸",
+        "DESC": "决定了复制人获得或损失呼吸度的速度。"
+      },
+      "BreathMax": {
+        "NAME": "最大呼吸"
+      },
+      "CaloriesDelta": {
+        "NAME": "卡路里",
+        "DESC": "决定了复制人燃烧或储存卡路里的速度。"
+      },
+      "Caring": {
+        "NAME": "医疗",
+        "DESC": "决定了复制人照顾病人的能力。"
+      },
+      "CarryAmount": {
+        "NAME": "承载能力",
+        "DESC": "决定了复制人可以承载的最大重量。"
+      },
+      "Construction": {
+        "NAME": "建造",
+        "DESC": "决定了复制人的建造速度。"
+      },
+      "Cooking": {
+        "NAME": "烹饪",
+        "DESC": "决定了复制人制备食物的速度。"
+      },
       "Decor": {
         "NAME": "装饰",
-        "DESC": "装饰会影响复制人的压力以及他们对周围环境的看法"
+        "DESC": "影响复制人的士气以及他们对周围环境的看法。"
+      },
+      "DecorBonus": {
+        "NAME": "装饰加成",
+        "DESC": "与基本作物相比，在装饰度上的变化"
+      },
+      "DecorExpectation": {
+        "NAME": "装饰感观加成",
+        "DESC": "较高的装饰感观加成可让复制人从更低的装饰度中获得士气提升。 保持旺盛的士气就可以让复制人学习更多技能。"
+      },
+      "DecorRadius": {
+        "NAME": "装饰度范围",
+        "DESC": "物体装饰度的影响范围。"
+      },
+      "Digging": {
+        "NAME": "挖掘",
+        "DESC": "决定了复制人的挖掘速度。"
+      },
+      "DiseaseCureSpeed": {
+        "NAME": "疾病康复速度加成",
+        "DESC": "当另一名复制人为病人提供医疗护理时，康复速度加成会提高"
+      },
+      "DoctoredLevel": {
+        "NAME": "受到治疗的效果",
+        "DESC": "在医务站上或病诊站里获得医疗护理的复制人，会获得受到治疗的效果 这种效果会减轻疾病的症状"
+      },
+      "FatalTemperature": {
+        "NAME": "损坏温度",
+        "DESC": "处于损坏温度的建筑会失去功能并受损"
+      },
+      "FertilizerUsageMod": {
+        "NAME": "养料使用",
+        "DESC": "与基本作物相比，这株植物所需要的养料和灌溉量"
+      },
+      "FoodExpectation": {
+        "NAME": "食物感观加成",
+        "DESC": "较高的食物感观加成可让复制人从更低品质的食物中获得士气提升。 保持旺盛的士气就可以让复制人学习更多技能。"
+      },
+      "GeneratorOutput": {
+        "NAME": "电力输出"
+      },
+      "GermResistance": {
+        "NAME": "病菌抗性",
+        "DESC": "有着高病菌抗性的复制人更不容易染上基于病菌的疾病。"
+      },
+      "HarvestTime": {
+        "NAME": "收获时间",
+        "DESC": "不熟练的复制人收获这株植物所需要的时间"
+      },
+      "Height": {
+        "NAME": "高度"
+      },
+      "HitPointsDelta": {
+        "NAME": "生命值",
+        "DESC": "当另一名复制人为病人提供医疗护理时，生命再生力会提高"
+      },
+      "Hygiene": {
+        "NAME": "卫生",
+        "DESC": "影响复制人的清洁感。"
+      },
+      "Immunity": {
+        "NAME": "免疫",
+        "DESC": "决定了复制人对疾病的敏感性和康复时间。"
+      },
+      "Insulation": {
+        "NAME": "隔热",
+        "DESC": "隔热值高的复制人更容易保持温暖，而隔热值低的复制人更容易保持凉爽。"
+      },
+      "Learning": {
+        "NAME": "科学",
+        "DESC": "决定了复制人进行研究和属性升级的速度。"
+      },
+      "LifeSupport": {
+        "NAME": "维生",
+        "DESC": "决定了复制人维持藻类箱、空气净化器和净水器的效率"
+      },
+      "Luminescence": {
+        "NAME": "发光",
+        "DESC": "决定了复制人能发出多少光。"
+      },
+      "Machinery": {
+        "NAME": "机械",
+        "DESC": "决定了复制人操作机械装置的速度。"
+      },
+      "MachinerySpeed": {
+        "NAME": "机械速度",
+        "DESC": "速度加成"
+      },
+      "MaxRadiationThreshold": {
+        "NAME": "最大辐射",
+        "DESC": "这种植物能容忍的最大环境辐射量"
+      },
+      "MaxUnderwaterTravelCost": {
+        "NAME": "水下移动",
+        "DESC": "决定了复制人浸没在液体中的行走速度"
+      },
+      "Metabolism": {
+        "NAME": "小动物代谢",
+        "DESC": "影响小动物燃烧卡路里和生产材料的速率"
+      },
+      "MinLightLux": {
+        "NAME": "照明",
+        "DESC": "这株植物生长所需的最低光照量"
+      },
+      "MinRadiationThreshold": {
+        "NAME": "最小辐射",
+        "DESC": "这株植物生长所需的最小辐射量"
+      },
+      "OverheatTemperature": {
+        "NAME": "过热温度",
+        "DESC": "如果不加冷却，过热温度下的建筑将受损并损坏"
+      },
+      "QualityOfLife": {
+        "NAME": "士气",
+        "DESC": "复制人的士气必须超过他们的士气需求，否则他们会积累压力。 为复制人提供更高质量的食物，在殖民地日程表中分配更多的休息时间，或者为复制人建造更好的卫生间和卧室，可以提升他们的士气。"
+      },
+      "QualityOfLifeExpectation": {
+        "NAME": "士气需求",
+        "DESC": "规定了防止复制人增长压力而需要维持的士气有多高"
+      },
+      "RadiationRecovery": {
+        "NAME": "辐射吸收",
+        "DESC": "复制人的身体中和辐射的速率。"
+      },
+      "RadiationResistance": {
+        "NAME": "辐射抗性",
+        "DESC": "决定了复制人抵抗辐射病的难易程度。"
+      },
+      "Ranching": {
+        "NAME": "畜牧",
+        "DESC": "决定了复制人照料小动物的效率。"
+      },
+      "RoomTemperaturePreference": {
+        "NAME": "温度偏好",
+        "DESC": "决定了复制人希望保持的最低体温。"
+      },
+      "ScaldingThreshold": {
+        "NAME": "烫伤阈值",
+        "DESC": "决定了复制人会被烫伤的温度。"
+      },
+      "ScoldingThreshold": {
+        "NAME": "冻伤阈值",
+        "DESC": "决定了复制人会被冻伤的温度。"
+      },
+      "Sneezyness": {
+        "NAME": "喷嚏",
+        "DESC": "决定了复制人打喷嚏的频率。"
+      },
+      "SpaceNavigation": {
+        "NAME": "驾驶",
+        "DESC": "决定了复制人完成太空任务需要花费多长时间。"
+      },
+      "StaminaDelta": {
+        "NAME": "体力"
+      },
+      "Strength": {
+        "NAME": "力量",
+        "DESC": "决定了复制人的承载能力和清洁速度。"
+      },
+      "StressDelta": {
+        "NAME": "压力",
+        "DESC": "决定了复制人压力上升或下降的速度"
+      },
+      "ThermalConductivityBarrier": {
+        "NAME": "隔热厚度",
+        "DESC": "决定了复制人在特定区域维持或失去身体热量的速度。 这是复制人的装备和自身隔热值之和。"
+      },
+      "Toggle": {
+        "NAME": "切换",
+        "DESC": "决定复制人调试机械、拨动开关和设置传感器的效率。"
+      },
+      "ToiletEfficiency": {
+        "NAME": "如厕速度",
+        "DESC": "决定复制人“方便”所需的时间。"
+      },
+      "TransitTubeTravelSpeed": {
+        "NAME": "运载速度",
+        "DESC": "决定了复制人的默认运载管道前行速度。"
+      },
+      "WiltTempRangeMod": {
+        "NAME": "适用的温度范围",
+        "DESC": "与基本作物相比，在生长温度上的差异"
+      },
+      "YieldAmount": {
+        "NAME": "产量",
+        "DESC": "与基本作物相比，植物的产量"
+      }
+    },
+    "SKILLGROUPS": {
+      "Art": {
+        "NAME": "装饰者"
+      },
+      "Basekeeping": {
+        "NAME": "整理者"
+      },
+      "Building": {
+        "NAME": "建造者"
+      },
+      "Cooking": {
+        "NAME": "烹饪者"
+      },
+      "Farming": {
+        "NAME": "耕种者"
+      },
+      "Hauling": {
+        "NAME": "供应者"
+      },
+      "MedicalAid": {
+        "NAME": "医疗者"
+      },
+      "Mining": {
+        "NAME": "挖掘者"
+      },
+      "Ranching": {
+        "NAME": "养殖者"
+      },
+      "Research": {
+        "NAME": "研究者"
+      },
+      "Rocketry": {
+        "NAME": "驾驶者"
+      },
+      "Suits": {
+        "NAME": "穿服者"
+      },
+      "Technicals": {
+        "NAME": "操作者"
+      }
+    },
+    "SKILLS": {
+      "Mining1": {
+        "NAME": "坚硬材料挖掘"
+      },
+      "Mining2": {
+        "NAME": "超坚硬材料挖掘"
+      },
+      "Mining3": {
+        "NAME": "极坚硬材料挖掘"
+      },
+      "Mining4": {
+        "NAME": "危险物挖掘"
+      },
+      "Building1": {
+        "NAME": "改良建造 I"
+      },
+      "Building2": {
+        "NAME": "改良建造 II"
+      },
+      "Building3": {
+        "NAME": "拆毁"
+      },
+      "Farming1": {
+        "NAME": "改良耕种 I"
+      },
+      "Farming2": {
+        "NAME": "作物照料"
+      },
+      "Farming3": {
+        "NAME": "改良耕种 II"
+      },
+      "Ranching1": {
+        "NAME": "小动物养殖 I"
+      },
+      "Ranching2": {
+        "NAME": "小动物养殖 II"
+      },
+      "Researching1": {
+        "NAME": "高级研究"
+      },
+      "Researching2": {
+        "NAME": "实地研究"
+      },
+      "AtomicResearch": {
+        "NAME": "应用科学研究"
+      },
+      "Researching3": {
+        "NAME": "天文学"
+      },
+      "SpaceResearch": {
+        "NAME": "数据分析研究"
+      },
+      "RocketPiloting1": {
+        "NAME": "火箭驾驶"
+      },
+      "RocketPiloting2": {
+        "NAME": "火箭驾驶 II"
+      },
+      "Cooking1": {
+        "NAME": "烧烤"
+      },
+      "Cooking2": {
+        "NAME": "增强香料"
+      },
+      "Cooking3": {
+        "NAME": "精致餐食"
+      },
+      "Arting1": {
+        "NAME": "艺术基础"
+      },
+      "Arting2": {
+        "NAME": "美学设计"
+      },
+      "Arting3": {
+        "NAME": "大师技艺"
+      },
+      "Hauling1": {
+        "NAME": "改良携带 I"
+      },
+      "Hauling2": {
+        "NAME": "改良携带 II"
+      },
+      "ThermalSuits": {
+        "NAME": "太空服耐久训练"
+      },
+      "Suits1": {
+        "NAME": "太空服训练"
+      },
+      "Technicals1": {
+        "NAME": "改良操作"
+      },
+      "Technicals2": {
+        "NAME": "电气工程"
+      },
+      "Engineering1": {
+        "NAME": "机电工程"
+      },
+      "Basekeeping1": {
+        "NAME": "改良力量"
+      },
+      "Basekeeping2": {
+        "NAME": "管路工作"
+      },
+      "Pyrotechnics": {
+        "NAME": "火工技艺"
+      },
+      "Astronauting2": {
+        "NAME": "火箭导航"
+      },
+      "Medicine1": {
+        "NAME": "药物配制"
+      },
+      "Medicine2": {
+        "NAME": "病床礼仪"
+      },
+      "Medicine3": {
+        "NAME": "高级医疗护理"
+      },
+      "Swimming": {
+        "NAME": "基础游泳"
+      },
+      "Swimming2": {
+        "NAME": "潜水大师"
+      },
+      "BionicsA1": {
+        "NAME": "增幅块数据处理 I"
+      },
+      "BionicsA2": {
+        "NAME": "增幅块数据处理 II"
+      },
+      "BionicsA3": {
+        "NAME": "复杂数据处理"
+      },
+      "BionicsB1": {
+        "NAME": "改良齿轮 I"
+      },
+      "BionicsB2": {
+        "NAME": "改良齿轮 II"
+      },
+      "BionicsC1": {
+        "NAME": "原理图"
+      },
+      "BionicsC2": {
+        "NAME": "高级原理图"
+      },
+      "BionicsC3": {
+        "NAME": "移动电源"
+      },
+      "BionicsD1": {
+        "NAME": "改良硬件"
+      },
+      "BionicsD2": {
+        "NAME": "温度控制"
+      }
+    },
+    "EFFECTS": {
+      "AnewHope": {
+        "NAME": "新希望"
+      },
+      "BeachChairUnlit": {
+        "NAME": "相当放松"
+      },
+      "Binge_Eating": {
+        "NAME": "极度饥饿"
+      },
+      "BionicBedTimeEffect": {
+        "NAME": "碎片整理"
+      },
+      "BionicOffline": {
+        "NAME": "电力不足"
+      },
+      "BionicWaterStress": {
+        "NAME": "渗水"
+      },
+      "CarpetFeet": {
+        "NAME": "痒痒的脚趾"
+      },
+      "CenterOfAttention": {
+        "NAME": "关注的中心"
+      },
+      "ColdAir": {
+        "NAME": "严寒环境"
+      },
+      "ContaminatedLungs": {
+        "NAME": "肺部不适"
+      },
+      "CoolingDown": {
+        "NAME": "冷静"
+      },
+      "Danced": {
+        "NAME": "最近跳了舞"
+      },
+      "Darkness": {
+        "NAME": "黑暗"
+      },
+      "Decor0": {
+        "NAME": "上周期装饰：低劣"
+      },
+      "Decor1": {
+        "NAME": "上周期装饰：普通"
+      },
+      "Decor2": {
+        "NAME": "上周期装饰：平均"
+      },
+      "Decor3": {
+        "NAME": "上周期装饰：良好"
+      },
+      "Decor5": {
+        "NAME": "上周期装饰：华丽"
+      },
+      "DecorMinus1": {
+        "NAME": "上周期装饰：丑陋"
+      },
+      "DuplicantDrankInk": {
+        "NAME": "额外补水：鱿鱼墨汁"
+      },
+      "Edible0": {
+        "NAME": "标准的一餐"
+      },
+      "Edible1": {
+        "NAME": "良好的一餐"
+      },
+      "Edible2": {
+        "NAME": "优秀的一餐"
+      },
+      "Edible3": {
+        "NAME": "杰出的一餐"
+      },
+      "EdibleMinus1": {
+        "NAME": "低劣的一餐"
+      },
+      "EdibleMinus2": {
+        "NAME": "糟糕的一餐"
+      },
+      "EdibleMinus3": {
+        "NAME": "恶心的一餐"
+      },
+      "ExpellingGunk": {
+        "NAME": "失禁"
+      },
+      "FullBladder": {
+        "NAME": "憋尿"
+      },
+      "GoodConversation": {
+        "NAME": "愉快的聊天"
+      },
+      "GoodEats": {
+        "NAME": "灵魂食物"
+      },
+      "Greeting": {
+        "NAME": "看到了朋友"
+      },
+      "GunkHungover": {
+        "NAME": "满嘴粘渣油"
+      },
+      "GunkSick": {
+        "NAME": "需要提取粘渣油"
+      },
+      "Juicer": {
+        "NAME": "喝了饮料"
+      },
+      "LightWounds": {
+        "NAME": "轻度伤"
+      },
+      "MajorIrritation": {
+        "NAME": "严重眼部刺激"
+      },
+      "MegaBrainTankBonus": {
+        "NAME": "天赋最大化"
+      },
+      "MessTableSalt": {
+        "NAME": "加盐的食物"
+      },
+      "MinorIrritation": {
+        "NAME": "轻微眼部刺激"
+      },
+      "ModerateWounds": {
+        "NAME": "中度伤"
+      },
+      "Mourning": {
+        "NAME": "哀悼"
+      },
+      "NarcolepticSleep": {
+        "NAME": "发作性小睡"
+      },
+      "NewCrewArrival": {
+        "NAME": "新朋友"
+      },
+      "NoLubricationMajor": {
+        "NAME": "齿轮磨损"
+      },
+      "NoLubricationMinor": {
+        "NAME": "齿轮磨损（缓解）"
+      },
+      "PassedOutSleep": {
+        "NAME": "精疲力尽"
+      },
+      "PoppedEarDrums": {
+        "NAME": "鼓膜破裂"
+      },
+      "RedAlert": {
+        "NAME": "红色警报！"
+      },
+      "RefreshingTouch": {
+        "NAME": "炎热抗性"
+      },
+      "RestfulSleep": {
+        "NAME": "安眠"
+      },
+      "RoomBarracks": {
+        "NAME": "宿舍"
+      },
+      "RoomBathroom": {
+        "NAME": "卫生间"
+      },
+      "RoomBedroom": {
+        "NAME": "豪华宿舍"
+      },
+      "RoomGreatHall": {
+        "NAME": "餐厅"
+      },
+      "RoomLatrine": {
+        "NAME": "公共厕所"
+      },
+      "RoomMessHall": {
+        "NAME": "食堂"
+      },
+      "SawSparkleStreaker": {
+        "NAME": "看到飞奔者"
+      },
+      "SeafoodRadiationResistance": {
+        "NAME": "辐射抗性：水产食品"
+      },
+      "SevereWounds": {
+        "NAME": "重度伤"
+      },
+      "Showered": {
+        "NAME": "洗浴"
+      },
+      "Sleep": {
+        "NAME": "睡觉"
+      },
+      "SmelledFlowers": {
+        "NAME": "闻到花香"
+      },
+      "SmelledPutridOdour": {
+        "NAME": "闻到了一股腐烂的气味"
+      },
+      "SoakingWet": {
+        "NAME": "浑身湿透"
+      },
+      "Socialized": {
+        "NAME": "社交"
+      },
+      "SoreBack": {
+        "NAME": "背部酸痛"
+      },
+      "StaleFood": {
+        "NAME": "坏掉的剩菜"
+      },
+      "SteppedInContaminatedWater": {
+        "NAME": "踩到污染水"
+      },
+      "StressReduction": {
+        "NAME": "接受按摩"
+      },
+      "StressfulyEmptyingBladder": {
+        "NAME": "失禁"
+      },
+      "UncomfortableSleep": {
+        "NAME": "睡得不好"
+      },
+      "UnderWater": {
+        "NAME": "处于水下"
+      },
+      "Vomiting": {
+        "NAME": "呕吐"
+      },
+      "WarmAir": {
+        "NAME": "炎热环境"
+      },
+      "WarmTouch": {
+        "NAME": "严寒抗性"
+      },
+      "WarmTouchFood": {
+        "NAME": "严寒抗性：辛辣饮食"
+      },
+      "WarmingUp": {
+        "NAME": "热身"
+      },
+      "WasAttacked": {
+        "NAME": "最近遭到袭击"
+      },
+      "WellFed": {
+        "NAME": "吃得不错"
+      },
+      "WetFeet": {
+        "NAME": "双脚湿透"
+      },
+      "WorkEncouraged": {
+        "NAME": "受赞赏"
       }
     }
   }

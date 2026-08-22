@@ -8,6 +8,7 @@ const languages: Record<string, string> = {
   en: "English",
   zh: "Chinese",
   ru: "Russian",
+  ko: "Korean",
   cs: "Czech",
   es: "Spanish",
 };

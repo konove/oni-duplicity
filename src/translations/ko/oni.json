@@ -1,0 +1,1220 @@
+{
+  "DUPLICANTS": {
+    "TRAITS": {
+      "AGGRESSIVE": {
+        "NAME": "파괴적",
+        "DESC": "이 복제체는 무방비인 기계를 두드려서 스트레스를 해소합니다"
+      },
+      "ALLERGIES": {
+        "NAME": "알레르기",
+        "DESC": "이 복제체는 꽃 향기에 있는 꽃가루에 노출되면 제어할 수 없을 정도로 재채기할 것입니다."
+      },
+      "ANCIENTKNOWLEDGE": {
+        "NAME": "고대 지식",
+        "DESC": "이 복제체는 이전 시대의 지식을 가지고 있습니다. • 3 기술 포인트로 시작합니다."
+      },
+      "ANEMIC": {
+        "NAME": "빈혈",
+        "DESC": "이 복제체는 다른 복제체들을 잘 못 쫓아갑니다."
+      },
+      "ANXIOUS": {
+        "NAME": "불안",
+        "DESC": "이 복제체는 압박을 너무 심하게 받으면 무너집니다."
+      },
+      "ARCHAEOLOGIST": {
+        "NAME": "유물 사냥꾼",
+        "DESC": "이 복제체는 \"사진만 찍고 발자국만 남긴다\"라는 말은 배운 적이 없습니다."
+      },
+      "ARTDOWN": {
+        "NAME": "미숙한 아티스트",
+        "DESC": "이 복제체는 \"막대기 사람도 그릴 수 없다\"고 자랑스럽게 선언합니다."
+      },
+      "BALLOONARTIST": {
+        "NAME": "벌룬 아티스트",
+        "DESC": "이 복제체는 넘치는 기쁨 상태일 때 풍선을 나눠 줍니다."
+      },
+      "BANSHEE": {
+        "NAME": "밴시",
+        "DESC": "이 복제체는 스트레스를 받으면 조절할 수 없이 통곡합니다."
+      },
+      "BEDSIDEMANNER": {
+        "NAME": "간병인",
+        "DESC": "이 복제체는 환자를 대하는 태도가 좋고 치료에 능숙한 손길을 가지고 있습니다."
+      },
+      "BINGEEATER": {
+        "NAME": "폭식가",
+        "DESC": "이 복제체는 스트레스를 받으면 위험하게 과식합니다."
+      },
+      "BIONICBUG1": {
+        "NAME": "바이오닉 버그: 경직된 생각",
+        "DESC": "이 복제체의 바이오닉 시스템은 매우 유연하지 않습니다."
+      },
+      "BIONICBUG2": {
+        "NAME": "바이오닉 버그: 해리성",
+        "DESC": "이 복제체의 바이오닉 시스템은 “커넥터” 부품 없이 제작되었습니다."
+      },
+      "BIONICBUG3": {
+        "NAME": "바이오닉 버그: 손재주 없음",
+        "DESC": "이 복제체의 바이오닉 시스템은 다른 시스템을 작동하도록 설계되지 않았습니다."
+      },
+      "BIONICBUG4": {
+        "NAME": "바이오닉 버그: 과잉 엔지니어링",
+        "DESC": "이 복제체의 바이오닉 시스템은 처리 단계를 거의 통과하지 못합니다."
+      },
+      "BIONICBUG5": {
+        "NAME": "바이오닉 버그: 늦게 피는 꽃",
+        "DESC": "이 복제체의 바이오닉 시스템은 속도를 위해 만들어진 게 아닙니다."
+      },
+      "BIONICBUG6": {
+        "NAME": "바이오닉 버그: 어반아이트",
+        "DESC": "이 복제체의 바이오닉 시스템은 실제 식물을 본 적이 없는 사람이 설계했습니다."
+      },
+      "BIONICBUG7": {
+        "NAME": "바이오닉 버그: 오류 발생 가능성",
+        "DESC": "이 복제체의 바이오닉 시스템은 오류를 범하는 편입니다."
+      },
+      "BOTANISTDOWN": {
+        "NAME": "식물 살해자",
+        "DESC": "휴가를 갈 때 양치식물을 봐달라고 이 복제체에게 절대 요청하지 마세요."
+      },
+      "CALORIEBURNER": {
+        "NAME": "밑바닥 없는 배",
+        "DESC": "이 복제체는 트렌치 코트 안에 블랙홀을 여러 개 숨겨둔 것 같습니다."
+      },
+      "CANTBUILD": {
+        "NAME": "비건설적",
+        "DESC": "이 복제체는 가장 기본적인 구조물조차 만들지 못합니다."
+      },
+      "CANTCOOK": {
+        "NAME": "요리공포증",
+        "DESC": "이 복제체는 요리에 대한 깊은 불신을 가지고 있습니다."
+      },
+      "CANTDIG": {
+        "NAME": "환공포증",
+        "DESC": "이 복제체는 구멍을 두려워하여 팔 수 없습니다."
+      },
+      "CANTRESEARCH": {
+        "NAME": "시골뜨기",
+        "DESC": "이 복제체는 태양계에서 가장 둔한 축에 속합니다."
+      },
+      "CARINGDOWN": {
+        "NAME": "무관심",
+        "DESC": "이 복제체는 환자를 대하는 태도가 부족하여 동료를 건강 상태로 되돌리는 것이 어렵습니다."
+      },
+      "CHATTY": {
+        "NAME": "카리스마 있음",
+        "DESC": "이 복제체는 너무 매력적이어서 그와 대화하는 것만으로도 때때로 넘치는 기쁨 반응을 불러일으키기에 충분합니다."
+      },
+      "CONSTRUCTIONDOWN": {
+        "NAME": "건조물 장애",
+        "DESC": "이 복제체는 의미 있는 우정 외에 어떤 것도 못 만듭니다."
+      },
+      "CONSTRUCTIONUP": {
+        "NAME": "능숙함",
+        "DESC": "이 복제체는 신속하고 숙련된 제작자입니다."
+      },
+      "COOKINGDOWN": {
+        "NAME": "주방 위협",
+        "DESC": "이 복제체는 아마도 아이스크림을 태우는 방법을 알아낼 수 있을 것입니다."
+      },
+      "DATARAINER": {
+        "NAME": "레인메이커",
+        "DESC": "이 복제체는 넘치는 기쁨일 때 마이크로칩을 배포합니다."
+      },
+      "DECORDOWN": {
+        "NAME": "초라한 드레서",
+        "DESC": "이 복제체는 분명히 다림질에 대해 들어본 적이 없습니다."
+      },
+      "DECORUP": {
+        "NAME": "타고난 세련됨",
+        "DESC": "이 복제체의 눈부신 자신감은 가장 칙칙한 의상도 트렌디하게 보이게 만듭니다."
+      },
+      "DEEPERDIVERSLUNGS": {
+        "NAME": "깊게 들어가는 잠수부의 허파",
+        "DESC": "이 복제체는 숨을 참을 수 있는 굉장한 능력을 가지고 있습니다."
+      },
+      "DIGGINGDOWN": {
+        "NAME": "못 파",
+        "DESC": "이 복제체는 종이 봉지 안에 있어도 파헤치고 나올 수 없었습니다."
+      },
+      "DIVERSLUNG": {
+        "NAME": "잠수부의 허파",
+        "DESC": "이 복제체는 재능 있는 오페라 가수가 되었을지도 모릅니다."
+      },
+      "EARLYBIRD": {
+        "NAME": "아침형 복제체",
+        "DESC": "이 복제체는 항상 신선하고 효율성 있게 깨어납니다!"
+      },
+      "FASTLEARNER": {
+        "NAME": "빨리 배움",
+        "DESC": "이 복제체는 굉장히 예리하여 놀라운 속도로 새로운 기술을 습득합니다."
+      },
+      "FLATULENCE": {
+        "NAME": "헛배부름",
+        "DESC": "어떤 복제체의 뱃속에는 그것이 가득 차 있습니다."
+      },
+      "FOODIE": {
+        "NAME": "미식가",
+        "DESC": "이 복제체의 세련된 미각은 콜로니가 제공할 수 있는 가장 고급스러운 요리만을 요구합니다."
+      },
+      "FROSTPROOF": {
+        "NAME": "서리 방지",
+        "DESC": "이 복제체는 너무 쿨해서 추위도 신경쓰지 않아요."
+      },
+      "FUSSY": {
+        "NAME": "까다로움",
+        "DESC": "이 복제체를 충분히 만족시켜 줄 수 있는 것은 없습니다."
+      },
+      "GLOWSTICK": {
+        "NAME": "글로우 스틱",
+        "DESC": "이 복제체는 긍정성 넘치게 빛나고 있습니다."
+      },
+      "GRANTSKILL_ARTING1": {
+        "NAME": "숙련: 미술 기초",
+        "DESC": "가장 기본적인 수준의 예술 기술을 가르칩니다."
+      },
+      "GRANTSKILL_ARTING2": {
+        "NAME": "숙련: 미적 디자인",
+        "DESC": "적당히 매력적인 예술품을 만들 수 있습니다."
+      },
+      "GRANTSKILL_ARTING3": {
+        "NAME": "숙련: 명작",
+        "DESC": "걸작 그림과 조형물을 만들 수 있습니다."
+      },
+      "GRANTSKILL_ASTRONAUTING1": {
+        "NAME": "숙련: 로켓 조종",
+        "DESC": "복제체가 지령 캡슐을 조작하여 로켓선을 조종할 수 있습니다."
+      },
+      "GRANTSKILL_ASTRONAUTING2": {
+        "NAME": "숙련: 로켓 항행",
+        "DESC": "우주 임무 완료 속도를 향상시킵니다."
+      },
+      "GRANTSKILL_BASEKEEPING1": {
+        "NAME": "숙련: 힘 향상",
+        "DESC": "복제체의 물리적인 힘을 조금 향상합니다."
+      },
+      "GRANTSKILL_BASEKEEPING2": {
+        "NAME": "숙련: 배관",
+        "DESC": "복제체는 어지럽히지 않고 파이프를 비울 수 있습니다."
+      },
+      "GRANTSKILL_BUILDING1": {
+        "NAME": "숙련: 개선된 건조 I",
+        "DESC": "복제체의 건조 속도를 조금 향상합니다."
+      },
+      "GRANTSKILL_BUILDING2": {
+        "NAME": "숙련: 개선된 건조 II",
+        "DESC": "복제체의 건조 속도를 더 증가합니다."
+      },
+      "GRANTSKILL_BUILDING3": {
+        "NAME": "숙련: 파괴",
+        "DESC": "복제체가 그라비타스 건조물을 해체할 수 있습니다."
+      },
+      "GRANTSKILL_COOKING1": {
+        "NAME": "숙련: 그릴",
+        "DESC": "복제체가 전기 그릴을 사용할 수 있습니다."
+      },
+      "GRANTSKILL_COOKING2": {
+        "NAME": "숙련: 강화된 조미료",
+        "DESC": "복제체가 가스 레인지, 훈연기, 튀김기, 스시바 및 향신료 분쇄기를 사용하여 요리할 수 있게 합니다."
+      },
+      "GRANTSKILL_ENGINEERING1": {
+        "NAME": "숙련: 메카트로닉스 엔지니어링",
+        "DESC": "컨베이어 레일 시스템을 건조 및 관리할 수 있습니다."
+      },
+      "GRANTSKILL_FARMING1": {
+        "NAME": "숙련: 개선된 재배 I",
+        "DESC": "복제체의 재배 기술을 약간 증가하여 새로운 식물 씨를 수확할 가능성을 높입니다."
+      },
+      "GRANTSKILL_FARMING2": {
+        "NAME": "숙련: 작물 경작",
+        "DESC": "식물 경작을 가능하게 하여 생장 속도를 증가합니다."
+      },
+      "GRANTSKILL_FARMING3": {
+        "NAME": "숙련: 개선된 재배 II",
+        "DESC": "특정 식물을 수확할 때 식물 껍질을 부산물로 수집할 수 있게 합니다."
+      },
+      "GRANTSKILL_HAULING1": {
+        "NAME": "숙련: 개선된 운반 I",
+        "DESC": "복제체의 힘과 운반 용량을 조금 증가합니다."
+      },
+      "GRANTSKILL_HAULING2": {
+        "NAME": "숙련: 개선된 운반 II",
+        "DESC": "복제체의 힘과 운반 용량이 더 늘어나서 배달이 더 빨라집니다."
+      },
+      "GRANTSKILL_MEDICINE1": {
+        "NAME": "숙련: 약품 합성",
+        "DESC": "복제체가 약제대에서 약을 만들 수 있습니다."
+      },
+      "GRANTSKILL_MEDICINE2": {
+        "NAME": "숙련: 환자를 대하는 태도",
+        "DESC": "복제체가 병실에서 투약할 수 있도록 훈련시킵니다."
+      },
+      "GRANTSKILL_MEDICINE3": {
+        "NAME": "숙련: 고급 의료",
+        "DESC": "복제체가 질병 진료소를 조작할 수 있게 훈련시킵니다."
+      },
+      "GRANTSKILL_MINING1": {
+        "NAME": "숙련: 경도 굴착",
+        "DESC": "화강암과 같이 매우 단단한 재료를 굴착할 수 있습니다."
+      },
+      "GRANTSKILL_MINING2": {
+        "NAME": "숙련: 초경도 굴착",
+        "DESC": "심성석 원소의 굴착을 가능하게 합니다."
+      },
+      "GRANTSKILL_MINING3": {
+        "NAME": "숙련: 초특경도 굴착",
+        "DESC": "다이아몬드와 흑요석 같은 거의 꿰뚫을 수 없는 원소를 굴착할 수 있게 합니다."
+      },
+      "GRANTSKILL_MINING4": {
+        "NAME": "숙련: 위험 물질 굴착",
+        "DESC": "코륨과 같은 위험 물질의 굴착을 가능하게 합니다."
+      },
+      "GRANTSKILL_PYROTECHNICS": {
+        "NAME": "숙련: 불꽃제조술",
+        "DESC": "복제체가 유성 블래스터를 위한 블래스트숏을 만들 수 있게 합니다."
+      },
+      "GRANTSKILL_RANCHING1": {
+        "NAME": "숙련: 크리터 사육 I",
+        "DESC": "복제체가 크리터를 다루고 돌볼 수 있습니다."
+      },
+      "GRANTSKILL_RANCHING2": {
+        "NAME": "숙련: 크리터 사육 II",
+        "DESC": "복제체의 사육 기술을 향상시킵니다."
+      },
+      "GRANTSKILL_RESEARCHING1": {
+        "NAME": "숙련: 고급 연구",
+        "DESC": "복제체가 슈퍼 컴퓨터를 사용하여 연구를 할 수 있습니다."
+      },
+      "GRANTSKILL_RESEARCHING2": {
+        "NAME": "숙련: 현장 연구",
+        "DESC": "복제체는 분출구, 미행성, 기타 지리적 현상에 대한 연구를 수행할 수 있습니다."
+      },
+      "GRANTSKILL_RESEARCHING3": {
+        "NAME": "숙련: 천문학",
+        "DESC": "망원경으로 복제체가 우주를 연구할 수 있게 합니다."
+      },
+      "GRANTSKILL_RESEARCHING4": {
+        "NAME": "숙련: 응용 과학 연구",
+        "DESC": "복제체가 재료 연구 터미널을 사용하여 물질을 연구할 수 있습니다."
+      },
+      "GRANTSKILL_SUITS1": {
+        "NAME": "숙련: 특수복 훈련",
+        "DESC": "특수복 착용 시 달리기 속도 손실을 제거합니다."
+      },
+      "GRANTSKILL_SWIMMING": {
+        "NAME": "숙련: 기초 수영",
+        "DESC": "복제체가 액체 환경을 안전하게 탐색할 수 있게 합니다."
+      },
+      "GRANTSKILL_SWIMMING2": {
+        "NAME": "숙련: 다이브마스터",
+        "DESC": "복제체에게 액체 환경 탐색에 대한 전문가 수준의 능숙도를 부여합니다."
+      },
+      "GRANTSKILL_TECHNICALS1": {
+        "NAME": "숙련: 땜질 향상",
+        "DESC": "복제체의 땜질 속도가 조금 향상됩니다."
+      },
+      "GRANTSKILL_TECHNICALS2": {
+        "NAME": "숙련: 전기 엔지니어링",
+        "DESC": "일시적으로 향상된 전력 출력을 제공하는 발전기 튠업을 가능하게 합니다."
+      },
+      "GREASEMONKEY": {
+        "NAME": "수리공",
+        "DESC": "이 복제체는 콜로니 계획에 렌치를 던지는 것을 좋아합니다... 좋은 의미로."
+      },
+      "GREENTHUMB": {
+        "NAME": "녹색 엄지",
+        "DESC": "이 복제체는 모든 식물을 잠재적인 친구로 간주합니다."
+      },
+      "HAPPYSINGER": {
+        "NAME": "요들러",
+        "DESC": "이 복제체는 넘치는 기쁨 상태일 때 흥겨운 노래를 부릅니다."
+      },
+      "HEMOPHOBIA": {
+        "NAME": "비위가 약함",
+        "DESC": "이 복제체는 섬세해서 환자를 돌볼 수 없습니다."
+      },
+      "INTERIORDECORATOR": {
+        "NAME": "실내 장식가",
+        "DESC": "\"좀 왼쪽으로 움직이고...\""
+      },
+      "IRONGUT": {
+        "NAME": "강철 위장",
+        "DESC": "이 복제체는 아무거나 먹어도 탈이 나지 않습니다."
+      },
+      "IRRITABLEBOWEL": {
+        "NAME": "과민성 대장",
+        "DESC": "이 복제체는 \"일보기\" 위해 시간이 조금 더 필요합니다."
+      },
+      "LONER": {
+        "NAME": "외톨이",
+        "DESC": "이 복제체는 고독한 추구를 선호합니다."
+      },
+      "MACHINERYDOWN": {
+        "NAME": "러다이트",
+        "DESC": "이 복제체는 항상 친구를 불러서 전자 제품을 연결하게 만듭니다."
+      },
+      "METEORPHILE": {
+        "NAME": "록 팬",
+        "DESC": "유성우는 이 복제체를 정말, 정말 과장되게 만듭니다."
+      },
+      "MOLEHANDS": {
+        "NAME": "두더지 손",
+        "DESC": "터널 굴착에 적합한 손을 가지고 있지만, 딱 맞는 장갑은 찾기 어렵습니다."
+      },
+      "MOUTHBREATHER": {
+        "NAME": "입으로 숨쉼",
+        "DESC": "이 복제체는 산소를 남보다 더 많이 들이쉽니다."
+      },
+      "NARCOLEPSY": {
+        "NAME": "기면증",
+        "DESC": "이 복제체는 언제 어디서나 잠들 수 있습니다."
+      },
+      "NIGHTLIGHT": {
+        "NAME": "야공포증",
+        "DESC": "이 복제체는 아무도 조명을 켜지 않으면 밤새도록 어둠 속에서 무서운 모양을 상상할 것입니다."
+      },
+      "NIGHTOWL": {
+        "NAME": "올빼미족",
+        "DESC": "이 복제체는 자야 할 시간에 가장 일을 잘합니다."
+      },
+      "NOODLEARMS": {
+        "NAME": "면 팔",
+        "DESC": "이 복제체의 팔은 불어터진 면과 같은 인장강도를 갖고 있습니다."
+      },
+      "RADIATIONEATER": {
+        "NAME": "방사선을 먹는 자",
+        "DESC": "이 복제체는 아침(및 저녁)으로 방사선을 먹습니다."
+      },
+      "RANCHINGDOWN": {
+        "NAME": "크리터 혐오",
+        "DESC": "이 복제체는 그 구슬픈 작은 눈을 믿지 않습니다."
+      },
+      "RANCHINGUP": {
+        "NAME": "동물 애호가",
+        "DESC": "털복숭이 코! 작은 발톱! 키틴질 외골격! 이 복제체는 좋아하지 않는 크리터를 결코 만난 적이 없습니다."
+      },
+      "REGENERATION": {
+        "NAME": "재생",
+        "DESC": "이 튼튼한 복제체는 지속적으로 체력을 회복합니다."
+      },
+      "ROBODANCER": {
+        "NAME": "플래시모버",
+        "DESC": "이 복제체는 넘치는 기쁨이 생기면 춤을 춥니다."
+      },
+      "ROCKCRUSHER": {
+        "NAME": "비프스테이크",
+        "DESC": "이 복제체는 근육 위에 근육이 덮여 있습니다!"
+      },
+      "SCAREDYCAT": {
+        "NAME": "평화주의자",
+        "DESC": "이 복제체는 폭력을 질색합니다."
+      },
+      "SIMPLETASTES": {
+        "NAME": "줄어든 맛봉오리",
+        "DESC": "이 복제체는 헐떡이의 등을 핥아도 아무것도 맛볼 수 없습니다."
+      },
+      "SLOWLEARNER": {
+        "NAME": "느리게 배움",
+        "DESC": "이 복제체는 배우는 속도가 좀 느리지만, 노력만큼은 열심히 합니다."
+      },
+      "SMALLBLADDER": {
+        "NAME": "작은 방광",
+        "DESC": "이 복제체는 콩알만한 작은 방광을 갖고 있습니다. 귀엽군요!"
+      },
+      "SNORER": {
+        "NAME": "시끄럽게 잠",
+        "DESC": "우주에서는 모두가 당신이 코고는 소리를 들을 수 있습니다."
+      },
+      "SPARKLESTREAKER": {
+        "NAME": "스파클 스트리커",
+        "DESC": "이 복제체는 넘치는 기쁨 상태일 때 행복한 불꽃 자국을 남깁니다."
+      },
+      "STARRYEYED": {
+        "NAME": "별이 빛나는 눈",
+        "DESC": "이 복제체는 우주에 있는 것을 좋아합니다."
+      },
+      "STARTWITHBOOSTER_ART1": {
+        "NAME": "마스터웍스 아트 부스터",
+        "DESC": "바이오닉 복제체에게 완벽한 장식 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_CARRY1": {
+        "NAME": "힘 부스터",
+        "DESC": "바이오닉 복제체의 운반 능력과 운동 능력이 증가합니다."
+      },
+      "STARTWITHBOOSTER_CONSTRUCT1": {
+        "NAME": "건조 부스터",
+        "DESC": "바이오닉 복제체에게 다른 복제체가 할 수 없는, 건조물을 빠르게 건설하고 파괴하는 능력을 부여합니다."
+      },
+      "STARTWITHBOOSTER_COOK1": {
+        "NAME": "그릴링 부스터",
+        "DESC": "바이오닉 복제체에게 전문 요리 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_DIG1": {
+        "NAME": "굴착 부스터",
+        "DESC": "바이오닉 복제체에게 단단한 땅을 파는 데 필요한 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_DIG2": {
+        "NAME": "극한 굴착 부스터",
+        "DESC": "바이오닉 복제체에게 무엇이든 통과하는 데 필요한 땅 파기 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_FARM1": {
+        "NAME": "작물 경작 부스터",
+        "DESC": "바이오닉 복제체에게 탁월한 재배 및 식물 분석 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_MEDICINE1": {
+        "NAME": "첨단 의료 부스터",
+        "DESC": "바이오닉 복제체에게 모든 의사일을 수행할 수 있는 능력을 부여합니다."
+      },
+      "STARTWITHBOOSTER_OP1": {
+        "NAME": "전기 엔지니어링 부스터",
+        "DESC": "바이오닉 복제체에게 마음껏 땜질하는 데 필요한 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_RANCH1": {
+        "NAME": "사육 부스터",
+        "DESC": "바이오닉 복제체에게 모든 면에서 크리터를 돌보는 데 필요한 기술을 부여합니다."
+      },
+      "STARTWITHBOOSTER_SUITS1": {
+        "NAME": "수트 트레이닝 부스터",
+        "DESC": "바이오닉 복제체가 장착한 특수복의 내구도를 극대화하고 달리기 속도를 유지할 수 있습니다."
+      },
+      "STICKERBOMBER": {
+        "NAME": "스티커 폭탄사",
+        "DESC": "이 복제체는 넘치는 기쁨 상태일 때 즉흥적으로 방을 다시 장식합니다."
+      },
+      "STRESSSHOCKER": {
+        "NAME": "마비자",
+        "DESC": "이 복제체는 스트레스를 받으면 전기 충격을 방출합니다."
+      },
+      "STRESSVOMITER": {
+        "NAME": "구토자",
+        "DESC": "이 복제체는 스트레스를 받으면 아무 곳에서나 토하기 십상입니다."
+      },
+      "STRONGARM": {
+        "NAME": "왕근육",
+        "DESC": "이 복제체는 근육 위에 근육이 덮여 있습니다."
+      },
+      "STRONGIMMUNESYSTEM": {
+        "NAME": "세균 저항",
+        "DESC": "이 복제체의 면역계는 거의 모든 복제체들보다 빨리 회복합니다."
+      },
+      "SUNNYDISPOSITION": {
+        "NAME": "해맑은 성격",
+        "DESC": "이 복제체는 삶에 대하여 확고한 긍정성을 갖고 있습니다."
+      },
+      "SUPERPRODUCTIVE": {
+        "NAME": "초생산성",
+        "DESC": "이 복제체는 넘치는 기쁨 상태일 때 초생산적이 됩니다."
+      },
+      "THRIVER": {
+        "NAME": "강박의 인상",
+        "DESC": "이 복제체는 스트레스를 받을 때 초가동 상태가 됩니다."
+      },
+      "TWINKLETOES": {
+        "NAME": "번개발가락",
+        "DESC": "이 복제체는 발이 깃털처럼 가볍습니다."
+      },
+      "UGLYCRIER": {
+        "NAME": "못생긴 울보",
+        "DESC": "이 복제체가 스트레스를 받으면 좋은 꼴 못 봅니다."
+      },
+      "UNCULTURED": {
+        "NAME": "교양 없음",
+        "DESC": "이 복제체는 전혀 심미안이 없습니다."
+      },
+      "WEAKIMMUNESYSTEM": {
+        "NAME": "생물재해",
+        "DESC": "우주의 모든 비타민 C를 복용해도 이 복제체는 질병에 걸립니다."
+      }
+    },
+    "ATTRIBUTES": {
+      "AirConsumptionRate": {
+        "NAME": "공기 소비율",
+        "DESC": "공기 소비는 복제체가 생존하기 위해 분당 필요로 하는 산소량을 결정합니다."
+      },
+      "Art": {
+        "NAME": "창의성",
+        "DESC": "복제체가 예술 작품을 얼마나 빨리 만드는지 결정합니다."
+      },
+      "Athletics": {
+        "NAME": "운동",
+        "DESC": "복제체의 기본 달리기 속도를 결정합니다."
+      },
+      "BionicBatteryCountCapacity": {
+        "NAME": "파워 뱅크",
+        "DESC": "이 바이오닉 복제체가 저장할 수 있는 파워 뱅크의 개수"
+      },
+      "BionicBoosterSlots": {
+        "NAME": "부스터 슬롯",
+        "DESC": "이 바이오닉 복제체가 한 번에 설치할 수 있는 부스터 개수"
+      },
+      "BladderDelta": {
+        "NAME": "방광",
+        "DESC": "복제체의 방광이 채워지거나 비워지는 속도를 결정합니다."
+      },
+      "Botanist": {
+        "NAME": "농업",
+        "DESC": "복제체가 식물을 재배하는 속도와 효율을 결정합니다."
+      },
+      "BreathDelta": {
+        "NAME": "숨",
+        "DESC": "복제체의 숨이 얼마나 빨리 많아지고 줄어드는지 결정합니다."
+      },
+      "BreathMax": {
+        "NAME": "최대 호흡"
+      },
+      "CaloriesDelta": {
+        "NAME": "칼로리",
+        "DESC": "복제체가 칼로리를 얼마나 빨리 태우고 저장하는지 결정합니다."
+      },
+      "Caring": {
+        "NAME": "의약",
+        "DESC": "아픈 동료를 돌보는 복제체의 능력을 결정합니다."
+      },
+      "CarryAmount": {
+        "NAME": "나르는 용량",
+        "DESC": "복제체가 나를 수 있는 최대 무게를 결정합니다."
+      },
+      "Construction": {
+        "NAME": "건조",
+        "DESC": "복제체의 만들기 속도를 결정합니다."
+      },
+      "Cooking": {
+        "NAME": "요리",
+        "DESC": "복제체가 식품을 얼마나 빨리 만드는지 결정합니다."
+      },
+      "Decor": {
+        "NAME": "장식",
+        "DESC": "복제체의 사기 및 주변 환경에 대한 의견에 영향을 줍니다."
+      },
+      "DecorBonus": {
+        "NAME": "장식 보너스",
+        "DESC": "기본 작물 대비 장식 값의 변경"
+      },
+      "DecorExpectation": {
+        "NAME": "장식 사기 보너스",
+        "DESC": "장식 사기 보너스는 더 낮은 장식 값으로 복제체가 사기 고취를 받을 수 있게 해줍니다. 높은 사기를 유지하면 복제체가 더 많은 기술을 배울 수 있습니다."
+      },
+      "DecorRadius": {
+        "NAME": "장식 반경",
+        "DESC": "물체의 장식 값의 영향 범위."
+      },
+      "Digging": {
+        "NAME": "굴착",
+        "DESC": "복제체의 채굴 속도를 결정합니다."
+      },
+      "DiseaseCureSpeed": {
+        "NAME": "질병 회복 속도 보너스",
+        "DESC": "회복 속도 보너스는 다른 복제체가 환자를 의료보조할 때 증가합니다."
+      },
+      "DoctoredLevel": {
+        "NAME": "치료 받음 효과",
+        "DESC": "병실 또는 질병 진료소에서 치료 받는 복제체는 치료 받음 효과를 얻습니다. 이 효과는 질병 증상을 완화합니다."
+      },
+      "FatalTemperature": {
+        "NAME": "고장 온도",
+        "DESC": "고장 온도에 도달한 건조물은 기능을 상실하고 피해를 받습니다."
+      },
+      "FertilizerUsageMod": {
+        "NAME": "비료 사용",
+        "DESC": "기본 작물에 비해 이 식물에 필요한 비료 및 관개 양"
+      },
+      "FoodExpectation": {
+        "NAME": "식품 사기 보너스",
+        "DESC": "식품 사기 보너스는 더 낮은 식품 값으로 복제체가 사기 고취를 받을 수 있게 해줍니다. 높은 사기를 유지하면 복제체가 더 많은 기술을 배울 수 있습니다."
+      },
+      "GeneratorOutput": {
+        "NAME": "전력 출력"
+      },
+      "GermResistance": {
+        "NAME": "세균 저항",
+        "DESC": "세균 저항도가 높은 복제체는 세균성 질병에 걸릴 가능성이 적습니다."
+      },
+      "HarvestTime": {
+        "NAME": "수확 지속 시간",
+        "DESC": "기술이 없는 복제체가 이 식물을 수확하는 데 걸리는 시간"
+      },
+      "Height": {
+        "NAME": "높이"
+      },
+      "HitPointsDelta": {
+        "NAME": "건강",
+        "DESC": "회복 속도는 다른 복제체가 환자에게 의료보조를 제공할 때 증가합니다."
+      },
+      "Hygiene": {
+        "NAME": "위생",
+        "DESC": "복제체가 느끼는 깨끗함을 결정합니다."
+      },
+      "Immunity": {
+        "NAME": "면역",
+        "DESC": "복제체의 질병 감수성과 회복 시간을 결정합니다."
+      },
+      "Insulation": {
+        "NAME": "절연",
+        "DESC": "절연이 높은 복제체는 쉽게 체온을 보존하는 반면, 절연이 낮은 복제체는 시원함을 유지하기가 쉽습니다."
+      },
+      "Learning": {
+        "NAME": "과학",
+        "DESC": "복제체가 연구를 수행하고 속성을 레벨업하는 속도를 결정합니다."
+      },
+      "LifeSupport": {
+        "NAME": "생명 지원",
+        "DESC": "복제체가 조류 배양기, 탈취기, 물 체를 효율적으로 관리하는 정도를 결정합니다."
+      },
+      "Luminescence": {
+        "NAME": "발광",
+        "DESC": "복제체가 방출하는 빛의 양을 결정합니다."
+      },
+      "Machinery": {
+        "NAME": "기계류",
+        "DESC": "복제체가 기계를 얼마나 빨리 사용하는지 결정합니다."
+      },
+      "MachinerySpeed": {
+        "NAME": "기계류 속도",
+        "DESC": "속도 보너스"
+      },
+      "MaxRadiationThreshold": {
+        "NAME": "최대 방사선",
+        "DESC": "이 식물이 견딜 수 있는 최대 주변 방사선량"
+      },
+      "MaxUnderwaterTravelCost": {
+        "NAME": "수중 이동",
+        "DESC": "액체에 잠겨 있을 때 복제체의 달리기 속도를 결정합니다."
+      },
+      "Metabolism": {
+        "NAME": "크리터 물질대사",
+        "DESC": "크리터의 칼로리 소비율 및 재료 생산율에 영향을 줍니다."
+      },
+      "MinLightLux": {
+        "NAME": "점화",
+        "DESC": "이 식물의 생장에 필요한 최소 럭스"
+      },
+      "MinRadiationThreshold": {
+        "NAME": "최소 방사선",
+        "DESC": "이 식물이 생장하는 데 필요한 최소 주변 방사선량"
+      },
+      "OverheatTemperature": {
+        "NAME": "과열 온도",
+        "DESC": "과열 온도인 건조물은 냉각시키지 않으면 피해를 받고 고장납니다."
+      },
+      "QualityOfLife": {
+        "NAME": "사기",
+        "DESC": "복제체는 요구 사기를 초과하는 사기를 가져야 합니다. 그렇지 않으면 스트레스가 쌓이기 시작합니다. 사기는 복제체에게 고품질의 식품을 제공하고, 콜로니 스케줄에서 더 많은 휴식 시간을 할당하거나, 그들이 살기 위한 더 좋은 화장실과 침실을 주어 향상시킬 수 있습니다."
+      },
+      "QualityOfLifeExpectation": {
+        "NAME": "필요 사기",
+        "DESC": "복제체의 스트레스가 쌓이는 것을 방지하기 위해 사기가 얼마나 높아야 하는지 결정합니다."
+      },
+      "RadiationRecovery": {
+        "NAME": "방사선 흡수",
+        "DESC": "복제체 신체 내에서 방사선이 중화되는 비율입니다."
+      },
+      "RadiationResistance": {
+        "NAME": "방사선 저항",
+        "DESC": "복제체가 방사선병을 얼마나 쉽게 반발하는지 결정합니다."
+      },
+      "Ranching": {
+        "NAME": "축산",
+        "DESC": "복제체가 크리터를 얼마나 효율적으로 돌보는지 결정합니다."
+      },
+      "RoomTemperaturePreference": {
+        "NAME": "선호 온도",
+        "DESC": "복제체가 유지하길 선호하는 최소한의 신체 온도를 결정합니다."
+      },
+      "ScaldingThreshold": {
+        "NAME": "데는 임계값",
+        "DESC": "복제체가 타는 온도를 결정합니다."
+      },
+      "ScoldingThreshold": {
+        "NAME": "동상 임계값",
+        "DESC": "복제체가 동상에 걸리는 온도를 결정합니다."
+      },
+      "Sneezyness": {
+        "NAME": "재채기",
+        "DESC": "복제체가 재채기 하는 빈도를 결정합니다."
+      },
+      "SpaceNavigation": {
+        "NAME": "조종",
+        "DESC": "복제체가 우주 임무를 완수하는 데 걸리는 시간을 결정합니다."
+      },
+      "StaminaDelta": {
+        "NAME": "스태미나"
+      },
+      "Strength": {
+        "NAME": "힘",
+        "DESC": "복제체의 나르는 능력과 청소 속도를 결정합니다."
+      },
+      "StressDelta": {
+        "NAME": "스트레스",
+        "DESC": "복제체의 스트레스가 얼마나 빨리 쌓이고 줄어드는지 결정합니다."
+      },
+      "ThermalConductivityBarrier": {
+        "NAME": "절연 두께",
+        "DESC": "해당 영역에서 복제체가 몸의 열을 얼마나 빠르게 보존하거나 잃는지 결정합니다. 이는 복제체의 장비와 기본적 절연 값의 합입니다."
+      },
+      "Toggle": {
+        "NAME": "토글",
+        "DESC": "복제체가 기계를 튜닝하고, 스위치를 틀고, 센서를 설치하는 것이 얼마나 효율적인지 결정합니다."
+      },
+      "ToiletEfficiency": {
+        "NAME": "화장실 사용 시간",
+        "DESC": "복제체가 \"볼일\"보는 데 필요한 시간을 결정합니다."
+      },
+      "TransitTubeTravelSpeed": {
+        "NAME": "수송 속도",
+        "DESC": "복제체의 기본 수송 튜브 이동 속도를 결정합니다."
+      },
+      "WiltTempRangeMod": {
+        "NAME": "생존 가능 온도 범위",
+        "DESC": "기본 작물 대비 생장 온도 차이"
+      },
+      "YieldAmount": {
+        "NAME": "산출량",
+        "DESC": "기본 작물 대비 식물 생산"
+      }
+    },
+    "SKILLGROUPS": {
+      "Art": {
+        "NAME": "장식자"
+      },
+      "Basekeeping": {
+        "NAME": "정리자"
+      },
+      "Building": {
+        "NAME": "제작자"
+      },
+      "Cooking": {
+        "NAME": "조리사"
+      },
+      "Farming": {
+        "NAME": "농부"
+      },
+      "Hauling": {
+        "NAME": "공급자"
+      },
+      "MedicalAid": {
+        "NAME": "의사"
+      },
+      "Mining": {
+        "NAME": "굴착자"
+      },
+      "Ranching": {
+        "NAME": "사육자"
+      },
+      "Research": {
+        "NAME": "연구자"
+      },
+      "Rocketry": {
+        "NAME": "조종사"
+      },
+      "Suits": {
+        "NAME": "특수복 착용자"
+      },
+      "Technicals": {
+        "NAME": "조작자"
+      }
+    },
+    "SKILLS": {
+      "Mining1": {
+        "NAME": "경도 굴착"
+      },
+      "Mining2": {
+        "NAME": "초경도 굴착"
+      },
+      "Mining3": {
+        "NAME": "초특경도 굴착"
+      },
+      "Mining4": {
+        "NAME": "위험 물질 굴착"
+      },
+      "Building1": {
+        "NAME": "개선된 건조 I"
+      },
+      "Building2": {
+        "NAME": "개선된 건조 II"
+      },
+      "Building3": {
+        "NAME": "파괴"
+      },
+      "Farming1": {
+        "NAME": "개선된 재배 I"
+      },
+      "Farming2": {
+        "NAME": "작물 경작"
+      },
+      "Farming3": {
+        "NAME": "개선된 재배 II"
+      },
+      "Ranching1": {
+        "NAME": "크리터 사육 I"
+      },
+      "Ranching2": {
+        "NAME": "크리터 사육 II"
+      },
+      "Researching1": {
+        "NAME": "고급 연구"
+      },
+      "Researching2": {
+        "NAME": "현장 연구"
+      },
+      "AtomicResearch": {
+        "NAME": "응용 과학 연구"
+      },
+      "Researching3": {
+        "NAME": "천문학"
+      },
+      "SpaceResearch": {
+        "NAME": "데이터 분석 연구원"
+      },
+      "RocketPiloting1": {
+        "NAME": "로켓 조종"
+      },
+      "RocketPiloting2": {
+        "NAME": "로켓 조종 II"
+      },
+      "Cooking1": {
+        "NAME": "그릴"
+      },
+      "Cooking2": {
+        "NAME": "강화된 조미료"
+      },
+      "Cooking3": {
+        "NAME": "파인 다이닝"
+      },
+      "Arting1": {
+        "NAME": "예술의 기초"
+      },
+      "Arting2": {
+        "NAME": "미적 디자인"
+      },
+      "Arting3": {
+        "NAME": "걸작"
+      },
+      "Hauling1": {
+        "NAME": "개선된 운반 I"
+      },
+      "Hauling2": {
+        "NAME": "개선된 운반 II"
+      },
+      "ThermalSuits": {
+        "NAME": "특수복 내구도 교육"
+      },
+      "Suits1": {
+        "NAME": "외부특수복 훈련"
+      },
+      "Technicals1": {
+        "NAME": "땜질 향상"
+      },
+      "Technicals2": {
+        "NAME": "전기 엔지니어링"
+      },
+      "Engineering1": {
+        "NAME": "메커트로닉스 엔지니어링"
+      },
+      "Basekeeping1": {
+        "NAME": "힘 향상"
+      },
+      "Basekeeping2": {
+        "NAME": "배관"
+      },
+      "Pyrotechnics": {
+        "NAME": "불꽃제조술"
+      },
+      "Astronauting2": {
+        "NAME": "로켓 조종"
+      },
+      "Medicine1": {
+        "NAME": "약품 합성"
+      },
+      "Medicine2": {
+        "NAME": "환자를 대하는 태도"
+      },
+      "Medicine3": {
+        "NAME": "고급 의료"
+      },
+      "Swimming": {
+        "NAME": "기초 수영"
+      },
+      "Swimming2": {
+        "NAME": "다이브마스터"
+      },
+      "BionicsA1": {
+        "NAME": "부스터 처리 I"
+      },
+      "BionicsA2": {
+        "NAME": "부스터 처리 II"
+      },
+      "BionicsA3": {
+        "NAME": "복잡한 처리"
+      },
+      "BionicsB1": {
+        "NAME": "개선된 기어 I"
+      },
+      "BionicsB2": {
+        "NAME": "개선된 기어 II"
+      },
+      "BionicsC1": {
+        "NAME": "설계도"
+      },
+      "BionicsC2": {
+        "NAME": "고급 회로도"
+      },
+      "BionicsC3": {
+        "NAME": "파워 뱅킹"
+      },
+      "BionicsD1": {
+        "NAME": "개선된 하드웨어"
+      },
+      "BionicsD2": {
+        "NAME": "기후 제어"
+      }
+    },
+    "EFFECTS": {
+      "AnewHope": {
+        "NAME": "새로운 희망"
+      },
+      "BeachChairUnlit": {
+        "NAME": "웬만하게 긴장 풀었음"
+      },
+      "Binge_Eating": {
+        "NAME": "채울 수 없는 배고픔"
+      },
+      "BionicBedTimeEffect": {
+        "NAME": "조각 모음 중"
+      },
+      "BionicOffline": {
+        "NAME": "전력 없음"
+      },
+      "BionicWaterStress": {
+        "NAME": "액체 노출"
+      },
+      "CarpetFeet": {
+        "NAME": "발 간지럽힘"
+      },
+      "CenterOfAttention": {
+        "NAME": "관심의 중심"
+      },
+      "ColdAir": {
+        "NAME": "쌀쌀한 주변 환경"
+      },
+      "ContaminatedLungs": {
+        "NAME": "역겨운 허파"
+      },
+      "CoolingDown": {
+        "NAME": "냉각 중"
+      },
+      "Danced": {
+        "NAME": "최근에 춤췄음"
+      },
+      "Darkness": {
+        "NAME": "어둠"
+      },
+      "Decor0": {
+        "NAME": "지난 주기의 장식: 나쁨"
+      },
+      "Decor1": {
+        "NAME": "지난 주기의 장식: 평범"
+      },
+      "Decor2": {
+        "NAME": "지난 주기의 장식: 평균"
+      },
+      "Decor3": {
+        "NAME": "지난 주기의 장식: 좋음"
+      },
+      "Decor5": {
+        "NAME": "지난 주기의 장식: 아름다움"
+      },
+      "DecorMinus1": {
+        "NAME": "지난 주기의 장식: 추함"
+      },
+      "DuplicantDrankInk": {
+        "NAME": "추가 수분 공급됨: 오징어 먹물"
+      },
+      "Edible0": {
+        "NAME": "표준 식사"
+      },
+      "Edible1": {
+        "NAME": "좋은 식사"
+      },
+      "Edible2": {
+        "NAME": "뛰어난 식사"
+      },
+      "Edible3": {
+        "NAME": "훌륭한 식사"
+      },
+      "EdibleMinus1": {
+        "NAME": "불량한 식사"
+      },
+      "EdibleMinus2": {
+        "NAME": "끔찍한 식사"
+      },
+      "EdibleMinus3": {
+        "NAME": "소름 끼치는 식사"
+      },
+      "ExpellingGunk": {
+        "NAME": "난장판을 만드는 중"
+      },
+      "FullBladder": {
+        "NAME": "방광 가득 참"
+      },
+      "GoodConversation": {
+        "NAME": "즐거운 잡담"
+      },
+      "GoodEats": {
+        "NAME": "소울 푸드"
+      },
+      "Greeting": {
+        "NAME": "친구를 봤음"
+      },
+      "GunkHungover": {
+        "NAME": "오물 입"
+      },
+      "GunkSick": {
+        "NAME": "오물 추출 필요"
+      },
+      "Juicer": {
+        "NAME": "주스 마셨음"
+      },
+      "LightWounds": {
+        "NAME": "가벼운 상처"
+      },
+      "MajorIrritation": {
+        "NAME": "주요 눈 자극"
+      },
+      "MegaBrainTankBonus": {
+        "NAME": "최대 적성"
+      },
+      "MessTableSalt": {
+        "NAME": "소금 친 식품"
+      },
+      "MinorIrritation": {
+        "NAME": "경미한 눈 자극"
+      },
+      "ModerateWounds": {
+        "NAME": "중등도 상처"
+      },
+      "Mourning": {
+        "NAME": "애도 중"
+      },
+      "NarcolepticSleep": {
+        "NAME": "기면증 수면"
+      },
+      "NewCrewArrival": {
+        "NAME": "새로운 친구"
+      },
+      "NoLubricationMajor": {
+        "NAME": "기어 갈림"
+      },
+      "NoLubricationMinor": {
+        "NAME": "기어 갈림(감소)"
+      },
+      "PassedOutSleep": {
+        "NAME": "지쳤음"
+      },
+      "PoppedEarDrums": {
+        "NAME": "고막 터짐"
+      },
+      "RedAlert": {
+        "NAME": "적색 경보!"
+      },
+      "RefreshingTouch": {
+        "NAME": "내열성"
+      },
+      "RestfulSleep": {
+        "NAME": "평온하게 자는 중"
+      },
+      "RoomBarracks": {
+        "NAME": "막사"
+      },
+      "RoomBathroom": {
+        "NAME": "세척실"
+      },
+      "RoomBedroom": {
+        "NAME": "호화 막사"
+      },
+      "RoomGreatHall": {
+        "NAME": "큰 회관"
+      },
+      "RoomLatrine": {
+        "NAME": "변소"
+      },
+      "RoomMessHall": {
+        "NAME": "식당"
+      },
+      "SawSparkleStreaker": {
+        "NAME": "불꽃의 기쁨"
+      },
+      "SeafoodRadiationResistance": {
+        "NAME": "방사선 저항: 수중 식단"
+      },
+      "SevereWounds": {
+        "NAME": "중증 상처"
+      },
+      "Showered": {
+        "NAME": "샤워했음"
+      },
+      "Sleep": {
+        "NAME": "자는 중"
+      },
+      "SmelledFlowers": {
+        "NAME": "꽃 향기 맡음"
+      },
+      "SmelledPutridOdour": {
+        "NAME": "악취를 맡았음"
+      },
+      "SoakingWet": {
+        "NAME": "흠뻑 젖음"
+      },
+      "Socialized": {
+        "NAME": "교제했음"
+      },
+      "SoreBack": {
+        "NAME": "등이 아픔"
+      },
+      "StaleFood": {
+        "NAME": "나쁜 남은 식품"
+      },
+      "SteppedInContaminatedWater": {
+        "NAME": "오염된 물을 밟음"
+      },
+      "StressReduction": {
+        "NAME": "마사지 받는 중"
+      },
+      "StressfulyEmptyingBladder": {
+        "NAME": "오물 만드는 중"
+      },
+      "UncomfortableSleep": {
+        "NAME": "불편하게 자는 중"
+      },
+      "UnderWater": {
+        "NAME": "수중"
+      },
+      "Vomiting": {
+        "NAME": "구토 중"
+      },
+      "WarmAir": {
+        "NAME": "뜨거운 환경"
+      },
+      "WarmTouch": {
+        "NAME": "서리 저항"
+      },
+      "WarmTouchFood": {
+        "NAME": "서리 방지: 매운 식단"
+      },
+      "WarmingUp": {
+        "NAME": "예열 중"
+      },
+      "WasAttacked": {
+        "NAME": "최근에 공격당함"
+      },
+      "WellFed": {
+        "NAME": "잘 먹임"
+      },
+      "WetFeet": {
+        "NAME": "축축한 발"
+      },
+      "WorkEncouraged": {
+        "NAME": "인정받음"
+      }
+    }
+  }
+}

@@ -13,16 +13,19 @@ upper-cased; two do not, and are matched on their English text instead:
     TRAITS       STRINGS.DUPLICANTS.TRAITS.<ID>            by id
     ATTRIBUTES   STRINGS.DUPLICANTS.ATTRIBUTES.<ID>        by id
     SKILLGROUPS  STRINGS.DUPLICANTS.SKILLGROUPS.<ID>       by id
+    EFFECTS      STRINGS.DUPLICANTS.MODIFIERS.<ID>         by id
     SKILLS       STRINGS.DUPLICANTS.ROLES.<?>.NAME         by English name
-    EFFECTS      STRINGS.DUPLICANTS.MODIFIERS.<?>.NAME     by English name
 
-The game has no SKILLS or EFFECTS string group at all. Our ids for those come
-from the assembly (extract-skills.py, extract-effect-ids.py) and look nothing
-like the catalogue's - skill "Mining1" is role "Hard Digging" - so the English
-name is the only join available. It is checked for ambiguity: if two catalogue
-entries share an English name and disagree in the target language, the entry is
-skipped rather than guessed. Today that never happens; all 54 skills and 82
-effects resolve uniquely.
+Only SKILLS needs the English name. The game has no SKILLS string group, and our
+ids come from the assembly (extract-skills.py), where skill "Mining1" is role
+"Hard Digging" - there is nothing else to join on. That match is checked for
+ambiguity: if two catalogue entries share an English name and disagree in the
+target language, the entry is skipped rather than guessed.
+
+Effects are matched by id rather than by name for exactly that reason. Two
+distinct effects, ExpellingGunk and StressfulyEmptyingBladder, are both "Making
+a mess" in English; Korean gives them different words. Matching on the English
+would have had to discard both.
 
 CHOREGROUPS is deliberately not used for SKILLGROUPS. It looks like a match and
 is not: chore group ART is "Decorating" where skill group ART is "Decorator".
@@ -96,8 +99,13 @@ def parse_po(path):
     return entries
 
 
-ID_GROUPS = {"TRAITS": "TRAITS", "ATTRIBUTES": "ATTRIBUTES", "SKILLGROUPS": "SKILLGROUPS"}
-NAME_GROUPS = {"SKILLS": "ROLES", "EFFECTS": "MODIFIERS"}
+ID_GROUPS = {
+    "TRAITS": "TRAITS",
+    "ATTRIBUTES": "ATTRIBUTES",
+    "SKILLGROUPS": "SKILLGROUPS",
+    "EFFECTS": "MODIFIERS",
+}
+NAME_GROUPS = {"SKILLS": "ROLES"}
 
 
 def name_index(po, catalogue_group):
@@ -199,6 +207,24 @@ def main():
     stats = {"total": 0, "translated": 0, "ambiguous": 0}
     result = build(en, po, stats)
     out_path = os.path.join(here, "..", "src", "translations", lang, "oni.json")
+
+    # Anything already translated that the catalogue does not cover is kept.
+    # The older files here were contributed by hand and still carry entries the
+    # game has since dropped from its string table.
+    kept = 0
+    if os.path.exists(out_path):
+        existing = json.load(io.open(out_path, encoding="utf-8"),
+                             object_pairs_hook=OrderedDict)
+        for group, idents in existing.get("DUPLICANTS", {}).items():
+            target = result.setdefault("DUPLICANTS", OrderedDict()).setdefault(
+                group, OrderedDict())
+            for ident, fields in idents.items():
+                for leaf, value in fields.items():
+                    if leaf not in target.get(ident, {}):
+                        target.setdefault(ident, OrderedDict())[leaf] = value
+                        kept += 1
+    if kept:
+        print("kept %d existing string(s) the catalogue does not cover" % kept)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     io.open(out_path, "w", encoding="utf-8", newline="\n").write(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n")

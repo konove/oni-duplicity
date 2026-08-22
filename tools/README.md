@@ -52,11 +52,20 @@ Only keys already in `en/oni.json` are written, and only where the catalogue has
 a translation - i18next falls back per key, so a partial file is better than a
 padded one.
 
-Three groups map by id once upper-cased (TRAITS, ATTRIBUTES, SKILLGROUPS). Two
-cannot: the game has no SKILLS or EFFECTS string group at all. Our ids there come
-from the assembly and look nothing like the catalogue's - skill `Mining1` is role
-`Hard Digging` - so those match on the English name, and an id whose English is
-ambiguous across catalogue entries is skipped rather than guessed.
+Four groups map by id once upper-cased: TRAITS, ATTRIBUTES, SKILLGROUPS, and
+EFFECTS via `MODIFIERS`. Only SKILLS cannot - the game has no SKILLS string group
+and our ids come from the assembly, where skill `Mining1` is role `Hard Digging`
+
+- so it matches on the English name, and an id whose English is ambiguous across
+  catalogue entries is skipped rather than guessed.
+
+Match effects by id, not by name. `ExpellingGunk` and `StressfulyEmptyingBladder`
+are both "Making a mess" in English and different words in Korean; a name match
+has to discard both.
+
+Anything already in the target file that the catalogue does not cover is kept, so
+regenerating does not throw away hand-contributed entries for strings the game
+has since dropped.
 
 `CHOREGROUPS` is not the source for `SKILLGROUPS`, however much it looks like
 one: chore group `ART` is "Decorating" where skill group `ART` is "Decorator".
