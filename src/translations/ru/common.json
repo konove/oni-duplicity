@@ -17,6 +17,7 @@
   },
   "duplicant_trait": {
     "noun_titlecase": "Характеристики",
+    "noun_titlecase_plural": "Характеристики",
     "verbs": {
       "add_titlecase": "Добавить хар-ку"
     }
@@ -28,13 +29,15 @@
     }
   },
   "duplicant_attribute": {
-    "noun_titlecase_plural": "Навыки",
+    "noun_titlecase_plural": "Атрибуты",
     "primary_titlecase": "Основные",
     "secondary_titlecase": "Вторичные"
   },
-  "duplicant_job": {
-    "noun_titlecase": "Профессия",
-    "mastery_titlecase": "Специализация"
+  "duplicant_skills": {
+    "noun_titlecase": "Навык",
+    "noun_titlecase_plural": "Навыки",
+    "experience_titlecase": "Опыт",
+    "mastery_titlecase": "Мастерство"
   },
   "duplicant_appearance": {
     "noun_titlecase": "Внешний вид"
@@ -42,8 +45,24 @@
   "duplicant_health": {
     "noun_titlecase": "Здоровье"
   },
+  "creature": {
+    "noun_titlecase_plural": "Существа",
+    "verbs": {
+      "edit_titlecase": "Редактировать существо"
+    },
+    "conditions": {
+      "missing_titlecase": "Существо не найдено"
+    }
+  },
   "geyser": {
-    "noun_titlecase_plural": "Гейзеры"
+    "noun_titlecase_plural": "Гейзеры",
+    "total_lifecycle_time": "Полный цикл (спячка + активность)",
+    "active_time": "Время активности",
+    "emission_length": "Длительность извержения",
+    "emission_rate": "Скорость извержения"
+  },
+  "world": {
+    "noun_titlecase_plural": "Миры"
   },
   "material": {
     "noun_titlecase": "Материал",
@@ -95,12 +114,16 @@
   },
   "save-file": {
     "verbs": {
-      "load_titlecase": "Загрузить"
+      "load_titlecase": "Загрузить",
+      "save_titlecase": "Сохранить"
     },
     "conditions": {
       "loading": "Загрузка",
+      "saving": "Сохранение",
       "modified": "Изменено",
-      "modified_description": "Файл быз изменён с момента последнего сохранения."
+      "modified_description": "Файл был изменён с момента последнего сохранения.",
+      "example": "Пример",
+      "example_description": "Это демонстрационный сейв, его нельзя сохранить."
     }
   },
   "overview-page": {
@@ -114,5 +137,8 @@
   "raw-editor-page": {
     "title": "Свойства сейва"
   },
-  "view-github": "Посмотреть проект на GitHub"
+  "view-github": "Посмотреть проект на GitHub",
+  "changelog": {
+    "title": "История изменений"
+  }
 }
