@@ -45,6 +45,8 @@ Import portrait components from **`@/components/duplicant`**, never from `react-
 
 `oni-save-parser` is a **git dependency pinned to a commit** on the fork at `github.com/konove/oni-save-parser`, not the npm release. To change it: edit the fork, `npm run build` there (build output is committed), commit, push, then re-pin the new sha in `package.json`.
 
+The fork ships source maps with the TypeScript inlined (`inlineSources`), which is why `webpack.config.js` runs `source-map-loader` over this one package and no other — a parse failure then resolves to parser source rather than bundled output. Most other dependencies ship no maps, so a blanket rule would only produce warnings.
+
 Supported save versions are the `CURRENT_VERSION_MINOR` array in the fork's `src/save-structure/version-validator.ts`. Saves are self-describing — each file carries its own type templates — so a minor version bump that only adds or reorders fields parses unchanged. Use `/save-version` to verify a new version before adding it; never add one unverified.
 
 ## Testing

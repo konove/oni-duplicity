@@ -15,6 +15,7 @@ const PATHS = {
   appSrc: path.resolve(root, "./src"),
   appPublic: path.resolve(root, "./public"),
   appDist: path.resolve(root, "./dist"),
+  nodeModules: path.resolve(root, "./node_modules"),
   changelog: path.resolve(root, "./CHANGELOG.md"),
 };
 
@@ -66,6 +67,18 @@ const config = {
 
   module: {
     rules: [
+      // oni-save-parser is a fork we maintain and where the binary-format
+      // bugs live. Its maps embed the TypeScript, so a stack trace out of a
+      // failed parse resolves to parser source instead of bundled output.
+      // Scoped to that one package on purpose: most dependencies ship no maps
+      // at all, and a blanket rule warns once per file for each of them.
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader",
+        include: [path.resolve(PATHS.nodeModules, "oni-save-parser")],
+      },
+
       {
         test: /\.tsx?$/,
         include: [PATHS.appSrc],
