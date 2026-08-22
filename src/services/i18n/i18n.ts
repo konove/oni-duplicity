@@ -30,6 +30,7 @@ void i18n.use(initReactI18next).init({
     },
     ru: {
       common: require("@/translations/ru/common.json"),
+      oni: require("@/translations/ru/oni.json"),
     },
     zh: {
       common: require("@/translations/zh/common.json"),

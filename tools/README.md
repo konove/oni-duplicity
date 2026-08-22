@@ -34,6 +34,41 @@ pair a declaration with its `amount` once `MONUMENT`'s nested entries
 interleave. Re-check them against `TUNING/BUILDINGS.cs` class `DECOR` when the
 game updates.
 
+## extract-translations.py
+
+Builds `src/translations/<lang>/oni.json` from the game's own string catalogue.
+
+Those strings are Klei's, not ours. A save editor that invents its own word for
+a trait is worse than one showing English: the player picks traits by the name
+their game uses. The game ships preinstalled translations as gettext catalogues
+under `OxygenNotIncluded_Data/StreamingAssets/strings/`, currently ru, ko and
+zh.
+
+```sh
+python extract-translations.py ru "C:/Steam/steamapps/common/OxygenNotIncluded"
+```
+
+Only keys already in `en/oni.json` are written, and only where the catalogue has
+a translation - i18next falls back per key, so a partial file is better than a
+padded one.
+
+Three groups map by id once upper-cased (TRAITS, ATTRIBUTES, SKILLGROUPS). Two
+cannot: the game has no SKILLS or EFFECTS string group at all. Our ids there come
+from the assembly and look nothing like the catalogue's - skill `Mining1` is role
+`Hard Digging` - so those match on the English name, and an id whose English is
+ambiguous across catalogue entries is skipped rather than guessed.
+
+`CHOREGROUPS` is not the source for `SKILLGROUPS`, however much it looks like
+one: chore group `ART` is "Decorating" where skill group `ART` is "Decorator".
+
+The game marks its strings up in ways `en/oni.json` does not - `<link=...>`,
+`<style="KKeyword">`, embedded newlines. `normalize()` strips that, and every run
+checks it by rebuilding `en/oni.json`'s own values from the catalogue's English:
+they must match exactly or the run stops. If a game update changes the markup,
+that check fails instead of quietly writing differently-formatted output.
+
+DLC pack names are absent from the catalogues and stay English.
+
 ## extract-skills.py
 
 Regenerates the skill table in the parser
