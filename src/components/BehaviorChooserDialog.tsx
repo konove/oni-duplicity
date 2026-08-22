@@ -76,9 +76,7 @@ const BehaviorChooserDialog: React.FC<Props> = ({
             <Button onClick={onCancel}>
               {t("dialog.verbs.cancel_titlecase", { defaultValue: "Cancel" })}
             </Button>
-            <Button onClick={onApplyClick} autoFocus>
-              {applyText}
-            </Button>
+            <Button onClick={onApplyClick}>{applyText}</Button>
           </DialogActions>
         </React.Fragment>
       )}

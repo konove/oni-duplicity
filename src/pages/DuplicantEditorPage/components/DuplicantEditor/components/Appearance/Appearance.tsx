@@ -93,7 +93,7 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
   }
 
   function makeSetAccessory(type: AccessoryType, ordinal: number) {
-    return (e: React.MouseEvent<HTMLDivElement>) => {
+    return (e: React.MouseEvent<HTMLElement>) => {
       e.preventDefault();
       e.stopPropagation();
       setAccessory(type, ordinal);
@@ -126,6 +126,7 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
                 headOrdinal={headOrdinal}
                 eyesOrdinal={eyesOrdinal}
                 clickable
+                label={`Hair ${ordinal}`}
                 onClick={makeSetAccessory("hair", ordinal)}
               />
             ))}
@@ -141,6 +142,7 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
                 headOrdinal={ordinal}
                 eyesOrdinal={eyesOrdinal}
                 clickable
+                label={`Head ${ordinal}`}
                 onClick={makeSetAccessory("headshape", ordinal)}
               />
             ))}
@@ -156,6 +158,7 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
                 headOrdinal={headOrdinal}
                 eyesOrdinal={ordinal}
                 clickable
+                label={`Eyes ${ordinal}`}
                 onClick={makeSetAccessory("eyes", ordinal)}
               />
             ))}
@@ -173,6 +176,7 @@ const Appearance: React.FC<Props> = ({ classes, gameObjectId }) => {
                 eyesOrdinal={eyesOrdinal}
                 bodyOrdinal={ordinal}
                 clickable
+                label={`Body ${ordinal}`}
                 onClick={makeSetAccessory("body", ordinal)}
               />
             ))}
