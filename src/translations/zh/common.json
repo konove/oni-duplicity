@@ -93,7 +93,8 @@
     "noun_titlecase_plural": "材料",
     "all_titlecase": "全部材料",
     "gram": "{{count}} 克",
-    "kilogram": "{{count}} 千克"
+    "kilogram": "{{count}} 千克",
+    "tonne": "{{count}} 吨"
   },
   "material_loose": {
     "noun_titlecase": "散落的",

@@ -93,7 +93,8 @@
     "noun_titlecase_plural": "Materials",
     "all_titlecase": "All Material",
     "gram": "{{count}} g",
-    "kilogram": "{{count}} kg"
+    "kilogram": "{{count}} kg",
+    "tonne": "{{count}} t"
   },
   "material_loose": {
     "noun_titlecase": "Loose",

@@ -93,7 +93,8 @@
     "noun_titlecase_plural": "Материалы",
     "all_titlecase": "Все материалы",
     "gram": "{{count}} г",
-    "kilogram": "{{count}} кг"
+    "kilogram": "{{count}} кг",
+    "tonne": "{{count}} т"
   },
   "material_loose": {
     "noun_titlecase": "Разбросаны",

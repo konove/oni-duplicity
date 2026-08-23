@@ -11,6 +11,7 @@ import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 
 import { useMaterialList } from "@/services/oni-save/hooks/useMaterials";
+import { formatMass } from "@/services/oni-save/materials";
 
 import DeleteLooseButton from "./DeleteLooseButton";
 
@@ -39,16 +40,6 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
     },
     [],
   );
-
-  function formatWeight(weight: number) {
-    if (Math.abs(weight) < 1000) {
-      const g = Number(weight.toFixed(2));
-      return t("material.gram", { count: g });
-    }
-
-    const kg = Number((weight / 1000.0).toFixed(2));
-    return t("material.kilogram", { count: kg });
-  }
 
   // Materials arrive as SimHashes ids - "SandStone", "CrushedIce" - which is
   // not what the game calls them in any language, English included.
@@ -82,22 +73,22 @@ const MaterialsTable: React.FC<Props> = ({ className, t }) => {
         </TableHead>
         <TableBody>
           {displayMaterials.map(
-            ({ name, looseGrams, looseCount, storedGrams, storedCount }) => (
+            ({ name, looseMass, looseCount, storedMass, storedCount }) => (
               <TableRow className={styles.row} key={name}>
                 <TableCell>{materialName(name)}</TableCell>
                 <TableCell>
-                  {looseGrams > 0 && (
+                  {looseMass > 0 && (
                     <>
                       <DeleteLooseButton materialType={name} />
-                      {formatWeight(looseGrams)}&nbsp;|&nbsp;
+                      {formatMass(looseMass, t)}&nbsp;|&nbsp;
                       {t("material_loose.clump_count", { count: looseCount })}
                     </>
                   )}
                 </TableCell>
                 <TableCell>
-                  {storedGrams > 0 && (
+                  {storedMass > 0 && (
                     <>
-                      {formatWeight(storedGrams)}&nbsp;|&nbsp;
+                      {formatMass(storedMass, t)}&nbsp;|&nbsp;
                       {t("material_storage.container_count", {
                         count: storedCount,
                       })}

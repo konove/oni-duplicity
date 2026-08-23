@@ -14,9 +14,10 @@ import { gameObjectGroupsSelector } from "./game-objects";
 
 export interface MaterialListItem {
   name: MaterialObjectName;
-  looseGrams: number;
+  /** Kilograms, as the save stores them. */
+  looseMass: number;
   looseCount: number;
-  storedGrams: number;
+  storedMass: number;
   storedCount: number;
 }
 
@@ -100,9 +101,9 @@ function getMaterialRow(
     rowsByMaterial[name] = {
       name,
       looseCount: 0,
-      looseGrams: 0,
+      looseMass: 0,
       storedCount: 0,
-      storedGrams: 0,
+      storedMass: 0,
     };
   }
   return rowsByMaterial[name];
@@ -132,9 +133,9 @@ function addMaterialObject(
 
   if (loose) {
     row.looseCount++;
-    row.looseGrams += Units;
+    row.looseMass += Units;
   } else {
     row.storedCount++;
-    row.storedGrams += Units;
+    row.storedMass += Units;
   }
 }

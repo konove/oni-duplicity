@@ -93,7 +93,8 @@
     "noun_titlecase_plural": "재료",
     "all_titlecase": "모든 재료",
     "gram": "{{count}} g",
-    "kilogram": "{{count}} kg"
+    "kilogram": "{{count}} kg",
+    "tonne": "{{count}} t"
   },
   "material_loose": {
     "noun_titlecase": "흩어진 재료",
