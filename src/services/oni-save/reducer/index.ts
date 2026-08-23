@@ -4,7 +4,7 @@ import changeGeyserParameter from "./change-geyser-parameter";
 import changeGeyserTypeReducer from "./change-geyser-type";
 import cloneDuplicantReducer from "./clone-duplicant";
 import copyBehaviorsReducer from "./copy-behaviors";
-import deleteLooseMaterial from "./delete-looe-material";
+import deleteLooseMaterial from "./delete-loose-material";
 import importWarnChecksumReducer from "./import-warn-checksum";
 import loadExampleSaveReducer from "./load-example";
 import loadOniSaveReducer from "./load-onisave";
