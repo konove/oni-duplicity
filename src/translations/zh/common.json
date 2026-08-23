@@ -126,12 +126,14 @@
     },
     "verbs": {
       "cancel_titlecase": "取消",
-      "confirm_titlecase": "确认"
+      "confirm_titlecase": "确认",
+      "close_titlecase": "关闭"
     }
   },
   "data": {
     "conditions": {
-      "modified_titlecase": "数据已修改"
+      "modified_titlecase": "数据已修改",
+      "import_failed_titlecase": "导入失败"
     },
     "prompts": {
       "modified-description": "此存档中的数据在导出后已被修改过。\n导入数据无效，导入无效数据会损坏存档。"
@@ -140,6 +142,12 @@
       "copy_titlecase": "复制",
       "export_titlecase": "导出",
       "import_titlecase": "导入"
+    },
+    "errors": {
+      "unreadable": "无法读取该文件。",
+      "invalid_json": "该文件不是有效的导出数据。",
+      "invalid_shape": "该文件不包含导出的行为数据。",
+      "type_mismatch": "这些数据从其他类型的对象导出，无法应用于此处。"
     }
   },
   "save-file": {

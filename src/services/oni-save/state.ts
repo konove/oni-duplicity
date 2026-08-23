@@ -1,3 +1,4 @@
+import { ImportFailureReason } from "./actions/import-behaviors";
 import { SaveGame } from "oni-save-parser";
 
 export enum LoadingStatus {
@@ -30,6 +31,9 @@ export interface OniSaveState {
   isModified: boolean;
   copyPasteData: CopyPasteData | null;
   warnInputChecksum: boolean;
+
+  /** Set when an import was refused, cleared when acknowledged. */
+  importError: ImportFailureReason | null;
 }
 
 export const defaultOniSaveState: Readonly<OniSaveState> = {
@@ -42,5 +46,6 @@ export const defaultOniSaveState: Readonly<OniSaveState> = {
   isModified: false,
   copyPasteData: null,
   warnInputChecksum: false,
+  importError: null,
 };
 Object.freeze(defaultOniSaveState);

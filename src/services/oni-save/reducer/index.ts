@@ -6,6 +6,7 @@ import cloneDuplicantReducer from "./clone-duplicant";
 import copyBehaviorsReducer from "./copy-behaviors";
 import deleteLooseMaterial from "./delete-loose-material";
 import importWarnChecksumReducer from "./import-warn-checksum";
+import importFailedReducer from "./import-failed";
 import loadExampleSaveReducer from "./load-example";
 import loadOniSaveReducer from "./load-onisave";
 import megaDuplicantReducer from "./mega-duplicant";
@@ -25,6 +26,7 @@ export default reduceReducers(
   copyBehaviorsReducer,
   deleteLooseMaterial,
   importWarnChecksumReducer,
+  importFailedReducer,
   loadExampleSaveReducer,
   loadOniSaveReducer,
   megaDuplicantReducer,

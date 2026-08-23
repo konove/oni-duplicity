@@ -126,12 +126,14 @@
     },
     "verbs": {
       "cancel_titlecase": "Отмена",
-      "confirm_titlecase": "Подтвердить"
+      "confirm_titlecase": "Подтвердить",
+      "close_titlecase": "Закрыть"
     }
   },
   "data": {
     "conditions": {
-      "modified_titlecase": "Данные изменены"
+      "modified_titlecase": "Данные изменены",
+      "import_failed_titlecase": "Импорт не удался"
     },
     "prompts": {
       "modified-description": "Данные в этом файле были изменены с момента последнего экспорта.\nИмпортированные данные не проверены, а импорт некорректных данных может повредить сейв."
@@ -140,6 +142,12 @@
       "copy_titlecase": "Копировать",
       "export_titlecase": "Экспортировать",
       "import_titlecase": "Импортировать"
+    },
+    "errors": {
+      "unreadable": "Не удалось прочитать файл.",
+      "invalid_json": "Это не файл экспорта.",
+      "invalid_shape": "В файле нет экспортированных данных поведения.",
+      "type_mismatch": "Эти данные экспортированы с объекта другого типа, их нельзя применить здесь."
     }
   },
   "save-file": {

@@ -30,3 +30,40 @@ export function isImportConfirmAction(
 ): action is ImportWarnChecksumAction {
   return action.type === ACTION_ONISAVE_IMPORT_CONFIRM;
 }
+
+/**
+ * Why an import did not happen. A reason rather than a message, so the text
+ * stays in the translation files instead of being built in a saga.
+ */
+export type ImportFailureReason =
+  "unreadable" | "invalid-json" | "invalid-shape" | "type-mismatch";
+
+export const ACTION_ONISAVE_IMPORT_FAILED = "oni-save/import/failed";
+export const importFailed = (reason: ImportFailureReason) => ({
+  type: ACTION_ONISAVE_IMPORT_FAILED as typeof ACTION_ONISAVE_IMPORT_FAILED,
+  payload: { reason },
+});
+export type ImportFailedAction = ReturnType<typeof importFailed>;
+export function isImportFailedAction(
+  action: UnknownAction,
+): action is ImportFailedAction {
+  return action.type === ACTION_ONISAVE_IMPORT_FAILED;
+}
+
+export const ACTION_ONISAVE_IMPORT_DISMISS_ERROR =
+  "oni-save/import/dismiss-error";
+export const importDismissError = () => ({
+  type: ACTION_ONISAVE_IMPORT_DISMISS_ERROR as typeof ACTION_ONISAVE_IMPORT_DISMISS_ERROR,
+});
+export type ImportDismissErrorAction = ReturnType<typeof importDismissError>;
+export function isImportDismissErrorAction(
+  action: UnknownAction,
+): action is ImportDismissErrorAction {
+  return action.type === ACTION_ONISAVE_IMPORT_DISMISS_ERROR;
+}
+
+export function isImportBehaviorsAction(
+  action: UnknownAction,
+): action is ImportBehaviorsAction {
+  return action.type === ACTION_ONISAVE_IMPORT_BEHAVIORS;
+}

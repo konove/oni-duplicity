@@ -126,12 +126,14 @@
     },
     "verbs": {
       "cancel_titlecase": "Cancel",
-      "confirm_titlecase": "Confirm"
+      "confirm_titlecase": "Confirm",
+      "close_titlecase": "Close"
     }
   },
   "data": {
     "conditions": {
-      "modified_titlecase": "Data Modified"
+      "modified_titlecase": "Data Modified",
+      "import_failed_titlecase": "Import Failed"
     },
     "prompts": {
       "modified-description": "The data in this file has been modified since it was exported.\nImported data is not validated, and importing invalid data can corrupt your save."
@@ -140,6 +142,12 @@
       "copy_titlecase": "Copy",
       "export_titlecase": "Export",
       "import_titlecase": "Import"
+    },
+    "errors": {
+      "unreadable": "The file could not be read.",
+      "invalid_json": "That file is not valid exported data.",
+      "invalid_shape": "That file does not contain exported behaviour data.",
+      "type_mismatch": "That data was exported from a different kind of object, so it cannot be applied here."
     }
   },
   "save-file": {

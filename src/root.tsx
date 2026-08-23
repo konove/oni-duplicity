@@ -16,6 +16,7 @@ import I18NProvider from "@/services/i18n/components/I18NProvider";
 
 import LoadingDialog from "@/components/LoadingDialog";
 import ImportWarningDialog from "@/components/ImportWarningDialog";
+import ImportErrorDialog from "@/components/ImportErrorDialog";
 
 import Routes from "@/routes";
 
@@ -34,6 +35,7 @@ const Root: React.FC = () => (
             <CssBaseline />
             <LoadingDialog />
             <ImportWarningDialog />
+            <ImportErrorDialog />
             <Routes />
           </ThemeProvider>
         </HashRouter>

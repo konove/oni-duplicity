@@ -126,12 +126,14 @@
     },
     "verbs": {
       "cancel_titlecase": "취소",
-      "confirm_titlecase": "확인"
+      "confirm_titlecase": "확인",
+      "close_titlecase": "닫기"
     }
   },
   "data": {
     "conditions": {
-      "modified_titlecase": "데이터 수정됨"
+      "modified_titlecase": "데이터 수정됨",
+      "import_failed_titlecase": "가져오기 실패"
     },
     "prompts": {
       "modified-description": "이 파일의 데이터는 내보낸 이후 수정되었습니다.\n가져온 데이터는 검증되지 않으며, 잘못된 데이터를 가져오면 저장 파일이 손상될 수 있습니다."
@@ -140,6 +142,12 @@
       "copy_titlecase": "복사",
       "export_titlecase": "내보내기",
       "import_titlecase": "가져오기"
+    },
+    "errors": {
+      "unreadable": "파일을 읽을 수 없습니다.",
+      "invalid_json": "올바른 내보내기 데이터가 아닙니다.",
+      "invalid_shape": "내보낸 동작 데이터가 들어 있지 않습니다.",
+      "type_mismatch": "다른 종류의 개체에서 내보낸 데이터라 여기에 적용할 수 없습니다."
     }
   },
   "save-file": {

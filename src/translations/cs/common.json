@@ -126,12 +126,14 @@
     },
     "verbs": {
       "cancel_titlecase": "Zrušit",
-      "confirm_titlecase": "Potvrdit"
+      "confirm_titlecase": "Potvrdit",
+      "close_titlecase": "Zavřít"
     }
   },
   "data": {
     "conditions": {
-      "modified_titlecase": "Data upravena"
+      "modified_titlecase": "Data upravena",
+      "import_failed_titlecase": "Import se nezdařil"
     },
     "prompts": {
       "modified-description": "Data v tomto souboru byla upravena od posledního exportu.\nImportovaná data nejsou ověřena a importováním nesprávných dat můžete svůj save poškodit."
@@ -140,6 +142,12 @@
       "copy_titlecase": "Kopírovat",
       "export_titlecase": "Exportovat",
       "import_titlecase": "Importovat"
+    },
+    "errors": {
+      "unreadable": "Soubor se nepodařilo přečíst.",
+      "invalid_json": "Tento soubor neobsahuje platná exportovaná data.",
+      "invalid_shape": "Tento soubor neobsahuje exportovaná data chování.",
+      "type_mismatch": "Tato data byla exportována z jiného typu objektu, takže je sem nelze použít."
     }
   },
   "save-file": {
