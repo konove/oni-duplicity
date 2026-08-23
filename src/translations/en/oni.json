@@ -1948,5 +1948,88 @@
       "DISABLED": "Disabled",
       "ENABLED": "Enabled"
     }
+  },
+  "GEYSERS": {
+    "steam": {
+      "NAME": "Cool Steam Vent"
+    },
+    "hot_steam": {
+      "NAME": "Steam Vent"
+    },
+    "hot_water": {
+      "NAME": "Water Geyser"
+    },
+    "slush_water": {
+      "NAME": "Cool Slush Geyser"
+    },
+    "filthy_water": {
+      "NAME": "Polluted Water Vent"
+    },
+    "salt_water": {
+      "NAME": "Salt Water Geyser"
+    },
+    "small_volcano": {
+      "NAME": "Minor Volcano"
+    },
+    "big_volcano": {
+      "NAME": "Volcano"
+    },
+    "liquid_co2": {
+      "NAME": "Carbon Dioxide Geyser"
+    },
+    "hot_co2": {
+      "NAME": "Carbon Dioxide Vent"
+    },
+    "hot_hydrogen": {
+      "NAME": "Hydrogen Vent"
+    },
+    "hot_po2": {
+      "NAME": "Hot Polluted Oxygen Vent"
+    },
+    "slimy_po2": {
+      "NAME": "Infectious Polluted Oxygen Vent"
+    },
+    "chlorine_gas": {
+      "NAME": "Chlorine Gas Vent"
+    },
+    "methane": {
+      "NAME": "Natural Gas Geyser"
+    },
+    "molten_copper": {
+      "NAME": "Copper Volcano"
+    },
+    "molten_iron": {
+      "NAME": "Iron Volcano"
+    },
+    "molten_gold": {
+      "NAME": "Gold Volcano"
+    },
+    "oil_drip": {
+      "NAME": "Leaky Oil Fissure"
+    },
+    "chlorine_gas_cool": {
+      "NAME": "Cool Chlorine Gas Vent"
+    },
+    "liquid_sulfur": {
+      "NAME": "Liquid Sulfur Geyser"
+    },
+    "molten_aluminum": {
+      "NAME": "Aluminum Volcano"
+    },
+    "molten_cobalt": {
+      "NAME": "Cobalt Volcano"
+    },
+    "molten_niobium": {
+      "NAME": "Niobium Volcano"
+    },
+    "molten_tungsten": {
+      "NAME": "Tungsten Volcano"
+    },
+    "murky_brine": {
+      "NAME": "Polluted Brine Vent"
+    },
+    "slush_salt_water": {
+      "NAME": "Cool Salt Slush Geyser"
+    }
   }
 }

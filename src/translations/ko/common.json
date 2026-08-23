@@ -73,6 +73,7 @@
     "noun_titlecase_plural": "분출구",
     "total_lifecycle_time": "전체 주기 시간 (휴면 + 활성)",
     "active_time": "활성 시간",
+    "iteration_length": "분출 주기 길이",
     "emission_length": "분출 지속 시간",
     "emission_rate": "분출 속도"
   },

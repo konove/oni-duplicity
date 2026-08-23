@@ -189,6 +189,39 @@ def difficulty_group(po, english):
     return out
 
 
+GEYSER_ROOT = "STRINGS.CREATURES.SPECIES.GEYSER"
+
+
+def geysers_group(po, types, english):
+    """Geyser display names, keyed by the parser's lower-case type."""
+    out = OrderedDict()
+    for geyser_type in types:
+        entry = po.get("%s.%s.NAME" % (GEYSER_ROOT, geyser_type.upper()))
+        if not entry:
+            continue
+        value = entry[0] if english else entry[1]
+        if value.strip():
+            out[geyser_type] = OrderedDict([("NAME", normalize(value))])
+    return out
+
+
+GEYSER_TYPES_SOURCE = os.path.join(
+    "node_modules", "oni-save-parser", "dts", "save-structure", "const-data",
+    "geysers", "geyser-type.d.ts")
+
+
+def geyser_type_names(repo_root):
+    """The geyser types the parser models, from its own enum."""
+    path = os.path.join(repo_root, GEYSER_TYPES_SOURCE)
+    text = io.open(path, encoding="utf-8").read()
+    # It is a readonly tuple of string literals, not an enum:
+    #   export declare const GeyserTypeNames: readonly ["steam", "hot_steam", ...
+    match = re.search(r"GeyserTypeNames:\s*readonly \[([^\]]*)\]", text)
+    if not match:
+        return []
+    return re.findall(r'"([a-z0-9_]+)"', match.group(1))
+
+
 def build(en, po, stats):
     """Mirror en/oni.json's shape, keeping only translated leaves."""
     out = OrderedDict()
@@ -285,16 +318,19 @@ def main():
         en.setdefault("DUPLICANTS", OrderedDict())
         en["ELEMENTS"] = elements_group(po, names, english=True)
         en["DIFFICULTY"] = difficulty_group(po, english=True)
+        en["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=True)
         io.open(en_path, "w", encoding="utf-8", newline="\n").write(
             json.dumps(en, ensure_ascii=False, indent=2) + "\n")
         print("seeded en/oni.json with %d element names and %d difficulty settings"
               % (len(en["ELEMENTS"]), len(en["DIFFICULTY"])))
+        print("  plus %d geyser names" % len(en["GEYSERS"]))
         return
 
     stats = {"total": 0, "translated": 0, "ambiguous": 0}
     result = build(en, po, stats)
     result["ELEMENTS"] = elements_group(po, names, english=False)
     result["DIFFICULTY"] = difficulty_group(po, english=False)
+    result["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=False)
     stats["total"] += len(names)
     stats["translated"] += len(result["ELEMENTS"])
     out_path = os.path.join(here, "..", "src", "translations", lang, "oni.json")

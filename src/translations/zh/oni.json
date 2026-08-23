@@ -1741,5 +1741,88 @@
       "DISABLED": "禁用",
       "ENABLED": "启用"
     }
+  },
+  "GEYSERS": {
+    "steam": {
+      "NAME": "低温蒸汽喷孔"
+    },
+    "hot_steam": {
+      "NAME": "蒸汽喷孔"
+    },
+    "hot_water": {
+      "NAME": "清水泉"
+    },
+    "slush_water": {
+      "NAME": "低温泥浆泉"
+    },
+    "filthy_water": {
+      "NAME": "污水泉"
+    },
+    "salt_water": {
+      "NAME": "盐水泉"
+    },
+    "small_volcano": {
+      "NAME": "小型火山"
+    },
+    "big_volcano": {
+      "NAME": "火山"
+    },
+    "liquid_co2": {
+      "NAME": "二氧化碳泉"
+    },
+    "hot_co2": {
+      "NAME": "二氧化碳喷孔"
+    },
+    "hot_hydrogen": {
+      "NAME": "氢气喷孔"
+    },
+    "hot_po2": {
+      "NAME": "高温污氧喷孔"
+    },
+    "slimy_po2": {
+      "NAME": "含菌污氧喷孔"
+    },
+    "chlorine_gas": {
+      "NAME": "氯气喷孔"
+    },
+    "methane": {
+      "NAME": "天然气喷孔"
+    },
+    "molten_copper": {
+      "NAME": "铜火山"
+    },
+    "molten_iron": {
+      "NAME": "铁火山"
+    },
+    "molten_gold": {
+      "NAME": "金火山"
+    },
+    "oil_drip": {
+      "NAME": "渗油裂缝"
+    },
+    "chlorine_gas_cool": {
+      "NAME": "低温氯气喷孔"
+    },
+    "liquid_sulfur": {
+      "NAME": "液硫泉"
+    },
+    "molten_aluminum": {
+      "NAME": "铝火山"
+    },
+    "molten_cobalt": {
+      "NAME": "钴火山"
+    },
+    "molten_niobium": {
+      "NAME": "铌火山"
+    },
+    "molten_tungsten": {
+      "NAME": "钨火山"
+    },
+    "murky_brine": {
+      "NAME": "污染浓盐水喷孔"
+    },
+    "slush_salt_water": {
+      "NAME": "低温盐泥泉"
+    }
   }
 }

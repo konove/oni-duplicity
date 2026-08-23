@@ -15,11 +15,13 @@ export interface UseGeyser {
   yearLength: number | null;
   yearActive: number | null;
   emitActive: number | null;
+  emitLength: number | null;
   onChangeEmitRate(rate: number): void;
   onChangeGeyserType(type: string): void;
   onChangeYearLength(fraction: number): void;
   onChangeYearActive(fraction: number): void;
   onChangeEmitActive(fraction: number): void;
+  onChangeEmitLength(fraction: number): void;
 }
 
 export default function useGeyser(gameObjectId: number): UseGeyser {
@@ -79,16 +81,28 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
     [dispatch, gameObjectId],
   );
 
+  // iterationLengthRoll is the one configuration roll the page never exposed.
+  const onChangeEmitLength = React.useCallback(
+    (fraction: number) => {
+      dispatch(
+        changeGeyserParameter(gameObjectId, "iterationLengthRoll", fraction),
+      );
+    },
+    [dispatch, gameObjectId],
+  );
+
   return {
     geyserType: config ? GeyserType[config.typeId.hash] : null,
     emitRate: config ? config.rateRoll : null,
     yearLength: config ? config.yearLengthRoll : null,
     yearActive: config ? config.yearPercentRoll : null,
     emitActive: config ? config.iterationPercentRoll : null,
+    emitLength: config ? config.iterationLengthRoll : null,
     onChangeEmitRate,
     onChangeGeyserType,
     onChangeYearLength,
     onChangeYearActive,
     onChangeEmitActive,
+    onChangeEmitLength,
   };
 }

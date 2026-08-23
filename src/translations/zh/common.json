@@ -73,6 +73,7 @@
     "noun_titlecase_plural": "间歇泉",
     "total_lifecycle_time": "完整周期时间（休眠 + 活跃）",
     "active_time": "活跃时间",
+    "iteration_length": "喷发周期时长",
     "emission_length": "喷发时长",
     "emission_rate": "喷发速率"
   },

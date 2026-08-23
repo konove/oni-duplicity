@@ -73,6 +73,7 @@
     "noun_titlecase_plural": "Гейзеры",
     "total_lifecycle_time": "Полный цикл (спячка + активность)",
     "active_time": "Время активности",
+    "iteration_length": "Длительность цикла извержений",
     "emission_length": "Длительность извержения",
     "emission_rate": "Скорость извержения"
   },

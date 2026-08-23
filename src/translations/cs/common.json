@@ -73,6 +73,7 @@
     "noun_titlecase_plural": "Gejzíry",
     "total_lifecycle_time": "Celková délka cyklu (spánek + aktivita)",
     "active_time": "Doba aktivity",
+    "iteration_length": "Délka erupčního cyklu",
     "emission_length": "Délka výronu",
     "emission_rate": "Rychlost výronu"
   },

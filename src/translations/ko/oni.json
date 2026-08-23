@@ -1709,5 +1709,88 @@
       "DISABLED": "비활성화되지 않음",
       "ENABLED": "켜짐"
     }
+  },
+  "GEYSERS": {
+    "steam": {
+      "NAME": "서늘한 증기 벤트"
+    },
+    "hot_steam": {
+      "NAME": "증기 벤트"
+    },
+    "hot_water": {
+      "NAME": "물 분출구"
+    },
+    "slush_water": {
+      "NAME": "서늘한 슬러시 분출구"
+    },
+    "filthy_water": {
+      "NAME": "오염된 물 벤트"
+    },
+    "salt_water": {
+      "NAME": "소금물 분출구"
+    },
+    "small_volcano": {
+      "NAME": "작은 화산"
+    },
+    "big_volcano": {
+      "NAME": "화산"
+    },
+    "liquid_co2": {
+      "NAME": "이산화탄소 분출구"
+    },
+    "hot_co2": {
+      "NAME": "이산화탄소 벤트"
+    },
+    "hot_hydrogen": {
+      "NAME": "수소 벤트"
+    },
+    "hot_po2": {
+      "NAME": "뜨거운 오염된 산소 벤트"
+    },
+    "slimy_po2": {
+      "NAME": "전염성인 오염된 산소 벤트"
+    },
+    "chlorine_gas": {
+      "NAME": "염소 기체 벤트"
+    },
+    "methane": {
+      "NAME": "천연가스 분출구"
+    },
+    "molten_copper": {
+      "NAME": "구리 화산"
+    },
+    "molten_iron": {
+      "NAME": "철 화산"
+    },
+    "molten_gold": {
+      "NAME": "금 화산"
+    },
+    "oil_drip": {
+      "NAME": "새는 기름 균열"
+    },
+    "chlorine_gas_cool": {
+      "NAME": "서늘한 염소 기체"
+    },
+    "liquid_sulfur": {
+      "NAME": "액체 황 분출구"
+    },
+    "molten_aluminum": {
+      "NAME": "알루미늄 화산"
+    },
+    "molten_cobalt": {
+      "NAME": "코발트 화산"
+    },
+    "molten_niobium": {
+      "NAME": "나이오븀 화산"
+    },
+    "molten_tungsten": {
+      "NAME": "텅스텐 화산"
+    },
+    "murky_brine": {
+      "NAME": "오염된 염수 벤트"
+    },
+    "slush_salt_water": {
+      "NAME": "서늘한 소금 슬러시 분출구"
+    }
   }
 }

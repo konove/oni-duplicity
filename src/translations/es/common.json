@@ -73,6 +73,7 @@
     "noun_titlecase_plural": "Géiseres",
     "total_lifecycle_time": "Duración total del ciclo (inactivo + activo)",
     "active_time": "Tiempo activo",
+    "iteration_length": "Duración del ciclo de erupción",
     "emission_length": "Duración de la emisión",
     "emission_rate": "Tasa de emisión"
   },
