@@ -97,6 +97,56 @@ Raw `GeyserType` keys in the dropdown and heading; sliders are uncontrolled (`de
 numeric readout; `iterationLengthRoll` has no control at all. See also #137 (a missing geyser type).
 Same class of defect as 0.3 — bundle with it. **Effort: S–M.**
 
+### 0.7 The Materials page hides elements the parser has never heard of
+
+`MaterialGameObjectNames` is the parser's `SimHashNames`, which lists **149**
+elements. The game's own `SimHashes` enum has **211**. Anything in the gap is
+simply absent from the table — not zero, not "other", just missing.
+
+Measured on a real colony: **285.4 t across three element types are invisible** —
+Shale 197.4 t, NickelOre 44.1 t, Peat 43.9 t. Shale alone is more than the dirt
+whose units 0.2 corrected, and it is the largest single material in that save.
+
+The values are recoverable the same way the trait and skill tables are: decompile
+`SimHashes` from `Assembly-CSharp.dll` (the `ilspycmd` workflow in
+`tools/README.md` — the enum comes out complete, with hashes) and regenerate
+`src/save-structure/const-data/template-enumerations/sim-hashes.ts` in the parser
+fork. That means a `tools/extract-sim-hashes.py` alongside the other extractors,
+then the fork round trip: build, commit, push, re-pin the sha here.
+
+**Effort: M**, mostly the fork round trip. **Risk:** the enum is the parser's
+element identity, so a wrong hash mis-identifies material rather than omitting
+it. Diff the regenerated file against the current one and expect additions only.
+
+### 0.8 Seeds and other sweepables are not listed at all
+
+`materials.ts` has carried `// TODO: Seeds, clothing, other sweepables` since
+before this roadmap. A real colony has nine seed types in it — `SpiceVineSeed`,
+`SeaLettuceSeed`, `ButterflyPlantSeed` and friends — and none appear.
+
+Seeds are **counted in units, not massed**, which is why they cannot simply join
+the existing rows: the table's two columns are loose mass and stored mass. They
+want a count, and the game names them from `STRINGS.CREATURES.SPECIES.SEEDS.*`,
+so the display names come from the catalogue like everything else.
+
+**Effort: M.** **Risk:** deciding what belongs. Clothing, food and equipment are
+also sweepable and also unit-counted; picking "seeds" alone is arbitrary, and
+picking everything turns the Materials page into an inventory screen. Scope it
+deliberately.
+
+### 0.9 The editor counts material the game does not
+
+Related to 0.2 but distinct, and unresolved. The same colony's algae sums to
+2,636 kg here against the game's 2,544. Dirt matched to the decimal, so this is
+not a unit or formatting problem — the two are counting different sets of
+objects. Likely candidates: the game's resource panel is per-asteroid where this
+selector sweeps the whole cluster, or it excludes material that is unreachable or
+inside certain containers.
+
+**Effort: S to investigate, unknown to fix.** Worth doing before anyone trusts
+the table for planning, and worth knowing that "totals differ from the game" may
+be correct behaviour rather than a bug.
+
 ---
 
 ## Tier 1 — Cheap wins, mostly already built
