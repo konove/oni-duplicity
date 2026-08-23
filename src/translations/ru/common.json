@@ -92,6 +92,8 @@
     "noun_titlecase": "Материал",
     "noun_titlecase_plural": "Материалы",
     "all_titlecase": "Все материалы",
+    "microgram": "{{count}} мкг",
+    "milligram": "{{count}} мг",
     "gram": "{{count}} г",
     "kilogram": "{{count}} кг",
     "tonne": "{{count}} т"

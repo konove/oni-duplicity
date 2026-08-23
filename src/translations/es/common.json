@@ -92,6 +92,8 @@
     "noun_titlecase": "Material",
     "noun_titlecase_plural": "Materiales",
     "all_titlecase": "Todos Los Materiales",
+    "microgram": "{{count}} mcg",
+    "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t"

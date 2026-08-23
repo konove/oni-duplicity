@@ -92,6 +92,8 @@
     "noun_titlecase": "材料",
     "noun_titlecase_plural": "材料",
     "all_titlecase": "全部材料",
+    "microgram": "{{count}} 微克",
+    "milligram": "{{count}} 毫克",
     "gram": "{{count}} 克",
     "kilogram": "{{count}} 千克",
     "tonne": "{{count}} 吨"

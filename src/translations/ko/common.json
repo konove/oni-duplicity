@@ -92,6 +92,8 @@
     "noun_titlecase": "재료",
     "noun_titlecase_plural": "재료",
     "all_titlecase": "모든 재료",
+    "microgram": "{{count}} mcg",
+    "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t"
