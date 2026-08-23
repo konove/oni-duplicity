@@ -13,6 +13,9 @@ const config = {
     "^.+\\.tsx?$": ["ts-jest", { tsconfig: "src/tsconfig.json" }],
   },
 
+  // Registers jest-dom matchers for the suites that opt into jsdom.
+  setupFilesAfterEnv: ["<rootDir>/test/setup-dom.js"],
+
   testRegex: "(\\.|/)(test|spec)\\.tsx?$",
 
   moduleNameMapper: {

@@ -51,13 +51,83 @@ Supported save versions are the `CURRENT_VERSION_MINOR` array in the fork's `src
 
 ## Testing
 
-Tests are `*.spec.ts` files sitting **next to the code they test** (e.g. `src/services/oni-save/reducer/modify-behavior.spec.ts`), not in `__tests__/` directories. A glob for `*.test.ts` finds nothing and will make you think the repo is untested. `src/__mocks__/` holds fixture data, not jest module mocks.
+**Every change ships with a test.** New feature, bug fix, or refactor of existing
+behaviour — add or update the test that would have caught it. Match the test to what
+changed:
 
-The default `testEnvironment` is **`node`** — every existing suite is pure logic. A test that needs a DOM opts in per file with a `@jest-environment jsdom` docblock; `jest-environment-jsdom` stays installed for exactly that.
+| What changed                                                                                                      | Test to write                                                                       | Where                |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------- |
+| Reducers, selectors, domain modules, anything pure                                                                | `*.spec.ts`, node environment                                                       | beside the code      |
+| A component's props, handlers, or semantics (an element becoming a `<button>`, an `aria-label`, a commit-on-blur) | `*.spec.tsx` with a `@jest-environment jsdom` docblock and `@testing-library/react` | beside the component |
+| Anything you can see — layout, spacing, a control's appearance, a focus ring                                      | Playwright screenshot                                                               | `e2e/`               |
 
-CSS and asset imports are mapped to stubs in `test/` so a component can be imported at all. Those mappings must stay **above** the `^@/(.*)$` alias in `moduleNameMapper` — jest applies mappers in order, and `@/style.css` would otherwise resolve to the real file and be parsed as JavaScript.
+Commands: `npm test` (jest), `npm run test:e2e` (Playwright), `npm run test:e2e:update`
+to accept new screenshots.
 
-The stubs do not make the duplicant sprite components testable. `react-oni-duplicant` ships untranspiled ESM (jest skips `node_modules` transforms) and reaches for `require.context`, which only webpack provides. Testing those needs `transformIgnorePatterns` plus a `require.context` shim, neither of which is set up.
+### Rules that are not optional
+
+**Prove the test can fail.** Write it, then break the thing it covers and watch it go
+red, then restore. Every trap below was found this way, and each one produced a test
+that passed while the feature was deleted.
+
+**Look at the screenshot.** `test:e2e:update` rewrites baselines without asking. A diff
+is either a regression or an intended change, and only opening the image tells you
+which. Playwright writes `-actual`, `-expected` and `-diff` PNGs into `test-results/`
+on failure.
+
+### Screenshot tests
+
+`e2e/` drives the **dev server**, because `loadMockSave()` (`src/debug.ts`) exists only
+in dev builds — without it every page past the overview redirects away and there is
+nothing to photograph. `e2e/fixtures.ts` wraps that; `playwright.config.ts` starts the
+server itself.
+
+Baselines live in `e2e/__screenshots__/` and are committed. They are **platform
+specific** — Chromium renders text differently on Windows and Linux, so a baseline
+taken here will not match one taken elsewhere. Playwright puts the platform in the
+filename, which keeps that visible rather than mysterious.
+
+Traps, all of which produced a green-but-meaningless test at some point:
+
+- **jsdom cannot screenshot.** It has no layout or paint engine. Pixel comparison needs
+  a real browser; that is why Playwright is here and not just jest.
+- **Ratio tolerances hide real regressions.** `maxDiffPixelRatio: 0.01` sounds tight and
+  allows 11,520 changed pixels on a 1280×900 page — enough to move a control or reflow a
+  table. The config uses an absolute `maxDiffPixels: 50`; same-machine reruns are
+  deterministic, so anything larger is a real change.
+- **Element screenshots clip to the element's box.** A focus ring drawn with
+  `outlineOffset` paints _outside_ that box and is cropped away, giving a shot identical
+  to the unfocused one. Screenshot a padded region of the page instead (see the focus
+  test in `e2e/duplicant-editor.spec.ts`).
+- **`.focus()` does not trigger `:focus-visible`.** MUI applies `focusVisibleClassName`
+  only on keyboard focus, so a programmatic `.focus()` never shows the ring and the test
+  passes with the ring deleted. Press `Tab` to reach the control.
+- **Confirm your fake regression is actually visible before blaming the harness.** MUI's
+  `Table` sets `border-collapse: collapse`, and CSS ignores padding on a collapsed-border
+  table — a "padding" regression applied cleanly, rendered identically, and looked like a
+  broken test for half an hour.
+
+### Jest specifics
+
+Tests are `*.spec.ts` files sitting **next to the code they test** (e.g.
+`src/services/oni-save/reducer/modify-behavior.spec.ts`), not in `__tests__/` directories.
+A glob for `*.test.ts` finds nothing and will make you think the repo is untested.
+`src/__mocks__/` holds fixture data, not jest module mocks.
+
+The default `testEnvironment` is **`node`** — the logic suites need no DOM and start
+faster without one. A component test opts in per file with a `@jest-environment jsdom`
+docblock. `test/setup-dom.js` registers `@testing-library/jest-dom`'s matchers, guarded
+on `document` existing so the node suites are unaffected.
+
+CSS and asset imports are mapped to stubs in `test/` so a component can be imported at
+all. Those mappings must stay **above** the `^@/(.*)$` alias in `moduleNameMapper` — jest
+applies mappers in order, and `@/style.css` would otherwise resolve to the real file and
+be parsed as JavaScript.
+
+The stubs do not make the duplicant sprite components unit-testable.
+`react-oni-duplicant` ships untranspiled ESM (jest skips `node_modules` transforms) and
+reaches for `require.context`, which only webpack provides. Those components are covered
+by the Playwright screenshots instead, which run the real bundle.
 
 ## Gotchas
 

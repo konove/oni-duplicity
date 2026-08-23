@@ -15,5 +15,11 @@
     "types": ["node", "webpack-dev-server"],
     "noEmit": true
   },
-  "include": ["webpack.config.js", "jest.config.js", "eslint.config.ts"]
+  "include": [
+    "webpack.config.js",
+    "jest.config.js",
+    "eslint.config.ts",
+    "playwright.config.ts",
+    "e2e/**/*.ts"
+  ]
 }
