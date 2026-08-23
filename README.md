@@ -22,11 +22,15 @@ Saves describe their own structure, so a new game version that only adds or reor
 
 This branch is a rewrite of the UI focusing on ease of use and community requested features.
 
+[ROADMAP.md](ROADMAP.md) covers what is worth building next and why, including which of the most-requested features turn out to be already built and only need surfacing.
+
 # Translations
 
 This project is ready for translations.
 
-To contribute a translation, translate [/src/translations/en/common.json](src/translations/en/common.json) and [/src/translations/en/oni.json](src/translations/en/oni.json) and submit them in a new issue.
+The interface strings live in [/src/translations/en/common.json](src/translations/en/common.json). Translate those and submit them in a new issue.
+
+The game's own vocabulary — trait, skill, effect and element names — is not hand-translated. It is extracted from Oxygen Not Included's own string catalogue by [tools/extract-translations.py](tools/extract-translations.py), so a duplicant's traits read the same here as they do in game. The game ships catalogues for Korean, Russian and Simplified Chinese; for any other language those terms fall back to English until Klei ships one.
 
 # Implementation
 

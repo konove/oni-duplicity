@@ -6,3 +6,6 @@ src/__mocks__/save-game.json
 
 # Build output.
 dist/
+
+# Local, machine-specific and git-ignored; not ours to format.
+.claude/settings.local.json
