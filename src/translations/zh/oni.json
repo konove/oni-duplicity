@@ -1697,5 +1697,49 @@
     "MoltenCopper": {
       "NAME": "熔融铜"
     }
+  },
+  "DIFFICULTY": {
+    "ImmuneSystem": {
+      "NAME": "疾病",
+      "COMPROMISED": "疫病之灾",
+      "DEFAULT": "默认",
+      "INVINCIBLE": "完全免疫",
+      "STRONG": "病菌抗性",
+      "WEAK": "病菌敏感"
+    },
+    "Stress": {
+      "NAME": "压力",
+      "DEFAULT": "默认",
+      "DOOMED": "失魂落魄",
+      "INDOMITABLE": "极乐心境",
+      "OPTIMISTIC": "生气勃勃",
+      "PESSIMISTIC": "闷闷不乐"
+    },
+    "StressBreaks": {
+      "NAME": "压力反应",
+      "DEFAULT": "启用",
+      "DISABLED": "禁用"
+    },
+    "Morale": {
+      "NAME": "士气",
+      "DEFAULT": "默认",
+      "DISABLED": "完全麻木",
+      "EASY": "冷酷",
+      "HARD": "挑剔",
+      "VERYHARD": "严格要求"
+    },
+    "CalorieBurn": {
+      "NAME": "饥饿",
+      "DEFAULT": "默认",
+      "DISABLED": "无胃者",
+      "EASY": "节食",
+      "HARD": "无底胃",
+      "VERYHARD": "饥肠辘辘"
+    },
+    "SandboxMode": {
+      "NAME": "沙盒模式",
+      "DISABLED": "禁用",
+      "ENABLED": "启用"
+    }
   }
 }

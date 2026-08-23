@@ -54,7 +54,10 @@
     "eyes_titlecase": "Eyes"
   },
   "duplicant_health": {
-    "noun_titlecase": "Health"
+    "noun_titlecase": "Health",
+    "fitness_titlecase": "Fitness",
+    "mind_titlecase": "Mind",
+    "disease_titlecase": "Disease"
   },
   "creature": {
     "noun_titlecase_plural": "Creatures",

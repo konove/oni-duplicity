@@ -1665,5 +1665,49 @@
     "MoltenCopper": {
       "NAME": "용융 구리"
     }
+  },
+  "DIFFICULTY": {
+    "ImmuneSystem": {
+      "NAME": "질병",
+      "COMPROMISED": "감염 확산 경향",
+      "DEFAULT": "기본값",
+      "INVINCIBLE": "완전 면역",
+      "STRONG": "세균 저항",
+      "WEAK": "세균 취약성"
+    },
+    "Stress": {
+      "NAME": "스트레스",
+      "DEFAULT": "기본값",
+      "DOOMED": "솔직히 우울함",
+      "INDOMITABLE": "클라우드 나인",
+      "OPTIMISTIC": "쾌활",
+      "PESSIMISTIC": "풀죽음"
+    },
+    "StressBreaks": {
+      "NAME": "스트레스 반응",
+      "DEFAULT": "켜짐",
+      "DISABLED": "비활성화되지 않음"
+    },
+    "Morale": {
+      "NAME": "사기",
+      "DEFAULT": "기본값",
+      "DISABLED": "완전 무감각",
+      "EASY": "차분함",
+      "HARD": "조금 안절부절못함",
+      "VERYHARD": "엄격주의"
+    },
+    "CalorieBurn": {
+      "NAME": "배고픔",
+      "DEFAULT": "기본값",
+      "DISABLED": "배 없음",
+      "EASY": "단식",
+      "HARD": "꾸르륵 배",
+      "VERYHARD": "걸신"
+    },
+    "SandboxMode": {
+      "NAME": "샌드박스 모드",
+      "DISABLED": "비활성화되지 않음",
+      "ENABLED": "켜짐"
+    }
   }
 }

@@ -47,7 +47,7 @@ type Props = HealthProps & WithStyles<typeof styles>;
 const Health: React.FC<Props> = ({ classes, gameObjectId }) => (
   <div className={classes.root}>
     <Typography className={classes.header} variant="h6">
-      <Trans>Fitness</Trans>
+      <Trans i18nKey="duplicant_health.fitness_titlecase">Fitness</Trans>
     </Typography>
     <Divider className={classes.divider} />
     <div className={classes.group}>
@@ -79,7 +79,7 @@ const Health: React.FC<Props> = ({ classes, gameObjectId }) => (
       />
     </div>
     <Typography className={classes.header} variant="h6">
-      <Trans>Mind</Trans>
+      <Trans i18nKey="duplicant_health.mind_titlecase">Mind</Trans>
     </Typography>
     <Divider className={classes.divider} />
     <div className={classes.group}>
@@ -95,7 +95,7 @@ const Health: React.FC<Props> = ({ classes, gameObjectId }) => (
       />
     </div>
     <Typography className={classes.header} variant="h6">
-      <Trans>Disease</Trans>
+      <Trans i18nKey="duplicant_health.disease_titlecase">Disease</Trans>
     </Typography>
     <Divider className={classes.divider} />
     <div className={classes.group}>

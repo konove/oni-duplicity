@@ -54,7 +54,10 @@
     "eyes_titlecase": "眼睛"
   },
   "duplicant_health": {
-    "noun_titlecase": "健康值"
+    "noun_titlecase": "健康值",
+    "fitness_titlecase": "身体状态",
+    "mind_titlecase": "精神",
+    "disease_titlecase": "疾病"
   },
   "creature": {
     "noun_titlecase_plural": "小动物",

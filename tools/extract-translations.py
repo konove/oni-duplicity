@@ -144,6 +144,51 @@ def elements_group(po, names, english):
     return out
 
 
+# The custom-game settings the editor exposes, mapped to their catalogue
+# segment. The names differ: the save calls it CalorieBurn, the game
+# CALORIE_BURN.
+DIFFICULTY_SETTINGS = {
+    "ImmuneSystem": "IMMUNESYSTEM",
+    "Stress": "STRESS",
+    "StressBreaks": "STRESS_BREAKS",
+    "Morale": "MORALE",
+    "CalorieBurn": "CALORIE_BURN",
+    "SandboxMode": "SANDBOXMODE",
+}
+SETTINGS_ROOT = "STRINGS.UI.FRONTEND.CUSTOMGAMESETTINGSSCREEN.SETTINGS"
+
+
+def difficulty_group(po, english):
+    """The difficulty settings and their levels, as the game labels them."""
+    out = OrderedDict()
+    for setting, segment in DIFFICULTY_SETTINGS.items():
+        entries = OrderedDict()
+
+        name = po.get("%s.%s.NAME" % (SETTINGS_ROOT, segment))
+        if name:
+            value = name[0] if english else name[1]
+            if value.strip():
+                entries["NAME"] = normalize(value)
+
+        # Levels are discovered rather than listed, so a new difficulty option
+        # in a game update comes through without editing this file.
+        prefix = "%s.%s.LEVELS." % (SETTINGS_ROOT, segment)
+        for key, (msgid, msgstr) in po.items():
+            if not key.startswith(prefix) or not key.endswith(".NAME"):
+                continue
+            level = key[len(prefix):-len(".NAME")]
+            value = msgid if english else msgstr
+            # Keyed by the catalogue's own upper-case level, so the app looks
+            # up value.toUpperCase() rather than anyone guessing that VERYHARD
+            # pairs with the save's "VeryHard".
+            if value.strip():
+                entries[level] = normalize(value)
+
+        if entries:
+            out[setting] = entries
+    return out
+
+
 def build(en, po, stats):
     """Mirror en/oni.json's shape, keeping only translated leaves."""
     out = OrderedDict()
@@ -239,14 +284,17 @@ def main():
     if lang == "en":
         en.setdefault("DUPLICANTS", OrderedDict())
         en["ELEMENTS"] = elements_group(po, names, english=True)
+        en["DIFFICULTY"] = difficulty_group(po, english=True)
         io.open(en_path, "w", encoding="utf-8", newline="\n").write(
             json.dumps(en, ensure_ascii=False, indent=2) + "\n")
-        print("seeded en/oni.json with %d element names" % len(en["ELEMENTS"]))
+        print("seeded en/oni.json with %d element names and %d difficulty settings"
+              % (len(en["ELEMENTS"]), len(en["DIFFICULTY"])))
         return
 
     stats = {"total": 0, "translated": 0, "ambiguous": 0}
     result = build(en, po, stats)
     result["ELEMENTS"] = elements_group(po, names, english=False)
+    result["DIFFICULTY"] = difficulty_group(po, english=False)
     stats["total"] += len(names)
     stats["translated"] += len(result["ELEMENTS"])
     out_path = os.path.join(here, "..", "src", "translations", lang, "oni.json")

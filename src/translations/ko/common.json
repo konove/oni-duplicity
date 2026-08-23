@@ -54,7 +54,10 @@
     "eyes_titlecase": "눈"
   },
   "duplicant_health": {
-    "noun_titlecase": "건강"
+    "noun_titlecase": "건강",
+    "fitness_titlecase": "신체 상태",
+    "mind_titlecase": "정신",
+    "disease_titlecase": "질병"
   },
   "creature": {
     "noun_titlecase_plural": "크리터",

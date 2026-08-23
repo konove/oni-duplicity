@@ -1665,5 +1665,49 @@
     "MoltenCopper": {
       "NAME": "Расплавленная медь"
     }
+  },
+  "DIFFICULTY": {
+    "ImmuneSystem": {
+      "NAME": "Болезнь",
+      "COMPROMISED": "Вероятность эпидемии",
+      "DEFAULT": "По умолчанию",
+      "INVINCIBLE": "Абсолютный иммунитет",
+      "STRONG": "Микробостойкий",
+      "WEAK": "Уязвимость к микробам"
+    },
+    "Stress": {
+      "NAME": "Стресс",
+      "DEFAULT": "По умолчанию",
+      "DOOMED": "Глубокая депрессия",
+      "INDOMITABLE": "Седьмое небо",
+      "OPTIMISTIC": "Бодрячки",
+      "PESSIMISTIC": "Грусть"
+    },
+    "StressBreaks": {
+      "NAME": "Реакции на стресс",
+      "DEFAULT": "Включено",
+      "DISABLED": "Отключено"
+    },
+    "Morale": {
+      "NAME": "Моральный дух",
+      "DEFAULT": "По умолчанию",
+      "DISABLED": "Пофигисты",
+      "EASY": "Дзен",
+      "HARD": "Немного суеты",
+      "VERYHARD": "Нет пощады"
+    },
+    "CalorieBurn": {
+      "NAME": "Голод",
+      "DEFAULT": "По умолчанию",
+      "DISABLED": "Желудки ни к чему",
+      "EASY": "Пост",
+      "HARD": "Бурчащие животы",
+      "VERYHARD": "Впроголодь"
+    },
+    "SandboxMode": {
+      "NAME": "Режим песочницы",
+      "DISABLED": "Отключено",
+      "ENABLED": "Включено"
+    }
   }
 }

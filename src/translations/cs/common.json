@@ -54,7 +54,10 @@
     "eyes_titlecase": "Oči"
   },
   "duplicant_health": {
-    "noun_titlecase": "Život"
+    "noun_titlecase": "Život",
+    "fitness_titlecase": "Kondice",
+    "mind_titlecase": "Mysl",
+    "disease_titlecase": "Nemoc"
   },
   "creature": {
     "noun_titlecase_plural": "Tvorové",

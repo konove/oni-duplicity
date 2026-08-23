@@ -1904,5 +1904,49 @@
     "MoltenCopper": {
       "NAME": "Molten Copper"
     }
+  },
+  "DIFFICULTY": {
+    "ImmuneSystem": {
+      "NAME": "Disease",
+      "COMPROMISED": "Outbreak Prone",
+      "DEFAULT": "Default",
+      "INVINCIBLE": "Total Immunity",
+      "STRONG": "Germ Resistant",
+      "WEAK": "Germ Susceptible"
+    },
+    "Stress": {
+      "NAME": "Stress",
+      "DEFAULT": "Default",
+      "DOOMED": "Frankly Depressing",
+      "INDOMITABLE": "Cloud Nine",
+      "OPTIMISTIC": "Chipper",
+      "PESSIMISTIC": "Glum"
+    },
+    "StressBreaks": {
+      "NAME": "Stress Reactions",
+      "DEFAULT": "Enabled",
+      "DISABLED": "Disabled"
+    },
+    "Morale": {
+      "NAME": "Morale",
+      "DEFAULT": "Default",
+      "DISABLED": "Totally Blasé",
+      "EASY": "Chill",
+      "HARD": "A Bit Persnickety",
+      "VERYHARD": "Draconian"
+    },
+    "CalorieBurn": {
+      "NAME": "Hunger",
+      "DEFAULT": "Default",
+      "DISABLED": "Tummyless",
+      "EASY": "Fasting",
+      "HARD": "Rumbly Tummies",
+      "VERYHARD": "Ravenous"
+    },
+    "SandboxMode": {
+      "NAME": "Sandbox Mode",
+      "DISABLED": "Disabled",
+      "ENABLED": "Enabled"
+    }
   }
 }

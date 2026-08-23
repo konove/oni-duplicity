@@ -54,7 +54,10 @@
     "eyes_titlecase": "Глаза"
   },
   "duplicant_health": {
-    "noun_titlecase": "Здоровье"
+    "noun_titlecase": "Здоровье",
+    "fitness_titlecase": "Физическое состояние",
+    "mind_titlecase": "Разум",
+    "disease_titlecase": "Болезнь"
   },
   "creature": {
     "noun_titlecase_plural": "Существа",
