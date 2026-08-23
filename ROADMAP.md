@@ -147,6 +147,47 @@ inside certain containers.
 the table for planning, and worth knowing that "totals differ from the game" may
 be correct behaviour rather than a bug.
 
+### 0.10 Geyser sliders edit a number nobody can read
+
+The five sliders edit the raw rolls stored in the save and label them as
+percentages. The game turns each roll into a real value by resampling it between
+that geyser type's own min and max — and not linearly: `GeyserConfigurator.
+Resample` is a logit curve, so a roll of 0.996 lands at 1030s in a 480–1080s
+range while 0.5 sits at the midpoint. "99.6%" is not "99.6% of the way to
+maximum", and 50% on a copper volcano means nothing like 50% on a steam vent.
+
+Verified against a real colony's Copper Volcano U014, reproducing all four
+numbers the game's panel shows: 79s active every 1030s, 91.8 cycles every 153.1
+cycles, 6.9 kg/s while erupting, 317 g/s average.
+
+Needs the per-type tuning table — 27 types by roughly ten numbers, sitting in
+`GeyserGenericConfig` as `new GeyserType("molten_copper", …, 480f, 1080f,
+1f/60f, 0.1f)` — extracted the way the skill and effect tables already are, plus
+`Resample` and its inverse so a slider can set a real value and store the roll
+that produces it. **Effort: M**, and the risky half is done: the maths is
+verified rather than assumed.
+
+### 0.11 The editor does not orient a new arrival
+
+From "I have a .sav" to "I changed the thing I wanted" there is no guidance:
+most of the nav does nothing until a save loads, the overview is a name and four
+numbers, and nothing says what this editor is for or what is safe to touch.
+**Effort: M**, and mostly copy and sequencing rather than new machinery.
+
+### 0.12 The duplicant editor is the densest screen and the least organised
+
+Five tabs — Attributes, Appearance, Health, Skills, Effects — under a header
+that already carries the portrait, every trait chip and every interest chip.
+Attributes alone is 30-odd numeric fields. It is the screen people spend their
+time in and the one with the least deliberate layout. **Effort: M–L.**
+
+### 0.13 The page split may not match how people edit a colony
+
+Duplicants, Creatures, Geysers, Worlds, Materials, Raw Editor: that carving
+follows the save's object types rather than any task someone sits down to do.
+Worth asking whether the drawer should be organised around what people came to
+change. **Effort: L, and a design question before it is an engineering one.**
+
 ---
 
 ## Tier 1 — Cheap wins, mostly already built
