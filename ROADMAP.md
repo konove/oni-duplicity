@@ -32,13 +32,14 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Eleven entries are marked **done** and carry a note saying what shipped: 0.1
-through 0.8, 0.10, 1.7 — which needed no code at all, only checking — and 1.8. A twelfth, 0.9, closed
+**Where it stands.** Twelve entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.8, 0.10, 1.7 — which needed no code at all, only checking — 1.8 and 1.9. A thirteenth, 0.9, closed
 the other way: the editor's totals differ from the game's panel because the panel hides unreachable
 material and counts one asteroid, so there was never anything to fix. **Tier 0 is down to four**, and
 all four are questions about how the thing is laid out rather than what it can see (0.11 to 0.14).
-Tier 1 has 1.1 through 1.6 open, plus 1.9, which the Materials page rewrite created: it can now list
-seeds, eggs and food, and it names them by splitting the prefab id rather than from the catalogue.
+Tier 1 has 1.1 through 1.6 open; 1.7, 1.8 and 1.9 are done. 1.9 was filed and closed the same day - the
+Materials page could list seeds, eggs and food but named them by splitting the prefab id, which turned
+Snac Fruit into "Garden Forage Plant".
 
 ---
 
@@ -389,27 +390,32 @@ fourth direction - row selection with an action bar - is unchanged in status:
 still the right investment when 2.2 lands, and it can now wrap the row menu
 rather than replace it.
 
-### 1.9 Non-elements show a humanised id rather than the game's name
+### 1.9 Non-elements show a humanised id rather than the game's name — **done**
 
-The Materials page lists seeds, eggs, food, equipment and loose items as of
-0.8, and names them by splitting the prefab id: `SeaLettuceSeed` reads as "Sea
-Lettuce Seed". That is close, and it is the same fallback the 63 uncatalogued
-elements already use, but it is not what the player's game calls them and in a
-non-English locale it is English.
+Filed and closed the same day, because the premise of the entry was wrong. It
+said splitting the prefab id lands "close" to the game's name, which holds for
+`SeaLettuceSeed` and does not hold at all for the DLC plants a real colony is
+full of, where the id is an internal codename:
 
-Elements are easy because the catalogue key is derivable - `ELEMENTS.<ID>.NAME`
-from the element id. Items are not: each config class picks its own string key,
-so `VineFruitConfig` names itself `STRINGS.ITEMS.FOOD.VINEFRUIT.NAME` and there
-is no rule mapping one to the other. It has to be extracted from the decompiled
-configs, and only 14 of 139 `CreateLooseEntity` call sites pass the literal
-`ID` alongside a `STRINGS.` constant - the rest go through local variables or
-other helpers, so a real extractor has to resolve those.
+| Split id                | The game's name |
+| ----------------------- | --------------- |
+| Garden Forage Plant     | Snac Fruit      |
+| Garden Food Plant Food  | Sweatcorn       |
+| Garden Decor Plant Seed | Rosebush Seed   |
+| Sea Lettuce Seed        | Waterweed Seed  |
 
-**Effort: M**, and it is a `tools/` job rather than an app one: an extractor
-producing prefab id to catalogue key, then the existing
-`extract-translations.py` path for the six locales. **Risk:** a wrong mapping
-labels a material as something else, which is worse than showing the id - so
-the extractor should refuse to guess, the way the others do.
+`tools/extract-item-names.py` resolves it without knowing any helper's
+signature. The rule is one observation about the game's entity templates - the
+display name is always the argument straight after the prefab id, in
+`CreateLooseEntity`, `CreateAndRegisterSeedForPlant` and
+`ExtendEntityToFertileCreature` alike - so it resolves what it can of every
+argument in every `*Config.cs` and records a pair wherever an id is followed by
+a catalogue key. Equipment and artifacts get a rule each, since one takes no
+name argument and the other builds its id at runtime.
+
+672 names, in English and the three languages the game ships catalogues for;
+Czech and Spanish fall back to English exactly as they already do for elements.
+Every material across two real colonies resolves.
 
 ## Tier 2 — Real work, real demand
 
