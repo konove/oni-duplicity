@@ -1,141 +1,155 @@
 import {
   GameObjectGroup,
   GameObject,
+  GameObjectBehavior,
   getBehavior,
   StorageBehavior,
   PrimaryElementBehavior,
-  SimHashName,
 } from "oni-save-parser";
 import { createSelector } from "reselect";
-import { values, orderBy, flatMap } from "lodash";
+import { values, orderBy } from "lodash";
 
-import { MaterialObjectName, MaterialGameObjectNames } from "../materials";
+import {
+  MaterialKind,
+  MaterialMeasure,
+  isMaterialGroup,
+  materialKind,
+  materialMeasure,
+} from "../materials";
+
 import { gameObjectGroupsSelector } from "./game-objects";
 
 export interface MaterialListItem {
-  name: MaterialObjectName;
-  /** Kilograms, as the save stores them. */
-  looseMass: number;
-  looseCount: number;
-  storedMass: number;
-  storedCount: number;
+  /** The prefab name, which is the element id for an element chunk. */
+  name: string;
+  kind: MaterialKind;
+  measure: MaterialMeasure;
+  /**
+   * How much is lying on the ground, in the unit `measure` names: kilograms
+   * for an element, a count of things for everything else. Calories are
+   * derived from this, not stored.
+   */
+  looseUnits: number;
+  /** How many objects that is - clumps, bottles, canisters, or loose items. */
+  looseObjects: number;
+  storedUnits: number;
+  /** How many containers hold some of it. */
+  storedContainers: number;
 }
 
 export const materialsSelector = createSelector(
   gameObjectGroupsSelector,
-  (groups) => {
-    const rowsByMaterial: Record<string, MaterialListItem> = {};
-
-    if (groups) {
-      for (const group of groups) {
-        countMaterialGroup(group, rowsByMaterial);
-      }
-    }
-
-    const rows = values(rowsByMaterial);
-    return orderBy(rows, ["name"]);
-  },
+  (groups) => collectMaterials(groups ?? []),
 );
 
-function countMaterialGroup(
-  group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>,
-) {
-  const loose = isMaterialGameObject(group.name);
-  if (loose) {
-    countLooseMaterialGroup(group, rowsByMaterial);
-  } else {
-    countStorageGroup(group, rowsByMaterial);
-  }
-}
+/**
+ * Totals every material in a save, loose and stored.
+ *
+ * Two things a group can be, and it can be both: material in its own right,
+ * and a container holding material. An atmo suit is swept like an item and
+ * holds oxygen like a locker, so both passes run over every group rather than
+ * one excluding the other.
+ */
+export function collectMaterials(
+  groups: readonly GameObjectGroup[],
+): MaterialListItem[] {
+  const rowsByMaterial: Record<string, MaterialListItem> = {};
 
-function countLooseMaterialGroup(
-  group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>,
-) {
-  for (const gameObject of group.gameObjects) {
-    addMaterialObject(
-      group.name as SimHashName,
-      gameObject,
-      true,
-      rowsByMaterial,
-    );
-  }
-}
+  for (const group of groups) {
+    for (const gameObject of group.gameObjects) {
+      const behaviorNames = gameObject.behaviors.map(
+        (behavior: GameObjectBehavior) => behavior.name,
+      );
 
-function countStorageGroup(
-  group: GameObjectGroup,
-  rowsByMaterial: Record<string, MaterialListItem>,
-) {
-  const storedObjects = flatMap(group.gameObjects, getStoredObjects);
-  for (const storedObject of storedObjects) {
-    const { type, gameObject } = storedObject;
+      if (isMaterialGroup(behaviorNames)) {
+        addLoose(group.name, behaviorNames, gameObject, rowsByMaterial);
+      }
 
-    if (!isMaterialGameObject(type)) {
-      continue;
+      addStored(gameObject, rowsByMaterial);
     }
-
-    addMaterialObject(type, gameObject, false, rowsByMaterial);
   }
+
+  return orderBy(values(rowsByMaterial), ["name"]);
 }
 
-function getStoredObjects(
+function addLoose(
+  name: string,
+  behaviorNames: string[],
   gameObject: GameObject,
-): { type: string; gameObject: GameObject }[] {
-  const storage = getBehavior(gameObject, StorageBehavior);
-  if (!storage) {
-    return [];
-  }
-
-  return storage.extraData.map(({ name, ...gameObject }) => ({
-    type: name,
-    gameObject,
-  }));
-}
-
-function getMaterialRow(
-  name: MaterialObjectName,
   rowsByMaterial: Record<string, MaterialListItem>,
 ) {
-  if (!rowsByMaterial[name]) {
-    rowsByMaterial[name] = {
-      name,
-      looseCount: 0,
-      looseMass: 0,
-      storedCount: 0,
-      storedMass: 0,
-    };
-  }
-  return rowsByMaterial[name];
-}
-
-// This should return `type is SimHashName`, but typescript wont let me
-//  make that assurance.
-function isMaterialGameObject(type: string): type is MaterialObjectName {
-  return MaterialGameObjectNames.indexOf(type as any) !== -1;
-}
-
-function addMaterialObject(
-  name: MaterialObjectName,
-  gameObject: GameObject,
-  loose: boolean,
-  rowsByMaterial: Record<string, MaterialListItem>,
-) {
-  const elementBehavior = getBehavior(gameObject, PrimaryElementBehavior);
-  if (!elementBehavior) {
+  const units = elementUnits(gameObject);
+  if (units === null) {
     return;
   }
 
-  const { Units } = elementBehavior.templateData;
+  const row = getRow(name, materialKind(name, behaviorNames), rowsByMaterial);
+  row.looseUnits += units;
+  row.looseObjects++;
+}
 
-  // Use custom provided name, as many objects (food, clothing) have the same primary element.
-  const row = getMaterialRow(name, rowsByMaterial);
-
-  if (loose) {
-    row.looseCount++;
-    row.looseMass += Units;
-  } else {
-    row.storedCount++;
-    row.storedMass += Units;
+/**
+ * Adds whatever this object stores.
+ *
+ * Counted per container rather than per stack: a locker holding three stacks
+ * of shale is one container, and saying "3 containers" for it - which the page
+ * did - overstates how spread out a material is.
+ */
+function addStored(
+  container: GameObject,
+  rowsByMaterial: Record<string, MaterialListItem>,
+) {
+  const storage = getBehavior(container, StorageBehavior);
+  if (!storage) {
+    return;
   }
+
+  const containedNames = new Set<string>();
+
+  for (const { name, ...stored } of storage.extraData) {
+    const behaviorNames = stored.behaviors.map(
+      (behavior: GameObjectBehavior) => behavior.name,
+    );
+    if (!isMaterialGroup(behaviorNames)) {
+      continue;
+    }
+
+    const units = elementUnits(stored);
+    if (units === null) {
+      continue;
+    }
+
+    const row = getRow(name, materialKind(name, behaviorNames), rowsByMaterial);
+    row.storedUnits += units;
+    containedNames.add(name);
+  }
+
+  for (const name of containedNames) {
+    rowsByMaterial[name].storedContainers++;
+  }
+}
+
+/** `PrimaryElement.Units`, or null for an object that has no element at all. */
+function elementUnits(gameObject: GameObject): number | null {
+  const element = getBehavior(gameObject, PrimaryElementBehavior);
+  return element ? element.templateData.Units : null;
+}
+
+function getRow(
+  name: string,
+  kind: MaterialKind,
+  rowsByMaterial: Record<string, MaterialListItem>,
+): MaterialListItem {
+  if (!rowsByMaterial[name]) {
+    rowsByMaterial[name] = {
+      name,
+      kind,
+      measure: materialMeasure(kind),
+      looseUnits: 0,
+      looseObjects: 0,
+      storedUnits: 0,
+      storedContainers: 0,
+    };
+  }
+  return rowsByMaterial[name];
 }

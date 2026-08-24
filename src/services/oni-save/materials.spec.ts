@@ -6,8 +6,10 @@ import {
   materialMeasure,
   looseObjectKey,
   countKey,
+  kindKey,
   foodCalories,
   formatCalories,
+  formatQuantity,
   MaterialGameObjectNames,
   elementDisplayName,
   formatMass,
@@ -398,5 +400,55 @@ describe("formatCalories", () => {
 
   it("prints a plain zero", () => {
     expect(formatCalories(0, t)).toBe("material.kilocalorie:0");
+  });
+});
+
+describe("formatQuantity", () => {
+  it("weighs an element", () => {
+    expect(formatQuantity("mass", "element", "Shale", 197400, t)).toBe(
+      "material.tonne:197.4",
+    );
+  });
+
+  it("counts a seed in seeds and an egg in eggs", () => {
+    expect(formatQuantity("count", "seed", "SeaLettuceSeed", 31, t)).toBe(
+      "material.seed_count:31",
+    );
+    expect(formatQuantity("count", "egg", "ChameleonEgg", 11, t)).toBe(
+      "material.egg_count:11",
+    );
+  });
+
+  it("turns food units into the kilocalories the game shows", () => {
+    expect(formatQuantity("calories", "food", "VineFruit", 7, t)).toBe(
+      "material.kilocalorie:2275",
+    );
+  });
+
+  // A food the tuning table has never heard of still has to render something,
+  // and a count of the things is true where a calorie count would be invented.
+  it("counts a food it cannot price in calories", () => {
+    expect(formatQuantity("calories", "food", "ModdedSnack", 4, t)).toBe(
+      "material.unit_count:4",
+    );
+  });
+});
+
+describe("kindKey", () => {
+  it("says which phase an element is, since the table mixes all three", () => {
+    expect(kindKey("element", "Shale")).toBe("material.kind.solid_element");
+    expect(kindKey("element", "SaltWater")).toBe(
+      "material.kind.liquid_element",
+    );
+    expect(kindKey("element", "ChlorineGas")).toBe("material.kind.gas_element");
+  });
+
+  it("names the other kinds plainly", () => {
+    expect(kindKey("seed", "SeaLettuceSeed")).toBe("material.kind.seed");
+    expect(kindKey("food", "Meat")).toBe("material.kind.food");
+    expect(kindKey("equipment", "Atmo_Suit")).toBe("material.kind.equipment");
+    expect(kindKey("item", "OrbitalResearchDatabank")).toBe(
+      "material.kind.item",
+    );
   });
 });

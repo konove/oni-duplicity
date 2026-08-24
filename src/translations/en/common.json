@@ -116,23 +116,48 @@
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t",
-    "per_second": "{{mass}}/s"
+    "per_second": "{{mass}}/s",
+    "kilocalorie": "{{count}} kcal",
+    "kind": {
+      "solid_element": "Solid element",
+      "liquid_element": "Liquid element",
+      "gas_element": "Gas element",
+      "seed": "Seed",
+      "egg": "Critter egg",
+      "food": "Edible",
+      "equipment": "Equipment",
+      "item": "Item"
+    },
+    "actions_label": "Actions for {{name}}",
+    "seed_count_one": "{{count}} seed",
+    "seed_count_other": "{{count}} seeds",
+    "egg_count_one": "{{count}} egg",
+    "egg_count_other": "{{count}} eggs",
+    "unit_count_one": "{{count}} unit",
+    "unit_count_other": "{{count}} units"
   },
   "material_loose": {
     "noun_titlecase": "Loose",
-    "clump_count": "{{count}} clump",
-    "clump_count_plural": "{{count}} clumps",
     "verbs": {
-      "delete_name": "Delete {{name}}"
+      "delete_name": "Delete {{name}}",
+      "delete_amount": "Delete {{amount}} lying around",
+      "delete_all": "Delete all loose material"
     },
     "prompts": {
       "delete": "This will remove all loose material from the game.  The material will not be recovered."
-    }
+    },
+    "lying_around": "lying around",
+    "clump_count_one": "{{count}} clump",
+    "clump_count_other": "{{count}} clumps",
+    "bottle_count_one": "{{count}} bottle",
+    "bottle_count_other": "{{count}} bottles",
+    "canister_count_one": "{{count}} canister",
+    "canister_count_other": "{{count}} canisters"
   },
   "material_storage": {
-    "noun_titlecase": "Storage",
-    "container_count": "{{count}} container",
-    "container_count_plural": "{{count}} containers"
+    "noun_titlecase": "In containers",
+    "container_count_one": "{{count}} container",
+    "container_count_other": "{{count}} containers"
   },
   "time_cycles": {
     "noun_titlecase": "Cycle Time"

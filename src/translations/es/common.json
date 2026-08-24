@@ -116,23 +116,55 @@
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t",
-    "per_second": "{{mass}}/s"
+    "per_second": "{{mass}}/s",
+    "seed_count_one": "{{count}} semilla",
+    "seed_count_many": "{{count}} semillas",
+    "seed_count_other": "{{count}} semillas",
+    "egg_count_one": "{{count}} huevo",
+    "egg_count_many": "{{count}} huevos",
+    "egg_count_other": "{{count}} huevos",
+    "unit_count_one": "{{count}} unidad",
+    "unit_count_many": "{{count}} unidades",
+    "unit_count_other": "{{count}} unidades",
+    "kilocalorie": "{{count}} kcal",
+    "kind": {
+      "solid_element": "Elemento sólido",
+      "liquid_element": "Elemento líquido",
+      "gas_element": "Elemento gaseoso",
+      "seed": "Semilla",
+      "egg": "Huevo de criatura",
+      "food": "Comestible",
+      "equipment": "Equipo",
+      "item": "Objeto"
+    },
+    "actions_label": "Acciones para {{name}}"
   },
   "material_loose": {
     "noun_titlecase": "Suelto",
-    "clump_count": "{{count}} agrupado",
-    "clump_count_plural": "{{count}} agrupados",
     "verbs": {
-      "delete_name": "Eliminar {{name}}"
+      "delete_name": "Eliminar {{name}}",
+      "delete_amount": "Eliminar {{amount}} en el suelo",
+      "delete_all": "Eliminar todo el material suelto"
     },
     "prompts": {
       "delete": "Esto eliminará todos loas materiales sueltos.  Los materiales no podran ser recuperados."
-    }
+    },
+    "clump_count_one": "{{count}} agrupado",
+    "clump_count_many": "{{count}} agrupados",
+    "clump_count_other": "{{count}} agrupados",
+    "bottle_count_one": "{{count}} botella",
+    "bottle_count_many": "{{count}} botellas",
+    "bottle_count_other": "{{count}} botellas",
+    "canister_count_one": "{{count}} bidón",
+    "canister_count_many": "{{count}} bidones",
+    "canister_count_other": "{{count}} bidones",
+    "lying_around": "en el suelo"
   },
   "material_storage": {
-    "noun_titlecase": "Almacenamiento",
-    "container_count": "{{count}} contenedor",
-    "container_count_plural": "{{count}} contenedores"
+    "noun_titlecase": "En contenedores",
+    "container_count_one": "{{count}} contenedor",
+    "container_count_many": "{{count}} contenedores",
+    "container_count_other": "{{count}} contenedores"
   },
   "time_cycles": {
     "noun_titlecase": "Ciclos"

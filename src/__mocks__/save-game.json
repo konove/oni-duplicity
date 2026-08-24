@@ -20471,6 +20471,4862 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Shale",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950000,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 13489
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950001,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 16450
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950002,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 19411
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950003,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 13489
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950004,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 16450
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950005,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 19411
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 106,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950006,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 13489
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 107,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950007,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 16450
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 108,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950008,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 19411
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 109,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950009,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 13489
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 110,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950010,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 16450
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 111,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950011,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1708952091,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 19411
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dirt",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950012,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 318
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950013,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 318
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950014,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 375.24
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950015,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 260.76
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950016,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 318
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950017,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 375.24
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 106,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950018,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 260.76
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 107,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950019,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1624244999,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 318
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SaltWater",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950020,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 652.8155
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950021,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 796.1167
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950022,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 939.4177
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950023,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 652.8157
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950024,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 796.1167
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950025,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 1911997537,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 939.4177
+              }
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "KBoxCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Dumpable",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SeaLettuceSeed",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950026,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.8248
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950027,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.4444
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950028,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 4.0644
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950029,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.8244
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950030,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.4444
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950031,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 4.0644
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 106,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950032,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.8244
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 107,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950033,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.4444
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 108,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950034,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 4.0644
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "PlantableSeed",
+              "templateData": {
+                "timeUntilSelfPlant": 1800
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ChameleonEgg",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950035,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950036,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950037,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.18
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950038,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 0.82
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950039,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950040,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.18
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 106,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950041,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 0.82
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 107,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950042,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 108,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950043,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.18
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 109,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950044,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 0.82
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 110,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950045,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Effects",
+              "templateData": {}
+            },
+            {
+              "name": "SymbolOverrideController",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Meat",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950046,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.0714
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950047,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.0714
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950048,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.4443
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950049,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.6986
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 104,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950050,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.0714
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 105,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950051,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 2.4443
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 106,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950052,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.6986
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Compostable",
+              "templateData": {}
+            },
+            {
+              "name": "Edible",
+              "templateData": {
+                "spices": [],
+                "workTimeRemaining": 0,
+                "numberOfUses": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OrbitalResearchDatabank",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950053,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.75
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950054,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.75
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950055,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 4.425
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 103,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950056,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": 976099455,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 3.075
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Atmo_Suit",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 100,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950057,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1774383478,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 0.82
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Equippable",
+              "templateData": {}
+            },
+            {
+              "name": "Durability",
+              "templateData": {
+                "isEquipped": false,
+                "timeEquipped": 0,
+                "durability": 0.82
+              }
+            },
+            {
+              "name": "SuitTank",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 101,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950058,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1774383478,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Equippable",
+              "templateData": {}
+            },
+            {
+              "name": "Durability",
+              "templateData": {
+                "isEquipped": false,
+                "timeEquipped": 0,
+                "durability": 0.82
+              }
+            },
+            {
+              "name": "SuitTank",
+              "templateData": {}
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 102,
+            "y": 120,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950059,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "StateMachineController",
+              "templateData": {}
+            },
+            {
+              "name": "PrimaryElement",
+              "templateData": {
+                "ElementID": -1774383478,
+                "_Temperature": 296.15,
+                "diseaseID": {
+                  "hash": 0
+                },
+                "diseaseCount": 0,
+                "Units": 1.18
+              }
+            },
+            {
+              "name": "KCircleCollider2D",
+              "templateData": {}
+            },
+            {
+              "name": "Klei.AI.Modifiers",
+              "templateData": {}
+            },
+            {
+              "name": "Pickupable",
+              "templateData": {}
+            },
+            {
+              "name": "Movable",
+              "templateData": {}
+            },
+            {
+              "name": "Clearable",
+              "templateData": {}
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Equippable",
+              "templateData": {}
+            },
+            {
+              "name": "Durability",
+              "templateData": {
+                "isEquipped": false,
+                "timeEquipped": 0,
+                "durability": 0.82
+              }
+            },
+            {
+              "name": "SuitTank",
+              "templateData": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StorageLocker",
+      "gameObjects": [
+        {
+          "position": {
+            "x": 90,
+            "y": 118,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950060,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Storage",
+              "templateData": {},
+              "extraData": [
+                {
+                  "name": "Shale",
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "folder": 0,
+                  "behaviors": [
+                    {
+                      "name": "KPrefabID",
+                      "templateData": {
+                        "InstanceID": 950061,
+                        "serializedTags": []
+                      }
+                    },
+                    {
+                      "name": "PrimaryElement",
+                      "templateData": {
+                        "ElementID": -1708952091,
+                        "_Temperature": 296.15,
+                        "diseaseID": {
+                          "hash": 0
+                        },
+                        "diseaseCount": 0,
+                        "Units": 120
+                      }
+                    },
+                    {
+                      "name": "Pickupable",
+                      "templateData": {}
+                    },
+                    {
+                      "name": "Clearable",
+                      "templateData": {}
+                    }
+                  ]
+                },
+                {
+                  "name": "Shale",
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "folder": 0,
+                  "behaviors": [
+                    {
+                      "name": "KPrefabID",
+                      "templateData": {
+                        "InstanceID": 950062,
+                        "serializedTags": []
+                      }
+                    },
+                    {
+                      "name": "PrimaryElement",
+                      "templateData": {
+                        "ElementID": -1708952091,
+                        "_Temperature": 296.15,
+                        "diseaseID": {
+                          "hash": 0
+                        },
+                        "diseaseCount": 0,
+                        "Units": 80
+                      }
+                    },
+                    {
+                      "name": "Pickupable",
+                      "templateData": {}
+                    },
+                    {
+                      "name": "Clearable",
+                      "templateData": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 91,
+            "y": 118,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950063,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Storage",
+              "templateData": {},
+              "extraData": [
+                {
+                  "name": "Water",
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "folder": 0,
+                  "behaviors": [
+                    {
+                      "name": "KPrefabID",
+                      "templateData": {
+                        "InstanceID": 950064,
+                        "serializedTags": []
+                      }
+                    },
+                    {
+                      "name": "PrimaryElement",
+                      "templateData": {
+                        "ElementID": 1836671383,
+                        "_Temperature": 296.15,
+                        "diseaseID": {
+                          "hash": 0
+                        },
+                        "diseaseCount": 0,
+                        "Units": 7600
+                      }
+                    },
+                    {
+                      "name": "Pickupable",
+                      "templateData": {}
+                    },
+                    {
+                      "name": "Clearable",
+                      "templateData": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 92,
+            "y": 118,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950065,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Storage",
+              "templateData": {},
+              "extraData": [
+                {
+                  "name": "ChlorineGas",
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "folder": 0,
+                  "behaviors": [
+                    {
+                      "name": "KPrefabID",
+                      "templateData": {
+                        "InstanceID": 950066,
+                        "serializedTags": []
+                      }
+                    },
+                    {
+                      "name": "PrimaryElement",
+                      "templateData": {
+                        "ElementID": -1324664829,
+                        "_Temperature": 296.15,
+                        "diseaseID": {
+                          "hash": 0
+                        },
+                        "diseaseCount": 0,
+                        "Units": 2.05
+                      }
+                    },
+                    {
+                      "name": "Pickupable",
+                      "templateData": {}
+                    },
+                    {
+                      "name": "Clearable",
+                      "templateData": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "position": {
+            "x": 93,
+            "y": 118,
+            "z": -18.5
+          },
+          "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "folder": 0,
+          "behaviors": [
+            {
+              "name": "KPrefabID",
+              "templateData": {
+                "InstanceID": 950067,
+                "serializedTags": []
+              }
+            },
+            {
+              "name": "Prioritizable",
+              "templateData": {}
+            },
+            {
+              "name": "Storage",
+              "templateData": {},
+              "extraData": [
+                {
+                  "name": "Dirt",
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "folder": 0,
+                  "behaviors": [
+                    {
+                      "name": "KPrefabID",
+                      "templateData": {
+                        "InstanceID": 950068,
+                        "serializedTags": []
+                      }
+                    },
+                    {
+                      "name": "PrimaryElement",
+                      "templateData": {
+                        "ElementID": 1624244999,
+                        "_Temperature": 296.15,
+                        "diseaseID": {
+                          "hash": 0
+                        },
+                        "diseaseCount": 0,
+                        "Units": 430
+                      }
+                    },
+                    {
+                      "name": "Pickupable",
+                      "templateData": {}
+                    },
+                    {
+                      "name": "Clearable",
+                      "templateData": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "gameData": {

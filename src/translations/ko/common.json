@@ -116,23 +116,41 @@
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t",
-    "per_second": "{{mass}}/초"
+    "per_second": "{{mass}}/초",
+    "seed_count_other": "{{count}}개 씨앗",
+    "egg_count_other": "{{count}}개 알",
+    "unit_count_other": "{{count}}개",
+    "kilocalorie": "{{count}} kcal",
+    "kind": {
+      "solid_element": "고체 원소",
+      "liquid_element": "액체 원소",
+      "gas_element": "기체 원소",
+      "seed": "씨앗",
+      "egg": "생물 알",
+      "food": "식품",
+      "equipment": "장비",
+      "item": "아이템"
+    },
+    "actions_label": "{{name}} 작업"
   },
   "material_loose": {
     "noun_titlecase": "흩어진 재료",
-    "clump_count": "{{count}} 덩어리",
-    "clump_count_plural": "{{count}} 덩어리",
     "verbs": {
-      "delete_name": "{{name}} 삭제"
+      "delete_name": "{{name}} 삭제",
+      "delete_amount": "바닥의 {{amount}} 삭제",
+      "delete_all": "흩어진 자원 모두 삭제"
     },
     "prompts": {
       "delete": "게임에서 흩어진 재료를 모두 제거합니다. 제거된 재료는 복구할 수 없습니다."
-    }
+    },
+    "clump_count_other": "{{count}}덩어리",
+    "bottle_count_other": "{{count}}병",
+    "canister_count_other": "{{count}}통",
+    "lying_around": "바닥에"
   },
   "material_storage": {
-    "noun_titlecase": "저장소",
-    "container_count": "{{count}}개 용기",
-    "container_count_plural": "{{count}}개 용기"
+    "noun_titlecase": "용기 안",
+    "container_count_other": "{{count}}개 용기"
   },
   "time_cycles": {
     "noun_titlecase": "주기 시간"

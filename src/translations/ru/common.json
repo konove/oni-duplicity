@@ -116,23 +116,62 @@
     "gram": "{{count}} г",
     "kilogram": "{{count}} кг",
     "tonne": "{{count}} т",
-    "per_second": "{{mass}}/с"
+    "per_second": "{{mass}}/с",
+    "seed_count_one": "{{count}} семя",
+    "seed_count_few": "{{count}} семени",
+    "seed_count_many": "{{count}} семян",
+    "seed_count_other": "{{count}} семян",
+    "egg_count_one": "{{count}} яйцо",
+    "egg_count_few": "{{count}} яйца",
+    "egg_count_many": "{{count}} яиц",
+    "egg_count_other": "{{count}} яиц",
+    "unit_count_one": "{{count}} шт.",
+    "unit_count_few": "{{count}} шт.",
+    "unit_count_many": "{{count}} шт.",
+    "unit_count_other": "{{count}} шт.",
+    "kilocalorie": "{{count}} ккал",
+    "kind": {
+      "solid_element": "Твёрдый элемент",
+      "liquid_element": "Жидкий элемент",
+      "gas_element": "Газообразный элемент",
+      "seed": "Семя",
+      "egg": "Яйцо существа",
+      "food": "Съедобное",
+      "equipment": "Снаряжение",
+      "item": "Предмет"
+    },
+    "actions_label": "Действия: {{name}}"
   },
   "material_loose": {
     "noun_titlecase": "Разбросаны",
-    "clump_count": "{{count}} кучка",
-    "clump_count_plural": "{{count}} кучек",
     "verbs": {
-      "delete_name": "Удалить {{name}}"
+      "delete_name": "Удалить {{name}}",
+      "delete_amount": "Удалить {{amount}} на полу",
+      "delete_all": "Удалить весь материал на полу"
     },
     "prompts": {
       "delete": "Этим ты удалишь весь разбросанный по карте материал, находящийся не в хранилищах. Он просто исчезнет."
-    }
+    },
+    "clump_count_one": "{{count}} кучка",
+    "clump_count_few": "{{count}} кучки",
+    "clump_count_many": "{{count}} кучек",
+    "clump_count_other": "{{count}} кучек",
+    "bottle_count_one": "{{count}} бутылка",
+    "bottle_count_few": "{{count}} бутылки",
+    "bottle_count_many": "{{count}} бутылок",
+    "bottle_count_other": "{{count}} бутылок",
+    "canister_count_one": "{{count}} баллон",
+    "canister_count_few": "{{count}} баллона",
+    "canister_count_many": "{{count}} баллонов",
+    "canister_count_other": "{{count}} баллонов",
+    "lying_around": "на полу"
   },
   "material_storage": {
-    "noun_titlecase": "В хранилищах",
-    "container_count": "{{count}} контейнер",
-    "container_count_plural": "{{count}} контейнеров"
+    "noun_titlecase": "В контейнерах",
+    "container_count_one": "{{count}} контейнер",
+    "container_count_few": "{{count}} контейнера",
+    "container_count_many": "{{count}} контейнеров",
+    "container_count_other": "{{count}} контейнеров"
   },
   "time_cycles": {
     "noun_titlecase": "Время цикла"

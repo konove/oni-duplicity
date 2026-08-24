@@ -229,3 +229,49 @@ export function formatCalories(calories: number, t: CountTranslator): string {
       : Math.round(kilocalories);
   return t("material.kilocalorie", { count: rounded });
 }
+
+/**
+ * The quantity a reader sees, in whatever unit this material is measured in.
+ *
+ * A save stores one number - `PrimaryElement.Units` - for all three, and it
+ * means kilograms on an element, a count of things on an item, and a calorie
+ * multiplier on food.
+ */
+export function formatQuantity(
+  measure: MaterialMeasure,
+  kind: MaterialKind,
+  name: string,
+  units: number,
+  t: CountTranslator,
+): string {
+  if (measure === "mass") {
+    return formatMass(units, t);
+  }
+
+  if (measure === "calories") {
+    const calories = foodCalories(name, units);
+    // A food the tuning table has never heard of - a mod's, or one added by a
+    // game update this build predates. Counting the things is true; inventing
+    // a calorie figure would not be.
+    if (calories !== null) {
+      return formatCalories(calories, t);
+    }
+  }
+
+  return t(countKey(kind), { count: round(units) });
+}
+
+/**
+ * What to call this kind of material under its name.
+ *
+ * Elements say which phase they are, because the table mixes all three and
+ * "Salt Water" being a liquid is the reason its loose pile is measured in
+ * bottles rather than clumps.
+ */
+export function kindKey(kind: MaterialKind, groupName: string): string {
+  if (kind !== "element") {
+    return `material.kind.${kind}`;
+  }
+  const phase = ELEMENT_PHASES[groupName] ?? "solid";
+  return `material.kind.${phase === "vacuum" ? "solid" : phase}_element`;
+}

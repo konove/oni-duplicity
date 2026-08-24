@@ -116,23 +116,62 @@
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
     "tonne": "{{count}} t",
-    "per_second": "{{mass}}/s"
+    "per_second": "{{mass}}/s",
+    "seed_count_one": "{{count}} semínko",
+    "seed_count_few": "{{count}} semínka",
+    "seed_count_many": "{{count}} semínek",
+    "seed_count_other": "{{count}} semínek",
+    "egg_count_one": "{{count}} vejce",
+    "egg_count_few": "{{count}} vejce",
+    "egg_count_many": "{{count}} vajec",
+    "egg_count_other": "{{count}} vajec",
+    "unit_count_one": "{{count}} kus",
+    "unit_count_few": "{{count}} kusy",
+    "unit_count_many": "{{count}} kusů",
+    "unit_count_other": "{{count}} kusů",
+    "kilocalorie": "{{count}} kcal",
+    "kind": {
+      "solid_element": "Pevný prvek",
+      "liquid_element": "Kapalný prvek",
+      "gas_element": "Plynný prvek",
+      "seed": "Semínko",
+      "egg": "Vejce tvora",
+      "food": "Jedlé",
+      "equipment": "Vybavení",
+      "item": "Předmět"
+    },
+    "actions_label": "Akce pro {{name}}"
   },
   "material_loose": {
     "noun_titlecase": "Volný",
-    "clump_count": "{{count}} chomáč",
-    "clump_count_plural": "{{count}} chomáčů",
     "verbs": {
-      "delete_name": "Smazat {{name}}"
+      "delete_name": "Smazat {{name}}",
+      "delete_amount": "Smazat {{amount}} na zemi",
+      "delete_all": "Smazat veškerý volný materiál"
     },
     "prompts": {
       "delete": "Toto odstraní všechen volný materiál ze hry.  Materiál již nelze obnovit."
-    }
+    },
+    "clump_count_one": "{{count}} chomáč",
+    "clump_count_few": "{{count}} chomáče",
+    "clump_count_many": "{{count}} chomáčů",
+    "clump_count_other": "{{count}} chomáčů",
+    "bottle_count_one": "{{count}} láhev",
+    "bottle_count_few": "{{count}} láhve",
+    "bottle_count_many": "{{count}} lahví",
+    "bottle_count_other": "{{count}} lahví",
+    "canister_count_one": "{{count}} kanystr",
+    "canister_count_few": "{{count}} kanystry",
+    "canister_count_many": "{{count}} kanystrů",
+    "canister_count_other": "{{count}} kanystrů",
+    "lying_around": "na zemi"
   },
   "material_storage": {
-    "noun_titlecase": "Úložný prostor",
-    "container_count": "{{count}} kontejner",
-    "container_count_plural": "{{count}} kontejnerů"
+    "noun_titlecase": "V kontejnerech",
+    "container_count_one": "{{count}} kontejner",
+    "container_count_few": "{{count}} kontejnery",
+    "container_count_many": "{{count}} kontejnerů",
+    "container_count_other": "{{count}} kontejnerů"
   },
   "time_cycles": {
     "noun_titlecase": "Čas cyklu"

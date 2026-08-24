@@ -116,23 +116,41 @@
     "gram": "{{count}} 克",
     "kilogram": "{{count}} 千克",
     "tonne": "{{count}} 吨",
-    "per_second": "{{mass}}/秒"
+    "per_second": "{{mass}}/秒",
+    "seed_count_other": "{{count}} 粒种子",
+    "egg_count_other": "{{count}} 颗蛋",
+    "unit_count_other": "{{count}} 个",
+    "kilocalorie": "{{count}} 千卡",
+    "kind": {
+      "solid_element": "固态元素",
+      "liquid_element": "液态元素",
+      "gas_element": "气态元素",
+      "seed": "种子",
+      "egg": "生物蛋",
+      "food": "食物",
+      "equipment": "装备",
+      "item": "物品"
+    },
+    "actions_label": "{{name}} 操作"
   },
   "material_loose": {
     "noun_titlecase": "散落的",
-    "clump_count": "{{count}} 堆",
-    "clump_count_plural": "{{count}} 堆",
     "verbs": {
-      "delete_name": "删除 {{name}}"
+      "delete_name": "删除 {{name}}",
+      "delete_amount": "删除地面上的 {{amount}}",
+      "delete_all": "删除所有散落资源"
     },
     "prompts": {
       "delete": "此操作将从游戏中移除所有散落的材料。材料将被永久删除！"
-    }
+    },
+    "clump_count_other": "{{count}} 堆",
+    "bottle_count_other": "{{count}} 瓶",
+    "canister_count_other": "{{count}} 罐",
+    "lying_around": "散落在地"
   },
   "material_storage": {
-    "noun_titlecase": "存储",
-    "container_count": "{{count}} 容器",
-    "container_count_plural": "{{count}} 容器"
+    "noun_titlecase": "容器内",
+    "container_count_other": "{{count}} 容器"
   },
   "time_cycles": {
     "noun_titlecase": "周期时间"
