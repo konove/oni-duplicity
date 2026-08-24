@@ -202,6 +202,39 @@ follows the save's object types rather than any task someone sits down to do.
 Worth asking whether the drawer should be organised around what people came to
 change. **Effort: L, and a design question before it is an engineering one.**
 
+### 0.14 Nothing in a list says _which_ one it is
+
+Every list page renders identical cards. Two copper volcanoes are
+indistinguishable, and in a Spaced Out cluster the two next to each other in the
+grid may be on different asteroids — the page gives no hint either way. It
+affects Creatures and Duplicants the same way; geysers are just where it was
+noticed.
+
+Both halves of the answer are already in the save and thrown away:
+
+- **The object has a name.** A geyser carries a `UserNameable` behavior, and in
+  the mock save it holds `"Cool Chlorine Gas Vent UO31‑3"` — the game's own
+  per-object identifier, code and all. The card prints the _type_ name twice
+  instead, in the heading and again in the dropdown. Showing `savedName` as the
+  heading is small and fixes most of this on its own.
+- **The asteroid is a rectangle test.** There is no per-object world id;
+  `worlds.ts` already documents why. Worlds tile one global grid, so each owns
+  the rect at its `WorldContainer.worldOffset` of size `worldSize`, and an
+  object belongs to whichever rect contains its position. Confirmed against the
+  mock save, which has two asteroids: the geyser at `(111.5, 125)` resolves to
+  world 0 and only world 0. `worldDisplayName()` already exists for the heading.
+
+**Verify first:** whether `savedName` is ever empty. Only one geyser has been
+looked at. If a never-renamed object stores `""` rather than the auto-generated
+name, the heading needs a fallback to the type name.
+
+**Effort: S** for the name, **M** for grouping. **Decide up front** whether the
+position-to-world join is a shared selector — every list page wants it — or a
+one-off on the Geysers page. Doing it once is the reason to build it
+deliberately rather than inline. Grouping is also a layout question (headings,
+collapsing, what happens in a one-asteroid base-game save) and worth a design
+pass before code.
+
 ---
 
 ## Tier 1 — Cheap wins, mostly already built
