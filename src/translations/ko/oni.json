@@ -1855,6 +1855,2024 @@
       "NAME": "용융 구리"
     }
   },
+  "ITEMS": {
+    "AdvancedCure": {
+      "NAME": "혈청 바이알"
+    },
+    "AlgaeComet": {
+      "NAME": "조류 유성"
+    },
+    "AlgaeStego": {
+      "NAME": "블럼 럼브"
+    },
+    "AlgaeStegoBaby": {
+      "NAME": "블럼블릿"
+    },
+    "AlgaeStegoEgg": {
+      "NAME": "블럼 럼브 알"
+    },
+    "AmeliasWatch": {
+      "NAME": "손목 시계"
+    },
+    "Antihistamine": {
+      "NAME": "알레르기 약"
+    },
+    "AteFromFeeder": {
+      "NAME": "사료 공급기에서 먹음"
+    },
+    "Atmo_Suit": {
+      "NAME": "환경 특수복"
+    },
+    "BasicBooster": {
+      "NAME": "씹어먹는 비타민"
+    },
+    "BasicCure": {
+      "NAME": "치료용 정제"
+    },
+    "BasicFabric": {
+      "NAME": "갈대 섬유"
+    },
+    "BasicFabricPlant": {
+      "NAME": "골무갈대"
+    },
+    "BasicForagePlant": {
+      "NAME": "진창뿌리"
+    },
+    "BasicForagePlantPlanted": {
+      "NAME": "묻힌 진창뿌리"
+    },
+    "BasicPlantBar": {
+      "NAME": "이빵"
+    },
+    "BasicPlantFood": {
+      "NAME": "끼니이"
+    },
+    "BasicRadPill": {
+      "NAME": "베이직 방사선약"
+    },
+    "BasicSingleHarvestPlant": {
+      "NAME": "끼니나무"
+    },
+    "BasicSingleHarvestPlantOriginal": {
+      "NAME": "끼니나무"
+    },
+    "BasicSingleHarvestPlantSeed": {
+      "NAME": "끼니나무 씨"
+    },
+    "BeanPlant": {
+      "NAME": "오물오물 싹"
+    },
+    "BeanPlantSeed": {
+      "NAME": "오물오물콩"
+    },
+    "Bee": {
+      "NAME": "벌타"
+    },
+    "BeeBaby": {
+      "NAME": "벌티니"
+    },
+    "BeeHive": {
+      "NAME": "벌타 통"
+    },
+    "BeeHiveBaseTrait": {
+      "NAME": "벌타 통"
+    },
+    "BerryPie": {
+      "NAME": "믹스 베리 파이"
+    },
+    "BioluminescentRock": {
+      "NAME": "생물발광 암석"
+    },
+    "BleachStoneComet": {
+      "NAME": "표백석 유성"
+    },
+    "Blender": {
+      "NAME": "블렌더"
+    },
+    "BlueGrass": {
+      "NAME": "알베오 베라"
+    },
+    "BlueGrassSeed": {
+      "NAME": "알베오 베라 씨"
+    },
+    "BrickPhone": {
+      "NAME": "이상한 브릭"
+    },
+    "BulbPlant": {
+      "NAME": "친구눈"
+    },
+    "BulbPlantOriginal": {
+      "NAME": "친구눈"
+    },
+    "BulbPlantSeed": {
+      "NAME": "친구눈 씨"
+    },
+    "Bulbloom": {
+      "NAME": "구근꽃"
+    },
+    "BulbloomOriginal": {
+      "NAME": "구근꽃"
+    },
+    "BulbloomSeed": {
+      "NAME": "구근꽃 씨"
+    },
+    "Burger": {
+      "NAME": "서리 버거"
+    },
+    "Butterfly": {
+      "NAME": "미미카"
+    },
+    "ButterflyFood": {
+      "NAME": "구운 미밀렛"
+    },
+    "ButterflyPlant": {
+      "NAME": "미미카 봉오리"
+    },
+    "ButterflyPlantOriginal": {
+      "NAME": "미미카 봉오리"
+    },
+    "ButterflyPlantSeed": {
+      "NAME": "미밀렛"
+    },
+    "CactusPlant": {
+      "NAME": "뛰는기쁨"
+    },
+    "CactusPlantOriginal": {
+      "NAME": "뛰는기쁨"
+    },
+    "CactusPlantSeed": {
+      "NAME": "뛰는기쁨 씨"
+    },
+    "CarePackage": {
+      "NAME": "케어 패키지"
+    },
+    "Carrot": {
+      "NAME": "플룸 스쿼시"
+    },
+    "CarrotPlant": {
+      "NAME": "플룸 스쿼시 식물"
+    },
+    "CarrotPlantSeed": {
+      "NAME": "플럼 스쿼시 씨"
+    },
+    "Caviar": {
+      "NAME": "캐비아"
+    },
+    "Chameleon": {
+      "NAME": "다틀"
+    },
+    "ChameleonBaby": {
+      "NAME": "다틀릿"
+    },
+    "ChameleonEgg": {
+      "NAME": "다틀 알"
+    },
+    "ChlorineGeyser": {
+      "NAME": "염소 분출구"
+    },
+    "Clam": {
+      "NAME": "클램펌"
+    },
+    "ClamSeed": {
+      "NAME": "클램펌 씨"
+    },
+    "ClusterBiologicalShower": {
+      "NAME": "끈적한 유성우"
+    },
+    "ClusterBleachStoneShower": {
+      "NAME": "표백석 유성우"
+    },
+    "ClusterCopperMeteor": {
+      "NAME": "구리 유성"
+    },
+    "ClusterCopperShower": {
+      "NAME": "구리 유성우"
+    },
+    "ClusterGoldShower": {
+      "NAME": "금 유성우"
+    },
+    "ClusterIceAndTreesShower": {
+      "NAME": "얼음 넥타 유성우"
+    },
+    "ClusterIceShower": {
+      "NAME": "얼음 유성우"
+    },
+    "ClusterIronMeteor": {
+      "NAME": "철 유성"
+    },
+    "ClusterIronShower": {
+      "NAME": "철 유성우"
+    },
+    "ClusterLightRegolithShower": {
+      "NAME": "흙 보풀 유성우"
+    },
+    "ClusterMapLongRangeMissile": {
+      "NAME": "인트라코스믹 블래스트숏"
+    },
+    "ClusterOxyliteShower": {
+      "NAME": "산소석 유성우"
+    },
+    "ClusterRegolithShower": {
+      "NAME": "짙은 흙 유성우"
+    },
+    "ClusterSnowShower": {
+      "NAME": "눈보라 유성우"
+    },
+    "ClusterUraniumShower": {
+      "NAME": "우라늄 유성우"
+    },
+    "ClustercraftInteriorDoor": {
+      "NAME": "내부 해치"
+    },
+    "ColdBreather": {
+      "NAME": "씨근풀"
+    },
+    "ColdBreatherSeed": {
+      "NAME": "씨근풀 씨"
+    },
+    "ColdWheat": {
+      "NAME": "진눈깨비밀"
+    },
+    "ColdWheatBread": {
+      "NAME": "서리빵"
+    },
+    "ColdWheatOriginal": {
+      "NAME": "진눈깨비밀"
+    },
+    "ColdWheatSeed": {
+      "NAME": "진눈깨비밀 낟알"
+    },
+    "CookedEgg": {
+      "NAME": "오믈렛"
+    },
+    "CookedFish": {
+      "NAME": "조리된 해산물"
+    },
+    "CookedMeat": {
+      "NAME": "바베큐"
+    },
+    "CookedPikeapple": {
+      "NAME": "파이크애플 꼬치"
+    },
+    "CopperCometConfig": {
+      "NAME": "구리 유성"
+    },
+    "Crab": {
+      "NAME": "쑤심딱지"
+    },
+    "CrabBaby": {
+      "NAME": "쑤심딱지 새끼"
+    },
+    "CrabEgg": {
+      "NAME": "쑤심딱지 알"
+    },
+    "CrabFreshWater": {
+      "NAME": "위생딱지"
+    },
+    "CrabFreshWaterBaby": {
+      "NAME": "위생딱지 새끼"
+    },
+    "CrabFreshWaterEgg": {
+      "NAME": "위생딱지 알"
+    },
+    "CrabShell": {
+      "NAME": "쑤심딱지 허물"
+    },
+    "CrabWood": {
+      "NAME": "오크딱지"
+    },
+    "CrabWoodBaby": {
+      "NAME": "오크딱지 새끼"
+    },
+    "CrabWoodEgg": {
+      "NAME": "오크딱지 알"
+    },
+    "CrabWoodShell": {
+      "NAME": "오크딱지 허물"
+    },
+    "CritterManipulator": {
+      "NAME": "세라믹 음눈"
+    },
+    "CritterTrapPlant": {
+      "NAME": "새턴 크리터 트랩"
+    },
+    "CritterTrapPlantOriginal": {
+      "NAME": "새턴 크리터 트랩"
+    },
+    "CritterTrapPlantSeed": {
+      "NAME": "새턴 크리터 트랩 씨"
+    },
+    "CryoTank": {
+      "NAME": "크라이오탱크 3000"
+    },
+    "Curry": {
+      "NAME": "커리콩"
+    },
+    "CustomClothing": {
+      "NAME": "으뜸 의복"
+    },
+    "Cylindrica": {
+      "NAME": "지복파열"
+    },
+    "CylindricaOriginal": {
+      "NAME": "지복파열"
+    },
+    "CylindricaSeed": {
+      "NAME": "지복파열 씨"
+    },
+    "DNAModel": {
+      "NAME": "이중 나선 모델"
+    },
+    "DebrisPayload": {
+      "NAME": "로켓 파편"
+    },
+    "DeepFriedFish": {
+      "NAME": "피시 타코"
+    },
+    "DeepFriedMeat": {
+      "NAME": "스테이크 튀김"
+    },
+    "DeepFriedNosh": {
+      "NAME": "오물오물 냠스"
+    },
+    "DeepFriedShellfish": {
+      "NAME": "조개 튀김"
+    },
+    "DewDrip": {
+      "NAME": "이슬방울"
+    },
+    "DewDripperPlant": {
+      "NAME": "이슬내리개"
+    },
+    "DewDripperPlantOriginal": {
+      "NAME": "이슬내리개"
+    },
+    "DewDripperPlantSeed": {
+      "NAME": "이슬 씨"
+    },
+    "DewPalmOriginal": {
+      "NAME": "껌야자"
+    },
+    "DieselMoo": {
+      "NAME": "허스키 음메"
+    },
+    "DieselMooComet": {
+      "NAME": "허스키 음메별"
+    },
+    "DigPlacer": {
+      "NAME": "굴착"
+    },
+    "Dinofern": {
+      "NAME": "메가프론드"
+    },
+    "DinofernSeed": {
+      "NAME": "메가프론드 포자"
+    },
+    "DinosaurMeat": {
+      "NAME": "질긴 고기"
+    },
+    "DisposableElectrobank_RawMetal": {
+      "NAME": "금속 파워 뱅크"
+    },
+    "DisposableElectrobank_UraniumOre": {
+      "NAME": "우라늄 광석 파워 뱅크"
+    },
+    "DivergentBeetle": {
+      "NAME": "단벌레"
+    },
+    "DivergentBeetleBaby": {
+      "NAME": "단벌레 애벌레"
+    },
+    "DivergentBeetleEgg": {
+      "NAME": "단벌레 알"
+    },
+    "DivergentWorm": {
+      "NAME": "벵이벵이"
+    },
+    "DivergentWormBaby": {
+      "NAME": "벵이벵이 작은벌레"
+    },
+    "DivergentWormEgg": {
+      "NAME": "벵이벵이 알"
+    },
+    "Drecko": {
+      "NAME": "기끌이"
+    },
+    "DreckoBaby": {
+      "NAME": "애기끌이"
+    },
+    "DreckoEgg": {
+      "NAME": "기끌이 알"
+    },
+    "DreckoPlastic": {
+      "NAME": "번질한 기끌이"
+    },
+    "DreckoPlasticBaby": {
+      "NAME": "번질한 애기끌이"
+    },
+    "DreckoPlasticEgg": {
+      "NAME": "번질한 기끌이 알"
+    },
+    "DrySuit": {
+      "NAME": "수영복"
+    },
+    "DustComet": {
+      "NAME": "흙 유성"
+    },
+    "Edamame": {
+      "NAME": "에다마메"
+    },
+    "EggRock": {
+      "NAME": "알 모양 암석"
+    },
+    "EggShell": {
+      "NAME": "알 껍질"
+    },
+    "Electrobank": {
+      "NAME": "에코 파워 뱅크"
+    },
+    "EmptyElectrobank": {
+      "NAME": "빈 에코 파워 뱅크"
+    },
+    "Enabled": {
+      "NAME": "켜짐"
+    },
+    "EquippableBalloon": {
+      "NAME": "풍선 친구"
+    },
+    "EscapePod": {
+      "NAME": "탈출 팟"
+    },
+    "EvilFlower": {
+      "NAME": "포자난"
+    },
+    "EvilFlowerOriginal": {
+      "NAME": "포자난"
+    },
+    "EvilFlowerSeed": {
+      "NAME": "포자난 씨"
+    },
+    "FarmStationTools": {
+      "NAME": "미량 영양소 비료"
+    },
+    "FeatherFabric": {
+      "NAME": "깃털 섬유"
+    },
+    "FernFood": {
+      "NAME": "메가프론드 낟알"
+    },
+    "FetchDrone": {
+      "NAME": "플라이도"
+    },
+    "FetchDroneBaseTrait": {
+      "NAME": "플라이도"
+    },
+    "FieldRation": {
+      "NAME": "영양 바"
+    },
+    "FilamentPlant": {
+      "NAME": "페타푸프"
+    },
+    "FilterPlant": {
+      "NAME": "수선인장"
+    },
+    "FilterPlantSeed": {
+      "NAME": "수선인장 씨"
+    },
+    "FishFood": {
+      "NAME": "드럽치 특별식"
+    },
+    "FishMeat": {
+      "NAME": "물고기 토막"
+    },
+    "FlyTrapPlant": {
+      "NAME": "루라 식물"
+    },
+    "FlyTrapPlantOriginal": {
+      "NAME": "루라 식물"
+    },
+    "FlyTrapPlantSeed": {
+      "NAME": "루라 씨"
+    },
+    "FoodComet": {
+      "NAME": "간식 폭탄"
+    },
+    "FoodSplat": {
+      "NAME": "식품 튀김"
+    },
+    "ForestForagePlant": {
+      "NAME": "헥사렌트 열매"
+    },
+    "ForestForagePlantPlanted": {
+      "NAME": "헥사렌트"
+    },
+    "ForestTree": {
+      "NAME": "수목 나무"
+    },
+    "ForestTreeBranch": {
+      "NAME": "수목 나무"
+    },
+    "ForestTreeBranchOriginal": {
+      "NAME": "수목 나무"
+    },
+    "ForestTreeOriginal": {
+      "NAME": "수목 나무"
+    },
+    "ForestTreeSeed": {
+      "NAME": "수목 나무열매"
+    },
+    "FossilBitsLarge": {
+      "NAME": "화석 파편"
+    },
+    "FossilBitsSmall": {
+      "NAME": "화석 파편"
+    },
+    "FossilHunt": {
+      "NAME": "크리터 칼라"
+    },
+    "FriedMushBar": {
+      "NAME": "걸죽 튀김"
+    },
+    "FriedMushroom": {
+      "NAME": "버섯 튀김"
+    },
+    "FriesCarrot": {
+      "NAME": "스쿼시 튀김"
+    },
+    "FruitCake": {
+      "NAME": "베리 죽"
+    },
+    "FullereneComet": {
+      "NAME": "풀러렌 유성"
+    },
+    "Funky_Vest": {
+      "NAME": "호화 슈트"
+    },
+    "GammaMush": {
+      "NAME": "감마 묵"
+    },
+    "GarbageElectrobank": {
+      "NAME": "파워 뱅크 고철"
+    },
+    "GardenDecorPlant": {
+      "NAME": "고리장미나무"
+    },
+    "GardenDecorPlantOriginal": {
+      "NAME": "고리장미나무"
+    },
+    "GardenDecorPlantSeed": {
+      "NAME": "장미나무 씨"
+    },
+    "GardenFoodPlant": {
+      "NAME": "땀옥수수 줄기"
+    },
+    "GardenFoodPlantFood": {
+      "NAME": "땀옥수수"
+    },
+    "GardenFoodPlantOriginal": {
+      "NAME": "땀옥수수 줄기"
+    },
+    "GardenFoodPlantSeed": {
+      "NAME": "땀옥수수 씨"
+    },
+    "GardenForagePlant": {
+      "NAME": "스낙 열매"
+    },
+    "GardenForagePlantPlanted": {
+      "NAME": "스낙트"
+    },
+    "GasGrass": {
+      "NAME": "가스풀"
+    },
+    "GasGrassHarvested": {
+      "NAME": "가스풀"
+    },
+    "GasGrassOriginal": {
+      "NAME": "가스풀"
+    },
+    "GasGrassSeed": {
+      "NAME": "가스풀 씨"
+    },
+    "GassyMoo": {
+      "NAME": "가스질 음메유성"
+    },
+    "GassyMooteorEvent": {
+      "NAME": "가스질 음메유성우"
+    },
+    "GeneShuffler": {
+      "NAME": "신경 변동기"
+    },
+    "GeneShufflerRecharge": {
+      "NAME": "변동기 충전"
+    },
+    "GeothermalControllerEntity": {
+      "NAME": "지열 히트 펌프"
+    },
+    "GeothermalPlant": {
+      "NAME": "반짝이는 코프롤라이트"
+    },
+    "GeothermalVentEntity": {
+      "NAME": "지열 벤트"
+    },
+    "Geyser": {
+      "NAME": "증기 분출구"
+    },
+    "GingerConfig": {
+      "NAME": "강장뿌리"
+    },
+    "GlassDeer": {
+      "NAME": "샤터 플록스"
+    },
+    "GlassDeerBaby": {
+      "NAME": "샤터 플록스 새끼"
+    },
+    "GlassDeerEgg": {
+      "NAME": "샤터 플록스 알"
+    },
+    "Glom": {
+      "NAME": "음눈"
+    },
+    "GlomBaseTrait": {
+      "NAME": "음눈"
+    },
+    "GoldBelly": {
+      "NAME": "리갈 밤모스"
+    },
+    "GoldBellyBaby": {
+      "NAME": "리갈 밤미니"
+    },
+    "GoldBellyCrown": {
+      "NAME": "리갈 밤모스 크레스트"
+    },
+    "GoldBellyEgg": {
+      "NAME": "리갈 밤모스 알"
+    },
+    "GoldComet": {
+      "NAME": "금 유성"
+    },
+    "GravitasBathroomMirror": {
+      "NAME": "거울"
+    },
+    "GravitasBathroomSink": {
+      "NAME": "에나멜 싱크대"
+    },
+    "GravitasCeilingLight": {
+      "NAME": "조명설비"
+    },
+    "GravitasClockSquare": {
+      "NAME": "시계"
+    },
+    "GravitasDesk": {
+      "NAME": "생물물리학 연구 데스크"
+    },
+    "GravitasFlipPhone": {
+      "NAME": "플립 폰"
+    },
+    "GravitasFridge": {
+      "NAME": "미니 냉장고"
+    },
+    "GravitasPaperTowelDispenser": {
+      "NAME": "종이 타월 분배기"
+    },
+    "GravitasPosterPlants": {
+      "NAME": "벽 차트"
+    },
+    "GravitasPosterSeed": {
+      "NAME": "벽 차트"
+    },
+    "GravitasPotPlantDead": {
+      "NAME": "죽은 식물"
+    },
+    "GravitasToiletPaperHolder": {
+      "NAME": "화장지 걸이"
+    },
+    "GravitasTrashCan": {
+      "NAME": "쓰레기통"
+    },
+    "GrilledPrickleFruit": {
+      "NAME": "센털베리구이"
+    },
+    "GrubStatue": {
+      "NAME": "벵이벵이 조각상"
+    },
+    "HardIceComet": {
+      "NAME": "얼음 유성"
+    },
+    "HardSkinBerry": {
+      "NAME": "파이크애플"
+    },
+    "HardSkinBerryPlant": {
+      "NAME": "파이크애플 덤불"
+    },
+    "HardSkinBerryPlantOriginal": {
+      "NAME": "파이크애플 덤불"
+    },
+    "HardSkinBerryPlantSeed": {
+      "NAME": "파이크애플 덤불 씨"
+    },
+    "Hatch": {
+      "NAME": "주둥가리"
+    },
+    "HatchBaby": {
+      "NAME": "애주둥가리"
+    },
+    "HatchEgg": {
+      "NAME": "주둥가리 알"
+    },
+    "HatchFossil": {
+      "NAME": "초기 화석"
+    },
+    "HatchHard": {
+      "NAME": "돌 주둥가리"
+    },
+    "HatchHardBaby": {
+      "NAME": "돌 애주둥가리"
+    },
+    "HatchHardEgg": {
+      "NAME": "돌 주둥가리 알"
+    },
+    "HatchMetal": {
+      "NAME": "매끄러운 주둥가리"
+    },
+    "HatchMetalBaby": {
+      "NAME": "매끄러운 애주둥가리"
+    },
+    "HatchMetalEgg": {
+      "NAME": "부드러운 주둥가리 알"
+    },
+    "HatchVeggie": {
+      "NAME": "슬기로운 주둥가리"
+    },
+    "HatchVeggieBaby": {
+      "NAME": "슬기로운 애주둥가리"
+    },
+    "HatchVeggieEgg": {
+      "NAME": "슬기로운 주둥가리 알"
+    },
+    "HighEnergyParticle": {
+      "NAME": "래드볼트"
+    },
+    "HijackHeadquarters": {
+      "NAME": "헤어 드라이어"
+    },
+    "HoneyJar": {
+      "NAME": "꿀 단지"
+    },
+    "IceBelly": {
+      "NAME": "밤모스"
+    },
+    "IceBellyBaby": {
+      "NAME": "밤미니"
+    },
+    "IceBellyEgg": {
+      "NAME": "밤모스 알"
+    },
+    "IceBellyPoop": {
+      "NAME": "밤모스 패티"
+    },
+    "IceCavesForagePlant": {
+      "NAME": "셔베리"
+    },
+    "IceCavesForagePlantPlanted": {
+      "NAME": "셔베리 식물"
+    },
+    "IceFlower": {
+      "NAME": "아이딜라 꽃"
+    },
+    "IceFlowerOriginal": {
+      "NAME": "아이딜라 꽃"
+    },
+    "IceFlowerSeed": {
+      "NAME": "아이딜라 씨"
+    },
+    "InteractedWithAirborneCondo": {
+      "NAME": "포근함"
+    },
+    "InteractedWithCritterCondo": {
+      "NAME": "포근함"
+    },
+    "InteractedWithUnderwaterCondo": {
+      "NAME": "포근함"
+    },
+    "IntermediateBooster": {
+      "NAME": "면역 강화제"
+    },
+    "IntermediateCure": {
+      "NAME": "의료 팩"
+    },
+    "IntermediateRadPill": {
+      "NAME": "중급 방사선약"
+    },
+    "IridiumComet": {
+      "NAME": "이리듐 운석"
+    },
+    "IronComet": {
+      "NAME": "철 유성"
+    },
+    "Jet_Suit": {
+      "NAME": "제트복"
+    },
+    "Kelp": {
+      "NAME": "씨콤 잎"
+    },
+    "KelpPlant": {
+      "NAME": "씨콤"
+    },
+    "KelpPlantSeed": {
+      "NAME": "씨콤 씨"
+    },
+    "LandingPod": {
+      "NAME": "우주여행자 배치 팟"
+    },
+    "LargeImpactor": {
+      "NAME": "스테레오스코프"
+    },
+    "LargeImpactorComet": {
+      "NAME": "바위 유성"
+    },
+    "Lead_Suit": {
+      "NAME": "납 특수복"
+    },
+    "LeafyPlant": {
+      "NAME": "환희잎"
+    },
+    "LeafyPlantOriginal": {
+      "NAME": "환희잎"
+    },
+    "LeafyPlantSeed": {
+      "NAME": "환희잎 씨"
+    },
+    "Lettuce": {
+      "NAME": "상추"
+    },
+    "LightBug": {
+      "NAME": "빛벌레"
+    },
+    "LightBugBaby": {
+      "NAME": "빛님프"
+    },
+    "LightBugBlack": {
+      "NAME": "심연 벌레"
+    },
+    "LightBugBlackBaby": {
+      "NAME": "심연 님프"
+    },
+    "LightBugBlackEgg": {
+      "NAME": "심연 벌레 알"
+    },
+    "LightBugBlue": {
+      "NAME": "담청 벌레"
+    },
+    "LightBugBlueBaby": {
+      "NAME": "담청 님프"
+    },
+    "LightBugBlueEgg": {
+      "NAME": "담청 벌레 알"
+    },
+    "LightBugCrystal": {
+      "NAME": "발광 벌레"
+    },
+    "LightBugCrystalBaby": {
+      "NAME": "발광 님프"
+    },
+    "LightBugCrystalEgg": {
+      "NAME": "발광 벌레 알"
+    },
+    "LightBugEgg": {
+      "NAME": "빛벌레 알"
+    },
+    "LightBugOrange": {
+      "NAME": "해 벌레"
+    },
+    "LightBugOrangeBaby": {
+      "NAME": "해 님프"
+    },
+    "LightBugOrangeEgg": {
+      "NAME": "해 벌레 알"
+    },
+    "LightBugPink": {
+      "NAME": "산호 벌레"
+    },
+    "LightBugPinkBaby": {
+      "NAME": "산호 님프"
+    },
+    "LightBugPinkEgg": {
+      "NAME": "산호 벌레 알"
+    },
+    "LightBugPurple": {
+      "NAME": "왕 벌레"
+    },
+    "LightBugPurpleBaby": {
+      "NAME": "왕 님프"
+    },
+    "LightBugPurpleEgg": {
+      "NAME": "왕 벌레 알"
+    },
+    "LightDustComet": {
+      "NAME": "흙 보풀 유성"
+    },
+    "LonelyMinion": {
+      "NAME": "녹슨 도구 상자"
+    },
+    "LubricationStick": {
+      "NAME": "기어 향유"
+    },
+    "MachineParts": {
+      "NAME": "맞춤 부품"
+    },
+    "MagmaLamp": {
+      "NAME": "마그마 램프"
+    },
+    "Maki": {
+      "NAME": "스시 롤"
+    },
+    "MaximumAptitude": {
+      "NAME": "최대 적성"
+    },
+    "Meat": {
+      "NAME": "고기"
+    },
+    "MegaBrain": {
+      "NAME": "모형 비행기"
+    },
+    "MeteorShowerDustEvent": {
+      "NAME": "표토 유성우"
+    },
+    "MethaneGeyser": {
+      "NAME": "천연가스 분출구"
+    },
+    "MiniComet": {
+      "NAME": "잔해 발사체"
+    },
+    "MinnowImperativePOIA": {
+      "NAME": "알 수 없는 복제체"
+    },
+    "MinnowImperativePOIB": {
+      "NAME": "알 수 없는 복제체"
+    },
+    "MinnowImperativePOIC": {
+      "NAME": "알 수 없는 복제체"
+    },
+    "MissileBasic": {
+      "NAME": "블래스트숏"
+    },
+    "MissileLongRange": {
+      "NAME": "인트라코스믹 블래스트숏"
+    },
+    "MissileSetLocker": {
+      "NAME": "폭발물 사물함"
+    },
+    "ModernArt": {
+      "NAME": "현대 예술"
+    },
+    "Moldavite": {
+      "NAME": "몰다바이트"
+    },
+    "Mole": {
+      "NAME": "굴착들쥐"
+    },
+    "MoleBaby": {
+      "NAME": "볼 새끼"
+    },
+    "MoleDelicacy": {
+      "NAME": "풍미들쥐"
+    },
+    "MoleDelicacyBaby": {
+      "NAME": "풍미들쥐 새끼"
+    },
+    "MoleDelicacyEgg": {
+      "NAME": "풍미들쥐 알"
+    },
+    "MoleEgg": {
+      "NAME": "굴착들쥐 알"
+    },
+    "Moo": {
+      "NAME": "가스질 음메"
+    },
+    "MoodRing": {
+      "NAME": "방사선 무드 링"
+    },
+    "Moonmoonmoon": {
+      "NAME": "달달달"
+    },
+    "MopPlacer": {
+      "NAME": "걸레질"
+    },
+    "MorbRover": {
+      "NAME": "바이오봇"
+    },
+    "MorbRoverMaker": {
+      "NAME": "토이 봇"
+    },
+    "Mosquito": {
+      "NAME": "그니트"
+    },
+    "MosquitoBaby": {
+      "NAME": "그니트 유충"
+    },
+    "MosquitoEgg": {
+      "NAME": "그니트 알"
+    },
+    "MovePickupablePlacer": {
+      "NAME": "여기로 이전"
+    },
+    "MushBar": {
+      "NAME": "걸죽바"
+    },
+    "Mushroom": {
+      "NAME": "버섯"
+    },
+    "MushroomPlant": {
+      "NAME": "어스름갓"
+    },
+    "MushroomPlantOriginal": {
+      "NAME": "어스름갓"
+    },
+    "MushroomSeed": {
+      "NAME": "진균 포자"
+    },
+    "MushroomWrap": {
+      "NAME": "버섯 쌈"
+    },
+    "MusselSprout": {
+      "NAME": "홍합싹"
+    },
+    "MusselTongue": {
+      "NAME": "홍합 혀"
+    },
+    "Nigiri": {
+      "NAME": "니기리"
+    },
+    "Nori": {
+      "NAME": "김"
+    },
+    "NuclearWasteComet": {
+      "NAME": "방사성 유성"
+    },
+    "Obelisk": {
+      "NAME": "작은 방첨탑"
+    },
+    "OfficeMug": {
+      "NAME": "사무실 머그"
+    },
+    "OilWell": {
+      "NAME": "기름 저장소"
+    },
+    "Oilfloater": {
+      "NAME": "미끌이"
+    },
+    "OilfloaterBaby": {
+      "NAME": "애미끌이"
+    },
+    "OilfloaterDecor": {
+      "NAME": "긴털 미끌이"
+    },
+    "OilfloaterDecorBaby": {
+      "NAME": "긴털 애벌레"
+    },
+    "OilfloaterDecorEgg": {
+      "NAME": "긴털 미끌이 알"
+    },
+    "OilfloaterEgg": {
+      "NAME": "미끌이 알"
+    },
+    "OilfloaterHighTemp": {
+      "NAME": "용해 미끌이"
+    },
+    "OilfloaterHighTempBaby": {
+      "NAME": "용해 애벌레"
+    },
+    "OilfloaterHighTempEgg": {
+      "NAME": "용해 미끌이 알"
+    },
+    "OkayXray": {
+      "NAME": "오래된 엑스레이"
+    },
+    "Oracle": {
+      "NAME": "쓸모없는 기계"
+    },
+    "OrbitalResearchDatabank": {
+      "NAME": "데이터 뱅크"
+    },
+    "OxyCoral": {
+      "NAME": "연통산호"
+    },
+    "OxyCoralOriginal": {
+      "NAME": "연통산호"
+    },
+    "OxyCoralSeed": {
+      "NAME": "연통산호 씨"
+    },
+    "Oxyfern": {
+      "NAME": "산고사리"
+    },
+    "OxyfernOriginal": {
+      "NAME": "산고사리"
+    },
+    "OxyfernSeed": {
+      "NAME": "산고사리 씨"
+    },
+    "Oxygen_Mask": {
+      "NAME": "산소 마스크"
+    },
+    "OxyliteComet": {
+      "NAME": "산소석 유성"
+    },
+    "POICeresTechUnlock": {
+      "NAME": "연구 포털"
+    },
+    "POIDlc4TechUnlock": {
+      "NAME": "연구 포털"
+    },
+    "POIDlc5TechUnlock": {
+      "NAME": "연구 포털"
+    },
+    "Pacu": {
+      "NAME": "드럽치"
+    },
+    "PacuBaby": {
+      "NAME": "드럽치 잔챙이"
+    },
+    "PacuCleaner": {
+      "NAME": "꿀꺽물고기"
+    },
+    "PacuCleanerBaby": {
+      "NAME": "꿀꺽 잔챙이"
+    },
+    "PacuCleanerEgg": {
+      "NAME": "꿀꺽물고기 알"
+    },
+    "PacuEgg": {
+      "NAME": "드럽치 알"
+    },
+    "PacuPercolator": {
+      "NAME": "퍼콜레이터"
+    },
+    "PacuTropical": {
+      "NAME": "열대 드럽치"
+    },
+    "PacuTropicalBaby": {
+      "NAME": "열대 잔챙이"
+    },
+    "PacuTropicalEgg": {
+      "NAME": "열대 드럽치 알"
+    },
+    "Pancakes": {
+      "NAME": "수플레 팬케이크"
+    },
+    "ParrotFish": {
+      "NAME": "비콘"
+    },
+    "ParrotFishBaby": {
+      "NAME": "비콘 치어"
+    },
+    "ParrotFishEgg": {
+      "NAME": "비콘 알"
+    },
+    "Pemmican": {
+      "NAME": "페미칸"
+    },
+    "PhosphoricComet": {
+      "NAME": "인 유성"
+    },
+    "PickledMeal": {
+      "NAME": "끼니 절임"
+    },
+    "PinkRock": {
+      "NAME": "루멘 쿼츠"
+    },
+    "PinkRockCarved": {
+      "NAME": "조각된 루멘 쿼츠"
+    },
+    "PioneerLander": {
+      "NAME": "트레일블레이저 착륙선"
+    },
+    "PlanktonCoral": {
+      "NAME": "스타나클"
+    },
+    "PlanktonCoralSeed": {
+      "NAME": "스타나클 씨"
+    },
+    "PlantFiber": {
+      "NAME": "식물 껍질"
+    },
+    "PlantMeat": {
+      "NAME": "식물 고기"
+    },
+    "PlasmaLamp": {
+      "NAME": "플라스마 램프"
+    },
+    "PlasticGasket": {
+      "NAME": "플라스틱 개스킷"
+    },
+    "PowerStationTools": {
+      "NAME": "마이크로칩"
+    },
+    "PrehistoricPacu": {
+      "NAME": "죠보"
+    },
+    "PrehistoricPacuBaby": {
+      "NAME": "죠보 새끼"
+    },
+    "PrehistoricPacuEgg": {
+      "NAME": "죠보 알"
+    },
+    "PrehistoricPacuFillet": {
+      "NAME": "죠보 필렛"
+    },
+    "PrickleFlower": {
+      "NAME": "센털꽃"
+    },
+    "PrickleFlowerOriginal": {
+      "NAME": "센털꽃"
+    },
+    "PrickleFlowerSeed": {
+      "NAME": "꽃 씨"
+    },
+    "PrickleFruit": {
+      "NAME": "센털베리"
+    },
+    "PrickleGrass": {
+      "NAME": "깎아지른찔레"
+    },
+    "PrickleGrassOriginal": {
+      "NAME": "깎아지른찔레"
+    },
+    "PrickleGrassSeed": {
+      "NAME": "찔레 씨"
+    },
+    "PropCeresPosterLarge": {
+      "NAME": "어쿠스틱 아트 패널"
+    },
+    "PropClock": {
+      "NAME": "시계"
+    },
+    "PropDesk": {
+      "NAME": "컴퓨터 데스크"
+    },
+    "PropDlc2Display1": {
+      "NAME": "전자 디스플레이"
+    },
+    "PropDlc2GeothermalCart": {
+      "NAME": "서비스 카트"
+    },
+    "PropElevator": {
+      "NAME": "고장난 엘리베이터"
+    },
+    "PropExoSetLocker": {
+      "NAME": "외부 사물함"
+    },
+    "PropExoShelfLong": {
+      "NAME": "긴 조립식 선반"
+    },
+    "PropExoShelfShort": {
+      "NAME": "조립식 선반"
+    },
+    "PropFacilityChair": {
+      "NAME": "로비 의자"
+    },
+    "PropFacilityChairFlip": {
+      "NAME": "로비 의자"
+    },
+    "PropFacilityChandelier": {
+      "NAME": "샹들리에"
+    },
+    "PropFacilityCouch": {
+      "NAME": "로비 소파"
+    },
+    "PropFacilityDesk": {
+      "NAME": "관장의 책상"
+    },
+    "PropFacilityDisplay3": {
+      "NAME": "전자 디스플레이"
+    },
+    "PropFacilityGlobeDroors": {
+      "NAME": "서류캐비닛"
+    },
+    "PropFacilityHangingLight": {
+      "NAME": "조명설비"
+    },
+    "PropFacilityPainting": {
+      "NAME": "풍경 초상"
+    },
+    "PropFacilityStatue": {
+      "NAME": "그라비타스 기념물"
+    },
+    "PropFacilityTable": {
+      "NAME": "커피 테이블"
+    },
+    "PropFacilityWallDegree": {
+      "NAME": "박사 학위."
+    },
+    "PropGravitasCeilingRobot": {
+      "NAME": "천장 로봇"
+    },
+    "PropGravitasCreaturePoster": {
+      "NAME": "해부학 포스터"
+    },
+    "PropGravitasDecorativeWindow": {
+      "NAME": "창"
+    },
+    "PropGravitasDeskPodium": {
+      "NAME": "컴퓨터 연단"
+    },
+    "PropGravitasDeskPodiumDLC4": {
+      "NAME": "컴퓨터 연단"
+    },
+    "PropGravitasDeskPodiumGeothermalPlant": {
+      "NAME": "컴퓨터 연단"
+    },
+    "PropGravitasDisplay4": {
+      "NAME": "전자 디스플레이"
+    },
+    "PropGravitasFireExtinguisher": {
+      "NAME": "고장난 소화기"
+    },
+    "PropGravitasFirstAidKit": {
+      "NAME": "구급 키트"
+    },
+    "PropGravitasFloorRobot": {
+      "NAME": "로봇 팔"
+    },
+    "PropGravitasHandScanner": {
+      "NAME": "핸드 스캐너"
+    },
+    "PropGravitasJar1": {
+      "NAME": "큰 뇌 용기"
+    },
+    "PropGravitasJar2": {
+      "NAME": "샘플 용기"
+    },
+    "PropGravitasLabTable": {
+      "NAME": "실험실 책상"
+    },
+    "PropGravitasRobitcTable": {
+      "NAME": "로봇공학 연구 데스크"
+    },
+    "PropGravitasShelf": {
+      "NAME": "선반"
+    },
+    "PropGravitasSmallSeedLocker": {
+      "NAME": "벽 캐비닛"
+    },
+    "PropGravitasToolCrate": {
+      "NAME": "도구 상자"
+    },
+    "PropGravitasToolShelf": {
+      "NAME": "도구 랙"
+    },
+    "PropHumanChesterfieldChair": {
+      "NAME": "쇼룸 의자"
+    },
+    "PropHumanChesterfieldSofa": {
+      "NAME": "쇼룸 소파"
+    },
+    "PropHumanMurphyBed": {
+      "NAME": "머피 침대"
+    },
+    "PropLadder": {
+      "NAME": "사다리"
+    },
+    "PropLight": {
+      "NAME": "조명설비"
+    },
+    "PropReceptionDesk": {
+      "NAME": "리셉션 데스크"
+    },
+    "PropSkeleton": {
+      "NAME": "골격 모형"
+    },
+    "PropSurfaceSatellite1": {
+      "NAME": "부서진 위성"
+    },
+    "PropSurfaceSatellite2": {
+      "NAME": "파괴된 위성"
+    },
+    "PropSurfaceSatellite3": {
+      "NAME": "부숴진 위성"
+    },
+    "PropTable": {
+      "NAME": "테이블"
+    },
+    "PropTallPlant": {
+      "NAME": "사무실 식물"
+    },
+    "PufferFish": {
+      "NAME": "블로우터"
+    },
+    "PufferFishBaby": {
+      "NAME": "블로우터 치어"
+    },
+    "PufferFishEgg": {
+      "NAME": "블로우터 알"
+    },
+    "Puft": {
+      "NAME": "헐떡이"
+    },
+    "PuftAlpha": {
+      "NAME": "헐떡이 영주"
+    },
+    "PuftAlphaBaby": {
+      "NAME": "애헐떡이 영주"
+    },
+    "PuftAlphaEgg": {
+      "NAME": "헐떡이 영주 알"
+    },
+    "PuftBaby": {
+      "NAME": "애헐떡이"
+    },
+    "PuftBleachstone": {
+      "NAME": "찍찍거리는 헐떡이"
+    },
+    "PuftBleachstoneBaby": {
+      "NAME": "찍찍거리는 애헐떡이"
+    },
+    "PuftBleachstoneEgg": {
+      "NAME": "찍찍거리는 헐떡이 알"
+    },
+    "PuftEgg": {
+      "NAME": "헐떡이 알"
+    },
+    "PuftOxylite": {
+      "NAME": "빽빽한 헐떡이"
+    },
+    "PuftOxyliteBaby": {
+      "NAME": "빽빽한 애헐떡이"
+    },
+    "PuftOxyliteEgg": {
+      "NAME": "빽빽한 헐떡이는 알"
+    },
+    "Quiche": {
+      "NAME": "버섯 키시"
+    },
+    "RailGunPayload": {
+      "NAME": "행성 간 적재물"
+    },
+    "RainbowEggRock": {
+      "NAME": "알 모양 암석"
+    },
+    "Raptor": {
+      "NAME": "레크스"
+    },
+    "RaptorBaby": {
+      "NAME": "레크스 아기"
+    },
+    "RaptorEgg": {
+      "NAME": "레크스 알"
+    },
+    "RawEgg": {
+      "NAME": "생알"
+    },
+    "ReactorModel": {
+      "NAME": "모델 핵 발전소"
+    },
+    "ResearchDatabank": {
+      "NAME": "데이터 뱅크"
+    },
+    "RobotArm": {
+      "NAME": "로봇 팔"
+    },
+    "RockComet": {
+      "NAME": "바위 유성"
+    },
+    "RockTornado": {
+      "NAME": "토네이도 암석"
+    },
+    "RotPile": {
+      "NAME": "썩은 더미"
+    },
+    "RubberBoots": {
+      "NAME": "고무 부츠"
+    },
+    "RubberGasket": {
+      "NAME": "고무 개스킷"
+    },
+    "RubiksCube": {
+      "NAME": "루빅스 큐브"
+    },
+    "Salsa": {
+      "NAME": "소를 넣은 베리"
+    },
+    "SaltPlant": {
+      "NAME": "뿌림 소금덩굴"
+    },
+    "SaltPlantSeed": {
+      "NAME": "뿌림 소금덩굴 씨"
+    },
+    "SaltySticksFood": {
+      "NAME": "짠맛 막대기"
+    },
+    "SaltySticksPlant": {
+      "NAME": "소디케인"
+    },
+    "SaltySticksPlantOriginal": {
+      "NAME": "소디케인"
+    },
+    "SaltySticksPlantSeed": {
+      "NAME": "소디케인 씨"
+    },
+    "Sandstone": {
+      "NAME": "사암"
+    },
+    "SapTree": {
+      "NAME": "실험 52B"
+    },
+    "SatelliteCometComet": {
+      "NAME": "폐기된 위성"
+    },
+    "Saxophone": {
+      "NAME": "망가진 색소폰"
+    },
+    "ScoutLander": {
+      "NAME": "로버의 착륙선"
+    },
+    "ScoutRover": {
+      "NAME": "로버"
+    },
+    "SeaFairy": {
+      "NAME": "켈폴"
+    },
+    "SeaHorse": {
+      "NAME": "시콰인"
+    },
+    "SeaHorseBaby": {
+      "NAME": "시콰인 치어"
+    },
+    "SeaHorseEgg": {
+      "NAME": "시콰인 알"
+    },
+    "SeaLettuce": {
+      "NAME": "물이파리"
+    },
+    "SeaLettuceSeed": {
+      "NAME": "물이파리 씨"
+    },
+    "SeaTree": {
+      "NAME": "타워 켈프"
+    },
+    "SeaTreeBranch": {
+      "NAME": "타워 켈프"
+    },
+    "SeaTreeBranchOriginal": {
+      "NAME": "타워 켈프"
+    },
+    "SeaTreeOriginal": {
+      "NAME": "타워 켈프"
+    },
+    "SeaTreeSeed": {
+      "NAME": "타워 켈프 씨"
+    },
+    "SeaTurtle": {
+      "NAME": "광석딱지"
+    },
+    "SeaTurtleBaby": {
+      "NAME": "광석딱지 유생"
+    },
+    "SeaTurtleEgg": {
+      "NAME": "광석딱지 알"
+    },
+    "Seal": {
+      "NAME": "스피곳물범"
+    },
+    "SealBaby": {
+      "NAME": "스피곳펍"
+    },
+    "SealEgg": {
+      "NAME": "스피곳물범 알"
+    },
+    "SelfChargingElectrobank": {
+      "NAME": "원자력 파워 뱅크"
+    },
+    "SetLocker": {
+      "NAME": "로커"
+    },
+    "ShellfishMeat": {
+      "NAME": "생 조개류"
+    },
+    "ShieldGenerator": {
+      "NAME": "차폐 발전기"
+    },
+    "ShockWorm": {
+      "NAME": "충격벌레"
+    },
+    "Sink": {
+      "NAME": "싱크대"
+    },
+    "SlimeComet": {
+      "NAME": "는지렁이 유성"
+    },
+    "SmokedDinosaurMeat": {
+      "NAME": "부드러운 양지머리"
+    },
+    "SmokedVegetables": {
+      "NAME": "채소 포퍼"
+    },
+    "Snail": {
+      "NAME": "슬로고"
+    },
+    "SnailBaby": {
+      "NAME": "슬로고 새끼"
+    },
+    "SnailEgg": {
+      "NAME": "슬로고 알"
+    },
+    "SnailIron": {
+      "NAME": "길드고"
+    },
+    "SnailIronBaby": {
+      "NAME": "길드고 새끼"
+    },
+    "SnailIronEgg": {
+      "NAME": "길드고 알"
+    },
+    "SnailIronShell": {
+      "NAME": "길드고 허물"
+    },
+    "SnailShell": {
+      "NAME": "슬로고 허물"
+    },
+    "SnowballComet": {
+      "NAME": "눈 유성"
+    },
+    "SolarSystem": {
+      "NAME": "자체적 시스템"
+    },
+    "SpaceTree": {
+      "NAME": "봉봉나무"
+    },
+    "SpaceTreeBranch": {
+      "NAME": "봉봉나무"
+    },
+    "SpaceTreeBranchOriginal": {
+      "NAME": "봉봉나무"
+    },
+    "SpaceTreeOriginal": {
+      "NAME": "봉봉나무"
+    },
+    "SpaceTreeSeed": {
+      "NAME": "봉봉나무 씨"
+    },
+    "SpaceTreeSeedComet": {
+      "NAME": "봉봉 유성"
+    },
+    "SpiceBread": {
+      "NAME": "후추빵"
+    },
+    "SpiceNut": {
+      "NAME": "꼬집후추콩"
+    },
+    "SpiceVine": {
+      "NAME": "꼬집후추풀"
+    },
+    "SpiceVineOriginal": {
+      "NAME": "꼬집후추풀"
+    },
+    "SpiceVineSeed": {
+      "NAME": "꼬집후추 씨"
+    },
+    "SpicyTofu": {
+      "NAME": "매운 두부"
+    },
+    "Squid": {
+      "NAME": "발광징어"
+    },
+    "SquidBaby": {
+      "NAME": "발광징어 유충"
+    },
+    "SquidEgg": {
+      "NAME": "발광징어 알"
+    },
+    "SquidMeat": {
+      "NAME": "칼라마리"
+    },
+    "Squirrel": {
+      "NAME": "잎람쥐"
+    },
+    "SquirrelBaby": {
+      "NAME": "잎람쥐새끼"
+    },
+    "SquirrelEgg": {
+      "NAME": "잎람쥐 알"
+    },
+    "SquirrelHug": {
+      "NAME": "포옹잎람쥐"
+    },
+    "SquirrelHugBaby": {
+      "NAME": "포옹잎람쥐새끼"
+    },
+    "SquirrelHugEgg": {
+      "NAME": "포옹잎람쥐 알"
+    },
+    "StarmapHexCellInventory": {
+      "NAME": "수확 가능한 자원"
+    },
+    "Staterpillar": {
+      "NAME": "플러그팽"
+    },
+    "StaterpillarBaby": {
+      "NAME": "플러그팽 새끼"
+    },
+    "StaterpillarEgg": {
+      "NAME": "플러그팽 알"
+    },
+    "StaterpillarGas": {
+      "NAME": "스모그팽"
+    },
+    "StaterpillarGasBaby": {
+      "NAME": "스모그팽 새끼"
+    },
+    "StaterpillarGasEgg": {
+      "NAME": "스모그팽 알"
+    },
+    "StaterpillarLiquid": {
+      "NAME": "스펀지팽"
+    },
+    "StaterpillarLiquidBaby": {
+      "NAME": "스펀지팽 새끼"
+    },
+    "StaterpillarLiquidEgg": {
+      "NAME": "스펀지팽 알"
+    },
+    "Stego": {
+      "NAME": "럼브"
+    },
+    "StegoBaby": {
+      "NAME": "럼블렛"
+    },
+    "StegoEgg": {
+      "NAME": "럼브 알"
+    },
+    "Stethoscope": {
+      "NAME": "청진기"
+    },
+    "StickerBomb": {
+      "NAME": "스티커 폭탄"
+    },
+    "SuperWormPlant": {
+      "NAME": "벵이과실 식물"
+    },
+    "SurfAndTurf": {
+      "NAME": "서프 앤 터프"
+    },
+    "SwampDelights": {
+      "NAME": "늪의 환희"
+    },
+    "SwampForagePlant": {
+      "NAME": "늪근대 속"
+    },
+    "SwampForagePlantPlanted": {
+      "NAME": "늪근대"
+    },
+    "SwampFruit": {
+      "NAME": "수렁 젤리"
+    },
+    "SwampHarvestPlant": {
+      "NAME": "수렁박"
+    },
+    "SwampHarvestPlantSeed": {
+      "NAME": "수렁박 씨"
+    },
+    "SwampLily": {
+      "NAME": "아물나리"
+    },
+    "SwampLilyFlower": {
+      "NAME": "아물나리꽃"
+    },
+    "SwampLilySeed": {
+      "NAME": "아물나리 씨"
+    },
+    "SweepBot": {
+      "NAME": "치우개"
+    },
+    "SweepBotBaseTrait": {
+      "NAME": "치우개"
+    },
+    "TableSalt": {
+      "NAME": "식탁용 소금"
+    },
+    "TallowLubricationStick": {
+      "NAME": "기어 향유"
+    },
+    "TeaPot": {
+      "NAME": "껍데기에 덮인 찻주전자"
+    },
+    "ToePlant": {
+      "NAME": "잔잔발가락"
+    },
+    "ToePlantSeed": {
+      "NAME": "잔잔발가락 씨"
+    },
+    "Tofu": {
+      "NAME": "두부"
+    },
+    "TubeWorm": {
+      "NAME": "튜블리아"
+    },
+    "TubeWormSeed": {
+      "NAME": "튜블리아 씨"
+    },
+    "UnderwaterVent": {
+      "NAME": "열 기체 균열"
+    },
+    "UraniumComet": {
+      "NAME": "우라늄 유성"
+    },
+    "Urchin": {
+      "NAME": "핀포키"
+    },
+    "UrchinMeat": {
+      "NAME": "우니"
+    },
+    "UrchinPlant": {
+      "NAME": "핀포켓"
+    },
+    "UrchinPlantOriginal": {
+      "NAME": "핀포켓"
+    },
+    "UrchinPlantSeed": {
+      "NAME": "핀포켓 씨"
+    },
+    "VHS": {
+      "NAME": "고대 기술"
+    },
+    "VendingMachine": {
+      "NAME": "자판기"
+    },
+    "VineBranch": {
+      "NAME": "오바그로 덩굴"
+    },
+    "VineBranchOriginal": {
+      "NAME": "오바그로 덩굴"
+    },
+    "VineFruit": {
+      "NAME": "오바그로 휘그"
+    },
+    "VineMother": {
+      "NAME": "오바그로 마디"
+    },
+    "VineMotherOriginal": {
+      "NAME": "오바그로 마디"
+    },
+    "VineMotherSeed": {
+      "NAME": "오바그로 마디 씨"
+    },
+    "Warm_Vest": {
+      "NAME": "방한 코트"
+    },
+    "WarpPortal": {
+      "NAME": "텔레포터 송신기"
+    },
+    "WarpReceiver": {
+      "NAME": "텔레포터 수신기"
+    },
+    "WaterCups": {
+      "NAME": "쉿컵"
+    },
+    "WaterCupsOriginal": {
+      "NAME": "쉿컵"
+    },
+    "WineCups": {
+      "NAME": "말랑당아욱"
+    },
+    "WineCupsOriginal": {
+      "NAME": "말랑당아욱"
+    },
+    "WineCupsSeed": {
+      "NAME": "당아욱 씨"
+    },
+    "WoodDeer": {
+      "NAME": "플록스"
+    },
+    "WoodDeerBaby": {
+      "NAME": "플록스 새끼"
+    },
+    "WoodDeerEgg": {
+      "NAME": "플록스 알"
+    },
+    "WormBasicFood": {
+      "NAME": "로스트 벵이과실 견과"
+    },
+    "WormBasicFruit": {
+      "NAME": "호리호리한 벵이과실"
+    },
+    "WormPlant": {
+      "NAME": "호리호리한 벵이과실 식물"
+    },
+    "WormPlantSeed": {
+      "NAME": "벵이과실 씨"
+    },
+    "WormSuperFood": {
+      "NAME": "벵이과실 프리저브"
+    },
+    "WormSuperFruit": {
+      "NAME": "벵이과실"
+    },
+    "artifact_ameliaswatch": {
+      "NAME": "손목 시계"
+    },
+    "artifact_bioluminescentrock": {
+      "NAME": "생물발광 암석"
+    },
+    "artifact_blender": {
+      "NAME": "블렌더"
+    },
+    "artifact_brickphone": {
+      "NAME": "이상한 브릭"
+    },
+    "artifact_dnamodel": {
+      "NAME": "이중 나선 모델"
+    },
+    "artifact_eggrock": {
+      "NAME": "알 모양 암석"
+    },
+    "artifact_grubstatue": {
+      "NAME": "벵이벵이 조각상"
+    },
+    "artifact_hatchfossil": {
+      "NAME": "초기 화석"
+    },
+    "artifact_honeyjar": {
+      "NAME": "꿀 단지"
+    },
+    "artifact_magmalamp": {
+      "NAME": "마그마 램프"
+    },
+    "artifact_modernart": {
+      "NAME": "현대 예술"
+    },
+    "artifact_moldavite": {
+      "NAME": "몰다바이트"
+    },
+    "artifact_moodring": {
+      "NAME": "방사선 무드 링"
+    },
+    "artifact_moonmoonmoon": {
+      "NAME": "달달달"
+    },
+    "artifact_obelisk": {
+      "NAME": "작은 방첨탑"
+    },
+    "artifact_officemug": {
+      "NAME": "사무실 머그"
+    },
+    "artifact_okayxray": {
+      "NAME": "오래된 엑스레이"
+    },
+    "artifact_oracle": {
+      "NAME": "쓸모없는 기계"
+    },
+    "artifact_pacupercolator": {
+      "NAME": "퍼콜레이터"
+    },
+    "artifact_plasmalamp": {
+      "NAME": "플라스마 램프"
+    },
+    "artifact_rainboweggrock": {
+      "NAME": "알 모양 암석"
+    },
+    "artifact_reactormodel": {
+      "NAME": "모델 핵 발전소"
+    },
+    "artifact_robotarm": {
+      "NAME": "로봇 팔"
+    },
+    "artifact_rocktornado": {
+      "NAME": "토네이도 암석"
+    },
+    "artifact_rubikscube": {
+      "NAME": "루빅스 큐브"
+    },
+    "artifact_sandstone": {
+      "NAME": "사암"
+    },
+    "artifact_saxophone": {
+      "NAME": "망가진 색소폰"
+    },
+    "artifact_shieldgenerator": {
+      "NAME": "차폐 발전기"
+    },
+    "artifact_sink": {
+      "NAME": "싱크대"
+    },
+    "artifact_solarsystem": {
+      "NAME": "자체적 시스템"
+    },
+    "artifact_stethoscope": {
+      "NAME": "청진기"
+    },
+    "artifact_teapot": {
+      "NAME": "껍데기에 덮인 찻주전자"
+    },
+    "artifact_vhs": {
+      "NAME": "고대 기술"
+    },
+    "hide": {
+      "NAME": "파고드는 중"
+    },
+    "idle_mound": {
+      "NAME": "묻혀 있음"
+    }
+  },
   "DIFFICULTY": {
     "ImmuneSystem": {
       "NAME": "질병",

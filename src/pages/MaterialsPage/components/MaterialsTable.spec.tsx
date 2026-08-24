@@ -133,10 +133,8 @@ describe("MaterialsTable", () => {
     renderTable([SHALE, SEED, FIG]);
 
     expect(within(row("Shale")).getByText("Solid element")).toBeInTheDocument();
-    expect(
-      within(row("Sea Lettuce Seed")).getByText("Seed"),
-    ).toBeInTheDocument();
-    expect(within(row("Vine Fruit")).getByText("Edible")).toBeInTheDocument();
+    expect(within(row("Waterweed Seed")).getByText("Seed")).toBeInTheDocument();
+    expect(within(row("Ovagro Fig")).getByText("Edible")).toBeInTheDocument();
   });
 
   it("weighs an element and counts the clumps it lies in", () => {
@@ -164,17 +162,15 @@ describe("MaterialsTable", () => {
     renderTable([SEED, EGG]);
 
     expect(
-      within(row("Sea Lettuce Seed")).getByText("31 seeds"),
+      within(row("Waterweed Seed")).getByText("31 seeds"),
     ).toBeInTheDocument();
-    expect(
-      within(row("Chameleon Egg")).getByText("11 eggs"),
-    ).toBeInTheDocument();
+    expect(within(row("Dartle Egg")).getByText("11 eggs")).toBeInTheDocument();
   });
 
   it("shows food as the kilocalories the game shows", () => {
     renderTable([FIG]);
     expect(
-      within(row("Vine Fruit")).getByText("2275 kcal"),
+      within(row("Ovagro Fig")).getByText("2275 kcal"),
     ).toBeInTheDocument();
   });
 
@@ -234,5 +230,21 @@ describe("MaterialsTable", () => {
 
     expect(screen.queryByText("Shale")).not.toBeInTheDocument();
     expect(screen.getByText("Salt Water")).toBeInTheDocument();
+  });
+});
+
+// The selector sorts by prefab id, which stopped matching the order a reader
+// sees the moment names came from the catalogue: SeaLettuceSeed sorts under S
+// and reads "Waterweed Seed".
+describe("MaterialsTable ordering", () => {
+  it("sorts by the name on screen, not the id behind it", () => {
+    renderTable([SEED, EGG, SHALE]);
+
+    const names = screen
+      .getAllByRole("row")
+      .slice(1)
+      .map((row) => row.querySelector("p")?.textContent);
+
+    expect(names).toEqual(["Dartle Egg", "Shale", "Waterweed Seed"]);
   });
 });

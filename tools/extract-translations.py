@@ -131,6 +131,39 @@ def sim_hash_names(repo_root):
     return re.findall(r"^\s{4}([A-Za-z][A-Za-z0-9_]*)\s*=", text, re.M)
 
 
+ITEM_KEYS = "item-name-keys.json"
+
+
+def item_name_keys(here):
+    """prefab id -> catalogue key, from extract-item-names.py."""
+    path = os.path.join(here, ITEM_KEYS)
+    if not os.path.exists(path):
+        print("  no %s - run extract-item-names.py to name non-element materials"
+              % ITEM_KEYS)
+        return OrderedDict()
+    return json.load(io.open(path, encoding="utf-8"), object_pairs_hook=OrderedDict)
+
+
+def items_group(po, keys, english):
+    """ITEMS entries for every non-element material, from the catalogue.
+
+    Elements resolve by rule - ELEMENTS.<id>.NAME - but a seed, an egg or a
+    piece of food is named from whatever key its config class picked, so the
+    mapping has to be extracted from the assembly first. Without it the page
+    falls back to splitting the prefab id, which reads "Garden Forage Plant"
+    for something the game calls Snac Fruit.
+    """
+    out = OrderedDict()
+    for prefab, key in keys.items():
+        entry = po.get(key)
+        if not entry:
+            continue
+        value = entry[0] if english else entry[1]
+        if value.strip():
+            out[prefab] = OrderedDict([("NAME", normalize(value))])
+    return out
+
+
 def elements_group(po, names, english):
     """ELEMENTS entries for every material id, from the catalogue."""
     out = OrderedDict()
@@ -317,18 +350,24 @@ def main():
     if lang == "en":
         en.setdefault("DUPLICANTS", OrderedDict())
         en["ELEMENTS"] = elements_group(po, names, english=True)
+        en["ITEMS"] = items_group(po, item_name_keys(here), english=True)
         en["DIFFICULTY"] = difficulty_group(po, english=True)
         en["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=True)
         io.open(en_path, "w", encoding="utf-8", newline="\n").write(
             json.dumps(en, ensure_ascii=False, indent=2) + "\n")
         print("seeded en/oni.json with %d element names and %d difficulty settings"
               % (len(en["ELEMENTS"]), len(en["DIFFICULTY"])))
-        print("  plus %d geyser names" % len(en["GEYSERS"]))
+        print("  plus %d geyser names and %d item names"
+              % (len(en["GEYSERS"]), len(en["ITEMS"])))
         return
 
     stats = {"total": 0, "translated": 0, "ambiguous": 0}
     result = build(en, po, stats)
     result["ELEMENTS"] = elements_group(po, names, english=False)
+    item_keys = item_name_keys(here)
+    result["ITEMS"] = items_group(po, item_keys, english=False)
+    stats["total"] += len(item_keys)
+    stats["translated"] += len(result["ITEMS"])
     result["DIFFICULTY"] = difficulty_group(po, english=False)
     result["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=False)
     stats["total"] += len(names)

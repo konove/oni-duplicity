@@ -202,3 +202,46 @@ Anything unresolvable is reported and nothing is written.
 Eight foods come out at zero calories - Nori, Caviar and Fern Food among them.
 That is the game's own value, not a failure to read one: `FoodInfo.Display` is
 `CaloriesPerUnit != 0f`, which is how the game hides them.
+
+## extract-item-names.py
+
+Writes `./item-name-keys.json`, mapping every non-element material prefab to the
+catalogue key the game names it with. `extract-translations.py` reads it and
+emits the `ITEMS` group into `src/translations/<lang>/oni.json`.
+
+Elements need none of this: their key is derivable, `ELEMENTS.<id>.NAME`. Items
+are not, because every config class picks its own key -
+`GardenForagePlantConfig` names itself `STRINGS.ITEMS.FOOD.GARDENFORAGEPLANT
+.NAME` and nothing connects the two. Splitting the prefab id instead is not a
+near miss: it renders **Snac Fruit** as "Garden Forage Plant" and **Sweatcorn**
+as "Garden Food Plant Food".
+
+```sh
+ilspycmd -p -o decomp ".../Managed/Assembly-CSharp.dll"
+python extract-item-names.py            # writes ./item-name-keys.json (git-ignored)
+python extract-translations.py en "C:/Steam/steamapps/common/OxygenNotIncluded"
+python extract-translations.py ru "C:/Steam/steamapps/common/OxygenNotIncluded"   # and ko, zh
+```
+
+It knows no helper signatures. The pairing rule is one observation about the
+game's entity templates - **the display name is always the argument straight
+after the prefab id** - so it scans every call in every `*Config.cs`, resolves
+the arguments it can (string literals, `SomeConfig.ID` constants, and local
+`string name = STRINGS...` variables), and records a pair wherever an id is
+followed by a catalogue key.
+
+Two things need a rule of their own. `CreateEquipmentDef` takes no name, and the
+game looks a suit up as `EQUIPMENT.PREFABS.<ID>.NAME`. Artifacts build their id
+at runtime as `"artifact_" + id.ToLower()`, so the pair records the bare id and
+the built one is added beside it.
+
+Pairs are taken from entity configs only. Scanning the whole assembly matches
+any `("Happy", SOMETHING.NAME)` in a status item or a chore - 1,700 entries of
+noise around the 500 real ones, and a real risk that one collides with a prefab
+id. Constants are still collected everywhere, since one config may reference
+another's `ID`.
+
+Every key is checked against the game's own `strings_template.pot` before
+anything is written, and a prefab resolving to two different keys is reported
+and dropped. A wrong name labels a material as some _other_ material, which is
+worse than showing the id.

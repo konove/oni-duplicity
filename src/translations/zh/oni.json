@@ -1887,6 +1887,2024 @@
       "NAME": "熔融铜"
     }
   },
+  "ITEMS": {
+    "AdvancedCure": {
+      "NAME": "血清瓶"
+    },
+    "AlgaeComet": {
+      "NAME": "绿藻流星"
+    },
+    "AlgaeStego": {
+      "NAME": "叶块兽"
+    },
+    "AlgaeStegoBaby": {
+      "NAME": "叶块兽幼崽"
+    },
+    "AlgaeStegoEgg": {
+      "NAME": "叶块兽蛋"
+    },
+    "AmeliasWatch": {
+      "NAME": "手表"
+    },
+    "Antihistamine": {
+      "NAME": "抗敏药"
+    },
+    "AteFromFeeder": {
+      "NAME": "从喂食器进食"
+    },
+    "Atmo_Suit": {
+      "NAME": "气压服"
+    },
+    "BasicBooster": {
+      "NAME": "维生素咀嚼胶囊"
+    },
+    "BasicCure": {
+      "NAME": "治疗药片"
+    },
+    "BasicFabric": {
+      "NAME": "芦苇纤维"
+    },
+    "BasicFabricPlant": {
+      "NAME": "顶针芦苇"
+    },
+    "BasicForagePlant": {
+      "NAME": "淤泥根"
+    },
+    "BasicForagePlantPlanted": {
+      "NAME": "掩埋的淤泥根"
+    },
+    "BasicPlantBar": {
+      "NAME": "米虱糕"
+    },
+    "BasicPlantFood": {
+      "NAME": "米虱"
+    },
+    "BasicRadPill": {
+      "NAME": "基础辐射药丸"
+    },
+    "BasicSingleHarvestPlant": {
+      "NAME": "米虱木"
+    },
+    "BasicSingleHarvestPlantOriginal": {
+      "NAME": "米虱木"
+    },
+    "BasicSingleHarvestPlantSeed": {
+      "NAME": "米虱木种子"
+    },
+    "BeanPlant": {
+      "NAME": "小吃芽"
+    },
+    "BeanPlantSeed": {
+      "NAME": "小吃豆"
+    },
+    "Bee": {
+      "NAME": "辐射蜂"
+    },
+    "BeeBaby": {
+      "NAME": "辐射蜂幼虫"
+    },
+    "BeeHive": {
+      "NAME": "辐射蜂巢"
+    },
+    "BeeHiveBaseTrait": {
+      "NAME": "辐射蜂巢"
+    },
+    "BerryPie": {
+      "NAME": "混合浆果派"
+    },
+    "BioluminescentRock": {
+      "NAME": "生物发光岩石"
+    },
+    "BleachStoneComet": {
+      "NAME": "漂白石流星"
+    },
+    "Blender": {
+      "NAME": "搅拌机"
+    },
+    "BlueGrass": {
+      "NAME": "气囊芦荟"
+    },
+    "BlueGrassSeed": {
+      "NAME": "气囊芦荟种子"
+    },
+    "BrickPhone": {
+      "NAME": "奇怪的大哥大"
+    },
+    "BulbPlant": {
+      "NAME": "同伴芽"
+    },
+    "BulbPlantOriginal": {
+      "NAME": "同伴芽"
+    },
+    "BulbPlantSeed": {
+      "NAME": "同伴芽种子"
+    },
+    "Bulbloom": {
+      "NAME": "灯泡花"
+    },
+    "BulbloomOriginal": {
+      "NAME": "灯泡花"
+    },
+    "BulbloomSeed": {
+      "NAME": "灯泡花种子"
+    },
+    "Burger": {
+      "NAME": "冰霜汉堡"
+    },
+    "Butterfly": {
+      "NAME": "拟蛾"
+    },
+    "ButterflyFood": {
+      "NAME": "烘烤拟种"
+    },
+    "ButterflyPlant": {
+      "NAME": "拟芽"
+    },
+    "ButterflyPlantOriginal": {
+      "NAME": "拟芽"
+    },
+    "ButterflyPlantSeed": {
+      "NAME": "拟种"
+    },
+    "CactusPlant": {
+      "NAME": "雀跃掌"
+    },
+    "CactusPlantOriginal": {
+      "NAME": "雀跃掌"
+    },
+    "CactusPlantSeed": {
+      "NAME": "雀跃掌种子"
+    },
+    "CarePackage": {
+      "NAME": "补给包裹"
+    },
+    "Carrot": {
+      "NAME": "羽叶果薯"
+    },
+    "CarrotPlant": {
+      "NAME": "羽叶果薯植株"
+    },
+    "CarrotPlantSeed": {
+      "NAME": "羽叶果薯种子"
+    },
+    "Caviar": {
+      "NAME": "鱼子酱"
+    },
+    "Chameleon": {
+      "NAME": "逸蜥"
+    },
+    "ChameleonBaby": {
+      "NAME": "逸蜥幼崽"
+    },
+    "ChameleonEgg": {
+      "NAME": "逸蜥蛋"
+    },
+    "ChlorineGeyser": {
+      "NAME": "氯气间歇泉"
+    },
+    "Clam": {
+      "NAME": "巨钳蚌"
+    },
+    "ClamSeed": {
+      "NAME": "巨钳蚌种子"
+    },
+    "ClusterBiologicalShower": {
+      "NAME": "菌泥流星雨"
+    },
+    "ClusterBleachStoneShower": {
+      "NAME": "漂白石流星雨"
+    },
+    "ClusterCopperMeteor": {
+      "NAME": "铜流星"
+    },
+    "ClusterCopperShower": {
+      "NAME": "铜流星雨"
+    },
+    "ClusterGoldShower": {
+      "NAME": "金流星雨"
+    },
+    "ClusterIceAndTreesShower": {
+      "NAME": "冰花蜜流星雨"
+    },
+    "ClusterIceShower": {
+      "NAME": "冰流星雨"
+    },
+    "ClusterIronMeteor": {
+      "NAME": "铁流星"
+    },
+    "ClusterIronShower": {
+      "NAME": "铁流星雨"
+    },
+    "ClusterLightRegolithShower": {
+      "NAME": "浮尘流星雨"
+    },
+    "ClusterMapLongRangeMissile": {
+      "NAME": "宇宙内爆破弹"
+    },
+    "ClusterOxyliteShower": {
+      "NAME": "氧石流星雨"
+    },
+    "ClusterRegolithShower": {
+      "NAME": "密集尘埃流星雨"
+    },
+    "ClusterSnowShower": {
+      "NAME": "雪暴流星雨"
+    },
+    "ClusterUraniumShower": {
+      "NAME": "铀流星雨"
+    },
+    "ClustercraftInteriorDoor": {
+      "NAME": "内部舱门"
+    },
+    "ColdBreather": {
+      "NAME": "冰息萝卜"
+    },
+    "ColdBreatherSeed": {
+      "NAME": "冰息萝卜种子"
+    },
+    "ColdWheat": {
+      "NAME": "冰霜小麦"
+    },
+    "ColdWheatBread": {
+      "NAME": "冰霜面包"
+    },
+    "ColdWheatOriginal": {
+      "NAME": "冰霜小麦"
+    },
+    "ColdWheatSeed": {
+      "NAME": "冰霜麦粒"
+    },
+    "CookedEgg": {
+      "NAME": "煎蛋卷"
+    },
+    "CookedFish": {
+      "NAME": "烤海鲜"
+    },
+    "CookedMeat": {
+      "NAME": "烤肉串"
+    },
+    "CookedPikeapple": {
+      "NAME": "刺壳果烤串"
+    },
+    "CopperCometConfig": {
+      "NAME": "铜流星"
+    },
+    "Crab": {
+      "NAME": "抛壳蟹"
+    },
+    "CrabBaby": {
+      "NAME": "抛壳蟹幼体"
+    },
+    "CrabEgg": {
+      "NAME": "抛壳蟹卵"
+    },
+    "CrabFreshWater": {
+      "NAME": "沙泥蟹"
+    },
+    "CrabFreshWaterBaby": {
+      "NAME": "沙泥蟹幼体"
+    },
+    "CrabFreshWaterEgg": {
+      "NAME": "沙泥蟹卵"
+    },
+    "CrabShell": {
+      "NAME": "蟹壳"
+    },
+    "CrabWood": {
+      "NAME": "木壳蟹"
+    },
+    "CrabWoodBaby": {
+      "NAME": "木壳蟹幼体"
+    },
+    "CrabWoodEgg": {
+      "NAME": "木壳蟹卵"
+    },
+    "CrabWoodShell": {
+      "NAME": "木蟹壳"
+    },
+    "CritterManipulator": {
+      "NAME": "陶瓷疫病章鱼"
+    },
+    "CritterTrapPlant": {
+      "NAME": "土星动物捕草"
+    },
+    "CritterTrapPlantOriginal": {
+      "NAME": "土星动物捕草"
+    },
+    "CritterTrapPlantSeed": {
+      "NAME": "土星动物捕草种子"
+    },
+    "CryoTank": {
+      "NAME": "低温箱3000"
+    },
+    "Curry": {
+      "NAME": "咖喱豆"
+    },
+    "CustomClothing": {
+      "NAME": "精致装束"
+    },
+    "Cylindrica": {
+      "NAME": "极乐刺"
+    },
+    "CylindricaOriginal": {
+      "NAME": "极乐刺"
+    },
+    "CylindricaSeed": {
+      "NAME": "极乐刺种子"
+    },
+    "DNAModel": {
+      "NAME": "双螺旋模型"
+    },
+    "DebrisPayload": {
+      "NAME": "火箭残骸"
+    },
+    "DeepFriedFish": {
+      "NAME": "鱼肉卷"
+    },
+    "DeepFriedMeat": {
+      "NAME": "炸肉块"
+    },
+    "DeepFriedNosh": {
+      "NAME": "炸豆小吃"
+    },
+    "DeepFriedShellfish": {
+      "NAME": "壳肉天妇罗"
+    },
+    "DewDrip": {
+      "NAME": "露珠"
+    },
+    "DewDripperPlant": {
+      "NAME": "露珠藤"
+    },
+    "DewDripperPlantOriginal": {
+      "NAME": "露珠藤"
+    },
+    "DewDripperPlantSeed": {
+      "NAME": "露珠藤种子"
+    },
+    "DewPalmOriginal": {
+      "NAME": "粘胶棕榈"
+    },
+    "DieselMoo": {
+      "NAME": "魁梧海牛"
+    },
+    "DieselMooComet": {
+      "NAME": "魁梧海牛流星"
+    },
+    "DigPlacer": {
+      "NAME": "挖掘"
+    },
+    "Dinofern": {
+      "NAME": "巨蕨"
+    },
+    "DinofernSeed": {
+      "NAME": "巨蕨孢子"
+    },
+    "DinosaurMeat": {
+      "NAME": "硬肉"
+    },
+    "DisposableElectrobank_RawMetal": {
+      "NAME": "金属移动电源"
+    },
+    "DisposableElectrobank_UraniumOre": {
+      "NAME": "铀矿移动电源"
+    },
+    "DivergentBeetle": {
+      "NAME": "甜素甲虫"
+    },
+    "DivergentBeetleBaby": {
+      "NAME": "甜素甲虫幼虫"
+    },
+    "DivergentBeetleEgg": {
+      "NAME": "甜素甲虫卵"
+    },
+    "DivergentWorm": {
+      "NAME": "虫果果虫"
+    },
+    "DivergentWormBaby": {
+      "NAME": "虫果果虫幼虫"
+    },
+    "DivergentWormEgg": {
+      "NAME": "虫果果虫卵"
+    },
+    "Drecko": {
+      "NAME": "毛鳞壁虎"
+    },
+    "DreckoBaby": {
+      "NAME": "毛鳞壁虎幼崽"
+    },
+    "DreckoEgg": {
+      "NAME": "毛鳞壁虎蛋"
+    },
+    "DreckoPlastic": {
+      "NAME": "滑鳞壁虎"
+    },
+    "DreckoPlasticBaby": {
+      "NAME": "滑鳞壁虎幼崽"
+    },
+    "DreckoPlasticEgg": {
+      "NAME": "滑鳞壁虎蛋"
+    },
+    "DrySuit": {
+      "NAME": "泳装"
+    },
+    "DustComet": {
+      "NAME": "尘埃流星"
+    },
+    "Edamame": {
+      "NAME": "毛豆"
+    },
+    "EggRock": {
+      "NAME": "蛋形岩石"
+    },
+    "EggShell": {
+      "NAME": "蛋壳"
+    },
+    "Electrobank": {
+      "NAME": "复用移动电源"
+    },
+    "EmptyElectrobank": {
+      "NAME": "空的复用移动电源"
+    },
+    "Enabled": {
+      "NAME": "启用"
+    },
+    "EquippableBalloon": {
+      "NAME": "气球伙伴"
+    },
+    "EscapePod": {
+      "NAME": "逃生舱"
+    },
+    "EvilFlower": {
+      "NAME": "孢子兰"
+    },
+    "EvilFlowerOriginal": {
+      "NAME": "孢子兰"
+    },
+    "EvilFlowerSeed": {
+      "NAME": "孢子兰种子"
+    },
+    "FarmStationTools": {
+      "NAME": "微肥"
+    },
+    "FeatherFabric": {
+      "NAME": "羽毛纤维"
+    },
+    "FernFood": {
+      "NAME": "巨蕨谷粒"
+    },
+    "FetchDrone": {
+      "NAME": "飞寻机"
+    },
+    "FetchDroneBaseTrait": {
+      "NAME": "飞寻机"
+    },
+    "FieldRation": {
+      "NAME": "营养棒"
+    },
+    "FilamentPlant": {
+      "NAME": "蓬茸柳"
+    },
+    "FilterPlant": {
+      "NAME": "仙水掌"
+    },
+    "FilterPlantSeed": {
+      "NAME": "仙水掌种子"
+    },
+    "FishFood": {
+      "NAME": "帕库鱼食"
+    },
+    "FishMeat": {
+      "NAME": "鱼片"
+    },
+    "FlyTrapPlant": {
+      "NAME": "露饵花"
+    },
+    "FlyTrapPlantOriginal": {
+      "NAME": "露饵花"
+    },
+    "FlyTrapPlantSeed": {
+      "NAME": "露饵花种子"
+    },
+    "FoodComet": {
+      "NAME": "小吃炸弹"
+    },
+    "FoodSplat": {
+      "NAME": "食物溅污"
+    },
+    "ForestForagePlant": {
+      "NAME": "六角根果实"
+    },
+    "ForestForagePlantPlanted": {
+      "NAME": "六角根"
+    },
+    "ForestTree": {
+      "NAME": "乔木树"
+    },
+    "ForestTreeBranch": {
+      "NAME": "乔木树"
+    },
+    "ForestTreeBranchOriginal": {
+      "NAME": "乔木树"
+    },
+    "ForestTreeOriginal": {
+      "NAME": "乔木树"
+    },
+    "ForestTreeSeed": {
+      "NAME": "乔木橡实"
+    },
+    "FossilBitsLarge": {
+      "NAME": "化石碎片"
+    },
+    "FossilBitsSmall": {
+      "NAME": "化石碎片"
+    },
+    "FossilHunt": {
+      "NAME": "小动物项圈"
+    },
+    "FriedMushBar": {
+      "NAME": "煎泥膏"
+    },
+    "FriedMushroom": {
+      "NAME": "煎蘑菇"
+    },
+    "FriesCarrot": {
+      "NAME": "果薯条"
+    },
+    "FruitCake": {
+      "NAME": "浆果糕"
+    },
+    "FullereneComet": {
+      "NAME": "富勒烯流星"
+    },
+    "Funky_Vest": {
+      "NAME": "新潮时装"
+    },
+    "GammaMush": {
+      "NAME": "伽马泥膏"
+    },
+    "GarbageElectrobank": {
+      "NAME": "移动电源废料"
+    },
+    "GardenDecorPlant": {
+      "NAME": "环玫花"
+    },
+    "GardenDecorPlantOriginal": {
+      "NAME": "环玫花"
+    },
+    "GardenDecorPlantSeed": {
+      "NAME": "环玫花种子"
+    },
+    "GardenFoodPlant": {
+      "NAME": "汗甜玉米秆"
+    },
+    "GardenFoodPlantFood": {
+      "NAME": "汗甜玉米"
+    },
+    "GardenFoodPlantOriginal": {
+      "NAME": "汗甜玉米秆"
+    },
+    "GardenFoodPlantSeed": {
+      "NAME": "汗甜玉米种子"
+    },
+    "GardenForagePlant": {
+      "NAME": "菌斑果"
+    },
+    "GardenForagePlantPlanted": {
+      "NAME": "菌斑根"
+    },
+    "GasGrass": {
+      "NAME": "释气草"
+    },
+    "GasGrassHarvested": {
+      "NAME": "释气草"
+    },
+    "GasGrassOriginal": {
+      "NAME": "释气草"
+    },
+    "GasGrassSeed": {
+      "NAME": "释气草种子"
+    },
+    "GassyMoo": {
+      "NAME": "释气海牛流星"
+    },
+    "GassyMooteorEvent": {
+      "NAME": "释气海牛流星雨"
+    },
+    "GeneShuffler": {
+      "NAME": "神经振荡仪"
+    },
+    "GeneShufflerRecharge": {
+      "NAME": "振荡仪充能器"
+    },
+    "GeothermalControllerEntity": {
+      "NAME": "地热热泵"
+    },
+    "GeothermalPlant": {
+      "NAME": "闪光粪化石"
+    },
+    "GeothermalVentEntity": {
+      "NAME": "地热排气口"
+    },
+    "Geyser": {
+      "NAME": "蒸汽间歇泉"
+    },
+    "GingerConfig": {
+      "NAME": "滋补根"
+    },
+    "GlassDeer": {
+      "NAME": "碎晶狐鹿"
+    },
+    "GlassDeerBaby": {
+      "NAME": "碎晶狐鹿幼崽"
+    },
+    "GlassDeerEgg": {
+      "NAME": "碎晶狐鹿蛋"
+    },
+    "Glom": {
+      "NAME": "疫病章鱼"
+    },
+    "GlomBaseTrait": {
+      "NAME": "疫病章鱼"
+    },
+    "GoldBelly": {
+      "NAME": "皇犸兔"
+    },
+    "GoldBellyBaby": {
+      "NAME": "皇犸兔幼崽"
+    },
+    "GoldBellyCrown": {
+      "NAME": "皇犸兔头冠"
+    },
+    "GoldBellyEgg": {
+      "NAME": "皇犸兔蛋"
+    },
+    "GoldComet": {
+      "NAME": "金流星"
+    },
+    "GravitasBathroomMirror": {
+      "NAME": "镜子"
+    },
+    "GravitasBathroomSink": {
+      "NAME": "搪瓷水槽"
+    },
+    "GravitasCeilingLight": {
+      "NAME": "灯具"
+    },
+    "GravitasClockSquare": {
+      "NAME": "时钟"
+    },
+    "GravitasDesk": {
+      "NAME": "机械研究桌"
+    },
+    "GravitasFlipPhone": {
+      "NAME": "翻盖手机"
+    },
+    "GravitasFridge": {
+      "NAME": "小型冰柜"
+    },
+    "GravitasPaperTowelDispenser": {
+      "NAME": "纸巾盒"
+    },
+    "GravitasPosterPlants": {
+      "NAME": "挂图"
+    },
+    "GravitasPosterSeed": {
+      "NAME": "挂图"
+    },
+    "GravitasPotPlantDead": {
+      "NAME": "死亡的植物"
+    },
+    "GravitasToiletPaperHolder": {
+      "NAME": "卫生纸架"
+    },
+    "GravitasTrashCan": {
+      "NAME": "垃圾桶"
+    },
+    "GrilledPrickleFruit": {
+      "NAME": "炙烤刺果"
+    },
+    "GrubStatue": {
+      "NAME": "果虫雕像"
+    },
+    "HardIceComet": {
+      "NAME": "冰流星"
+    },
+    "HardSkinBerry": {
+      "NAME": "刺壳果"
+    },
+    "HardSkinBerryPlant": {
+      "NAME": "刺壳果灌木"
+    },
+    "HardSkinBerryPlantOriginal": {
+      "NAME": "刺壳果灌木"
+    },
+    "HardSkinBerryPlantSeed": {
+      "NAME": "刺壳果灌木种子"
+    },
+    "Hatch": {
+      "NAME": "好吃哈奇"
+    },
+    "HatchBaby": {
+      "NAME": "好吃哈奇幼崽"
+    },
+    "HatchEgg": {
+      "NAME": "好吃哈奇蛋"
+    },
+    "HatchFossil": {
+      "NAME": "原始化石"
+    },
+    "HatchHard": {
+      "NAME": "石壳哈奇"
+    },
+    "HatchHardBaby": {
+      "NAME": "石壳哈奇幼崽"
+    },
+    "HatchHardEgg": {
+      "NAME": "石壳哈奇蛋"
+    },
+    "HatchMetal": {
+      "NAME": "光滑哈奇"
+    },
+    "HatchMetalBaby": {
+      "NAME": "光滑哈奇幼崽"
+    },
+    "HatchMetalEgg": {
+      "NAME": "光滑哈奇蛋"
+    },
+    "HatchVeggie": {
+      "NAME": "草质哈奇"
+    },
+    "HatchVeggieBaby": {
+      "NAME": "草质哈奇幼崽"
+    },
+    "HatchVeggieEgg": {
+      "NAME": "草质哈奇蛋"
+    },
+    "HighEnergyParticle": {
+      "NAME": "辐射粒子"
+    },
+    "HijackHeadquarters": {
+      "NAME": "吹风机"
+    },
+    "HoneyJar": {
+      "NAME": "蜂蜜罐"
+    },
+    "IceBelly": {
+      "NAME": "绒犸兔"
+    },
+    "IceBellyBaby": {
+      "NAME": "绒犸兔幼崽"
+    },
+    "IceBellyEgg": {
+      "NAME": "绒犸兔蛋"
+    },
+    "IceBellyPoop": {
+      "NAME": "绒犸兔碎糜"
+    },
+    "IceCavesForagePlant": {
+      "NAME": "雪莓"
+    },
+    "IceCavesForagePlantPlanted": {
+      "NAME": "雪莓藤"
+    },
+    "IceFlower": {
+      "NAME": "恬静花"
+    },
+    "IceFlowerOriginal": {
+      "NAME": "恬静花"
+    },
+    "IceFlowerSeed": {
+      "NAME": "恬静花种子"
+    },
+    "InteractedWithAirborneCondo": {
+      "NAME": "舒适"
+    },
+    "InteractedWithCritterCondo": {
+      "NAME": "舒适"
+    },
+    "InteractedWithUnderwaterCondo": {
+      "NAME": "舒适"
+    },
+    "IntermediateBooster": {
+      "NAME": "免疫增补剂"
+    },
+    "IntermediateCure": {
+      "NAME": "医疗包"
+    },
+    "IntermediateRadPill": {
+      "NAME": "中级辐射药丸"
+    },
+    "IridiumComet": {
+      "NAME": "铱流星"
+    },
+    "IronComet": {
+      "NAME": "铁流星"
+    },
+    "Jet_Suit": {
+      "NAME": "喷气服"
+    },
+    "Kelp": {
+      "NAME": "海梳蕨叶"
+    },
+    "KelpPlant": {
+      "NAME": "海梳蕨"
+    },
+    "KelpPlantSeed": {
+      "NAME": "海梳蕨种子"
+    },
+    "LandingPod": {
+      "NAME": "太空员部署舱"
+    },
+    "LargeImpactor": {
+      "NAME": "立体镜"
+    },
+    "LargeImpactorComet": {
+      "NAME": "岩石流星"
+    },
+    "Lead_Suit": {
+      "NAME": "铅服"
+    },
+    "LeafyPlant": {
+      "NAME": "欢乐叶"
+    },
+    "LeafyPlantOriginal": {
+      "NAME": "欢乐叶"
+    },
+    "LeafyPlantSeed": {
+      "NAME": "欢乐叶种子"
+    },
+    "Lettuce": {
+      "NAME": "海生菜"
+    },
+    "LightBug": {
+      "NAME": "发光虫"
+    },
+    "LightBugBaby": {
+      "NAME": "发光虫幼虫"
+    },
+    "LightBugBlack": {
+      "NAME": "深渊虫"
+    },
+    "LightBugBlackBaby": {
+      "NAME": "深渊虫幼虫"
+    },
+    "LightBugBlackEgg": {
+      "NAME": "深渊虫卵"
+    },
+    "LightBugBlue": {
+      "NAME": "天蓝虫"
+    },
+    "LightBugBlueBaby": {
+      "NAME": "天蓝虫幼虫"
+    },
+    "LightBugBlueEgg": {
+      "NAME": "天蓝虫卵"
+    },
+    "LightBugCrystal": {
+      "NAME": "光耀虫"
+    },
+    "LightBugCrystalBaby": {
+      "NAME": "光耀虫幼虫"
+    },
+    "LightBugCrystalEgg": {
+      "NAME": "光耀虫卵"
+    },
+    "LightBugEgg": {
+      "NAME": "发光虫卵"
+    },
+    "LightBugOrange": {
+      "NAME": "阳光虫"
+    },
+    "LightBugOrangeBaby": {
+      "NAME": "阳光虫幼虫"
+    },
+    "LightBugOrangeEgg": {
+      "NAME": "阳光虫卵"
+    },
+    "LightBugPink": {
+      "NAME": "珊瑚虫"
+    },
+    "LightBugPinkBaby": {
+      "NAME": "珊瑚虫幼虫"
+    },
+    "LightBugPinkEgg": {
+      "NAME": "珊瑚虫卵"
+    },
+    "LightBugPurple": {
+      "NAME": "皇家虫"
+    },
+    "LightBugPurpleBaby": {
+      "NAME": "皇家虫幼虫"
+    },
+    "LightBugPurpleEgg": {
+      "NAME": "皇家虫卵"
+    },
+    "LightDustComet": {
+      "NAME": "浮尘流星"
+    },
+    "LonelyMinion": {
+      "NAME": "生锈工具箱"
+    },
+    "LubricationStick": {
+      "NAME": "齿轮膏"
+    },
+    "MachineParts": {
+      "NAME": "定制零件"
+    },
+    "MagmaLamp": {
+      "NAME": "岩浆台灯"
+    },
+    "Maki": {
+      "NAME": "寿司卷"
+    },
+    "MaximumAptitude": {
+      "NAME": "天赋最大化"
+    },
+    "Meat": {
+      "NAME": "肉"
+    },
+    "MegaBrain": {
+      "NAME": "飞机模型"
+    },
+    "MeteorShowerDustEvent": {
+      "NAME": "浮土流星雨"
+    },
+    "MethaneGeyser": {
+      "NAME": "天然气喷孔"
+    },
+    "MiniComet": {
+      "NAME": "碎片投射物"
+    },
+    "MinnowImperativePOIA": {
+      "NAME": "未知复制人"
+    },
+    "MinnowImperativePOIB": {
+      "NAME": "未知复制人"
+    },
+    "MinnowImperativePOIC": {
+      "NAME": "未知复制人"
+    },
+    "MissileBasic": {
+      "NAME": "爆破弹"
+    },
+    "MissileLongRange": {
+      "NAME": "宇宙内爆破弹"
+    },
+    "MissileSetLocker": {
+      "NAME": "炸药储物柜"
+    },
+    "ModernArt": {
+      "NAME": "现代艺术体"
+    },
+    "Moldavite": {
+      "NAME": "捷克陨石"
+    },
+    "Mole": {
+      "NAME": "锹环田鼠"
+    },
+    "MoleBaby": {
+      "NAME": "锹环田鼠幼崽"
+    },
+    "MoleDelicacy": {
+      "NAME": "珍馐田鼠"
+    },
+    "MoleDelicacyBaby": {
+      "NAME": "珍馐田鼠幼崽"
+    },
+    "MoleDelicacyEgg": {
+      "NAME": "珍馐田鼠蛋"
+    },
+    "MoleEgg": {
+      "NAME": "锹环田鼠蛋"
+    },
+    "Moo": {
+      "NAME": "释气海牛"
+    },
+    "MoodRing": {
+      "NAME": "放射性情绪戒指"
+    },
+    "Moonmoonmoon": {
+      "NAME": "月之月之月"
+    },
+    "MopPlacer": {
+      "NAME": "擦拭"
+    },
+    "MorbRover": {
+      "NAME": "生物机器人"
+    },
+    "MorbRoverMaker": {
+      "NAME": "玩具机器人"
+    },
+    "Mosquito": {
+      "NAME": "蚋虱"
+    },
+    "MosquitoBaby": {
+      "NAME": "蚋虱幼虫"
+    },
+    "MosquitoEgg": {
+      "NAME": "蚋虱卵"
+    },
+    "MovePickupablePlacer": {
+      "NAME": "迁移至此"
+    },
+    "MushBar": {
+      "NAME": "软泥膏"
+    },
+    "Mushroom": {
+      "NAME": "蘑菇"
+    },
+    "MushroomPlant": {
+      "NAME": "夜幕菇"
+    },
+    "MushroomPlantOriginal": {
+      "NAME": "夜幕菇"
+    },
+    "MushroomSeed": {
+      "NAME": "夜幕菇孢子"
+    },
+    "MushroomWrap": {
+      "NAME": "蘑菇卷"
+    },
+    "MusselSprout": {
+      "NAME": "贻贝芽"
+    },
+    "MusselTongue": {
+      "NAME": "贻贝舌"
+    },
+    "Nigiri": {
+      "NAME": "握寿司"
+    },
+    "Nori": {
+      "NAME": "海苔"
+    },
+    "NuclearWasteComet": {
+      "NAME": "放射性流星"
+    },
+    "Obelisk": {
+      "NAME": "小型方碑"
+    },
+    "OfficeMug": {
+      "NAME": "办公马克杯"
+    },
+    "OilWell": {
+      "NAME": "储油石"
+    },
+    "Oilfloater": {
+      "NAME": "浮油生物"
+    },
+    "OilfloaterBaby": {
+      "NAME": "浮油生物幼体"
+    },
+    "OilfloaterDecor": {
+      "NAME": "长毛浮油生物"
+    },
+    "OilfloaterDecorBaby": {
+      "NAME": "长毛浮油生物幼体"
+    },
+    "OilfloaterDecorEgg": {
+      "NAME": "长毛浮油生物蛋"
+    },
+    "OilfloaterEgg": {
+      "NAME": "浮油生物蛋"
+    },
+    "OilfloaterHighTemp": {
+      "NAME": "熔岩浮油生物"
+    },
+    "OilfloaterHighTempBaby": {
+      "NAME": "熔岩浮油生物幼体"
+    },
+    "OilfloaterHighTempEgg": {
+      "NAME": "熔岩浮油生物蛋"
+    },
+    "OkayXray": {
+      "NAME": "老旧的X光照片"
+    },
+    "Oracle": {
+      "NAME": "无用的机器"
+    },
+    "OrbitalResearchDatabank": {
+      "NAME": "数据磁盘"
+    },
+    "OxyCoral": {
+      "NAME": "烟囱珊瑚"
+    },
+    "OxyCoralOriginal": {
+      "NAME": "烟囱珊瑚"
+    },
+    "OxyCoralSeed": {
+      "NAME": "烟囱珊瑚种子"
+    },
+    "Oxyfern": {
+      "NAME": "氧齿蕨"
+    },
+    "OxyfernOriginal": {
+      "NAME": "氧齿蕨"
+    },
+    "OxyfernSeed": {
+      "NAME": "氧齿蕨种子"
+    },
+    "Oxygen_Mask": {
+      "NAME": "氧气面罩"
+    },
+    "OxyliteComet": {
+      "NAME": "氧石流星"
+    },
+    "POICeresTechUnlock": {
+      "NAME": "研究信息传送通道"
+    },
+    "POIDlc4TechUnlock": {
+      "NAME": "研究信息传送通道"
+    },
+    "POIDlc5TechUnlock": {
+      "NAME": "研究信息传送通道"
+    },
+    "Pacu": {
+      "NAME": "帕库鱼"
+    },
+    "PacuBaby": {
+      "NAME": "帕库鱼苗"
+    },
+    "PacuCleaner": {
+      "NAME": "大嘴鱼"
+    },
+    "PacuCleanerBaby": {
+      "NAME": "大嘴鱼苗"
+    },
+    "PacuCleanerEgg": {
+      "NAME": "大嘴鱼卵"
+    },
+    "PacuEgg": {
+      "NAME": "帕库鱼卵"
+    },
+    "PacuPercolator": {
+      "NAME": "咖啡壶"
+    },
+    "PacuTropical": {
+      "NAME": "热带帕库鱼"
+    },
+    "PacuTropicalBaby": {
+      "NAME": "热带帕库鱼苗"
+    },
+    "PacuTropicalEgg": {
+      "NAME": "热带帕库鱼卵"
+    },
+    "Pancakes": {
+      "NAME": "蛋奶酥煎饼"
+    },
+    "ParrotFish": {
+      "NAME": "灯喙鱼"
+    },
+    "ParrotFishBaby": {
+      "NAME": "灯喙鱼苗"
+    },
+    "ParrotFishEgg": {
+      "NAME": "灯喙鱼卵"
+    },
+    "Pemmican": {
+      "NAME": "干肉饼"
+    },
+    "PhosphoricComet": {
+      "NAME": "磷流星"
+    },
+    "PickledMeal": {
+      "NAME": "腌制米虱"
+    },
+    "PinkRock": {
+      "NAME": "流明石英"
+    },
+    "PinkRockCarved": {
+      "NAME": "采掘的流明石英"
+    },
+    "PioneerLander": {
+      "NAME": "先锋着陆器"
+    },
+    "PlanktonCoral": {
+      "NAME": "藤壶星"
+    },
+    "PlanktonCoralSeed": {
+      "NAME": "藤壶星种子"
+    },
+    "PlantFiber": {
+      "NAME": "植物外壳"
+    },
+    "PlantMeat": {
+      "NAME": "植物肉"
+    },
+    "PlasmaLamp": {
+      "NAME": "等离子灯"
+    },
+    "PlasticGasket": {
+      "NAME": "塑料密封圈"
+    },
+    "PowerStationTools": {
+      "NAME": "微芯片"
+    },
+    "PrehistoricPacu": {
+      "NAME": "颚鱼"
+    },
+    "PrehistoricPacuBaby": {
+      "NAME": "颚鱼苗"
+    },
+    "PrehistoricPacuEgg": {
+      "NAME": "颚鱼卵"
+    },
+    "PrehistoricPacuFillet": {
+      "NAME": "颚鱼片"
+    },
+    "PrickleFlower": {
+      "NAME": "毛刺花"
+    },
+    "PrickleFlowerOriginal": {
+      "NAME": "毛刺花"
+    },
+    "PrickleFlowerSeed": {
+      "NAME": "毛刺花种子"
+    },
+    "PrickleFruit": {
+      "NAME": "毛刺浆果"
+    },
+    "PrickleGrass": {
+      "NAME": "诱人荆棘"
+    },
+    "PrickleGrassOriginal": {
+      "NAME": "诱人荆棘"
+    },
+    "PrickleGrassSeed": {
+      "NAME": "诱人荆棘种子"
+    },
+    "PropCeresPosterLarge": {
+      "NAME": "声学艺术镶板"
+    },
+    "PropClock": {
+      "NAME": "时钟"
+    },
+    "PropDesk": {
+      "NAME": "电脑桌"
+    },
+    "PropDlc2Display1": {
+      "NAME": "电子显示屏"
+    },
+    "PropDlc2GeothermalCart": {
+      "NAME": "服务推车"
+    },
+    "PropElevator": {
+      "NAME": "损坏的电梯"
+    },
+    "PropExoSetLocker": {
+      "NAME": "场外储物柜"
+    },
+    "PropExoShelfLong": {
+      "NAME": "预制长架子"
+    },
+    "PropExoShelfShort": {
+      "NAME": "预制架子"
+    },
+    "PropFacilityChair": {
+      "NAME": "大厅椅子"
+    },
+    "PropFacilityChairFlip": {
+      "NAME": "大厅椅子"
+    },
+    "PropFacilityChandelier": {
+      "NAME": "枝形吊灯"
+    },
+    "PropFacilityCouch": {
+      "NAME": "大厅沙发"
+    },
+    "PropFacilityDesk": {
+      "NAME": "主管的桌子"
+    },
+    "PropFacilityDisplay3": {
+      "NAME": "电子显示屏"
+    },
+    "PropFacilityGlobeDroors": {
+      "NAME": "档案柜"
+    },
+    "PropFacilityHangingLight": {
+      "NAME": "灯具"
+    },
+    "PropFacilityPainting": {
+      "NAME": "风景画"
+    },
+    "PropFacilityStatue": {
+      "NAME": "庄严丰碑"
+    },
+    "PropFacilityTable": {
+      "NAME": "咖啡桌"
+    },
+    "PropFacilityWallDegree": {
+      "NAME": "博士学位证书"
+    },
+    "PropGravitasCeilingRobot": {
+      "NAME": "天花板机器人"
+    },
+    "PropGravitasCreaturePoster": {
+      "NAME": "解剖海报"
+    },
+    "PropGravitasDecorativeWindow": {
+      "NAME": "窗户"
+    },
+    "PropGravitasDeskPodium": {
+      "NAME": "电脑讲台"
+    },
+    "PropGravitasDeskPodiumDLC4": {
+      "NAME": "电脑讲台"
+    },
+    "PropGravitasDeskPodiumGeothermalPlant": {
+      "NAME": "电脑讲台"
+    },
+    "PropGravitasDisplay4": {
+      "NAME": "电子显示屏"
+    },
+    "PropGravitasFireExtinguisher": {
+      "NAME": "损坏的灭火器"
+    },
+    "PropGravitasFirstAidKit": {
+      "NAME": "急救包"
+    },
+    "PropGravitasFloorRobot": {
+      "NAME": "机械臂"
+    },
+    "PropGravitasHandScanner": {
+      "NAME": "手部扫描仪"
+    },
+    "PropGravitasJar1": {
+      "NAME": "大脑罐"
+    },
+    "PropGravitasJar2": {
+      "NAME": "样品罐"
+    },
+    "PropGravitasLabTable": {
+      "NAME": "实验室桌"
+    },
+    "PropGravitasRobitcTable": {
+      "NAME": "机械研究桌"
+    },
+    "PropGravitasShelf": {
+      "NAME": "架子"
+    },
+    "PropGravitasSmallSeedLocker": {
+      "NAME": "壁橱"
+    },
+    "PropGravitasToolCrate": {
+      "NAME": "工具箱"
+    },
+    "PropGravitasToolShelf": {
+      "NAME": "工具架"
+    },
+    "PropHumanChesterfieldChair": {
+      "NAME": "展厅椅"
+    },
+    "PropHumanChesterfieldSofa": {
+      "NAME": "展厅沙发"
+    },
+    "PropHumanMurphyBed": {
+      "NAME": "折叠床"
+    },
+    "PropLadder": {
+      "NAME": "梯子"
+    },
+    "PropLight": {
+      "NAME": "灯具"
+    },
+    "PropReceptionDesk": {
+      "NAME": "接待前台"
+    },
+    "PropSkeleton": {
+      "NAME": "骨骼模型"
+    },
+    "PropSurfaceSatellite1": {
+      "NAME": "撞毁的卫星"
+    },
+    "PropSurfaceSatellite2": {
+      "NAME": "失事的卫星"
+    },
+    "PropSurfaceSatellite3": {
+      "NAME": "粉碎的卫星"
+    },
+    "PropTable": {
+      "NAME": "桌子"
+    },
+    "PropTallPlant": {
+      "NAME": "办公室植物"
+    },
+    "PufferFish": {
+      "NAME": "鼓气鱼"
+    },
+    "PufferFishBaby": {
+      "NAME": "鼓气鱼苗"
+    },
+    "PufferFishEgg": {
+      "NAME": "鼓气鱼卵"
+    },
+    "Puft": {
+      "NAME": "喷浮飞鱼"
+    },
+    "PuftAlpha": {
+      "NAME": "贵族飞鱼"
+    },
+    "PuftAlphaBaby": {
+      "NAME": "贵族飞鱼幼体"
+    },
+    "PuftAlphaEgg": {
+      "NAME": "贵族飞鱼蛋"
+    },
+    "PuftBaby": {
+      "NAME": "喷浮飞鱼幼体"
+    },
+    "PuftBleachstone": {
+      "NAME": "洁净飞鱼"
+    },
+    "PuftBleachstoneBaby": {
+      "NAME": "洁净飞鱼幼体"
+    },
+    "PuftBleachstoneEgg": {
+      "NAME": "洁净飞鱼蛋"
+    },
+    "PuftEgg": {
+      "NAME": "喷浮飞鱼蛋"
+    },
+    "PuftOxylite": {
+      "NAME": "厚壳飞鱼"
+    },
+    "PuftOxyliteBaby": {
+      "NAME": "厚壳飞鱼幼体"
+    },
+    "PuftOxyliteEgg": {
+      "NAME": "厚壳飞鱼蛋"
+    },
+    "Quiche": {
+      "NAME": "蘑菇乳蛋饼"
+    },
+    "RailGunPayload": {
+      "NAME": "星际载货"
+    },
+    "RainbowEggRock": {
+      "NAME": "蛋形岩石"
+    },
+    "Raptor": {
+      "NAME": "霸王鹦"
+    },
+    "RaptorBaby": {
+      "NAME": "霸王鹦幼鸟"
+    },
+    "RaptorEgg": {
+      "NAME": "霸王鹦蛋"
+    },
+    "RawEgg": {
+      "NAME": "生蛋"
+    },
+    "ReactorModel": {
+      "NAME": "核电厂模型"
+    },
+    "ResearchDatabank": {
+      "NAME": "数据磁盘"
+    },
+    "RobotArm": {
+      "NAME": "机器人手臂"
+    },
+    "RockComet": {
+      "NAME": "岩石流星"
+    },
+    "RockTornado": {
+      "NAME": "龙卷风岩石"
+    },
+    "RotPile": {
+      "NAME": "腐烂物"
+    },
+    "RubberBoots": {
+      "NAME": "橡胶靴"
+    },
+    "RubberGasket": {
+      "NAME": "橡胶密封圈"
+    },
+    "RubiksCube": {
+      "NAME": "魔方"
+    },
+    "Salsa": {
+      "NAME": "浆果酿"
+    },
+    "SaltPlant": {
+      "NAME": "沙盐藤"
+    },
+    "SaltPlantSeed": {
+      "NAME": "沙盐藤种子"
+    },
+    "SaltySticksFood": {
+      "NAME": "盐棒"
+    },
+    "SaltySticksPlant": {
+      "NAME": "咸蔗"
+    },
+    "SaltySticksPlantOriginal": {
+      "NAME": "咸蔗"
+    },
+    "SaltySticksPlantSeed": {
+      "NAME": "咸蔗种子"
+    },
+    "Sandstone": {
+      "NAME": "砂岩"
+    },
+    "SapTree": {
+      "NAME": "试验体52B"
+    },
+    "SatelliteCometComet": {
+      "NAME": "失效卫星"
+    },
+    "Saxophone": {
+      "NAME": "损坏的萨克斯"
+    },
+    "ScoutLander": {
+      "NAME": "侦察着陆器"
+    },
+    "ScoutRover": {
+      "NAME": "侦察者"
+    },
+    "SeaFairy": {
+      "NAME": "藻蝌蚪"
+    },
+    "SeaHorse": {
+      "NAME": "海马"
+    },
+    "SeaHorseBaby": {
+      "NAME": "海马鱼苗"
+    },
+    "SeaHorseEgg": {
+      "NAME": "海马卵"
+    },
+    "SeaLettuce": {
+      "NAME": "水草"
+    },
+    "SeaLettuceSeed": {
+      "NAME": "水草种子"
+    },
+    "SeaTree": {
+      "NAME": "塔藻"
+    },
+    "SeaTreeBranch": {
+      "NAME": "塔藻"
+    },
+    "SeaTreeBranchOriginal": {
+      "NAME": "塔藻"
+    },
+    "SeaTreeOriginal": {
+      "NAME": "塔藻"
+    },
+    "SeaTreeSeed": {
+      "NAME": "塔藻种子"
+    },
+    "SeaTurtle": {
+      "NAME": "矿甲龟"
+    },
+    "SeaTurtleBaby": {
+      "NAME": "矿甲龟幼体"
+    },
+    "SeaTurtleEgg": {
+      "NAME": "矿甲龟蛋"
+    },
+    "Seal": {
+      "NAME": "栓角海豹"
+    },
+    "SealBaby": {
+      "NAME": "栓角海豹幼崽"
+    },
+    "SealEgg": {
+      "NAME": "栓角海豹蛋"
+    },
+    "SelfChargingElectrobank": {
+      "NAME": "原子能移动电源"
+    },
+    "SetLocker": {
+      "NAME": "储物柜"
+    },
+    "ShellfishMeat": {
+      "NAME": "生壳肉"
+    },
+    "ShieldGenerator": {
+      "NAME": "护盾发生器"
+    },
+    "ShockWorm": {
+      "NAME": "闪电虫"
+    },
+    "Sink": {
+      "NAME": "水槽"
+    },
+    "SlimeComet": {
+      "NAME": "菌泥流星"
+    },
+    "SmokedDinosaurMeat": {
+      "NAME": "嫩肋排"
+    },
+    "SmokedVegetables": {
+      "NAME": "爆米花"
+    },
+    "Snail": {
+      "NAME": "缓螺"
+    },
+    "SnailBaby": {
+      "NAME": "缓螺幼体"
+    },
+    "SnailEgg": {
+      "NAME": "缓螺卵"
+    },
+    "SnailIron": {
+      "NAME": "金螺"
+    },
+    "SnailIronBaby": {
+      "NAME": "金螺幼体"
+    },
+    "SnailIronEgg": {
+      "NAME": "金螺卵"
+    },
+    "SnailIronShell": {
+      "NAME": "金螺壳"
+    },
+    "SnailShell": {
+      "NAME": "缓螺壳"
+    },
+    "SnowballComet": {
+      "NAME": "雪流星"
+    },
+    "SolarSystem": {
+      "NAME": "自控系统"
+    },
+    "SpaceTree": {
+      "NAME": "糖心树"
+    },
+    "SpaceTreeBranch": {
+      "NAME": "糖心树"
+    },
+    "SpaceTreeBranchOriginal": {
+      "NAME": "糖心树"
+    },
+    "SpaceTreeOriginal": {
+      "NAME": "糖心树"
+    },
+    "SpaceTreeSeed": {
+      "NAME": "糖心树种子"
+    },
+    "SpaceTreeSeedComet": {
+      "NAME": "糖心流星"
+    },
+    "SpiceBread": {
+      "NAME": "火椒面包"
+    },
+    "SpiceNut": {
+      "NAME": "火椒粒"
+    },
+    "SpiceVine": {
+      "NAME": "火椒藤"
+    },
+    "SpiceVineOriginal": {
+      "NAME": "火椒藤"
+    },
+    "SpiceVineSeed": {
+      "NAME": "火椒种子"
+    },
+    "SpicyTofu": {
+      "NAME": "麻婆豆腐"
+    },
+    "Squid": {
+      "NAME": "彩斑鱿"
+    },
+    "SquidBaby": {
+      "NAME": "彩斑鱿幼体"
+    },
+    "SquidEgg": {
+      "NAME": "彩斑鱿卵"
+    },
+    "SquidMeat": {
+      "NAME": "鱿鱼肉"
+    },
+    "Squirrel": {
+      "NAME": "树鼠"
+    },
+    "SquirrelBaby": {
+      "NAME": "树鼠幼崽"
+    },
+    "SquirrelEgg": {
+      "NAME": "树鼠蛋"
+    },
+    "SquirrelHug": {
+      "NAME": "毛绒树鼠"
+    },
+    "SquirrelHugBaby": {
+      "NAME": "毛绒树鼠幼崽"
+    },
+    "SquirrelHugEgg": {
+      "NAME": "毛绒树鼠蛋"
+    },
+    "StarmapHexCellInventory": {
+      "NAME": "可收获资源"
+    },
+    "Staterpillar": {
+      "NAME": "电弧蛞蝓"
+    },
+    "StaterpillarBaby": {
+      "NAME": "电弧蛞蝓幼体"
+    },
+    "StaterpillarEgg": {
+      "NAME": "电弧蛞蝓蛋"
+    },
+    "StaterpillarGas": {
+      "NAME": "烟雾蛞蝓"
+    },
+    "StaterpillarGasBaby": {
+      "NAME": "烟雾蛞蝓幼体"
+    },
+    "StaterpillarGasEgg": {
+      "NAME": "烟雾蛞蝓蛋"
+    },
+    "StaterpillarLiquid": {
+      "NAME": "海绵蛞蝓"
+    },
+    "StaterpillarLiquidBaby": {
+      "NAME": "海绵蛞蝓幼体"
+    },
+    "StaterpillarLiquidEgg": {
+      "NAME": "海绵蛞蝓蛋"
+    },
+    "Stego": {
+      "NAME": "尖块兽"
+    },
+    "StegoBaby": {
+      "NAME": "尖块兽幼崽"
+    },
+    "StegoEgg": {
+      "NAME": "尖块兽蛋"
+    },
+    "Stethoscope": {
+      "NAME": "听诊器"
+    },
+    "StickerBomb": {
+      "NAME": "贴纸炸弹"
+    },
+    "SuperWormPlant": {
+      "NAME": "虫果芽"
+    },
+    "SurfAndTurf": {
+      "NAME": "海陆双拼"
+    },
+    "SwampDelights": {
+      "NAME": "沼泽欢愉"
+    },
+    "SwampForagePlant": {
+      "NAME": "沼泽甜菜心"
+    },
+    "SwampForagePlantPlanted": {
+      "NAME": "沼泽甜菜"
+    },
+    "SwampFruit": {
+      "NAME": "沼浆果冻"
+    },
+    "SwampHarvestPlant": {
+      "NAME": "沼浆笼"
+    },
+    "SwampHarvestPlantSeed": {
+      "NAME": "沼浆笼种子"
+    },
+    "SwampLily": {
+      "NAME": "芳香百合"
+    },
+    "SwampLilyFlower": {
+      "NAME": "芳香百合花"
+    },
+    "SwampLilySeed": {
+      "NAME": "芳香百合种子"
+    },
+    "SweepBot": {
+      "NAME": "扫扫机"
+    },
+    "SweepBotBaseTrait": {
+      "NAME": "扫扫机"
+    },
+    "TableSalt": {
+      "NAME": "食盐"
+    },
+    "TallowLubricationStick": {
+      "NAME": "动物油脂齿轮膏"
+    },
+    "TeaPot": {
+      "NAME": "结壳茶壶"
+    },
+    "ToePlant": {
+      "NAME": "安宁芷"
+    },
+    "ToePlantSeed": {
+      "NAME": "安宁芷种子"
+    },
+    "Tofu": {
+      "NAME": "豆腐"
+    },
+    "TubeWorm": {
+      "NAME": "管虫"
+    },
+    "TubeWormSeed": {
+      "NAME": "管虫种子"
+    },
+    "UnderwaterVent": {
+      "NAME": "热气裂缝"
+    },
+    "UraniumComet": {
+      "NAME": "铀流星"
+    },
+    "Urchin": {
+      "NAME": "针胆"
+    },
+    "UrchinMeat": {
+      "NAME": "针胆黄"
+    },
+    "UrchinPlant": {
+      "NAME": "针胆团"
+    },
+    "UrchinPlantOriginal": {
+      "NAME": "针胆团"
+    },
+    "UrchinPlantSeed": {
+      "NAME": "针胆团种子"
+    },
+    "VHS": {
+      "NAME": "旧科技"
+    },
+    "VendingMachine": {
+      "NAME": "自动贩卖机"
+    },
+    "VineBranch": {
+      "NAME": "漫殖藤"
+    },
+    "VineBranchOriginal": {
+      "NAME": "漫殖藤"
+    },
+    "VineFruit": {
+      "NAME": "漫花果"
+    },
+    "VineMother": {
+      "NAME": "漫殖藤主干"
+    },
+    "VineMotherOriginal": {
+      "NAME": "漫殖藤主干"
+    },
+    "VineMotherSeed": {
+      "NAME": "漫殖藤主干种子"
+    },
+    "Warm_Vest": {
+      "NAME": "保暖外套"
+    },
+    "WarpPortal": {
+      "NAME": "传送发射器"
+    },
+    "WarpReceiver": {
+      "NAME": "传送接收器"
+    },
+    "WaterCups": {
+      "NAME": "静杯花"
+    },
+    "WaterCupsOriginal": {
+      "NAME": "静杯花"
+    },
+    "WineCups": {
+      "NAME": "锦醇菇"
+    },
+    "WineCupsOriginal": {
+      "NAME": "锦醇菇"
+    },
+    "WineCupsSeed": {
+      "NAME": "锦醇菇种子"
+    },
+    "WoodDeer": {
+      "NAME": "狐鹿"
+    },
+    "WoodDeerBaby": {
+      "NAME": "狐鹿幼崽"
+    },
+    "WoodDeerEgg": {
+      "NAME": "狐鹿蛋"
+    },
+    "WormBasicFood": {
+      "NAME": "烤虫果仁"
+    },
+    "WormBasicFruit": {
+      "NAME": "贫瘠虫果"
+    },
+    "WormPlant": {
+      "NAME": "贫瘠虫果芽"
+    },
+    "WormPlantSeed": {
+      "NAME": "虫果种子"
+    },
+    "WormSuperFood": {
+      "NAME": "虫果果酱"
+    },
+    "WormSuperFruit": {
+      "NAME": "虫果"
+    },
+    "artifact_ameliaswatch": {
+      "NAME": "手表"
+    },
+    "artifact_bioluminescentrock": {
+      "NAME": "生物发光岩石"
+    },
+    "artifact_blender": {
+      "NAME": "搅拌机"
+    },
+    "artifact_brickphone": {
+      "NAME": "奇怪的大哥大"
+    },
+    "artifact_dnamodel": {
+      "NAME": "双螺旋模型"
+    },
+    "artifact_eggrock": {
+      "NAME": "蛋形岩石"
+    },
+    "artifact_grubstatue": {
+      "NAME": "果虫雕像"
+    },
+    "artifact_hatchfossil": {
+      "NAME": "原始化石"
+    },
+    "artifact_honeyjar": {
+      "NAME": "蜂蜜罐"
+    },
+    "artifact_magmalamp": {
+      "NAME": "岩浆台灯"
+    },
+    "artifact_modernart": {
+      "NAME": "现代艺术体"
+    },
+    "artifact_moldavite": {
+      "NAME": "捷克陨石"
+    },
+    "artifact_moodring": {
+      "NAME": "放射性情绪戒指"
+    },
+    "artifact_moonmoonmoon": {
+      "NAME": "月之月之月"
+    },
+    "artifact_obelisk": {
+      "NAME": "小型方碑"
+    },
+    "artifact_officemug": {
+      "NAME": "办公马克杯"
+    },
+    "artifact_okayxray": {
+      "NAME": "老旧的X光照片"
+    },
+    "artifact_oracle": {
+      "NAME": "无用的机器"
+    },
+    "artifact_pacupercolator": {
+      "NAME": "咖啡壶"
+    },
+    "artifact_plasmalamp": {
+      "NAME": "等离子灯"
+    },
+    "artifact_rainboweggrock": {
+      "NAME": "蛋形岩石"
+    },
+    "artifact_reactormodel": {
+      "NAME": "核电厂模型"
+    },
+    "artifact_robotarm": {
+      "NAME": "机器人手臂"
+    },
+    "artifact_rocktornado": {
+      "NAME": "龙卷风岩石"
+    },
+    "artifact_rubikscube": {
+      "NAME": "魔方"
+    },
+    "artifact_sandstone": {
+      "NAME": "砂岩"
+    },
+    "artifact_saxophone": {
+      "NAME": "损坏的萨克斯"
+    },
+    "artifact_shieldgenerator": {
+      "NAME": "护盾发生器"
+    },
+    "artifact_sink": {
+      "NAME": "水槽"
+    },
+    "artifact_solarsystem": {
+      "NAME": "自控系统"
+    },
+    "artifact_stethoscope": {
+      "NAME": "听诊器"
+    },
+    "artifact_teapot": {
+      "NAME": "结壳茶壶"
+    },
+    "artifact_vhs": {
+      "NAME": "旧科技"
+    },
+    "hide": {
+      "NAME": "钻地"
+    },
+    "idle_mound": {
+      "NAME": "钻入地里"
+    }
+  },
   "DIFFICULTY": {
     "ImmuneSystem": {
       "NAME": "疾病",

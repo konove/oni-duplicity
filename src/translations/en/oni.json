@@ -2220,5 +2220,2023 @@
     "slush_salt_water": {
       "NAME": "Cool Salt Slush Geyser"
     }
+  },
+  "ITEMS": {
+    "AdvancedCure": {
+      "NAME": "Serum Vial"
+    },
+    "AlgaeComet": {
+      "NAME": "Algae Meteor"
+    },
+    "AlgaeStego": {
+      "NAME": "Blum Lumb"
+    },
+    "AlgaeStegoBaby": {
+      "NAME": "Blumblet"
+    },
+    "AlgaeStegoEgg": {
+      "NAME": "Blum Lumb Egg"
+    },
+    "AmeliasWatch": {
+      "NAME": "Wrist Watch"
+    },
+    "Antihistamine": {
+      "NAME": "Allergy Medication"
+    },
+    "AteFromFeeder": {
+      "NAME": "Ate From Feeder"
+    },
+    "Atmo_Suit": {
+      "NAME": "Atmo Suit"
+    },
+    "BasicBooster": {
+      "NAME": "Vitamin Chews"
+    },
+    "BasicCure": {
+      "NAME": "Curative Tablet"
+    },
+    "BasicFabric": {
+      "NAME": "Reed Fiber"
+    },
+    "BasicFabricPlant": {
+      "NAME": "Thimble Reed"
+    },
+    "BasicForagePlant": {
+      "NAME": "Muckroot"
+    },
+    "BasicForagePlantPlanted": {
+      "NAME": "Buried Muckroot"
+    },
+    "BasicPlantBar": {
+      "NAME": "Liceloaf"
+    },
+    "BasicPlantFood": {
+      "NAME": "Meal Lice"
+    },
+    "BasicRadPill": {
+      "NAME": "Basic Rad Pill"
+    },
+    "BasicSingleHarvestPlant": {
+      "NAME": "Mealwood"
+    },
+    "BasicSingleHarvestPlantOriginal": {
+      "NAME": "Mealwood"
+    },
+    "BasicSingleHarvestPlantSeed": {
+      "NAME": "Mealwood Seed"
+    },
+    "BeanPlant": {
+      "NAME": "Nosh Sprout"
+    },
+    "BeanPlantSeed": {
+      "NAME": "Nosh Bean"
+    },
+    "Bee": {
+      "NAME": "Beeta"
+    },
+    "BeeBaby": {
+      "NAME": "Beetiny"
+    },
+    "BeeHive": {
+      "NAME": "Beeta Hive"
+    },
+    "BeeHiveBaseTrait": {
+      "NAME": "Beeta Hive"
+    },
+    "BerryPie": {
+      "NAME": "Mixed Berry Pie"
+    },
+    "BioluminescentRock": {
+      "NAME": "Bioluminescent Rock"
+    },
+    "BleachStoneComet": {
+      "NAME": "Bleach Stone Meteor"
+    },
+    "Blender": {
+      "NAME": "Blender"
+    },
+    "BlueGrass": {
+      "NAME": "Alveo Vera"
+    },
+    "BlueGrassSeed": {
+      "NAME": "Alveo Vera Seed"
+    },
+    "BrickPhone": {
+      "NAME": "Strange Brick"
+    },
+    "BulbPlant": {
+      "NAME": "Buddy Bud"
+    },
+    "BulbPlantOriginal": {
+      "NAME": "Buddy Bud"
+    },
+    "BulbPlantSeed": {
+      "NAME": "Buddy Bud Seed"
+    },
+    "Bulbloom": {
+      "NAME": "Bulbloom"
+    },
+    "BulbloomOriginal": {
+      "NAME": "Bulbloom"
+    },
+    "BulbloomSeed": {
+      "NAME": "Bulbloom Seed"
+    },
+    "Burger": {
+      "NAME": "Frost Burger"
+    },
+    "Butterfly": {
+      "NAME": "Mimika"
+    },
+    "ButterflyFood": {
+      "NAME": "Toasted Mimillet"
+    },
+    "ButterflyPlant": {
+      "NAME": "Mimika Bud"
+    },
+    "ButterflyPlantOriginal": {
+      "NAME": "Mimika Bud"
+    },
+    "ButterflyPlantSeed": {
+      "NAME": "Mimillet"
+    },
+    "CactusPlant": {
+      "NAME": "Jumping Joya"
+    },
+    "CactusPlantOriginal": {
+      "NAME": "Jumping Joya"
+    },
+    "CactusPlantSeed": {
+      "NAME": "Joya Seed"
+    },
+    "CarePackage": {
+      "NAME": "Care Package"
+    },
+    "Carrot": {
+      "NAME": "Plume Squash"
+    },
+    "CarrotPlant": {
+      "NAME": "Plume Squash Plant"
+    },
+    "CarrotPlantSeed": {
+      "NAME": "Plume Squash Seed"
+    },
+    "Caviar": {
+      "NAME": "Caviar"
+    },
+    "Chameleon": {
+      "NAME": "Dartle"
+    },
+    "ChameleonBaby": {
+      "NAME": "Dartlet"
+    },
+    "ChameleonEgg": {
+      "NAME": "Dartle Egg"
+    },
+    "ChlorineGeyser": {
+      "NAME": "Chlorine Geyser"
+    },
+    "Clam": {
+      "NAME": "Clampum"
+    },
+    "ClamSeed": {
+      "NAME": "Clampum Seed"
+    },
+    "ClusterBiologicalShower": {
+      "NAME": "Slimy Meteor Shower"
+    },
+    "ClusterBleachStoneShower": {
+      "NAME": "Bleach Stone Meteor Shower"
+    },
+    "ClusterCopperMeteor": {
+      "NAME": "Copper Meteor"
+    },
+    "ClusterCopperShower": {
+      "NAME": "Copper Meteor Shower"
+    },
+    "ClusterGoldShower": {
+      "NAME": "Gold Meteor Shower"
+    },
+    "ClusterIceAndTreesShower": {
+      "NAME": "Icy Nectar Meteor Shower"
+    },
+    "ClusterIceShower": {
+      "NAME": "Ice Meteor Shower"
+    },
+    "ClusterIronMeteor": {
+      "NAME": "Iron Meteor"
+    },
+    "ClusterIronShower": {
+      "NAME": "Iron Meteor Shower"
+    },
+    "ClusterLightRegolithShower": {
+      "NAME": "Dust Fluff Meteor Shower"
+    },
+    "ClusterMapLongRangeMissile": {
+      "NAME": "Intracosmic Blastshot"
+    },
+    "ClusterOxyliteShower": {
+      "NAME": "Oxylite Meteor Shower"
+    },
+    "ClusterRegolithShower": {
+      "NAME": "Dense Dust Meteor Shower"
+    },
+    "ClusterSnowShower": {
+      "NAME": "Blizzard Meteor Shower"
+    },
+    "ClusterUraniumShower": {
+      "NAME": "Uranium Meteor Shower"
+    },
+    "ClustercraftInteriorDoor": {
+      "NAME": "Interior Hatch"
+    },
+    "ColdBreather": {
+      "NAME": "Wheezewort"
+    },
+    "ColdBreatherSeed": {
+      "NAME": "Wort Seed"
+    },
+    "ColdWheat": {
+      "NAME": "Sleet Wheat"
+    },
+    "ColdWheatBread": {
+      "NAME": "Frost Bun"
+    },
+    "ColdWheatOriginal": {
+      "NAME": "Sleet Wheat"
+    },
+    "ColdWheatSeed": {
+      "NAME": "Sleet Wheat Grain"
+    },
+    "CookedEgg": {
+      "NAME": "Omelette"
+    },
+    "CookedFish": {
+      "NAME": "Cooked Seafood"
+    },
+    "CookedMeat": {
+      "NAME": "Barbeque"
+    },
+    "CookedPikeapple": {
+      "NAME": "Pikeapple Skewer"
+    },
+    "CopperCometConfig": {
+      "NAME": "Copper Meteor"
+    },
+    "Crab": {
+      "NAME": "Pokeshell"
+    },
+    "CrabBaby": {
+      "NAME": "Pokeshell Spawn"
+    },
+    "CrabEgg": {
+      "NAME": "Pokeshell Roe"
+    },
+    "CrabFreshWater": {
+      "NAME": "Sanishell"
+    },
+    "CrabFreshWaterBaby": {
+      "NAME": "Sanishell Spawn"
+    },
+    "CrabFreshWaterEgg": {
+      "NAME": "Sanishell Roe"
+    },
+    "CrabShell": {
+      "NAME": "Pokeshell Molt"
+    },
+    "CrabWood": {
+      "NAME": "Oakshell"
+    },
+    "CrabWoodBaby": {
+      "NAME": "Oakshell Spawn"
+    },
+    "CrabWoodEgg": {
+      "NAME": "Oakshell Roe"
+    },
+    "CrabWoodShell": {
+      "NAME": "Oakshell Molt"
+    },
+    "CritterManipulator": {
+      "NAME": "Ceramic Morb"
+    },
+    "CritterTrapPlant": {
+      "NAME": "Saturn Critter Trap"
+    },
+    "CritterTrapPlantOriginal": {
+      "NAME": "Saturn Critter Trap"
+    },
+    "CritterTrapPlantSeed": {
+      "NAME": "Saturn Critter Trap Seed"
+    },
+    "CryoTank": {
+      "NAME": "Cryotank 3000"
+    },
+    "Curry": {
+      "NAME": "Curried Beans"
+    },
+    "CustomClothing": {
+      "NAME": "Primo Garb"
+    },
+    "Cylindrica": {
+      "NAME": "Bliss Burst"
+    },
+    "CylindricaOriginal": {
+      "NAME": "Bliss Burst"
+    },
+    "CylindricaSeed": {
+      "NAME": "Bliss Burst Seed"
+    },
+    "DNAModel": {
+      "NAME": "Double Helix Model"
+    },
+    "DebrisPayload": {
+      "NAME": "Rocket Debris"
+    },
+    "DeepFriedFish": {
+      "NAME": "Fish Taco"
+    },
+    "DeepFriedMeat": {
+      "NAME": "Deep Fried Steak"
+    },
+    "DeepFriedNosh": {
+      "NAME": "Nosh Noms"
+    },
+    "DeepFriedShellfish": {
+      "NAME": "Shellfish Tempura"
+    },
+    "DewDrip": {
+      "NAME": "Dewdrip"
+    },
+    "DewDripperPlant": {
+      "NAME": "Dew Dripper"
+    },
+    "DewDripperPlantOriginal": {
+      "NAME": "Dew Dripper"
+    },
+    "DewDripperPlantSeed": {
+      "NAME": "Dew Seed"
+    },
+    "DewPalmOriginal": {
+      "NAME": "Gum Palm"
+    },
+    "DieselMoo": {
+      "NAME": "Husky Moo"
+    },
+    "DieselMooComet": {
+      "NAME": "Husky Mooteor"
+    },
+    "DigPlacer": {
+      "NAME": "Dig"
+    },
+    "Dinofern": {
+      "NAME": "Megafrond"
+    },
+    "DinofernSeed": {
+      "NAME": "Megafrond Spore"
+    },
+    "DinosaurMeat": {
+      "NAME": "Tough Meat"
+    },
+    "DisposableElectrobank_RawMetal": {
+      "NAME": "Metal Power Bank"
+    },
+    "DisposableElectrobank_UraniumOre": {
+      "NAME": "Uranium Ore Power Bank"
+    },
+    "DivergentBeetle": {
+      "NAME": "Sweetle"
+    },
+    "DivergentBeetleBaby": {
+      "NAME": "Sweetle Larva"
+    },
+    "DivergentBeetleEgg": {
+      "NAME": "Sweetle Egg"
+    },
+    "DivergentWorm": {
+      "NAME": "Grubgrub"
+    },
+    "DivergentWormBaby": {
+      "NAME": "Grubgrub Wormling"
+    },
+    "DivergentWormEgg": {
+      "NAME": "Grubgrub Egg"
+    },
+    "Drecko": {
+      "NAME": "Drecko"
+    },
+    "DreckoBaby": {
+      "NAME": "Drecklet"
+    },
+    "DreckoEgg": {
+      "NAME": "Drecko Egg"
+    },
+    "DreckoPlastic": {
+      "NAME": "Glossy Drecko"
+    },
+    "DreckoPlasticBaby": {
+      "NAME": "Glossy Drecklet"
+    },
+    "DreckoPlasticEgg": {
+      "NAME": "Glossy Drecko Egg"
+    },
+    "DrySuit": {
+      "NAME": "Swimwear"
+    },
+    "DustComet": {
+      "NAME": "Dust Meteor"
+    },
+    "Edamame": {
+      "NAME": "Edamame"
+    },
+    "EggRock": {
+      "NAME": "Egg-Shaped Rock"
+    },
+    "EggShell": {
+      "NAME": "Egg Shell"
+    },
+    "Electrobank": {
+      "NAME": "Eco Power Bank"
+    },
+    "EmptyElectrobank": {
+      "NAME": "Empty Eco Power Bank"
+    },
+    "Enabled": {
+      "NAME": "Enabled"
+    },
+    "EquippableBalloon": {
+      "NAME": "Balloon Friend"
+    },
+    "EscapePod": {
+      "NAME": "Escape Pod"
+    },
+    "EvilFlower": {
+      "NAME": "Sporechid"
+    },
+    "EvilFlowerOriginal": {
+      "NAME": "Sporechid"
+    },
+    "EvilFlowerSeed": {
+      "NAME": "Sporechid Seed"
+    },
+    "FarmStationTools": {
+      "NAME": "Micronutrient Fertilizer"
+    },
+    "FeatherFabric": {
+      "NAME": "Feather Fiber"
+    },
+    "FernFood": {
+      "NAME": "Megafrond Grain"
+    },
+    "FetchDrone": {
+      "NAME": "Flydo"
+    },
+    "FetchDroneBaseTrait": {
+      "NAME": "Flydo"
+    },
+    "FieldRation": {
+      "NAME": "Nutrient Bar"
+    },
+    "FilamentPlant": {
+      "NAME": "Petta Pouf"
+    },
+    "FilterPlant": {
+      "NAME": "Hydrocactus"
+    },
+    "FilterPlantSeed": {
+      "NAME": "Hydrocactus Seed"
+    },
+    "FishFood": {
+      "NAME": "Pacu Treat"
+    },
+    "FishMeat": {
+      "NAME": "Fish Fillet"
+    },
+    "FlyTrapPlant": {
+      "NAME": "Lura Plant"
+    },
+    "FlyTrapPlantOriginal": {
+      "NAME": "Lura Plant"
+    },
+    "FlyTrapPlantSeed": {
+      "NAME": "Lura Seed"
+    },
+    "FoodComet": {
+      "NAME": "Snack Bomb"
+    },
+    "FoodSplat": {
+      "NAME": "Food Splatter"
+    },
+    "ForestForagePlant": {
+      "NAME": "Hexalent Fruit"
+    },
+    "ForestForagePlantPlanted": {
+      "NAME": "Hexalent"
+    },
+    "ForestTree": {
+      "NAME": "Arbor Tree"
+    },
+    "ForestTreeBranch": {
+      "NAME": "Arbor Tree"
+    },
+    "ForestTreeBranchOriginal": {
+      "NAME": "Arbor Tree"
+    },
+    "ForestTreeOriginal": {
+      "NAME": "Arbor Tree"
+    },
+    "ForestTreeSeed": {
+      "NAME": "Arbor Acorn"
+    },
+    "FossilBitsLarge": {
+      "NAME": "Fossil Fragments"
+    },
+    "FossilBitsSmall": {
+      "NAME": "Fossil Fragments"
+    },
+    "FossilHunt": {
+      "NAME": "Critter Collar"
+    },
+    "FriedMushBar": {
+      "NAME": "Mush Fry"
+    },
+    "FriedMushroom": {
+      "NAME": "Fried Mushroom"
+    },
+    "FriesCarrot": {
+      "NAME": "Squash Fries"
+    },
+    "FruitCake": {
+      "NAME": "Berry Sludge"
+    },
+    "FullereneComet": {
+      "NAME": "Fullerene Meteor"
+    },
+    "Funky_Vest": {
+      "NAME": "Snazzy Suit"
+    },
+    "GammaMush": {
+      "NAME": "Gamma Mush"
+    },
+    "GarbageElectrobank": {
+      "NAME": "Power Bank Scrap"
+    },
+    "GardenDecorPlant": {
+      "NAME": "Ring Rosebush"
+    },
+    "GardenDecorPlantOriginal": {
+      "NAME": "Ring Rosebush"
+    },
+    "GardenDecorPlantSeed": {
+      "NAME": "Rosebush Seed"
+    },
+    "GardenFoodPlant": {
+      "NAME": "Sweatcorn Stalk"
+    },
+    "GardenFoodPlantFood": {
+      "NAME": "Sweatcorn"
+    },
+    "GardenFoodPlantOriginal": {
+      "NAME": "Sweatcorn Stalk"
+    },
+    "GardenFoodPlantSeed": {
+      "NAME": "Sweatcorn Seed"
+    },
+    "GardenForagePlant": {
+      "NAME": "Snac Fruit"
+    },
+    "GardenForagePlantPlanted": {
+      "NAME": "Snactus"
+    },
+    "GasGrass": {
+      "NAME": "Gas Grass"
+    },
+    "GasGrassHarvested": {
+      "NAME": "Gas Grass"
+    },
+    "GasGrassOriginal": {
+      "NAME": "Gas Grass"
+    },
+    "GasGrassSeed": {
+      "NAME": "Gas Grass Seed"
+    },
+    "GassyMoo": {
+      "NAME": "Gassy Mooteor"
+    },
+    "GassyMooteorEvent": {
+      "NAME": "Gassy Mooteor Shower"
+    },
+    "GeneShuffler": {
+      "NAME": "Neural Vacillator"
+    },
+    "GeneShufflerRecharge": {
+      "NAME": "Vacillator Recharge"
+    },
+    "GeothermalControllerEntity": {
+      "NAME": "Geothermal Heat Pump"
+    },
+    "GeothermalPlant": {
+      "NAME": "Shiny Coprolite"
+    },
+    "GeothermalVentEntity": {
+      "NAME": "Geo Vent"
+    },
+    "Geyser": {
+      "NAME": "Steam Geyser"
+    },
+    "GingerConfig": {
+      "NAME": "Tonic Root"
+    },
+    "GlassDeer": {
+      "NAME": "Shatter Flox"
+    },
+    "GlassDeerBaby": {
+      "NAME": "Shatter Flox Fawn"
+    },
+    "GlassDeerEgg": {
+      "NAME": "Shatter Flox Egg"
+    },
+    "Glom": {
+      "NAME": "Morb"
+    },
+    "GlomBaseTrait": {
+      "NAME": "Morb"
+    },
+    "GoldBelly": {
+      "NAME": "Regal Bammoth"
+    },
+    "GoldBellyBaby": {
+      "NAME": "Regal Bammini"
+    },
+    "GoldBellyCrown": {
+      "NAME": "Regal Bammoth Crest"
+    },
+    "GoldBellyEgg": {
+      "NAME": "Regal Bammoth Egg"
+    },
+    "GoldComet": {
+      "NAME": "Gold Meteor"
+    },
+    "GravitasBathroomMirror": {
+      "NAME": "Mirror"
+    },
+    "GravitasBathroomSink": {
+      "NAME": "Enamel Sink"
+    },
+    "GravitasCeilingLight": {
+      "NAME": "Light Fixture"
+    },
+    "GravitasClockSquare": {
+      "NAME": "Clock"
+    },
+    "GravitasDesk": {
+      "NAME": "Biophysics Research Desk"
+    },
+    "GravitasFlipPhone": {
+      "NAME": "Flip Phone"
+    },
+    "GravitasFridge": {
+      "NAME": "Mini Fridge"
+    },
+    "GravitasPaperTowelDispenser": {
+      "NAME": "Paper Towel Dispenser"
+    },
+    "GravitasPosterPlants": {
+      "NAME": "Wall Chart"
+    },
+    "GravitasPosterSeed": {
+      "NAME": "Wall Chart"
+    },
+    "GravitasPotPlantDead": {
+      "NAME": "Dead Plant"
+    },
+    "GravitasToiletPaperHolder": {
+      "NAME": "Toilet Paper Holder"
+    },
+    "GravitasTrashCan": {
+      "NAME": "Trash Can"
+    },
+    "GrilledPrickleFruit": {
+      "NAME": "Gristle Berry"
+    },
+    "GrubStatue": {
+      "NAME": "Grubgrub Statue"
+    },
+    "HardIceComet": {
+      "NAME": "Ice Meteor"
+    },
+    "HardSkinBerry": {
+      "NAME": "Pikeapple"
+    },
+    "HardSkinBerryPlant": {
+      "NAME": "Pikeapple Bush"
+    },
+    "HardSkinBerryPlantOriginal": {
+      "NAME": "Pikeapple Bush"
+    },
+    "HardSkinBerryPlantSeed": {
+      "NAME": "Pikeapple Bush Seed"
+    },
+    "Hatch": {
+      "NAME": "Hatch"
+    },
+    "HatchBaby": {
+      "NAME": "Hatchling"
+    },
+    "HatchEgg": {
+      "NAME": "Hatch Egg"
+    },
+    "HatchFossil": {
+      "NAME": "Pristine Fossil"
+    },
+    "HatchHard": {
+      "NAME": "Stone Hatch"
+    },
+    "HatchHardBaby": {
+      "NAME": "Stone Hatchling"
+    },
+    "HatchHardEgg": {
+      "NAME": "Stone Hatch Egg"
+    },
+    "HatchMetal": {
+      "NAME": "Smooth Hatch"
+    },
+    "HatchMetalBaby": {
+      "NAME": "Smooth Hatchling"
+    },
+    "HatchMetalEgg": {
+      "NAME": "Smooth Hatch Egg"
+    },
+    "HatchVeggie": {
+      "NAME": "Sage Hatch"
+    },
+    "HatchVeggieBaby": {
+      "NAME": "Sage Hatchling"
+    },
+    "HatchVeggieEgg": {
+      "NAME": "Sage Hatch Egg"
+    },
+    "HighEnergyParticle": {
+      "NAME": "Radbolts"
+    },
+    "HijackHeadquarters": {
+      "NAME": "Hair Dryer"
+    },
+    "HoneyJar": {
+      "NAME": "Honey Jar"
+    },
+    "IceBelly": {
+      "NAME": "Bammoth"
+    },
+    "IceBellyBaby": {
+      "NAME": "Bammini"
+    },
+    "IceBellyEgg": {
+      "NAME": "Bammoth Egg"
+    },
+    "IceBellyPoop": {
+      "NAME": "Bammoth Patty"
+    },
+    "IceCavesForagePlant": {
+      "NAME": "Sherberry"
+    },
+    "IceCavesForagePlantPlanted": {
+      "NAME": "Sherberry Plant"
+    },
+    "IceFlower": {
+      "NAME": "Idylla Flower"
+    },
+    "IceFlowerOriginal": {
+      "NAME": "Idylla Flower"
+    },
+    "IceFlowerSeed": {
+      "NAME": "Idylla Seed"
+    },
+    "InteractedWithAirborneCondo": {
+      "NAME": "Cozy"
+    },
+    "InteractedWithCritterCondo": {
+      "NAME": "Cozy"
+    },
+    "InteractedWithUnderwaterCondo": {
+      "NAME": "Cozy"
+    },
+    "IntermediateBooster": {
+      "NAME": "Immuno Booster"
+    },
+    "IntermediateCure": {
+      "NAME": "Medical Pack"
+    },
+    "IntermediateRadPill": {
+      "NAME": "Intermediate Rad Pill"
+    },
+    "IridiumComet": {
+      "NAME": "Iridium Meteor"
+    },
+    "IronComet": {
+      "NAME": "Iron Meteor"
+    },
+    "Jet_Suit": {
+      "NAME": "Jet Suit"
+    },
+    "Kelp": {
+      "NAME": "Seakomb Leaf"
+    },
+    "KelpPlant": {
+      "NAME": "Seakomb"
+    },
+    "KelpPlantSeed": {
+      "NAME": "Seakomb Seed"
+    },
+    "LandingPod": {
+      "NAME": "Spacefarer Deploy Pod"
+    },
+    "LargeImpactor": {
+      "NAME": "Stereoscope"
+    },
+    "LargeImpactorComet": {
+      "NAME": "Rock Meteor"
+    },
+    "Lead_Suit": {
+      "NAME": "Lead Suit"
+    },
+    "LeafyPlant": {
+      "NAME": "Mirth Leaf"
+    },
+    "LeafyPlantOriginal": {
+      "NAME": "Mirth Leaf"
+    },
+    "LeafyPlantSeed": {
+      "NAME": "Mirth Leaf Seed"
+    },
+    "Lettuce": {
+      "NAME": "Lettuce"
+    },
+    "LightBug": {
+      "NAME": "Shine Bug"
+    },
+    "LightBugBaby": {
+      "NAME": "Shine Nymph"
+    },
+    "LightBugBlack": {
+      "NAME": "Abyss Bug"
+    },
+    "LightBugBlackBaby": {
+      "NAME": "Abyss Nymph"
+    },
+    "LightBugBlackEgg": {
+      "NAME": "Abyss Bug Egg"
+    },
+    "LightBugBlue": {
+      "NAME": "Azure Bug"
+    },
+    "LightBugBlueBaby": {
+      "NAME": "Azure Nymph"
+    },
+    "LightBugBlueEgg": {
+      "NAME": "Azure Bug Egg"
+    },
+    "LightBugCrystal": {
+      "NAME": "Radiant Bug"
+    },
+    "LightBugCrystalBaby": {
+      "NAME": "Radiant Nymph"
+    },
+    "LightBugCrystalEgg": {
+      "NAME": "Radiant Bug Egg"
+    },
+    "LightBugEgg": {
+      "NAME": "Shine Bug Egg"
+    },
+    "LightBugOrange": {
+      "NAME": "Sun Bug"
+    },
+    "LightBugOrangeBaby": {
+      "NAME": "Sun Nymph"
+    },
+    "LightBugOrangeEgg": {
+      "NAME": "Sun Bug Egg"
+    },
+    "LightBugPink": {
+      "NAME": "Coral Bug"
+    },
+    "LightBugPinkBaby": {
+      "NAME": "Coral Nymph"
+    },
+    "LightBugPinkEgg": {
+      "NAME": "Coral Bug Egg"
+    },
+    "LightBugPurple": {
+      "NAME": "Royal Bug"
+    },
+    "LightBugPurpleBaby": {
+      "NAME": "Royal Nymph"
+    },
+    "LightBugPurpleEgg": {
+      "NAME": "Royal Bug Egg"
+    },
+    "LightDustComet": {
+      "NAME": "Dust Fluff Meteor"
+    },
+    "LonelyMinion": {
+      "NAME": "Rusty Toolbox"
+    },
+    "LubricationStick": {
+      "NAME": "Gear Balm"
+    },
+    "MachineParts": {
+      "NAME": "Custom Parts"
+    },
+    "MagmaLamp": {
+      "NAME": "Magma Lamp"
+    },
+    "Maki": {
+      "NAME": "Sushi Roll"
+    },
+    "MaximumAptitude": {
+      "NAME": "Maximum Aptitude"
+    },
+    "Meat": {
+      "NAME": "Meat"
+    },
+    "MegaBrain": {
+      "NAME": "Model Plane"
+    },
+    "MeteorShowerDustEvent": {
+      "NAME": "Regolith Meteor Shower"
+    },
+    "MethaneGeyser": {
+      "NAME": "Natural Gas Geyser"
+    },
+    "MiniComet": {
+      "NAME": "Debris Projectile"
+    },
+    "MinnowImperativePOIA": {
+      "NAME": "Unknown Duplicant"
+    },
+    "MinnowImperativePOIB": {
+      "NAME": "Unknown Duplicant"
+    },
+    "MinnowImperativePOIC": {
+      "NAME": "Unknown Duplicant"
+    },
+    "MissileBasic": {
+      "NAME": "Blastshot"
+    },
+    "MissileLongRange": {
+      "NAME": "Intracosmic Blastshot"
+    },
+    "MissileSetLocker": {
+      "NAME": "Explosives Locker"
+    },
+    "ModernArt": {
+      "NAME": "Modern Art"
+    },
+    "Moldavite": {
+      "NAME": "Moldavite"
+    },
+    "Mole": {
+      "NAME": "Shove Vole"
+    },
+    "MoleBaby": {
+      "NAME": "Vole Pup"
+    },
+    "MoleDelicacy": {
+      "NAME": "Delecta Vole"
+    },
+    "MoleDelicacyBaby": {
+      "NAME": "Delecta Vole Pup"
+    },
+    "MoleDelicacyEgg": {
+      "NAME": "Delecta Vole Egg"
+    },
+    "MoleEgg": {
+      "NAME": "Shove Vole Egg"
+    },
+    "Moo": {
+      "NAME": "Gassy Moo"
+    },
+    "MoodRing": {
+      "NAME": "Radiation Mood Ring"
+    },
+    "Moonmoonmoon": {
+      "NAME": "Moonmoonmoon"
+    },
+    "MopPlacer": {
+      "NAME": "Mop"
+    },
+    "MorbRover": {
+      "NAME": "Biobot"
+    },
+    "MorbRoverMaker": {
+      "NAME": "Toy Bot"
+    },
+    "Mosquito": {
+      "NAME": "Gnit"
+    },
+    "MosquitoBaby": {
+      "NAME": "Gnit Larva"
+    },
+    "MosquitoEgg": {
+      "NAME": "Gnit Egg"
+    },
+    "MovePickupablePlacer": {
+      "NAME": "Relocate Here"
+    },
+    "MushBar": {
+      "NAME": "Mush Bar"
+    },
+    "Mushroom": {
+      "NAME": "Mushroom"
+    },
+    "MushroomPlant": {
+      "NAME": "Dusk Cap"
+    },
+    "MushroomPlantOriginal": {
+      "NAME": "Dusk Cap"
+    },
+    "MushroomSeed": {
+      "NAME": "Fungal Spore"
+    },
+    "MushroomWrap": {
+      "NAME": "Mushroom Wrap"
+    },
+    "MusselSprout": {
+      "NAME": "Mussel Sprout"
+    },
+    "MusselTongue": {
+      "NAME": "Mussel Tongue"
+    },
+    "Nigiri": {
+      "NAME": "Nigiri"
+    },
+    "Nori": {
+      "NAME": "Nori"
+    },
+    "NuclearWasteComet": {
+      "NAME": "Radioactive Meteor"
+    },
+    "Obelisk": {
+      "NAME": "Small Obelisk"
+    },
+    "OfficeMug": {
+      "NAME": "Office Mug"
+    },
+    "OilWell": {
+      "NAME": "Oil Reservoir"
+    },
+    "Oilfloater": {
+      "NAME": "Slickster"
+    },
+    "OilfloaterBaby": {
+      "NAME": "Slickster Larva"
+    },
+    "OilfloaterDecor": {
+      "NAME": "Longhair Slickster"
+    },
+    "OilfloaterDecorBaby": {
+      "NAME": "Longhair Larva"
+    },
+    "OilfloaterDecorEgg": {
+      "NAME": "Longhair Slickster Egg"
+    },
+    "OilfloaterEgg": {
+      "NAME": "Slickster Egg"
+    },
+    "OilfloaterHighTemp": {
+      "NAME": "Molten Slickster"
+    },
+    "OilfloaterHighTempBaby": {
+      "NAME": "Molten Larva"
+    },
+    "OilfloaterHighTempEgg": {
+      "NAME": "Molten Slickster Egg"
+    },
+    "OkayXray": {
+      "NAME": "Old X-Ray"
+    },
+    "Oracle": {
+      "NAME": "Useless Machine"
+    },
+    "OrbitalResearchDatabank": {
+      "NAME": "Data Bank"
+    },
+    "OxyCoral": {
+      "NAME": "Flue Coral"
+    },
+    "OxyCoralOriginal": {
+      "NAME": "Flue Coral"
+    },
+    "OxyCoralSeed": {
+      "NAME": "Flue Coral Seed"
+    },
+    "Oxyfern": {
+      "NAME": "Oxyfern"
+    },
+    "OxyfernOriginal": {
+      "NAME": "Oxyfern"
+    },
+    "OxyfernSeed": {
+      "NAME": "Oxyfern Seed"
+    },
+    "Oxygen_Mask": {
+      "NAME": "Oxygen Mask"
+    },
+    "OxyliteComet": {
+      "NAME": "Oxylite Meteor"
+    },
+    "POICeresTechUnlock": {
+      "NAME": "Research Portal"
+    },
+    "POIDlc4TechUnlock": {
+      "NAME": "Research Portal"
+    },
+    "POIDlc5TechUnlock": {
+      "NAME": "Research Portal"
+    },
+    "Pacu": {
+      "NAME": "Pacu"
+    },
+    "PacuBaby": {
+      "NAME": "Pacu Fry"
+    },
+    "PacuCleaner": {
+      "NAME": "Gulp Fish"
+    },
+    "PacuCleanerBaby": {
+      "NAME": "Gulp Fry"
+    },
+    "PacuCleanerEgg": {
+      "NAME": "Gulp Fish Egg"
+    },
+    "PacuEgg": {
+      "NAME": "Pacu Egg"
+    },
+    "PacuPercolator": {
+      "NAME": "Percolator"
+    },
+    "PacuTropical": {
+      "NAME": "Tropical Pacu"
+    },
+    "PacuTropicalBaby": {
+      "NAME": "Tropical Fry"
+    },
+    "PacuTropicalEgg": {
+      "NAME": "Tropical Pacu Egg"
+    },
+    "Pancakes": {
+      "NAME": "Soufflé Pancakes"
+    },
+    "ParrotFish": {
+      "NAME": "Beakon"
+    },
+    "ParrotFishBaby": {
+      "NAME": "Beakon Fry"
+    },
+    "ParrotFishEgg": {
+      "NAME": "Beakon Egg"
+    },
+    "Pemmican": {
+      "NAME": "Pemmican"
+    },
+    "PhosphoricComet": {
+      "NAME": "Phosphoric Meteor"
+    },
+    "PickledMeal": {
+      "NAME": "Pickled Meal"
+    },
+    "PinkRock": {
+      "NAME": "Lumen Quartz"
+    },
+    "PinkRockCarved": {
+      "NAME": "Carved Lumen Quartz"
+    },
+    "PioneerLander": {
+      "NAME": "Trailblazer Lander"
+    },
+    "PlanktonCoral": {
+      "NAME": "Starnacle"
+    },
+    "PlanktonCoralSeed": {
+      "NAME": "Starnacle Seed"
+    },
+    "PlantFiber": {
+      "NAME": "Plant Husk"
+    },
+    "PlantMeat": {
+      "NAME": "Plant Meat"
+    },
+    "PlasmaLamp": {
+      "NAME": "Plasma Lamp"
+    },
+    "PlasticGasket": {
+      "NAME": "Plastic Gasket"
+    },
+    "PowerStationTools": {
+      "NAME": "Microchip"
+    },
+    "PrehistoricPacu": {
+      "NAME": "Jawbo"
+    },
+    "PrehistoricPacuBaby": {
+      "NAME": "Jawbo Fry"
+    },
+    "PrehistoricPacuEgg": {
+      "NAME": "Jawbo Egg"
+    },
+    "PrehistoricPacuFillet": {
+      "NAME": "Jawbo Fillet"
+    },
+    "PrickleFlower": {
+      "NAME": "Bristle Blossom"
+    },
+    "PrickleFlowerOriginal": {
+      "NAME": "Bristle Blossom"
+    },
+    "PrickleFlowerSeed": {
+      "NAME": "Blossom Seed"
+    },
+    "PrickleFruit": {
+      "NAME": "Bristle Berry"
+    },
+    "PrickleGrass": {
+      "NAME": "Bluff Briar"
+    },
+    "PrickleGrassOriginal": {
+      "NAME": "Bluff Briar"
+    },
+    "PrickleGrassSeed": {
+      "NAME": "Briar Seed"
+    },
+    "PropCeresPosterLarge": {
+      "NAME": "Acoustic Art Panel"
+    },
+    "PropClock": {
+      "NAME": "Clock"
+    },
+    "PropDesk": {
+      "NAME": "Computer Desk"
+    },
+    "PropDlc2Display1": {
+      "NAME": "Electronic Display"
+    },
+    "PropDlc2GeothermalCart": {
+      "NAME": "Service Cart"
+    },
+    "PropElevator": {
+      "NAME": "Broken Elevator"
+    },
+    "PropExoSetLocker": {
+      "NAME": "Off-site Locker"
+    },
+    "PropExoShelfLong": {
+      "NAME": "Long Prefab Shelf"
+    },
+    "PropExoShelfShort": {
+      "NAME": "Prefab Shelf"
+    },
+    "PropFacilityChair": {
+      "NAME": "Lobby Chair"
+    },
+    "PropFacilityChairFlip": {
+      "NAME": "Lobby Chair"
+    },
+    "PropFacilityChandelier": {
+      "NAME": "Chandelier"
+    },
+    "PropFacilityCouch": {
+      "NAME": "Lobby Couch"
+    },
+    "PropFacilityDesk": {
+      "NAME": "Director's Desk"
+    },
+    "PropFacilityDisplay3": {
+      "NAME": "Electronic Display"
+    },
+    "PropFacilityGlobeDroors": {
+      "NAME": "Filing Cabinet"
+    },
+    "PropFacilityHangingLight": {
+      "NAME": "Light Fixture"
+    },
+    "PropFacilityPainting": {
+      "NAME": "Landscape Portrait"
+    },
+    "PropFacilityStatue": {
+      "NAME": "Gravitas Monument"
+    },
+    "PropFacilityTable": {
+      "NAME": "Coffee Table"
+    },
+    "PropFacilityWallDegree": {
+      "NAME": "Doctorate Degree"
+    },
+    "PropGravitasCeilingRobot": {
+      "NAME": "Ceiling Robot"
+    },
+    "PropGravitasCreaturePoster": {
+      "NAME": "Anatomy Poster"
+    },
+    "PropGravitasDecorativeWindow": {
+      "NAME": "Window"
+    },
+    "PropGravitasDeskPodium": {
+      "NAME": "Computer Podium"
+    },
+    "PropGravitasDeskPodiumDLC4": {
+      "NAME": "Computer Podium"
+    },
+    "PropGravitasDeskPodiumGeothermalPlant": {
+      "NAME": "Computer Podium"
+    },
+    "PropGravitasDisplay4": {
+      "NAME": "Electronic Display"
+    },
+    "PropGravitasFireExtinguisher": {
+      "NAME": "Broken Fire Extinguisher"
+    },
+    "PropGravitasFirstAidKit": {
+      "NAME": "First Aid Kit"
+    },
+    "PropGravitasFloorRobot": {
+      "NAME": "Robotic Arm"
+    },
+    "PropGravitasHandScanner": {
+      "NAME": "Hand Scanner"
+    },
+    "PropGravitasJar1": {
+      "NAME": "Big Brain Jar"
+    },
+    "PropGravitasJar2": {
+      "NAME": "Sample Jar"
+    },
+    "PropGravitasLabTable": {
+      "NAME": "Lab Desk"
+    },
+    "PropGravitasRobitcTable": {
+      "NAME": "Robotics Research Desk"
+    },
+    "PropGravitasShelf": {
+      "NAME": "Shelf"
+    },
+    "PropGravitasSmallSeedLocker": {
+      "NAME": "Wall Cabinet"
+    },
+    "PropGravitasToolCrate": {
+      "NAME": "Tool Crate"
+    },
+    "PropGravitasToolShelf": {
+      "NAME": "Tool Rack"
+    },
+    "PropHumanChesterfieldChair": {
+      "NAME": "Showroom Chair"
+    },
+    "PropHumanChesterfieldSofa": {
+      "NAME": "Showroom Couch"
+    },
+    "PropHumanMurphyBed": {
+      "NAME": "Murphy Bed"
+    },
+    "PropLadder": {
+      "NAME": "Ladder"
+    },
+    "PropLight": {
+      "NAME": "Light Fixture"
+    },
+    "PropReceptionDesk": {
+      "NAME": "Reception Desk"
+    },
+    "PropSkeleton": {
+      "NAME": "Model Skeleton"
+    },
+    "PropSurfaceSatellite1": {
+      "NAME": "Crashed Satellite"
+    },
+    "PropSurfaceSatellite2": {
+      "NAME": "Wrecked Satellite"
+    },
+    "PropSurfaceSatellite3": {
+      "NAME": "Crushed Satellite"
+    },
+    "PropTable": {
+      "NAME": "Table"
+    },
+    "PropTallPlant": {
+      "NAME": "Office Plant"
+    },
+    "PufferFish": {
+      "NAME": "Blowter"
+    },
+    "PufferFishBaby": {
+      "NAME": "Blowter Fry"
+    },
+    "PufferFishEgg": {
+      "NAME": "Blowter Egg"
+    },
+    "Puft": {
+      "NAME": "Puft"
+    },
+    "PuftAlpha": {
+      "NAME": "Puft Prince"
+    },
+    "PuftAlphaBaby": {
+      "NAME": "Puftlet Prince"
+    },
+    "PuftAlphaEgg": {
+      "NAME": "Puft Prince Egg"
+    },
+    "PuftBaby": {
+      "NAME": "Puftlet"
+    },
+    "PuftBleachstone": {
+      "NAME": "Squeaky Puft"
+    },
+    "PuftBleachstoneBaby": {
+      "NAME": "Squeaky Puftlet"
+    },
+    "PuftBleachstoneEgg": {
+      "NAME": "Squeaky Puft Egg"
+    },
+    "PuftEgg": {
+      "NAME": "Puft Egg"
+    },
+    "PuftOxylite": {
+      "NAME": "Dense Puft"
+    },
+    "PuftOxyliteBaby": {
+      "NAME": "Dense Puftlet"
+    },
+    "PuftOxyliteEgg": {
+      "NAME": "Dense Puft Egg"
+    },
+    "Quiche": {
+      "NAME": "Mushroom Quiche"
+    },
+    "RailGunPayload": {
+      "NAME": "Interplanetary Payload"
+    },
+    "RainbowEggRock": {
+      "NAME": "Egg-Shaped Rock"
+    },
+    "Raptor": {
+      "NAME": "Rhex"
+    },
+    "RaptorBaby": {
+      "NAME": "Rhex Baby"
+    },
+    "RaptorEgg": {
+      "NAME": "Rhex Egg"
+    },
+    "RawEgg": {
+      "NAME": "Raw Egg"
+    },
+    "ReactorModel": {
+      "NAME": "Model Nuclear Power Plant"
+    },
+    "ResearchDatabank": {
+      "NAME": "Data Bank"
+    },
+    "RobotArm": {
+      "NAME": "Robot Arm"
+    },
+    "RockComet": {
+      "NAME": "Rock Meteor"
+    },
+    "RockTornado": {
+      "NAME": "Tornado Rock"
+    },
+    "RotPile": {
+      "NAME": "Rot Pile"
+    },
+    "RubberBoots": {
+      "NAME": "Rubber Boots"
+    },
+    "RubberGasket": {
+      "NAME": "Rubber Gasket"
+    },
+    "RubiksCube": {
+      "NAME": "Rubik's Cube"
+    },
+    "Salsa": {
+      "NAME": "Stuffed Berry"
+    },
+    "SaltPlant": {
+      "NAME": "Dasha Saltvine"
+    },
+    "SaltPlantSeed": {
+      "NAME": "Dasha Saltvine Seed"
+    },
+    "SaltySticksFood": {
+      "NAME": "Salty Sticks"
+    },
+    "SaltySticksPlant": {
+      "NAME": "Sodicane"
+    },
+    "SaltySticksPlantOriginal": {
+      "NAME": "Sodicane"
+    },
+    "SaltySticksPlantSeed": {
+      "NAME": "Sodicane Seed"
+    },
+    "Sandstone": {
+      "NAME": "Sandstone"
+    },
+    "SapTree": {
+      "NAME": "Experiment 52B"
+    },
+    "SatelliteCometComet": {
+      "NAME": "Defunct Satellite"
+    },
+    "Saxophone": {
+      "NAME": "Mangled Saxophone"
+    },
+    "ScoutLander": {
+      "NAME": "Rover's Lander"
+    },
+    "ScoutRover": {
+      "NAME": "Rover"
+    },
+    "SeaFairy": {
+      "NAME": "Kelpole"
+    },
+    "SeaHorse": {
+      "NAME": "Seaquine"
+    },
+    "SeaHorseBaby": {
+      "NAME": "Seaquine Fry"
+    },
+    "SeaHorseEgg": {
+      "NAME": "Seaquine Egg"
+    },
+    "SeaLettuce": {
+      "NAME": "Waterweed"
+    },
+    "SeaLettuceSeed": {
+      "NAME": "Waterweed Seed"
+    },
+    "SeaTree": {
+      "NAME": "Tower Kelp"
+    },
+    "SeaTreeBranch": {
+      "NAME": "Tower Kelp"
+    },
+    "SeaTreeBranchOriginal": {
+      "NAME": "Tower Kelp"
+    },
+    "SeaTreeOriginal": {
+      "NAME": "Tower Kelp"
+    },
+    "SeaTreeSeed": {
+      "NAME": "Tower Kelp Seed"
+    },
+    "SeaTurtle": {
+      "NAME": "Orehull"
+    },
+    "SeaTurtleBaby": {
+      "NAME": "Orehull Spawn"
+    },
+    "SeaTurtleEgg": {
+      "NAME": "Orehull Egg"
+    },
+    "Seal": {
+      "NAME": "Spigot Seal"
+    },
+    "SealBaby": {
+      "NAME": "Spigot Pup"
+    },
+    "SealEgg": {
+      "NAME": "Spigot Seal Egg"
+    },
+    "SelfChargingElectrobank": {
+      "NAME": "Atomic Power Bank"
+    },
+    "SetLocker": {
+      "NAME": "Locker"
+    },
+    "ShellfishMeat": {
+      "NAME": "Raw Shellfish"
+    },
+    "ShieldGenerator": {
+      "NAME": "Shield Generator"
+    },
+    "ShockWorm": {
+      "NAME": "Shockworm"
+    },
+    "Sink": {
+      "NAME": "Sink"
+    },
+    "SlimeComet": {
+      "NAME": "Slime Meteor"
+    },
+    "SmokedDinosaurMeat": {
+      "NAME": "Tender Brisket"
+    },
+    "SmokedVegetables": {
+      "NAME": "Veggie Poppers"
+    },
+    "Snail": {
+      "NAME": "Slogo"
+    },
+    "SnailBaby": {
+      "NAME": "Slogo Baby"
+    },
+    "SnailEgg": {
+      "NAME": "Slogo Egg"
+    },
+    "SnailIron": {
+      "NAME": "Gildgo"
+    },
+    "SnailIronBaby": {
+      "NAME": "Gildgo Baby"
+    },
+    "SnailIronEgg": {
+      "NAME": "Gildgo Egg"
+    },
+    "SnailIronShell": {
+      "NAME": "Gildgo Molt"
+    },
+    "SnailShell": {
+      "NAME": "Slogo Molt"
+    },
+    "SnowballComet": {
+      "NAME": "Snow Meteor"
+    },
+    "SolarSystem": {
+      "NAME": "Self-Contained System"
+    },
+    "SpaceTree": {
+      "NAME": "Bonbon Tree"
+    },
+    "SpaceTreeBranch": {
+      "NAME": "Bonbon Tree"
+    },
+    "SpaceTreeBranchOriginal": {
+      "NAME": "Bonbon Tree"
+    },
+    "SpaceTreeOriginal": {
+      "NAME": "Bonbon Tree"
+    },
+    "SpaceTreeSeed": {
+      "NAME": "Bonbon Tree Seed"
+    },
+    "SpaceTreeSeedComet": {
+      "NAME": "Bonbon Meteor"
+    },
+    "SpiceBread": {
+      "NAME": "Pepper Bread"
+    },
+    "SpiceNut": {
+      "NAME": "Pincha Peppernut"
+    },
+    "SpiceVine": {
+      "NAME": "Pincha Pepperplant"
+    },
+    "SpiceVineOriginal": {
+      "NAME": "Pincha Pepperplant"
+    },
+    "SpiceVineSeed": {
+      "NAME": "Pincha Pepper Seed"
+    },
+    "SpicyTofu": {
+      "NAME": "Spicy Tofu"
+    },
+    "Squid": {
+      "NAME": "Glo Squid"
+    },
+    "SquidBaby": {
+      "NAME": "Glo Squid Larva"
+    },
+    "SquidEgg": {
+      "NAME": "Glo Squid Egg"
+    },
+    "SquidMeat": {
+      "NAME": "Calamari"
+    },
+    "Squirrel": {
+      "NAME": "Pip"
+    },
+    "SquirrelBaby": {
+      "NAME": "Pipsqueak"
+    },
+    "SquirrelEgg": {
+      "NAME": "Pip Egg"
+    },
+    "SquirrelHug": {
+      "NAME": "Cuddle Pip"
+    },
+    "SquirrelHugBaby": {
+      "NAME": "Cuddle Pipsqueak"
+    },
+    "SquirrelHugEgg": {
+      "NAME": "Cuddle Pip Egg"
+    },
+    "StarmapHexCellInventory": {
+      "NAME": "Harvestable Resources"
+    },
+    "Staterpillar": {
+      "NAME": "Plug Slug"
+    },
+    "StaterpillarBaby": {
+      "NAME": "Plug Sluglet"
+    },
+    "StaterpillarEgg": {
+      "NAME": "Plug Slug Egg"
+    },
+    "StaterpillarGas": {
+      "NAME": "Smog Slug"
+    },
+    "StaterpillarGasBaby": {
+      "NAME": "Smog Sluglet"
+    },
+    "StaterpillarGasEgg": {
+      "NAME": "Smog Slug Egg"
+    },
+    "StaterpillarLiquid": {
+      "NAME": "Sponge Slug"
+    },
+    "StaterpillarLiquidBaby": {
+      "NAME": "Sponge Sluglet"
+    },
+    "StaterpillarLiquidEgg": {
+      "NAME": "Sponge Slug Egg"
+    },
+    "Stego": {
+      "NAME": "Lumb"
+    },
+    "StegoBaby": {
+      "NAME": "Lumblet"
+    },
+    "StegoEgg": {
+      "NAME": "Lumb Egg"
+    },
+    "Stethoscope": {
+      "NAME": "Stethoscope"
+    },
+    "StickerBomb": {
+      "NAME": "Sticker Bomb"
+    },
+    "SuperWormPlant": {
+      "NAME": "Grubfruit Plant"
+    },
+    "SurfAndTurf": {
+      "NAME": "Surf'n'Turf"
+    },
+    "SwampDelights": {
+      "NAME": "Swampy Delights"
+    },
+    "SwampForagePlant": {
+      "NAME": "Swamp Chard Heart"
+    },
+    "SwampForagePlantPlanted": {
+      "NAME": "Swamp Chard"
+    },
+    "SwampFruit": {
+      "NAME": "Bog Jelly"
+    },
+    "SwampHarvestPlant": {
+      "NAME": "Bog Bucket"
+    },
+    "SwampHarvestPlantSeed": {
+      "NAME": "Bog Bucket Seed"
+    },
+    "SwampLily": {
+      "NAME": "Balm Lily"
+    },
+    "SwampLilyFlower": {
+      "NAME": "Balm Lily Flower"
+    },
+    "SwampLilySeed": {
+      "NAME": "Balm Lily Seed"
+    },
+    "SweepBot": {
+      "NAME": "Sweepy"
+    },
+    "SweepBotBaseTrait": {
+      "NAME": "Sweepy"
+    },
+    "TableSalt": {
+      "NAME": "Table Salt"
+    },
+    "TallowLubricationStick": {
+      "NAME": "Tallow Gear Balm"
+    },
+    "TeaPot": {
+      "NAME": "Encrusted Teapot"
+    },
+    "ToePlant": {
+      "NAME": "Tranquil Toes"
+    },
+    "ToePlantSeed": {
+      "NAME": "Tranquil Toe Seed"
+    },
+    "Tofu": {
+      "NAME": "Tofu"
+    },
+    "TubeWorm": {
+      "NAME": "Tublia"
+    },
+    "TubeWormSeed": {
+      "NAME": "Tublia Seed"
+    },
+    "UnderwaterVent": {
+      "NAME": "Thermal Gas Fissure"
+    },
+    "UraniumComet": {
+      "NAME": "Uranium Meteor"
+    },
+    "Urchin": {
+      "NAME": "Pinpoki"
+    },
+    "UrchinMeat": {
+      "NAME": "Uni"
+    },
+    "UrchinPlant": {
+      "NAME": "Pinpoket"
+    },
+    "UrchinPlantOriginal": {
+      "NAME": "Pinpoket"
+    },
+    "UrchinPlantSeed": {
+      "NAME": "Pinpoket Seed"
+    },
+    "VHS": {
+      "NAME": "Archaic Tech"
+    },
+    "VendingMachine": {
+      "NAME": "Vending Machine"
+    },
+    "VineBranch": {
+      "NAME": "Ovagro Vine"
+    },
+    "VineBranchOriginal": {
+      "NAME": "Ovagro Vine"
+    },
+    "VineFruit": {
+      "NAME": "Ovagro Fig"
+    },
+    "VineMother": {
+      "NAME": "Ovagro Node"
+    },
+    "VineMotherOriginal": {
+      "NAME": "Ovagro Node"
+    },
+    "VineMotherSeed": {
+      "NAME": "Ovagro Node Seed"
+    },
+    "Warm_Vest": {
+      "NAME": "Warm Coat"
+    },
+    "WarpPortal": {
+      "NAME": "Teleporter Transmitter"
+    },
+    "WarpReceiver": {
+      "NAME": "Teleporter Receiver"
+    },
+    "WaterCups": {
+      "NAME": "Husha Cups"
+    },
+    "WaterCupsOriginal": {
+      "NAME": "Husha Cups"
+    },
+    "WineCups": {
+      "NAME": "Mellow Mallow"
+    },
+    "WineCupsOriginal": {
+      "NAME": "Mellow Mallow"
+    },
+    "WineCupsSeed": {
+      "NAME": "Mallow Seed"
+    },
+    "WoodDeer": {
+      "NAME": "Flox"
+    },
+    "WoodDeerBaby": {
+      "NAME": "Flox Fawn"
+    },
+    "WoodDeerEgg": {
+      "NAME": "Flox Egg"
+    },
+    "WormBasicFood": {
+      "NAME": "Roast Grubfruit Nut"
+    },
+    "WormBasicFruit": {
+      "NAME": "Spindly Grubfruit"
+    },
+    "WormPlant": {
+      "NAME": "Spindly Grubfruit Plant"
+    },
+    "WormPlantSeed": {
+      "NAME": "Grubfruit Seed"
+    },
+    "WormSuperFood": {
+      "NAME": "Grubfruit Preserve"
+    },
+    "WormSuperFruit": {
+      "NAME": "Grubfruit"
+    },
+    "artifact_ameliaswatch": {
+      "NAME": "Wrist Watch"
+    },
+    "artifact_bioluminescentrock": {
+      "NAME": "Bioluminescent Rock"
+    },
+    "artifact_blender": {
+      "NAME": "Blender"
+    },
+    "artifact_brickphone": {
+      "NAME": "Strange Brick"
+    },
+    "artifact_dnamodel": {
+      "NAME": "Double Helix Model"
+    },
+    "artifact_eggrock": {
+      "NAME": "Egg-Shaped Rock"
+    },
+    "artifact_grubstatue": {
+      "NAME": "Grubgrub Statue"
+    },
+    "artifact_hatchfossil": {
+      "NAME": "Pristine Fossil"
+    },
+    "artifact_honeyjar": {
+      "NAME": "Honey Jar"
+    },
+    "artifact_magmalamp": {
+      "NAME": "Magma Lamp"
+    },
+    "artifact_modernart": {
+      "NAME": "Modern Art"
+    },
+    "artifact_moldavite": {
+      "NAME": "Moldavite"
+    },
+    "artifact_moodring": {
+      "NAME": "Radiation Mood Ring"
+    },
+    "artifact_moonmoonmoon": {
+      "NAME": "Moonmoonmoon"
+    },
+    "artifact_obelisk": {
+      "NAME": "Small Obelisk"
+    },
+    "artifact_officemug": {
+      "NAME": "Office Mug"
+    },
+    "artifact_okayxray": {
+      "NAME": "Old X-Ray"
+    },
+    "artifact_oracle": {
+      "NAME": "Useless Machine"
+    },
+    "artifact_pacupercolator": {
+      "NAME": "Percolator"
+    },
+    "artifact_plasmalamp": {
+      "NAME": "Plasma Lamp"
+    },
+    "artifact_rainboweggrock": {
+      "NAME": "Egg-Shaped Rock"
+    },
+    "artifact_reactormodel": {
+      "NAME": "Model Nuclear Power Plant"
+    },
+    "artifact_robotarm": {
+      "NAME": "Robot Arm"
+    },
+    "artifact_rocktornado": {
+      "NAME": "Tornado Rock"
+    },
+    "artifact_rubikscube": {
+      "NAME": "Rubik's Cube"
+    },
+    "artifact_sandstone": {
+      "NAME": "Sandstone"
+    },
+    "artifact_saxophone": {
+      "NAME": "Mangled Saxophone"
+    },
+    "artifact_shieldgenerator": {
+      "NAME": "Shield Generator"
+    },
+    "artifact_sink": {
+      "NAME": "Sink"
+    },
+    "artifact_solarsystem": {
+      "NAME": "Self-Contained System"
+    },
+    "artifact_stethoscope": {
+      "NAME": "Stethoscope"
+    },
+    "artifact_teapot": {
+      "NAME": "Encrusted Teapot"
+    },
+    "artifact_vhs": {
+      "NAME": "Archaic Tech"
+    },
+    "hide": {
+      "NAME": "Burrowing"
+    },
+    "idle_mound": {
+      "NAME": "Burrowed"
+    }
   }
 }

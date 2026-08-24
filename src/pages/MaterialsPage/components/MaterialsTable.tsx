@@ -12,10 +12,10 @@ import Typography from "@mui/material/Typography";
 
 import { useMaterialList } from "@/services/oni-save/hooks/useMaterials";
 import {
-  elementDisplayName,
   formatQuantity,
   kindKey,
   looseObjectKey,
+  materialDisplayName,
 } from "@/services/oni-save/materials";
 import { MaterialListItem } from "@/services/oni-save/selectors/material";
 
@@ -74,17 +74,20 @@ const MaterialsTable: React.FC<MaterialsTableProps> = ({ className }) => {
   // not what the game calls them in any language, English included.
   const nameOf = React.useCallback(
     (material: MaterialListItem) =>
-      material.kind === "element"
-        ? elementDisplayName(material.name, t)
-        : humanize(material.name),
+      materialDisplayName(material.name, material.kind, t),
     [t],
   );
 
-  // Search the displayed name, so it matches what the reader can see.
-  const shown = materials.filter(
-    (material) =>
-      search === "" || nameOf(material).toLowerCase().includes(search),
-  );
+  // Search and sort by the displayed name, so both match what the reader can
+  // see. Sorting by the prefab id looks like no order at all once the names
+  // come from the catalogue: SeaLettuceSeed sorts under S and reads
+  // "Waterweed Seed".
+  const shown = materials
+    .map((material) => ({ material, label: nameOf(material) }))
+    .filter(
+      ({ label }) => search === "" || label.toLowerCase().includes(search),
+    )
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   return (
     <div>
@@ -107,8 +110,7 @@ const MaterialsTable: React.FC<MaterialsTableProps> = ({ className }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {shown.map((material) => {
-            const label = nameOf(material);
+          {shown.map(({ material, label }) => {
             return (
               <TableRow key={material.name}>
                 <TableCell>
@@ -166,14 +168,5 @@ const MaterialsTable: React.FC<MaterialsTableProps> = ({ className }) => {
     </div>
   );
 };
-
-/**
- * A readable fallback for prefabs the catalogue has no name for - every
- * non-element, for now. `SeaLettuceSeed` reads as "Sea Lettuce Seed", which is
- * close to the game's own "Sea Lettuce Seed" and much closer than the id.
- */
-function humanize(prefabId: string): string {
-  return prefabId.replace(/_/g, " ").replace(/([a-z0-9])([A-Z])/g, "$1 $2");
-}
 
 export default MaterialsTable;

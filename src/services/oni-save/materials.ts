@@ -85,7 +85,7 @@ export function elementDisplayName(
 }
 
 function humanizeElementId(elementId: string): string {
-  return elementId.replace(/([a-z0-9])([A-Z])/g, "$1 $2");
+  return elementId.replace(/_/g, " ").replace(/([a-z0-9])([A-Z])/g, "$1 $2");
 }
 
 /**
@@ -274,4 +274,29 @@ export function kindKey(kind: MaterialKind, groupName: string): string {
   }
   const phase = ELEMENT_PHASES[groupName] ?? "solid";
   return `material.kind.${phase === "vacuum" ? "solid" : phase}_element`;
+}
+
+/**
+ * What the game calls this material.
+ *
+ * Elements resolve by rule, `ELEMENTS.<id>.NAME`. Nothing else does: a seed, an
+ * egg or a piece of food is named from whatever catalogue key its config class
+ * picked, so `tools/extract-item-names.py` pairs the two and the result lands
+ * in the `ITEMS` group. Without it the page falls back to splitting the id,
+ * which gives "Garden Forage Plant" for what the game calls **Snac Fruit** and
+ * "Garden Food Plant Food" for **Sweatcorn** - not near misses, different
+ * words.
+ *
+ * The split is still the fallback, for a prefab neither group covers: a mod's,
+ * or one added by a game update this build predates.
+ */
+export function materialDisplayName(
+  groupName: string,
+  kind: MaterialKind,
+  t: NameTranslator,
+): string {
+  const group = kind === "element" ? "ELEMENTS" : "ITEMS";
+  return t(`oni:${group}.${groupName}.NAME`, {
+    defaultValue: humanizeElementId(groupName),
+  });
 }

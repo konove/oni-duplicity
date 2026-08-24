@@ -1855,6 +1855,2024 @@
       "NAME": "Расплавленная медь"
     }
   },
+  "ITEMS": {
+    "AdvancedCure": {
+      "NAME": "Пенициллиновый флакон"
+    },
+    "AlgaeComet": {
+      "NAME": "Водорослевый метеорит"
+    },
+    "AlgaeStego": {
+      "NAME": "Водревун"
+    },
+    "AlgaeStegoBaby": {
+      "NAME": "Водревунок"
+    },
+    "AlgaeStegoEgg": {
+      "NAME": "Яйцо водревуна"
+    },
+    "AmeliasWatch": {
+      "NAME": "Наручные часы"
+    },
+    "Antihistamine": {
+      "NAME": "Лекарство от аллергии"
+    },
+    "AteFromFeeder": {
+      "NAME": "Поело из кормушки"
+    },
+    "Atmo_Suit": {
+      "NAME": "Атмокостюм"
+    },
+    "BasicBooster": {
+      "NAME": "Жевательные витаминки"
+    },
+    "BasicCure": {
+      "NAME": "Целебная таблетка"
+    },
+    "BasicFabric": {
+      "NAME": "Тростневиковое волокно"
+    },
+    "BasicFabricPlant": {
+      "NAME": "Тростневик"
+    },
+    "BasicForagePlant": {
+      "NAME": "Грязекорень"
+    },
+    "BasicForagePlantPlanted": {
+      "NAME": "Грязекорень в земле"
+    },
+    "BasicPlantBar": {
+      "NAME": "Пищевой брикет"
+    },
+    "BasicPlantFood": {
+      "NAME": "Пищевик"
+    },
+    "BasicRadPill": {
+      "NAME": "Обычная таблетка от радиации"
+    },
+    "BasicSingleHarvestPlant": {
+      "NAME": "Пищевое дерево"
+    },
+    "BasicSingleHarvestPlantOriginal": {
+      "NAME": "Пищевое дерево"
+    },
+    "BasicSingleHarvestPlantSeed": {
+      "NAME": "Семя пищевого дерева"
+    },
+    "BeanPlant": {
+      "NAME": "Закусочный росток"
+    },
+    "BeanPlantSeed": {
+      "NAME": "Закусочный боб."
+    },
+    "Bee": {
+      "NAME": "Бета"
+    },
+    "BeeBaby": {
+      "NAME": "Мелкобета"
+    },
+    "BeeHive": {
+      "NAME": "Улей бет"
+    },
+    "BeeHiveBaseTrait": {
+      "NAME": "Улей бет"
+    },
+    "BerryPie": {
+      "NAME": "Пирог из смеси ягод"
+    },
+    "BioluminescentRock": {
+      "NAME": "Биолюминесцентный камень"
+    },
+    "BleachStoneComet": {
+      "NAME": "Хлорный метеорит"
+    },
+    "Blender": {
+      "NAME": "Блендер"
+    },
+    "BlueGrass": {
+      "NAME": "Алвео вера"
+    },
+    "BlueGrassSeed": {
+      "NAME": "Семя алвео веры"
+    },
+    "BrickPhone": {
+      "NAME": "Странный кирпич"
+    },
+    "BulbPlant": {
+      "NAME": "Дружок"
+    },
+    "BulbPlantOriginal": {
+      "NAME": "Дружок"
+    },
+    "BulbPlantSeed": {
+      "NAME": "Семя дружка"
+    },
+    "Bulbloom": {
+      "NAME": "Бульцвет"
+    },
+    "BulbloomOriginal": {
+      "NAME": "Бульцвет"
+    },
+    "BulbloomSeed": {
+      "NAME": "Семя бульцвета"
+    },
+    "Burger": {
+      "NAME": "Ледяной бургер"
+    },
+    "Butterfly": {
+      "NAME": "Мимик"
+    },
+    "ButterflyFood": {
+      "NAME": "Поджаренный мимилет"
+    },
+    "ButterflyPlant": {
+      "NAME": "Бутон-мимик"
+    },
+    "ButterflyPlantOriginal": {
+      "NAME": "Бутон-мимик"
+    },
+    "ButterflyPlantSeed": {
+      "NAME": "Мимилет"
+    },
+    "CactusPlant": {
+      "NAME": "Прыгучая рада"
+    },
+    "CactusPlantOriginal": {
+      "NAME": "Прыгучая рада"
+    },
+    "CactusPlantSeed": {
+      "NAME": "Семя рады"
+    },
+    "CarePackage": {
+      "NAME": "Посылка"
+    },
+    "Carrot": {
+      "NAME": "Перьевая тыква"
+    },
+    "CarrotPlant": {
+      "NAME": "Перьевая тыква"
+    },
+    "CarrotPlantSeed": {
+      "NAME": "Семя перьевой тыквы"
+    },
+    "Caviar": {
+      "NAME": "Икра"
+    },
+    "Chameleon": {
+      "NAME": "Вжупаха"
+    },
+    "ChameleonBaby": {
+      "NAME": "Вжупашонок"
+    },
+    "ChameleonEgg": {
+      "NAME": "Яйцо вжупахи"
+    },
+    "ChlorineGeyser": {
+      "NAME": "Хлорный гейзер"
+    },
+    "Clam": {
+      "NAME": "Защимлюск"
+    },
+    "ClamSeed": {
+      "NAME": "Семя защимлюска"
+    },
+    "ClusterBiologicalShower": {
+      "NAME": "Слизистый метеоритный дождь"
+    },
+    "ClusterBleachStoneShower": {
+      "NAME": "Хлорный метеоритный дождь"
+    },
+    "ClusterCopperMeteor": {
+      "NAME": "Медный метеорит"
+    },
+    "ClusterCopperShower": {
+      "NAME": "Медный метеоритный дождь"
+    },
+    "ClusterGoldShower": {
+      "NAME": "Золотой метеоритный дождь"
+    },
+    "ClusterIceAndTreesShower": {
+      "NAME": "Ледяной нектарный метеоритный дождь"
+    },
+    "ClusterIceShower": {
+      "NAME": "Ледяной метеоритный дождь"
+    },
+    "ClusterIronMeteor": {
+      "NAME": "Железный метеорит"
+    },
+    "ClusterIronShower": {
+      "NAME": "Железный метеоритный дождь"
+    },
+    "ClusterLightRegolithShower": {
+      "NAME": "Мягкий пылевой метеоритный дождь"
+    },
+    "ClusterMapLongRangeMissile": {
+      "NAME": "Интракосмический снаряд"
+    },
+    "ClusterOxyliteShower": {
+      "NAME": "Кислолитовый метеоритный дождь"
+    },
+    "ClusterRegolithShower": {
+      "NAME": "Тяжелый пылевой метеоритный дождь"
+    },
+    "ClusterSnowShower": {
+      "NAME": "Метелистый метеоритный дождь"
+    },
+    "ClusterUraniumShower": {
+      "NAME": "Урановый метеоритный дождь"
+    },
+    "ClustercraftInteriorDoor": {
+      "NAME": "Внутренний люк"
+    },
+    "ColdBreather": {
+      "NAME": "Морозный кокон"
+    },
+    "ColdBreatherSeed": {
+      "NAME": "Морозное семя"
+    },
+    "ColdWheat": {
+      "NAME": "Морозная пшеница"
+    },
+    "ColdWheatBread": {
+      "NAME": "Ледяная булка"
+    },
+    "ColdWheatOriginal": {
+      "NAME": "Морозная пшеница"
+    },
+    "ColdWheatSeed": {
+      "NAME": "Зерно морозной пшеницы"
+    },
+    "CookedEgg": {
+      "NAME": "Омлет"
+    },
+    "CookedFish": {
+      "NAME": "Приготовленные морепродукты"
+    },
+    "CookedMeat": {
+      "NAME": "Барбекю"
+    },
+    "CookedPikeapple": {
+      "NAME": "Шиплоко на шампуре"
+    },
+    "CopperCometConfig": {
+      "NAME": "Медный метеорит"
+    },
+    "Crab": {
+      "NAME": "Крабушек"
+    },
+    "CrabBaby": {
+      "NAME": "Детеныш крабушка"
+    },
+    "CrabEgg": {
+      "NAME": "Икра крабушка"
+    },
+    "CrabFreshWater": {
+      "NAME": "Санитарный крабушек"
+    },
+    "CrabFreshWaterBaby": {
+      "NAME": "Детеныш санитарного крабушка"
+    },
+    "CrabFreshWaterEgg": {
+      "NAME": "Икра санитарного крабушка"
+    },
+    "CrabShell": {
+      "NAME": "Панцирь крабушка"
+    },
+    "CrabWood": {
+      "NAME": "Древесный крабушек"
+    },
+    "CrabWoodBaby": {
+      "NAME": "Детеныш древесного крабушка"
+    },
+    "CrabWoodEgg": {
+      "NAME": "Икра древесного крабушка"
+    },
+    "CrabWoodShell": {
+      "NAME": "Панцирь древесного крабушка"
+    },
+    "CritterManipulator": {
+      "NAME": "Керамический сглазик"
+    },
+    "CritterTrapPlant": {
+      "NAME": "Сатурновая существоловка"
+    },
+    "CritterTrapPlantOriginal": {
+      "NAME": "Сатурновая существоловка"
+    },
+    "CritterTrapPlantSeed": {
+      "NAME": "Семя сатурновой существоловки"
+    },
+    "CryoTank": {
+      "NAME": "Криокамера 3000"
+    },
+    "Curry": {
+      "NAME": "Карри с бобами"
+    },
+    "CustomClothing": {
+      "NAME": "Клевый прикид"
+    },
+    "Cylindrica": {
+      "NAME": "Вспышка блаженства"
+    },
+    "CylindricaOriginal": {
+      "NAME": "Вспышка блаженства"
+    },
+    "CylindricaSeed": {
+      "NAME": "Семя вспышки блаженства"
+    },
+    "DNAModel": {
+      "NAME": "Модель двойной спирали"
+    },
+    "DebrisPayload": {
+      "NAME": "Обломки ракеты"
+    },
+    "DeepFriedFish": {
+      "NAME": "Рыбное тако"
+    },
+    "DeepFriedMeat": {
+      "NAME": "Зажаренный стейк"
+    },
+    "DeepFriedNosh": {
+      "NAME": "Хрум-бобы"
+    },
+    "DeepFriedShellfish": {
+      "NAME": "Моллюск в кляре"
+    },
+    "DewDrip": {
+      "NAME": "Росинка"
+    },
+    "DewDripperPlant": {
+      "NAME": "Каплерос"
+    },
+    "DewDripperPlantOriginal": {
+      "NAME": "Каплерос"
+    },
+    "DewDripperPlantSeed": {
+      "NAME": "Семя-росинка"
+    },
+    "DewPalmOriginal": {
+      "NAME": "Резиновая пальма"
+    },
+    "DieselMoo": {
+      "NAME": "Кожурная му-му"
+    },
+    "DieselMooComet": {
+      "NAME": "Кожурный му-теор"
+    },
+    "DigPlacer": {
+      "NAME": "Копать"
+    },
+    "Dinofern": {
+      "NAME": "Мегавайя"
+    },
+    "DinofernSeed": {
+      "NAME": "Спора мегавайи"
+    },
+    "DinosaurMeat": {
+      "NAME": "Жесткое мясо"
+    },
+    "DisposableElectrobank_RawMetal": {
+      "NAME": "Металлический блок энергии"
+    },
+    "DisposableElectrobank_UraniumOre": {
+      "NAME": "Урановый блок энергии"
+    },
+    "DivergentBeetle": {
+      "NAME": "Сахажук"
+    },
+    "DivergentBeetleBaby": {
+      "NAME": "Личинка сахажука"
+    },
+    "DivergentBeetleEgg": {
+      "NAME": "Яйцо сахажука"
+    },
+    "DivergentWorm": {
+      "NAME": "Личинус"
+    },
+    "DivergentWormBaby": {
+      "NAME": "Червячок личинуса"
+    },
+    "DivergentWormEgg": {
+      "NAME": "Яйцо личинуса"
+    },
+    "Drecko": {
+      "NAME": "Дреккон"
+    },
+    "DreckoBaby": {
+      "NAME": "Детеныш дреккона"
+    },
+    "DreckoEgg": {
+      "NAME": "Яйцо дреккона"
+    },
+    "DreckoPlastic": {
+      "NAME": "Блестящий дреккон"
+    },
+    "DreckoPlasticBaby": {
+      "NAME": "Детеныш блестящего дреккона"
+    },
+    "DreckoPlasticEgg": {
+      "NAME": "Яйцо блестящего дреккона"
+    },
+    "DrySuit": {
+      "NAME": "Купальный костюм"
+    },
+    "DustComet": {
+      "NAME": "Пылевой метеорит"
+    },
+    "Edamame": {
+      "NAME": "Эдамамэ"
+    },
+    "EggRock": {
+      "NAME": "Камень в форме яйца"
+    },
+    "EggShell": {
+      "NAME": "Яичная скорлупа"
+    },
+    "Electrobank": {
+      "NAME": "Экоблок энергии"
+    },
+    "EmptyElectrobank": {
+      "NAME": "Пустой экоблок энергии"
+    },
+    "Enabled": {
+      "NAME": "Включено"
+    },
+    "EquippableBalloon": {
+      "NAME": "Шарик-дружок"
+    },
+    "EscapePod": {
+      "NAME": "Спасательная капсула"
+    },
+    "EvilFlower": {
+      "NAME": "Споровик"
+    },
+    "EvilFlowerOriginal": {
+      "NAME": "Споровик"
+    },
+    "EvilFlowerSeed": {
+      "NAME": "Семя споровика"
+    },
+    "FarmStationTools": {
+      "NAME": "Микроудобрение"
+    },
+    "FeatherFabric": {
+      "NAME": "Перьевое волокно"
+    },
+    "FernFood": {
+      "NAME": "Зерно мегавайи"
+    },
+    "FetchDrone": {
+      "NAME": "Помвзлет"
+    },
+    "FetchDroneBaseTrait": {
+      "NAME": "Помвзлет"
+    },
+    "FieldRation": {
+      "NAME": "Питательный батончик"
+    },
+    "FilamentPlant": {
+      "NAME": "Пито-пуф"
+    },
+    "FilterPlant": {
+      "NAME": "Водокачкус"
+    },
+    "FilterPlantSeed": {
+      "NAME": "Семя водокачкуса"
+    },
+    "FishFood": {
+      "NAME": "Лакомство для паку"
+    },
+    "FishMeat": {
+      "NAME": "Рыбное филе"
+    },
+    "FlyTrapPlant": {
+      "NAME": "Приман"
+    },
+    "FlyTrapPlantOriginal": {
+      "NAME": "Приман"
+    },
+    "FlyTrapPlantSeed": {
+      "NAME": "Семя примана"
+    },
+    "FoodComet": {
+      "NAME": "Бомба-перекус"
+    },
+    "FoodSplat": {
+      "NAME": "Кусочки еды"
+    },
+    "ForestForagePlant": {
+      "NAME": "Плод гексалента"
+    },
+    "ForestForagePlantPlanted": {
+      "NAME": "Гексалент"
+    },
+    "ForestTree": {
+      "NAME": "Ветведрево"
+    },
+    "ForestTreeBranch": {
+      "NAME": "Ветведрево"
+    },
+    "ForestTreeBranchOriginal": {
+      "NAME": "Ветведрево"
+    },
+    "ForestTreeOriginal": {
+      "NAME": "Ветведрево"
+    },
+    "ForestTreeSeed": {
+      "NAME": "Семя ветведрева"
+    },
+    "FossilBitsLarge": {
+      "NAME": "Фрагменты ископаемых"
+    },
+    "FossilBitsSmall": {
+      "NAME": "Фрагменты ископаемых"
+    },
+    "FossilHunt": {
+      "NAME": "Ошейник существа"
+    },
+    "FriedMushBar": {
+      "NAME": "Грязь во фритюре"
+    },
+    "FriedMushroom": {
+      "NAME": "Жареный гриб"
+    },
+    "FriesCarrot": {
+      "NAME": "Зажаренные тыквенные дольки"
+    },
+    "FruitCake": {
+      "NAME": "Ягодное пюре"
+    },
+    "FullereneComet": {
+      "NAME": "Фуллереновый метеорит"
+    },
+    "Funky_Vest": {
+      "NAME": "Шикарный костюм"
+    },
+    "GammaMush": {
+      "NAME": "Гамма-грязь"
+    },
+    "GarbageElectrobank": {
+      "NAME": "Нерабочий блок энергии"
+    },
+    "GardenDecorPlant": {
+      "NAME": "Кольцевая роза"
+    },
+    "GardenDecorPlantOriginal": {
+      "NAME": "Кольцевая роза"
+    },
+    "GardenDecorPlantSeed": {
+      "NAME": "Семя кольцевой розы"
+    },
+    "GardenFoodPlant": {
+      "NAME": "Стебель соленой кукурузы"
+    },
+    "GardenFoodPlantFood": {
+      "NAME": "Соленая кукуруза"
+    },
+    "GardenFoodPlantOriginal": {
+      "NAME": "Стебель соленой кукурузы"
+    },
+    "GardenFoodPlantSeed": {
+      "NAME": "Семя соленой кукурузы"
+    },
+    "GardenForagePlant": {
+      "NAME": "Плод хрумктуса"
+    },
+    "GardenForagePlantPlanted": {
+      "NAME": "Хрумктус"
+    },
+    "GasGrass": {
+      "NAME": "Газовая трава"
+    },
+    "GasGrassHarvested": {
+      "NAME": "Газовая трава"
+    },
+    "GasGrassOriginal": {
+      "NAME": "Газовая трава"
+    },
+    "GasGrassSeed": {
+      "NAME": "Семечко газовой травы"
+    },
+    "GassyMoo": {
+      "NAME": "Газовый му-теор"
+    },
+    "GassyMooteorEvent": {
+      "NAME": "Дождь из газовых му-теоров"
+    },
+    "GeneShuffler": {
+      "NAME": "Нейронный калибратор"
+    },
+    "GeneShufflerRecharge": {
+      "NAME": "Зарядка калибратора"
+    },
+    "GeothermalControllerEntity": {
+      "NAME": "Геотермальный тепловой насос"
+    },
+    "GeothermalPlant": {
+      "NAME": "Блестящий копролит"
+    },
+    "GeothermalVentEntity": {
+      "NAME": "Геоклапан"
+    },
+    "Geyser": {
+      "NAME": "Паровой гейзер"
+    },
+    "GingerConfig": {
+      "NAME": "Успокорень"
+    },
+    "GlassDeer": {
+      "NAME": "Осколочный лисень"
+    },
+    "GlassDeerBaby": {
+      "NAME": "Детеныш осколочного лисеня"
+    },
+    "GlassDeerEgg": {
+      "NAME": "Яйцо осколочного лисеня"
+    },
+    "Glom": {
+      "NAME": "Сглазик"
+    },
+    "GlomBaseTrait": {
+      "NAME": "Сглазик"
+    },
+    "GoldBelly": {
+      "NAME": "Королевский крольмонт"
+    },
+    "GoldBellyBaby": {
+      "NAME": "Королевский крольмонтенок"
+    },
+    "GoldBellyCrown": {
+      "NAME": "Рога королевского крольмонта"
+    },
+    "GoldBellyEgg": {
+      "NAME": "Яйцо королевского крольмонта"
+    },
+    "GoldComet": {
+      "NAME": "Золотой метеорит"
+    },
+    "GravitasBathroomMirror": {
+      "NAME": "Зеркало"
+    },
+    "GravitasBathroomSink": {
+      "NAME": "Эмалированная раковина"
+    },
+    "GravitasCeilingLight": {
+      "NAME": "Светильник"
+    },
+    "GravitasClockSquare": {
+      "NAME": "Часы"
+    },
+    "GravitasDesk": {
+      "NAME": "Рабочий стол биофизика"
+    },
+    "GravitasFlipPhone": {
+      "NAME": "Телефон-раскладушка"
+    },
+    "GravitasFridge": {
+      "NAME": "Мини-холодильник"
+    },
+    "GravitasPaperTowelDispenser": {
+      "NAME": "Диспенсер бумажных полотенец"
+    },
+    "GravitasPosterPlants": {
+      "NAME": "Настенная диаграмма"
+    },
+    "GravitasPosterSeed": {
+      "NAME": "Настенная диаграмма"
+    },
+    "GravitasPotPlantDead": {
+      "NAME": "Мертвое растение"
+    },
+    "GravitasToiletPaperHolder": {
+      "NAME": "Держатель для туалетной бумаги"
+    },
+    "GravitasTrashCan": {
+      "NAME": "Урна для мусора"
+    },
+    "GrilledPrickleFruit": {
+      "NAME": "Хрустящая иглоягода"
+    },
+    "GrubStatue": {
+      "NAME": "Статуя личинуса"
+    },
+    "HardIceComet": {
+      "NAME": "Ледяной метеорит"
+    },
+    "HardSkinBerry": {
+      "NAME": "Шиплоко"
+    },
+    "HardSkinBerryPlant": {
+      "NAME": "Шиплоневый куст"
+    },
+    "HardSkinBerryPlantOriginal": {
+      "NAME": "Шиплоневый куст"
+    },
+    "HardSkinBerryPlantSeed": {
+      "NAME": "Семя шиплоневого куста"
+    },
+    "Hatch": {
+      "NAME": "Копатель"
+    },
+    "HatchBaby": {
+      "NAME": "Детеныш копателя"
+    },
+    "HatchEgg": {
+      "NAME": "Яйцо копателя"
+    },
+    "HatchFossil": {
+      "NAME": "Древнее ископаемое"
+    },
+    "HatchHard": {
+      "NAME": "Каменный копатель"
+    },
+    "HatchHardBaby": {
+      "NAME": "Детеныш каменного копателя"
+    },
+    "HatchHardEgg": {
+      "NAME": "Яйцо каменного копателя"
+    },
+    "HatchMetal": {
+      "NAME": "Полированный копатель"
+    },
+    "HatchMetalBaby": {
+      "NAME": "Детеныш полированного копателя"
+    },
+    "HatchMetalEgg": {
+      "NAME": "Яйцо полированного копателя"
+    },
+    "HatchVeggie": {
+      "NAME": "Шалфейный копатель"
+    },
+    "HatchVeggieBaby": {
+      "NAME": "Детеныш шалфейного копателя"
+    },
+    "HatchVeggieEgg": {
+      "NAME": "Яйцо шалфейного копателя"
+    },
+    "HighEnergyParticle": {
+      "NAME": "Радболты"
+    },
+    "HijackHeadquarters": {
+      "NAME": "Фен для волос"
+    },
+    "HoneyJar": {
+      "NAME": "Банка меда"
+    },
+    "IceBelly": {
+      "NAME": "Крольмонт"
+    },
+    "IceBellyBaby": {
+      "NAME": "Крольмонтенок"
+    },
+    "IceBellyEgg": {
+      "NAME": "Яйцо крольмонта"
+    },
+    "IceBellyPoop": {
+      "NAME": "Лепешка крольмонта"
+    },
+    "IceCavesForagePlant": {
+      "NAME": "Льдягода"
+    },
+    "IceCavesForagePlantPlanted": {
+      "NAME": "Льдягодное растение"
+    },
+    "IceFlower": {
+      "NAME": "Цветок идиллы"
+    },
+    "IceFlowerOriginal": {
+      "NAME": "Цветок идиллы"
+    },
+    "IceFlowerSeed": {
+      "NAME": "Семя идиллы"
+    },
+    "InteractedWithAirborneCondo": {
+      "NAME": "Уют"
+    },
+    "InteractedWithCritterCondo": {
+      "NAME": "Уют"
+    },
+    "InteractedWithUnderwaterCondo": {
+      "NAME": "Уют"
+    },
+    "IntermediateBooster": {
+      "NAME": "Иммуннобустер"
+    },
+    "IntermediateCure": {
+      "NAME": "Аптечка"
+    },
+    "IntermediateRadPill": {
+      "NAME": "Улучшенная таблетка от радиации"
+    },
+    "IridiumComet": {
+      "NAME": "Иридиевый метеорит"
+    },
+    "IronComet": {
+      "NAME": "Железный метеорит"
+    },
+    "Jet_Suit": {
+      "NAME": "Реактивный костюм"
+    },
+    "Kelp": {
+      "NAME": "Лист водочески"
+    },
+    "KelpPlant": {
+      "NAME": "Водоческа"
+    },
+    "KelpPlantSeed": {
+      "NAME": "Семя водочески"
+    },
+    "LandingPod": {
+      "NAME": "Капсула для перемещения космонавтов"
+    },
+    "LargeImpactor": {
+      "NAME": "Стереоскоп"
+    },
+    "LargeImpactorComet": {
+      "NAME": "Каменный метеорит"
+    },
+    "Lead_Suit": {
+      "NAME": "Свинцовый костюм"
+    },
+    "LeafyPlant": {
+      "NAME": "Веселист"
+    },
+    "LeafyPlantOriginal": {
+      "NAME": "Веселист"
+    },
+    "LeafyPlantSeed": {
+      "NAME": "Семя веселиста"
+    },
+    "Lettuce": {
+      "NAME": "Салат"
+    },
+    "LightBug": {
+      "NAME": "Блестячок"
+    },
+    "LightBugBaby": {
+      "NAME": "Личинка блестячка"
+    },
+    "LightBugBlack": {
+      "NAME": "Блестячок бездны"
+    },
+    "LightBugBlackBaby": {
+      "NAME": "Личинка блестячка бездны"
+    },
+    "LightBugBlackEgg": {
+      "NAME": "Яйцо блестячка бездны"
+    },
+    "LightBugBlue": {
+      "NAME": "Лазурный блестячок"
+    },
+    "LightBugBlueBaby": {
+      "NAME": "Личинка лазурного блестячка"
+    },
+    "LightBugBlueEgg": {
+      "NAME": "Яйцо лазурного блестячка"
+    },
+    "LightBugCrystal": {
+      "NAME": "Сияющий блестячок"
+    },
+    "LightBugCrystalBaby": {
+      "NAME": "Личинка сияющего блестячка"
+    },
+    "LightBugCrystalEgg": {
+      "NAME": "Яйцо сияющего блестячка"
+    },
+    "LightBugEgg": {
+      "NAME": "Яйцо блестячка"
+    },
+    "LightBugOrange": {
+      "NAME": "Солнечный блестячок"
+    },
+    "LightBugOrangeBaby": {
+      "NAME": "Личинка солнечного блестячка"
+    },
+    "LightBugOrangeEgg": {
+      "NAME": "Яйцо солнечного блестячка"
+    },
+    "LightBugPink": {
+      "NAME": "Коралловый блестячок"
+    },
+    "LightBugPinkBaby": {
+      "NAME": "Личинка кораллового блестячка"
+    },
+    "LightBugPinkEgg": {
+      "NAME": "Яйцо кораллового блестячка"
+    },
+    "LightBugPurple": {
+      "NAME": "Королевский блестячок"
+    },
+    "LightBugPurpleBaby": {
+      "NAME": "Личинка королевского блестячка"
+    },
+    "LightBugPurpleEgg": {
+      "NAME": "Яйцо королевского блестячка"
+    },
+    "LightDustComet": {
+      "NAME": "Мягкий пылевой метеорит"
+    },
+    "LonelyMinion": {
+      "NAME": "Ржавый ящик инструментов"
+    },
+    "LubricationStick": {
+      "NAME": "Бальзам для шестерней"
+    },
+    "MachineParts": {
+      "NAME": "Детали на заказ"
+    },
+    "MagmaLamp": {
+      "NAME": "Магма-лампа"
+    },
+    "Maki": {
+      "NAME": "Ролл"
+    },
+    "MaximumAptitude": {
+      "NAME": "Пик продуктивности"
+    },
+    "Meat": {
+      "NAME": "Мясо"
+    },
+    "MegaBrain": {
+      "NAME": "Модель самолета"
+    },
+    "MeteorShowerDustEvent": {
+      "NAME": "Реголитовый метеоритный дождь"
+    },
+    "MethaneGeyser": {
+      "NAME": "Гейзер природного газа"
+    },
+    "MiniComet": {
+      "NAME": "Снаряд из мусора"
+    },
+    "MinnowImperativePOIA": {
+      "NAME": "Неизвестный дубликант"
+    },
+    "MinnowImperativePOIB": {
+      "NAME": "Неизвестный дубликант"
+    },
+    "MinnowImperativePOIC": {
+      "NAME": "Неизвестный дубликант"
+    },
+    "MissileBasic": {
+      "NAME": "Взрывной снаряд"
+    },
+    "MissileLongRange": {
+      "NAME": "Интракосмический снаряд"
+    },
+    "MissileSetLocker": {
+      "NAME": "Шкафчик со взрывчаткой"
+    },
+    "ModernArt": {
+      "NAME": "Современное искусство"
+    },
+    "Moldavite": {
+      "NAME": "Молдавит"
+    },
+    "Mole": {
+      "NAME": "Полевка-копалка"
+    },
+    "MoleBaby": {
+      "NAME": "Детеныш полевки"
+    },
+    "MoleDelicacy": {
+      "NAME": "Полевка-неженка"
+    },
+    "MoleDelicacyBaby": {
+      "NAME": "Детеныш полевки-неженки"
+    },
+    "MoleDelicacyEgg": {
+      "NAME": "Яйцо полевки-неженки"
+    },
+    "MoleEgg": {
+      "NAME": "Яйцо полевки-копалки"
+    },
+    "Moo": {
+      "NAME": "Газовая му-му"
+    },
+    "MoodRing": {
+      "NAME": "Кольцо радионастроения"
+    },
+    "Moonmoonmoon": {
+      "NAME": "Луналунылуны"
+    },
+    "MopPlacer": {
+      "NAME": "Вытереть"
+    },
+    "MorbRover": {
+      "NAME": "Биобот"
+    },
+    "MorbRoverMaker": {
+      "NAME": "Игрушечный робот"
+    },
+    "Mosquito": {
+      "NAME": "Гнит"
+    },
+    "MosquitoBaby": {
+      "NAME": "Личинка гнита"
+    },
+    "MosquitoEgg": {
+      "NAME": "Яйцо гнита"
+    },
+    "MovePickupablePlacer": {
+      "NAME": "Переместить сюда"
+    },
+    "MushBar": {
+      "NAME": "Грязевой батончик"
+    },
+    "Mushroom": {
+      "NAME": "Гриб"
+    },
+    "MushroomPlant": {
+      "NAME": "Сумерянка"
+    },
+    "MushroomPlantOriginal": {
+      "NAME": "Сумерянка"
+    },
+    "MushroomSeed": {
+      "NAME": "Грибные споры"
+    },
+    "MushroomWrap": {
+      "NAME": "Грибной ролл"
+    },
+    "MusselSprout": {
+      "NAME": "Капустрица"
+    },
+    "MusselTongue": {
+      "NAME": "Язык капустрицы"
+    },
+    "Nigiri": {
+      "NAME": "Нигири"
+    },
+    "Nori": {
+      "NAME": "Нори"
+    },
+    "NuclearWasteComet": {
+      "NAME": "Радиоактивный метеорит"
+    },
+    "Obelisk": {
+      "NAME": "Маленький обелиск"
+    },
+    "OfficeMug": {
+      "NAME": "Офисная кружка"
+    },
+    "OilWell": {
+      "NAME": "Месторождение нефти"
+    },
+    "Oilfloater": {
+      "NAME": "Скользец"
+    },
+    "OilfloaterBaby": {
+      "NAME": "Личинка скользеца"
+    },
+    "OilfloaterDecor": {
+      "NAME": "Длинношерстный скользец"
+    },
+    "OilfloaterDecorBaby": {
+      "NAME": "Личинка длинношерстного скользеца"
+    },
+    "OilfloaterDecorEgg": {
+      "NAME": "Яйцо длинношерстного скользца"
+    },
+    "OilfloaterEgg": {
+      "NAME": "Яйцо скользца"
+    },
+    "OilfloaterHighTemp": {
+      "NAME": "Расплавленный скользец"
+    },
+    "OilfloaterHighTempBaby": {
+      "NAME": "Личинка расплавленного скользеца"
+    },
+    "OilfloaterHighTempEgg": {
+      "NAME": "Яйцо расплавленного скользца"
+    },
+    "OkayXray": {
+      "NAME": "Старый рентгеновский снимок"
+    },
+    "Oracle": {
+      "NAME": "Бесполезное устройство"
+    },
+    "OrbitalResearchDatabank": {
+      "NAME": "Банк данных"
+    },
+    "OxyCoral": {
+      "NAME": "Воздуховодный коралл"
+    },
+    "OxyCoralOriginal": {
+      "NAME": "Воздуховодный коралл"
+    },
+    "OxyCoralSeed": {
+      "NAME": "Семя воздуховодного коралла"
+    },
+    "Oxyfern": {
+      "NAME": "Кислоротник"
+    },
+    "OxyfernOriginal": {
+      "NAME": "Кислоротник"
+    },
+    "OxyfernSeed": {
+      "NAME": "Семя кислоротника"
+    },
+    "Oxygen_Mask": {
+      "NAME": "Кислородная маска"
+    },
+    "OxyliteComet": {
+      "NAME": "Кислолитовый метеорит"
+    },
+    "POICeresTechUnlock": {
+      "NAME": "Исследовательский портал"
+    },
+    "POIDlc4TechUnlock": {
+      "NAME": "Исследовательский портал"
+    },
+    "POIDlc5TechUnlock": {
+      "NAME": "Исследовательский портал"
+    },
+    "Pacu": {
+      "NAME": "Паку"
+    },
+    "PacuBaby": {
+      "NAME": "Малек паку"
+    },
+    "PacuCleaner": {
+      "NAME": "Бульк-рыба"
+    },
+    "PacuCleanerBaby": {
+      "NAME": "Малек бульк-рыбы"
+    },
+    "PacuCleanerEgg": {
+      "NAME": "Яйцо бульк-рыбы"
+    },
+    "PacuEgg": {
+      "NAME": "Яйцо паку"
+    },
+    "PacuPercolator": {
+      "NAME": "Процеживатель"
+    },
+    "PacuTropical": {
+      "NAME": "Тропическая паку"
+    },
+    "PacuTropicalBaby": {
+      "NAME": "Малек тропической паку"
+    },
+    "PacuTropicalEgg": {
+      "NAME": "Яйцо тропической паку"
+    },
+    "Pancakes": {
+      "NAME": "Оладьи-суфле"
+    },
+    "ParrotFish": {
+      "NAME": "Маячок"
+    },
+    "ParrotFishBaby": {
+      "NAME": "Малек маячка"
+    },
+    "ParrotFishEgg": {
+      "NAME": "Икринка маячка"
+    },
+    "Pemmican": {
+      "NAME": "Пеммикан"
+    },
+    "PhosphoricComet": {
+      "NAME": "Фосфорный метеорит"
+    },
+    "PickledMeal": {
+      "NAME": "Замаринованная еда"
+    },
+    "PinkRock": {
+      "NAME": "Люменокварц"
+    },
+    "PinkRockCarved": {
+      "NAME": "Резной люменокварц"
+    },
+    "PioneerLander": {
+      "NAME": "Пионерский посадочный аппарат"
+    },
+    "PlanktonCoral": {
+      "NAME": "Звездафния"
+    },
+    "PlanktonCoralSeed": {
+      "NAME": "Семя звездафнии"
+    },
+    "PlantFiber": {
+      "NAME": "Кожура растений"
+    },
+    "PlantMeat": {
+      "NAME": "Растительное мясо"
+    },
+    "PlasmaLamp": {
+      "NAME": "Плазма-лампа"
+    },
+    "PlasticGasket": {
+      "NAME": "Пластмассовый уплотнитель"
+    },
+    "PowerStationTools": {
+      "NAME": "Микропроцессор"
+    },
+    "PrehistoricPacu": {
+      "NAME": "Челюла"
+    },
+    "PrehistoricPacuBaby": {
+      "NAME": "Малек челюлы"
+    },
+    "PrehistoricPacuEgg": {
+      "NAME": "Икринка челюлы"
+    },
+    "PrehistoricPacuFillet": {
+      "NAME": "Филе челюлы"
+    },
+    "PrickleFlower": {
+      "NAME": "Иглоцвет"
+    },
+    "PrickleFlowerOriginal": {
+      "NAME": "Иглоцвет"
+    },
+    "PrickleFlowerSeed": {
+      "NAME": "Семя иглоцвета"
+    },
+    "PrickleFruit": {
+      "NAME": "Иглоягода"
+    },
+    "PrickleGrass": {
+      "NAME": "Понтоцвет"
+    },
+    "PrickleGrassOriginal": {
+      "NAME": "Понтоцвет"
+    },
+    "PrickleGrassSeed": {
+      "NAME": "Семя понтоцвета"
+    },
+    "PropCeresPosterLarge": {
+      "NAME": "Акустическая панель с рисунком"
+    },
+    "PropClock": {
+      "NAME": "Часы"
+    },
+    "PropDesk": {
+      "NAME": "Компьютерной стол"
+    },
+    "PropDlc2Display1": {
+      "NAME": "Электронный дисплей"
+    },
+    "PropDlc2GeothermalCart": {
+      "NAME": "Тележка техобслуживания"
+    },
+    "PropElevator": {
+      "NAME": "Сломанный лифт"
+    },
+    "PropExoSetLocker": {
+      "NAME": "Внешний шкафчик"
+    },
+    "PropExoShelfLong": {
+      "NAME": "Длинная сборная полка"
+    },
+    "PropExoShelfShort": {
+      "NAME": "Сборная полка"
+    },
+    "PropFacilityChair": {
+      "NAME": "Кресло в вестибюле"
+    },
+    "PropFacilityChairFlip": {
+      "NAME": "Кресло в вестибюле"
+    },
+    "PropFacilityChandelier": {
+      "NAME": "Люстра"
+    },
+    "PropFacilityCouch": {
+      "NAME": "Диван в вестибюле"
+    },
+    "PropFacilityDesk": {
+      "NAME": "Стол директора"
+    },
+    "PropFacilityDisplay3": {
+      "NAME": "Электронный дисплей"
+    },
+    "PropFacilityGlobeDroors": {
+      "NAME": "Картотека"
+    },
+    "PropFacilityHangingLight": {
+      "NAME": "Светильник"
+    },
+    "PropFacilityPainting": {
+      "NAME": "Картина с пейзажем"
+    },
+    "PropFacilityStatue": {
+      "NAME": "Монумент Gravitas"
+    },
+    "PropFacilityTable": {
+      "NAME": "Кофейный столик"
+    },
+    "PropFacilityWallDegree": {
+      "NAME": "Докторская степень"
+    },
+    "PropGravitasCeilingRobot": {
+      "NAME": "Потолочный робот"
+    },
+    "PropGravitasCreaturePoster": {
+      "NAME": "Анатомический плакат"
+    },
+    "PropGravitasDecorativeWindow": {
+      "NAME": "Окно"
+    },
+    "PropGravitasDeskPodium": {
+      "NAME": "Компьютерная стойка"
+    },
+    "PropGravitasDeskPodiumDLC4": {
+      "NAME": "Компьютерная стойка"
+    },
+    "PropGravitasDeskPodiumGeothermalPlant": {
+      "NAME": "Компьютерная стойка"
+    },
+    "PropGravitasDisplay4": {
+      "NAME": "Электронный дисплей"
+    },
+    "PropGravitasFireExtinguisher": {
+      "NAME": "Сломанный огнетушитель"
+    },
+    "PropGravitasFirstAidKit": {
+      "NAME": "Аптечка"
+    },
+    "PropGravitasFloorRobot": {
+      "NAME": "Роботизированная рука"
+    },
+    "PropGravitasHandScanner": {
+      "NAME": "Сканер для рук"
+    },
+    "PropGravitasJar1": {
+      "NAME": "Сосуд с большим мозгом"
+    },
+    "PropGravitasJar2": {
+      "NAME": "Сосуд для образцов"
+    },
+    "PropGravitasLabTable": {
+      "NAME": "Лабораторный стол"
+    },
+    "PropGravitasRobitcTable": {
+      "NAME": "Рабочий стол робототехника"
+    },
+    "PropGravitasShelf": {
+      "NAME": "Полка"
+    },
+    "PropGravitasSmallSeedLocker": {
+      "NAME": "Настенный шкафчик"
+    },
+    "PropGravitasToolCrate": {
+      "NAME": "Ящик с инструментами"
+    },
+    "PropGravitasToolShelf": {
+      "NAME": "Доска для инструментов"
+    },
+    "PropHumanChesterfieldChair": {
+      "NAME": "Выставочное кресло"
+    },
+    "PropHumanChesterfieldSofa": {
+      "NAME": "Выставочный диван"
+    },
+    "PropHumanMurphyBed": {
+      "NAME": "Подъемная кровать"
+    },
+    "PropLadder": {
+      "NAME": "Лестница"
+    },
+    "PropLight": {
+      "NAME": "Светильник"
+    },
+    "PropReceptionDesk": {
+      "NAME": "Стойка рецепции"
+    },
+    "PropSkeleton": {
+      "NAME": "Модель скелета"
+    },
+    "PropSurfaceSatellite1": {
+      "NAME": "Разбившийся спутник"
+    },
+    "PropSurfaceSatellite2": {
+      "NAME": "Разбившийся спутник"
+    },
+    "PropSurfaceSatellite3": {
+      "NAME": "Разбившийся спутник"
+    },
+    "PropTable": {
+      "NAME": "Стол"
+    },
+    "PropTallPlant": {
+      "NAME": "Офисное растение"
+    },
+    "PufferFish": {
+      "NAME": "Раздувалтус"
+    },
+    "PufferFishBaby": {
+      "NAME": "Малек раздувалтуса"
+    },
+    "PufferFishEgg": {
+      "NAME": "Икринка раздувалтуса"
+    },
+    "Puft": {
+      "NAME": "Пуфф"
+    },
+    "PuftAlpha": {
+      "NAME": "Пуфф-принц"
+    },
+    "PuftAlphaBaby": {
+      "NAME": "Пуффик-принц"
+    },
+    "PuftAlphaEgg": {
+      "NAME": "Яйцо пуфф-принца"
+    },
+    "PuftBaby": {
+      "NAME": "Пуффик"
+    },
+    "PuftBleachstone": {
+      "NAME": "Скрипучий пуфф"
+    },
+    "PuftBleachstoneBaby": {
+      "NAME": "Скрипучий пуффик"
+    },
+    "PuftBleachstoneEgg": {
+      "NAME": "Яйцо скрипучего пуффа"
+    },
+    "PuftEgg": {
+      "NAME": "Яйцо пуффа"
+    },
+    "PuftOxylite": {
+      "NAME": "Панцирный пуфф"
+    },
+    "PuftOxyliteBaby": {
+      "NAME": "Панцирный пуффик"
+    },
+    "PuftOxyliteEgg": {
+      "NAME": "Яйцо панцирного пуффа"
+    },
+    "Quiche": {
+      "NAME": "Грибной киш"
+    },
+    "RailGunPayload": {
+      "NAME": "Межпланетный транспортировщик"
+    },
+    "RainbowEggRock": {
+      "NAME": "Камень в форме яйца"
+    },
+    "Raptor": {
+      "NAME": "Хрекс"
+    },
+    "RaptorBaby": {
+      "NAME": "Малыш-хрекс"
+    },
+    "RaptorEgg": {
+      "NAME": "Яйцо хрекса"
+    },
+    "RawEgg": {
+      "NAME": "Сырое яйцо"
+    },
+    "ReactorModel": {
+      "NAME": "Модель атомной электростанции"
+    },
+    "ResearchDatabank": {
+      "NAME": "Банк данных"
+    },
+    "RobotArm": {
+      "NAME": "Механическая рука"
+    },
+    "RockComet": {
+      "NAME": "Каменный метеорит"
+    },
+    "RockTornado": {
+      "NAME": "Камень в форме торнадо"
+    },
+    "RotPile": {
+      "NAME": "Куча гнили"
+    },
+    "RubberBoots": {
+      "NAME": "Резиновые сапоги"
+    },
+    "RubberGasket": {
+      "NAME": "Резиновый уплотнитель"
+    },
+    "RubiksCube": {
+      "NAME": "Кубик Рубика"
+    },
+    "Salsa": {
+      "NAME": "Фаршированная ягода"
+    },
+    "SaltPlant": {
+      "NAME": "Лоза-солевик"
+    },
+    "SaltPlantSeed": {
+      "NAME": "Семя лозы-солевика"
+    },
+    "SaltySticksFood": {
+      "NAME": "Соленая соломка"
+    },
+    "SaltySticksPlant": {
+      "NAME": "Натриевый тростник"
+    },
+    "SaltySticksPlantOriginal": {
+      "NAME": "Натриевый тростник"
+    },
+    "SaltySticksPlantSeed": {
+      "NAME": "Семя натриевого тростника"
+    },
+    "Sandstone": {
+      "NAME": "Песчаник"
+    },
+    "SapTree": {
+      "NAME": "Эксперимент 52B"
+    },
+    "SatelliteCometComet": {
+      "NAME": "Неработающий спутник"
+    },
+    "Saxophone": {
+      "NAME": "Покореженный саксофон"
+    },
+    "ScoutLander": {
+      "NAME": "Посадочный аппарат планетоходов"
+    },
+    "ScoutRover": {
+      "NAME": "Планетоход"
+    },
+    "SeaFairy": {
+      "NAME": "Ламинастик"
+    },
+    "SeaHorse": {
+      "NAME": "Блесконек"
+    },
+    "SeaHorseBaby": {
+      "NAME": "Малек блесконька"
+    },
+    "SeaHorseEgg": {
+      "NAME": "Яйцо блесконька"
+    },
+    "SeaLettuce": {
+      "NAME": "Водяной сорняк"
+    },
+    "SeaLettuceSeed": {
+      "NAME": "Семя водяного сорняка"
+    },
+    "SeaTree": {
+      "NAME": "Высокоросль"
+    },
+    "SeaTreeBranch": {
+      "NAME": "Высокоросль"
+    },
+    "SeaTreeBranchOriginal": {
+      "NAME": "Высокоросль"
+    },
+    "SeaTreeOriginal": {
+      "NAME": "Высокоросль"
+    },
+    "SeaTreeSeed": {
+      "NAME": "Семя высокоросли"
+    },
+    "SeaTurtle": {
+      "NAME": "Рудопаха"
+    },
+    "SeaTurtleBaby": {
+      "NAME": "Детеныш рудопахи"
+    },
+    "SeaTurtleEgg": {
+      "NAME": "Яйцо рудопахи"
+    },
+    "Seal": {
+      "NAME": "Рогатый тюлень"
+    },
+    "SealBaby": {
+      "NAME": "Рогатый тюлененок"
+    },
+    "SealEgg": {
+      "NAME": "Яйцо рогатого тюленя"
+    },
+    "SelfChargingElectrobank": {
+      "NAME": "Атомный блок энергии"
+    },
+    "SetLocker": {
+      "NAME": "Шкафчик"
+    },
+    "ShellfishMeat": {
+      "NAME": "Сырой моллюск"
+    },
+    "ShieldGenerator": {
+      "NAME": "Щитовой генератор"
+    },
+    "ShockWorm": {
+      "NAME": "Электрочервь"
+    },
+    "Sink": {
+      "NAME": "Раковина"
+    },
+    "SlimeComet": {
+      "NAME": "Слизистый метеорит"
+    },
+    "SmokedDinosaurMeat": {
+      "NAME": "Нежная грудинка"
+    },
+    "SmokedVegetables": {
+      "NAME": "Овощные котлетки"
+    },
+    "Snail": {
+      "NAME": "Грязелитка"
+    },
+    "SnailBaby": {
+      "NAME": "Маленькая грязелитка"
+    },
+    "SnailEgg": {
+      "NAME": "Яйцо грязелитки"
+    },
+    "SnailIron": {
+      "NAME": "Златулитка"
+    },
+    "SnailIronBaby": {
+      "NAME": "Маленькая златулитка"
+    },
+    "SnailIronEgg": {
+      "NAME": "Яйцо златулитки"
+    },
+    "SnailIronShell": {
+      "NAME": "Раковина златулитки"
+    },
+    "SnailShell": {
+      "NAME": "Раковина грязелитки"
+    },
+    "SnowballComet": {
+      "NAME": "Снежный метеорит"
+    },
+    "SolarSystem": {
+      "NAME": "Автономная система"
+    },
+    "SpaceTree": {
+      "NAME": "Конфетное дерево"
+    },
+    "SpaceTreeBranch": {
+      "NAME": "Конфетное дерево"
+    },
+    "SpaceTreeBranchOriginal": {
+      "NAME": "Конфетное дерево"
+    },
+    "SpaceTreeOriginal": {
+      "NAME": "Конфетное дерево"
+    },
+    "SpaceTreeSeed": {
+      "NAME": "Семя конфетного дерева"
+    },
+    "SpaceTreeSeedComet": {
+      "NAME": "Конфетный метеорит"
+    },
+    "SpiceBread": {
+      "NAME": "Перечный хлеб"
+    },
+    "SpiceNut": {
+      "NAME": "Колючий перцовый орех"
+    },
+    "SpiceVine": {
+      "NAME": "Колючий перцовый орешник"
+    },
+    "SpiceVineOriginal": {
+      "NAME": "Колючий перцовый орешник"
+    },
+    "SpiceVineSeed": {
+      "NAME": "Семя колючего перцового ореха"
+    },
+    "SpicyTofu": {
+      "NAME": "Острый тофу"
+    },
+    "Squid": {
+      "NAME": "Светокальмар"
+    },
+    "SquidBaby": {
+      "NAME": "Личинка светокальмара"
+    },
+    "SquidEgg": {
+      "NAME": "Яйцо светокальмара"
+    },
+    "SquidMeat": {
+      "NAME": "Щупальце"
+    },
+    "Squirrel": {
+      "NAME": "Цвирк"
+    },
+    "SquirrelBaby": {
+      "NAME": "Детеныш цвирка"
+    },
+    "SquirrelEgg": {
+      "NAME": "Яйцо цвирка"
+    },
+    "SquirrelHug": {
+      "NAME": "Ласковый цвирк"
+    },
+    "SquirrelHugBaby": {
+      "NAME": "Детеныш ласкового цвирка"
+    },
+    "SquirrelHugEgg": {
+      "NAME": "Яйцо ласкового цвирка"
+    },
+    "StarmapHexCellInventory": {
+      "NAME": "Доступные ресурсы"
+    },
+    "Staterpillar": {
+      "NAME": "Розеточный слизень"
+    },
+    "StaterpillarBaby": {
+      "NAME": "Детеныш розеточного слизня"
+    },
+    "StaterpillarEgg": {
+      "NAME": "Яйцо розеточного слизня"
+    },
+    "StaterpillarGas": {
+      "NAME": "Мглистый слизень"
+    },
+    "StaterpillarGasBaby": {
+      "NAME": "Детеныш мглистого слизня"
+    },
+    "StaterpillarGasEgg": {
+      "NAME": "Яйцо мглистого слизня"
+    },
+    "StaterpillarLiquid": {
+      "NAME": "Губчатый слизень"
+    },
+    "StaterpillarLiquidBaby": {
+      "NAME": "Губчатый слизень"
+    },
+    "StaterpillarLiquidEgg": {
+      "NAME": "Яйцо губчатого слизня"
+    },
+    "Stego": {
+      "NAME": "Древун"
+    },
+    "StegoBaby": {
+      "NAME": "Древунок"
+    },
+    "StegoEgg": {
+      "NAME": "Яйцо древуна"
+    },
+    "Stethoscope": {
+      "NAME": "Стетоскоп"
+    },
+    "StickerBomb": {
+      "NAME": "Стикер-атака"
+    },
+    "SuperWormPlant": {
+      "NAME": "Растение личинкокоса"
+    },
+    "SurfAndTurf": {
+      "NAME": "Жаркое"
+    },
+    "SwampDelights": {
+      "NAME": "Болотные вкусняшки"
+    },
+    "SwampForagePlant": {
+      "NAME": "Сердцевина болотного мангольда"
+    },
+    "SwampForagePlantPlanted": {
+      "NAME": "Болотный мангольд"
+    },
+    "SwampFruit": {
+      "NAME": "Желе болотника"
+    },
+    "SwampHarvestPlant": {
+      "NAME": "Болотник"
+    },
+    "SwampHarvestPlantSeed": {
+      "NAME": "Семя болотника"
+    },
+    "SwampLily": {
+      "NAME": "Бальзамилия"
+    },
+    "SwampLilyFlower": {
+      "NAME": "Цветок бальзамилии"
+    },
+    "SwampLilySeed": {
+      "NAME": "Семя бальзамилии"
+    },
+    "SweepBot": {
+      "NAME": "Подметашка"
+    },
+    "SweepBotBaseTrait": {
+      "NAME": "Подметашка"
+    },
+    "TableSalt": {
+      "NAME": "Столовая соль"
+    },
+    "TallowLubricationStick": {
+      "NAME": "Жирный бальзам для шестерней"
+    },
+    "TeaPot": {
+      "NAME": "Чайник в камне"
+    },
+    "ToePlant": {
+      "NAME": "Легкопальцы"
+    },
+    "ToePlantSeed": {
+      "NAME": "Семя легкопальцев"
+    },
+    "Tofu": {
+      "NAME": "Тофу"
+    },
+    "TubeWorm": {
+      "NAME": "Трубия"
+    },
+    "TubeWormSeed": {
+      "NAME": "Семя трубии"
+    },
+    "UnderwaterVent": {
+      "NAME": "Термальная газовая трещина"
+    },
+    "UraniumComet": {
+      "NAME": "Урановый метеорит"
+    },
+    "Urchin": {
+      "NAME": "Иглокол"
+    },
+    "UrchinMeat": {
+      "NAME": "Уни"
+    },
+    "UrchinPlant": {
+      "NAME": "Игольчатые колючки"
+    },
+    "UrchinPlantOriginal": {
+      "NAME": "Игольчатые колючки"
+    },
+    "UrchinPlantSeed": {
+      "NAME": "Семя игольчатой колючки"
+    },
+    "VHS": {
+      "NAME": "Древняя технология"
+    },
+    "VendingMachine": {
+      "NAME": "Автомат с едой"
+    },
+    "VineBranch": {
+      "NAME": "Лоза зарсли"
+    },
+    "VineBranchOriginal": {
+      "NAME": "Лоза зарсли"
+    },
+    "VineFruit": {
+      "NAME": "Зарслевая фига"
+    },
+    "VineMother": {
+      "NAME": "Пучок зарсли"
+    },
+    "VineMotherOriginal": {
+      "NAME": "Пучок зарсли"
+    },
+    "VineMotherSeed": {
+      "NAME": "Семя пучка зарсли"
+    },
+    "Warm_Vest": {
+      "NAME": "Теплое пальто"
+    },
+    "WarpPortal": {
+      "NAME": "Телепортный передатчик"
+    },
+    "WarpReceiver": {
+      "NAME": "Телепортный приемник"
+    },
+    "WaterCups": {
+      "NAME": "Нешумилии"
+    },
+    "WaterCupsOriginal": {
+      "NAME": "Нешумилии"
+    },
+    "WineCups": {
+      "NAME": "Мягкая мальва"
+    },
+    "WineCupsOriginal": {
+      "NAME": "Мягкая мальва"
+    },
+    "WineCupsSeed": {
+      "NAME": "Семя мальвы"
+    },
+    "WoodDeer": {
+      "NAME": "Лисень"
+    },
+    "WoodDeerBaby": {
+      "NAME": "Детеныш лисеня"
+    },
+    "WoodDeerEgg": {
+      "NAME": "Яйцо лисеня"
+    },
+    "WormBasicFood": {
+      "NAME": "Жареный орех личинкокоса"
+    },
+    "WormBasicFruit": {
+      "NAME": "Хилый личинкокос"
+    },
+    "WormPlant": {
+      "NAME": "Растение хилого личинкокоса"
+    },
+    "WormPlantSeed": {
+      "NAME": "Семя личинкокоса"
+    },
+    "WormSuperFood": {
+      "NAME": "Консервация из личинкокоса"
+    },
+    "WormSuperFruit": {
+      "NAME": "Личинкокос"
+    },
+    "artifact_ameliaswatch": {
+      "NAME": "Наручные часы"
+    },
+    "artifact_bioluminescentrock": {
+      "NAME": "Биолюминесцентный камень"
+    },
+    "artifact_blender": {
+      "NAME": "Блендер"
+    },
+    "artifact_brickphone": {
+      "NAME": "Странный кирпич"
+    },
+    "artifact_dnamodel": {
+      "NAME": "Модель двойной спирали"
+    },
+    "artifact_eggrock": {
+      "NAME": "Камень в форме яйца"
+    },
+    "artifact_grubstatue": {
+      "NAME": "Статуя личинуса"
+    },
+    "artifact_hatchfossil": {
+      "NAME": "Древнее ископаемое"
+    },
+    "artifact_honeyjar": {
+      "NAME": "Банка меда"
+    },
+    "artifact_magmalamp": {
+      "NAME": "Магма-лампа"
+    },
+    "artifact_modernart": {
+      "NAME": "Современное искусство"
+    },
+    "artifact_moldavite": {
+      "NAME": "Молдавит"
+    },
+    "artifact_moodring": {
+      "NAME": "Кольцо радионастроения"
+    },
+    "artifact_moonmoonmoon": {
+      "NAME": "Луналунылуны"
+    },
+    "artifact_obelisk": {
+      "NAME": "Маленький обелиск"
+    },
+    "artifact_officemug": {
+      "NAME": "Офисная кружка"
+    },
+    "artifact_okayxray": {
+      "NAME": "Старый рентгеновский снимок"
+    },
+    "artifact_oracle": {
+      "NAME": "Бесполезное устройство"
+    },
+    "artifact_pacupercolator": {
+      "NAME": "Процеживатель"
+    },
+    "artifact_plasmalamp": {
+      "NAME": "Плазма-лампа"
+    },
+    "artifact_rainboweggrock": {
+      "NAME": "Камень в форме яйца"
+    },
+    "artifact_reactormodel": {
+      "NAME": "Модель атомной электростанции"
+    },
+    "artifact_robotarm": {
+      "NAME": "Механическая рука"
+    },
+    "artifact_rocktornado": {
+      "NAME": "Камень в форме торнадо"
+    },
+    "artifact_rubikscube": {
+      "NAME": "Кубик Рубика"
+    },
+    "artifact_sandstone": {
+      "NAME": "Песчаник"
+    },
+    "artifact_saxophone": {
+      "NAME": "Покореженный саксофон"
+    },
+    "artifact_shieldgenerator": {
+      "NAME": "Щитовой генератор"
+    },
+    "artifact_sink": {
+      "NAME": "Раковина"
+    },
+    "artifact_solarsystem": {
+      "NAME": "Автономная система"
+    },
+    "artifact_stethoscope": {
+      "NAME": "Стетоскоп"
+    },
+    "artifact_teapot": {
+      "NAME": "Чайник в камне"
+    },
+    "artifact_vhs": {
+      "NAME": "Древняя технология"
+    },
+    "hide": {
+      "NAME": "Зарывается"
+    },
+    "idle_mound": {
+      "NAME": "Зарыто"
+    }
+  },
   "DIFFICULTY": {
     "ImmuneSystem": {
       "NAME": "Болезнь",

@@ -12,13 +12,19 @@ import {
   formatQuantity,
   MaterialGameObjectNames,
   elementDisplayName,
+  materialDisplayName,
   formatMass,
 } from "./materials";
-import { ELEMENTS as CATALOGUE } from "@/translations/en/oni.json";
+import {
+  ELEMENTS as CATALOGUE,
+  ITEMS as ITEMS_CATALOGUE,
+} from "@/translations/en/oni.json";
+import CATALOGUE_ROOT from "@/translations/en/oni.json";
 
-// The JSON resolves to a literal type with 212 named keys; the tests index it
-// by an element id computed at runtime.
+// The JSON resolves to a literal type with one key per entry; the tests index
+// both groups by an id computed at runtime.
 const ELEMENTS: Record<string, { NAME: string } | undefined> = CATALOGUE;
+const ITEMS: Record<string, { NAME: string } | undefined> = ITEMS_CATALOGUE;
 
 // The formatter records both the unit and the number, since the bug it fixes
 // was a plausible-looking number under the wrong unit.
@@ -450,5 +456,65 @@ describe("kindKey", () => {
     expect(kindKey("item", "OrbitalResearchDatabank")).toBe(
       "material.kind.item",
     );
+  });
+});
+
+describe("materialDisplayName", () => {
+  const name = (key: string, { defaultValue }: { defaultValue: string }) => {
+    const path = key.replace(/^oni:/, "").split(".");
+    const node = path.reduce<any>(
+      (at, part) => (at == null ? at : at[part]),
+      CATALOGUE_ROOT,
+    );
+    return typeof node === "string" ? node : defaultValue;
+  };
+
+  it("uses the game's own name for an element", () => {
+    expect(materialDisplayName("SaltWater", "element", name)).toBe(
+      "Salt Water",
+    );
+  });
+
+  // The whole reason ITEMS exists. Splitting the id gave "Garden Forage Plant"
+  // for something the game calls Snac Fruit, and "Garden Food Plant Food" for
+  // Sweatcorn - not near misses, different words.
+  it("uses the game's own name for a non-element", () => {
+    expect(materialDisplayName("GardenForagePlant", "food", name)).toBe(
+      "Snac Fruit",
+    );
+    expect(materialDisplayName("GardenFoodPlantFood", "food", name)).toBe(
+      "Sweatcorn",
+    );
+    expect(materialDisplayName("GardenDecorPlantSeed", "seed", name)).toBe(
+      "Rosebush Seed",
+    );
+    expect(materialDisplayName("ChameleonEgg", "egg", name)).toBe("Dartle Egg");
+  });
+
+  it("splits an id it has no name for, underscores included", () => {
+    expect(materialDisplayName("ModdedSnack_Deluxe", "item", name)).toBe(
+      "Modded Snack Deluxe",
+    );
+  });
+
+  // Every material a real colony held, so a regression in the extraction shows
+  // up here rather than on the page.
+  it("names every material two real colonies contained", () => {
+    const seen = [
+      "GardenForagePlant",
+      "GardenFoodPlantFood",
+      "GardenDecorPlantSeed",
+      "GardenFoodPlantSeed",
+      "SeaLettuceSeed",
+      "ChameleonEgg",
+      "Atmo_Suit",
+      "OrbitalResearchDatabank",
+      "EggShell",
+      "FarmStationTools",
+      "artifact_blender",
+    ];
+    for (const id of seen) {
+      expect(ITEMS[id]).toBeDefined();
+    }
   });
 });
