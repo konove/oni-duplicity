@@ -1,4 +1,15 @@
-import { formatMass } from "./materials";
+import { SimHashNames } from "oni-save-parser";
+
+import {
+  MaterialGameObjectNames,
+  elementDisplayName,
+  formatMass,
+} from "./materials";
+import { ELEMENTS as CATALOGUE } from "@/translations/en/oni.json";
+
+// The JSON resolves to a literal type with 212 named keys; the tests index it
+// by an element id computed at runtime.
+const ELEMENTS: Record<string, { NAME: string } | undefined> = CATALOGUE;
 
 // The formatter records both the unit and the number, since the bug it fixes
 // was a plausible-looking number under the wrong unit.
@@ -44,5 +55,54 @@ describe("formatMass", () => {
 
   it("handles negative masses without changing unit choice", () => {
     expect(formatMass(-6000, t)).toBe("material.tonne:-6");
+  });
+});
+
+// The Materials page can only show a material the parser can name. When the
+// enum knew 149 of the game's 212 elements, everything else was absent from the
+// table rather than reported as unknown - 285.4 t on one real colony, most of it
+// shale. These guard the two halves of that: the ids, and their names.
+describe("MaterialGameObjectNames", () => {
+  it("covers every element the parser knows", () => {
+    expect(MaterialGameObjectNames).toHaveLength(SimHashNames.length);
+  });
+
+  // Measured missing from a real colony: Shale 197.4 t, NickelOre 44.1 t,
+  // Peat 43.9 t. Named individually so a regression says what went missing.
+  it.each(["Shale", "NickelOre", "Peat"])("lists %s", (element) => {
+    expect(MaterialGameObjectNames).toContain(element);
+  });
+
+  it("lists the elements the later DLCs added", () => {
+    expect(MaterialGameObjectNames).toEqual(
+      expect.arrayContaining(["MoltenCobalt", "MurkyBrine", "Iridium", "Zinc"]),
+    );
+  });
+});
+
+describe("elementDisplayName", () => {
+  const named = (key: string, { defaultValue }: { defaultValue: string }) => {
+    const element = key.replace(/^oni:ELEMENTS\.|\.NAME$/g, "");
+    return ELEMENTS[element]?.NAME ?? defaultValue;
+  };
+
+  it("uses the game's own name", () => {
+    expect(elementDisplayName("NickelOre", named)).toBe("Nickel Ore");
+    expect(elementDisplayName("MurkyBrine", named)).toBe("Polluted Brine");
+  });
+
+  // Re-pinning the parser forward without re-running extract-translations.py
+  // would put ids back on the page. This is the test that says so.
+  it("has a catalogue name for every element the parser knows", () => {
+    const unnamed = SimHashNames.filter((element) => !ELEMENTS[element]);
+    expect(unnamed).toEqual([]);
+  });
+
+  // Only reachable if the catalogue falls behind the enum, which the test above
+  // exists to prevent - but an id split into words still beats a raw id.
+  it("splits an id it has no name for", () => {
+    expect(elementDisplayName("MoltenUnobtainium", named)).toBe(
+      "Molten Unobtainium",
+    );
   });
 });

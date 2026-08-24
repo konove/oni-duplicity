@@ -120,3 +120,37 @@ duplicant.
 Effects from the assembly are kept only if they have a name in the game's
 player-facing MODIFIERS strings, which is what filters the critter ones out.
 Ten duplicant effects have no such name and fall back to their id.
+
+## extract-sim-hashes.py
+
+Regenerates `src/save-structure/const-data/template-enumerations/sim-hashes.ts`
+in the **parser fork**, not in this repo.
+
+`SimHashes` is the parser's element identity: a `PrimaryElement` names its
+element by hash, and one the enum does not know cannot be named, so it is absent
+from the Materials page rather than reported as unknown. The enum listed 149 of
+the game's 212 entries; on one real colony that hid 285.4 t of material.
+
+This is the one extractor that needs **no decompiler**. The game ships its
+element list as plain YAML under
+`OxygenNotIncluded_Data/StreamingAssets/elements/`, and Klei generates the C#
+enum from it - the giveaway is the comment beside the list's last entry, `-
+elementId: COMPOSITION #this is just here so it is added to the simhashes.cs
+file!`. So COMPOSITION is not an element; it is mirrored anyway, because the
+enum's job is to name whatever a save may contain.
+
+```sh
+python extract-sim-hashes.py            # writes ./sim-hashes.ts (git-ignored)
+```
+
+Values are `Hash.SDBMLower(elementId)`, which was verified three ways before the
+script was trusted to generate anything: every value in the decompiled enum
+equals the hash of its own name, so does every value the parser already had, and
+the YAML ids reproduce the decompiled enum name for name. The script refuses to
+write if a name the parser already knew would change value - a wrong hash
+mis-identifies material rather than omitting it, which is worse.
+
+Then the fork round trip: copy the file over, `npm run build` there, commit,
+push, re-pin the sha in this repo's `package.json`, and **re-run
+`extract-translations.py` for en, ru, ko and zh** - it reads the element ids
+from the installed parser, so new elements have no display name until it does.

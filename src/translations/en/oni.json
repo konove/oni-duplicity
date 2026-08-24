@@ -1463,20 +1463,38 @@
     "SulfurGas": {
       "NAME": "Sulfur Gas"
     },
+    "Latex": {
+      "NAME": "Latex"
+    },
     "Diamond": {
       "NAME": "Diamond"
     },
     "Aerogel": {
       "NAME": "Aerogel"
     },
+    "MurkyBrine": {
+      "NAME": "Polluted Brine"
+    },
     "Isoresin": {
       "NAME": "Isosap"
+    },
+    "ZincGas": {
+      "NAME": "Zinc Gas"
+    },
+    "Sucrose": {
+      "NAME": "Sucrose"
     },
     "SaltGas": {
       "NAME": "Salt Gas"
     },
     "LiquidHelium": {
       "NAME": "Helium"
+    },
+    "Peat": {
+      "NAME": "Peat"
+    },
+    "ZincOre": {
+      "NAME": "Zinc Ore"
     },
     "LiquidOxygen": {
       "NAME": "Liquid Oxygen"
@@ -1490,8 +1508,17 @@
     "Propane": {
       "NAME": "Propane Gas"
     },
+    "MilkFat": {
+      "NAME": "Brackwax"
+    },
     "Niobium": {
       "NAME": "Niobium"
+    },
+    "Nickel": {
+      "NAME": "Nickel"
+    },
+    "MilkIce": {
+      "NAME": "Frozen Brackene"
     },
     "Cuprite": {
       "NAME": "Copper Ore"
@@ -1505,11 +1532,23 @@
     "SuperInsulator": {
       "NAME": "Insulite"
     },
+    "Shale": {
+      "NAME": "Shale"
+    },
+    "Corallium": {
+      "NAME": "Corallium"
+    },
     "ViscoGel": {
       "NAME": "Visco-Gel Fluid"
     },
+    "PalmWood": {
+      "NAME": "Gum Wood"
+    },
     "MoltenAluminum": {
       "NAME": "Molten Aluminum"
+    },
+    "Tallow": {
+      "NAME": "Tallow"
     },
     "Yellowcake": {
       "NAME": "Yellowcake"
@@ -1541,8 +1580,14 @@
     "Void": {
       "NAME": "Void"
     },
+    "CobaltGas": {
+      "NAME": "Cobalt Gas"
+    },
     "CrudeOil": {
       "NAME": "Crude Oil"
+    },
+    "Cobaltite": {
+      "NAME": "Cobalt Ore"
     },
     "SteelGas": {
       "NAME": "Steel Gas"
@@ -1559,6 +1604,9 @@
     "SolidCrudeOil": {
       "NAME": "Solid Crude Oil"
     },
+    "MoltenIridium": {
+      "NAME": "Molten Iridium"
+    },
     "Wolframite": {
       "NAME": "Wolframite"
     },
@@ -1567,6 +1615,12 @@
     },
     "Polypropylene": {
       "NAME": "Plastic"
+    },
+    "Amber": {
+      "NAME": "Amber"
+    },
+    "RefinedLipid": {
+      "NAME": "Biodiesel"
     },
     "SolidNaphtha": {
       "NAME": "Solid Naphtha"
@@ -1588,6 +1642,9 @@
     },
     "SandCement": {
       "NAME": "Sand Cement"
+    },
+    "COMPOSITION": {
+      "NAME": "Composition"
     },
     "SourGas": {
       "NAME": "Sour Gas"
@@ -1631,11 +1688,17 @@
     "LiquidHydrogen": {
       "NAME": "Liquid Hydrogen"
     },
+    "Resin": {
+      "NAME": "Sap"
+    },
     "Sulfur": {
       "NAME": "Sulfur"
     },
     "Lime": {
       "NAME": "Lime"
+    },
+    "LiquidGunk": {
+      "NAME": "Gunk"
     },
     "SolidSyngas": {
       "NAME": "Solid Synthesis Gas"
@@ -1646,11 +1709,20 @@
     "LiquidPropane": {
       "NAME": "Liquid Propane"
     },
+    "SolidMucus": {
+      "NAME": "Frozen Mucin"
+    },
     "SolidMercury": {
       "NAME": "Mercury"
     },
     "MoltenTungsten": {
       "NAME": "Molten Tungsten"
+    },
+    "SolidNuclearWaste": {
+      "NAME": "Solid Nuclear Waste"
+    },
+    "Coquina": {
+      "NAME": "Coquina"
     },
     "Petroleum": {
       "NAME": "Petroleum"
@@ -1673,8 +1745,17 @@
     "IgneousRock": {
       "NAME": "Igneous Rock"
     },
+    "Rubber": {
+      "NAME": "Rubber"
+    },
     "EnrichedUranium": {
       "NAME": "Enriched Uranium"
+    },
+    "MoltenCobalt": {
+      "NAME": "Molten Cobalt"
+    },
+    "SiltStone": {
+      "NAME": "Siltstone"
     },
     "Brick": {
       "NAME": "Brick"
@@ -1694,8 +1775,20 @@
     "NuclearWaste": {
       "NAME": "Liquid Nuclear Waste"
     },
+    "Gunk": {
+      "NAME": "Solid Gunk"
+    },
+    "FrozenPhytoOil": {
+      "NAME": "Frozen Phyto Oil"
+    },
+    "Corium": {
+      "NAME": "Corium"
+    },
     "Phosphorus": {
       "NAME": "Refined Phosphorus"
+    },
+    "Iridium": {
+      "NAME": "Iridium"
     },
     "SuperCoolant": {
       "NAME": "Super Coolant"
@@ -1709,17 +1802,29 @@
     "Radium": {
       "NAME": "Radium"
     },
+    "PhytoOil": {
+      "NAME": "Phyto Oil"
+    },
     "SuperCoolantGas": {
       "NAME": "Super Coolant Gas"
     },
+    "WoodLog": {
+      "NAME": "Wood"
+    },
     "Electrum": {
       "NAME": "Electrum"
+    },
+    "Milk": {
+      "NAME": "Brackene"
     },
     "SolidCarbonDioxide": {
       "NAME": "Solid Carbon Dioxide"
     },
     "AluminumGas": {
       "NAME": "Aluminum Gas"
+    },
+    "Cobalt": {
+      "NAME": "Cobalt"
     },
     "CarbonFibre": {
       "NAME": "Carbon Fiber"
@@ -1769,14 +1874,23 @@
     "Glass": {
       "NAME": "Glass"
     },
+    "FrozenInk": {
+      "NAME": "Frozen Squid Ink"
+    },
     "MoltenSyngas": {
       "NAME": "Molten Synthesis Gas"
+    },
+    "FabricatedWood": {
+      "NAME": "Plywood"
     },
     "ContaminatedOxygen": {
       "NAME": "Polluted Oxygen"
     },
     "Vacuum": {
       "NAME": "Vacuum"
+    },
+    "MoltenZinc": {
+      "NAME": "Molten Zinc"
     },
     "Clay": {
       "NAME": "Clay"
@@ -1787,8 +1901,23 @@
     "Ice": {
       "NAME": "Ice"
     },
+    "Ink": {
+      "NAME": "Squid Ink"
+    },
+    "SugarWater": {
+      "NAME": "Nectar"
+    },
+    "Graphite": {
+      "NAME": "Graphite"
+    },
+    "ToxicMud": {
+      "NAME": "Polluted Mud"
+    },
     "LeadGas": {
       "NAME": "Lead Gas"
+    },
+    "Mud": {
+      "NAME": "Mud"
     },
     "Carbon": {
       "NAME": "Coal"
@@ -1799,6 +1928,9 @@
     "Creature": {
       "NAME": "Genetic Ooze"
     },
+    "Fallout": {
+      "NAME": "Nuclear Fallout"
+    },
     "DepletedUranium": {
       "NAME": "Depleted Uranium"
     },
@@ -1808,11 +1940,26 @@
     "Syngas": {
       "NAME": "Synthesis Gas"
     },
+    "Pearl": {
+      "NAME": "Pearl"
+    },
     "Naphtha": {
       "NAME": "Liquid Naphtha"
     },
     "SolidMethane": {
       "NAME": "Solid Methane"
+    },
+    "FishMilkIce": {
+      "NAME": "Frozen Ovolene"
+    },
+    "HardPolypropylene": {
+      "NAME": "Plastium"
+    },
+    "NaturalResin": {
+      "NAME": "Resin"
+    },
+    "NaturalSolidResin": {
+      "NAME": "Solid Resin"
     },
     "OxyRock": {
       "NAME": "Oxylite"
@@ -1820,14 +1967,32 @@
     "MaficRock": {
       "NAME": "Mafic Rock"
     },
+    "MurkyBrineIce": {
+      "NAME": "Polluted Brine Ice"
+    },
     "Iron": {
       "NAME": "Iron"
+    },
+    "MoltenSucrose": {
+      "NAME": "Liquid Sucrose"
+    },
+    "NickelGas": {
+      "NAME": "Nickel Gas"
     },
     "LiquidPhosphorus": {
       "NAME": "Liquid Phosphorus"
     },
+    "Basalt": {
+      "NAME": "Basalt"
+    },
     "Regolith": {
       "NAME": "Regolith"
+    },
+    "SolidResin": {
+      "NAME": "Solid Sap"
+    },
+    "NickelOre": {
+      "NAME": "Nickel Ore"
     },
     "Slabs": {
       "NAME": "Building Slab"
@@ -1844,17 +2009,29 @@
     "IronGas": {
       "NAME": "Iron Gas"
     },
+    "StableSnow": {
+      "NAME": "Packed Snow"
+    },
     "TempConductorSolid": {
       "NAME": "Thermium"
     },
     "IronOre": {
       "NAME": "Iron Ore"
     },
+    "Zinc": {
+      "NAME": "Zinc"
+    },
+    "Mucus": {
+      "NAME": "Mucin"
+    },
     "Dirt": {
       "NAME": "Dirt"
     },
     "Cement": {
       "NAME": "Cement"
+    },
+    "FishMilk": {
+      "NAME": "Ovolene"
     },
     "DirtyIce": {
       "NAME": "Polluted Ice"
@@ -1877,6 +2054,12 @@
     "Unobtanium": {
       "NAME": "Neutronium"
     },
+    "IridiumGas": {
+      "NAME": "Iridium Gas"
+    },
+    "Cinnabar": {
+      "NAME": "Cinnabar Ore"
+    },
     "PhosphorusGas": {
       "NAME": "Phosphorus Gas"
     },
@@ -1897,6 +2080,12 @@
     },
     "FoolsGold": {
       "NAME": "Pyrite"
+    },
+    "Galena": {
+      "NAME": "Galena"
+    },
+    "MoltenNickel": {
+      "NAME": "Molten Nickel"
     },
     "Aluminum": {
       "NAME": "Aluminum"

@@ -1224,20 +1224,38 @@
     "SulfurGas": {
       "NAME": "Газообразная сера"
     },
+    "Latex": {
+      "NAME": "Латекс"
+    },
     "Diamond": {
       "NAME": "Алмаз"
     },
     "Aerogel": {
       "NAME": "Аэрогель"
     },
+    "MurkyBrine": {
+      "NAME": "Загрязненная рапа"
+    },
     "Isoresin": {
       "NAME": "Изосмола"
+    },
+    "ZincGas": {
+      "NAME": "Газообразный цинк"
+    },
+    "Sucrose": {
+      "NAME": "Сахароза"
     },
     "SaltGas": {
       "NAME": "Соленый газ"
     },
     "LiquidHelium": {
       "NAME": "Гелий"
+    },
+    "Peat": {
+      "NAME": "Торф"
+    },
+    "ZincOre": {
+      "NAME": "Цинковая руда"
     },
     "LiquidOxygen": {
       "NAME": "Жидкий кислород"
@@ -1251,8 +1269,17 @@
     "Propane": {
       "NAME": "Газообразный пропан"
     },
+    "MilkFat": {
+      "NAME": "Бракеновый воск"
+    },
     "Niobium": {
       "NAME": "Ниобий"
+    },
+    "Nickel": {
+      "NAME": "Никель"
+    },
+    "MilkIce": {
+      "NAME": "Замерзший бракен"
     },
     "Cuprite": {
       "NAME": "Медная руда"
@@ -1266,11 +1293,23 @@
     "SuperInsulator": {
       "NAME": "Теплоизолит"
     },
+    "Shale": {
+      "NAME": "Глинистый сланец"
+    },
+    "Corallium": {
+      "NAME": "Коралл"
+    },
     "ViscoGel": {
       "NAME": "Жидкий вискогель"
     },
+    "PalmWood": {
+      "NAME": "Дререзина"
+    },
     "MoltenAluminum": {
       "NAME": "Расплавленный алюминий"
+    },
+    "Tallow": {
+      "NAME": "Жир"
     },
     "Yellowcake": {
       "NAME": "Урановый концентрат"
@@ -1302,8 +1341,14 @@
     "Void": {
       "NAME": "Пустота"
     },
+    "CobaltGas": {
+      "NAME": "Газообразный кобальт"
+    },
     "CrudeOil": {
       "NAME": "Неочищенная нефть"
+    },
+    "Cobaltite": {
+      "NAME": "Кобальтовая руда"
     },
     "SteelGas": {
       "NAME": "Газообразная сталь"
@@ -1320,6 +1365,9 @@
     "SolidCrudeOil": {
       "NAME": "Твердая неочищенная нефть"
     },
+    "MoltenIridium": {
+      "NAME": "Расплавленный иридий"
+    },
     "Wolframite": {
       "NAME": "Вольфрамит"
     },
@@ -1328,6 +1376,12 @@
     },
     "Polypropylene": {
       "NAME": "Пластмасса"
+    },
+    "Amber": {
+      "NAME": "Янтарь"
+    },
+    "RefinedLipid": {
+      "NAME": "Биодизель"
     },
     "SolidNaphtha": {
       "NAME": "Твердый лигроин"
@@ -1349,6 +1403,9 @@
     },
     "SandCement": {
       "NAME": "Песчаный цемент"
+    },
+    "COMPOSITION": {
+      "NAME": "Соединение"
     },
     "SourGas": {
       "NAME": "Серосодержащий газ"
@@ -1392,11 +1449,17 @@
     "LiquidHydrogen": {
       "NAME": "Жидкий водород"
     },
+    "Resin": {
+      "NAME": "Древесный сок"
+    },
     "Sulfur": {
       "NAME": "Сера"
     },
     "Lime": {
       "NAME": "Известь"
+    },
+    "LiquidGunk": {
+      "NAME": "Отходы"
     },
     "SolidSyngas": {
       "NAME": "Десублимированный синтез-газ"
@@ -1407,11 +1470,20 @@
     "LiquidPropane": {
       "NAME": "Жидкий пропан"
     },
+    "SolidMucus": {
+      "NAME": "Замерзший муцин"
+    },
     "SolidMercury": {
       "NAME": "Ртуть"
     },
     "MoltenTungsten": {
       "NAME": "Расплавленный вольфрам"
+    },
+    "SolidNuclearWaste": {
+      "NAME": "Твердые ядерные отходы"
+    },
+    "Coquina": {
+      "NAME": "Известняк"
     },
     "Petroleum": {
       "NAME": "Нефть"
@@ -1434,8 +1506,17 @@
     "IgneousRock": {
       "NAME": "Магматическая порода"
     },
+    "Rubber": {
+      "NAME": "Резина"
+    },
     "EnrichedUranium": {
       "NAME": "Обогащенный уран"
+    },
+    "MoltenCobalt": {
+      "NAME": "Расплавленный кобальт"
+    },
+    "SiltStone": {
+      "NAME": "Алевролит"
     },
     "Brick": {
       "NAME": "Кирпич"
@@ -1455,8 +1536,20 @@
     "NuclearWaste": {
       "NAME": "Жидкие ядерные отходы"
     },
+    "Gunk": {
+      "NAME": "Твердые отходы"
+    },
+    "FrozenPhytoOil": {
+      "NAME": "Замерзшее фитомасло"
+    },
+    "Corium": {
+      "NAME": "Кориум"
+    },
     "Phosphorus": {
       "NAME": "Обработанный фосфор"
+    },
+    "Iridium": {
+      "NAME": "Иридий"
     },
     "SuperCoolant": {
       "NAME": "Суперхладагент"
@@ -1470,17 +1563,29 @@
     "Radium": {
       "NAME": "Радий"
     },
+    "PhytoOil": {
+      "NAME": "Фитомасло"
+    },
     "SuperCoolantGas": {
       "NAME": "Газообразный суперхладагент"
     },
+    "WoodLog": {
+      "NAME": "Древесина"
+    },
     "Electrum": {
       "NAME": "Электрум"
+    },
+    "Milk": {
+      "NAME": "Бракен"
     },
     "SolidCarbonDioxide": {
       "NAME": "Твердый углекислый газ"
     },
     "AluminumGas": {
       "NAME": "Газообразный алюминий"
+    },
+    "Cobalt": {
+      "NAME": "Кобальт"
     },
     "CarbonFibre": {
       "NAME": "Углеткань"
@@ -1530,14 +1635,23 @@
     "Glass": {
       "NAME": "Стекло"
     },
+    "FrozenInk": {
+      "NAME": "Замерзшие чернила кальмара"
+    },
     "MoltenSyngas": {
       "NAME": "Конденсированный синтез-газ"
+    },
+    "FabricatedWood": {
+      "NAME": "Фанера"
     },
     "ContaminatedOxygen": {
       "NAME": "Загрязненный кислород"
     },
     "Vacuum": {
       "NAME": "Вакуум"
+    },
+    "MoltenZinc": {
+      "NAME": "Расплавленный цинк"
     },
     "Clay": {
       "NAME": "Глина"
@@ -1548,8 +1662,23 @@
     "Ice": {
       "NAME": "Лед"
     },
+    "Ink": {
+      "NAME": "Чернила кальмара"
+    },
+    "SugarWater": {
+      "NAME": "Нектар"
+    },
+    "Graphite": {
+      "NAME": "Графит"
+    },
+    "ToxicMud": {
+      "NAME": "Загрязненная жижа"
+    },
     "LeadGas": {
       "NAME": "Газообразный свинец"
+    },
+    "Mud": {
+      "NAME": "Жижа"
     },
     "Carbon": {
       "NAME": "Уголь"
@@ -1560,6 +1689,9 @@
     "Creature": {
       "NAME": "Генная слизь"
     },
+    "Fallout": {
+      "NAME": "Радиоактивные осадки"
+    },
     "DepletedUranium": {
       "NAME": "Обедненный уран"
     },
@@ -1569,11 +1701,26 @@
     "Syngas": {
       "NAME": "Синтез-газ"
     },
+    "Pearl": {
+      "NAME": "Жемчужина"
+    },
     "Naphtha": {
       "NAME": "Жидкий лигроин"
     },
     "SolidMethane": {
       "NAME": "Твердый метан"
+    },
+    "FishMilkIce": {
+      "NAME": "Замерзший оволен"
+    },
+    "HardPolypropylene": {
+      "NAME": "Пластий"
+    },
+    "NaturalResin": {
+      "NAME": "Смола"
+    },
+    "NaturalSolidResin": {
+      "NAME": "Твердая смола"
     },
     "OxyRock": {
       "NAME": "Кислолит"
@@ -1581,14 +1728,32 @@
     "MaficRock": {
       "NAME": "Мафическая порода"
     },
+    "MurkyBrineIce": {
+      "NAME": "Лед из загрязненной рапы"
+    },
     "Iron": {
       "NAME": "Железо"
+    },
+    "MoltenSucrose": {
+      "NAME": "Жидкая сахароза"
+    },
+    "NickelGas": {
+      "NAME": "Газообразный никель"
     },
     "LiquidPhosphorus": {
       "NAME": "Жидкий фосфор"
     },
+    "Basalt": {
+      "NAME": "Базальт"
+    },
     "Regolith": {
       "NAME": "Реголит"
+    },
+    "SolidResin": {
+      "NAME": "Затвердевший сок"
+    },
+    "NickelOre": {
+      "NAME": "Никелевая руда"
     },
     "Slabs": {
       "NAME": "Строительный блок"
@@ -1605,17 +1770,29 @@
     "IronGas": {
       "NAME": "Газообразное железо"
     },
+    "StableSnow": {
+      "NAME": "Спрессованный снег"
+    },
     "TempConductorSolid": {
       "NAME": "Термий"
     },
     "IronOre": {
       "NAME": "Железная руда"
     },
+    "Zinc": {
+      "NAME": "Цинк"
+    },
+    "Mucus": {
+      "NAME": "Муцин"
+    },
     "Dirt": {
       "NAME": "Грязь"
     },
     "Cement": {
       "NAME": "Цемент"
+    },
+    "FishMilk": {
+      "NAME": "Оволен"
     },
     "DirtyIce": {
       "NAME": "Загрязненный лед"
@@ -1638,6 +1815,12 @@
     "Unobtanium": {
       "NAME": "Нейтроний"
     },
+    "IridiumGas": {
+      "NAME": "Газообразный иридий"
+    },
+    "Cinnabar": {
+      "NAME": "Киноварь"
+    },
     "PhosphorusGas": {
       "NAME": "Газообразный фосфор"
     },
@@ -1658,6 +1841,12 @@
     },
     "FoolsGold": {
       "NAME": "Пирит"
+    },
+    "Galena": {
+      "NAME": "Галенит"
+    },
+    "MoltenNickel": {
+      "NAME": "Расплавленный никель"
     },
     "Aluminum": {
       "NAME": "Алюминий"

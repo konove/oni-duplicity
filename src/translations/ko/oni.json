@@ -1224,20 +1224,38 @@
     "SulfurGas": {
       "NAME": "황 기체"
     },
+    "Latex": {
+      "NAME": "라텍스"
+    },
     "Diamond": {
       "NAME": "다이아몬드"
     },
     "Aerogel": {
       "NAME": "에어로젤"
     },
+    "MurkyBrine": {
+      "NAME": "오염된 염수"
+    },
     "Isoresin": {
       "NAME": "이소샙"
+    },
+    "ZincGas": {
+      "NAME": "아연 기체"
+    },
+    "Sucrose": {
+      "NAME": "수크로스"
     },
     "SaltGas": {
       "NAME": "소금 기체"
     },
     "LiquidHelium": {
       "NAME": "헬륨"
+    },
+    "Peat": {
+      "NAME": "이탄"
+    },
+    "ZincOre": {
+      "NAME": "아연 광석"
     },
     "LiquidOxygen": {
       "NAME": "액체 산소"
@@ -1251,8 +1269,17 @@
     "Propane": {
       "NAME": "프로판 기체"
     },
+    "MilkFat": {
+      "NAME": "코왁스"
+    },
     "Niobium": {
       "NAME": "나이오븀"
+    },
+    "Nickel": {
+      "NAME": "니켈"
+    },
+    "MilkIce": {
+      "NAME": "동결된 코사리"
     },
     "Cuprite": {
       "NAME": "동광석"
@@ -1266,11 +1293,23 @@
     "SuperInsulator": {
       "NAME": "절연석"
     },
+    "Shale": {
+      "NAME": "혈암"
+    },
+    "Corallium": {
+      "NAME": "코랄리움"
+    },
     "ViscoGel": {
       "NAME": "비스코-젤 유체"
     },
+    "PalmWood": {
+      "NAME": "껌 목재"
+    },
     "MoltenAluminum": {
       "NAME": "용융 알루미늄"
+    },
+    "Tallow": {
+      "NAME": "수지"
     },
     "Yellowcake": {
       "NAME": "옐로케이크"
@@ -1302,8 +1341,14 @@
     "Void": {
       "NAME": "공허"
     },
+    "CobaltGas": {
+      "NAME": "코발트 기체"
+    },
     "CrudeOil": {
       "NAME": "원유"
+    },
+    "Cobaltite": {
+      "NAME": "코발트 광석"
     },
     "SteelGas": {
       "NAME": "강철 기체"
@@ -1320,6 +1365,9 @@
     "SolidCrudeOil": {
       "NAME": "고체 원유"
     },
+    "MoltenIridium": {
+      "NAME": "용융 이리듐"
+    },
     "Wolframite": {
       "NAME": "철망간 중석"
     },
@@ -1328,6 +1376,12 @@
     },
     "Polypropylene": {
       "NAME": "플라스틱"
+    },
+    "Amber": {
+      "NAME": "호박"
+    },
+    "RefinedLipid": {
+      "NAME": "바이오디젤"
     },
     "SolidNaphtha": {
       "NAME": "고체 나프타"
@@ -1349,6 +1403,9 @@
     },
     "SandCement": {
       "NAME": "모래 시멘트"
+    },
+    "COMPOSITION": {
+      "NAME": "조성"
     },
     "SourGas": {
       "NAME": "사워 가스"
@@ -1392,11 +1449,17 @@
     "LiquidHydrogen": {
       "NAME": "액체 수소"
     },
+    "Resin": {
+      "NAME": "수액"
+    },
     "Sulfur": {
       "NAME": "황"
     },
     "Lime": {
       "NAME": "석회"
+    },
+    "LiquidGunk": {
+      "NAME": "오물"
     },
     "SolidSyngas": {
       "NAME": "고체 합성 기체"
@@ -1407,11 +1470,20 @@
     "LiquidPropane": {
       "NAME": "액체 프로판"
     },
+    "SolidMucus": {
+      "NAME": "얼어붙은 뮤신"
+    },
     "SolidMercury": {
       "NAME": "수은"
     },
     "MoltenTungsten": {
       "NAME": "용융 텅스텐"
+    },
+    "SolidNuclearWaste": {
+      "NAME": "고체 핵 폐기물"
+    },
+    "Coquina": {
+      "NAME": "코퀴나"
     },
     "Petroleum": {
       "NAME": "석유"
@@ -1434,8 +1506,17 @@
     "IgneousRock": {
       "NAME": "화성암"
     },
+    "Rubber": {
+      "NAME": "고무"
+    },
     "EnrichedUranium": {
       "NAME": "농축 우라늄"
+    },
+    "MoltenCobalt": {
+      "NAME": "용융 코발트"
+    },
+    "SiltStone": {
+      "NAME": "실트암"
     },
     "Brick": {
       "NAME": "벽돌"
@@ -1455,8 +1536,20 @@
     "NuclearWaste": {
       "NAME": "액체 핵 폐기물"
     },
+    "Gunk": {
+      "NAME": "고체 오물"
+    },
+    "FrozenPhytoOil": {
+      "NAME": "식물성언 식물성 오일"
+    },
+    "Corium": {
+      "NAME": "코륨"
+    },
     "Phosphorus": {
       "NAME": "정제된 인"
+    },
+    "Iridium": {
+      "NAME": "이리듐"
     },
     "SuperCoolant": {
       "NAME": "초냉각제"
@@ -1470,17 +1563,29 @@
     "Radium": {
       "NAME": "라듐"
     },
+    "PhytoOil": {
+      "NAME": "식물성 오일"
+    },
     "SuperCoolantGas": {
       "NAME": "초냉각제 기체"
     },
+    "WoodLog": {
+      "NAME": "목재"
+    },
     "Electrum": {
       "NAME": "엘렉트럼"
+    },
+    "Milk": {
+      "NAME": "코사리"
     },
     "SolidCarbonDioxide": {
       "NAME": "고체 이산화탄소"
     },
     "AluminumGas": {
       "NAME": "알루미늄 기체"
+    },
+    "Cobalt": {
+      "NAME": "코발트"
     },
     "CarbonFibre": {
       "NAME": "탄소 섬유"
@@ -1530,14 +1635,23 @@
     "Glass": {
       "NAME": "유리"
     },
+    "FrozenInk": {
+      "NAME": "언 오징어 먹물"
+    },
     "MoltenSyngas": {
       "NAME": "용해 합성 기체"
+    },
+    "FabricatedWood": {
+      "NAME": "합판"
     },
     "ContaminatedOxygen": {
       "NAME": "오염된 산소"
     },
     "Vacuum": {
       "NAME": "진공"
+    },
+    "MoltenZinc": {
+      "NAME": "용융 아연"
     },
     "Clay": {
       "NAME": "점토"
@@ -1548,8 +1662,23 @@
     "Ice": {
       "NAME": "얼음"
     },
+    "Ink": {
+      "NAME": "오징어 먹물"
+    },
+    "SugarWater": {
+      "NAME": "넥타"
+    },
+    "Graphite": {
+      "NAME": "그래파이트"
+    },
+    "ToxicMud": {
+      "NAME": "오염된 진흙"
+    },
     "LeadGas": {
       "NAME": "납 기체"
+    },
+    "Mud": {
+      "NAME": "진흙"
     },
     "Carbon": {
       "NAME": "석탄"
@@ -1560,6 +1689,9 @@
     "Creature": {
       "NAME": "유전적 무른감탕"
     },
+    "Fallout": {
+      "NAME": "핵 낙진"
+    },
     "DepletedUranium": {
       "NAME": "고갈된 우라늄"
     },
@@ -1569,11 +1701,26 @@
     "Syngas": {
       "NAME": "합성 기체"
     },
+    "Pearl": {
+      "NAME": "진주"
+    },
     "Naphtha": {
       "NAME": "액체 나프타"
     },
     "SolidMethane": {
       "NAME": "고체 메탄"
+    },
+    "FishMilkIce": {
+      "NAME": "얼어붙은 오볼린"
+    },
+    "HardPolypropylene": {
+      "NAME": "플라스튬"
+    },
+    "NaturalResin": {
+      "NAME": "레진"
+    },
+    "NaturalSolidResin": {
+      "NAME": "고체 레진"
     },
     "OxyRock": {
       "NAME": "산소석"
@@ -1581,14 +1728,32 @@
     "MaficRock": {
       "NAME": "고철질암"
     },
+    "MurkyBrineIce": {
+      "NAME": "오염된 염수 얼음"
+    },
     "Iron": {
       "NAME": "철"
+    },
+    "MoltenSucrose": {
+      "NAME": "액체 수크로스"
+    },
+    "NickelGas": {
+      "NAME": "니켈 기체"
     },
     "LiquidPhosphorus": {
       "NAME": "액체 인"
     },
+    "Basalt": {
+      "NAME": "현무암"
+    },
     "Regolith": {
       "NAME": "표토"
+    },
+    "SolidResin": {
+      "NAME": "고체 수액"
+    },
+    "NickelOre": {
+      "NAME": "니켈 광석"
     },
     "Slabs": {
       "NAME": "건조판"
@@ -1605,17 +1770,29 @@
     "IronGas": {
       "NAME": "철 기체"
     },
+    "StableSnow": {
+      "NAME": "쌓인 눈"
+    },
     "TempConductorSolid": {
       "NAME": "서미움"
     },
     "IronOre": {
       "NAME": "철광석"
     },
+    "Zinc": {
+      "NAME": "아연"
+    },
+    "Mucus": {
+      "NAME": "뮤신"
+    },
     "Dirt": {
       "NAME": "흙"
     },
     "Cement": {
       "NAME": "시멘트"
+    },
+    "FishMilk": {
+      "NAME": "오볼린"
     },
     "DirtyIce": {
       "NAME": "오염된 얼음"
@@ -1638,6 +1815,12 @@
     "Unobtanium": {
       "NAME": "뉴트로늄"
     },
+    "IridiumGas": {
+      "NAME": "이리듐 기체"
+    },
+    "Cinnabar": {
+      "NAME": "진사 광석"
+    },
     "PhosphorusGas": {
       "NAME": "인 기체"
     },
@@ -1658,6 +1841,12 @@
     },
     "FoolsGold": {
       "NAME": "황철광"
+    },
+    "Galena": {
+      "NAME": "방연광"
+    },
+    "MoltenNickel": {
+      "NAME": "용융 니켈"
     },
     "Aluminum": {
       "NAME": "알루미늄"

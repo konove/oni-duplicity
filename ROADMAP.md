@@ -97,7 +97,25 @@ Raw `GeyserType` keys in the dropdown and heading; sliders are uncontrolled (`de
 numeric readout; `iterationLengthRoll` has no control at all. See also #137 (a missing geyser type).
 Same class of defect as 0.3 — bundle with it. **Effort: S–M.**
 
-### 0.7 The Materials page hides elements the parser has never heard of
+### 0.7 The Materials page hides elements the parser has never heard of — **done**
+
+The enum now lists all **212**, the count was 211 because `COMPOSITION` is in
+the game's element list without being an element — Klei put it there to reach
+the enum, and it is mirrored for the same reason. All 285.4 t below now show on
+the Materials page, re-measured against the same colony.
+
+`tools/extract-sim-hashes.py` needs no decompiler in the end: the game ships its
+element list as plain YAML and the C# enum is generated from it, so names plus
+`Hash.SDBMLower` reproduce the enum exactly. That was checked three ways before
+anything was generated — every decompiled value equals the hash of its own name,
+so does every value the parser already had, and the YAML ids reproduce the
+decompiled enum name for name. The regenerated file was 63 insertions and zero
+deletions, which is the outcome the risk note below asked for.
+
+Worth knowing for next time: the element ids and their **display names** are two
+separate extractions. `extract-translations.py` reads ids from the installed
+parser, so the 63 new elements had no name until it was re-run for en, ru, ko
+and zh. `materials.spec.ts` now fails if the catalogue falls behind the enum.
 
 `MaterialGameObjectNames` is the parser's `SimHashNames`, which lists **149**
 elements. The game's own `SimHashes` enum has **211**. Anything in the gap is

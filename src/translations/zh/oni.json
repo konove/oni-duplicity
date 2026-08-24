@@ -1256,20 +1256,38 @@
     "SulfurGas": {
       "NAME": "硫蒸气"
     },
+    "Latex": {
+      "NAME": "胶乳"
+    },
     "Diamond": {
       "NAME": "钻石"
     },
     "Aerogel": {
       "NAME": "气凝胶"
     },
+    "MurkyBrine": {
+      "NAME": "污染浓盐水"
+    },
     "Isoresin": {
       "NAME": "异构树液"
+    },
+    "ZincGas": {
+      "NAME": "气态锌"
+    },
+    "Sucrose": {
+      "NAME": "蔗糖"
     },
     "SaltGas": {
       "NAME": "气态盐"
     },
     "LiquidHelium": {
       "NAME": "液态氦"
+    },
+    "Peat": {
+      "NAME": "泥炭"
+    },
+    "ZincOre": {
+      "NAME": "锌矿"
     },
     "LiquidOxygen": {
       "NAME": "液态氧"
@@ -1283,8 +1301,17 @@
     "Propane": {
       "NAME": "丙烷"
     },
+    "MilkFat": {
+      "NAME": "咸乳蜡"
+    },
     "Niobium": {
       "NAME": "铌"
+    },
+    "Nickel": {
+      "NAME": "镍"
+    },
+    "MilkIce": {
+      "NAME": "凝冻咸乳"
     },
     "Cuprite": {
       "NAME": "铜矿"
@@ -1298,11 +1325,23 @@
     "SuperInsulator": {
       "NAME": "隔热质"
     },
+    "Shale": {
+      "NAME": "页岩"
+    },
+    "Corallium": {
+      "NAME": "珊瑚质"
+    },
     "ViscoGel": {
       "NAME": "粘性凝胶流体"
     },
+    "PalmWood": {
+      "NAME": "粘胶木材"
+    },
     "MoltenAluminum": {
       "NAME": "熔融铝"
+    },
+    "Tallow": {
+      "NAME": "动物油脂"
     },
     "Yellowcake": {
       "NAME": "黄饼"
@@ -1334,8 +1373,14 @@
     "Void": {
       "NAME": "虚空"
     },
+    "CobaltGas": {
+      "NAME": "气态钴"
+    },
     "CrudeOil": {
       "NAME": "原油"
+    },
+    "Cobaltite": {
+      "NAME": "钴矿"
     },
     "SteelGas": {
       "NAME": "气态钢"
@@ -1352,6 +1397,9 @@
     "SolidCrudeOil": {
       "NAME": "固态原油"
     },
+    "MoltenIridium": {
+      "NAME": "熔融铱"
+    },
     "Wolframite": {
       "NAME": "黑钨矿"
     },
@@ -1360,6 +1408,12 @@
     },
     "Polypropylene": {
       "NAME": "塑料"
+    },
+    "Amber": {
+      "NAME": "琥珀"
+    },
+    "RefinedLipid": {
+      "NAME": "生物柴油"
     },
     "SolidNaphtha": {
       "NAME": "固态石脑油"
@@ -1381,6 +1435,9 @@
     },
     "SandCement": {
       "NAME": "砂水泥"
+    },
+    "COMPOSITION": {
+      "NAME": "复合物"
     },
     "SourGas": {
       "NAME": "高硫天然气"
@@ -1424,11 +1481,17 @@
     "LiquidHydrogen": {
       "NAME": "液态氢"
     },
+    "Resin": {
+      "NAME": "树液"
+    },
     "Sulfur": {
       "NAME": "硫"
     },
     "Lime": {
       "NAME": "石灰"
+    },
+    "LiquidGunk": {
+      "NAME": "粘渣油"
     },
     "SolidSyngas": {
       "NAME": "固态合成气"
@@ -1439,11 +1502,20 @@
     "LiquidPropane": {
       "NAME": "液态丙烷"
     },
+    "SolidMucus": {
+      "NAME": "凝冻粘蛋白"
+    },
     "SolidMercury": {
       "NAME": "固态汞"
     },
     "MoltenTungsten": {
       "NAME": "熔融钨"
+    },
+    "SolidNuclearWaste": {
+      "NAME": "固态核废料"
+    },
+    "Coquina": {
+      "NAME": "壳灰岩"
     },
     "Petroleum": {
       "NAME": "石油"
@@ -1466,8 +1538,17 @@
     "IgneousRock": {
       "NAME": "火成岩"
     },
+    "Rubber": {
+      "NAME": "橡胶"
+    },
     "EnrichedUranium": {
       "NAME": "浓缩铀"
+    },
+    "MoltenCobalt": {
+      "NAME": "熔融钴"
+    },
+    "SiltStone": {
+      "NAME": "粉砂岩"
     },
     "Brick": {
       "NAME": "红砖"
@@ -1487,8 +1568,20 @@
     "NuclearWaste": {
       "NAME": "液态核废料"
     },
+    "Gunk": {
+      "NAME": "固态粘渣油"
+    },
+    "FrozenPhytoOil": {
+      "NAME": "凝冻植物润滑油"
+    },
+    "Corium": {
+      "NAME": "堆芯熔融物"
+    },
     "Phosphorus": {
       "NAME": "精炼磷"
+    },
+    "Iridium": {
+      "NAME": "铱"
     },
     "SuperCoolant": {
       "NAME": "超级冷却剂"
@@ -1502,17 +1595,29 @@
     "Radium": {
       "NAME": "镭"
     },
+    "PhytoOil": {
+      "NAME": "植物润滑油"
+    },
     "SuperCoolantGas": {
       "NAME": "气态超级冷却剂"
     },
+    "WoodLog": {
+      "NAME": "木材"
+    },
     "Electrum": {
       "NAME": "银金矿"
+    },
+    "Milk": {
+      "NAME": "咸乳"
     },
     "SolidCarbonDioxide": {
       "NAME": "固态二氧化碳"
     },
     "AluminumGas": {
       "NAME": "气态铝"
+    },
+    "Cobalt": {
+      "NAME": "钴"
     },
     "CarbonFibre": {
       "NAME": "碳纤维"
@@ -1562,14 +1667,23 @@
     "Glass": {
       "NAME": "玻璃"
     },
+    "FrozenInk": {
+      "NAME": "凝冻鱿鱼墨汁"
+    },
     "MoltenSyngas": {
       "NAME": "熔融合成气"
+    },
+    "FabricatedWood": {
+      "NAME": "胶合板"
     },
     "ContaminatedOxygen": {
       "NAME": "污染氧"
     },
     "Vacuum": {
       "NAME": "真空"
+    },
+    "MoltenZinc": {
+      "NAME": "熔融锌"
     },
     "Clay": {
       "NAME": "粘土"
@@ -1580,8 +1694,23 @@
     "Ice": {
       "NAME": "冰"
     },
+    "Ink": {
+      "NAME": "鱿鱼墨汁"
+    },
+    "SugarWater": {
+      "NAME": "花蜜"
+    },
+    "Graphite": {
+      "NAME": "石墨"
+    },
+    "ToxicMud": {
+      "NAME": "污染泥"
+    },
     "LeadGas": {
       "NAME": "气态铅"
+    },
+    "Mud": {
+      "NAME": "泥巴"
     },
     "Carbon": {
       "NAME": "煤炭"
@@ -1592,6 +1721,9 @@
     "Creature": {
       "NAME": "遗传生物软泥"
     },
+    "Fallout": {
+      "NAME": "核尘埃"
+    },
     "DepletedUranium": {
       "NAME": "贫铀"
     },
@@ -1601,11 +1733,26 @@
     "Syngas": {
       "NAME": "合成气"
     },
+    "Pearl": {
+      "NAME": "珍珠"
+    },
     "Naphtha": {
       "NAME": "液态石脑油"
     },
     "SolidMethane": {
       "NAME": "固态甲烷"
+    },
+    "FishMilkIce": {
+      "NAME": "凝冻卵浆"
+    },
+    "HardPolypropylene": {
+      "NAME": "塑料质"
+    },
+    "NaturalResin": {
+      "NAME": "树脂"
+    },
+    "NaturalSolidResin": {
+      "NAME": "固态树脂"
     },
     "OxyRock": {
       "NAME": "氧石"
@@ -1613,14 +1760,32 @@
     "MaficRock": {
       "NAME": "镁铁质岩"
     },
+    "MurkyBrineIce": {
+      "NAME": "污染浓盐冰"
+    },
     "Iron": {
       "NAME": "铁"
+    },
+    "MoltenSucrose": {
+      "NAME": "熔融蔗糖"
+    },
+    "NickelGas": {
+      "NAME": "气态镍"
     },
     "LiquidPhosphorus": {
       "NAME": "液态磷"
     },
+    "Basalt": {
+      "NAME": "玄武岩"
+    },
     "Regolith": {
       "NAME": "浮土"
+    },
+    "SolidResin": {
+      "NAME": "固态树液"
+    },
+    "NickelOre": {
+      "NAME": "镍矿"
     },
     "Slabs": {
       "NAME": "建筑板材"
@@ -1637,17 +1802,29 @@
     "IronGas": {
       "NAME": "气态铁"
     },
+    "StableSnow": {
+      "NAME": "紧压雪"
+    },
     "TempConductorSolid": {
       "NAME": "导热质"
     },
     "IronOre": {
       "NAME": "铁矿"
     },
+    "Zinc": {
+      "NAME": "锌"
+    },
+    "Mucus": {
+      "NAME": "粘蛋白"
+    },
     "Dirt": {
       "NAME": "泥土"
     },
     "Cement": {
       "NAME": "水泥"
+    },
+    "FishMilk": {
+      "NAME": "卵浆"
     },
     "DirtyIce": {
       "NAME": "污染冰"
@@ -1670,6 +1847,12 @@
     "Unobtanium": {
       "NAME": "中子质"
     },
+    "IridiumGas": {
+      "NAME": "气态铱"
+    },
+    "Cinnabar": {
+      "NAME": "朱砂矿"
+    },
     "PhosphorusGas": {
       "NAME": "气态磷"
     },
@@ -1690,6 +1873,12 @@
     },
     "FoolsGold": {
       "NAME": "黄铁矿"
+    },
+    "Galena": {
+      "NAME": "方铅矿"
+    },
+    "MoltenNickel": {
+      "NAME": "熔融镍"
     },
     "Aluminum": {
       "NAME": "铝"

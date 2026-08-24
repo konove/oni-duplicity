@@ -87,7 +87,7 @@
     "i18next": "^26.3.6",
     "lodash": "^4.18.1",
     "object-hash": "^3.0.0",
-    "oni-save-parser": "git+https://github.com/konove/oni-save-parser.git#ede93aa81dd38825f7bb99c69fdd510774fd4168",
+    "oni-save-parser": "git+https://github.com/konove/oni-save-parser.git#d0e5da2f3177c529d0cc4b04d04fcdd6a7a992a6",
     "platform": "^1.3.6",
     "re-reselect": "^5.1.1",
     "react": "^19.2.8",
