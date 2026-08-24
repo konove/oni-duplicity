@@ -32,12 +32,13 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Nine entries are marked **done** and carry a note saying what shipped: 0.1
-through 0.7, 0.10, and 1.7 — which needed no code at all, only checking. A tenth, 0.9, closed the other
-way: the editor's totals differ from the game's panel because the panel hides unreachable material and
-counts one asteroid, so there was never anything to fix. Tier 0 has five open — one is data the editor
-still cannot see (0.8), four are questions about how the thing is laid out (0.11 to 0.14). Everything in
-tiers 1 to 3 is open except 1.7.
+**Where it stands.** Eleven entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.8, 0.10, 1.7 — which needed no code at all, only checking — and 1.8. A twelfth, 0.9, closed
+the other way: the editor's totals differ from the game's panel because the panel hides unreachable
+material and counts one asteroid, so there was never anything to fix. **Tier 0 is down to four**, and
+all four are questions about how the thing is laid out rather than what it can see (0.11 to 0.14).
+Tier 1 has 1.1 through 1.6 open, plus 1.9, which the Materials page rewrite created: it can now list
+seeds, eggs and food, and it names them by splitting the prefab id rather than from the catalogue.
 
 ---
 
@@ -159,21 +160,27 @@ then the fork round trip: build, commit, push, re-pin the sha here.
 element identity, so a wrong hash mis-identifies material rather than omitting
 it. Diff the regenerated file against the current one and expect additions only.
 
-### 0.8 Seeds and other sweepables are not listed at all
+### 0.8 Seeds and other sweepables are not listed at all — **done**
 
-`materials.ts` has carried `// TODO: Seeds, clothing, other sweepables` since
-before this roadmap. A real colony has nine seed types in it — `SpiceVineSeed`,
-`SeaLettuceSeed`, `ButterflyPlantSeed` and friends — and none appear.
+Shipped with the page redesign. What belongs is decided by the save rather than
+by a list somebody keeps: a material is an object with `Pickupable` and no
+`*Brain`, which is what keeps a colony's 57 Chameleons and its duplicants off a
+materials page, and the kind comes off behaviours the game already attached -
+`PlantableSeed`, `Edible`, `Equippable`. Only eggs are recognised by name,
+because a Chameleon Egg carries nothing a research databank does not.
 
-Seeds are **counted in units, not massed**, which is why they cannot simply join
-the existing rows: the table's two columns are loose mass and stored mass. They
-want a count, and the game names them from `STRINGS.CREATURES.SPECIES.SEEDS.*`,
-so the display names come from the catalogue like everything else.
+Each kind carries its own unit, mirroring the game's own three-way split:
+kilograms for elements, kilocalories for food, and a count of seeds, eggs or
+units for the rest. That answers the risk this entry raised - picking seeds
+alone was arbitrary, so nothing is picked; everything sweepable is listed and
+the unit follows the thing.
 
-**Effort: M.** **Risk:** deciding what belongs. Clothing, food and equipment are
-also sweepable and also unit-counted; picking "seeds" alone is arbitrary, and
-picking everything turns the Materials page into an inventory screen. Scope it
-deliberately.
+**Still open: the names.** Non-elements render a humanised prefab id - "Sea
+Lettuce Seed" for `SeaLettuceSeed` - which is close to the game's own name and
+is the same fallback the 63 uncatalogued elements already use. The game names
+each item from a string key chosen per config class, so there is no id-to-key
+rule to follow; only 14 of 139 `CreateLooseEntity` call sites pass the literal
+`ID` and a `STRINGS.` constant together. Filed as 1.9.
 
 ### 0.9 The editor counts material the game does not — **resolved, and not a bug**
 
@@ -367,38 +374,42 @@ highest safety-per-line in this document. Depends on 0.1.
 and `LoadingDialog` exists. **Check whether the dialog is mounted for the Saving status before writing
 any code** — this may be a zero- or one-line fix. **Effort: XS–S.**
 
-### 1.8 A row menu on the Materials page — the shape the next three features plug into
+### 1.8 A row menu on the Materials page — **done**
 
-Settled by a design pass; the artboards are in `design/materials/`. Today's single delete button lives
-inside the Loose cell, which is unambiguous only because there is exactly one thing to delete. The
-moment containers can be emptied (2.6) there are two targets, and set-temperature and clear-germs (2.5)
-add two more that belong to the whole row rather than to one location. Four actions do not fit as
-per-cell icons.
+Shipped as designed. One overflow menu per row, each entry naming its own
+quantity, and entries that do not apply omitted rather than disabled - which is
+why Water and Chlorine Gas carry no menu at all: they exist only inside
+containers and there is nothing loose to delete. 2.6 adds the second entry
+without the page growing a second control.
 
-One overflow menu per row takes them all, and **each entry names its own quantity**, which is what
-removes the ambiguity:
+Two things the design pass did not anticipate. The whole-table "delete all
+loose material" needed somewhere to live and went into a header menu in the
+same column, so the affordance reads the same at both levels. And the deferred
+fourth direction - row selection with an action bar - is unchanged in status:
+still the right investment when 2.2 lands, and it can now wrap the row menu
+rather than replace it.
 
-| Entry                       | Comes from                       |
-| --------------------------- | -------------------------------- |
-| Delete 197.4 t lying around | ships today, moved into the menu |
-| Delete 200 kg in containers | 2.6                              |
-| Set temperature…            | 2.5                              |
-| Clear germs…                | 2.5                              |
+### 1.9 Non-elements show a humanised id rather than the game's name
 
-Entries that do not apply are **omitted, not disabled** — a row with nothing stored simply has no second
-line, which is how the page keeps saying that Water and Chlorine Gas exist only inside containers.
+The Materials page lists seeds, eggs, food, equipment and loose items as of
+0.8, and names them by splitting the prefab id: `SeaLettuceSeed` reads as "Sea
+Lettuce Seed". That is close, and it is the same fallback the 63 uncatalogued
+elements already use, but it is not what the player's game calls them and in a
+non-English locale it is English.
 
-**Effort: S**, and it is worth doing before 2.5 or 2.6 rather than after: both would otherwise ship an
-affordance that has to be rebuilt around them. **Cost to weigh:** clearing loose junk becomes two clicks
-and a read where today it is one click and a confirm. That is the trade the menu asks for, and it was
-accepted deliberately.
+Elements are easy because the catalogue key is derivable - `ELEMENTS.<ID>.NAME`
+from the element id. Items are not: each config class picks its own string key,
+so `VineFruitConfig` names itself `STRINGS.ITEMS.FOOD.VINEFRUIT.NAME` and there
+is no rule mapping one to the other. It has to be extracted from the decompiled
+configs, and only 14 of 139 `CreateLooseEntity` call sites pass the literal
+`ID` alongside a `STRINGS.` constant - the rest go through local variables or
+other helpers, so a real extractor has to resolve those.
 
-A fourth possibility was considered and deferred: row selection plus an action bar, which is the only
-shape that answers "delete the loose material of these six things". It is the same machinery 2.2's bulk
-edit needs, so it is worth revisiting when that lands — at which point it can wrap the row menu rather
-than replace it.
-
----
+**Effort: M**, and it is a `tools/` job rather than an app one: an extractor
+producing prefab id to catalogue key, then the existing
+`extract-translations.py` path for the six locales. **Risk:** a wrong mapping
+labels a material as something else, which is worse than showing the id - so
+the extractor should refuse to guess, the way the others do.
 
 ## Tier 2 — Real work, real demand
 
@@ -462,7 +473,7 @@ Scope to bulk operations on the Materials page — "set temperature of all X", "
 
 **Where it surfaces is already decided:** both are entries in 1.8's row menu, below the divider that
 separates them from the two deletes, because they act on the whole row rather than on loose or stored
-separately. Build 1.8 first or these have nowhere to live.
+separately. 1.8 has shipped, so both have somewhere to land.
 
 **Effort: M. Risk:** a temperature outside an element's phase range makes the sim convert the object on
 load, and the parser ships no phase-transition table. Either hand-build one and clamp, or warn loudly.
