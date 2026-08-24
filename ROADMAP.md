@@ -32,10 +32,12 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Nine entries are marked **done** and carry a note saying what shipped: 0.1 through
-0.7, 0.10, and 1.7 — which needed no code at all, only checking. Tier 0 has six open, none of them a
-wrong number any more: two are data the editor still cannot see (0.8, 0.9) and four are questions about
-how the thing is laid out (0.11 to 0.14). Everything in tiers 1 to 3 is open except 1.7.
+**Where it stands.** Nine entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.7, 0.10, and 1.7 — which needed no code at all, only checking. A tenth, 0.9, closed the other
+way: the editor's totals differ from the game's panel because the panel hides unreachable material and
+counts one asteroid, so there was never anything to fix. Tier 0 has five open — one is data the editor
+still cannot see (0.8), four are questions about how the thing is laid out (0.11 to 0.14). Everything in
+tiers 1 to 3 is open except 1.7.
 
 ---
 
@@ -173,18 +175,35 @@ also sweepable and also unit-counted; picking "seeds" alone is arbitrary, and
 picking everything turns the Materials page into an inventory screen. Scope it
 deliberately.
 
-### 0.9 The editor counts material the game does not
+### 0.9 The editor counts material the game does not — **resolved, and not a bug**
 
-Related to 0.2 but distinct, and unresolved. The same colony's algae sums to
-2,636 kg here against the game's 2,544. Dirt matched to the decimal, so this is
-not a unit or formatting problem — the two are counting different sets of
-objects. Likely candidates: the game's resource panel is per-asteroid where this
-selector sweeps the whole cluster, or it excludes material that is unreachable or
-inside certain containers.
+Tracked down on the colony itself: the 92 kg of algae the game did not report was
+lying where no duplicant could reach it. The assembly says the same, and adds
+four more exclusions nobody would guess.
 
-**Effort: S to investigate, unknown to fix.** Worth doing before anyone trusts
-the table for planning, and worth knowing that "totals differ from the game" may
-be correct behaviour rather than a bug.
+Everything the game's panel counts reaches `WorldInventory.Inventory` through a
+single event that `FetchableMonitor` fires on entering its `fetchable` state, and
+`IsFetchable()` refuses an object that is unreachable, entombed, equipped, tagged
+`StoredPrivate`, reserved by a critter, or a critter that is not itself
+deliverable. `WorldInventory.Update` then sums only objects whose
+`GetMyWorldId()` matches its own — so the panel is **one asteroid**, not the
+cluster.
+
+None of that is in the save. Both state machines declare `base.serializable =
+SerializeType.Never`, and reachability is recomputed every second from
+`MinionGroupProber.IsAllReachable` over the pathfinding grid — which this editor
+cannot reproduce even in principle, since the tile data is an opaque buffer the
+parser does not model.
+
+So `materialsSelector` walking every group in the file is correct. The editor's
+job is to total what the save contains — buried, out of reach, worn and
+off-asteroid included — and that is simply not the number on the panel, and never
+can be.
+
+**What is left is one sentence of copy** on the Materials page saying so.
+Without it the page keeps failing a comparison it was never making, which is the
+same loss of trust the wrong numbers in 0.2, 0.7 and 0.10 caused, arrived at from
+the opposite direction. **Effort: XS.**
 
 ### 0.10 Geyser sliders edit a number nobody can read — **done**
 
