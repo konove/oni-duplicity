@@ -18,15 +18,24 @@ Three sources of evidence were used, and they agree more than expected:
 3. **What is broken rather than missing** — some "missing features" are implemented but faulty. Cheaper
    to fix than to build, and it restores trust faster.
 
-Three conclusions shape the ordering:
+Three conclusions shaped the ordering:
 
 - **The loudest asks are mostly already built.** "Revive dead duplicants" (3 issues) needs a `<Select>`
-  bound to a behavior the parser already types. "Sandbox mode" (3 issues) ships today — users cannot
-  find it because the panel prints `SandboxMode` / `Enabled` as raw identifiers.
+  bound to a behavior the parser already types, and is still open as 1.1. "Sandbox mode" (3 issues)
+  shipped all along — nobody could find it because the panel printed `SandboxMode` / `Enabled` as raw
+  identifiers, which 0.3 fixed.
 - **This is a trust problem more than a capability problem.** No undo, no unsaved-changes guard, no
   backup, under a README that opens by telling you to back up your save. Every feature that mutates more
-  state at once makes that worse unless the safety net lands alongside it.
-- **Two shipped features report wrong numbers.** Users who hit those don't file a feature request.
+  state at once makes that worse unless the safety net lands alongside it. Still true: 1.6 and 2.1 are
+  both open.
+- **Three shipped features reported wrong numbers.** Users who hit those don't file a feature request.
+  All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
+  (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
+
+**Where it stands.** Nine entries are marked **done** and carry a note saying what shipped: 0.1 through
+0.7, 0.10, and 1.7 — which needed no code at all, only checking. Tier 0 has six open, none of them a
+wrong number any more: two are data the editor still cannot see (0.8, 0.9) and four are questions about
+how the thing is laid out (0.11 to 0.14). Everything in tiers 1 to 3 is open except 1.7.
 
 ---
 
@@ -34,7 +43,9 @@ Three conclusions shape the ordering:
 
 Ship first. All small, and each is something a user believes is missing or broken.
 
-### 0.1 "Delete all loose materials" deletes only Aerogel
+### 0.1 "Delete all loose materials" deletes only Aerogel — **done**
+
+**Done.** The predicate is a real boolean and the file is spelled `delete-loose-material.ts`. It routes through `tryModifySaveGame`, so the modified flag is set, and `delete-loose-material.spec.ts` sits beside it.
 
 `src/services/oni-save/reducer/delete-looe-material.ts` uses `indexOf` as a boolean predicate:
 
@@ -58,7 +69,9 @@ index 0. Three defects in one file:
 every later feature that depends on `isModified` (the unsaved-changes guard, then undo) will silently
 lie until it is fixed.
 
-### 0.2 Materials page reports mass off by 1000× — #102, #130
+### 0.2 Materials page reports mass off by 1000× — #102, #130 — **done**
+
+**Done.** The selector accumulates `looseMass`/`storedMass` and `formatMass` mirrors `GameUtil.AppendFormattedMass` — the tiers are 5 and 5000, not 1 and 1000, which is why 2,544 kg of algae stays in kilograms while 115,665 kg of dirt reads in tons.
 
 `selectors/material.ts` accumulates `PrimaryElement.templateData.Units` into `looseGrams`/`storedGrams`;
 `MaterialsTable.tsx#formatWeight` then treats `< 1000` as grams. ONI stores element mass in
@@ -69,7 +82,9 @@ kg, else tonnes. Needs one new i18n leaf (`material.tonne`) across all six local
 **Effort: S. Risk:** confirm the unit against a save with a known-mass storage bin before changing the
 divisor — do not take the issue's word or this document's.
 
-### 0.3 The sandbox toggle exists and is unreadable — #115, #99, #60
+### 0.3 The sandbox toggle exists and is unreadable — #115, #99, #60 — **done**
+
+**Done.** Settings and their levels resolve through `oni:DIFFICULTY.*` from the game's own catalogue, and Sandbox is lifted out of the grid into its own switch.
 
 The write path is already complete and correct: `reducer/modify-difficulty.ts` sets
 `CurrentQualityLevelsBySetting` _and_ mirrors `SandboxMode` onto `header.gameInfo.sandboxEnabled`. But
@@ -81,17 +96,23 @@ template, mapping each setting and value to a catalogue key, resolved with the
 `t("oni:...", { defaultValue: name })` idiom already used in `MaterialsTable.tsx`. Then lift Sandbox out
 of the grid into its own labelled switch. **Effort: S–M.**
 
-### 0.4 Health tab section headers are untranslatable
+### 0.4 Health tab section headers are untranslatable — **done**
+
+**Done.** All three carry an `i18nKey` and are translated in every locale.
 
 `Health.tsx` uses bare `<Trans>Fitness</Trans>`, `<Trans>Mind</Trans>`, `<Trans>Disease</Trans>` with no
 `i18nKey`, so five of six locales show English. **Effort: XS** — fold into 0.3's translation pass.
 
-### 0.5 Import failures are silent
+### 0.5 Import failures are silent — **done**
+
+**Done.** `ImportErrorDialog` names the reason — unreadable, invalid JSON, wrong shape, or exported from a different kind of object.
 
 `saga/import-behaviors.ts` has a `TODO: show dialog`; errors reach `console.error` only, so a bad import
 looks like nothing happening. `ImportWarningDialog` already exists for the checksum case. **Effort: S.**
 
-### 0.6 Geysers page shows raw enum names
+### 0.6 Geysers page shows raw enum names — **done**
+
+**Done.** Names come from the catalogue, the dropdown sorts by them, the sliders are controlled, and `iterationLengthRoll` has a control. Superseded in full by 0.10, which put real units on all five. Nothing was needed for #137: the issue spelled `molten_aluminum` as aluminium.
 
 Raw `GeyserType` keys in the dropdown and heading; sliders are uncontrolled (`defaultValue`) with no
 numeric readout; `iterationLengthRoll` has no control at all. See also #137 (a missing geyser type).
@@ -319,7 +340,9 @@ edit. `isModified` already exists — this is a hook reading `isModifiedSelector
 listener, mounted once in the shell, plus a confirmation in `AbstractLoadButton`. **Effort: S**, and the
 highest safety-per-line in this document. Depends on 0.1.
 
-### 1.7 Save progress feedback — #1
+### 1.7 Save progress feedback — #1 — **done**
+
+**Done, and it already was.** The suspicion in this entry was right — no code was needed. `LoadingDialog` is mounted in `root.tsx` and its connector opens on `LoadingStatus.Saving`, so the progress the saga already streams does reach the screen.
 
 `saga/save-onisave.ts` already emits `receiveOniSaveBegin(LoadingStatus.Saving)` and streams progress,
 and `LoadingDialog` exists. **Check whether the dialog is mounted for the Saving status before writing
