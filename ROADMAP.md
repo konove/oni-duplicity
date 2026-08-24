@@ -525,31 +525,32 @@ does when a bin is deconstructed.
 
 ## Milestones
 
-### 1 — "Trustworthy edits"
+### 1 — "Trustworthy edits" — three of five shipped
 
 Five small items, disjoint files, no new architecture.
 
-| #         | Item                                                                             | Closes         |
-| --------- | -------------------------------------------------------------------------------- | -------------- |
-| 0.1       | Fix delete-all-loose-materials (predicate + `tryModifySaveGame` + rename + spec) | —              |
-| 0.2       | Fix material mass units                                                          | #102, #130     |
-| 1.6       | Unsaved-changes guard                                                            | —              |
-| 1.1       | Revive dead duplicants                                                           | #91, #67, #45  |
-| 0.3 + 0.4 | Difficulty labels, explicit sandbox switch, Health headers                       | #115, #99, #60 |
+| #         | Item                                                                             | Closes         | Status |
+| --------- | -------------------------------------------------------------------------------- | -------------- | ------ |
+| 0.1       | Fix delete-all-loose-materials (predicate + `tryModifySaveGame` + rename + spec) | —              | done   |
+| 0.2       | Fix material mass units                                                          | #102, #130     | done   |
+| 0.3 + 0.4 | Difficulty labels, explicit sandbox switch, Health headers                       | #115, #99, #60 | done   |
+| 1.6       | Unsaved-changes guard                                                            | —              | open   |
+| 1.1       | Revive dead duplicants                                                           | #91, #67, #45  | open   |
 
-It closes six issues and satisfies two of the three loudest recurring asks — by _labelling_ one feature
-and _binding a select_ to another, not by building anything new. It removes both places where the app
-reports wrong numbers, which is what erodes trust in an editor. And 1.6 retires the "I lost my edits"
-failure the README currently apologises for.
+The three that shipped were the labelling and the wrong numbers, and between them they closed five
+issues without building anything new. What is left is the half that touches state rather than
+presentation: 1.6, which retires the "I lost my edits" failure the README apologises for, and 1.1, which
+is a select bound to a behavior the parser already types.
 
-**Sequencing constraints:** 0.1 must precede 1.6 (and later 2.1) — a reducer that mutates without setting
-the dirty flag makes both the guard and the undo history lie. 1.1 needs an in-game validation pass before
-it counts as done.
+**Sequencing constraints:** 0.1 had to precede 1.6 (and later 2.1) — a reducer that mutates without
+setting the dirty flag makes both the guard and the undo history lie. That one is done, so 1.6 is
+unblocked. 1.1 still needs an in-game validation pass before it counts as done.
 
-### 2 — "Names and lists"
+### 2 — "Names and lists" — one of five shipped
 
-1.2 rename, gender and voice · 1.3 colony rename and cycles · 1.4 example save · 1.5 list search and
-sort · 0.5 import errors. All small, and 1.5 builds the selector that 2.2 and 3.1 both need.
+0.5 import errors is done. Left: 1.2 rename, gender and voice · 1.3 colony rename and cycles · 1.4
+example save · 1.5 list search and sort. All small, and 1.5 builds the selector that 2.2 and 3.1 both
+need.
 
 ### 3 — "Power tools"
 
