@@ -4,3 +4,8 @@ dist/
 __pycache__/
 test-results/
 playwright-report/
+
+# The seeded design canvas: 2MB of editor bundled around design/*.dc.html, and
+# regenerated from them whenever the design changes. The artboards are the source.
+design/*.html
+!design/*.dc.html

@@ -8,20 +8,25 @@ import { geyserConfigSelector } from "../selectors/geysers";
 import { modifyBehavior, BehaviorDataTarget } from "../actions/modify-behavior";
 import { changeGeyserType } from "../actions/change-geyser-type";
 import { changeGeyserParameter } from "../actions/change-geyser-parameter";
+import { BEST_CASE_ROLLS, GeyserRolls } from "../geyser-configuration";
 
 export interface UseGeyser {
   geyserType: string | null;
-  emitRate: number | null;
-  yearLength: number | null;
-  yearActive: number | null;
-  emitActive: number | null;
-  emitLength: number | null;
-  onChangeEmitRate(rate: number): void;
+  /**
+   * The five configuration rolls, each 0 to 1.
+   *
+   * The save also stores the game's scaled values beside them, but they are not
+   * worth writing: `didInit` is not serialized, so the game recomputes every
+   * one of them from these rolls the first time it reads a geyser back.
+   */
+  rolls: GeyserRolls | null;
   onChangeGeyserType(type: string): void;
-  onChangeYearLength(fraction: number): void;
-  onChangeYearActive(fraction: number): void;
-  onChangeEmitActive(fraction: number): void;
-  onChangeEmitLength(fraction: number): void;
+  onChangeEmitRate(roll: number): void;
+  onChangeYearLength(roll: number): void;
+  onChangeYearActive(roll: number): void;
+  onChangeEmitActive(roll: number): void;
+  onChangeEmitLength(roll: number): void;
+  onApplyBestCase(): void;
 }
 
 export default function useGeyser(gameObjectId: number): UseGeyser {
@@ -31,20 +36,8 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
   );
 
   const onChangeEmitRate = React.useCallback(
-    (rate: number) => {
-      dispatch(
-        modifyBehavior(
-          gameObjectId,
-          GeyserBehavior,
-          BehaviorDataTarget.Template,
-          {
-            configuration: {
-              rateRoll: rate,
-            },
-          },
-          true,
-        ),
-      );
+    (roll: number) => {
+      dispatch(changeGeyserParameter(gameObjectId, "rateRoll", roll));
     },
     [dispatch, gameObjectId],
   );
@@ -57,25 +50,23 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
   );
 
   const onChangeYearLength = React.useCallback(
-    (fraction: number) => {
-      dispatch(changeGeyserParameter(gameObjectId, "yearLengthRoll", fraction));
+    (roll: number) => {
+      dispatch(changeGeyserParameter(gameObjectId, "yearLengthRoll", roll));
     },
     [dispatch, gameObjectId],
   );
 
   const onChangeYearActive = React.useCallback(
-    (fraction: number) => {
-      dispatch(
-        changeGeyserParameter(gameObjectId, "yearPercentRoll", fraction),
-      );
+    (roll: number) => {
+      dispatch(changeGeyserParameter(gameObjectId, "yearPercentRoll", roll));
     },
     [dispatch, gameObjectId],
   );
 
   const onChangeEmitActive = React.useCallback(
-    (fraction: number) => {
+    (roll: number) => {
       dispatch(
-        changeGeyserParameter(gameObjectId, "iterationPercentRoll", fraction),
+        changeGeyserParameter(gameObjectId, "iterationPercentRoll", roll),
       );
     },
     [dispatch, gameObjectId],
@@ -83,26 +74,46 @@ export default function useGeyser(gameObjectId: number): UseGeyser {
 
   // iterationLengthRoll is the one configuration roll the page never exposed.
   const onChangeEmitLength = React.useCallback(
-    (fraction: number) => {
+    (roll: number) => {
       dispatch(
-        changeGeyserParameter(gameObjectId, "iterationLengthRoll", fraction),
+        changeGeyserParameter(gameObjectId, "iterationLengthRoll", roll),
       );
     },
     [dispatch, gameObjectId],
   );
 
+  // Three rolls in one action rather than three: a deep merge leaves the two
+  // eruption timings alone, and the reader gets one change to undo rather than
+  // a pile of them.
+  const onApplyBestCase = React.useCallback(() => {
+    dispatch(
+      modifyBehavior(
+        gameObjectId,
+        GeyserBehavior,
+        BehaviorDataTarget.Template,
+        { configuration: BEST_CASE_ROLLS },
+        true,
+      ),
+    );
+  }, [dispatch, gameObjectId]);
+
   return {
     geyserType: config ? GeyserType[config.typeId.hash] : null,
-    emitRate: config ? config.rateRoll : null,
-    yearLength: config ? config.yearLengthRoll : null,
-    yearActive: config ? config.yearPercentRoll : null,
-    emitActive: config ? config.iterationPercentRoll : null,
-    emitLength: config ? config.iterationLengthRoll : null,
-    onChangeEmitRate,
+    rolls: config
+      ? {
+          rateRoll: config.rateRoll,
+          iterationLengthRoll: config.iterationLengthRoll,
+          iterationPercentRoll: config.iterationPercentRoll,
+          yearLengthRoll: config.yearLengthRoll,
+          yearPercentRoll: config.yearPercentRoll,
+        }
+      : null,
     onChangeGeyserType,
+    onChangeEmitRate,
     onChangeYearLength,
     onChangeYearActive,
     onChangeEmitActive,
     onChangeEmitLength,
+    onApplyBestCase,
   };
 }

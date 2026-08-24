@@ -9,3 +9,8 @@ dist/
 
 # Local, machine-specific and git-ignored; not ours to format.
 .claude/settings.local.json
+
+# Design canvas working files. The artboards are seeded verbatim into
+# geyser-sliders.html, which is a 2MB generated payload with an embedded state
+# block - reformatting either would put the two out of step.
+design/

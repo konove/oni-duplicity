@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "间歇泉",
-    "total_lifecycle_time": "完整周期时间（休眠 + 活跃）",
-    "active_time": "活跃时间",
-    "iteration_length": "喷发周期时长",
-    "emission_length": "喷发时长",
-    "emission_rate": "喷发速率"
+    "full_cycle": "完整周期",
+    "active": "活跃",
+    "eruption_cycle": "喷发周期",
+    "erupting": "喷发中",
+    "output": "产量",
+    "unknown_type": "编辑器不认识这个间歇泉类型，因此无法显示它的设置。",
+    "best_case_titlecase": "最佳配置",
+    "best_case_description": "喷发速率与活跃时间设为最大，完整周期设为最短：产量最高，需要缓冲的间隔最短。",
+    "best_case_already": "已经是该类型能达到的最佳配置。",
+    "in_game_this_reads_titlecase": "游戏中显示为",
+    "eruption_period_titlecase": "喷发期",
+    "eruption_period_value": "每{{total}}中喷发{{on}}",
+    "active_period_titlecase": "活跃期",
+    "active_period_value": "每{{total}}中活跃{{on}}",
+    "average_output_titlecase": "平均产出",
+    "seconds": "{{count}} 秒",
+    "cycles": "{{count}} 周期",
+    "kilograms_per_cycle": "{{count}} 千克/周期",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "星球",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} 毫克",
     "gram": "{{count}} 克",
     "kilogram": "{{count}} 千克",
-    "tonne": "{{count}} 吨"
+    "tonne": "{{count}} 吨",
+    "per_second": "{{mass}}/秒"
   },
   "material_loose": {
     "noun_titlecase": "散落的",

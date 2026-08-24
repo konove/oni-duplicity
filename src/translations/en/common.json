@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "Geysers",
-    "total_lifecycle_time": "Total Lifecycle Time (dormant + active)",
-    "active_time": "Active Time",
-    "iteration_length": "Eruption Cycle Length",
-    "emission_length": "Emission Length",
-    "emission_rate": "Emission Rate"
+    "full_cycle": "Full Cycle",
+    "active": "Active",
+    "eruption_cycle": "Eruption Cycle",
+    "erupting": "Erupting",
+    "output": "Output",
+    "unknown_type": "This geyser's type is not one the editor knows, so its settings cannot be shown.",
+    "best_case_titlecase": "Best Case",
+    "best_case_description": "Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.",
+    "best_case_already": "Already the best this type can roll.",
+    "in_game_this_reads_titlecase": "In Game This Reads",
+    "eruption_period_titlecase": "Eruption Period",
+    "eruption_period_value": "{{on}} every {{total}}",
+    "active_period_titlecase": "Active Period",
+    "active_period_value": "{{on}} every {{total}}",
+    "average_output_titlecase": "Average Output",
+    "seconds": "{{count}} s",
+    "cycles": "{{count}} cycles",
+    "kilograms_per_cycle": "{{count}} kg/cycle",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "Worlds",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
-    "tonne": "{{count}} t"
+    "tonne": "{{count}} t",
+    "per_second": "{{mass}}/s"
   },
   "material_loose": {
     "noun_titlecase": "Loose",

@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "분출구",
-    "total_lifecycle_time": "전체 주기 시간 (휴면 + 활성)",
-    "active_time": "활성 시간",
-    "iteration_length": "분출 주기 길이",
-    "emission_length": "분출 지속 시간",
-    "emission_rate": "분출 속도"
+    "full_cycle": "전체 주기",
+    "active": "활성",
+    "eruption_cycle": "분출 주기",
+    "erupting": "분출 중",
+    "output": "산출량",
+    "unknown_type": "편집기가 모르는 분출구 유형이라 설정을 표시할 수 없습니다.",
+    "best_case_titlecase": "최상 설정",
+    "best_case_description": "분출량과 활성 시간은 최대로, 전체 주기는 최소로: 산출량이 가장 많고 버텨야 하는 간격이 가장 짧습니다.",
+    "best_case_already": "이미 이 유형이 낼 수 있는 최상값입니다.",
+    "in_game_this_reads_titlecase": "게임에서는 이렇게 표시됩니다",
+    "eruption_period_titlecase": "분출 기간",
+    "eruption_period_value": "{{total}}마다 {{on}}",
+    "active_period_titlecase": "활동 기간",
+    "active_period_value": "{{total}}마다 {{on}}",
+    "average_output_titlecase": "평균 출력",
+    "seconds": "{{count}}초",
+    "cycles": "{{count}} 주기",
+    "kilograms_per_cycle": "{{count}} kg/주기",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "세계",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
-    "tonne": "{{count}} t"
+    "tonne": "{{count}} t",
+    "per_second": "{{mass}}/초"
   },
   "material_loose": {
     "noun_titlecase": "흩어진 재료",

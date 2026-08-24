@@ -58,3 +58,29 @@ export function formatMass(kilograms: number, t: CountTranslator): string {
 function round(value: number): number {
   return Number(value.toFixed(1));
 }
+
+/** The subset of i18next's `t` a name lookup needs, so it can be tested plainly. */
+export type NameTranslator = (
+  key: string,
+  options: { defaultValue: string },
+) => string;
+
+/**
+ * What the game calls an element - "Molten Copper" rather than `MoltenCopper`.
+ *
+ * The extracted catalogue names 149 of the game's elements, so a few - Molten
+ * Cobalt and Murky Brine among them - still have no entry. Splitting the id
+ * reads better than printing it raw while that is true.
+ */
+export function elementDisplayName(
+  elementId: string,
+  t: NameTranslator,
+): string {
+  return t(`oni:ELEMENTS.${elementId}.NAME`, {
+    defaultValue: humanizeElementId(elementId),
+  });
+}
+
+function humanizeElementId(elementId: string): string {
+  return elementId.replace(/([a-z0-9])([A-Z])/g, "$1 $2");
+}

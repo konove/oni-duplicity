@@ -1,0 +1,46 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "A — Read it",
+      "x": 0,
+      "y": 0,
+      "w": 424,
+      "h": 940
+    },
+    {
+      "file": "BestCase.dc.html",
+      "title": "A — after Best case",
+      "x": 520,
+      "y": 0,
+      "w": 424,
+      "h": 940
+    }
+  ],
+  "annotations": [
+    {
+      "id": "the-axis",
+      "x": 0,
+      "y": -230,
+      "w": 424,
+      "text": "A, updated. Erupting and Active now set a PERCENTAGE, because that is what the save actually stores — so their range is fixed (1.7–10%, 40–80%) and the slider clamps to it. The real value sits beside it, dimmed: 79 s, 91.8 cycles.\n\nThe card still ends with the same four lines the game's own panel prints, so you can hold the editor and the game side by side.\n\nBoth artboards show Copper Volcano U014 from Friends1.sav."
+    },
+    {
+      "id": "the-button",
+      "x": 520,
+      "y": -230,
+      "w": 424,
+      "text": "Best case moves three sliders, and only two of them are output: Output to 400 kg/cycle and Active to 80%, since yield = output × active fraction ÷ 600.\n\nThe third adds nothing to the yield — 80% active is 80% whatever the year's length. What it changes is the dormant STRETCH: at 153.1 cycles you sit through 61.3 cycles of nothing in one go, at the 25-cycle floor you sit through 5. Same material, a twelfth of the storage to ride it out. That is the difference between a good geyser and a usable one, and it is why the button is no longer called Maximize output.\n\nLeft alone: eruption cycle and erupting fraction. They set how bursty the flow is — 8.7 kg/s for 79 s versus a longer, gentler dribble — and neither end is better for every build. Judgement call; say if you want them slammed too."
+    },
+    {
+      "id": "the-catch",
+      "x": 0,
+      "y": 980,
+      "w": 944,
+      "text": "Why percentages, spelled out: those two rows are stored as fractions of the row above them. An absolute slider's range would move as you dragged another row — \"Erupting 17–103 s\" is only true while the eruption cycle happens to be 1030 s, and it would silently re-scale under your hand. A percentage clamps to a range that is always correct, and the derived seconds or cycles follow it. The right-hand artboard shows that following in action: Active holds at 80% while its dimmed value drops from 91.8 cycles to 20, because the dormancy cycle above it moved.\n\nThe other three — eruption cycle, dormancy cycle, output — are each one stored roll with a range that never moves, so an absolute slider is exactly right for them.\n\nStill open: a geotuned geyser reports modified numbers in game while the save keeps the base rolls. This card shows the base rolls. If we ever get a geotuned save to check against, that difference needs a line in the UI."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

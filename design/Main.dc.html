@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      background: #121212;
+      font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #90caf9; }
+    a:hover { color: #b3dbff; }
+  </style>
+</helmet>
+
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+
+  <!-- The card is 360px because that is what theme.spacing(45) resolves to today. -->
+  <div style="width: 360px; box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column; gap: 16px;">
+
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+        <span style="font-size: 20px; font-weight: 500; line-height: 32px; color: #fff;">Copper Volcano</span>
+        <span style="font-size: 12px; line-height: 20px; color: rgba(255,255,255,0.5);">2226.9 &deg;C</span>
+      </div>
+      <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+    </div>
+
+    <!-- Type picker, unchanged from today apart from carrying the game's name. -->
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 56px; padding: 0 14px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px;">
+      <span style="font-size: 16px; color: #fff;">Copper Volcano</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+
+      <!-- Row 1 -->
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Eruption cycle</span>
+          <span style="font-size: 16px; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums;">1030 s</span>
+        </div>
+        <div style="position: relative; height: 20px;">
+          <div style="position: absolute; top: 8px; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(144,202,249,0.38);"></div>
+          <div style="position: absolute; top: 8px; left: 0; width: 91.7%; height: 4px; border-radius: 2px; background: #90caf9;"></div>
+          <div style="position: absolute; top: 0; left: 91.7%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #90caf9;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">
+          <span>480 s</span>
+          <span>1080 s</span>
+        </div>
+      </div>
+
+      <!-- Row 2 - stored as a fraction of row 1, so the slider sets the fraction. -->
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Erupting</span>
+          <span style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="font-size: 13px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">79 s</span>
+            <span style="font-size: 16px; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums;">7.7%</span>
+          </span>
+        </div>
+        <div style="position: relative; height: 20px;">
+          <div style="position: absolute; top: 8px; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(144,202,249,0.38);"></div>
+          <div style="position: absolute; top: 8px; left: 0; width: 72%; height: 4px; border-radius: 2px; background: #90caf9;"></div>
+          <div style="position: absolute; top: 0; left: 72%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #90caf9;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">
+          <span>1.7%</span>
+          <span>10%</span>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Dormancy cycle</span>
+          <span style="font-size: 16px; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums;">153.1 cycles</span>
+        </div>
+        <div style="position: relative; height: 20px;">
+          <div style="position: absolute; top: 8px; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(144,202,249,0.38);"></div>
+          <div style="position: absolute; top: 8px; left: 0; width: 64%; height: 4px; border-radius: 2px; background: #90caf9;"></div>
+          <div style="position: absolute; top: 0; left: 64%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #90caf9;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">
+          <span>25 cycles</span>
+          <span>225 cycles</span>
+        </div>
+      </div>
+
+      <!-- Row 4 - stored as a fraction of row 3. -->
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Active</span>
+          <span style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="font-size: 13px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">91.8 cycles</span>
+            <span style="font-size: 16px; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums;">60%</span>
+          </span>
+        </div>
+        <div style="position: relative; height: 20px;">
+          <div style="position: absolute; top: 8px; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(144,202,249,0.38);"></div>
+          <div style="position: absolute; top: 8px; left: 0; width: 50%; height: 4px; border-radius: 2px; background: #90caf9;"></div>
+          <div style="position: absolute; top: 0; left: 50%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #90caf9;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">
+          <span>40%</span>
+          <span>80%</span>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 8px;">
+          <span style="font-size: 14px; color: rgba(255,255,255,0.7);">Output</span>
+          <span style="font-size: 16px; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums;">317 kg/cycle</span>
+        </div>
+        <div style="position: relative; height: 20px;">
+          <div style="position: absolute; top: 8px; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(144,202,249,0.38);"></div>
+          <div style="position: absolute; top: 8px; left: 0; width: 58.5%; height: 4px; border-radius: 2px; background: #90caf9;"></div>
+          <div style="position: absolute; top: 0; left: 58.5%; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #90caf9;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">
+          <span>200 kg/cycle</span>
+          <span>400 kg/cycle</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- One button, and it says exactly what it will do. -->
+    <div style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 16px; box-sizing: border-box; border: 1px solid rgba(144,202,249,0.5); border-radius: 4px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#90caf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="17 11 12 6 7 11"></polyline>
+          <polyline points="17 18 12 13 7 18"></polyline>
+        </svg>
+        <span style="font-size: 14px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; color: #90caf9;">Best case</span>
+      </div>
+      <span style="font-size: 12px; line-height: 17px; color: rgba(255,255,255,0.5);">Output 400 kg/cycle, Active 80%, dormancy cycle down to 25 &mdash; the most material, with the shortest gap to buffer. Eruption timing is left as rolled.</span>
+    </div>
+
+    <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+
+    <!-- The same four lines the game's own panel prints, so the two can be read side by side. -->
+    <div style="background: rgba(255,255,255,0.05); border-radius: 4px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+      <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; color: rgba(255,255,255,0.5);">In game this reads</span>
+      <div style="display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 13px;">
+        <span style="color: rgba(255,255,255,0.7);">Molten Copper</span>
+        <span style="color: #fff; text-align: right; font-variant-numeric: tabular-nums;">6.9 kg/s</span>
+        <span style="color: rgba(255,255,255,0.7);">Eruption period</span>
+        <span style="color: #fff; text-align: right; font-variant-numeric: tabular-nums;">79s every 1030s</span>
+        <span style="color: rgba(255,255,255,0.7);">Active period</span>
+        <span style="color: #fff; text-align: right; font-variant-numeric: tabular-nums;">91.8 of 153.1 cycles</span>
+        <span style="color: rgba(255,255,255,0.7);">Average output</span>
+        <span style="color: #fff; text-align: right; font-variant-numeric: tabular-nums;">317 g/s</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

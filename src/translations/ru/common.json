@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "Гейзеры",
-    "total_lifecycle_time": "Полный цикл (спячка + активность)",
-    "active_time": "Время активности",
-    "iteration_length": "Длительность цикла извержений",
-    "emission_length": "Длительность извержения",
-    "emission_rate": "Скорость извержения"
+    "full_cycle": "Полный цикл",
+    "active": "Активность",
+    "eruption_cycle": "Цикл извержений",
+    "erupting": "Извержение",
+    "output": "Выход",
+    "unknown_type": "Редактор не знает этот тип гейзера, поэтому его настройки показать нельзя.",
+    "best_case_titlecase": "Лучший случай",
+    "best_case_description": "Скорость и время активности на максимум, полный цикл на минимум: больше всего материала и самый короткий перерыв.",
+    "best_case_already": "Уже лучшее, что может выпасть этому типу.",
+    "in_game_this_reads_titlecase": "В игре это выглядит так",
+    "eruption_period_titlecase": "Периодичность извержения",
+    "eruption_period_value": "{{on}} раз в {{total}}",
+    "active_period_titlecase": "Периодичность активности",
+    "active_period_value": "{{on}} кажд. {{total}}",
+    "average_output_titlecase": "Средняя выработка",
+    "seconds": "{{count}} с",
+    "cycles": "{{count}} циклов",
+    "kilograms_per_cycle": "{{count}} кг/цикл",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "Миры",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} мг",
     "gram": "{{count}} г",
     "kilogram": "{{count}} кг",
-    "tonne": "{{count}} т"
+    "tonne": "{{count}} т",
+    "per_second": "{{mass}}/с"
   },
   "material_loose": {
     "noun_titlecase": "Разбросаны",

@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "Géiseres",
-    "total_lifecycle_time": "Duración total del ciclo (inactivo + activo)",
-    "active_time": "Tiempo activo",
-    "iteration_length": "Duración del ciclo de erupción",
-    "emission_length": "Duración de la emisión",
-    "emission_rate": "Tasa de emisión"
+    "full_cycle": "Ciclo completo",
+    "active": "Actividad",
+    "eruption_cycle": "Ciclo de erupción",
+    "erupting": "Erupción",
+    "output": "Producción",
+    "unknown_type": "El editor no conoce este tipo de géiser, así que no puede mostrar sus ajustes.",
+    "best_case_titlecase": "Mejor caso",
+    "best_case_description": "Tasa y tiempo activo al máximo, ciclo completo al mínimo: el máximo de material con la pausa más corta.",
+    "best_case_already": "Ya es lo mejor que puede salir en este tipo.",
+    "in_game_this_reads_titlecase": "En el juego se lee así",
+    "eruption_period_titlecase": "Periodo de erupción",
+    "eruption_period_value": "{{on}} cada {{total}}",
+    "active_period_titlecase": "Periodo activo",
+    "active_period_value": "{{on}} cada {{total}}",
+    "average_output_titlecase": "Producción media",
+    "seconds": "{{count}} s",
+    "cycles": "{{count}} ciclos",
+    "kilograms_per_cycle": "{{count}} kg/ciclo",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "Mundos",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
-    "tonne": "{{count}} t"
+    "tonne": "{{count}} t",
+    "per_second": "{{mass}}/s"
   },
   "material_loose": {
     "noun_titlecase": "Suelto",

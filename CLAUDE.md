@@ -49,6 +49,19 @@ The fork ships source maps with the TypeScript inlined (`inlineSources`), which 
 
 Supported save versions are the `CURRENT_VERSION_MINOR` array in the fork's `src/save-structure/version-validator.ts`. Saves are self-describing — each file carries its own type templates — so a minor version bump that only adds or reorders fields parses unchanged. Use `/save-version` to verify a new version before adding it; never add one unverified.
 
+## Geysers store rolls, not values
+
+A geyser's save data is five numbers from 0 to 1. None of them is a quantity — each is a _roll_, and the value it means depends on the geyser's type. `src/services/oni-save/geyser-configuration.ts` holds what turns one into the other:
+
+- **The per-type ranges** (`GEYSER_TYPES`), transcribed from `GeyserGenericConfig.GenerateConfigs()` in the decompiled assembly, where every geyser is one `new GeyserType(…)` call. Kept in the game's declaration order so the two can be diffed when an update adds a type.
+- **`resampleRoll`**, the game's `GeyserConfigurator.Resample` — a **logit curve, not a line**. A roll of 0.5 is the midpoint, but 0.75 is only about 70% of the way up, so treating a roll as a percentage of the range is wrong in a way that looks plausible.
+
+The save also stores the game's own `scaledRate`, `scaledYearLength` and friends beside the rolls. **Do not write them** — `didInit` is not serialized, so the game recomputes all five from the rolls the first time it reads the geyser back. They are useful for something better: they are the game's own answer next to its own input, so `geyser-configuration.spec.ts` checks `resampleRoll` against them. That is why the curve is verified rather than believed.
+
+Two of the five rows — the erupting share and the active share — are stored as fractions _of the row above them_, so their absolute range moves when that row does. The editor shows those as percentages for exactly that reason; an absolute slider there silently re-scales under the reader's hand.
+
+Derived numbers (`GetEmitRate`, `GetAverageEmission`) are computed, not stored. Note that the long-run average is `output × active share ÷ 600` — the eruption timings and the full cycle's _length_ are not in it. Shortening the full cycle adds no material; it shortens the dormant stretch, which is what the storage has to cover.
+
 ## Testing
 
 **Every change ships with a test.** New feature, bug fix, or refactor of existing

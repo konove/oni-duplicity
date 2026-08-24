@@ -71,11 +71,26 @@
   },
   "geyser": {
     "noun_titlecase_plural": "Gejzíry",
-    "total_lifecycle_time": "Celková délka cyklu (spánek + aktivita)",
-    "active_time": "Doba aktivity",
-    "iteration_length": "Délka erupčního cyklu",
-    "emission_length": "Délka výronu",
-    "emission_rate": "Rychlost výronu"
+    "full_cycle": "Celý cyklus",
+    "active": "Aktivita",
+    "eruption_cycle": "Erupční cyklus",
+    "erupting": "Erupce",
+    "output": "Výron",
+    "unknown_type": "Editor tento typ gejzíru nezná, a tak jeho nastavení nemůže zobrazit.",
+    "best_case_titlecase": "Nejlepší případ",
+    "best_case_description": "Výron a doba aktivity na maximum, celý cyklus na minimum: nejvíc materiálu a nejkratší pauza.",
+    "best_case_already": "Už je to nejlepší, co tento typ může hodit.",
+    "in_game_this_reads_titlecase": "Ve hře to vypadá takto",
+    "eruption_period_titlecase": "Perioda erupce",
+    "eruption_period_value": "{{on}} každých {{total}}",
+    "active_period_titlecase": "Perioda aktivity",
+    "active_period_value": "{{on}} každých {{total}}",
+    "average_output_titlecase": "Průměrný výron",
+    "seconds": "{{count}} s",
+    "cycles": "{{count}} cyklů",
+    "kilograms_per_cycle": "{{count}} kg/cyklus",
+    "percent": "{{count}}%",
+    "celsius": "{{count}} °C"
   },
   "world": {
     "noun_titlecase_plural": "Světy",
@@ -100,7 +115,8 @@
     "milligram": "{{count}} mg",
     "gram": "{{count}} g",
     "kilogram": "{{count}} kg",
-    "tonne": "{{count}} t"
+    "tonne": "{{count}} t",
+    "per_second": "{{mass}}/s"
   },
   "material_loose": {
     "noun_titlecase": "Volný",

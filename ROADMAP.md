@@ -147,7 +147,21 @@ inside certain containers.
 the table for planning, and worth knowing that "totals differ from the game" may
 be correct behaviour rather than a bug.
 
-### 0.10 Geyser sliders edit a number nobody can read
+### 0.10 Geyser sliders edit a number nobody can read — **done**
+
+Shipped in `src/services/oni-save/geyser-configuration.ts`: the full 27-type
+table, `Resample` and its inverse, and the derived rates. `Resample` is checked
+against the `scaled*` values a real save stores beside its rolls, which makes
+the curve verified rather than believed. Two rows — Erupting and Active — set a
+percentage rather than an absolute, because the save stores them as fractions of
+the row above and an absolute range there would re-scale as the reader dragged
+something else. A **Best case** button sets output and active share to their
+maximum and the full cycle to its minimum; the eruption timings are left
+alone, since burstiness is a preference rather than an improvement.
+
+Still open from the design pass: a **geotuned** geyser reports modified numbers
+in game while the save keeps the base rolls. The card shows the base rolls, and
+nothing says so. Needs a geotuned save to check against.
 
 The five sliders edit the raw rolls stored in the save and label them as
 percentages. The game turns each roll into a real value by resampling it between
