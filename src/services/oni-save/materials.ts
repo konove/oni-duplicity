@@ -1,5 +1,8 @@
 import { SimHashNames } from "oni-save-parser";
 
+import { ELEMENT_PHASES, ElementPhase } from "./element-phases";
+import { FOOD_CALORIES_PER_UNIT } from "./food-calories";
+
 // TODO: Seeds, clothing, other sweepables
 export const MaterialGameObjectNames = [...SimHashNames];
 export type MaterialObjectName = ArrayValues<typeof MaterialGameObjectNames>;
@@ -83,4 +86,146 @@ export function elementDisplayName(
 
 function humanizeElementId(elementId: string): string {
   return elementId.replace(/([a-z0-9])([A-Z])/g, "$1 $2");
+}
+
+/**
+ * What a material is, which is also what decides how much of it there is.
+ *
+ * Read off the behaviours the game itself attached to the object, not off a
+ * hand-kept list of prefab names - a save carries the behaviours, so this keeps
+ * working when a DLC adds a seed nobody here has heard of.
+ */
+export type MaterialKind =
+  "element" | "seed" | "egg" | "food" | "equipment" | "item";
+
+/** The three units the game measures a resource in. */
+export type MaterialMeasure = "mass" | "calories" | "count";
+
+/**
+ * Whether a game object group is material a colony sweeps, stores or eats.
+ *
+ * `Pickupable` alone is not the test. The largest pickupable group in a real
+ * colony was 57 Chameleons, and duplicants are pickupable too - so anything
+ * with a brain is excluded, which is what separates a critter from the meat it
+ * eventually becomes.
+ */
+export function isMaterialGroup(behaviorNames: readonly string[]): boolean {
+  if (!behaviorNames.includes("Pickupable")) {
+    return false;
+  }
+  return !behaviorNames.some((name) => name.endsWith("Brain"));
+}
+
+/**
+ * Classifies a material group by the behaviours on its objects.
+ *
+ * Eggs are the one kind with no behaviour of their own - a Chameleon Egg
+ * carries nothing a research databank does not - so they are recognised by
+ * name, which is also how the game names them (`EGG_NAME` in its catalogue).
+ */
+export function materialKind(
+  groupName: string,
+  behaviorNames: readonly string[],
+): MaterialKind {
+  if (behaviorNames.includes("PlantableSeed")) {
+    return "seed";
+  }
+  if (behaviorNames.includes("Edible")) {
+    return "food";
+  }
+  if (behaviorNames.includes("Equippable")) {
+    return "equipment";
+  }
+  if (MaterialGameObjectNames.indexOf(groupName as MaterialObjectName) !== -1) {
+    return "element";
+  }
+  if (groupName.endsWith("Egg")) {
+    return "egg";
+  }
+  return "item";
+}
+
+/**
+ * The unit a kind is measured in, mirroring the game's own three-way split:
+ * `GameTags.MaterialCategories` are shown as mass, `CalorieCategories` as
+ * kcal, and `UnitCategories` as a plain count.
+ */
+export function materialMeasure(kind: MaterialKind): MaterialMeasure {
+  switch (kind) {
+    case "element":
+      return "mass";
+    case "food":
+      return "calories";
+    default:
+      return "count";
+  }
+}
+
+const LOOSE_OBJECT_KEY_BY_PHASE: Record<ElementPhase, string> = {
+  solid: "material_loose.clump_count",
+  liquid: "material_loose.bottle_count",
+  gas: "material_loose.canister_count",
+  // No element in a vacuum phase ever lies on a floor, but the table has three.
+  vacuum: "material_loose.clump_count",
+};
+
+/**
+ * What a loose pile of this material is a pile *of*.
+ *
+ * Solid element lies around in clumps, liquid in bottles and gas in canisters
+ * - Klei's own strings say "bottled liquids" and "Gas Canisters", and the
+ * split is the one Sweep & Mop Orders makes. Calling all three clumps, which
+ * the page used to, is wrong for every liquid in a colony.
+ *
+ * A counted material needs none of this: its amount already reads "31 seeds",
+ * so the line under it only has to say the seeds are on the floor.
+ */
+export function looseObjectKey(kind: MaterialKind, groupName: string): string {
+  if (kind !== "element") {
+    return "material_loose.lying_around";
+  }
+  const phase = ELEMENT_PHASES[groupName];
+  return LOOSE_OBJECT_KEY_BY_PHASE[phase] ?? "material_loose.clump_count";
+}
+
+/** The noun a counted material is counted in. */
+export function countKey(kind: MaterialKind): string {
+  switch (kind) {
+    case "seed":
+      return "material.seed_count";
+    case "egg":
+      return "material.egg_count";
+    default:
+      return "material.unit_count";
+  }
+}
+
+/**
+ * The calories in a quantity of food, or null if this is not a food the game
+ * knows.
+ *
+ * `Edible.Calories` is `Units * foodInfo.CaloriesPerUnit`, and the food is
+ * looked up by prefab name - `GetFormattedCaloriesForItem` passes `tag.Name`,
+ * and a food prefab is created with its own food id as its name.
+ */
+export function foodCalories(groupName: string, units: number): number | null {
+  const perUnit = FOOD_CALORIES_PER_UNIT[groupName];
+  if (perUnit === undefined) {
+    return null;
+  }
+  return units * perUnit;
+}
+
+/**
+ * Formats calories the way the game does: kilocalories always, since
+ * `AppendFormattedCalories` defaults `forceKcal` to true, rounded by
+ * `AppendStandardFloat` - two decimals below ten, whole numbers above it.
+ */
+export function formatCalories(calories: number, t: CountTranslator): string {
+  const kilocalories = calories / 1000;
+  const rounded =
+    Math.abs(kilocalories) < 10
+      ? Number(kilocalories.toFixed(2))
+      : Math.round(kilocalories);
+  return t("material.kilocalorie", { count: rounded });
 }

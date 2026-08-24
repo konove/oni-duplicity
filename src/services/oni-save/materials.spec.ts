@@ -1,6 +1,13 @@
 import { SimHashNames } from "oni-save-parser";
 
 import {
+  isMaterialGroup,
+  materialKind,
+  materialMeasure,
+  looseObjectKey,
+  countKey,
+  foodCalories,
+  formatCalories,
   MaterialGameObjectNames,
   elementDisplayName,
   formatMass,
@@ -104,5 +111,292 @@ describe("elementDisplayName", () => {
     expect(elementDisplayName("MoltenUnobtainium", named)).toBe(
       "Molten Unobtainium",
     );
+  });
+});
+
+// Behaviour lists copied verbatim out of a real colony, so the classifier is
+// tested against what saves actually contain rather than an idea of it.
+const SHALE = [
+  "KPrefabID",
+  "PrimaryElement",
+  "Pickupable",
+  "StateMachineController",
+  "Clearable",
+  "Prioritizable",
+  "Klei.AI.Modifiers",
+  "Movable",
+  "KCircleCollider2D",
+];
+const SALT_WATER = [
+  "KPrefabID",
+  "PrimaryElement",
+  "Pickupable",
+  "StateMachineController",
+  "Clearable",
+  "Prioritizable",
+  "Klei.AI.Modifiers",
+  "Movable",
+  "KBoxCollider2D",
+  "Dumpable",
+];
+const CHAMELEON = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KBoxCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Clearable",
+  "Klei.AI.Traits",
+  "Health",
+  "RangedAttackable",
+  "FactionAlignment",
+  "Prioritizable",
+  "Klei.AI.Effects",
+  "AnimEventHandler",
+  "SymbolOverrideController",
+  "DrowningMonitor",
+  "Butcherable",
+  "Navigator",
+  "Trappable",
+  "Weapon",
+  "Baggable",
+  "Capturable",
+  "Movable",
+  "CreatureBrain",
+  "ChoreConsumer",
+  "CaloriesConsumedElementProducer",
+  "Facing",
+  "ChoreDriver",
+  "User",
+];
+const MINION = [
+  "KPrefabID",
+  "StateMachineController",
+  "MinionModifiers",
+  "MinionBrain",
+  "Storage",
+  "Health",
+  "MinionIdentity",
+  "Navigator",
+  "KBoxCollider2D",
+  "PrimaryElement",
+  "Pickupable",
+  "Clearable",
+  "Prioritizable",
+];
+const SEED = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KCircleCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Movable",
+  "Compostable",
+  "PlantableSeed",
+  "MutantPlant",
+  "Clearable",
+  "Prioritizable",
+];
+const EGG = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KBoxCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Movable",
+  "Klei.AI.Effects",
+  "SymbolOverrideController",
+  "Clearable",
+  "Prioritizable",
+];
+const MEAT = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KBoxCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Movable",
+  "Compostable",
+  "Edible",
+  "Clearable",
+  "Prioritizable",
+];
+const SUIT = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KCircleCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Movable",
+  "Equippable",
+  "SuitTank",
+  "HelmetController",
+  "Durability",
+  "Storage",
+  "AtmoSuit",
+  "Clearable",
+  "Prioritizable",
+];
+const DATABANK = [
+  "KPrefabID",
+  "StateMachineController",
+  "PrimaryElement",
+  "KCircleCollider2D",
+  "Klei.AI.Modifiers",
+  "Pickupable",
+  "Movable",
+  "Clearable",
+  "Prioritizable",
+];
+
+describe("isMaterialGroup", () => {
+  it("accepts loose element chunks", () => {
+    expect(isMaterialGroup(SHALE)).toBe(true);
+    expect(isMaterialGroup(SALT_WATER)).toBe(true);
+  });
+
+  it("accepts the sweepables the page never listed", () => {
+    expect(isMaterialGroup(SEED)).toBe(true);
+    expect(isMaterialGroup(EGG)).toBe(true);
+    expect(isMaterialGroup(MEAT)).toBe(true);
+    expect(isMaterialGroup(DATABANK)).toBe(true);
+  });
+
+  // The whole reason a curated rule is needed: the largest pickupable group in
+  // that colony was 57 chameleons, and a duplicant is pickupable too.
+  it("rejects anything with a brain, however pickupable", () => {
+    expect(isMaterialGroup(CHAMELEON)).toBe(false);
+    expect(isMaterialGroup(MINION)).toBe(false);
+  });
+
+  it("rejects anything that cannot be picked up at all", () => {
+    expect(isMaterialGroup(["KPrefabID", "PrimaryElement", "Storage"])).toBe(
+      false,
+    );
+  });
+});
+
+describe("materialKind", () => {
+  it("reads the kind off the behaviours the game gave the object", () => {
+    expect(materialKind("DewDripperPlantSeed", SEED)).toBe("seed");
+    expect(materialKind("Meat", MEAT)).toBe("food");
+    expect(materialKind("Atmo_Suit", SUIT)).toBe("equipment");
+  });
+
+  it("calls a named element an element", () => {
+    expect(materialKind("Shale", SHALE)).toBe("element");
+    expect(materialKind("SaltWater", SALT_WATER)).toBe("element");
+  });
+
+  // An egg carries no behaviour a seed or a databank does not; the name is the
+  // only thing separating them, and the game names them the same way.
+  it("recognises an egg by name, having nothing else to go on", () => {
+    expect(materialKind("ChameleonEgg", EGG)).toBe("egg");
+  });
+
+  it("falls back to a plain item", () => {
+    expect(materialKind("OrbitalResearchDatabank", DATABANK)).toBe("item");
+  });
+});
+
+describe("materialMeasure", () => {
+  // The game's own three-way split: GameTags.MaterialCategories are mass,
+  // CalorieCategories are kcal, UnitCategories are a plain count.
+  it("weighs elements and counts everything else", () => {
+    expect(materialMeasure("element")).toBe("mass");
+    expect(materialMeasure("food")).toBe("calories");
+    expect(materialMeasure("seed")).toBe("count");
+    expect(materialMeasure("egg")).toBe("count");
+    expect(materialMeasure("equipment")).toBe("count");
+    expect(materialMeasure("item")).toBe("count");
+  });
+});
+
+describe("looseObjectKey", () => {
+  // The page called every loose pile a "clump", which is wrong for every
+  // liquid in a colony: Salt Water lies on the floor in bottles.
+  it("names a loose pile after the element's phase", () => {
+    expect(looseObjectKey("element", "Shale")).toBe(
+      "material_loose.clump_count",
+    );
+    expect(looseObjectKey("element", "SaltWater")).toBe(
+      "material_loose.bottle_count",
+    );
+    expect(looseObjectKey("element", "ChlorineGas")).toBe(
+      "material_loose.canister_count",
+    );
+  });
+
+  // A counted material already says what it is in the amount - "31 seeds" -
+  // so the line under it only has to say where they are.
+  it("says only that a counted material is lying around", () => {
+    expect(looseObjectKey("seed", "SeaLettuceSeed")).toBe(
+      "material_loose.lying_around",
+    );
+    expect(looseObjectKey("egg", "ChameleonEgg")).toBe(
+      "material_loose.lying_around",
+    );
+    expect(looseObjectKey("item", "OrbitalResearchDatabank")).toBe(
+      "material_loose.lying_around",
+    );
+  });
+
+  it("falls back to clumps for an element with no phase on record", () => {
+    expect(looseObjectKey("element", "NotAnElement")).toBe(
+      "material_loose.clump_count",
+    );
+  });
+});
+
+describe("countKey", () => {
+  it("counts each kind in its own noun", () => {
+    expect(countKey("seed")).toBe("material.seed_count");
+    expect(countKey("egg")).toBe("material.egg_count");
+    expect(countKey("item")).toBe("material.unit_count");
+    expect(countKey("equipment")).toBe("material.unit_count");
+  });
+});
+
+// Edible.Calories is `Units * foodInfo.CaloriesPerUnit`, and
+// GameUtil.AppendFormattedCalories divides that by 1000 and calls it kcal.
+describe("foodCalories", () => {
+  it("multiplies the save's units by the game's rate", () => {
+    // Seven Ovagro Figs at 325,000 each - the design's worked example.
+    expect(foodCalories("VineFruit", 7)).toBe(2275000);
+  });
+
+  it("handles a real colony's 14.5 units of meat", () => {
+    expect(foodCalories("Meat", 14.5)).toBe(23200000);
+  });
+
+  // FernFood really is 0f in TUNING.FOOD.FOOD_TYPES; the game hides it via
+  // FoodInfo.Display rather than treating it as missing.
+  it("reports the zero the game actually declares", () => {
+    expect(foodCalories("FernFood", 3)).toBe(0);
+  });
+
+  it("gives up on a prefab the table has never heard of", () => {
+    expect(foodCalories("NotAFood", 3)).toBeNull();
+  });
+});
+
+describe("formatCalories", () => {
+  it("shows kilocalories, as the game forces", () => {
+    expect(formatCalories(2275000, t)).toBe("material.kilocalorie:2275");
+  });
+
+  // AppendStandardFloat keeps two decimals below ten and none above it.
+  it("keeps decimals only under ten kilocalories", () => {
+    expect(formatCalories(9600, t)).toBe("material.kilocalorie:9.6");
+    expect(formatCalories(10400, t)).toBe("material.kilocalorie:10");
+  });
+
+  it("prints a plain zero", () => {
+    expect(formatCalories(0, t)).toBe("material.kilocalorie:0");
   });
 });

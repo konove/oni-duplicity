@@ -154,3 +154,51 @@ Then the fork round trip: copy the file over, `npm run build` there, commit,
 push, re-pin the sha in this repo's `package.json`, and **re-run
 `extract-translations.py` for en, ru, ko and zh** - it reads the element ids
 from the installed parser, so new elements have no display name until it does.
+
+## extract-element-phases.py
+
+Regenerates `src/services/oni-save/element-phases.ts` - what phase each of the
+game's 212 elements is in.
+
+The Materials page needs it to say what a pile of something _is_. Loose solid
+lies around in clumps, loose liquid in bottles and loose gas in canisters;
+Klei's own strings say "bottled liquids" and "Gas Canisters", and the split is
+the one Sweep & Mop Orders makes. The page called all three "clumps", which was
+wrong for every liquid in a colony.
+
+Like `extract-sim-hashes.py` this needs **no decompiler** - it reads the same
+YAML the game installs, one file per phase, and every entry declares its own
+`state`:
+
+```sh
+python extract-element-phases.py "C:/Steam/steamapps/common/OxygenNotIncluded"
+```
+
+The declared `state` is read rather than the filename trusted, so an element
+filed under the wrong phase is a loud failure instead of a quiet
+miscategorisation.
+
+## extract-food-calories.py
+
+Regenerates `src/services/oni-save/food-calories.ts` - calories per unit for
+all 75 foods.
+
+Food is the one material whose quantity the game does not show in the unit the
+save stores. A save records `PrimaryElement.Units`; `Edible.Calories` is
+`Units * foodInfo.CaloriesPerUnit` and `GameUtil.AppendFormattedCalories`
+divides by 1000 and forces kcal, so seven Ovagro Figs at 325,000 read as 2,275
+kcal. That rate lives only in the assembly, as `TUNING.FOOD.FOOD_TYPES`.
+
+```sh
+ilspycmd -p -o decomp ".../Managed/Assembly-CSharp.dll"
+python extract-food-calories.py     # expects ./decomp alongside it
+```
+
+Two shapes in the table are not plain numbers, and both are resolved rather
+than guessed: nine ids are written `SomeConfig.ID` and are read out of that
+config class, and Pemmican computes its calories from Hardskin Berry's.
+Anything unresolvable is reported and nothing is written.
+
+Eight foods come out at zero calories - Nori, Caviar and Fern Food among them.
+That is the game's own value, not a failure to read one: `FoodInfo.Display` is
+`CaloriesPerUnit != 0f`, which is how the game hides them.
