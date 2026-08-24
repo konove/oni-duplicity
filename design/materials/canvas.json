@@ -1,0 +1,68 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "A — The cell owns the action",
+      "x": 0,
+      "y": 0,
+      "w": 1120,
+      "h": 800
+    },
+    {
+      "file": "RowMenu.dc.html",
+      "title": "B — One menu per row",
+      "x": 1240,
+      "y": 0,
+      "w": 1120,
+      "h": 800
+    },
+    {
+      "file": "SelectAct.dc.html",
+      "title": "C — Select, then act",
+      "x": 2480,
+      "y": 0,
+      "w": 1120,
+      "h": 800
+    }
+  ],
+  "annotations": [
+    {
+      "id": "the-diagnosis",
+      "x": 0,
+      "y": -380,
+      "w": 1120,
+      "text": "Why it looked off, and it was structural rather than cosmetic: the button sat at the end of the row while the action it performs belongs to one part of the row. Nothing told you whether it deleted Shale's loose 197.4 t or its stored 200 kg — and once containers can be emptied there are two targets and one slot for them.\n\nSo the question is not where to put a trash icon. It is which thing owns an action. Three answers below, on ten rows chosen to exercise every case: loose only, stored only, both, and the three units that are not mass.\n\nWorth knowing before choosing: deletion is not the last action this page will grow. The roadmap already wants set-temperature and clear-germs (2.5), and those apply to the whole row rather than to one location. An affordance that only just fits two deletes will not fit five."
+    },
+    {
+      "id": "direction-a",
+      "x": 0,
+      "y": 830,
+      "w": 1120,
+      "text": "A — back to columns, and each cell carries the action for its own amount. This is what the page does today, and it is why today's version reads clearly: the button is inside the Loose cell, beside the number it destroys.\n\nThe dashed circles are where container-delete lands. Nothing moves when it ships; an empty cell keeps showing an em dash and no button, which is exactly what Water and Chlorine Gas need.\n\nWhat it costs: it only scales in one direction. A second action per cell has nowhere to go, so set-temperature and clear-germs would still need somewhere else to live."
+    },
+    {
+      "id": "direction-b",
+      "x": 1240,
+      "y": 830,
+      "w": 1120,
+      "text": "B — one affordance per row, however many actions exist. The menu is open on Shale.\n\nThe ambiguity disappears because the menu names the quantity: \"Delete 197.4 t lying around\" and \"Delete 200 kg in containers\" cannot be confused with each other, and a row with nothing stored simply does not list the second one. Row-level actions sit below a divider, so temperature and germs have a home from day one.\n\nWhat it costs: the common case gets slower. Clearing loose junk is now two clicks and a read, where today it is one click and a confirm."
+    },
+    {
+      "id": "direction-c",
+      "x": 2480,
+      "y": 830,
+      "w": 1120,
+      "text": "C — select rows, then act on the selection. The bar replaces the search field while anything is selected.\n\nThis is the only one that answers a question the others cannot: \"delete the loose material of these six things\" — and it is the shape 2.2's bulk edit and 2.5's temperature tooling both want anyway, so building it here would not be building it twice.\n\nWhat it costs: the most machinery by far, and single-row work becomes select-then-act. It also needs an answer for what a mixed selection means when one row has nothing stored."
+    },
+    {
+      "id": "the-recommendation",
+      "x": 0,
+      "y": 1160,
+      "w": 2360,
+      "text": "A now, and B when the third action arrives.\n\nA is the smallest change that fixes the ambiguity, it is already how the shipped page behaves, and container-delete drops into it without moving anything. It is not future-proof for five actions, but it does not have to be yet — 2.6 is the only one on the roadmap that touches this page and it fits.\n\nB is where this ends up. The moment set-temperature exists, per-cell icons stop working and the menu earns its click. Going straight to B is defensible if you would rather not rebuild the affordance twice.\n\nC is worth keeping in view but not building for this: the page has one action today. Selection is the right investment when 2.2 lands and there is genuinely something to do in bulk, and at that point it can wrap either A or B rather than replacing them."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

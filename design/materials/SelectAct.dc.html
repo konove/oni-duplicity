@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #121212; font-family: Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #90caf9; } a:hover { color: #b3dbff; }
+  </style>
+</helmet>
+<div style="width: 1080px; box-sizing: border-box; padding: 16px 0 32px;">
+<div style="margin: 0 16px 16px; height: 56px; box-sizing: border-box; border-radius: 4px; background: rgba(144,202,249,0.16); display: flex; align-items: center; gap: 16px; padding: 0 16px;">
+  <span style="font-size: 15px; color: #90caf9;">2 selected</span>
+  <div style="flex: 1;"></div>
+  <div style="display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border: 1px solid rgba(244,67,54,0.5); border-radius: 4px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f44336" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><polyline points="3 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg><span style="font-size: 13px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; color: #f44336;">Delete loose</span></div>
+  <div style="display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border: 1px solid rgba(244,67,54,0.5); border-radius: 4px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f44336" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><polyline points="3 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg><span style="font-size: 13px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; color: #f44336;">Delete stored</span></div>
+  <div style="display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 12px; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px;"><span style="font-size: 13px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; color: #fff;">Set temperature</span></div>
+</div><div style="display: grid; grid-template-columns: 56px 280px minmax(0,1fr) minmax(0,1fr);">
+<div style="padding: 8px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; "><span style="font-size: 14px; font-weight: 500; color: #fff;"></span></div><div style="padding: 8px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; "><span style="font-size: 14px; font-weight: 500; color: #fff;">Material</span></div><div style="padding: 8px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; "><span style="font-size: 14px; font-weight: 500; color: #fff;">Loose</span></div><div style="padding: 8px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; "><span style="font-size: 14px; font-weight: 500; color: #fff;">In containers</span></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid #90caf9; background: #90caf9; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><polyline points="4 12 9 17 20 6"></polyline></svg></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Shale</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">solid element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">197.4 t</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">129 clumps</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">200 kg</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">1 container</span>
+    </div></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Sedimentary Rock</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">solid element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">58 t</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">40 clumps</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">300 kg</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">3 containers</span>
+    </div></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid #90caf9; background: #90caf9; display: flex; align-items: center; justify-content: center; flex: none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><polyline points="4 12 9 17 20 6"></polyline></svg></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Water</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">liquid element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">7.6 t</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">3 containers</span>
+    </div></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Salt Water</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">liquid element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">4776.7 kg</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">46 bottles</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Bleach Stone</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">solid element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">102.3 kg</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">10 clumps</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">1693.7 kg</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">1 container</span>
+    </div></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Chlorine Gas</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">gas element</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">2050 g</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">16 containers</span>
+    </div></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Waterweed Seed</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">seed</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">31 seeds</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">lying around</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Ovagro Fig</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">food</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">2,275 kcal</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">7 &middot; 325 kcal each</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Dartle Egg</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">egg</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">11 eggs</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">lying around</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div>
+<div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center; justify-content: center;"><div style="width: 18px; height: 18px; border-radius: 2px; border: 2px solid rgba(255,255,255,0.5); background: transparent; display: flex; align-items: center; justify-content: center; flex: none;"></div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; flex-direction: column; gap: 2px; justify-content: center;">
+    <span style="font-size: 14px; color: #fff;">Dewdrip</span>
+    <span style="font-size: 12px; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255,255,255,0.5);">industrial ingredient</span>
+  </div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+      <span style="font-size: 15px; color: #fff; font-variant-numeric: tabular-nums;">2 units</span>
+      <span style="font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">lying around</span>
+    </div></div><div style="padding: 10px 16px; border-bottom: 1px solid rgba(81,81,81,1); display: flex; align-items: center;"><span style="color: rgba(255,255,255,0.5);">&mdash;</span></div>
+</div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -325,6 +325,37 @@ highest safety-per-line in this document. Depends on 0.1.
 and `LoadingDialog` exists. **Check whether the dialog is mounted for the Saving status before writing
 any code** — this may be a zero- or one-line fix. **Effort: XS–S.**
 
+### 1.8 A row menu on the Materials page — the shape the next three features plug into
+
+Settled by a design pass; the artboards are in `design/materials/`. Today's single delete button lives
+inside the Loose cell, which is unambiguous only because there is exactly one thing to delete. The
+moment containers can be emptied (2.6) there are two targets, and set-temperature and clear-germs (2.5)
+add two more that belong to the whole row rather than to one location. Four actions do not fit as
+per-cell icons.
+
+One overflow menu per row takes them all, and **each entry names its own quantity**, which is what
+removes the ambiguity:
+
+| Entry                       | Comes from                       |
+| --------------------------- | -------------------------------- |
+| Delete 197.4 t lying around | ships today, moved into the menu |
+| Delete 200 kg in containers | 2.6                              |
+| Set temperature…            | 2.5                              |
+| Clear germs…                | 2.5                              |
+
+Entries that do not apply are **omitted, not disabled** — a row with nothing stored simply has no second
+line, which is how the page keeps saying that Water and Chlorine Gas exist only inside containers.
+
+**Effort: S**, and it is worth doing before 2.5 or 2.6 rather than after: both would otherwise ship an
+affordance that has to be rebuilt around them. **Cost to weigh:** clearing loose junk becomes two clicks
+and a read where today it is one click and a confirm. That is the trade the menu asks for, and it was
+accepted deliberately.
+
+A fourth possibility was considered and deferred: row selection plus an action bar, which is the only
+shape that answers "delete the loose material of these six things". It is the same machinery 2.2's bulk
+edit needs, so it is worth revisiting when that lands — at which point it can wrap the row menu rather
+than replace it.
+
 ---
 
 ## Tier 2 — Real work, real demand
@@ -387,11 +418,44 @@ ship with a type-name placeholder, do not block on art.
 `PrimaryElement` gives `ElementID`, `Units`, `_Temperature`, `diseaseID`, `diseaseCount` per object.
 Scope to bulk operations on the Materials page — "set temperature of all X", "clear all germs".
 
+**Where it surfaces is already decided:** both are entries in 1.8's row menu, below the divider that
+separates them from the two deletes, because they act on the whole row rather than on loose or stored
+separately. Build 1.8 first or these have nowhere to live.
+
 **Effort: M. Risk:** a temperature outside an element's phase range makes the sim convert the object on
 load, and the parser ships no phase-transition table. Either hand-build one and clamp, or warn loudly.
 **It cannot touch tile or sim data** — only loose and stored objects. Say so in the UI, or expect "it
 didn't cool my base" issues.
 
+### 2.6 Delete material out of containers
+
+The Materials page can delete an element's loose material and nothing else. That is not a UI gap: it is
+the only delete path that exists. `delete-loose-material.ts` filters top-level object groups, and
+anything stored is nested inside a `Storage` behavior's `extraData`, which **no reducer writes to at
+all** — the only mention of `Storage` in `reducer/` is the comment saying that one does not touch it.
+
+On a real colony that leaves ten element types unreachable, four of them reachable by no other means:
+Water, Chlorine Gas, Oxygen and Carbon Dioxide exist only inside containers there, so the page renders
+them with no delete button and no alternative.
+
+**Where it surfaces:** the second entry in 1.8's row menu, reading "Delete 200 kg in containers" — the
+quantity is in the label because a row can offer both deletes at once and they must not be confusable.
+
+**The mechanism is a filter.** `StorageBehavior.extraData` is a plain `StoredGameObject[]`, so removing
+an item is one `filter` call. What it cannot use is the generic path: `modifyBehavior` with
+`BehaviorDataTarget.Extra` merges by key — lodash `merge` for the deep case, object spread otherwise —
+and neither can _shorten_ an array. This needs its own action and reducer.
+
+**Effort: S for the mechanism, M for correctness.** **Risk:** the same dangling references as 2.3. A
+stored item carries a `KPrefabID.InstanceID` that fetch errands and delivery lists can point at, and a
+half-eaten ration is referenced by whoever was carrying it. Sequence it with 2.3 rather than separately,
+and round trip the result through the actual game — a clean parse here proves nothing about whether the
+colony still loads.
+
+Two smaller questions that fall out of the same place: deletion is per element type, never per pile, so
+"delete one of my 129 shale clumps" has no expression today; and it is worth deciding whether emptying a
+container should delete the contents or leave them loose on the floor, which is what the game itself
+does when a bin is deconstructed.
 ---
 
 ## Tier 3 — Later
