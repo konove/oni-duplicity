@@ -8,6 +8,9 @@ import Paper from "@mui/material/Paper";
 
 import DuplicantMenu from "@/components/DuplicantMenu";
 import DuplicantPortrait from "@/components/DuplicantPortrait";
+import DeadChip from "@/components/DeadChip";
+
+import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
 
 import DuplicantName from "./components/DuplicantName";
 import DuplicantTraits from "./components/DuplicantTraits";
@@ -29,6 +32,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   titleBar: {
     display: "flex",
     flexDirection: "row",
+    alignItems: "center",
+    gap: theme.spacing(),
     marginBottom: theme.spacing(),
   },
   titleControls: {
@@ -56,10 +61,12 @@ type Props = DuplicantListItemProps;
 
 const DuplicantListItem: React.FC<Props> = ({ className, gameObjectId }) => {
   const classes = useStyles();
+  const { isDead } = useDuplicantCondition(gameObjectId);
   return (
     <Paper className={classnames(classes.root, className)}>
       <div className={classes.titleBar}>
         <DuplicantName gameObjectId={gameObjectId} />
+        {isDead && <DeadChip />}
         <div className={classes.titleControls}>
           <EditButton
             className={classes.editButton}

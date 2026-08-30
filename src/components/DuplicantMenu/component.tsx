@@ -6,12 +6,15 @@ import Divider from "@mui/material/Divider";
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
+import ReviveMenuItem from "./components/ReviveMenuItem";
 import CopyMenuItem from "./components/CopyMenuItem";
 import ImportMenuItem from "./components/ImportMenuItem";
 import ExportMenuItem from "./components/ExportMenuItem";
 import PasteMenuItem from "./components/PasteMenuItem";
 import CloneMenuItem from "./components/CloneMenuItem";
 import MegaMenuItem from "./components/MegaMenuItem";
+
+import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
 
 export interface DuplicantMenuProps {
   gameObjectId: number;
@@ -20,6 +23,7 @@ export interface DuplicantMenuProps {
 type Props = DuplicantMenuProps;
 const DuplicantMenu: React.FC<Props> = ({ gameObjectId }) => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
+  const { isDead } = useDuplicantCondition(gameObjectId);
 
   const onOpen = React.useCallback((e: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(e.currentTarget);
@@ -44,6 +48,14 @@ const DuplicantMenu: React.FC<Props> = ({ gameObjectId }) => {
         open={Boolean(anchorEl)}
         onClose={onClose}
       >
+        {/* First, and omitted rather than disabled on a living duplicant -
+            the way the Materials row menu leaves out an entry with nothing to
+            act on. A greyed row asks the reader to work out why it is greyed,
+            and "this one is alive" is not news they need. */}
+        {isDead && (
+          <ReviveMenuItem gameObjectId={gameObjectId} onClick={onClose} />
+        )}
+        {isDead && <Divider />}
         <CopyMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <PasteMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <Divider />

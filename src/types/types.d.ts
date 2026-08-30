@@ -15,6 +15,7 @@ interface Window {
   __REDUX_DEVTOOLS_EXTENSION__?: any;
   loadMockSave?: () => void;
   loadMockError?: () => void;
+  killMockDuplicant?: () => number;
 }
 
 declare module "@changelog" {

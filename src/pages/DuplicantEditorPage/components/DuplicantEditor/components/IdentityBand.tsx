@@ -8,7 +8,9 @@ import Typography from "@mui/material/Typography";
 
 import DuplicantPortrait from "@/components/DuplicantPortrait";
 import DuplicantMenu from "@/components/DuplicantMenu";
+import DeadChip from "@/components/DeadChip";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
 
 import Traits from "./Traits";
 import Interests from "./Interests";
@@ -59,6 +61,12 @@ const styles = (theme: Theme) =>
       gap: theme.spacing(1.5),
       minHeight: 32,
     },
+    // Sits on the name's baseline row, so it reads as part of the name rather
+    // than as a control.
+    deadChip: {
+      alignSelf: "center",
+      flex: "none",
+    },
     identityLine: {
       minWidth: 0,
       overflow: "hidden",
@@ -93,6 +101,7 @@ type Props = IdentityBandProps & WithStyles<typeof styles> & WithTranslation;
 
 const IdentityBand: React.FC<Props> = ({ classes, gameObjectId, t }) => {
   const { templateData } = useBehavior(gameObjectId, MinionIdentityBehavior);
+  const { isDead } = useDuplicantCondition(gameObjectId);
   const { name, gender, voiceIdx, arrivalTime } = templateData;
 
   return (
@@ -103,6 +112,7 @@ const IdentityBand: React.FC<Props> = ({ classes, gameObjectId, t }) => {
       <div className={classes.identity}>
         <div className={classes.nameRow}>
           <Typography variant="h5">{name}</Typography>
+          {isDead && <DeadChip className={classes.deadChip} />}
           <Typography
             className={classes.identityLine}
             variant="body2"

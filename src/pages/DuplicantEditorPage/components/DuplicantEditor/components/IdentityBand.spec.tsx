@@ -75,6 +75,13 @@ jest.mock("@/services/oni-save/hooks/useBehavior", () => ({
 
 const mockUseBehavior = useBehavior as jest.MockedFunction<typeof useBehavior>;
 
+// Death is marked on FactionAlignment, not on Health - see duplicants.ts.
+let alignment: Record<string, boolean> = {
+  alignmentActive: true,
+  targeted: false,
+  targetable: true,
+};
+
 const TEMPLATE_DATA: Record<string, unknown> = {
   [MinionIdentityBehavior]: {
     name: "Ada",
@@ -90,10 +97,14 @@ const TEMPLATE_DATA: Record<string, unknown> = {
 };
 
 beforeEach(() => {
+  alignment = { alignmentActive: true, targeted: false, targetable: true };
   mockUseBehavior.mockImplementation(
     (_gameObjectId: number, behaviorName: any) =>
       ({
-        templateData: TEMPLATE_DATA[behaviorName as string],
+        templateData:
+          behaviorName === "FactionAlignment"
+            ? alignment
+            : TEMPLATE_DATA[behaviorName as string],
         extraData: null,
         onTemplateDataModify: jest.fn(),
         onExtraDataModify: jest.fn(),
@@ -122,6 +133,25 @@ describe("IdentityBand", () => {
     expect(screen.getByText("Interests").tagName).toBe("SPAN");
     expect(screen.queryByRole("heading", { level: 6 })).toBeNull();
     expect(screen.queryByRole("separator")).toBeNull();
+  });
+
+  // A and D out of the design pass: a dead duplicant is marked where their
+  // name is, and everything about them stays editable.
+  it("marks a dead duplicant beside their name", () => {
+    alignment = { alignmentActive: false, targeted: false, targetable: false };
+    render(<IdentityBand gameObjectId={1} />);
+
+    expect(screen.getByText("Dead")).toBeInTheDocument();
+    // Still their record, not a tombstone.
+    expect(screen.getByRole("heading", { name: "Ada" })).toBeInTheDocument();
+    expect(screen.getByText("Binge Eater")).toBeInTheDocument();
+    expect(screen.getByText("Add Trait")).toBeInTheDocument();
+  });
+
+  it("says nothing about a living duplicant", () => {
+    render(<IdentityBand gameObjectId={1} />);
+
+    expect(screen.queryByText("Dead")).toBeNull();
   });
 
   it("shows the duplicant's traits and interests", () => {

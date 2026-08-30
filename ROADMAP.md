@@ -355,7 +355,17 @@ pass before code.
 
 ## Tier 1 — Cheap wins, mostly already built
 
-### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45)
+### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45) — **built, pending an in-game pass**
+
+**Shipped:** a dead duplicant is marked on the duplicants list and in the editor's identity band — a
+grey portrait and a `Dead` chip beside the name, from one `FactionAlignment` read in
+`useDuplicantCondition` — and **Revive** is the first entry in the duplicant menu, omitted rather than
+disabled on a living one. Everything about a dead duplicant stays editable; they are still a record, not
+a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
+bundled save carries a dead duplicant.
+
+**Not done until the write is validated in a real game** — see the last paragraph. Everything below is
+what reading real saves turned up, kept because the reasoning is what the next person needs.
 
 **The premise this entry carried for months was wrong.** It planned to edit a field the save does not
 contain. Reading a real save with a real dead duplicant in it is what found that out, and it changes the

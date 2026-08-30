@@ -1,4 +1,5 @@
 import * as React from "react";
+import classnames from "classnames";
 
 import { Trans, useTranslation } from "react-i18next";
 import {
@@ -20,6 +21,7 @@ import {
   isValidEyes,
 } from "@/components/duplicant";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
 
 export interface DuplicantPortraitProps {
   gameObjectId: number;
@@ -51,6 +53,11 @@ const styles = createStyles({
     height: 0,
     transformOrigin: "top left",
   },
+  // Read here rather than passed in, so every portrait in the app reports a
+  // death without each call site having to remember to ask.
+  dead: {
+    filter: "grayscale(1) brightness(0.62)",
+  },
   placeholder: {
     display: "flex",
     alignItems: "center",
@@ -69,6 +76,7 @@ const DuplicantPortrait: React.FC<Props> = ({
   scale,
 }) => {
   const { t } = useTranslation();
+  const { isDead } = useDuplicantCondition(gameObjectId);
   const { templateData } = useBehavior(gameObjectId, AccessorizerBehavior);
   if (!templateData) {
     return (
@@ -97,7 +105,10 @@ const DuplicantPortrait: React.FC<Props> = ({
   if (!canDraw) {
     return (
       <div
-        className={classes.portraitContainer}
+        className={classnames(
+          classes.portraitContainer,
+          isDead && classes.dead,
+        )}
         style={{
           width: PORTRAIT_WIDTH * scale,
           height: PORTRAIT_HEIGHT * scale,
@@ -118,7 +129,7 @@ const DuplicantPortrait: React.FC<Props> = ({
 
   return (
     <div
-      className={classes.portraitContainer}
+      className={classnames(classes.portraitContainer, isDead && classes.dead)}
       // The box the sprite is framed in, which e2e measures the paint against.
       data-duplicant-portrait
       style={{
