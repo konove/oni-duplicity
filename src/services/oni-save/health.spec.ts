@@ -3,8 +3,9 @@ import { TFunction } from "i18next";
 import {
   DISEASE_AMOUNTS,
   FITNESS_AMOUNTS,
-  amountFill,
   amountMaximum,
+  amountStep,
+  clampToScale,
   formatAmount,
   isOffScale,
   statName,
@@ -76,21 +77,35 @@ describe("amountMaximum", () => {
   });
 });
 
-describe("amountFill", () => {
-  it("is a percentage of the maximum", () => {
-    expect(amountFill(50, 100)).toBe(50);
-    expect(amountFill(2000000, 4000000)).toBe(50);
+describe("clampToScale", () => {
+  it("leaves a value on its own scale alone", () => {
+    expect(clampToScale(50, 100)).toBe(50);
+    expect(clampToScale(2000000, 4000000)).toBe(2000000);
   });
 
   // Neither end is guaranteed: Decor runs negative somewhere ugly, and the
-  // bundled save has a duplicant at 200 breath out of 100.
-  it("clamps at both ends", () => {
-    expect(amountFill(-130, 100)).toBe(0);
-    expect(amountFill(200, 100)).toBe(100);
+  // bundled save has a duplicant at 200 breath out of 100. Only the thumb
+  // moves - what is stored is untouched.
+  it("pulls a thumb back onto the rail at both ends", () => {
+    expect(clampToScale(-130, 100)).toBe(0);
+    expect(clampToScale(200, 100)).toBe(100);
   });
 
-  it("does not divide by a maximum of zero", () => {
-    expect(amountFill(5, 0)).toBe(0);
+  it("survives a maximum of zero", () => {
+    expect(clampToScale(5, 0)).toBe(0);
+  });
+});
+
+describe("amountStep", () => {
+  // Whole units where the scale is a hundred: nobody wants 43.7291 stress.
+  it("steps by one on the amounts that run to a hundred", () => {
+    expect(amountStep(100)).toBe(1);
+  });
+
+  // A step of one across four million is a thousand keystrokes to cross a
+  // pixel; the field beside the slider is where a precise number goes.
+  it("steps in thousandths of a large scale", () => {
+    expect(amountStep(4000000)).toBe(4000);
   });
 });
 

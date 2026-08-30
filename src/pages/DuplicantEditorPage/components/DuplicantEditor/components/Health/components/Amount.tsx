@@ -6,13 +6,14 @@ import { useTranslation } from "react-i18next";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 import Typography from "@mui/material/Typography";
-import LinearProgress from "@mui/material/LinearProgress";
+import Slider from "@mui/material/Slider";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import CommitTextField from "@/components/CommitTextField";
 import {
-  amountFill,
   amountMaximum,
+  amountStep,
+  clampToScale,
   formatAmount,
   isOffScale,
   statDescKey,
@@ -65,9 +66,19 @@ const styles = (theme: Theme) =>
       flexShrink: 0,
       fontVariantNumeric: "tabular-nums",
     },
-    track: {
-      height: 6,
-      borderRadius: 3,
+    // MUI pads a slider generously for touch. Eight of these in a column is
+    // where that padding stops being comfortable and starts being the reason
+    // something else does not fit, so it is pulled in and the thumb shrunk.
+    slider: {
+      padding: theme.spacing(0.75, 0),
+      display: "block",
+      "& .MuiSlider-thumb": {
+        width: 12,
+        height: 12,
+      },
+      "& .MuiSlider-rail, & .MuiSlider-track": {
+        height: 4,
+      },
     },
     // A value the scale cannot hold is worth saying out loud rather than
     // drawing as a full bar - see the bundled save's 200 breath out of 100.
@@ -98,17 +109,33 @@ const Amount: React.FC<Props> = ({
     onExtraDataModify,
   } = useBehavior(gameObjectId, MinionModifiersBehavior);
 
+  // Held while a drag is in flight, so the number keeps up with the thumb
+  // without writing to the save on every pixel.
+  const [dragging, setDragging] = React.useState<number | null>(null);
+
   const amount = find(amounts, (x) => x.name === amountId);
-  const value = (amount && amount.value.value) || 0;
+  const stored = (amount && amount.value.value) || 0;
+  const value = dragging ?? stored;
   const maximum = amountMaximum(amountId);
   const offScale = isOffScale(value, maximum);
 
-  const onCommit = React.useCallback(
-    (committed: string) => {
+  const write = React.useCallback(
+    (next: number) => {
       const index = findIndex(amounts, (x) => x.name === amountId);
       if (index === -1) {
         return;
       }
+      onExtraDataModify({
+        amounts: merge([], amounts, {
+          [index]: { name: amountId, value: { value: next } },
+        }),
+      });
+    },
+    [onExtraDataModify, amounts, amountId],
+  );
+
+  const onCommit = React.useCallback(
+    (committed: string) => {
       // The field is text rather than a number input so the value can carry
       // its thousands separators, so what comes back has to be read as a
       // number rather than trusted as one.
@@ -116,13 +143,9 @@ const Amount: React.FC<Props> = ({
       if (!Number.isFinite(parsed)) {
         return;
       }
-      onExtraDataModify({
-        amounts: merge([], amounts, {
-          [index]: { name: amountId, value: { value: parsed } },
-        }),
-      });
+      write(parsed);
     },
-    [onExtraDataModify, amounts, amountId],
+    [amounts, amountId, write],
   );
 
   // Trailing digits on a float the game wrote are noise: 99.04344177246094
@@ -167,11 +190,23 @@ const Amount: React.FC<Props> = ({
             {`/ ${formatAmount(maximum)}`}
           </Typography>
         </div>
-        <LinearProgress
-          className={classes.track}
-          variant="determinate"
+        <Slider
+          className={classes.slider}
+          size="small"
           color={offScale ? "warning" : "primary"}
-          value={amountFill(value, maximum)}
+          // A value past the end of its own scale - the bundled save's 200
+          // breath out of 100 - would otherwise push the thumb off the rail.
+          // The stored number is untouched; only the thumb is pulled back.
+          value={clampToScale(value, maximum)}
+          min={0}
+          max={maximum}
+          step={amountStep(maximum)}
+          onChange={(_, next) => setDragging(next as number)}
+          onChangeCommitted={(_, next) => {
+            setDragging(null);
+            write(next as number);
+          }}
+          aria-label={statName(amountId, t)}
         />
       </div>
     </div>

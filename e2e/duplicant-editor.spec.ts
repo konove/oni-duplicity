@@ -86,6 +86,37 @@ test.describe("duplicant editor", () => {
     await expect(page.getByText("Radioactive Contaminants")).toBeVisible();
   });
 
+  // The bar under each health number is a real slider, not a picture of one.
+  // It went the other way first - a progress bar with the number beside it -
+  // and the complaint was exactly that it looked draggable and was not.
+  test("the health sliders write the value back", async ({ page }) => {
+    const slider = page.getByRole("slider", { name: "Stress" });
+    const field = page.getByRole("textbox", { name: "Stress" });
+    await expect(slider).toBeVisible();
+
+    const before = Number((await field.inputValue()).replace(/,/g, ""));
+    await slider.focus();
+    await page.keyboard.press("ArrowRight");
+
+    // Not an exact number: MUI snaps to its own step grid, and what matters is
+    // that the drag reached the save rather than moving a decoration.
+    await expect
+      .poll(async () => Number((await field.inputValue()).replace(/,/g, "")))
+      .toBeGreaterThan(before);
+  });
+
+  // A value past the end of its own scale would push the thumb off the rail.
+  // The bundled save has a duplicant at 200 breath out of 100.
+  test("an off-scale value pins the thumb without changing the number", async ({
+    page,
+  }) => {
+    const slider = page.getByRole("slider", { name: "Breath" });
+    await expect(slider).toHaveAttribute("aria-valuenow", "100");
+    await expect(page.getByRole("textbox", { name: "Breath" })).toHaveValue(
+      "200",
+    );
+  });
+
   // Thirty-three hairstyles is a browse, not a field, so it moved behind a
   // button. The picker itself is unchanged; that it still opens is the point.
   test("appearance opens as a dialog", async ({ page }) => {

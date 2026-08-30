@@ -97,17 +97,30 @@ export function amountMaximum(amountId: string): number {
 }
 
 /**
- * How full to draw a meter, 0 to 100.
+ * The value as the slider can show it.
  *
  * Clamped at both ends because neither end is guaranteed: Decor runs negative
  * when a duplicant is somewhere ugly, and Breath is stored above its own
- * maximum on at least one save the editor ships with.
+ * maximum on at least one save the editor ships with. What is stored is left
+ * alone - this only decides where the thumb sits.
  */
-export function amountFill(value: number, maximum: number): number {
+export function clampToScale(value: number, maximum: number): number {
   if (!(maximum > 0)) {
     return 0;
   }
-  return Math.max(0, Math.min(100, (value / maximum) * 100));
+  return Math.max(0, Math.min(maximum, value));
+}
+
+/**
+ * How far one nudge of a slider moves it.
+ *
+ * A whole unit on the amounts that run to a hundred, because nobody wants
+ * 43.7291 stress. Calories runs to four million, where a step of one is a
+ * thousand keystrokes to cross a pixel - so it steps in thousandths of the
+ * scale, and the field beside it is there when a precise number is wanted.
+ */
+export function amountStep(maximum: number): number {
+  return maximum > DEFAULT_MAXIMUM ? Math.round(maximum / 1000) : 1;
 }
 
 /**

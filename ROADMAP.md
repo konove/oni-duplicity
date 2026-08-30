@@ -295,8 +295,10 @@ in three columns at 1280×720, with nothing scrolling. It fits by refusing to gi
 rather than by cutting anything.
 
 - Attributes are a 30px two-column ruled list rather than a grid of 56px form fields.
-- Health is meters — a name, the number, and what the number is out of. The old control was a bare
-  slider, which could say neither, and which showed 200 breath on a scale of 100 as simply "full".
+- Health is a slider, the number, and what the number is out of. The old control was a bare slider that
+  could say neither of the last two, and that showed 200 breath on a scale of 100 as simply "full"; this
+  one keeps the drag and puts a field beside it, because a pixel of a four-million calorie scale is
+  seven thousand kcal. An off-scale value pins the thumb and marks itself rather than reading as full.
 - The eleven germ counters, every one of them zero on a healthy duplicant, collapse to a line until one
   of them is not zero or the reader asks.
 - Skills was a table of every skill in the game with a checkbox beside it: fifty-four rows to say a
