@@ -73,10 +73,9 @@ test.describe("duplicant editor", () => {
   // and diff. Any pixel that changed is sprite.
   test("the portrait sits centred in its box", async ({ page }) => {
     const box = await page.evaluate(() => {
-      const head = document.querySelector(".duplicant-head");
-      const paper = head ? head.closest(".MuiPaper-root") : null;
-      if (!paper) return null;
-      const r = paper.getBoundingClientRect();
+      const el = document.querySelector("[data-duplicant-portrait]");
+      if (!el) return null;
+      const r = el.getBoundingClientRect();
       return { x: r.x, y: r.y, w: r.width, h: r.height };
     });
     expect(box, "the band should render a portrait").not.toBeNull();

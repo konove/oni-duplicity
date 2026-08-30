@@ -119,6 +119,8 @@ const DuplicantPortrait: React.FC<Props> = ({
   return (
     <div
       className={classes.portraitContainer}
+      // The box the sprite is framed in, which e2e measures the paint against.
+      data-duplicant-portrait
       style={{
         width: PORTRAIT_WIDTH * scale,
         height: PORTRAIT_HEIGHT * scale,

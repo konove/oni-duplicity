@@ -4,7 +4,6 @@ import { MinionIdentityBehavior } from "oni-save-parser";
 import { WithTranslation, withTranslation, Trans } from "react-i18next";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 
 import DuplicantPortrait from "@/components/DuplicantPortrait";
@@ -37,11 +36,14 @@ const styles = (theme: Theme) =>
       flexGrow: 0,
       flexShrink: 0,
     },
-    // Shorter than the identity column beside it, so it centres rather than
-    // hanging off the top.
+    // No card behind it. A framed portrait invites the eye to check the head
+    // against the frame, and hair width varies enough between the 33 styles
+    // that some of them always look off-centre in it. Unframed, there is
+    // nothing to be off-centre against. Aligned to the top so it starts on the
+    // same line as the name.
     portrait: {
       flex: "none",
-      alignSelf: "center",
+      alignSelf: "flex-start",
     },
     identity: {
       flex: 1,
@@ -95,9 +97,9 @@ const IdentityBand: React.FC<Props> = ({ classes, gameObjectId, t }) => {
 
   return (
     <div className={classes.root}>
-      <Paper className={classes.portrait}>
+      <div className={classes.portrait}>
         <DuplicantPortrait gameObjectId={gameObjectId} scale={PORTRAIT_SCALE} />
-      </Paper>
+      </div>
       <div className={classes.identity}>
         <div className={classes.nameRow}>
           <Typography variant="h5">{name}</Typography>
