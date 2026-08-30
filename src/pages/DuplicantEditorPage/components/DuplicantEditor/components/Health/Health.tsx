@@ -121,7 +121,7 @@ const Health: React.FC<Props> = ({ classes, gameObjectId }) => {
           <div className={classes.summary}>
             <Typography
               className={classes.summaryText}
-              variant="body2"
+              variant="body1"
               color="textSecondary"
             >
               {DISEASE_AMOUNTS.slice(0, 3)
@@ -135,7 +135,7 @@ const Health: React.FC<Props> = ({ classes, gameObjectId }) => {
             </Typography>
             <Link
               component="button"
-              variant="caption"
+              variant="body2"
               underline="hover"
               onClick={() => setShowDiseases(true)}
             >

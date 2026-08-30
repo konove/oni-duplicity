@@ -52,13 +52,15 @@ test.describe("duplicant editor", () => {
     const viewport = page.viewportSize();
     expect(viewport, "the test runs at a fixed viewport").not.toBeNull();
 
+    // The editor's own root is what scrolls, not the document - it is a
+    // full-height flex row with overflow of its own. Measuring the page
+    // instead reports 720 of 720 however far the columns overflow, which is
+    // how a one-column attribute list slipped past this test once already.
     const overflow = await page.evaluate(() => {
-      const root = document.scrollingElement;
-      return root ? root.scrollHeight - root.clientHeight : 0;
+      const root = document.querySelector("[data-editor-root]");
+      return root ? root.scrollHeight - root.clientHeight : -1;
     });
-    expect(overflow, "the page itself should not scroll").toBeLessThanOrEqual(
-      0,
-    );
+    expect(overflow, "the editor should not scroll").toBeLessThanOrEqual(0);
 
     // The last thing in the last column, which is the furthest down anything
     // reaches.

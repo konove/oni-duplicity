@@ -29,9 +29,11 @@ const styles = (theme: Theme) =>
       textTransform: "uppercase",
       letterSpacing: "0.09em",
       lineHeight: 1,
+      fontSize: 13,
     },
     detail: {
       flexShrink: 0,
+      fontSize: 13,
     },
   });
 

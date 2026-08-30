@@ -35,7 +35,7 @@ const styles = (theme: Theme) =>
       textAlign: "right",
       fontVariantNumeric: "tabular-nums",
       padding: theme.spacing(0.25, 0.75),
-      fontSize: 13,
+      fontSize: 16,
       MozAppearance: "textfield",
       "&::-webkit-outer-spin-button": { WebkitAppearance: "none", margin: 0 },
       "&::-webkit-inner-spin-button": { WebkitAppearance: "none", margin: 0 },
@@ -66,7 +66,7 @@ const Experience: React.FC<Props> = ({
   return (
     <div className={className}>
       <div className={classes.root}>
-        <Typography className={classes.label} variant="body2">
+        <Typography className={classes.label} variant="body1">
           <Trans i18nKey="duplicant_skills.experience_titlecase">
             Experience
           </Trans>

@@ -113,7 +113,6 @@ const Skills: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
         {ordered.map((skillId) => (
           <Chip
             key={skillId}
-            size="small"
             label={skillName(skillId, t)}
             onDelete={() => removeMastery(skillId)}
           />

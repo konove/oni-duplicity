@@ -98,7 +98,6 @@ const Interests: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     <div className={classes.root}>
       {selectedAptitudes.map((aptitudeName) => (
         <Chip
-          size="small"
           key={aptitudeName}
           label={t(skillGroupNameKey(aptitudeName), {
             defaultValue: aptitudeName,

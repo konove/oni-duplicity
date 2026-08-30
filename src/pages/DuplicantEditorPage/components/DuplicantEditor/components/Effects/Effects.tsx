@@ -37,7 +37,7 @@ const styles = (theme: Theme) =>
       alignItems: "center",
       gap: theme.spacing(1),
       minWidth: 0,
-      height: 30,
+      height: 34,
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
     name: {
@@ -54,7 +54,7 @@ const styles = (theme: Theme) =>
       textAlign: "right",
       fontVariantNumeric: "tabular-nums",
       padding: theme.spacing(0.25, 0.75),
-      fontSize: 13,
+      fontSize: 16,
       MozAppearance: "textfield",
       "&::-webkit-outer-spin-button": { WebkitAppearance: "none", margin: 0 },
       "&::-webkit-inner-spin-button": { WebkitAppearance: "none", margin: 0 },
@@ -112,7 +112,7 @@ const Effects: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
       )}
       {ordered.map(({ id, timeRemaining, index }) => (
         <div key={id} className={classes.row}>
-          <Typography className={classes.name} variant="body2">
+          <Typography className={classes.name} variant="body1">
             {effectName(id, t)}
           </Typography>
           <CommitTextField
@@ -135,7 +135,7 @@ const Effects: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
           />
           <Typography
             className={classes.unit}
-            variant="caption"
+            variant="body2"
             color="textSecondary"
           >
             {t("time_cycles.noun_lowercase_plural", { defaultValue: "cycles" })}

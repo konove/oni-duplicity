@@ -54,7 +54,7 @@ const styles = (theme: Theme) =>
       textAlign: "right",
       fontVariantNumeric: "tabular-nums",
       padding: theme.spacing(0.25, 0.75),
-      fontSize: 13,
+      fontSize: 16,
       // The spinners appear on hover and eat ~17px, which clips a value in a
       // field sized to its content.
       MozAppearance: "textfield",
@@ -66,8 +66,8 @@ const styles = (theme: Theme) =>
       fontVariantNumeric: "tabular-nums",
     },
     track: {
-      height: 4,
-      borderRadius: 2,
+      height: 6,
+      borderRadius: 3,
     },
     // A value the scale cannot hold is worth saying out loud rather than
     // drawing as a full bar - see the bundled save's 200 breath out of 100.
@@ -136,7 +136,7 @@ const Amount: React.FC<Props> = ({
         <div className={classes.row}>
           <Typography
             className={classes.label}
-            variant="body2"
+            variant="body1"
             title={t(statDescKey(amountId), { defaultValue: "" })}
           >
             {statName(amountId, t)}
@@ -161,7 +161,7 @@ const Amount: React.FC<Props> = ({
                 ? `${classes.maximum} ${classes.offScale}`
                 : classes.maximum
             }
-            variant="caption"
+            variant="body2"
             color={offScale ? undefined : "textSecondary"}
           >
             {`/ ${formatAmount(maximum)}`}

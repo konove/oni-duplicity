@@ -34,7 +34,6 @@ const AddAptitudeButton: React.FC<Props> = ({
     <div>
       <div ref={setAnchorEl}>
         <Chip
-          size="small"
           color="primary"
           label={t(`duplicant_interest.verbs.add_titlecase`)}
           clickable

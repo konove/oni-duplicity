@@ -38,7 +38,6 @@ const AddSkillButton: React.FC<Props> = ({
     <div>
       <div ref={setAnchorEl}>
         <Chip
-          size="small"
           color="primary"
           label={t("duplicant_skills.verbs.add_titlecase", {
             defaultValue: "Add skill",

@@ -34,7 +34,6 @@ const AddTraitButton: React.FC<Props> = ({
     <div>
       <div ref={setAnchorEl}>
         <Chip
-          size="small"
           color="primary"
           label={t(`duplicant_trait.verbs.add_titlecase`)}
           clickable

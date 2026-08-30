@@ -56,7 +56,6 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     <div className={classes.root}>
       {ordered.map(({ trait, index }) => (
         <Chip
-          size="small"
           key={trait}
           label={t(traitNameKey(trait), { defaultValue: trait })}
           title={traitTooltip(trait, t)}

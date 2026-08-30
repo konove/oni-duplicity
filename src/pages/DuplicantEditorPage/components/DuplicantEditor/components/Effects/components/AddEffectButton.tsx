@@ -28,7 +28,6 @@ const AddEffectButton: React.FC<Props> = ({ gameObjectId }) => {
   return (
     <React.Fragment>
       <Chip
-        size="small"
         color="primary"
         clickable
         onClick={() => setIsAddingEffect(true)}

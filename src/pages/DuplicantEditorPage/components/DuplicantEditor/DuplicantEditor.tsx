@@ -52,6 +52,7 @@ const styles = (theme: Theme) =>
     column: {
       boxSizing: "border-box",
       padding: theme.spacing(2),
+      flex: "1 1 0",
       minWidth: 0,
       [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
         width: "100%",
@@ -59,27 +60,16 @@ const styles = (theme: Theme) =>
         borderBottom: `1px solid ${theme.palette.divider}`,
       },
     },
-    // The stacked widths have to be restated here: these rules come after
-    // `column` in source order, so its media query alone would not win.
+    // Equal thirds. Fixed widths for the first two put every pixel a wide
+    // window has into the health column, which spent it on meters a metre
+    // long while the traits wrapped into a tower beside them.
     identityColumn: {
-      width: 344,
-      flex: "none",
       borderRight: `1px solid ${theme.palette.divider}`,
-      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
-        width: "100%",
-      },
     },
     attributesColumn: {
-      width: 400,
-      flex: "none",
       borderRight: `1px solid ${theme.palette.divider}`,
-      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
-        width: "100%",
-      },
     },
-    healthColumn: {
-      flex: 1,
-    },
+    healthColumn: {},
     section: {
       marginTop: theme.spacing(2),
     },
@@ -89,7 +79,7 @@ type Props = DuplicantEditorProps & WithTranslation & WithStyles<typeof styles>;
 
 const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => (
   <PageContainer title={t("duplicant.verbs.edit_titlecase")} back>
-    <div className={classes.root}>
+    <div className={classes.root} data-editor-root>
       <div className={`${classes.column} ${classes.identityColumn}`}>
         <IdentityPanel gameObjectId={gameObjectId} />
         <div className={classes.section}>

@@ -48,8 +48,12 @@ const styles = (theme: Theme) =>
     // ruled list, so the eye can follow a row across both columns.
     list: {
       display: "grid",
-      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-      columnGap: theme.spacing(2.5),
+      // As many columns as the panel can hold, which is two in an equal third
+      // of 1280 and more on a wide screen. 150px is what the longest attribute
+      // name and its value need side by side - below that they would ellipsise
+      // rather than wrap, and the reader would lose "Engie's Tune-Up".
+      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+      columnGap: theme.spacing(1.5),
       rowGap: 0,
     },
     // 30px rather than the 56px a form field wants. The name reads first and
@@ -62,7 +66,7 @@ const styles = (theme: Theme) =>
       alignItems: "center",
       gap: theme.spacing(1),
       minWidth: 0,
-      height: 30,
+      height: 34,
       boxSizing: "border-box",
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
@@ -78,7 +82,7 @@ const styles = (theme: Theme) =>
       textAlign: "right",
       fontVariantNumeric: "tabular-nums",
       padding: theme.spacing(0.25, 0.75),
-      fontSize: 14,
+      fontSize: 16,
       // The number spinners appear on hover and eat ~17px, which is enough to
       // clip a long value in a field sized to its content.
       MozAppearance: "textfield",
