@@ -35,9 +35,10 @@ export default function useDuplicantCondition(
     MinionModifiersBehavior,
   );
 
-  // Two writes, because clearing the death flag is not enough on its own: the
-  // game re-kills a duplicant whose breath is still zero, on the first tick
-  // after the save loads.
+  // Neither of these writes actually resurrects anyone: the game holds death as
+  // a DeathMonitor state inside StateMachineController's raw blob, which the
+  // parser preserves but does not decode. Tidying the flag and the vitals is
+  // the half that can be written today. ROADMAP 1.1 has the rest.
   const revive = React.useCallback(() => {
     onTemplateDataModify(REVIVE_ALIGNMENT);
     if (modifiers && modifiers.amounts) {

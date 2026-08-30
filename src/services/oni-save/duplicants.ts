@@ -72,10 +72,16 @@ export function isDeadAlignment(
 /**
  * Back into the faction, and targetable again.
  *
- * Necessary but NOT sufficient on its own: a save edited to set only these was
- * loaded into the game and the duplicant came back reading "Dead: Suffocation"
- * with full health. Whatever killed them is still true of them, so the game
- * kills them again on the first tick. See `reviveAmounts`.
+ * This does NOT revive anybody, and the assembly says why. Death is a state
+ * machine state: `DeathMonitor` (serializable, `Both_DEPRECATED`) sits in
+ * `root.dead.ground` with a `death` parameter naming the cause, and its
+ * `ApplyDeath()` is what drops the duplicant out of the assignment groups -
+ * so this flag is a *consequence* of death, not the record of it.
+ *
+ * The state itself lives in `StateMachineController.extraRaw`, a blob written
+ * by `StateMachineSerializer` outside the type-template system, which is why
+ * the behavior's template declares no fields and why oni-save-parser keeps it
+ * as opaque bytes. Reviving means editing that blob. See ROADMAP 1.1.
  */
 export const REVIVE_ALIGNMENT = {
   alignmentActive: true,
@@ -84,7 +90,8 @@ export const REVIVE_ALIGNMENT = {
 
 /**
  * Amounts that kill a duplicant outright when they reach zero, and the value
- * the editor treats as full.
+ * the editor treats as full. Restoring them is part of a revive, but it is not
+ * what brings anyone back - see `REVIVE_ALIGNMENT`.
  *
  * Nothing in the save records a maximum - these are the numbers the Health tab
  * already draws its sliders against, kept here so the two cannot drift. 100 is

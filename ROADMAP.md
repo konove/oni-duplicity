@@ -364,16 +364,48 @@ disabled on a living one. Everything about a dead duplicant stays editable; they
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 
-**The first in-game test failed, and taught us the rest of it.** A save with `alignmentActive` and
-`targetable` set back to `true` was loaded into the game, and the duplicant came back reading
-**"Dead: Suffocation"** at 100/100 health with breath still at 0. Clearing the flag is necessary and not
-sufficient: whatever killed them is still true of them, so the game kills them again on the first tick.
+**Revive does not work yet, and the decompiled assembly says exactly why.** A save with
+`alignmentActive` and `targetable` set back to `true` was loaded into the game and the duplicant came
+back reading **"Dead: Suffocation"**. Two hypotheses fitted that — the flag is not the record, or the
+cause of death was still true of him — and diffing saves could not separate them. `tools/decomp` settles
+it: it is the first.
 
-Suffocation does not kill through health — that is why he was at full hit points both times. So Revive
-now also tops up the vitals that kill at zero (`HitPoints`, `Breath`, `Calories`) and empties
-`sicknesses`, and it tops up **only what is actually at zero**: reviving someone who suffocated is no
-reason to also refill their stomach. **Still needs a second in-game pass to confirm the duplicant now
-stays up.**
+**Death is a state machine state.** `DeathMonitor` is a `GameStateMachine` marked
+`serializable = SerializeType.Both_DEPRECATED`, so both its current state and its parameters are saved.
+A dead duplicant sits in `root.dead.ground` with a `death` parameter naming the cause. Its
+`ApplyDeath()` calls `assignmentManager.RemoveFromAllGroups(...)` and adds `GameTags.Corpse` — which is
+why `FactionAlignment` changes. **That flag is a consequence of death, not the record of it**, and
+setting it back cannot resurrect anybody.
+
+**The record lives where the parser cannot see it.** `StateMachineController.Serialize` delegates to
+`StateMachineSerializer`, which writes its own binary blob rather than reflected fields — which is why
+the behavior's type template declares zero fields, and why `oni-save-parser` keeps it as an opaque
+`extraRaw: ArrayBuffer`. Decoding that blob in the save where Otto died:
+
+|             | state machines | `DeathMonitor+Instance` | `death` parameter               |
+| ----------- | -------------- | ----------------------- | ------------------------------- |
+| Ruby, alive | 31             | `root.alive`            | `""`                            |
+| Otto, dead  | **2**          | **`root.dead.ground`**  | **`"Root.Deaths.Suffocation"`** |
+
+A dead duplicant keeps almost none of his state machines: no brain, no chores, no navigator, no
+monitors. 1,581 bytes against 23,935.
+
+**So Revive is two edits inside that blob**, and both are needed: set the entry's current-state string to
+`root.alive`, and empty the `death` parameter — because `InitializeStates` wires
+`alive.ParamTransition(death, dying_duplicant, (smi, p) => p != null && smi.IsDuplicant)`, so a duplicant
+restored to `root.alive` with the parameter still set walks straight back into dying.
+
+The format, from `StateMachineSerializer`: `int32` serializer version (20), `int32` total length,
+`int32` entry count, then per entry an `int32`, a Klei string type name, a Klei string suffix
+(version ≥ 20), a Klei string current state, an `int32` data length and that many bytes. The parameter
+block sits inside the data: `int32` count, then per parameter an `int32` length, a Klei string context
+type, a Klei string name and the value. Editing the two strings means fixing three length fields — the
+parameter's, the entry's, and the file's — and nothing else moves.
+
+**What is shipped today is the marker, not the cure.** A dead duplicant is marked correctly in both
+places; the menu's Revive tidies the faction flag and the vitals and is honest about doing no more than
+that. Making it work needs a decoder and encoder for that blob, and a `BehaviorDataTarget` for
+`extraRaw`, which the action and reducer do not have yet — `Template` and `Extra` are the only two.
 
 Everything below is what reading real saves turned up, kept because the reasoning is what the next
 person needs.
@@ -429,18 +461,16 @@ first entry in the actions menu, omitted rather than disabled on a living duplic
 Materials row menu does it. A "Condition" select over `HealthState` was the fourth option and is ruled
 out by the save, not by taste.
 
-**What the failed in-game test settled.** ONI does _not_ resurrect from `FactionAlignment` alone — that
-much is now tested rather than suspected. What is still open is whether the flag matters at all, or is
-purely a consequence the game recomputes: the duplicant died again of the same cause, so the experiment
-could not distinguish the two. The next pass, with the vitals restored as well, is what answers it.
+**`StateMachineController` was the right suspect all along.** This entry has carried that guess from the
+start, on the strength of `reducer/clone-duplicant.ts` blacklisting it when cloning, and it is correct —
+it just could not be confirmed from the parsed save, because the behavior's type template declares zero
+fields and the data is in `extraRaw`. Two rounds of diffing missed it for that reason: `extraData`,
+game-object position/rotation/scale/folder and `gameData` show no other difference, and the only
+death-shaped template carrying data is `DeathMessage` (a `ResourceRef<Death>` plus a `MessageTarget`),
+which is the colony log entry rather than the duplicant's state.
 
-A deeper diff found nothing else to try: comparing the dead duplicant against a living one across
-`extraData`, game-object position/rotation/scale/folder and `gameData` turns up no other difference, and
-`StateMachineController` — the suspect this entry has carried from the start, and the one
-`reducer/clone-duplicant.ts` blacklists when cloning — declares zero fields and zero properties in the
-save's own type table, so there is nothing in it to strip. The only death-shaped template that carries
-data is `DeathMessage` (a `ResourceRef<Death>` plus a `MessageTarget`), which is the colony log entry,
-not the duplicant's state.
+The lesson worth keeping: a behavior with an empty type template is not an empty behavior. It is a
+behavior the game serializes by hand.
 
 Note for whoever builds it: `src/__mocks__/save-game.json` has no dead duplicant — Ada, Bruno and Steela
 all read `alignmentActive: true` — so the marker needs a fixture before it can have a test.
