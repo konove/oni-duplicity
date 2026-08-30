@@ -1,9 +1,12 @@
 import * as React from "react";
 
+import { MinionModifiersBehavior } from "oni-save-parser";
+
 import {
   FactionAlignmentBehavior,
   isDeadAlignment,
   REVIVE_ALIGNMENT,
+  reviveAmounts,
 } from "../duplicants";
 
 import useBehavior from "./useBehavior";
@@ -27,10 +30,26 @@ export default function useDuplicantCondition(
     gameObjectId,
     FactionAlignmentBehavior,
   );
+  const { extraData: modifiers, onExtraDataModify } = useBehavior(
+    gameObjectId,
+    MinionModifiersBehavior,
+  );
 
+  // Two writes, because clearing the death flag is not enough on its own: the
+  // game re-kills a duplicant whose breath is still zero, on the first tick
+  // after the save loads.
   const revive = React.useCallback(() => {
     onTemplateDataModify(REVIVE_ALIGNMENT);
-  }, [onTemplateDataModify]);
+    if (modifiers && modifiers.amounts) {
+      onExtraDataModify({
+        amounts: reviveAmounts(modifiers.amounts),
+        // Shallow-assigned rather than deep-merged, so this really does empty
+        // the list - a revived duplicant should not be carrying the disease
+        // that killed them.
+        sicknesses: [],
+      });
+    }
+  }, [onTemplateDataModify, onExtraDataModify, modifiers]);
 
   return { isDead: isDeadAlignment(templateData), revive };
 }

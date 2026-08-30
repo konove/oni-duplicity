@@ -39,20 +39,41 @@ jest.mock("@/services/oni-save/hooks/useBehavior", () => ({
 
 const mockUseBehavior = useBehavior as jest.MockedFunction<typeof useBehavior>;
 
-let modify: jest.Mock;
+let modifyAlignment: jest.Mock;
+let modifyModifiers: jest.Mock;
 
+// Suffocated: out of the faction, breath gone, but at full health and with
+// calories to spare - the shape the real save turned out to have.
 beforeEach(() => {
-  modify = jest.fn();
-  mockUseBehavior.mockReturnValue({
-    templateData: {
-      alignmentActive: false,
-      targeted: false,
-      targetable: false,
-    },
-    extraData: null,
-    onTemplateDataModify: modify,
-    onExtraDataModify: jest.fn(),
-  } as any);
+  modifyAlignment = jest.fn();
+  modifyModifiers = jest.fn();
+  mockUseBehavior.mockImplementation((_id: number, behaviorName: any) => {
+    if (behaviorName === "FactionAlignment") {
+      return {
+        templateData: {
+          alignmentActive: false,
+          targeted: false,
+          targetable: false,
+        },
+        extraData: null,
+        onTemplateDataModify: modifyAlignment,
+        onExtraDataModify: jest.fn(),
+      } as any;
+    }
+    return {
+      templateData: {},
+      extraData: {
+        amounts: [
+          { name: "HitPoints", value: { value: 100 } },
+          { name: "Breath", value: { value: 0 } },
+          { name: "Calories", value: { value: 2639719.25 } },
+        ],
+        sicknesses: [{ name: "SlimeSickness", value: {} }],
+      },
+      onTemplateDataModify: jest.fn(),
+      onExtraDataModify: modifyModifiers,
+    } as any;
+  });
 });
 
 // MUI v9 MenuItem reads MenuListContext and throws without it, so the item
@@ -81,10 +102,28 @@ describe("ReviveMenuItem", () => {
 
     fireEvent.click(screen.getByText("Revive"));
 
-    expect(modify).toHaveBeenCalledWith({
+    expect(modifyAlignment).toHaveBeenCalledWith({
       alignmentActive: true,
       targetable: true,
     });
     expect(onClick).toHaveBeenCalled();
+  });
+
+  // The flag on its own is not enough: a save edited that way was loaded into
+  // the game and the duplicant came straight back reading "Dead: Suffocation",
+  // at full health, because his breath was still zero.
+  it("also undoes what killed them", () => {
+    renderItem(jest.fn());
+
+    fireEvent.click(screen.getByText("Revive"));
+
+    expect(modifyModifiers).toHaveBeenCalledWith({
+      amounts: [
+        { name: "HitPoints", value: { value: 100 } },
+        { name: "Breath", value: { value: 100 } },
+        { name: "Calories", value: { value: 2639719.25 } },
+      ],
+      sicknesses: [],
+    });
   });
 });

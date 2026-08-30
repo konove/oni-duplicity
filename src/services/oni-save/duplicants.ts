@@ -1,4 +1,8 @@
-import { GameObjectBehavior, BehaviorName } from "oni-save-parser";
+import {
+  GameObjectBehavior,
+  BehaviorName,
+  AIAmountInstance,
+} from "oni-save-parser";
 
 /**
  * Game object group names holding editable duplicants.
@@ -65,8 +69,49 @@ export function isDeadAlignment(
   return templateData != null && templateData.alignmentActive === false;
 }
 
-/** The write that undoes it: back into the faction, and targetable again. */
+/**
+ * Back into the faction, and targetable again.
+ *
+ * Necessary but NOT sufficient on its own: a save edited to set only these was
+ * loaded into the game and the duplicant came back reading "Dead: Suffocation"
+ * with full health. Whatever killed them is still true of them, so the game
+ * kills them again on the first tick. See `reviveAmounts`.
+ */
 export const REVIVE_ALIGNMENT = {
   alignmentActive: true,
   targetable: true,
 };
+
+/**
+ * Amounts that kill a duplicant outright when they reach zero, and the value
+ * the editor treats as full.
+ *
+ * Nothing in the save records a maximum - these are the numbers the Health tab
+ * already draws its sliders against, kept here so the two cannot drift. 100 is
+ * what the game's own panel shows for breath and health, and it is the highest
+ * value across the 25 duplicants in the saves on hand.
+ *
+ * Suffocation does not go through health: the duplicant who died of it was at
+ * 100 hit points and 0 breath, which is why restoring health alone would not
+ * have helped him.
+ */
+export const LETHAL_AT_ZERO: Record<string, number> = {
+  HitPoints: 100,
+  Breath: 100,
+  Calories: 4000000,
+};
+
+/**
+ * Tops up only what is actually lethal, so reviving someone who suffocated
+ * does not also silently refill their stomach. An amount that is merely low is
+ * left where it is - they were alive at that value a moment ago.
+ */
+export function reviveAmounts(amounts: AIAmountInstance[]): AIAmountInstance[] {
+  return amounts.map((amount) => {
+    const full = LETHAL_AT_ZERO[amount.name];
+    if (full === undefined || amount.value.value > 0) {
+      return amount;
+    }
+    return { ...amount, value: { ...amount.value, value: full } };
+  });
+}

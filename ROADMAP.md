@@ -364,8 +364,19 @@ disabled on a living one. Everything about a dead duplicant stays editable; they
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 
-**Not done until the write is validated in a real game** — see the last paragraph. Everything below is
-what reading real saves turned up, kept because the reasoning is what the next person needs.
+**The first in-game test failed, and taught us the rest of it.** A save with `alignmentActive` and
+`targetable` set back to `true` was loaded into the game, and the duplicant came back reading
+**"Dead: Suffocation"** at 100/100 health with breath still at 0. Clearing the flag is necessary and not
+sufficient: whatever killed them is still true of them, so the game kills them again on the first tick.
+
+Suffocation does not kill through health — that is why he was at full hit points both times. So Revive
+now also tops up the vitals that kill at zero (`HitPoints`, `Breath`, `Calories`) and empties
+`sicknesses`, and it tops up **only what is actually at zero**: reviving someone who suffocated is no
+reason to also refill their stomach. **Still needs a second in-game pass to confirm the duplicant now
+stays up.**
+
+Everything below is what reading real saves turned up, kept because the reasoning is what the next
+person needs.
 
 **The premise this entry carried for months was wrong.** It planned to edit a field the save does not
 contain. Reading a real save with a real dead duplicant in it is what found that out, and it changes the
@@ -418,11 +429,18 @@ first entry in the actions menu, omitted rather than disabled on a living duplic
 Materials row menu does it. A "Condition" select over `HealthState` was the fourth option and is ruled
 out by the save, not by taste.
 
-**Validate in-game before calling this done.** The old warning still stands, aimed at a different field:
-it is not certain ONI resurrects from `FactionAlignment` alone, because death may also be latched in the
-`StateMachineController` — attached to every duplicant, carrying no serialized fields, and already
-blacklisted by `reducer/clone-duplicant.ts` when cloning. If the state machine matters, Revive becomes a
-small reducer that also strips the death SMI.
+**What the failed in-game test settled.** ONI does _not_ resurrect from `FactionAlignment` alone — that
+much is now tested rather than suspected. What is still open is whether the flag matters at all, or is
+purely a consequence the game recomputes: the duplicant died again of the same cause, so the experiment
+could not distinguish the two. The next pass, with the vitals restored as well, is what answers it.
+
+A deeper diff found nothing else to try: comparing the dead duplicant against a living one across
+`extraData`, game-object position/rotation/scale/folder and `gameData` turns up no other difference, and
+`StateMachineController` — the suspect this entry has carried from the start, and the one
+`reducer/clone-duplicant.ts` blacklists when cloning — declares zero fields and zero properties in the
+save's own type table, so there is nothing in it to strip. The only death-shaped template that carries
+data is `DeathMessage` (a `ResourceRef<Death>` plus a `MessageTarget`), which is the colony log entry,
+not the duplicant's state.
 
 Note for whoever builds it: `src/__mocks__/save-game.json` has no dead duplicant — Ada, Bruno and Steela
 all read `alignmentActive: true` — so the marker needs a fixture before it can have a test.
