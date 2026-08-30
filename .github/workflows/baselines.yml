@@ -36,7 +36,13 @@ jobs:
       # `--update-snapshots=missing` writes what is absent and leaves what is
       # already there alone, so re-running this never quietly rewrites a
       # baseline that a real change should have failed against.
+      #
+      # It writes them and then reports a failure for each - which is Playwright
+      # saying a baseline appeared that nobody has reviewed, and is exactly
+      # right. On a first generation every shot is missing, so this step is
+      # expected to fail. The run after it is the one that has to pass.
       - name: Write the missing baselines
+        continue-on-error: true
         run: npx playwright test --update-snapshots=missing
 
       # And then prove them: a second run with no flag has to pass against the
