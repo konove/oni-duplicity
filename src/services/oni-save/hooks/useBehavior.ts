@@ -8,11 +8,8 @@ import { gameObjectsByIdSelector } from "../selectors/game-objects";
 export interface UseBehavior<T extends GameObjectBehavior> {
   templateData: T["templateData"];
   extraData: T["extraData"];
-  /** Bytes the behavior serialized itself, which the parser keeps opaque. */
-  extraRaw: ArrayBuffer | null;
   onTemplateDataModify(templateData: DeepPartial<T["templateData"]>): void;
   onExtraDataModify(extraData: DeepPartial<T["extraData"]>): void;
-  onExtraRawModify(extraRaw: ArrayBuffer): void;
 }
 
 export default function useBehavior<T extends GameObjectBehavior>(
@@ -23,7 +20,6 @@ export default function useBehavior<T extends GameObjectBehavior>(
 
   let templateData: T["templateData"] = null;
   let extraData: T["extraData"] = null;
-  let extraRaw: ArrayBuffer | null = null;
 
   const gameObjectsById = useSelector(gameObjectsByIdSelector);
   const gameObject =
@@ -35,7 +31,6 @@ export default function useBehavior<T extends GameObjectBehavior>(
     if (behavior) {
       templateData = behavior.templateData;
       extraData = behavior.extraData;
-      extraRaw = behavior.extraRaw || null;
     }
   }
 
@@ -67,26 +62,10 @@ export default function useBehavior<T extends GameObjectBehavior>(
     [dispatch, gameObjectId, behaviorName],
   );
 
-  const onExtraRawModify = React.useCallback(
-    (data: ArrayBuffer) => {
-      dispatch(
-        modifyBehavior(
-          gameObjectId,
-          behaviorName,
-          BehaviorDataTarget.Raw,
-          data,
-        ),
-      );
-    },
-    [dispatch, gameObjectId, behaviorName],
-  );
-
   return {
     templateData,
     extraData,
-    extraRaw,
     onTemplateDataModify,
     onExtraDataModify,
-    onExtraRawModify,
   };
 }

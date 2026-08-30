@@ -404,20 +404,18 @@ block sits inside the data: `int32` count, then per parameter an `int32` length,
 type, a Klei string name and the value. Editing the two strings means fixing three length fields — the
 parameter's, the entry's, and the file's — and nothing else moves.
 
-**Shipped.** `src/services/oni-save/state-machines.ts` decodes and re-encodes the blob;
-`BehaviorDataTarget.Raw` carries it through the action and reducer, replaced whole rather than merged
-because spreading an `ArrayBuffer` quietly yields an empty object; `useBehavior` exposes `extraRaw` and
-`onExtraRawModify`. `isDead` now reads the `DeathMonitor` state, falling back to the faction flag only
-when there is no blob to ask — which is the bundled example save, since an `ArrayBuffer` does not
-survive a trip through JSON.
+**Shipped, and confirmed in game.** The format lives in the parser fork, which now decodes
+`StateMachineController` into `{serializerVersion, stateMachines}` instead of leaving it as `extraRaw` —
+that was the last behavior blob nothing described. `src/services/oni-save/state-machines.ts` keeps only
+what `DeathMonitor` means: `root.dead` is death, `root.alive` is not, and reviving is those two edits.
 
-The round trip is checked against every state machine blob in two real saves: **32,188 of them, all
-decoded, all re-encoded byte for byte**. The codec refuses anything it does not fully understand — an
-unknown serializer version, a length that overruns, bytes left over — and returns null rather than a
-partial answer, because the alternative is writing a save the game cannot load.
+`isDead` reads the `DeathMonitor` state, and falls back to the faction flag only when there are no state
+machines to ask — which is the bundled example save, since the parser hands each machine's data back as
+an `ArrayBuffer` and those do not survive a trip through JSON. `killMockDuplicant()` builds the machines
+a real death leaves behind, so the screenshot tests go through the same path a real save does.
 
-`killMockDuplicant()` now builds the blob a real death leaves behind rather than only flipping the flag,
-so the screenshot tests go through the same decode and revive path a real save does.
+The fork change was verified by writing both real saves through the old parser and the new one and
+comparing: byte for byte identical. It exposes the structure and moves nothing on the wire.
 
 Everything below is what reading real saves turned up, kept because the reasoning is what the next
 person needs.

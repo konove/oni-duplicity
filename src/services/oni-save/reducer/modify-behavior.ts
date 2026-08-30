@@ -69,16 +69,6 @@ function performModifyBehavior(
         performMerge,
       );
       break;
-    // Replaced whole, never merged: these are bytes a behavior wrote itself,
-    // and spreading an ArrayBuffer would quietly produce an empty object.
-    case BehaviorDataTarget.Raw:
-      gameObject = changeStateBehaviorData(
-        gameObject,
-        behaviorName,
-        "extraRaw",
-        () => value,
-      );
-      break;
   }
 
   saveGame = replaceGameObject(saveGame, gameObject);

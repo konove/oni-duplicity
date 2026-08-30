@@ -11,13 +11,14 @@ import MenuList from "@mui/material/MenuList";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import {
+  writeStateMachineParameters,
+  writeStateMachineResourceValue,
+} from "oni-save-parser";
+
+import {
   DEATH_MONITOR,
   DEATH_PARAMETER,
   ALIVE_STATE,
-  decodeStateMachines,
-  encodeParameters,
-  encodeResourceValue,
-  encodeStateMachines,
   findDeathMonitor,
 } from "@/services/oni-save/state-machines";
 
@@ -53,26 +54,26 @@ let modifyAlignment: jest.Mock;
 let modifyModifiers: jest.Mock;
 let modifyStateMachines: jest.Mock;
 
-/** The blob a duplicant who suffocated actually leaves behind. */
-const deadBlob = () =>
-  encodeStateMachines({
-    version: 20,
-    entries: [
-      {
-        leading: 0,
-        type: DEATH_MONITOR,
-        suffix: null,
-        currentState: "root.dead.ground",
-        data: encodeParameters([
-          {
-            contextType: "StateMachine`4+ResourceParameter`1+Context",
-            name: DEATH_PARAMETER,
-            value: encodeResourceValue("Root.Deaths.Suffocation"),
-          },
-        ]),
-      },
-    ],
-  });
+/** The machines a duplicant who suffocated actually leaves behind. */
+const deadMachines = () => ({
+  serializerVersion: 20,
+  unparsed: null,
+  stateMachines: [
+    {
+      leading: 0,
+      type: DEATH_MONITOR,
+      typeSuffix: null,
+      currentState: "root.dead.ground",
+      data: writeStateMachineParameters([
+        {
+          contextType: "StateMachine`4+ResourceParameter`1+Context",
+          name: DEATH_PARAMETER,
+          value: writeStateMachineResourceValue("Root.Deaths.Suffocation"),
+        },
+      ]),
+    },
+  ],
+});
 
 // Suffocated: out of the faction, breath gone, but at full health and with
 // calories to spare - the shape the real save turned out to have.
@@ -84,11 +85,9 @@ beforeEach(() => {
     if (behaviorName === "StateMachineController") {
       return {
         templateData: {},
-        extraData: null,
-        extraRaw: deadBlob(),
+        extraData: deadMachines(),
         onTemplateDataModify: jest.fn(),
-        onExtraDataModify: jest.fn(),
-        onExtraRawModify: modifyStateMachines,
+        onExtraDataModify: modifyStateMachines,
       } as any;
     }
     if (behaviorName === "FactionAlignment") {
@@ -162,8 +161,7 @@ describe("ReviveMenuItem", () => {
 
     expect(modifyStateMachines).toHaveBeenCalledTimes(1);
     const written = modifyStateMachines.mock.calls[0][0];
-    const monitor = findDeathMonitor(decodeStateMachines(written)!)!;
-    expect(monitor.currentState).toBe(ALIVE_STATE);
+    expect(findDeathMonitor(written)!.currentState).toBe(ALIVE_STATE);
   });
 
   it("also tidies the flag and vitals the game recomputes", () => {

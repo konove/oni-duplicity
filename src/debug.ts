@@ -13,16 +13,18 @@ import {
 } from "@/services/oni-save/actions/modify-behavior";
 import { gameObjectTypesByIdSelector } from "@/services/oni-save/selectors/game-objects";
 import {
-  FactionAlignmentBehavior,
   StateMachineControllerBehavior,
+  writeStateMachineParameters,
+  writeStateMachineResourceValue,
+} from "oni-save-parser";
+
+import {
+  FactionAlignmentBehavior,
   isDuplicantType,
 } from "@/services/oni-save/duplicants";
 import {
   DEATH_MONITOR,
   DEATH_PARAMETER,
-  encodeParameters,
-  encodeResourceValue,
-  encodeStateMachines,
 } from "@/services/oni-save/state-machines";
 
 if (!isProd) {
@@ -50,27 +52,31 @@ if (!isProd) {
       modifyBehavior(
         id,
         StateMachineControllerBehavior,
-        BehaviorDataTarget.Raw,
-        encodeStateMachines({
-          version: 20,
-          entries: [
+        BehaviorDataTarget.Extra,
+        {
+          serializerVersion: 20,
+          unparsed: null,
+          stateMachines: [
             {
               leading: 0,
               type: DEATH_MONITOR,
-              suffix: null,
+              typeSuffix: null,
               currentState: "root.dead.ground",
-              data: encodeParameters([
+              data: writeStateMachineParameters([
                 {
                   contextType: "StateMachine`4+ResourceParameter`1+Context",
                   name: DEATH_PARAMETER,
-                  value: encodeResourceValue("Root.Deaths.Suffocation"),
+                  value: writeStateMachineResourceValue(
+                    "Root.Deaths.Suffocation",
+                  ),
                 },
               ]),
             },
           ],
-        }),
+        },
       ),
     );
+
     store.dispatch(
       modifyBehavior(
         id,

@@ -3,11 +3,6 @@ import { UnknownAction } from "redux";
 export enum BehaviorDataTarget {
   Template = "templateData",
   Extra = "extraData",
-  /**
-   * The bytes a behavior serializes by hand, which the parser keeps opaque.
-   * Always replaced whole - there is nothing in an ArrayBuffer to merge.
-   */
-  Raw = "extraRaw",
 }
 
 export const ACTION_ONISAVE_MODIFY_BEHAVIOR = "oni-save/modify-behavior";

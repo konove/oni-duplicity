@@ -1,16 +1,17 @@
 import * as React from "react";
 
-import { MinionModifiersBehavior } from "oni-save-parser";
+import {
+  MinionModifiersBehavior,
+  StateMachineControllerBehavior,
+} from "oni-save-parser";
 
 import {
   FactionAlignmentBehavior,
-  StateMachineControllerBehavior,
   isDeadAlignment,
   REVIVE_ALIGNMENT,
   reviveAmounts,
 } from "../duplicants";
 import {
-  decodeStateMachines,
   findDeathMonitor,
   isDeadStateMachines,
   reviveStateMachines,
@@ -26,28 +27,26 @@ export interface UseDuplicantCondition {
 /**
  * Whether this duplicant is dead, and everything that undoes it.
  *
- * Death is a `DeathMonitor` state inside `StateMachineController`'s hand-rolled
- * blob - see `state-machines.ts` - so that is what gets read and written.
+ * Death is a `DeathMonitor` state among a duplicant's state machines - see
+ * `state-machines.ts` - so that is what gets read and written.
  *
- * The faction flag is only consulted when the blob is not there to ask. The
- * bundled example save is JSON, and an ArrayBuffer does not survive a trip
- * through JSON, so its duplicants carry no state machines at all.
+ * The faction flag is only consulted when there are no state machines to ask.
+ * The bundled example save is JSON, and the parser hands those back as an
+ * `ArrayBuffer` per machine, which does not survive a trip through JSON.
  */
 export default function useDuplicantCondition(
   gameObjectId: number,
 ): UseDuplicantCondition {
   const { templateData: alignment, onTemplateDataModify: modifyAlignment } =
     useBehavior(gameObjectId, FactionAlignmentBehavior);
-  const { extraRaw: stateMachines, onExtraRawModify: modifyStateMachines } =
+  const { extraData: stateMachines, onExtraDataModify: modifyStateMachines } =
     useBehavior(gameObjectId, StateMachineControllerBehavior);
   const { extraData: modifiers, onExtraDataModify: modifyModifiers } =
     useBehavior(gameObjectId, MinionModifiersBehavior);
 
-  const machines = decodeStateMachines(stateMachines);
-  const isDead =
-    machines && findDeathMonitor(machines)
-      ? isDeadStateMachines(stateMachines)
-      : isDeadAlignment(alignment);
+  const isDead = findDeathMonitor(stateMachines)
+    ? isDeadStateMachines(stateMachines)
+    : isDeadAlignment(alignment);
 
   const revive = React.useCallback(() => {
     // The one that actually resurrects anybody.

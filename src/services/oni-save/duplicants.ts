@@ -55,19 +55,6 @@ export interface FactionAlignmentBehavior extends GameObjectBehavior {
   };
 }
 
-/**
- * The behavior whose hand-rolled blob actually records a death. It declares no
- * template fields, because the game serializes it itself - see
- * `state-machines.ts`.
- */
-export interface StateMachineControllerBehavior extends GameObjectBehavior {
-  name: "StateMachineController";
-  templateData: {};
-}
-
-export const StateMachineControllerBehavior =
-  "StateMachineController" as BehaviorName<StateMachineControllerBehavior>;
-
 export const FactionAlignmentBehavior =
   "FactionAlignment" as BehaviorName<FactionAlignmentBehavior>;
 
@@ -91,10 +78,9 @@ export function isDeadAlignment(
  * `ApplyDeath()` is what drops the duplicant out of the assignment groups -
  * so this flag is a *consequence* of death, not the record of it.
  *
- * The state itself lives in `StateMachineController.extraRaw`, a blob written
- * by `StateMachineSerializer` outside the type-template system, which is why
- * the behavior's template declares no fields and why oni-save-parser keeps it
- * as opaque bytes. Reviving means editing that blob. See ROADMAP 1.1.
+ * The state itself lives among the duplicant's state machines, which the
+ * parser decodes out of `StateMachineController`. Reviving means editing that.
+ * See `state-machines.ts` and ROADMAP 1.1.
  */
 export const REVIVE_ALIGNMENT = {
   alignmentActive: true,

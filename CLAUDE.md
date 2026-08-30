@@ -47,6 +47,12 @@ Import portrait components from **`@/components/duplicant`**, never from `react-
 
 The fork ships source maps with the TypeScript inlined (`inlineSources`), which is why `webpack.config.js` runs `source-map-loader` over this one package and no other — a parse failure then resolves to parser source rather than bundled output. Most other dependencies ship no maps, so a blanket rule would only produce warnings.
 
+A behavior whose type template declares no fields is not an empty behavior — it is one the game
+serializes by hand. `StateMachineController` is the case that bit: its template is bare, so everything
+fell through to `extraRaw`, and it holds every running state machine on every game object, including the
+`DeathMonitor` state that records a duplicant's death. The fork decodes it now. If another behavior ever
+looks empty but carries bytes, that is the shape to look for.
+
 Supported save versions are the `CURRENT_VERSION_MINOR` array in the fork's `src/save-structure/version-validator.ts`. Saves are self-describing — each file carries its own type templates — so a minor version bump that only adds or reorders fields parses unchanged. Use `/save-version` to verify a new version before adding it; never add one unverified.
 
 ## Geysers store rolls, not values

@@ -162,7 +162,7 @@ export function replaceGameObject(
 export type DataModifier<T> = Partial<T> | ((data: T) => T);
 export function changeStateBehaviorData<
   T extends GameObjectBehavior,
-  K extends "templateData" | "extraData" | "extraRaw",
+  K extends "templateData" | "extraData",
 >(
   gameObject: GameObject,
   behaviorName: BehaviorName<T>,
