@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Trans } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-import MenuItem from "@mui/material/MenuItem";
+import ActionMenuItem from "../ActionMenuItem";
 
 export interface CloneMenuItemProps {
   onCloneDuplicant(): void;
@@ -11,14 +11,19 @@ export interface CloneMenuItemProps {
 
 type Props = CloneMenuItemProps;
 const CloneMenuItem: React.FC<Props> = ({ onCloneDuplicant, onClick }) => {
+  const { t } = useTranslation();
   const onMenuItemClick = React.useCallback(() => {
     onCloneDuplicant();
     onClick();
   }, [onCloneDuplicant, onClick]);
   return (
-    <MenuItem onClick={onMenuItemClick}>
-      <Trans i18nKey="duplicant.verbs.clone_titlecase">Clone</Trans>
-    </MenuItem>
+    <ActionMenuItem
+      label={t("duplicant.verbs.clone_titlecase", { defaultValue: "Clone" })}
+      description={t("duplicant.verbs.clone_description", {
+        defaultValue: "",
+      })}
+      onClick={onMenuItemClick}
+    />
   );
 };
 

@@ -117,6 +117,51 @@ test.describe("duplicant editor", () => {
     );
   });
 
+  // What is behind the Actions button, and why it is a labelled button: the
+  // two entries that rewrite a duplicant say so, in a sentence that was
+  // already written in en/common.json with nothing rendering it.
+  test("the actions menu explains the ones that rewrite a duplicant", async ({
+    page,
+  }) => {
+    await page.getByRole("button", { name: "Actions" }).click();
+
+    const menu = page.getByRole("menu");
+    await expect(
+      menu.getByText("Full health and breath, no stress, no disease"),
+    ).toBeVisible();
+    await expect(
+      menu.getByText(
+        "Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience",
+      ),
+    ).toBeVisible();
+    await expect(
+      menu.getByText("Adds a second duplicant with these settings"),
+    ).toBeVisible();
+
+    // Revive is not here. It is the button in the banner, and only a dead
+    // duplicant has one.
+    await expect(menu.getByRole("menuitem", { name: /Revive/ })).toHaveCount(0);
+
+    await expect(menu).toHaveScreenshot("actions-menu.png");
+  });
+
+  test("heal and de-stress clears what is wrong", async ({ page }) => {
+    await page.getByRole("button", { name: "Actions" }).click();
+    await page.getByRole("menuitem", { name: /Heal and de-stress/ }).click();
+
+    await expect(page.getByRole("textbox", { name: "Stress" })).toHaveValue(
+      "0",
+    );
+    // And it does not quietly cut back a value already past its own scale.
+    await expect(page.getByRole("textbox", { name: "Breath" })).toHaveValue(
+      "200",
+    );
+    // Nor feed anybody: heal is not a meal.
+    await expect(page.getByRole("textbox", { name: "Calories" })).toHaveValue(
+      "3,536,336.75",
+    );
+  });
+
   // Thirty-three hairstyles is a browse, not a field, so it moved behind a
   // button. The picker itself is unchanged; that it still opens is the point.
   test("appearance opens as a dialog", async ({ page }) => {

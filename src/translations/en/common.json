@@ -16,7 +16,10 @@
       "paste_titlecase": "Paste",
       "mega_titlecase": "Make Mega Duplicant",
       "mega_description": "Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience",
-      "actions_titlecase": "Actions"
+      "actions_titlecase": "Actions",
+      "heal_titlecase": "Heal and de-stress",
+      "heal_description": "Full health and breath, no stress, no disease",
+      "clone_description": "Adds a second duplicant with these settings"
     },
     "conditions": {
       "missing_titlecase": "Duplicant Not Found",

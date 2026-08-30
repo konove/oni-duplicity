@@ -112,6 +112,31 @@ export function clampToScale(value: number, maximum: number): number {
 }
 
 /**
+ * What "heal and de-stress" sets each amount to, or undefined for the ones it
+ * has no business touching - calories, bladder, decor, body temperature.
+ *
+ * The filling half never takes anything away: a duplicant carrying 200 breath
+ * on a scale of 100 keeps it, because healing somebody is no reason to cut
+ * them back to the maximum the editor happens to draw.
+ */
+export function healTarget(
+  amountId: string,
+  current: number,
+): number | undefined {
+  if (
+    amountId === "HitPoints" ||
+    amountId === "Breath" ||
+    amountId === IMMUNITY_AMOUNT
+  ) {
+    return Math.max(current, amountMaximum(amountId));
+  }
+  if (amountId === "Stress" || DISEASE_AMOUNTS.indexOf(amountId) !== -1) {
+    return 0;
+  }
+  return undefined;
+}
+
+/**
  * How far one nudge of a slider moves it.
  *
  * A whole unit on the amounts that run to a hundred, because nobody wants

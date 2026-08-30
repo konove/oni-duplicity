@@ -104,22 +104,4 @@ test.describe("dead duplicant", () => {
     });
     expect(overflow, "the editor should not scroll").toBeLessThanOrEqual(0);
   });
-
-  test("a living duplicant is offered no Revive", async ({ page }) => {
-    const href = await page.evaluate(() => {
-      const link = document.querySelector<HTMLAnchorElement>(
-        'a[href^="#/duplicants/"]',
-      );
-      return link ? link.getAttribute("href") : null;
-    });
-    await page.evaluate((h) => {
-      window.location.hash = (h as string).slice(1);
-    }, href as string);
-    await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
-
-    await page.getByRole("button", { name: "Actions" }).click();
-    // Omitted rather than disabled, so it is absent from the menu entirely.
-    await expect(page.getByRole("menuitem", { name: "Revive" })).toHaveCount(0);
-    await expect(page.getByRole("menuitem", { name: /Clone/ })).toBeVisible();
-  });
 });

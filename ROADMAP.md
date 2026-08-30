@@ -391,9 +391,15 @@ pass before code.
 **Shipped:** a dead duplicant greys out wherever their portrait is drawn, carries a `Dead` chip on the
 duplicants list, and gets a banner across the top of the editor saying so with **Revive** beside it —
 direction B out of `design/duplicant-one-screen/`. Almost nobody opens a dead duplicant to adjust their
-Machinery, so the one thing they came for is a button rather than a menu entry. The editor's identity
-panel deliberately does not repeat the chip: the banner is a hundred pixels above it. Revive is also in
-the actions menu, omitted rather than disabled on a living duplicant. Everything about a dead duplicant stays editable; they are still a record, not
+Machinery, so the one thing they came for is a button rather than a menu entry — and it is only there,
+not in the menu as well. The editor's identity panel deliberately does not repeat the chip either: the
+banner is a hundred pixels above it.
+
+The actions menu is the design's, in three groups: put a duplicant right, move their data about, act on
+the colony. The three entries that rewrite a duplicant carry a second line saying what they do —
+**Heal and de-stress** (new: full health, breath and immunity, no stress, no disease, and it never cuts
+back a value that is already past its own scale), **Make Mega Duplicant**, and **Clone**. Mega's
+sentence was written in `en/common.json` all along with nothing rendering it. Everything about a dead duplicant stays editable; they are still a record, not
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 

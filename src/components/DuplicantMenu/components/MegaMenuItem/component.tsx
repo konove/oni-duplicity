@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-import MenuItem from "@mui/material/MenuItem";
+import ActionMenuItem from "../ActionMenuItem";
 
 export interface MegaMenuItemProps {
   onMegaDuplicant(): void;
@@ -17,14 +17,13 @@ const MegaMenuItem: React.FC<Props> = ({ onMegaDuplicant, onClick }) => {
     onClick();
   }, [onMegaDuplicant, onClick]);
   return (
-    <MenuItem
+    <ActionMenuItem
+      label={t("duplicant.verbs.mega_titlecase", {
+        defaultValue: "Make Mega Duplicant",
+      })}
+      description={t("duplicant.verbs.mega_description", { defaultValue: "" })}
       onClick={onMenuItemClick}
-      title={t("duplicant.verbs.mega_description")}
-    >
-      <Trans i18nKey="duplicant.verbs.mega_titlecase">
-        Make Mega Duplicant
-      </Trans>
-    </MenuItem>
+    />
   );
 };
 

@@ -8,15 +8,13 @@ import Divider from "@mui/material/Divider";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import ReviveMenuItem from "./components/ReviveMenuItem";
 import CopyMenuItem from "./components/CopyMenuItem";
 import ImportMenuItem from "./components/ImportMenuItem";
 import ExportMenuItem from "./components/ExportMenuItem";
 import PasteMenuItem from "./components/PasteMenuItem";
 import CloneMenuItem from "./components/CloneMenuItem";
 import MegaMenuItem from "./components/MegaMenuItem";
-
-import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
+import HealMenuItem from "./components/HealMenuItem";
 
 export interface DuplicantMenuProps {
   gameObjectId: number;
@@ -35,7 +33,6 @@ export interface DuplicantMenuProps {
 type Props = DuplicantMenuProps;
 const DuplicantMenu: React.FC<Props> = ({ gameObjectId, label }) => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLElement | null>(null);
-  const { isDead } = useDuplicantCondition(gameObjectId);
 
   const onOpen = React.useCallback((e: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(e.currentTarget);
@@ -73,23 +70,22 @@ const DuplicantMenu: React.FC<Props> = ({ gameObjectId, label }) => {
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={onClose}
+        // Without a ceiling the menu grows to the width of its longest
+        // sentence, and the one under "Make Mega Duplicant" is thirteen words.
+        slotProps={{ paper: { sx: { maxWidth: 340 } } }}
       >
-        {/* First, and omitted rather than disabled on a living duplicant -
-            the way the Materials row menu leaves out an entry with nothing to
-            act on. A greyed row asks the reader to work out why it is greyed,
-            and "this one is alive" is not news they need. */}
-        {isDead && (
-          <ReviveMenuItem gameObjectId={gameObjectId} onClick={onClose} />
-        )}
-        {isDead && <Divider />}
+        {/* Grouped by what they do to a duplicant: put one right, move their
+            data about, act on the colony. Revive is not here - it is the
+            button in the banner, and a duplicant who needs it has one. */}
+        <HealMenuItem gameObjectId={gameObjectId} onClick={onClose} />
+        <MegaMenuItem gameObjectId={gameObjectId} onClick={onClose} />
+        <Divider />
         <CopyMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <PasteMenuItem gameObjectId={gameObjectId} onClose={onClose} />
-        <Divider />
         <ImportMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <ExportMenuItem gameObjectId={gameObjectId} onClose={onClose} />
         <Divider />
         <CloneMenuItem gameObjectId={gameObjectId} onClick={onClose} />
-        <MegaMenuItem gameObjectId={gameObjectId} onClick={onClose} />
       </Menu>
     </div>
   );

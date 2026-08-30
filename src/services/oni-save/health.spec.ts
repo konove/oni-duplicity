@@ -6,6 +6,7 @@ import {
   amountMaximum,
   amountStep,
   clampToScale,
+  healTarget,
   formatAmount,
   isOffScale,
   statName,
@@ -136,5 +137,34 @@ describe("formatAmount", () => {
 
   it("leaves a whole number whole", () => {
     expect(formatAmount(100)).toBe("100");
+  });
+});
+
+describe("healTarget", () => {
+  it("fills the numbers that keep a duplicant standing up", () => {
+    expect(healTarget("HitPoints", 40)).toBe(100);
+    expect(healTarget("Breath", 0)).toBe(100);
+    expect(healTarget("ImmuneLevel", 12)).toBe(100);
+  });
+
+  it("empties the ones that are only ever a problem", () => {
+    expect(healTarget("Stress", 88)).toBe(0);
+    expect(healTarget("SlimeLung", 500)).toBe(0);
+    expect(healTarget("ZombieSpores", 3)).toBe(0);
+  });
+
+  // Healing somebody is no reason to cut them back to the maximum the editor
+  // happens to draw. The bundled save has a duplicant at 200 breath out of 100.
+  it("never takes away more than the duplicant already had", () => {
+    expect(healTarget("Breath", 200)).toBe(200);
+    expect(healTarget("HitPoints", 150)).toBe(150);
+  });
+
+  // Being unwell is not the same as being hungry, and heal is not a meal.
+  it("leaves alone what is none of its business", () => {
+    expect(healTarget("Calories", 12)).toBeUndefined();
+    expect(healTarget("Bladder", 99)).toBeUndefined();
+    expect(healTarget("Decor", -130)).toBeUndefined();
+    expect(healTarget("Temperature", 310)).toBeUndefined();
   });
 });
