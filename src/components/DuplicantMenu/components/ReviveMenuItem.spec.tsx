@@ -10,6 +10,16 @@ import "@testing-library/jest-dom";
 import MenuList from "@mui/material/MenuList";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
+import {
+  DEATH_MONITOR,
+  DEATH_PARAMETER,
+  ALIVE_STATE,
+  decodeStateMachines,
+  encodeParameters,
+  encodeResourceValue,
+  encodeStateMachines,
+  findDeathMonitor,
+} from "@/services/oni-save/state-machines";
 
 import ReviveMenuItem from "./ReviveMenuItem";
 
@@ -41,13 +51,46 @@ const mockUseBehavior = useBehavior as jest.MockedFunction<typeof useBehavior>;
 
 let modifyAlignment: jest.Mock;
 let modifyModifiers: jest.Mock;
+let modifyStateMachines: jest.Mock;
+
+/** The blob a duplicant who suffocated actually leaves behind. */
+const deadBlob = () =>
+  encodeStateMachines({
+    version: 20,
+    entries: [
+      {
+        leading: 0,
+        type: DEATH_MONITOR,
+        suffix: null,
+        currentState: "root.dead.ground",
+        data: encodeParameters([
+          {
+            contextType: "StateMachine`4+ResourceParameter`1+Context",
+            name: DEATH_PARAMETER,
+            value: encodeResourceValue("Root.Deaths.Suffocation"),
+          },
+        ]),
+      },
+    ],
+  });
 
 // Suffocated: out of the faction, breath gone, but at full health and with
 // calories to spare - the shape the real save turned out to have.
 beforeEach(() => {
   modifyAlignment = jest.fn();
   modifyModifiers = jest.fn();
+  modifyStateMachines = jest.fn();
   mockUseBehavior.mockImplementation((_id: number, behaviorName: any) => {
+    if (behaviorName === "StateMachineController") {
+      return {
+        templateData: {},
+        extraData: null,
+        extraRaw: deadBlob(),
+        onTemplateDataModify: jest.fn(),
+        onExtraDataModify: jest.fn(),
+        onExtraRawModify: modifyStateMachines,
+      } as any;
+    }
     if (behaviorName === "FactionAlignment") {
       return {
         templateData: {
@@ -109,10 +152,21 @@ describe("ReviveMenuItem", () => {
     expect(onClick).toHaveBeenCalled();
   });
 
-  // The flag on its own is not enough: a save edited that way was loaded into
-  // the game and the duplicant came straight back reading "Dead: Suffocation",
-  // at full health, because his breath was still zero.
-  it("also undoes what killed them", () => {
+  // The write that actually resurrects anyone. DeathMonitor's state lives in
+  // StateMachineController's hand-rolled blob, and a save edited without
+  // touching it came back from the game still reading "Dead: Suffocation".
+  it("puts the death monitor back in the living state", () => {
+    renderItem(jest.fn());
+
+    fireEvent.click(screen.getByText("Revive"));
+
+    expect(modifyStateMachines).toHaveBeenCalledTimes(1);
+    const written = modifyStateMachines.mock.calls[0][0];
+    const monitor = findDeathMonitor(decodeStateMachines(written)!)!;
+    expect(monitor.currentState).toBe(ALIVE_STATE);
+  });
+
+  it("also tidies the flag and vitals the game recomputes", () => {
     renderItem(jest.fn());
 
     fireEvent.click(screen.getByText("Revive"));

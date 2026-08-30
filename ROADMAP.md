@@ -364,7 +364,9 @@ disabled on a living one. Everything about a dead duplicant stays editable; they
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 
-**Revive does not work yet, and the decompiled assembly says exactly why.** A save with
+**Built, and waiting on one in-game load to confirm it.** What follows is why it took three tries.
+
+**The decompiled assembly is what settled it.** A save with
 `alignmentActive` and `targetable` set back to `true` was loaded into the game and the duplicant came
 back reading **"Dead: Suffocation"**. Two hypotheses fitted that — the flag is not the record, or the
 cause of death was still true of him — and diffing saves could not separate them. `tools/decomp` settles
@@ -402,10 +404,20 @@ block sits inside the data: `int32` count, then per parameter an `int32` length,
 type, a Klei string name and the value. Editing the two strings means fixing three length fields — the
 parameter's, the entry's, and the file's — and nothing else moves.
 
-**What is shipped today is the marker, not the cure.** A dead duplicant is marked correctly in both
-places; the menu's Revive tidies the faction flag and the vitals and is honest about doing no more than
-that. Making it work needs a decoder and encoder for that blob, and a `BehaviorDataTarget` for
-`extraRaw`, which the action and reducer do not have yet — `Template` and `Extra` are the only two.
+**Shipped.** `src/services/oni-save/state-machines.ts` decodes and re-encodes the blob;
+`BehaviorDataTarget.Raw` carries it through the action and reducer, replaced whole rather than merged
+because spreading an `ArrayBuffer` quietly yields an empty object; `useBehavior` exposes `extraRaw` and
+`onExtraRawModify`. `isDead` now reads the `DeathMonitor` state, falling back to the faction flag only
+when there is no blob to ask — which is the bundled example save, since an `ArrayBuffer` does not
+survive a trip through JSON.
+
+The round trip is checked against every state machine blob in two real saves: **32,188 of them, all
+decoded, all re-encoded byte for byte**. The codec refuses anything it does not fully understand — an
+unknown serializer version, a length that overruns, bytes left over — and returns null rather than a
+partial answer, because the alternative is writing a save the game cannot load.
+
+`killMockDuplicant()` now builds the blob a real death leaves behind rather than only flipping the flag,
+so the screenshot tests go through the same decode and revive path a real save does.
 
 Everything below is what reading real saves turned up, kept because the reasoning is what the next
 person needs.

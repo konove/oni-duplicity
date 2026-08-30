@@ -55,6 +55,19 @@ export interface FactionAlignmentBehavior extends GameObjectBehavior {
   };
 }
 
+/**
+ * The behavior whose hand-rolled blob actually records a death. It declares no
+ * template fields, because the game serializes it itself - see
+ * `state-machines.ts`.
+ */
+export interface StateMachineControllerBehavior extends GameObjectBehavior {
+  name: "StateMachineController";
+  templateData: {};
+}
+
+export const StateMachineControllerBehavior =
+  "StateMachineController" as BehaviorName<StateMachineControllerBehavior>;
+
 export const FactionAlignmentBehavior =
   "FactionAlignment" as BehaviorName<FactionAlignmentBehavior>;
 
