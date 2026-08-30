@@ -1,21 +1,15 @@
 import * as React from "react";
 
-import { WithTranslation, withTranslation, Trans } from "react-i18next";
+import { WithTranslation, withTranslation } from "react-i18next";
 
-import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
-import Divider from "@mui/material/Divider";
+import { createStyles, withStyles, WithStyles } from "@/styles";
 import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 import PageContainer from "@/components/PageContainer";
-import DuplicantPortrait from "@/components/DuplicantPortrait";
-import DuplicantMenu from "@/components/DuplicantMenu";
 
-import DuplicantName from "./components/DuplicantName";
-import Traits from "./components/Traits";
-import Aptitudes from "./components/Interests";
+import IdentityBand from "./components/IdentityBand";
 import Attributes from "./components/Attributes";
 import Appearance from "./components/Appearance";
 import Skills from "./components/Skills";
@@ -26,62 +20,27 @@ export interface DuplicantEditorProps {
   gameObjectId: number;
 }
 
-const styles = (theme: Theme) =>
-  createStyles({
-    root: {
-      paddingLeft: theme.spacing(),
-      paddingTop: theme.spacing(),
-      display: "flex",
-      flexDirection: "column",
-      width: "100%",
-      height: "100%",
-    },
-    divider: {
-      marginTop: theme.spacing(),
-      marginBottom: theme.spacing(),
-    },
-    nameRow: {
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      flexGrow: 0,
-      flexShrink: 0,
-    },
-    nameRowMenu: {
-      marginLeft: "auto",
-    },
-    portraitRow: {
-      display: "flex",
-      flexDirection: "row",
-      marginBottom: theme.spacing(),
-      flexGrow: 0,
-      flexShrink: 0,
-    },
-    portraitRowColumn: {
-      marginRight: theme.spacing(),
-    },
-    portraitRowTweakables: {
-      width: "100%",
-    },
-    row: {
-      marginBottom: theme.spacing(),
-      flexGrow: 0,
-      flexShrink: 0,
-    },
-    tabRow: {
-      display: "flex",
-      flexDirection: "column",
-      // See DuplicantAttributes: spacing() returns a string since MUI v5, so
-      // the negation has to go through the argument.
-      marginLeft: theme.spacing(-1),
-      height: "100%",
-    },
-    tabContent: {
-      width: "100%",
-      height: "100%",
-      overflow: "auto",
-    },
-  });
+const styles = createStyles({
+  // No padding of its own: the band paints its own inset and its bottom rule
+  // has to run the full width, and the tab bar sits flush under it.
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    height: "100%",
+  },
+  tabRow: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: 0,
+    height: "100%",
+  },
+  tabContent: {
+    width: "100%",
+    height: "100%",
+    overflow: "auto",
+  },
+});
 
 type Props = DuplicantEditorProps & WithTranslation & WithStyles<typeof styles>;
 
@@ -90,38 +49,7 @@ const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => {
   return (
     <PageContainer title={t("duplicant.verbs.edit_titlecase")} back>
       <div className={classes.root}>
-        <div className={classes.nameRow}>
-          <DuplicantName gameObjectId={gameObjectId} />
-          <div className={classes.nameRowMenu}>
-            <DuplicantMenu gameObjectId={gameObjectId} />
-          </div>
-        </div>
-        <Divider className={classes.divider} />
-        <div className={classes.portraitRow}>
-          <div className={classes.portraitRowColumn}>
-            <Paper>
-              <DuplicantPortrait gameObjectId={gameObjectId} scale={0.6} />
-            </Paper>
-          </div>
-          <div className={classes.portraitRowTweakables}>
-            <div className={classes.row}>
-              <Typography variant="h6">
-                <Trans i18nKey="duplicant_trait.noun_titlecase">Traits</Trans>
-              </Typography>
-              <Divider className={classes.divider} />
-              <Traits gameObjectId={gameObjectId} />
-            </div>
-            <div className={classes.row}>
-              <Typography variant="h6">
-                <Trans i18nKey="duplicant_interest.noun_titlecase">
-                  Interests
-                </Trans>
-              </Typography>
-              <Divider className={classes.divider} />
-              <Aptitudes gameObjectId={gameObjectId} />
-            </div>
-          </div>
-        </div>
+        <IdentityBand gameObjectId={gameObjectId} />
         <div className={classes.tabRow}>
           <Paper square>
             <Tabs
@@ -150,7 +78,7 @@ const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => {
                 })}
               />
               <Tab
-                label={t("duplicant_effect.noun_titlecase", {
+                label={t("duplicant_effect.noun_titlecase_plural", {
                   defaultValue: "Effects",
                 })}
               />

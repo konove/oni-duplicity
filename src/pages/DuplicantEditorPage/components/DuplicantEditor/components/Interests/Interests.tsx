@@ -28,13 +28,13 @@ export interface InterestsProps {
 
 const styles = (theme: Theme) =>
   createStyles({
+    // A gap rather than a margin on each chip: the band gives this run exactly
+    // one chip's height, and 4px of margin above and below would push it out.
     root: {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-    },
-    chip: {
-      margin: theme.spacing(0.5),
+      gap: theme.spacing(1),
     },
   });
 
@@ -99,7 +99,6 @@ const Interests: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
       {selectedAptitudes.map((aptitudeName) => (
         <Chip
           key={aptitudeName}
-          className={classes.chip}
           label={t(skillGroupNameKey(aptitudeName), {
             defaultValue: aptitudeName,
           })}
@@ -108,7 +107,6 @@ const Interests: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
         />
       ))}
       <AddAptitudeButton
-        className={classes.chip}
         availableAptitudes={availableAptitudes}
         onAddAptitude={addAptitude}
       />

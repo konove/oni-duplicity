@@ -24,13 +24,13 @@ export interface TraitsProps {
 
 const styles = (theme: Theme) =>
   createStyles({
+    // A gap rather than a margin on each chip: the band gives this run exactly
+    // one chip's height, and 4px of margin above and below would push it out.
     root: {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-    },
-    chip: {
-      margin: theme.spacing(0.5),
+      gap: theme.spacing(1),
     },
   });
 
@@ -57,7 +57,6 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
       {ordered.map(({ trait, index }) => (
         <Chip
           key={trait}
-          className={classes.chip}
           label={t(traitNameKey(trait), { defaultValue: trait })}
           title={traitTooltip(trait, t)}
           onDelete={() => {
@@ -70,7 +69,6 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
         />
       ))}
       <AddTraitButton
-        className={classes.chip}
         availableTraits={availableTraits}
         onAddTrait={(trait) =>
           onTemplateDataModify({ TraitIds: [...TraitIds, trait] })

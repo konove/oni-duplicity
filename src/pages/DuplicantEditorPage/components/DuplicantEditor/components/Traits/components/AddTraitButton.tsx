@@ -14,14 +14,12 @@ import {
 
 export interface AddTraitButtonProps {
   availableTraits: string[];
-  className?: string;
   onAddTrait(trait: string): void;
 }
 
 type Props = AddTraitButtonProps & WithTranslation;
 
 const AddTraitButton: React.FC<Props> = ({
-  className,
   availableTraits,
   onAddTrait,
   t,
@@ -33,7 +31,7 @@ const AddTraitButton: React.FC<Props> = ({
   // stale node.
   const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
   return (
-    <div className={className}>
+    <div>
       <div ref={setAnchorEl}>
         <Chip
           color="primary"

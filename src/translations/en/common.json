@@ -2,6 +2,12 @@
   "duplicant": {
     "noun_titlecase_plural": "Duplicants",
     "noun_titlecase": "Duplicant",
+    "gender": {
+      "FEMALE": "Female",
+      "MALE": "Male",
+      "NB": "Non-binary"
+    },
+    "identity_line": "{{gender}} · Voice {{voice}} · arrived cycle {{cycle}}",
     "verbs": {
       "edit_titlecase": "Edit Duplicant",
       "clone_titlecase": "Clone",
@@ -16,6 +22,7 @@
   },
   "duplicant_effect": {
     "noun_titlecase": "Effect",
+    "noun_titlecase_plural": "Effects",
     "verbs": {
       "add_titlecase": "Add Effect"
     }
@@ -29,6 +36,7 @@
   },
   "duplicant_interest": {
     "noun_titlecase": "Interest",
+    "noun_titlecase_plural": "Interests",
     "verbs": {
       "add_titlecase": "Add Interest"
     }

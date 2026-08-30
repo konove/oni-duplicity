@@ -254,12 +254,61 @@ most of the nav does nothing until a save loads, the overview is a name and four
 numbers, and nothing says what this editor is for or what is safe to touch.
 **Effort: M**, and mostly copy and sequencing rather than new machinery.
 
-### 0.12 The duplicant editor is the densest screen and the least organised
+### 0.12 The duplicant editor is the densest screen and the least organised — **direction A shipped**
 
 Five tabs — Attributes, Appearance, Health, Skills, Effects — under a header
 that already carries the portrait, every trait chip and every interest chip.
 Attributes alone is 30-odd numeric fields. It is the screen people spend their
 time in and the one with the least deliberate layout. **Effort: M–L.**
+
+Measured before touching it: the first editable field sat at y=444 of a 720-tall
+window. A 64px app bar, a name row that only printed the name, a 202px identity
+block built out of two `h6` headings and three dividers, and a 48px tab bar —
+and the identity block was re-paid on every tab, including Health and Skills,
+which have nothing to do with traits. "Secondary" was a heading whose fields sat
+below the fold.
+
+Shipped as `IdentityBand`: a 100px portrait, the name and an identity line
+beside it, and traits and interests as two labelled runs of chips with no
+headings and no dividers. 136px where the name row and the block together took 267. Tab content now starts at 248 and the first field at 341, so both attribute
+groups fit at 720 — which `e2e/duplicant-editor.spec.ts` asserts directly rather
+than photographing, because a full-page screenshot records a regression as a
+taller image and passes.
+
+Two changes inside the Attributes tab came with it. Each cell reads
+name-then-value on its own hairline, so a column of names scans and the values
+line up on a right rail; the hairline is load-bearing, because without it a
+right-aligned value reads as belonging to the next column's label. And the
+attributes sitting at 0 — fifteen of Ada's seventeen — are dimmed, so what is
+set is visible without reading every number.
+
+The identity line is where 1.2's name, gender and voice controls land: it
+already prints all three, as text.
+
+One correction to the entry above: 30-odd is the count on a fuller save. The
+bundled example carries 17, so the fold problem the numbers here describe is the
+light case rather than the bad one.
+
+Still open, in the order their reasons arrive — the design pass drew seven
+directions and this was the first:
+
+- **A roster column inside the editor**, when 1.5 or 2.2 is built. Editing a
+  colony is not one duplicant, it is twelve, and every switch today is back,
+  scan the wall of identical cards, click. That column is the same work as list
+  search and multi-select.
+- **"What is on, plus Add" for Skills and Effects**, whichever layout wins.
+  Fifty-four checkboxes to express one mastery is the worst ratio on the page.
+- **Field search**, after 3.1's omnibar exists.
+- **One scrolling document with a rail**, when the editor has a second reason to
+  be opened. The band is a step toward it, not a competitor.
+- **Verb cards** — Mega, Clone, Revive — only after 1.6 and 2.1. One-click bulk
+  mutation with no undo and no unsaved-changes guard is the combination the
+  README already apologises for.
+
+Noticed while measuring and still unfixed: the Health tab labels its sliders
+with raw ids (`HitPoints`, `ImmuneLevel`) because `oni:todo-trans.modifiers.*`
+has no entries, Calories rides a 0–4,000,000 slider, and Breath is 200 on a
+slider whose maximum is 100 — the handle pins at the end and says nothing.
 
 ### 0.13 The page split may not match how people edit a colony
 

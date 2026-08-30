@@ -38,6 +38,30 @@ test.describe("duplicant editor", () => {
     await expect(page).toHaveScreenshot("editor.png", { fullPage: true });
   });
 
+  // The measured claim behind the identity band: with the name row and the
+  // portrait block folded into one 136px strip, the tab content starts high
+  // enough that both attribute groups fit at 720 - which they did not before,
+  // where "Secondary" was a heading whose fields sat below the fold.
+  //
+  // A screenshot cannot catch this on its own: a full-page shot photographs
+  // the scrolled-out part too, and happily records a regression as a taller
+  // image. The count is here so the test cannot pass by rendering nothing;
+  // the mock save carries 17 attributes.
+  test("both attribute groups fit without scrolling", async ({ page }) => {
+    await expect(
+      page.getByRole("heading", { name: "Secondary" }),
+    ).toBeVisible();
+
+    const fields = page.locator('input[type="number"]');
+    await expect(fields).toHaveCount(17);
+
+    const box = await fields.last().boundingBox();
+    expect(box, "the last attribute field should be laid out").not.toBeNull();
+    const viewport = page.viewportSize();
+    expect(viewport, "the test runs at a fixed viewport").not.toBeNull();
+    expect(box!.y + box!.height).toBeLessThanOrEqual(viewport!.height);
+  });
+
   // The appearance grid is a row of ButtonBase controls, one per hairstyle. Its
   // container element has changed before - a div with onClick became a real
   // button so keyboard users could reach it - and that swap is invisible in

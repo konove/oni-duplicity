@@ -14,14 +14,12 @@ import {
 
 export interface AddAptitudeButtonProps {
   availableAptitudes: string[];
-  className?: string;
   onAddAptitude(aptitude: string): void;
 }
 
 type Props = AddAptitudeButtonProps & WithTranslation;
 
 const AddAptitudeButton: React.FC<Props> = ({
-  className,
   availableAptitudes,
   onAddAptitude,
   t,
@@ -33,7 +31,7 @@ const AddAptitudeButton: React.FC<Props> = ({
   // stale node.
   const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
   return (
-    <div className={className}>
+    <div>
       <div ref={setAnchorEl}>
         <Chip
           color="primary"
