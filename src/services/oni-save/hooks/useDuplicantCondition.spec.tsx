@@ -59,7 +59,7 @@ beforeEach(() => {
         extraData: machines,
         onTemplateDataModify: jest.fn(),
         onExtraDataModify: writes.machines,
-      } as any;
+      };
     }
     if (behaviorName === "FactionAlignment") {
       return {
@@ -67,7 +67,7 @@ beforeEach(() => {
         extraData: null,
         onTemplateDataModify: writes.alignment,
         onExtraDataModify: jest.fn(),
-      } as any;
+      };
     }
     return {
       templateData: {},
@@ -80,7 +80,7 @@ beforeEach(() => {
       },
       onTemplateDataModify: jest.fn(),
       onExtraDataModify: writes.modifiers,
-    } as any;
+    };
   });
 });
 

@@ -1,0 +1,86 @@
+name: CI
+
+# Two jobs, and the split is deliberate: every push and every pull request gets
+# checked, and only master gets published. Before this, nothing checked a change
+# on the way in and nothing had ever published a build - there was no gh-pages
+# branch and the Pages URL answered 404. See ROADMAP 1.10.
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # A push that lands while another is deploying supersedes it, but a run that
+  # is already publishing is left to finish - a half-uploaded Pages artifact is
+  # worse than a slightly stale one.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 22.15 is the floor package.json sets, which webpack-dev-server@6 is
+      # what raised. 24 is what the project is developed against.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # `npm ci` rather than install: the lockfile pins oni-save-parser to a
+      # commit on the fork, and this should fail loudly if the two disagree.
+      - run: npm ci
+
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+
+      # Playwright is deliberately not here. The screenshot baselines are
+      # platform-specific and were taken on Windows, so a Linux runner matches
+      # none of them - it would fail every run while catching nothing. Making
+      # it useful means committing a second set of Linux baselines, which is
+      # the open half of ROADMAP 1.10. Until then it stays `npm run test:e2e`
+      # on a developer's machine.
+      - run: npm run build
+
+      - name: Package the site
+        if: github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    needs: check
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # Turns Pages on if it is off, so the first run of this workflow is also
+      # what publishes the site for the first time - there has never been a
+      # deploy here, and requiring somebody to flip a switch in Settings first
+      # is exactly the kind of step that does not happen.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      # Publishes the artifact directly rather than committing a build to a
+      # gh-pages branch, which suits a dist/ that is already gitignored. It
+      # also means Jekyll never runs over the output, so nothing beginning with
+      # an underscore goes missing.
+      - id: deployment
+        uses: actions/deploy-pages@v4

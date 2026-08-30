@@ -58,7 +58,7 @@ beforeEach(() => {
     extraData: null,
     onTemplateDataModify: jest.fn(),
     onExtraDataModify: jest.fn(),
-  } as any);
+  });
   mockCondition.mockReturnValue({ isDead: true, revive });
 });
 

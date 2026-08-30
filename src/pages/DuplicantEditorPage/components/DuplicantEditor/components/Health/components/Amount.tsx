@@ -145,7 +145,8 @@ const Amount: React.FC<Props> = ({
       }
       write(parsed);
     },
-    [amounts, amountId, write],
+    // `write` already closes over the amounts and the id.
+    [write],
   );
 
   // Trailing digits on a float the game wrote are noise: 99.04344177246094
@@ -201,10 +202,10 @@ const Amount: React.FC<Props> = ({
           min={0}
           max={maximum}
           step={amountStep(maximum)}
-          onChange={(_, next) => setDragging(next as number)}
+          onChange={(_, next) => setDragging(next)}
           onChangeCommitted={(_, next) => {
             setDragging(null);
-            write(next as number);
+            write(next);
           }}
           aria-label={statName(amountId, t)}
         />

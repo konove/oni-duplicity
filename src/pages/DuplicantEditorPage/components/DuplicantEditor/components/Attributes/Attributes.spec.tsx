@@ -53,8 +53,11 @@ jest.mock("@/services/oni-save/hooks/useBehavior", () => ({
 
 const mockUseBehavior = useBehavior as jest.MockedFunction<typeof useBehavior>;
 
-const level = (attributeId: string, value: number): AttributeLevel =>
-  ({ attributeId, level: value, experience: 0 }) as AttributeLevel;
+const level = (attributeId: string, value: number): AttributeLevel => ({
+  attributeId,
+  level: value,
+  experience: 0,
+});
 
 // Every primary attribute, because the tab renders all twelve whether the save
 // carries them or not, plus one the save adds itself.
@@ -80,7 +83,7 @@ beforeEach(() => {
     extraData: null,
     onTemplateDataModify: jest.fn(),
     onExtraDataModify: jest.fn(),
-  } as any);
+  });
 });
 
 /** The cell is the label's parent - which is itself part of what is asserted. */

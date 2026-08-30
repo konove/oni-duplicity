@@ -33,16 +33,17 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Fourteen entries are marked **done** and carry a note saying what shipped: 0.1
-through 0.8, 0.10, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8 and 1.9. A
+**Where it stands.** Fifteen entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.8, 0.10, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8, 1.9 and 1.10. A
 fifteenth, 0.9, closed the other way: the editor's totals differ from the game's panel because the panel
 hides unreachable material and counts one asteroid, so there was never anything to fix. **Tier 0 is down
 to three**, and all three are questions about how the thing is laid out rather than what it can see
-(0.11, 0.13, 0.14). Tier 1 has 1.2 through 1.6 open, plus the new 1.10; 1.1, 1.7, 1.8 and 1.9 are done.
+(0.11, 0.13, 0.14). Tier 1 has 1.2 through 1.6 open; 1.1 and 1.7 through 1.10 are done.
 
-The newest entry is the largest gap in the document and has nothing to do with the save format: **1.10,
-nothing here is published**. There is no `gh-pages` branch and the Pages URL answers 404, so every fix
-above is available only to somebody who clones the repo and builds it.
+**1.10 closed the largest gap in the document**, and it had nothing to do with the save format: nothing
+here was published, and nothing checked a change on the way in. There is a workflow now — every push and
+pull request is checked, and `master` deploys to Pages. What is still open is the screenshot suite, which
+cannot join CI until it has Linux baselines of its own.
 
 ---
 
@@ -623,7 +624,7 @@ name argument and the other builds its id at runtime.
 Czech and Spanish fall back to English exactly as they already do for elements.
 Every material across two real colonies resolves.
 
-### 1.10 Nothing is published — the app only exists if you clone it
+### 1.10 Nothing is published — the app only exists if you clone it — **done, bar one open half**
 
 `npm run deploy` has been in `package.json` all along: `gh-pages -d dist`, pointed at this repo. Nothing
 runs it, and as far as the remote is concerned nothing ever has — there is no `gh-pages` branch, and
@@ -633,24 +634,34 @@ only to somebody who clones the repo and builds it.
 There is no CI either: `.github/workflows/` does not exist, so nothing typechecks, tests or builds a
 change on the way in, and the four commands under "Verifying a change" are run by hand or not at all.
 
-**The work:** one workflow on a push to `master` — `npm ci`, `npm run typecheck`, `npm test`,
-`npm run build`, then publish `dist/`. GitHub's own `actions/deploy-pages` publishes an artifact rather
-than committing to a branch, which suits a `dist/` that is already gitignored, and it means the first
-green run is also the first deploy.
+**Shipped as `.github/workflows/ci.yml`.** Two jobs. `check` runs on every push and every pull
+request — `npm ci`, `format:check`, `lint`, `typecheck`, `test`, `build` — and `deploy` runs only on
+`master`, publishing `dist/` with `actions/deploy-pages`. That publishes an artifact rather than
+committing a build to a `gh-pages` branch, which suits a `dist/` that is already gitignored, and it means
+Jekyll never runs over the output.
 
-Two things to settle with it, and neither is YAML:
+`actions/configure-pages` runs with `enablement: true`, so the workflow turns Pages on itself rather than
+depending on somebody finding the switch in Settings first. The first green run on `master` is the first
+deploy this repo has ever had.
 
-- **The screenshot suite.** Playwright needs a browser download and the dev server, which is a couple of
-  minutes a run — affordable. The baselines are the problem: they are platform-specific, taken on
-  Windows, and a Linux runner will not match a single one of them. Either the suite stays a local check
-  or it gets its own committed Linux baselines, and the second is the honest choice if CI is meant to
-  catch a visual regression rather than announce one every time.
-- **What a deploy makes testable.** The service worker is production-only, so a published build is the
-  first thing that can exercise the Settings page's offline toggle at all. That is a bug report waiting
-  to happen the day this lands.
+Adding `lint` to that list meant fixing it: it was failing with ten `no-unnecessary-type-assertion`
+errors, every one of them in a file written during the work above. CI that is red on its first run
+teaches people to ignore CI.
 
-**Effort: S** for the deploy on its own; **S–M** with the screenshots, and that half is baselines rather
-than configuration.
+**Verified before pushing, because a Pages site lives at a sub-path and that is the thing most likely to
+be quietly broken.** `PUBLIC_URL_PATH` was already `/oni-duplicity/`; the production build was staged
+under that path, served, and loaded — the app boots, hash routing works, and there is not one failed
+request or console error. The Settings page even offers offline mode there, which is the production-only
+service worker that has never been reachable in development.
+
+**Still open: the screenshot suite is not in CI.** Playwright's browser download and dev server are
+affordable, a couple of minutes a run. The baselines are the problem: they are platform-specific, taken
+on Windows, and a Linux runner would match none of them — it would fail every run while catching
+nothing. Making it useful means committing a second set of Linux baselines, generated on a Linux
+machine or in the Playwright container. Until then `npm run test:e2e` stays a local check, and the
+workflow says so where somebody will read it.
+
+**Effort: S**, as estimated. The open half is **S**, and it is baselines rather than configuration.
 
 ## Tier 2 — Real work, real demand
 

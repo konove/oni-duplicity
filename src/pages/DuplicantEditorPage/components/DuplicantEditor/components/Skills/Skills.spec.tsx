@@ -67,14 +67,14 @@ beforeEach(() => {
         extraData: null,
         onTemplateDataModify: modify,
         onExtraDataModify: jest.fn(),
-      } as any;
+      };
     }
     return {
       templateData: { model: { name: "Minion" } },
       extraData: null,
       onTemplateDataModify: jest.fn(),
       onExtraDataModify: jest.fn(),
-    } as any;
+    };
   });
 });
 
