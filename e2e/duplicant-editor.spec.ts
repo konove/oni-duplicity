@@ -62,6 +62,86 @@ test.describe("duplicant editor", () => {
     expect(box!.y + box!.height).toBeLessThanOrEqual(viewport!.height);
   });
 
+  // DuplicantPortrait mounts the head, eyes and hair layers but not the body,
+  // so a box sized for a whole duplicant leaves the head in the top two thirds
+  // with dead space beneath it. It looked like a portrait that had slipped up.
+  //
+  // A screenshot cannot defend this on its own: the framing lives in numbers a
+  // reviewer cannot read off a baseline, and `--update-snapshots` would accept
+  // it slipping back without a word. So measure where the sprite actually
+  // paints - screenshot the region, hide the three layers, screenshot again,
+  // and diff. Any pixel that changed is sprite.
+  test("the portrait sits centred in its box", async ({ page }) => {
+    const box = await page.evaluate(() => {
+      const head = document.querySelector(".duplicant-head");
+      const paper = head ? head.closest(".MuiPaper-root") : null;
+      if (!paper) return null;
+      const r = paper.getBoundingClientRect();
+      return { x: r.x, y: r.y, w: r.width, h: r.height };
+    });
+    expect(box, "the band should render a portrait").not.toBeNull();
+
+    const margin = 40;
+    const clip = {
+      x: box!.x - margin,
+      y: box!.y - margin,
+      width: box!.w + margin * 2,
+      height: box!.h + margin * 2,
+    };
+
+    const withArt = (await page.screenshot({ clip })).toString("base64");
+    await page.addStyleTag({
+      content:
+        ".duplicant-head, .duplicant-hair, .duplicant-eyes { visibility: hidden !important; }",
+    });
+    const without = (await page.screenshot({ clip })).toString("base64");
+
+    const ink = await page.evaluate(
+      async ([a, b, clipHeight]) => {
+        const load = async (data: string) => {
+          const img = new Image();
+          img.src = "data:image/png;base64," + data;
+          await img.decode();
+          const canvas = document.createElement("canvas");
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          const ctx = canvas.getContext("2d")!;
+          ctx.drawImage(img, 0, 0);
+          return ctx.getImageData(0, 0, canvas.width, canvas.height);
+        };
+        const A = await load(a as string);
+        const B = await load(b as string);
+        let top = Infinity;
+        let bottom = -Infinity;
+        for (let y = 0; y < A.height; y++) {
+          for (let x = 0; x < A.width; x++) {
+            const i = (y * A.width + x) * 4;
+            const delta =
+              Math.abs(A.data[i] - B.data[i]) +
+              Math.abs(A.data[i + 1] - B.data[i + 1]) +
+              Math.abs(A.data[i + 2] - B.data[i + 2]);
+            if (delta > 12) {
+              if (y < top) top = y;
+              if (y > bottom) bottom = y;
+            }
+          }
+        }
+        // The shot is in device pixels; the clip was in CSS pixels.
+        const scale = A.height / (clipHeight as number);
+        return { top: top / scale, bottom: bottom / scale };
+      },
+      [withArt, without, clip.height],
+    );
+
+    const above = ink.top - margin;
+    const below = box!.h - (ink.bottom - margin);
+    expect(above, "the sprite should paint inside its box").toBeGreaterThan(0);
+    // Hair reaches further up on some heads than others, so this is not a
+    // pixel-exact claim - but the bug it guards was 11px of overflow above
+    // against 44px of empty space below.
+    expect(Math.abs(above - below)).toBeLessThan(10);
+  });
+
   // The appearance grid is a row of ButtonBase controls, one per hairstyle. Its
   // container element has changed before - a div with onClick became a real
   // button so keyboard users could reach it - and that swap is invisible in

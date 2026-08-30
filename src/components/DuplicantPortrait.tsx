@@ -23,8 +23,23 @@ import useBehavior from "@/services/oni-save/hooks/useBehavior";
 
 export interface DuplicantPortraitProps {
   gameObjectId: number;
+  /** Multiplies PORTRAIT_WIDTH and PORTRAIT_HEIGHT below. */
   scale: number;
 }
+
+// The sprite layers are drawn for a whole duplicant, but only the head, eyes
+// and hair are ever mounted here - so a box sized for the body left the head
+// sitting in the top two thirds with dead space under it, which reads as a
+// portrait that is not centred.
+//
+// These are the same framing numbers HeadPortrait uses for the appearance
+// picker, where they were tuned against all 33 hairstyles: a 110x100 box at
+// scale .4, with the sprite anchored at 56,85. Expressed here at scale 1 so
+// the two components frame a head identically.
+const PORTRAIT_WIDTH = 275;
+const PORTRAIT_HEIGHT = 250;
+const SPRITE_LEFT = 140;
+const SPRITE_TOP = 212.5;
 
 const styles = createStyles({
   portraitContainer: {
@@ -83,7 +98,10 @@ const DuplicantPortrait: React.FC<Props> = ({
     return (
       <div
         className={classes.portraitContainer}
-        style={{ width: 240 * scale, height: 270 * scale }}
+        style={{
+          width: PORTRAIT_WIDTH * scale,
+          height: PORTRAIT_HEIGHT * scale,
+        }}
         title={t("duplicant.conditions.no_portrait")}
       >
         <div className={classes.placeholder}>
@@ -101,13 +119,16 @@ const DuplicantPortrait: React.FC<Props> = ({
   return (
     <div
       className={classes.portraitContainer}
-      style={{ width: 240 * scale, height: 270 * scale }}
+      style={{
+        width: PORTRAIT_WIDTH * scale,
+        height: PORTRAIT_HEIGHT * scale,
+      }}
     >
       <div
         className={classes.portrait}
         style={{
-          left: 126 * scale,
-          top: 150 * scale,
+          left: SPRITE_LEFT * scale,
+          top: SPRITE_TOP * scale,
           transform: `scale(${scale})`,
         }}
       >

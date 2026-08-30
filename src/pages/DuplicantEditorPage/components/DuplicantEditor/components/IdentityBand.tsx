@@ -18,10 +18,10 @@ export interface IdentityBandProps {
   gameObjectId: number;
 }
 
-// DuplicantPortrait draws into a 240x270 box before scaling, so this is a
-// 100x112 portrait. The band's height follows from it: the identity column
-// beside it - name row, traits run, interests run - is sized to fit alongside.
-const PORTRAIT_SCALE = 100 / 240;
+// DuplicantPortrait frames a head in a 275x250 box before scaling, so this is
+// a 100x91 portrait - the width the design calls for. The band's height comes
+// from the identity column beside it: name row, traits run, interests run.
+const PORTRAIT_SCALE = 100 / 275;
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -37,9 +37,11 @@ const styles = (theme: Theme) =>
       flexGrow: 0,
       flexShrink: 0,
     },
+    // Shorter than the identity column beside it, so it centres rather than
+    // hanging off the top.
     portrait: {
       flex: "none",
-      alignSelf: "flex-start",
+      alignSelf: "center",
     },
     identity: {
       flex: 1,
