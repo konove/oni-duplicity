@@ -66,23 +66,43 @@ test.describe("dead duplicant", () => {
     }, id);
     await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
 
+    // A banner across the top, because almost nobody opens a dead duplicant to
+    // adjust their Machinery - they came to bring them back.
+    const banner = page.getByText(
+      "Attributes, traits and skills are untouched.",
+    );
+    await expect(banner).toBeVisible();
+    await expect(page.getByText("Ada is")).toBeVisible();
     await expect(page.getByText("Dead", { exact: true })).toBeVisible();
 
-    // The identity panel: the portrait wrapper, then the panel itself. Framing
-    // the portrait alone would photograph a grey head and miss the chip beside
-    // the name, which is the other half of the marker.
-    const panel = page.locator("[data-duplicant-portrait]").locator("../..");
-    await expect(panel).toHaveScreenshot("dead-band.png");
+    await expect(page.locator("[data-editor-page]")).toHaveScreenshot(
+      "dead-banner.png",
+    );
 
-    await page.getByRole("button", { name: "Actions" }).click();
-    const revive = page.getByRole("menuitem", { name: "Revive" });
-    await expect(revive).toBeVisible();
+    // The one thing they came for, one click away rather than in a menu.
+    await page.getByRole("button", { name: "Revive" }).click();
 
-    await revive.click();
-
-    // The whole loop: the write lands, and the marker goes away because the
-    // duplicant is genuinely back in the faction.
+    // The whole loop: the write lands, and the banner goes because the
+    // duplicant is genuinely alive again.
+    await expect(banner).toHaveCount(0);
     await expect(page.getByText("Dead", { exact: true })).toHaveCount(0);
+  });
+
+  // The banner costs 56px of a screen whose premise is fitting in 720, so it
+  // is only there when there is something to say - and the columns still fit
+  // underneath it when it is.
+  test("the editor still fits with the banner up", async ({ page }) => {
+    const id = await kill(page);
+    await page.evaluate((i) => {
+      window.location.hash = `/duplicants/${i}`;
+    }, id);
+    await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
+
+    const overflow = await page.evaluate(() => {
+      const root = document.querySelector("[data-editor-root]");
+      return root ? root.scrollHeight - root.clientHeight : -1;
+    });
+    expect(overflow, "the editor should not scroll").toBeLessThanOrEqual(0);
   });
 
   test("a living duplicant is offered no Revive", async ({ page }) => {

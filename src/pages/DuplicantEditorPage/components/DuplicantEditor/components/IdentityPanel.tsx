@@ -8,9 +8,7 @@ import Typography from "@mui/material/Typography";
 
 import DuplicantPortrait from "@/components/DuplicantPortrait";
 import DuplicantMenu from "@/components/DuplicantMenu";
-import DeadChip from "@/components/DeadChip";
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
-import useDuplicantCondition from "@/services/oni-save/hooks/useDuplicantCondition";
 
 import AppearanceButton from "./Appearance/components/AppearanceButton";
 
@@ -71,9 +69,15 @@ const styles = (theme: Theme) =>
 
 type Props = IdentityPanelProps & WithStyles<typeof styles> & WithTranslation;
 
+/**
+ * Who this duplicant is: the portrait, the name, and the actions.
+ *
+ * Death is not marked here. The portrait greys out on its own, and DeadBanner
+ * says the rest at the top of the screen - a chip beside the name as well
+ * would be the same news twice, a hundred pixels apart.
+ */
 const IdentityPanel: React.FC<Props> = ({ classes, gameObjectId, t }) => {
   const { templateData } = useBehavior(gameObjectId, MinionIdentityBehavior);
-  const { isDead } = useDuplicantCondition(gameObjectId);
   const { name, gender, voiceIdx } = templateData;
 
   return (
@@ -86,7 +90,6 @@ const IdentityPanel: React.FC<Props> = ({ classes, gameObjectId, t }) => {
           <Typography className={classes.name} variant="h5">
             {name}
           </Typography>
-          {isDead && <DeadChip />}
           <div className={classes.actions}>
             <DuplicantMenu
               gameObjectId={gameObjectId}

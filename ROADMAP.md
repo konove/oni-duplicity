@@ -388,10 +388,12 @@ pass before code.
 
 ### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45) — **built, pending an in-game pass**
 
-**Shipped:** a dead duplicant is marked on the duplicants list and in the editor's identity band — a
-grey portrait and a `Dead` chip beside the name, from one `FactionAlignment` read in
-`useDuplicantCondition` — and **Revive** is the first entry in the duplicant menu, omitted rather than
-disabled on a living one. Everything about a dead duplicant stays editable; they are still a record, not
+**Shipped:** a dead duplicant greys out wherever their portrait is drawn, carries a `Dead` chip on the
+duplicants list, and gets a banner across the top of the editor saying so with **Revive** beside it —
+direction B out of `design/duplicant-one-screen/`. Almost nobody opens a dead duplicant to adjust their
+Machinery, so the one thing they came for is a button rather than a menu entry. The editor's identity
+panel deliberately does not repeat the chip: the banner is a hundred pixels above it. Revive is also in
+the actions menu, omitted rather than disabled on a living duplicant. Everything about a dead duplicant stays editable; they are still a record, not
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 

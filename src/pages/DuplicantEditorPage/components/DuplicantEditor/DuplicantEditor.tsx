@@ -6,6 +6,7 @@ import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import PageContainer from "@/components/PageContainer";
 
+import DeadBanner from "./components/DeadBanner";
 import IdentityPanel from "./components/IdentityPanel";
 import PanelHeading from "./components/PanelHeading";
 import Traits from "./components/Traits";
@@ -27,6 +28,15 @@ const THREE_COLUMN_MINIMUM = 1100;
 
 const styles = (theme: Theme) =>
   createStyles({
+    // The banner sits above the columns and the columns take what is left, so
+    // an announcement never pushes the bottom of a column out of the window.
+    page: {
+      display: "flex",
+      flexDirection: "column",
+      width: "100%",
+      height: "100%",
+      minHeight: 0,
+    },
     // The whole duplicant at once, and no tabs.
     //
     // Five mutually exclusive views meant no question spanning two of them
@@ -41,7 +51,8 @@ const styles = (theme: Theme) =>
       flexDirection: "row",
       alignItems: "stretch",
       width: "100%",
-      height: "100%",
+      flex: 1,
+      minHeight: 0,
       overflow: "auto",
       [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
         flexDirection: "column",
@@ -79,35 +90,38 @@ type Props = DuplicantEditorProps & WithTranslation & WithStyles<typeof styles>;
 
 const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => (
   <PageContainer title={t("duplicant.verbs.edit_titlecase")} back>
-    <div className={classes.root} data-editor-root>
-      <div className={`${classes.column} ${classes.identityColumn}`}>
-        <IdentityPanel gameObjectId={gameObjectId} />
-        <div className={classes.section}>
-          <PanelHeading
-            i18nKey="duplicant_trait.noun_titlecase_plural"
-            fallback="Traits"
-          />
-          <Traits gameObjectId={gameObjectId} />
+    <div className={classes.page} data-editor-page>
+      <DeadBanner gameObjectId={gameObjectId} />
+      <div className={classes.root} data-editor-root>
+        <div className={`${classes.column} ${classes.identityColumn}`}>
+          <IdentityPanel gameObjectId={gameObjectId} />
+          <div className={classes.section}>
+            <PanelHeading
+              i18nKey="duplicant_trait.noun_titlecase_plural"
+              fallback="Traits"
+            />
+            <Traits gameObjectId={gameObjectId} />
+          </div>
+          <div className={classes.section}>
+            <PanelHeading
+              i18nKey="duplicant_interest.noun_titlecase_plural"
+              fallback="Interests"
+            />
+            <Interests gameObjectId={gameObjectId} />
+          </div>
+          <div className={classes.section}>
+            <Skills gameObjectId={gameObjectId} />
+          </div>
+          <div className={classes.section}>
+            <Effects gameObjectId={gameObjectId} />
+          </div>
         </div>
-        <div className={classes.section}>
-          <PanelHeading
-            i18nKey="duplicant_interest.noun_titlecase_plural"
-            fallback="Interests"
-          />
-          <Interests gameObjectId={gameObjectId} />
+        <div className={`${classes.column} ${classes.attributesColumn}`}>
+          <Attributes gameObjectId={gameObjectId} />
         </div>
-        <div className={classes.section}>
-          <Skills gameObjectId={gameObjectId} />
+        <div className={`${classes.column} ${classes.healthColumn}`}>
+          <Health gameObjectId={gameObjectId} />
         </div>
-        <div className={classes.section}>
-          <Effects gameObjectId={gameObjectId} />
-        </div>
-      </div>
-      <div className={`${classes.column} ${classes.attributesColumn}`}>
-        <Attributes gameObjectId={gameObjectId} />
-      </div>
-      <div className={`${classes.column} ${classes.healthColumn}`}>
-        <Health gameObjectId={gameObjectId} />
       </div>
     </div>
   </PageContainer>

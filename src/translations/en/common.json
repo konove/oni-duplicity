@@ -22,7 +22,8 @@
       "missing_titlecase": "Duplicant Not Found",
       "no_portrait": "No portrait art for this duplicant's appearance",
       "dead_titlecase": "Dead",
-      "dead_description": "This duplicant is no longer part of the colony. Their attributes, traits and skills are untouched."
+      "dead_description": "Attributes, traits and skills are untouched.",
+      "is_dead": "{{name}} is"
     },
     "identity_line_short": "{{gender}} · Voice {{voice}}"
   },
