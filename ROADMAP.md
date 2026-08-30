@@ -20,11 +20,11 @@ Three sources of evidence were used, and they agree more than expected:
 
 Three conclusions shaped the ordering:
 
-- **The loudest asks are mostly already built.** "Revive dead duplicants" (3 issues) is still open as
-  1.1, and turned out to be a different change from the one described here for months — the field it
-  planned to edit is not in the save at all. "Sandbox mode" (3 issues)
-  shipped all along — nobody could find it because the panel printed `SandboxMode` / `Enabled` as raw
-  identifiers, which 0.3 fixed.
+- **The loudest asks are mostly already built.** "Revive dead duplicants" (3 issues) is shipped as 1.1,
+  and turned out to be nothing like the change described here for months: the field it planned to edit
+  is not in the save at all, and death is a state machine state that needed decompiling the game to
+  find. "Sandbox mode" (3 issues) shipped all along — nobody could find it because the panel printed
+  `SandboxMode` / `Enabled` as raw identifiers, which 0.3 fixed.
 - **This is a trust problem more than a capability problem.** No undo, no unsaved-changes guard, no
   backup, under a README that opens by telling you to back up your save. Every feature that mutates more
   state at once makes that worse unless the safety net lands alongside it. Still true: 1.6 and 2.1 are
@@ -33,14 +33,16 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Twelve entries are marked **done** and carry a note saying what shipped: 0.1
-through 0.8, 0.10, 1.7 — which needed no code at all, only checking — 1.8 and 1.9. A thirteenth, 0.9, closed
-the other way: the editor's totals differ from the game's panel because the panel hides unreachable
-material and counts one asteroid, so there was never anything to fix. **Tier 0 is down to four**, and
-all four are questions about how the thing is laid out rather than what it can see (0.11 to 0.14).
-Tier 1 has 1.1 through 1.6 open; 1.7, 1.8 and 1.9 are done. 1.9 was filed and closed the same day - the
-Materials page could list seeds, eggs and food but named them by splitting the prefab id, which turned
-Snac Fruit into "Garden Forage Plant".
+**Where it stands.** Fourteen entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.8, 0.10, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8 and 1.9. A
+fifteenth, 0.9, closed the other way: the editor's totals differ from the game's panel because the panel
+hides unreachable material and counts one asteroid, so there was never anything to fix. **Tier 0 is down
+to three**, and all three are questions about how the thing is laid out rather than what it can see
+(0.11, 0.13, 0.14). Tier 1 has 1.2 through 1.6 open, plus the new 1.10; 1.1, 1.7, 1.8 and 1.9 are done.
+
+The newest entry is the largest gap in the document and has nothing to do with the save format: **1.10,
+nothing here is published**. There is no `gh-pages` branch and the Pages URL answers 404, so every fix
+above is available only to somebody who clones the repo and builds it.
 
 ---
 
@@ -386,7 +388,7 @@ pass before code.
 
 ## Tier 1 — Cheap wins, mostly already built
 
-### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45) — **built, pending an in-game pass**
+### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45) — **done**
 
 **Shipped:** a dead duplicant greys out wherever their portrait is drawn, carries a `Dead` chip on the
 duplicants list, and gets a banner across the top of the editor saying so with **Revive** beside it —
@@ -403,7 +405,10 @@ sentence was written in `en/common.json` all along with nothing rendering it. Ev
 a tombstone. `killMockDuplicant()` in `src/debug.ts` is how the state is reachable at all, since no
 bundled save carries a dead duplicant.
 
-**Built, and waiting on one in-game load to confirm it.** What follows is why it took three tries.
+**Done, and confirmed in game:** the duplicant who suffocated comes back, and stays up.
+
+What follows is why it took three tries, and is kept because the next person to touch a behavior with an
+empty type template will want it.
 
 **The decompiled assembly is what settled it.** A save with
 `alignmentActive` and `targetable` set back to `true` was loaded into the game and the duplicant came
@@ -618,6 +623,35 @@ name argument and the other builds its id at runtime.
 Czech and Spanish fall back to English exactly as they already do for elements.
 Every material across two real colonies resolves.
 
+### 1.10 Nothing is published — the app only exists if you clone it
+
+`npm run deploy` has been in `package.json` all along: `gh-pages -d dist`, pointed at this repo. Nothing
+runs it, and as far as the remote is concerned nothing ever has — there is no `gh-pages` branch, and
+`https://konove.github.io/oni-duplicity/` answers 404. Every fix in this document is currently available
+only to somebody who clones the repo and builds it.
+
+There is no CI either: `.github/workflows/` does not exist, so nothing typechecks, tests or builds a
+change on the way in, and the four commands under "Verifying a change" are run by hand or not at all.
+
+**The work:** one workflow on a push to `master` — `npm ci`, `npm run typecheck`, `npm test`,
+`npm run build`, then publish `dist/`. GitHub's own `actions/deploy-pages` publishes an artifact rather
+than committing to a branch, which suits a `dist/` that is already gitignored, and it means the first
+green run is also the first deploy.
+
+Two things to settle with it, and neither is YAML:
+
+- **The screenshot suite.** Playwright needs a browser download and the dev server, which is a couple of
+  minutes a run — affordable. The baselines are the problem: they are platform-specific, taken on
+  Windows, and a Linux runner will not match a single one of them. Either the suite stays a local check
+  or it gets its own committed Linux baselines, and the second is the honest choice if CI is meant to
+  catch a visual regression rather than announce one every time.
+- **What a deploy makes testable.** The service worker is production-only, so a published build is the
+  first thing that can exercise the Settings page's offline toggle at all. That is a bug report waiting
+  to happen the day this lands.
+
+**Effort: S** for the deploy on its own; **S–M** with the screenshots, and that half is baselines rather
+than configuration.
+
 ## Tier 2 — Real work, real demand
 
 ### 2.1 Undo / redo
@@ -762,7 +796,7 @@ does when a bin is deconstructed.
 
 ## Milestones
 
-### 1 — "Trustworthy edits" — three of five shipped
+### 1 — "Trustworthy edits" — four of five shipped
 
 Five small items, disjoint files, no new architecture.
 
@@ -772,17 +806,18 @@ Five small items, disjoint files, no new architecture.
 | 0.2       | Fix material mass units                                                          | #102, #130     | done   |
 | 0.3 + 0.4 | Difficulty labels, explicit sandbox switch, Health headers                       | #115, #99, #60 | done   |
 | 1.6       | Unsaved-changes guard                                                            | —              | open   |
-| 1.1       | Revive dead duplicants                                                           | #91, #67, #45  | open   |
+| 1.1       | Revive dead duplicants                                                           | #91, #67, #45  | done   |
 
-The three that shipped were the labelling and the wrong numbers, and between them they closed five
-issues without building anything new. What is left is the half that touches state rather than
-presentation: 1.6, which retires the "I lost my edits" failure the README apologises for, and 1.1, which
-is one boolean on a behavior the parser does not type yet.
+The first three were the labelling and the wrong numbers, and between them they closed five issues
+without building anything new. 1.1 was the fourth and much the largest: it closed three issues, and it
+took decompiling the game to find where a death is actually recorded.
+
+What is left is **1.6**, the unsaved-changes guard — the one that retires the "I lost my edits" failure
+the README apologises for.
 
 **Sequencing constraints:** 0.1 had to precede 1.6 (and later 2.1) — a reducer that mutates without
 setting the dirty flag makes both the guard and the undo history lie. That one is done, so 1.6 is
-unblocked. 1.1 still needs an in-game validation pass before it counts as done — now against
-`FactionAlignment` rather than `Health`, which is where reading a real save moved it.
+unblocked and nothing else in this milestone is in its way.
 
 ### 2 — "Names and lists" — one of five shipped
 
