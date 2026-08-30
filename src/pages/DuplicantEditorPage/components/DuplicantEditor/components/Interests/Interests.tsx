@@ -34,7 +34,7 @@ const styles = (theme: Theme) =>
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      gap: theme.spacing(1),
+      gap: theme.spacing(0.75),
     },
   });
 
@@ -98,6 +98,7 @@ const Interests: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     <div className={classes.root}>
       {selectedAptitudes.map((aptitudeName) => (
         <Chip
+          size="small"
           key={aptitudeName}
           label={t(skillGroupNameKey(aptitudeName), {
             defaultValue: aptitudeName,

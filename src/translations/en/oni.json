@@ -1454,6 +1454,129 @@
       "WorkEncouraged": {
         "NAME": "Appreciated"
       }
+    },
+    "STATS": {
+      "BIONICGUNK": {
+        "NAME": "Gunk",
+        "DESC": "Bionic Duplicants become Stressed when too much Gunk builds up in their bionic parts Regular visits to the Gunk Extractor are required"
+      },
+      "BIONICINTERNALBATTERY": {
+        "NAME": "Power Banks",
+        "DESC": "A Bionic Duplicant with zero remaining Power will become incapacitated until replacement Power Banks are installed"
+      },
+      "BIONICOIL": {
+        "NAME": "Gear Oil",
+        "DESC": "Bionic Duplicants will slow down significantly when Gear Oil levels reach zero They can oil their joints by visiting a Lubrication Station or using Gear Balm"
+      },
+      "BIONICOXYGENTANK": {
+        "NAME": "Oxygen Tank",
+        "DESC": "Bionic Duplicants have internal Oxygen tanks that enable them to work in low breathability areas They will prioritize Oxygen intake from equipped Exosuits to conserve their internal tanks"
+      },
+      "BLADDER": {
+        "NAME": "Bladder",
+        "DESC": "Duplicants make \"messes\" if no toilets are available at one hundred percent Bladder"
+      },
+      "BREATH": {
+        "NAME": "Breath",
+        "DESC": "A Duplicant with zero remaining Breath will become incapacitated and die unless they are rescued Duplicants can increase their Maximum Breath by learning the Basic Swimming skill"
+      },
+      "CALORIES": {
+        "NAME": "Calories",
+        "DESC": "This {1} can burn {0} before starving"
+      },
+      "DECOR": {
+        "NAME": "Decor",
+        "DESC": "Duplicants become stressed in areas with Decor lower than their expectations Open the Decor Overlay {Hotkey/Overlay8} to view current Decor values"
+      },
+      "DISEASERECOVERYTIME": {
+        "NAME": "Disease Recovery"
+      },
+      "EXTERNALTEMPERATURE": {
+        "NAME": "External Temperature",
+        "DESC": "This Duplicant's environment is {0}"
+      },
+      "HITPOINTS": {
+        "NAME": "Health",
+        "DESC": "When Duplicants reach zero Health they become incapacitated and require rescuing When critters reach zero Health, they will die immediately"
+      },
+      "RADIATIONBALANCE": {
+        "NAME": "Absorbed Rad Dose",
+        "DESC": "Duplicants accumulate Rads in areas with Radiation and recover when using the toilet Open the Radiation Overlay {Hotkey/Overlay15} to view current Rad readings"
+      },
+      "SEATREEROOTHEALTH": {
+        "NAME": "Root Health",
+        "DESC": "Tower Kelp cannot grow if it does not have a healthy root to grow from"
+      },
+      "SKIN_DURABILITY": {
+        "NAME": "Skin Durability"
+      },
+      "SKIN_THICKNESS": {
+        "NAME": "Skin Thickness"
+      },
+      "STAMINA": {
+        "NAME": "Stamina",
+        "DESC": "Duplicants will pass out from fatigue when Stamina reaches zero"
+      },
+      "STRESS": {
+        "NAME": "Stress",
+        "DESC": "Duplicants exhibit their Stress Reactions at one hundred percent Stress"
+      },
+      "TEMPERATURE": {
+        "NAME": "Body Temperature",
+        "DESC": "A healthy Duplicant's Body Temperature is {1}"
+      },
+      "TRUNKHEALTH": {
+        "NAME": "Trunk Health",
+        "DESC": "Tree branches will die if they do not have a healthy trunk to grow from"
+      },
+      "VINEMOTHERHEALTH": {
+        "NAME": "Node Health",
+        "DESC": "Vines cannot grow if they do not have a healthy node to grow from"
+      }
+    },
+    "DISEASES": {
+      "ALLDISEASES": {
+        "NAME": "All Diseases"
+      },
+      "ALLERGIES": {
+        "NAME": "Allergic Reaction"
+      },
+      "FOODPOISONING": {
+        "NAME": "Food Poisoning"
+      },
+      "FOODSICKNESS": {
+        "NAME": "Food Poisoning"
+      },
+      "NODISEASES": {
+        "NAME": "NO"
+      },
+      "POLLENGERMS": {
+        "NAME": "Floral Scent"
+      },
+      "PUTRIDODOUR": {
+        "NAME": "Trench Stench"
+      },
+      "RADIATIONPOISONING": {
+        "NAME": "Radioactive Contamination"
+      },
+      "RADIATIONSICKNESS": {
+        "NAME": "Radioactive Contaminants"
+      },
+      "SLIMELUNG": {
+        "NAME": "Slimelung"
+      },
+      "SLIMESICKNESS": {
+        "NAME": "Slimelung"
+      },
+      "SUNBURNSICKNESS": {
+        "NAME": "Sunburn"
+      },
+      "ZOMBIESICKNESS": {
+        "NAME": "Zombie Spores"
+      },
+      "ZOMBIESPORES": {
+        "NAME": "Zombie Spores"
+      }
     }
   },
   "ELEMENTS": {

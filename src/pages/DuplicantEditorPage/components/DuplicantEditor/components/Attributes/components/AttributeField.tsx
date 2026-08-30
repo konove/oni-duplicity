@@ -52,15 +52,15 @@ const AttributeField: React.FC<Props> = ({
     <CommitTextField
       className={className}
       type="number"
-      // Small, because the cell it sits in is 56px tall and a default outlined
-      // input is 56px on its own.
-      size="small"
+      // Standard rather than outlined: the cell is 30px tall, and a box around
+      // every one of seventeen numbers is more furniture than information.
+      variant="standard"
       // A FormControl is block level, so left alone it stretches to the grid
       // column and the value swims in it. Size it from the value instead, in
       // `ch`, which keeps short values compact and lets long ones grow rather
-      // than clip. The added padding covers MUI's outlined input inset.
+      // than clip.
       style={{
-        width: `calc(${Math.max(String(level).length, 2)}ch + 34px)`,
+        width: `calc(${Math.max(String(level).length, 2)}ch + 12px)`,
       }}
       slotProps={{ htmlInput: { className: inputClassName } }}
       value={level}

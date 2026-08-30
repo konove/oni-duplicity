@@ -4,7 +4,7 @@ import { difference } from "lodash";
 
 import { Trans } from "react-i18next";
 
-import Button from "@mui/material/Button";
+import Chip from "@mui/material/Chip";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 
@@ -27,11 +27,17 @@ const AddEffectButton: React.FC<Props> = ({ gameObjectId }) => {
 
   return (
     <React.Fragment>
-      <Button color="primary" onClick={() => setIsAddingEffect(true)}>
-        <Trans i18nKey="duplicant_effects.verbs.add_titlecase">
-          Add Effect
-        </Trans>
-      </Button>
+      <Chip
+        size="small"
+        color="primary"
+        clickable
+        onClick={() => setIsAddingEffect(true)}
+        label={
+          <Trans i18nKey="duplicant_effect.verbs.add_titlecase">
+            Add effect
+          </Trans>
+        }
+      />
       <AddEffectDialog
         open={isAddingEffect}
         availableEffects={availableEffects}

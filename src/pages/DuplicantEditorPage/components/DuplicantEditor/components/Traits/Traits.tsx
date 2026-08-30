@@ -30,7 +30,7 @@ const styles = (theme: Theme) =>
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      gap: theme.spacing(1),
+      gap: theme.spacing(0.75),
     },
   });
 
@@ -56,6 +56,7 @@ const Traits: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     <div className={classes.root}>
       {ordered.map(({ trait, index }) => (
         <Chip
+          size="small"
           key={trait}
           label={t(traitNameKey(trait), { defaultValue: trait })}
           title={traitTooltip(trait, t)}

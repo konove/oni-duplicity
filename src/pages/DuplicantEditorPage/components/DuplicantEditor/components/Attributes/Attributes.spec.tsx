@@ -109,12 +109,21 @@ describe("Attributes", () => {
     expect(cellFor("Strength")).not.toHaveAttribute("data-unset");
   });
 
-  it("splits the save's own attributes out under Secondary", () => {
+  it("splits the save's own attributes out from the primary ones", () => {
     render(<Attributes gameObjectId={1} />);
 
-    expect(screen.getByText("Primary")).toBeInTheDocument();
-    expect(screen.getByText("Secondary")).toBeInTheDocument();
+    expect(screen.getByText("Attributes — primary")).toBeInTheDocument();
+    expect(screen.getByText("Attributes — secondary")).toBeInTheDocument();
     // Immunity is not a primary attribute, so it has to come from the save.
     expect(cellFor("Immunity")).toBeInTheDocument();
+  });
+
+  // The heading carries the count so the reader can tell at a glance whether a
+  // column of zeroes is worth reading. Strength is the only one set here.
+  it("counts what is set in each group", () => {
+    render(<Attributes gameObjectId={1} />);
+
+    expect(screen.getByText("1 set")).toBeInTheDocument();
+    expect(screen.getByText("none set")).toBeInTheDocument();
   });
 });

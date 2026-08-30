@@ -1,2 +1,2 @@
-import Appearance from "./Appearance";
-export default Appearance;
+import AppearanceButton from "./components/AppearanceButton";
+export default AppearanceButton;

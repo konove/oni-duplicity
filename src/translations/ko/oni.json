@@ -1215,6 +1215,112 @@
       "WorkEncouraged": {
         "NAME": "인정받음"
       }
+    },
+    "STATS": {
+      "BIONICGUNK": {
+        "NAME": "오물"
+      },
+      "BIONICINTERNALBATTERY": {
+        "NAME": "파워 뱅크"
+      },
+      "BIONICOIL": {
+        "NAME": "기어 오일"
+      },
+      "BIONICOXYGENTANK": {
+        "NAME": "산소 탱크"
+      },
+      "BLADDER": {
+        "NAME": "방광"
+      },
+      "BREATH": {
+        "NAME": "숨"
+      },
+      "CALORIES": {
+        "NAME": "칼로리"
+      },
+      "DECOR": {
+        "NAME": "장식"
+      },
+      "DISEASERECOVERYTIME": {
+        "NAME": "질병 회복"
+      },
+      "EXTERNALTEMPERATURE": {
+        "NAME": "외부 온도"
+      },
+      "HITPOINTS": {
+        "NAME": "건강"
+      },
+      "RADIATIONBALANCE": {
+        "NAME": "흡수된 방사선량"
+      },
+      "SEATREEROOTHEALTH": {
+        "NAME": "뿌리 건강"
+      },
+      "SKIN_DURABILITY": {
+        "NAME": "피부 내구성"
+      },
+      "SKIN_THICKNESS": {
+        "NAME": "피부 두께"
+      },
+      "STAMINA": {
+        "NAME": "스태미나"
+      },
+      "STRESS": {
+        "NAME": "스트레스"
+      },
+      "TEMPERATURE": {
+        "NAME": "체온"
+      },
+      "TRUNKHEALTH": {
+        "NAME": "줄기 건강"
+      },
+      "VINEMOTHERHEALTH": {
+        "NAME": "마디 건강"
+      }
+    },
+    "DISEASES": {
+      "ALLDISEASES": {
+        "NAME": "모든 질병"
+      },
+      "ALLERGIES": {
+        "NAME": "알레르기성 반응"
+      },
+      "FOODPOISONING": {
+        "NAME": "식중독"
+      },
+      "FOODSICKNESS": {
+        "NAME": "식중독"
+      },
+      "NODISEASES": {
+        "NAME": "없음"
+      },
+      "POLLENGERMS": {
+        "NAME": "꽃 향기"
+      },
+      "PUTRIDODOUR": {
+        "NAME": "참호 악취"
+      },
+      "RADIATIONPOISONING": {
+        "NAME": "방사능 오염"
+      },
+      "RADIATIONSICKNESS": {
+        "NAME": "방사능 오염 물질"
+      },
+      "SLIMELUNG": {
+        "NAME": "는지렁이허파"
+      },
+      "SLIMESICKNESS": {
+        "NAME": "는지렁이허파"
+      },
+      "SUNBURNSICKNESS": {
+        "NAME": "햇볕에 탐"
+      },
+      "ZOMBIESICKNESS": {
+        "NAME": "좀비 포자"
+      },
+      "ZOMBIESPORES": {
+        "NAME": "좀비 포자"
+      }
     }
   },
   "ELEMENTS": {

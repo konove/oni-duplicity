@@ -1215,6 +1215,112 @@
       "WorkEncouraged": {
         "NAME": "Оцененный"
       }
+    },
+    "STATS": {
+      "BIONICGUNK": {
+        "NAME": "Отходы"
+      },
+      "BIONICINTERNALBATTERY": {
+        "NAME": "Блоки энергии"
+      },
+      "BIONICOIL": {
+        "NAME": "Машинное масло"
+      },
+      "BIONICOXYGENTANK": {
+        "NAME": "Кислородный баллон"
+      },
+      "BLADDER": {
+        "NAME": "Мочевой пузырь"
+      },
+      "BREATH": {
+        "NAME": "Дыхание"
+      },
+      "CALORIES": {
+        "NAME": "Калории"
+      },
+      "DECOR": {
+        "NAME": "Декор"
+      },
+      "DISEASERECOVERYTIME": {
+        "NAME": "Восстановление после болезни"
+      },
+      "EXTERNALTEMPERATURE": {
+        "NAME": "Внешняя температура"
+      },
+      "HITPOINTS": {
+        "NAME": "Здоровье"
+      },
+      "RADIATIONBALANCE": {
+        "NAME": "Полученная доза радиации"
+      },
+      "SEATREEROOTHEALTH": {
+        "NAME": "Здоровье корней"
+      },
+      "SKIN_DURABILITY": {
+        "NAME": "Прочность кожи"
+      },
+      "SKIN_THICKNESS": {
+        "NAME": "Толщина кожи"
+      },
+      "STAMINA": {
+        "NAME": "Выносливость"
+      },
+      "STRESS": {
+        "NAME": "Стресс"
+      },
+      "TEMPERATURE": {
+        "NAME": "Температура тела"
+      },
+      "TRUNKHEALTH": {
+        "NAME": "Здоровье ствола"
+      },
+      "VINEMOTHERHEALTH": {
+        "NAME": "Здоровье пучка"
+      }
+    },
+    "DISEASES": {
+      "ALLDISEASES": {
+        "NAME": "Все болезни"
+      },
+      "ALLERGIES": {
+        "NAME": "Аллергическая реакция"
+      },
+      "FOODPOISONING": {
+        "NAME": "Пищевое отравление"
+      },
+      "FOODSICKNESS": {
+        "NAME": "Пищевое отравление"
+      },
+      "NODISEASES": {
+        "NAME": "НЕТ"
+      },
+      "POLLENGERMS": {
+        "NAME": "Цветочный запах"
+      },
+      "PUTRIDODOUR": {
+        "NAME": "Глубинный смрад"
+      },
+      "RADIATIONPOISONING": {
+        "NAME": "Радиоактивное загрязнение"
+      },
+      "RADIATIONSICKNESS": {
+        "NAME": "Радиоактивные элементы"
+      },
+      "SLIMELUNG": {
+        "NAME": "Легочная слизь"
+      },
+      "SLIMESICKNESS": {
+        "NAME": "Легочная слизь"
+      },
+      "SUNBURNSICKNESS": {
+        "NAME": "Солнечный ожог"
+      },
+      "ZOMBIESICKNESS": {
+        "NAME": "Зомби-споры"
+      },
+      "ZOMBIESPORES": {
+        "NAME": "Зомби-споры"
+      }
     }
   },
   "ELEMENTS": {

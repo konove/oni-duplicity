@@ -1247,6 +1247,112 @@
       "WorkEncouraged": {
         "NAME": "受赞赏"
       }
+    },
+    "STATS": {
+      "BIONICGUNK": {
+        "NAME": "粘渣油"
+      },
+      "BIONICINTERNALBATTERY": {
+        "NAME": "移动电源"
+      },
+      "BIONICOIL": {
+        "NAME": "齿轮油"
+      },
+      "BIONICOXYGENTANK": {
+        "NAME": "氧气瓶"
+      },
+      "BLADDER": {
+        "NAME": "膀胱"
+      },
+      "BREATH": {
+        "NAME": "呼吸"
+      },
+      "CALORIES": {
+        "NAME": "卡路里"
+      },
+      "DECOR": {
+        "NAME": "装饰"
+      },
+      "DISEASERECOVERYTIME": {
+        "NAME": "疾病康复"
+      },
+      "EXTERNALTEMPERATURE": {
+        "NAME": "外界温度"
+      },
+      "HITPOINTS": {
+        "NAME": "生命值"
+      },
+      "RADIATIONBALANCE": {
+        "NAME": "吸收的辐射剂量"
+      },
+      "SEATREEROOTHEALTH": {
+        "NAME": "主干健康"
+      },
+      "SKIN_DURABILITY": {
+        "NAME": "皮肤韧性"
+      },
+      "SKIN_THICKNESS": {
+        "NAME": "皮肤厚度"
+      },
+      "STAMINA": {
+        "NAME": "体力"
+      },
+      "STRESS": {
+        "NAME": "压力"
+      },
+      "TEMPERATURE": {
+        "NAME": "体温"
+      },
+      "TRUNKHEALTH": {
+        "NAME": "树干健康"
+      },
+      "VINEMOTHERHEALTH": {
+        "NAME": "主干健康"
+      }
+    },
+    "DISEASES": {
+      "ALLDISEASES": {
+        "NAME": "所有疾病"
+      },
+      "ALLERGIES": {
+        "NAME": "过敏反应"
+      },
+      "FOODPOISONING": {
+        "NAME": "食物中毒"
+      },
+      "FOODSICKNESS": {
+        "NAME": "食物中毒"
+      },
+      "NODISEASES": {
+        "NAME": "无"
+      },
+      "POLLENGERMS": {
+        "NAME": "花香"
+      },
+      "PUTRIDODOUR": {
+        "NAME": "恶臭"
+      },
+      "RADIATIONPOISONING": {
+        "NAME": "放射性污染物"
+      },
+      "RADIATIONSICKNESS": {
+        "NAME": "放射性污染物"
+      },
+      "SLIMELUNG": {
+        "NAME": "粘液肺"
+      },
+      "SLIMESICKNESS": {
+        "NAME": "粘液肺"
+      },
+      "SUNBURNSICKNESS": {
+        "NAME": "晒伤"
+      },
+      "ZOMBIESICKNESS": {
+        "NAME": "僵尸孢子"
+      },
+      "ZOMBIESPORES": {
+        "NAME": "僵尸孢子"
+      }
     }
   },
   "ELEMENTS": {

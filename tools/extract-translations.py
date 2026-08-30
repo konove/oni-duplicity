@@ -105,6 +105,9 @@ ID_GROUPS = {
     "SKILLGROUPS": "SKILLGROUPS",
     "EFFECTS": "MODIFIERS",
     "ELEMENTS": "ELEMENTS",
+    # Already upper-case in en/oni.json, so ident.upper() is a no-op here.
+    "STATS": "STATS",
+    "DISEASES": "DISEASES",
 }
 NAME_GROUPS = {"SKILLS": "ROLES"}
 
@@ -219,6 +222,61 @@ def difficulty_group(po, english):
 
         if entries:
             out[setting] = entries
+    return out
+
+
+STATS_ROOT = "STRINGS.DUPLICANTS.STATS"
+DISEASES_ROOT = "STRINGS.DUPLICANTS.DISEASES"
+
+
+def diseases_group(po, english):
+    """The sicknesses a duplicant can carry.
+
+    The Health section edits a germ counter per disease, and those counters are
+    named nowhere else - STATS covers the resources, MODIFIERS the effects.
+    Not every counter has an entry here (`Toxicity` and `ColdBrain` have none),
+    which is why the editor keeps names of its own for the remainder.
+    """
+    out = OrderedDict()
+    prefix = "%s." % DISEASES_ROOT
+    for key, (msgid, msgstr) in po.items():
+        if not key.startswith(prefix) or not key.endswith(".NAME"):
+            continue
+        ident = key[len(prefix):-len(".NAME")]
+        value = msgid if english else msgstr
+        if value.strip():
+            out[ident] = OrderedDict([("NAME", normalize(value))])
+    return out
+
+
+def stats_group(po, english):
+    """The amounts a duplicant carries - health, breath, calories, stress.
+
+    These are the numbers the Health section edits, and the game names them
+    under STATS rather than ATTRIBUTES or MODIFIERS: `HitPoints` is "Health"
+    there, `Temperature` is "Body Temperature". Nothing else in the catalogue
+    names them, which is why the editor printed the raw ids for so long.
+
+    Discovered rather than listed, so a stat added by an update arrives without
+    editing this file, and keyed by the catalogue's own upper-case id - the app
+    looks up `id.toUpperCase()`, the same as it does for traits.
+    """
+    out = OrderedDict()
+    prefix = "%s." % STATS_ROOT
+    for key, (msgid, msgstr) in po.items():
+        if not key.startswith(prefix) or not key.endswith(".NAME"):
+            continue
+        ident = key[len(prefix):-len(".NAME")]
+        value = msgid if english else msgstr
+        if not value.strip():
+            continue
+        entry = OrderedDict([("NAME", normalize(value))])
+        tooltip = po.get("%s%s.TOOLTIP" % (prefix, ident))
+        if tooltip:
+            described = tooltip[0] if english else tooltip[1]
+            if described.strip():
+                entry["DESC"] = normalize(described)
+        out[ident] = entry
     return out
 
 
@@ -352,6 +410,9 @@ def main():
         en["ELEMENTS"] = elements_group(po, names, english=True)
         en["ITEMS"] = items_group(po, item_name_keys(here), english=True)
         en["DIFFICULTY"] = difficulty_group(po, english=True)
+        en.setdefault("DUPLICANTS", OrderedDict())["STATS"] = stats_group(
+            po, english=True)
+        en["DUPLICANTS"]["DISEASES"] = diseases_group(po, english=True)
         en["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=True)
         io.open(en_path, "w", encoding="utf-8", newline="\n").write(
             json.dumps(en, ensure_ascii=False, indent=2) + "\n")

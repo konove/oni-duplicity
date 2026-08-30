@@ -15,20 +15,26 @@
       "clone_titlecase": "Clone",
       "paste_titlecase": "Paste",
       "mega_titlecase": "Make Mega Duplicant",
-      "mega_description": "Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience"
+      "mega_description": "Max out every attribute, replace all traits with the good ones, take every interest, and grant full experience",
+      "actions_titlecase": "Actions"
     },
     "conditions": {
       "missing_titlecase": "Duplicant Not Found",
       "no_portrait": "No portrait art for this duplicant's appearance",
       "dead_titlecase": "Dead",
       "dead_description": "This duplicant is no longer part of the colony. Their attributes, traits and skills are untouched."
-    }
+    },
+    "identity_line_short": "{{gender}} · Voice {{voice}}"
   },
   "duplicant_effect": {
     "noun_titlecase": "Effect",
     "noun_titlecase_plural": "Effects",
     "verbs": {
-      "add_titlecase": "Add Effect"
+      "add_titlecase": "Add effect"
+    },
+    "conditions": {
+      "running_count": "{{count}} running",
+      "none": "None"
     }
   },
   "duplicant_trait": {
@@ -47,29 +53,48 @@
   },
   "duplicant_attribute": {
     "noun_titlecase_plural": "Attributes",
-    "primary_titlecase": "Primary",
-    "secondary_titlecase": "Secondary",
+    "primary_titlecase": "Attributes — primary",
+    "secondary_titlecase": "Attributes — secondary",
     "conditions": {
-      "missing_titlecase": "Attribute Not Found"
+      "missing_titlecase": "Attribute Not Found",
+      "set_count": "{{count}} set",
+      "none_set": "none set"
     }
   },
   "duplicant_skills": {
     "noun_titlecase": "Skill",
     "noun_titlecase_plural": "Skills",
     "experience_titlecase": "Experience",
-    "mastery_titlecase": "Mastery"
+    "mastery_titlecase": "Mastery",
+    "verbs": {
+      "add_titlecase": "Add skill"
+    },
+    "conditions": {
+      "mastered_count": "{{count}} of {{total}} mastered"
+    }
   },
   "duplicant_appearance": {
     "noun_titlecase": "Appearance",
     "hair_titlecase": "Hair",
     "head_titlecase": "Head",
-    "eyes_titlecase": "Eyes"
+    "eyes_titlecase": "Eyes",
+    "verbs": {
+      "change_titlecase": "Change appearance"
+    }
   },
   "duplicant_health": {
     "noun_titlecase": "Health",
     "fitness_titlecase": "Fitness",
     "mind_titlecase": "Mind",
-    "disease_titlecase": "Disease"
+    "disease_titlecase": "Disease",
+    "conditions": {
+      "nothing_present": "nothing present",
+      "and_more": " + {{count}} more",
+      "all_zero": "all 0"
+    },
+    "amounts": {
+      "ImmuneLevel": "Immunity"
+    }
   },
   "creature": {
     "noun_titlecase_plural": "Creatures",
@@ -172,7 +197,8 @@
     "container_count_other": "{{count}} containers"
   },
   "time_cycles": {
-    "noun_titlecase": "Cycle Time"
+    "noun_titlecase": "Cycle Time",
+    "noun_lowercase_plural": "cycles"
   },
   "dialog": {
     "queries": {

@@ -2,14 +2,14 @@ import * as React from "react";
 import { AIAttributeLevelsBehavior, AttributeLevel } from "oni-save-parser";
 import classnames from "classnames";
 
-import { Trans, WithTranslation, withTranslation } from "react-i18next";
+import { WithTranslation, withTranslation } from "react-i18next";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 import { sortAttributesByName } from "@/services/oni-save/attributes";
+
+import PanelHeading from "../PanelHeading";
 
 import AttributeName from "./components/AttributeName";
 import AttributeField from "./components/AttributeField";
@@ -38,58 +38,47 @@ export interface AttributesProps {
 
 const styles = (theme: Theme) =>
   createStyles({
-    root: {
-      display: "flex",
-      flexDirection: "column",
-      width: "100%",
-      height: "100%",
+    group: {
+      marginBottom: theme.spacing(2),
     },
-    // Lines up with the band's portrait above it.
-    header: {
-      marginTop: theme.spacing(),
-      marginLeft: theme.spacing(2),
-    },
-    divider: {
-      marginTop: theme.spacing(),
-      marginBottom: theme.spacing(),
-    },
-    // A grid rather than a fixed-height column wrap: that laid columns out
-    // from the tallest item and left huge gaps between them, and it could not
-    // reflow when a name or value grew.
+    // Two columns, because seventeen attributes in one would be a column of
+    // scrolling and the point of this screen is that nothing scrolls.
     //
     // No row gap - the cells carry a hairline each and butt together into one
-    // ruled list, so the eye can follow a row across the columns.
-    attributeList: {
+    // ruled list, so the eye can follow a row across both columns.
+    list: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
       columnGap: theme.spacing(2.5),
       rowGap: 0,
-      padding: theme.spacing(0, 2),
     },
-    // The name reads first and the value sits on a right rail, so a column of
-    // names scans as a list. The hairline is what makes that safe: without it
-    // a right-aligned value reads as belonging to the next column's label.
-    attributeItem: {
+    // 30px rather than the 56px a form field wants. The name reads first and
+    // the value sits on a right rail, and the hairline is what makes that
+    // safe: without it a right-aligned value reads as belonging to the next
+    // column's label.
+    item: {
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
-      gap: theme.spacing(1.5),
+      gap: theme.spacing(1),
       minWidth: 0,
-      height: 56,
+      height: 30,
       boxSizing: "border-box",
       borderBottom: `1px solid ${theme.palette.divider}`,
     },
     // Most of a duplicant's attributes are 0. Dimming them is what makes the
     // handful that are set visible without reading every number.
-    attributeItemUnset: {
+    itemUnset: {
       color: theme.palette.text.secondary,
     },
-    attributeInput: {
+    input: {
       flexShrink: 0,
     },
-    attributeInputText: {
+    inputText: {
       textAlign: "right",
       fontVariantNumeric: "tabular-nums",
+      padding: theme.spacing(0.25, 0.75),
+      fontSize: 14,
       // The number spinners appear on hover and eat ~17px, which is enough to
       // clip a long value in a field sized to its content.
       MozAppearance: "textfield",
@@ -98,12 +87,12 @@ const styles = (theme: Theme) =>
     },
     // MUI's input sets its own colour, so it does not inherit the dimming the
     // cell applies to the name.
-    attributeInputTextUnset: {
+    inputTextUnset: {
       color: theme.palette.text.secondary,
     },
     // Takes the rest of the cell, and ellipsises rather than wrapping to three
     // lines the way "Engie's Tune-Up" did.
-    attributeLabel: {
+    label: {
       flex: 1,
       minWidth: 0,
       overflow: "hidden",
@@ -126,26 +115,30 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     i18n.language,
   );
 
+  const setCount = (attributeIds: string[]) =>
+    attributeIds.filter((id) => attributeLevel(saveLoadLevels, id) !== 0)
+      .length;
+
   const renderList = (attributeIds: string[]) => (
-    <div className={classes.attributeList}>
+    <div className={classes.list}>
       {attributeIds.map((attributeId) => {
         const unset = attributeLevel(saveLoadLevels, attributeId) === 0;
         return (
           <div
             key={attributeId}
-            className={classnames(classes.attributeItem, {
-              [classes.attributeItemUnset]: unset,
+            className={classnames(classes.item, {
+              [classes.itemUnset]: unset,
             })}
             data-unset={unset || undefined}
           >
             <AttributeName
-              className={classes.attributeLabel}
+              className={classes.label}
               attributeId={attributeId}
             />
             <AttributeField
-              className={classes.attributeInput}
-              inputClassName={classnames(classes.attributeInputText, {
-                [classes.attributeInputTextUnset]: unset,
+              className={classes.input}
+              inputClassName={classnames(classes.inputText, {
+                [classes.inputTextUnset]: unset,
               })}
               gameObjectId={gameObjectId}
               attributeId={attributeId}
@@ -156,20 +149,36 @@ const Attributes: React.FC<Props> = ({ classes, gameObjectId, t, i18n }) => {
     </div>
   );
 
+  const setLabel = (ids: string[]) => {
+    const count = setCount(ids);
+    return count === 0
+      ? t("duplicant_attribute.conditions.none_set", {
+          defaultValue: "none set",
+        })
+      : t("duplicant_attribute.conditions.set_count", {
+          defaultValue: "{{count}} set",
+          count,
+        });
+  };
+
   return (
-    <div className={classes.root}>
-      <Typography className={classes.header} variant="h6">
-        <Trans i18nKey="duplicant_attribute.primary_titlecase">Primary</Trans>
-      </Typography>
-      <Divider className={classes.divider} />
-      {renderList(primary)}
-      <Typography className={classes.header} variant="h6">
-        <Trans i18nKey="duplicant_attribute.secondary_titlecase">
-          Secondary
-        </Trans>
-      </Typography>
-      <Divider className={classes.divider} />
-      {renderList(secondary)}
+    <div>
+      <div className={classes.group}>
+        <PanelHeading
+          i18nKey="duplicant_attribute.primary_titlecase"
+          fallback="Attributes — primary"
+          detail={setLabel(primary)}
+        />
+        {renderList(primary)}
+      </div>
+      <div className={classes.group}>
+        <PanelHeading
+          i18nKey="duplicant_attribute.secondary_titlecase"
+          fallback="Attributes — secondary"
+          detail={setLabel(secondary)}
+        />
+        {renderList(secondary)}
+      </div>
     </div>
   );
 };

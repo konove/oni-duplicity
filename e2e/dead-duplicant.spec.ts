@@ -64,17 +64,17 @@ test.describe("dead duplicant", () => {
     await page.evaluate((i) => {
       window.location.hash = `/duplicants/${i}`;
     }, id);
-    await expect(page.getByRole("tab", { name: /appearance/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
 
     await expect(page.getByText("Dead", { exact: true })).toBeVisible();
 
-    // The whole band: the portrait wrapper, then the band itself. Framing the
-    // portrait alone would photograph a grey head and miss the chip beside
+    // The identity panel: the portrait wrapper, then the panel itself. Framing
+    // the portrait alone would photograph a grey head and miss the chip beside
     // the name, which is the other half of the marker.
-    const band = page.locator("[data-duplicant-portrait]").locator("../..");
-    await expect(band).toHaveScreenshot("dead-band.png");
+    const panel = page.locator("[data-duplicant-portrait]").locator("../..");
+    await expect(panel).toHaveScreenshot("dead-band.png");
 
-    await page.locator('button[aria-haspopup="true"]').click();
+    await page.getByRole("button", { name: "Actions" }).click();
     const revive = page.getByRole("menuitem", { name: "Revive" });
     await expect(revive).toBeVisible();
 
@@ -95,9 +95,9 @@ test.describe("dead duplicant", () => {
     await page.evaluate((h) => {
       window.location.hash = (h as string).slice(1);
     }, href as string);
-    await expect(page.getByRole("tab", { name: /appearance/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
 
-    await page.locator('button[aria-haspopup="true"]').click();
+    await page.getByRole("button", { name: "Actions" }).click();
     // Omitted rather than disabled, so it is absent from the menu entirely.
     await expect(page.getByRole("menuitem", { name: "Revive" })).toHaveCount(0);
     await expect(page.getByRole("menuitem", { name: /Clone/ })).toBeVisible();

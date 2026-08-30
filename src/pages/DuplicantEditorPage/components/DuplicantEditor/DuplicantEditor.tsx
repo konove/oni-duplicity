@@ -2,16 +2,15 @@ import * as React from "react";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 
-import { createStyles, withStyles, WithStyles } from "@/styles";
-import Paper from "@mui/material/Paper";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import { Theme, createStyles, withStyles, WithStyles } from "@/styles";
 
 import PageContainer from "@/components/PageContainer";
 
-import IdentityBand from "./components/IdentityBand";
+import IdentityPanel from "./components/IdentityPanel";
+import PanelHeading from "./components/PanelHeading";
+import Traits from "./components/Traits";
+import Interests from "./components/Interests";
 import Attributes from "./components/Attributes";
-import Appearance from "./components/Appearance";
 import Skills from "./components/Skills";
 import Effects from "./components/Effects";
 import Health from "./components/Health";
@@ -20,81 +19,108 @@ export interface DuplicantEditorProps {
   gameObjectId: number;
 }
 
-const styles = createStyles({
-  // No padding of its own: the band paints its own inset and its bottom rule
-  // has to run the full width, and the tab bar sits flush under it.
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    height: "100%",
-  },
-  tabRow: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: 0,
-    height: "100%",
-  },
-  tabContent: {
-    width: "100%",
-    height: "100%",
-    overflow: "auto",
-  },
-});
+/**
+ * Below this the three columns will not fit, so they stack and the page
+ * scrolls. Everything stays reachable; only the no-scrolling promise goes.
+ */
+const THREE_COLUMN_MINIMUM = 1100;
+
+const styles = (theme: Theme) =>
+  createStyles({
+    // The whole duplicant at once, and no tabs.
+    //
+    // Five mutually exclusive views meant no question spanning two of them
+    // could be answered without switching - is Medicine 5 why this duplicant
+    // holds the Doctor interest? - and the identity block was re-paid on every
+    // one of them. This fits by refusing to give everything equal space
+    // instead: attributes are a ruled list rather than a grid of form fields,
+    // health is meters, and the sections that are nearly all "off" say what is
+    // on and offer to add.
+    root: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "stretch",
+      width: "100%",
+      height: "100%",
+      overflow: "auto",
+      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
+        flexDirection: "column",
+        alignItems: "stretch",
+        height: "auto",
+      },
+    },
+    column: {
+      boxSizing: "border-box",
+      padding: theme.spacing(2),
+      minWidth: 0,
+      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
+        width: "100%",
+        borderRight: "none",
+        borderBottom: `1px solid ${theme.palette.divider}`,
+      },
+    },
+    // The stacked widths have to be restated here: these rules come after
+    // `column` in source order, so its media query alone would not win.
+    identityColumn: {
+      width: 344,
+      flex: "none",
+      borderRight: `1px solid ${theme.palette.divider}`,
+      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
+        width: "100%",
+      },
+    },
+    attributesColumn: {
+      width: 400,
+      flex: "none",
+      borderRight: `1px solid ${theme.palette.divider}`,
+      [`@media (max-width: ${THREE_COLUMN_MINIMUM - 1}px)`]: {
+        width: "100%",
+      },
+    },
+    healthColumn: {
+      flex: 1,
+    },
+    section: {
+      marginTop: theme.spacing(2),
+    },
+  });
 
 type Props = DuplicantEditorProps & WithTranslation & WithStyles<typeof styles>;
 
-const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => {
-  const [tab, setTab] = React.useState(0);
-  return (
-    <PageContainer title={t("duplicant.verbs.edit_titlecase")} back>
-      <div className={classes.root}>
-        <IdentityBand gameObjectId={gameObjectId} />
-        <div className={classes.tabRow}>
-          <Paper square>
-            <Tabs
-              textColor="secondary"
-              value={tab}
-              onChange={(_, value) => setTab(value)}
-            >
-              <Tab
-                label={t("duplicant_attribute.noun_titlecase_plural", {
-                  defaultValue: "Attributes",
-                })}
-              />
-              <Tab
-                label={t("duplicant_appearance.noun_titlecase", {
-                  defaultValue: "Appearance",
-                })}
-              />
-              <Tab
-                label={t("duplicant_health.noun_titlecase", {
-                  defaultValue: "Health",
-                })}
-              />
-              <Tab
-                label={t("duplicant_skills.noun_titlecase_plural", {
-                  defaultValue: "Skills",
-                })}
-              />
-              <Tab
-                label={t("duplicant_effect.noun_titlecase_plural", {
-                  defaultValue: "Effects",
-                })}
-              />
-            </Tabs>
-          </Paper>
-          <div className={classes.tabContent}>
-            {tab === 0 && <Attributes gameObjectId={gameObjectId} />}
-            {tab === 1 && <Appearance gameObjectId={gameObjectId} />}
-            {tab === 2 && <Health gameObjectId={gameObjectId} />}
-            {tab === 3 && <Skills gameObjectId={gameObjectId} />}
-            {tab === 4 && <Effects gameObjectId={gameObjectId} />}
-          </div>
+const DuplicantEditor: React.FC<Props> = ({ classes, gameObjectId, t }) => (
+  <PageContainer title={t("duplicant.verbs.edit_titlecase")} back>
+    <div className={classes.root}>
+      <div className={`${classes.column} ${classes.identityColumn}`}>
+        <IdentityPanel gameObjectId={gameObjectId} />
+        <div className={classes.section}>
+          <PanelHeading
+            i18nKey="duplicant_trait.noun_titlecase_plural"
+            fallback="Traits"
+          />
+          <Traits gameObjectId={gameObjectId} />
+        </div>
+        <div className={classes.section}>
+          <PanelHeading
+            i18nKey="duplicant_interest.noun_titlecase_plural"
+            fallback="Interests"
+          />
+          <Interests gameObjectId={gameObjectId} />
+        </div>
+        <div className={classes.section}>
+          <Skills gameObjectId={gameObjectId} />
+        </div>
+        <div className={classes.section}>
+          <Effects gameObjectId={gameObjectId} />
         </div>
       </div>
-    </PageContainer>
-  );
-};
+      <div className={`${classes.column} ${classes.attributesColumn}`}>
+        <Attributes gameObjectId={gameObjectId} />
+      </div>
+      <div className={`${classes.column} ${classes.healthColumn}`}>
+        <Health gameObjectId={gameObjectId} />
+      </div>
+    </div>
+  </PageContainer>
+);
 
 export default withStyles(styles)(withTranslation()(DuplicantEditor));

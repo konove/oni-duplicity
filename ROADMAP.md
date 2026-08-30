@@ -255,7 +255,7 @@ most of the nav does nothing until a save loads, the overview is a name and four
 numbers, and nothing says what this editor is for or what is safe to touch.
 **Effort: M**, and mostly copy and sequencing rather than new machinery.
 
-### 0.12 The duplicant editor is the densest screen and the least organised — **direction A shipped**
+### 0.12 The duplicant editor is the densest screen and the least organised — **done**
 
 Five tabs — Attributes, Appearance, Health, Skills, Effects — under a header
 that already carries the portrait, every trait chip and every interest chip.
@@ -290,8 +290,37 @@ One correction to the entry above: 30-odd is the count on a fuller save. The
 bundled example carries 17, so the fold problem the numbers here describe is the
 light case rather than the bad one.
 
+**Then the tabs went entirely.** Direction E out of `design/duplicant-one-screen/`: the whole duplicant
+in three columns at 1280×720, with nothing scrolling. It fits by refusing to give everything equal space
+rather than by cutting anything.
+
+- Attributes are a 30px two-column ruled list rather than a grid of 56px form fields.
+- Health is meters — a name, the number, and what the number is out of. The old control was a bare
+  slider, which could say neither, and which showed 200 breath on a scale of 100 as simply "full".
+- The eleven germ counters, every one of them zero on a healthy duplicant, collapse to a line until one
+  of them is not zero or the reader asks.
+- Skills was a table of every skill in the game with a checkbox beside it: fifty-four rows to say a
+  duplicant had mastered one. It is now the one they have, plus an Add.
+- Appearance moved behind a button, because thirty-three hairstyles is a browse rather than a field.
+- The actions hang off a labelled **Actions** button rather than a bare ⋮. That is a deliberate break
+  from every other menu in this app, on the grounds that what is behind this one rewrites a duplicant
+  and nobody opens a kebab on a hunch.
+
+Below about 1100px the three columns stack and the page scrolls. The no-scrolling promise goes; nothing
+becomes unreachable.
+
+**The health labels are fixed, from the game's own strings.** The Health tab printed raw ids
+(`HitPoints`, `ImmuneLevel`) because it looked for names in ATTRIBUTES and MODIFIERS. They are in
+`STRINGS.DUPLICANTS.STATS`, where `HitPoints` is "Health" and `Temperature` is "Body Temperature", and
+the germ counters are in `STRINGS.DUPLICANTS.DISEASES`. `tools/extract-translations.py` pulls both now,
+so every locale has them.
+
+Five counters are in neither table, and the editor shows their raw ids rather than inventing a name.
+Guessing at `Spores` produced "Zombie spores" sitting beside the game's own "Zombie Spores" for a
+different counter entirely — which is 1.9's lesson arriving a second time.
+
 Still open, in the order their reasons arrive — the design pass drew seven
-directions and this was the first:
+directions and A and E are now both built:
 
 - **A roster column inside the editor**, when 1.5 or 2.2 is built. Editing a
   colony is not one duplicant, it is twelve, and every switch today is back,
@@ -300,8 +329,8 @@ directions and this was the first:
 - **"What is on, plus Add" for Skills and Effects**, whichever layout wins.
   Fifty-four checkboxes to express one mastery is the worst ratio on the page.
 - **Field search**, after 3.1's omnibar exists.
-- **One scrolling document with a rail**, when the editor has a second reason to
-  be opened. The band is a step toward it, not a competitor.
+- **One scrolling document with a rail**, if the editor ever needs a second reason to be opened. Much
+  less pressing now that everything is on one screen already.
 - **Verb cards** — Mega, Clone, Revive — only after 1.6 and 2.1. One-click bulk
   mutation with no undo and no unsaved-changes guard is the combination the
   README already apologises for.
