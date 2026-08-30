@@ -10,7 +10,8 @@ export default defineConfig({
   // and Linux, so a baseline taken here will not match one taken elsewhere.
   // Playwright encodes the platform in the filename, which keeps that honest
   // rather than silently failing.
-  snapshotPathTemplate: "{testDir}/__screenshots__/{testFilePath}/{arg}{ext}",
+  snapshotPathTemplate:
+    "{testDir}/__screenshots__/{testFilePath}/{arg}-{platform}{ext}",
 
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),

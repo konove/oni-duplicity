@@ -1,0 +1,64 @@
+name: Screenshot baselines
+
+# Run by hand to produce the Linux screenshot baselines, then download the
+# artifact and commit it.
+#
+# The baselines are platform-specific - Chromium renders text differently on
+# Windows and Linux - and the ones in the repo were taken on a Windows machine.
+# CI runs on Linux, so it needs its own set, and there is no way to generate
+# them except on Linux. This is that way.
+#
+# Nothing here commits anything. A workflow that writes its own baselines would
+# make every visual regression self-approving, which is the one thing a
+# screenshot test exists to prevent.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  baselines:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      # `--update-snapshots=missing` writes what is absent and leaves what is
+      # already there alone, so re-running this never quietly rewrites a
+      # baseline that a real change should have failed against.
+      - name: Write the missing baselines
+        run: npx playwright test --update-snapshots=missing
+
+      # And then prove them: a second run with no flag has to pass against the
+      # set that was just written. If it does not, the shots are not stable and
+      # committing them would only move the flake into the repo.
+      - name: Check they are stable
+        run: npx playwright test
+
+      - name: Upload the baselines
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshot-baselines
+          path: e2e/__screenshots__
+          if-no-files-found: error
+
+      - name: Upload the failures, if any
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
