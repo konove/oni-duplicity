@@ -1,0 +1,150 @@
+{
+  "artboards": [
+    {
+      "file": "Today.dc.html",
+      "title": "Today — recreated from the running app",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "Main.dc.html",
+      "title": "A — The identity block becomes a band",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "OnePage.dc.html",
+      "title": "B — One document, one rail",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "PinnedIdentity.dc.html",
+      "title": "C — Identity pinned, work on the right",
+      "x": 4200,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "Roster.dc.html",
+      "title": "D — The colony stays on screen",
+      "x": 0,
+      "y": 1620,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "OneScreen.dc.html",
+      "title": "E — The whole duplicant, no scrolling",
+      "x": 1400,
+      "y": 1620,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "SearchFirst.dc.html",
+      "title": "F — Type what you want to change",
+      "x": 2800,
+      "y": 1620,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "VerbFirst.dc.html",
+      "title": "G — Say what you want to happen",
+      "x": 4200,
+      "y": 1620,
+      "w": 1280,
+      "h": 720
+    }
+  ],
+  "annotations": [
+    {
+      "id": "the-diagnosis",
+      "x": 0,
+      "y": -440,
+      "w": 1280,
+      "text": "Measured against the running app at 1280×720 rather than eyeballed: the first editable field on this screen sits at y=444. Everything above it is furniture — a 64px app bar, a name row that only prints the name, a 202px identity block, a 48px tab bar. Nearly two thirds of the window is spent before the thing you came to change, and the identity block is re-paid on every tab, including Health and Skills, which have nothing to do with traits.\n\nIt is expensive because it is built out of page sections. Two h6 headings and three dividers frame what is, in the end, seven chips, and the portrait sits in a 144×162 Paper its art fills about two thirds of. The headings read \"Trait\" and \"Interest\"; the fifth tab says \"Effect\".\n\nThe tab bar spends the budget a second way. Five mutually exclusive views mean no question that spans two of them can be answered without switching — is Medicine 5 why this duplicant holds the Doctor interest? — and nothing on the screen says which of the 17 attributes are set. Fifteen of them read 0.\n\nOne caveat on the numbers: the mock save these frames are drawn from carries 17 attributes. The roadmap counts 30-odd on a fuller one, where today's grid runs to six rows rather than three and everything under Primary is off-screen — so the fold problem here is the light case, not the bad one.\n\nSeven directions follow in two rows, each drawn at 1280×720 against the same duplicant out of the mock save, so the comparison is like-for-like."
+    },
+    {
+      "id": "today-measured",
+      "x": 0,
+      "y": 780,
+      "w": 1280,
+      "text": "Today, recreated from the live app: app bar to 64, name row to 120, identity block to 331, tabs to 379, first field at 444. The two attribute groups do not both fit — \"Secondary\" is a heading whose five fields sit below the fold, which is how a save's extra attributes stay hidden on a 720-tall window.\n\nObserved while measuring, and not designed for here: the Health tab labels its sliders with raw ids (HitPoints, ImmuneLevel) because oni:todo-trans.modifiers.* has no entries, and Calories rides a 0–4,000,000 slider. Both are their own fix, independent of everything below."
+    },
+    {
+      "id": "direction-a",
+      "x": 1400,
+      "y": 780,
+      "w": 1280,
+      "text": "A — the identity block becomes a band. A 100px portrait, the name and its identity line beside it, traits and interests as two labelled chip runs with no headings and no dividers: 136px where the name row and the block together took 267.\n\nTab content starts at 248 instead of 379, the first field at 313 instead of 444, and both attribute groups fit with about 90px to spare. The band is also where 1.2's name, gender and voice controls go when they land — it is the row that is already there, made editable.\n\nTwo changes inside the tab, separable from the band: each cell reads name-then-value on its own hairline, so a column of names scans and the values line up; and the fifteen attributes sitting at 0 are dimmed, so what is set is visible without reading every number.\n\nWhat it costs: nothing structural, and it fixes nothing structural. Five modes are still five modes, Medicine and the Doctor interest still cannot be seen at once, and the band still sits on top of Health and Skills, where it earns less."
+    },
+    {
+      "id": "direction-b",
+      "x": 2800,
+      "y": 780,
+      "w": 1280,
+      "text": "B — the tabs go, and the record becomes one scrolling document with a rail down the left.\n\nThe rail is the part that pays. It lists what this duplicant has rather than where the controls live — 2 of 17 attributes set, 1 of 54 skills, 1 effect running — so \"what is unusual about this one\" is answered before anything is opened. The filter above it matches field names across every section at once, which no tabbed version can do.\n\nAppearance is the awkward citizen: 33 hairstyle thumbnails in a scrolling column is a wall, so it moves behind a button in the identity section and opens as a dialog. That is arguably where it belonged anyway — it is a browse, not a field.\n\nWhat it costs: a scroll-spy rail, six section components, and counts that have to stay honest as the save is edited. The attribute grid also drops to four columns. On its own this is the M–L the roadmap estimates."
+    },
+    {
+      "id": "direction-c",
+      "x": 4200,
+      "y": 780,
+      "w": 1280,
+      "text": "C — identity moves into a 320px column that never scrolls away, and the tabs run in the remaining 760.\n\nThe bet is that the portrait, the traits and the interests are context you read while editing everything else, not a section you scroll past. If that is right, this is the best of the three: tab content starts at 112, the highest here, and the traits stay legible while you are in Health.\n\nWhat it costs, and why it is last: the attribute grid drops from five columns to three, so Primary goes from three rows to four; the chips wrap to five rows in a 288px column; the pane is dead space on Health and Skills exactly the way today's block is; and below roughly 1100px it has to collapse to A's band, which means building A as well."
+    },
+    {
+      "id": "the-recommendation",
+      "x": 0,
+      "y": 2900,
+      "w": 2680,
+      "text": "A now, and steal from the rest as their reasons arrive.\n\nA is still the answer to the measured problem: 131px back on every tab, both attribute groups visible at 720, no new component, and it is the version 1.2's name, gender and voice controls land in. Nothing in round two changes that.\n\nThen, in the order the reasons turn up:\n\nD — when 1.5 or 2.2 is built. The roster column is the same work as list search and multi-select, and it removes a back-and-forth that measuring a single page cannot see.\n\nE's treatment of Skills and Effects — immediately, whichever layout wins. Fifty-four checkboxes to express one mastery is the worst ratio on the page, and \"what is on, plus Add\" is a smaller component than the table it replaces.\n\nF — after per-page search exists, which is what 3.1 already says. It sits on top of whatever the page is by then.\n\nB — when the editor has a second reason to be opened. It is the destination A is a step toward, not a competitor to it.\n\nG — only after 1.6 and 2.1.\n\nStill not C, for the reasons under it. And alongside A, three fixes that belong to no direction at all: the plurals (\"Traits\", \"Interests\", \"Effects\"), dimming the zeros, and the Health tab's raw modifier labels."
+    },
+    {
+      "id": "round-two",
+      "x": 0,
+      "y": 1240,
+      "w": 2680,
+      "text": "Round two, further out. A, B and C keep one premise: a page of every field, arranged better. These four each drop a different part of it — that you edit one duplicant at a time, that the fields need scrolling at all, that browsing is how you find a field, and that a screen of fields is what you came for.\n\nThey are less alternatives to round one than things to steal from it. D's roster is the same column 1.5's search and 2.2's multi-select need; F is 3.1's omnibar scoped to one duplicant; E's handling of Skills and Effects would improve any of the seven."
+    },
+    {
+      "id": "direction-d",
+      "x": 0,
+      "y": 2400,
+      "w": 1280,
+      "text": "D — the duplicants list moves into the editor as a 280px column, and picking a name swaps the pane beside it. A's band, narrowed, sits on top.\n\nWhat it fixes is the part measuring one page cannot show: editing a colony is not one duplicant, it is twelve. Every switch today is back, scan the wall of identical cards, click. The roadmap already wants search and sort on that wall (1.5) and multi-select on it for bulk edit (2.2) — both are this column, so building it here is not building it twice.\n\nWhat it costs: 280px of width, an editor page that is also a list page, and a routing question — #/duplicants/:id has to keep working as a deep link while the list is part of the page.\n\nDrawn at a realistic colony size. The mock save has three duplicants — Ada, Bruno and the bionic Steela — which is too few to show the point."
+    },
+    {
+      "id": "direction-e",
+      "x": 1400,
+      "y": 2400,
+      "w": 1280,
+      "text": "E — no tabs and no scrolling: the whole duplicant at 1280×720, with about 250px of slack left over.\n\nIt gets there by refusing to give everything equal space. Attributes become a 30px two-column list rather than a grid of 56px form fields. Health becomes meters — a label, a track, and the number the track stands for — with the nine disease values that are all zero collapsed to one line. Skills stops being 54 checkboxes and becomes what is actually true: one chip, Basic Swimming, and an Add. Effects the same.\n\nThat last move is the stealable one. Wherever almost everything in a group is off, a list of what is on plus an Add reads better and takes a tenth of the room.\n\nLook at Breath: 200, on a slider whose maximum is 100. Today's Health tab pins the handle at the end and shows nothing wrong. A meter with the real numbers beside it cannot hide it.\n\nWhat it costs: density is a decision you have to keep making. A save with 30 attributes overruns the middle column; DLC health modifiers overrun the right one. It also needs the most bespoke controls — meters and chips where sliders and checkboxes already exist."
+    },
+    {
+      "id": "direction-f",
+      "x": 2800,
+      "y": 2400,
+      "w": 1280,
+      "text": "F — the field you want, typed. \"st\" matches five things across four sections, each editable in place: Strength the attribute, Stamina and Stress the health values, the Sticker Bomber trait, and a skill.\n\nThis is 3.1's omnibar scoped to one duplicant, and it is the only direction that makes the number of fields irrelevant — 17 attributes or 40, the screen still shows five rows. It is also the cheapest thing here to add on top of another direction: it needs an index of field names, which is a flat list, and every editor it puts on screen already exists.\n\nWhat it costs: it only works if you know what the thing is called. \"Stronger\" does not match Strength, \"hunger\" does not match Calories, and nobody types Engie's Tune-Up. So it is an accelerant on a browsable page, never the page itself — the browse row at the bottom is not a fallback, it is the other half of the design."
+    },
+    {
+      "id": "direction-g",
+      "x": 4200,
+      "y": 2400,
+      "w": 1280,
+      "text": "G — the screen opens with what people came to do rather than what the save contains. Six cards, four of them already implemented and hidden in the kebab menu: Mega (\"max everything\"), Clone, Copy and Paste. The two dashed ones do not exist yet — heal-and-de-stress is a bundle of writes the editor can already make, and Revive is 1.1, the highest demand-to-effort item on the roadmap.\n\nThe manual editor is still underneath, as a chip row rather than tabs.\n\nWhat it fixes: the most powerful thing on this page is invisible. Mega is a menu item behind a ⋮ with no explanation of what it does, and the most-repeated asks in the tracker are verbs, not fields.\n\nWhat it costs, and this one is serious: one-click bulk mutation with no undo (2.1) and no unsaved-changes guard (1.6) is exactly the combination the README already apologises for. The cards are cheap; building them before the safety net is not a trade worth making. It also cannot replace the field editor, so it is another layer rather than another layout."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
