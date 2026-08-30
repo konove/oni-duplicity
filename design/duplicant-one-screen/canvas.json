@@ -1,0 +1,146 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "One screen"
+    },
+    {
+      "id": "page-2",
+      "name": "Dead duplicant"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "E — the whole duplicant, no scrolling",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "Actions.dc.html",
+      "title": "Actions open",
+      "page": "page-1",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "DeadMarked.dc.html",
+      "title": "A — marked, not modal",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "DeadBanner.dc.html",
+      "title": "B — the screen leads with the fix",
+      "page": "page-2",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "DeadCondition.dc.html",
+      "title": "C — condition as a panel (ruled out)",
+      "page": "page-2",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    },
+    {
+      "file": "DeadInList.dc.html",
+      "title": "D — mark it where you find them",
+      "page": "page-2",
+      "x": 4200,
+      "y": 0,
+      "w": 1280,
+      "h": 720
+    }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "page": "page-1",
+      "x": 0,
+      "y": -340,
+      "w": 1280,
+      "text": "Direction E: the whole duplicant at 1280×720 with no tabs and no scrolling, reached by refusing to give everything equal space. Attributes are a 30px two-column list rather than a grid of 56px form fields; health is meters — a label, a track, and the number the track stands for; the nine disease values that are all zero collapse to one line; Skills stops being 54 checkboxes and becomes what is actually true, one chip and an Add.\n\nTwo things have changed since E was first drawn. Direction A shipped, so the portrait here is the real one — unframed, 100×91, screenshotted out of the running app — and the attribute rows already read name-then-value with the zeros dimmed, because that is what the app does now.\n\nAnd the gap this pass closed: E had no ⋮ at all. Dropping the tabs dropped the header the menu lived in, and with it Copy, Paste, Import, Export, Clone and Mega."
+    },
+    {
+      "id": "note-main",
+      "page": "page-1",
+      "x": 0,
+      "y": 780,
+      "w": 1280,
+      "text": "The actions hang off a labelled button in the identity panel, top right.\n\nLabelled rather than a bare ⋮, which is a decision against the rest of the app: every other menu here is a kebab — the duplicant cards on the list page, the row menus on Materials. The reason to break the pattern is the roadmap's own finding, that the most powerful thing on this page is invisible. \"Make Mega Duplicant\" rewrites every attribute, trait and interest, and nobody opens a ⋮ on a hunch to find it.\n\nThe panel is the right home either way. Everything else on this screen edits one field: a number, a chip, a meter. The actions are the only controls that act on the whole duplicant, and the identity panel is the only panel that IS the whole duplicant.\n\nThe empty space down the bottom of the first two columns is headroom, not an unfinished layout. The bundled example carries 17 attributes; a fuller save carries 30-odd, and the middle column is sized to take them without the page starting to scroll.\n\nLook at Breath: 200, on a scale whose maximum is 100. Today's Health tab pins the slider handle at the end and shows nothing wrong. A meter with the real numbers beside it cannot hide it — a live defect this layout surfaces rather than a thing to design."
+    },
+    {
+      "id": "note-actions",
+      "page": "page-1",
+      "x": 1400,
+      "y": 780,
+      "w": 1280,
+      "text": "Today the menu is eight undifferentiated rows — Copy, Paste, Import, Export, Clone, Mega — with the two most powerful at the bottom and nothing saying what they do.\n\nThree groups here: repair the duplicant, move their data, act on the colony. The entries that rewrite a duplicant carry a second line; the ones that move bytes around do not need one. Mega's explanation is not new copy — duplicant.verbs.mega_description already sits in en/common.json, written, and nothing renders it. That second line is what does the real work of making this menu legible; the button's label only names the box it lives in.\n\nCopy, Paste, Import, Export, Clone and Mega are all built today. \"Heal and de-stress\" is not — it is a bundle of writes the editor can already make.\n\nRevive joins this menu at the top on a dead duplicant, and is omitted rather than disabled on a living one — the pattern the Materials row menu (1.8) settled. See the Dead duplicant page.\n\nDelete (2.3) stays out for now, decided rather than forgotten. It is the entry that most wants the unsaved-changes guard (1.6) and undo (2.1) built first, on top of 2.3's own dangling-reference problem."
+    },
+    {
+      "id": "findings",
+      "page": "page-2",
+      "x": 0,
+      "y": -620,
+      "w": 2680,
+      "text": "WHAT A DEAD DUPLICANT ACTUALLY LOOKS LIKE IN THE SAVE\n\nOtto died in Dwelling4.sav — save version 7.38, which the pinned parser supports. Comparing him against the three survivors settles this, and rules out two things both this canvas and the roadmap had assumed.\n\nThe marker is FactionAlignment. Otto reads alignmentActive false, targetable false. Leira, Ruby and Bubbles all read true, true. That is the ONLY field that differs anywhere in his 54 behaviours — same behaviour set as the living ones, no DeathMonitor attached, no tag (serializedTags is empty on everybody).\n\nHealth does not know he is dead. The save's Health template carries exactly one field, canBeIncapacitated, and it reads true on the dead duplicant and the living ones alike. There is no State. Roadmap 1.1 plans \"a select over HealthState\" and \"a Revive button that sets State: Perfect\" — that field is not in the save, so as written it cannot work. The parser's own TypeScript declares State and CanBeIncapacitated; the save has neither spelling.\n\nHit points are 100. A dead duplicant is at full health, and full immunity. Otto suffocated, so his breath is 0 — but a duplicant who starved or froze would read 100 there. No vital is a death marker, which is why the health column in these frames tells you nothing. Every number in that column is Otto's real one: stamina 50.6, calories 2,639,719, stress 11.8, decor −130, bladder 100 — frozen where he left them.\n\nThe survivors mourn. All three living duplicants carry a Mourning effect with about 1,797s left on it. Not a marker on the dead one, but a second way to notice a death happened.\n\nSo Revive means setting alignmentActive and targetable back to true. Whether ONI accepts that alone is untested — 1.1's warning about the death being latched in the state machine still stands, it is simply aimed at a different field now.\n\nChecked that distance does not fake it. In a second save — 21 duplicants, Spaced Out, version 7.28 — four of them live on another asteroid: Burt, Turner, Quinn and Ashkan sit at x≈300, y≈60 against x 69–166, y 159–234 for the other seventeen. Every one of the 21 reads alignmentActive true, so being off the home planetoid does not clear the flag — the marker survives the case most likely to break it. Still unchecked: a duplicant in a rocket mid-flight.\n\nThe frames are drawn on Ada, whose portrait this canvas already has. The numbers are Otto's."
+    },
+    {
+      "id": "note-marked",
+      "page": "page-2",
+      "x": 0,
+      "y": 780,
+      "w": 1280,
+      "text": "A — marked, not modal. Death is a fact the identity panel reports: the portrait goes grey, a Dead chip sits beside the name, and Revive is the first entry in the Actions menu. Nothing else about the screen changes, and every field stays editable.\n\nThe argument for it is that death is not a mode. A dead duplicant is still a record you might be here to edit — renaming them, fixing an attribute, copying them onto a survivor. Locking the screen down or shouting at the reader would get in the way of all of that.\n\nIt is also the cheapest of the four by a wide margin: one boolean read, a filter on the portrait, a chip, and one more menu entry. No new panel, no new layout, no reflow.\n\nWhat it costs: it is quiet. Someone who opened this screen for another reason may not register the chip, and there is no prompt toward the thing they almost certainly want. If the grey portrait is the only cue on a small window, it is a weak one."
+    },
+    {
+      "id": "note-banner",
+      "page": "page-2",
+      "x": 1400,
+      "y": 780,
+      "w": 1280,
+      "text": "B — the screen leads with the fix. A strip under the app bar states it plainly and puts Revive one click away, as a real button rather than a menu entry.\n\nThe bet is about intent: almost nobody opens a dead duplicant to adjust their Machinery. They came to bring them back. If that is right, burying the one action behind a menu is making the common case do the most work.\n\nThe copy is where the research landed. It cannot say \"hit points are 0\" — they are 100. What is actually true is that everything about the duplicant is intact and only their place in the colony is gone, which is both reassuring and an accurate description of the one field that changed.\n\nWhat it costs: 56px off a layout whose whole premise is fitting in 720 without scrolling, and it costs them on the screen that can least spare them. It is also a banner — the pattern that gets ignored fastest once you have seen it twice. And a one-click destructive-adjacent write with no undo (2.1) is exactly the trade the README already apologises for; Revive is a kind write, but it is still a write."
+    },
+    {
+      "id": "note-condition",
+      "page": "page-2",
+      "x": 2800,
+      "y": 780,
+      "w": 1280,
+      "text": "C — condition as a panel. Death is not binary in the game's own vocabulary: HealthState has eight values — Perfect, Alright, Scuffed, Injured, Critical, Incapacitated, Dead, Invincible. So the honest control is a select over all eight, sitting above the health meters with the canBeIncapacitated switch beside it. Revive stops being a special verb and becomes \"set this to Perfect\", and Invincible falls out for free.\n\nIt is ruled out, and the save is what ruled it out. HealthState exists in the parser and in the game; it is not in the save file. Version 7.38 serialises one Health field, canBeIncapacitated, and it is true on the dead duplicant and the living ones alike. There is no eight-state value to bind a select to.\n\nWhat could be built instead is a two-state version of the same idea over FactionAlignment — \"in the colony / dead\" — but at that point it is A with a heavier control, not a third direction.\n\nWorth keeping on the canvas because it is the option the evidence eliminated, and because roadmap 1.1 is currently written as if this one were buildable."
+    },
+    {
+      "id": "note-list",
+      "page": "page-2",
+      "x": 4200,
+      "y": 780,
+      "w": 1280,
+      "text": "D — mark it where you find them. The same chip and the same grey portrait, on the duplicants list rather than in the editor.\n\nThis is the one that answers a question the other three do not: how do you know to open Ada at all? Today every card on this page is identical furniture, and a colony of twelve gives you no way to find the one who died short of opening each in turn. The editor can only tell you about a duplicant you already chose.\n\nIt is not an alternative to A, B or C — it is the half of the problem they do not touch, and it is the same one boolean, so it costs almost nothing on top of whichever of them wins. It also lands squarely on 1.5, which already wants search and sort on this page: \"dead\" is a sort key and a filter the moment it is a chip.\n\nWhat it costs: nothing structural, but it does put a red-adjacent marker on the page people see first, which is a tone decision as much as a design one.\n\nSteela and Bruno are drawn as placeholders because that is what the app really shows for them — her sprite is bionic and his hair is past the highest ordinal this app ships."
+    },
+    {
+      "id": "recommendation",
+      "page": "page-2",
+      "x": 0,
+      "y": 1560,
+      "w": 2680,
+      "text": "A and D together, and skip the other two for now.\n\nA because death is not a mode and the record stays editable; D because it is the half that tells you there is anything to open. They share one boolean read and one chip component between them, so together they are barely more work than either alone — and the pair covers finding the dead duplicant and doing something about it.\n\nB is a good idea sitting on the wrong layout. The banner's argument about intent is right, but 56px is a lot on a screen whose entire premise is fitting in 720, and Revive is already one click from the Actions button in A. Revisit it if E is ever built at a taller minimum.\n\nC is out on the evidence, not on taste.\n\nThe boolean all four rest on has now held up across two saves, two versions and 25 duplicants, four of them on a second asteroid. A duplicant in a rocket mid-flight is the one case left to try.\n\nRoadmap 1.1 has been rewritten around all of this — it used to describe a field the save does not have."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-2"
+  }
+}

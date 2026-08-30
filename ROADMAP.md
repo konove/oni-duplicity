@@ -20,8 +20,9 @@ Three sources of evidence were used, and they agree more than expected:
 
 Three conclusions shaped the ordering:
 
-- **The loudest asks are mostly already built.** "Revive dead duplicants" (3 issues) needs a `<Select>`
-  bound to a behavior the parser already types, and is still open as 1.1. "Sandbox mode" (3 issues)
+- **The loudest asks are mostly already built.** "Revive dead duplicants" (3 issues) is still open as
+  1.1, and turned out to be a different change from the one described here for months — the field it
+  planned to edit is not in the save at all. "Sandbox mode" (3 issues)
   shipped all along — nobody could find it because the panel printed `SandboxMode` / `Enabled` as raw
   identifiers, which 0.3 fixed.
 - **This is a trust problem more than a capability problem.** No undo, no unsaved-changes guard, no
@@ -356,24 +357,68 @@ pass before code.
 
 ### 1.1 Revive dead duplicants — the highest demand-to-effort ratio here (#91, #67, #45)
 
-`HealthBehavior` ("Health") carries `State: HealthState` and `CanBeIncapacitated`, and the parser ships
-`getHealthStateName()`. **Zero references in `src/`.** The tab labelled "Health" edits `MinionModifiers`
-_amounts_ and never touches the behavior actually named `Health`. The enum:
+**The premise this entry carried for months was wrong.** It planned to edit a field the save does not
+contain. Reading a real save with a real dead duplicant in it is what found that out, and it changes the
+work rather than the priority.
 
-```
-Perfect, Alright, Scuffed, Injured, Critical, Incapacitated, Dead, Invincible
-```
+What the parser promises: `HealthBehavior` ("Health") is typed as
+`{ CanBeIncapacitated: boolean; State: HealthState }`, and `getHealthStateName()` ships alongside the
+eight-value enum — `Perfect, Alright, Scuffed, Injured, Critical, Incapacitated, Dead, Invincible`.
 
-No new action, reducer or selector needed — `useBehavior(gameObjectId, HealthBehavior)` plus the
-existing `modifyBehavior` covers it. Add a "Condition" section at the top of `Health.tsx`: a select over
-`HealthState`, a switch for `CanBeIncapacitated`, and a **Revive** button that sets `State: Perfect`,
-restores `HitPoints` to its max, and clears `sicknesses`. **Effort: S.**
+What a save contains: saves are self-describing, and the `Health` type template declares **exactly one
+field, `canBeIncapacitated`** — lowercase, with no `State` beside it. Checked on save versions 7.28 and
+7.38 and on the bundled example. There is no state to select over, nothing to set to `Perfect`, and
+nothing for `getHealthStateName()` to read. The parser's type does not describe these saves.
 
-**Validate in-game before calling this done.** It is not certain ONI resurrects from `Health.State`
-alone — death may also be latched in the `StateMachineController`. Suggestive evidence:
-`reducer/clone-duplicant.ts` already blacklists `StateMachineController` when cloning. Test on a real
-dead duplicant. If the state machine matters, Revive becomes a small reducer that also strips the death
-SMI — still S–M, but a different change.
+**Death is marked on `FactionAlignment`.** From a save where Otto suffocated, against his three
+surviving colonists:
+
+| Duplicant            | `alignmentActive` | `targetable` |
+| -------------------- | ----------------- | ------------ |
+| Otto — dead          | `false`           | `false`      |
+| Leira, Ruby, Bubbles | `true`            | `true`       |
+
+That is the only field that differs anywhere across his 54 behaviors. Same behavior set as the living
+ones, no `DeathMonitor+Instance` attached, `serializedTags` empty on everybody, and `Health` reading
+`canBeIncapacitated: true` on the dead duplicant exactly as on the living ones.
+
+**No vital gives it away.** A dead duplicant sits at full hit points and full immunity. Otto's breath is
+0 because he suffocated; one who starved or froze would read 100 there. His other amounts are simply
+frozen where he left them — stress 11.8, decor −130, bladder 100. There is nothing to threshold, which
+also means the Health tab as it stands cannot tell you anyone has died.
+
+**The marker survives distance.** In a 21-duplicant Spaced Out save, four of them living on a second
+asteroid — Burt, Turner, Quinn and Ashkan at x≈300, y≈60, against x 69–166, y 159–234 for the other
+seventeen — every one reads `alignmentActive: true`. Being off the home planetoid does not clear it.
+Still unchecked: a duplicant in a rocket mid-flight.
+
+**A second signal, if one is wanted:** the three survivors each carry a `Mourning` effect. Not a marker
+on the dead duplicant, but a way to notice a death happened at all.
+
+**The plan, revised.** The parser ships no `FactionAlignmentBehavior`, but it does not need to: a
+five-line `interface` in `src/` plus `"FactionAlignment" as BehaviorName<…>` typechecks against the
+existing `useBehavior` and `modifyBehavior`, verified with `tsc -p src`. No fork round trip, no new
+action, reducer or selector. Read `alignmentActive` to know; write `alignmentActive` and `targetable`
+back to `true` to revive.
+
+Where it belongs on screen is designed in `design/duplicant-one-screen/` — four options, recommending
+two of them together: mark the duplicant in the identity band **and** on the duplicants list (which is
+the only place you can discover a death without opening every card in turn), with **Revive** as the
+first entry in the actions menu, omitted rather than disabled on a living duplicant, the way the
+Materials row menu does it. A "Condition" select over `HealthState` was the fourth option and is ruled
+out by the save, not by taste.
+
+**Validate in-game before calling this done.** The old warning still stands, aimed at a different field:
+it is not certain ONI resurrects from `FactionAlignment` alone, because death may also be latched in the
+`StateMachineController` — attached to every duplicant, carrying no serialized fields, and already
+blacklisted by `reducer/clone-duplicant.ts` when cloning. If the state machine matters, Revive becomes a
+small reducer that also strips the death SMI.
+
+Note for whoever builds it: `src/__mocks__/save-game.json` has no dead duplicant — Ada, Bruno and Steela
+all read `alignmentActive: true` — so the marker needs a fixture before it can have a test.
+
+**Effort: S for the marker, S–M for Revive.** The same size as before, but a different change, with the
+risk now concentrated in whether the write takes.
 
 ### 1.2 Rename a duplicant; edit gender and voice
 
@@ -625,11 +670,12 @@ Five small items, disjoint files, no new architecture.
 The three that shipped were the labelling and the wrong numbers, and between them they closed five
 issues without building anything new. What is left is the half that touches state rather than
 presentation: 1.6, which retires the "I lost my edits" failure the README apologises for, and 1.1, which
-is a select bound to a behavior the parser already types.
+is one boolean on a behavior the parser does not type yet.
 
 **Sequencing constraints:** 0.1 had to precede 1.6 (and later 2.1) — a reducer that mutates without
 setting the dirty flag makes both the guard and the undo history lie. That one is done, so 1.6 is
-unblocked. 1.1 still needs an in-game validation pass before it counts as done.
+unblocked. 1.1 still needs an in-game validation pass before it counts as done — now against
+`FactionAlignment` rather than `Health`, which is where reading a real save moved it.
 
 ### 2 — "Names and lists" — one of five shipped
 
