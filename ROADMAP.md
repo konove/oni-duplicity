@@ -42,8 +42,9 @@ to three**, and all three are questions about how the thing is laid out rather t
 
 **1.10 closed the largest gap in the document**, and it had nothing to do with the save format: nothing
 here was published, and nothing checked a change on the way in. There is a workflow now — every push and
-pull request is checked, and `master` deploys to Pages. What is still open is the screenshot suite, which
-cannot join CI until it has Linux baselines of its own.
+pull request runs the format check, lint, typecheck, unit tests, a production build and the screenshot
+suite, and `master` deploys to Pages at
+[konove.github.io/oni-duplicity](https://konove.github.io/oni-duplicity/).
 
 ---
 
@@ -624,7 +625,7 @@ name argument and the other builds its id at runtime.
 Czech and Spanish fall back to English exactly as they already do for elements.
 Every material across two real colonies resolves.
 
-### 1.10 Nothing is published — the app only exists if you clone it — **done, bar one open half**
+### 1.10 Nothing is published — the app only exists if you clone it — **done**
 
 `npm run deploy` has been in `package.json` all along: `gh-pages -d dist`, pointed at this repo. Nothing
 runs it, and as far as the remote is concerned nothing ever has — there is no `gh-pages` branch, and
@@ -654,14 +655,22 @@ under that path, served, and loaded — the app boots, hash routing works, and t
 request or console error. The Settings page even offers offline mode there, which is the production-only
 service worker that has never been reachable in development.
 
-**Still open: the screenshot suite is not in CI.** Playwright's browser download and dev server are
-affordable, a couple of minutes a run. The baselines are the problem: they are platform-specific, taken
-on Windows, and a Linux runner would match none of them — it would fail every run while catching
-nothing. Making it useful means committing a second set of Linux baselines, generated on a Linux
-machine or in the Playwright container. Until then `npm run test:e2e` stays a local check, and the
-workflow says so where somebody will read it.
+**The screenshots are in CI too.** They were the open half, and the blocker was never the runtime —
+Playwright's browser download and dev server cost about a minute. It was that `snapshotPathTemplate`
+had no `{platform}` in it, so every baseline was named as if it were universal and a Linux runner would
+have compared Linux renders against Windows shots: nineteen failures a run, catching nothing.
 
-**Effort: S**, as estimated. The open half is **S**, and it is baselines rather than configuration.
+The platform is in the filename now, the existing shots are `-win32`, and a `-linux` set sits beside
+them. Generating those needs Linux, so `.github/workflows/baselines.yml` does it on demand: write what
+is missing, then run the suite again with no flag to prove the shots are stable, and upload them to be
+committed by hand. **Deliberately by hand** — a workflow that commits its own baselines makes every
+visual regression self-approving, which is the one thing a screenshot test is for.
+
+The cost of that is real and worth knowing: a visual change now needs both sets updated, the local one
+with `npm run test:e2e:update` and the Linux one through that workflow. CLAUDE.md says so under
+"Screenshot tests".
+
+**Effort: S**, as estimated, and the open half came in at **S** as well.
 
 ## Tier 2 — Real work, real demand
 

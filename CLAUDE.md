@@ -101,10 +101,17 @@ in dev builds — without it every page past the overview redirects away and the
 nothing to photograph. `e2e/fixtures.ts` wraps that; `playwright.config.ts` starts the
 server itself.
 
-Baselines live in `e2e/__screenshots__/` and are committed. They are **platform
-specific** — Chromium renders text differently on Windows and Linux, so a baseline
-taken here will not match one taken elsewhere. Playwright puts the platform in the
-filename, which keeps that visible rather than mysterious.
+Baselines live in `e2e/__screenshots__/` and are committed, **two per shot**:
+`editor-win32.png` and `editor-linux.png`. They are **platform specific** — Chromium
+renders text differently on Windows and Linux, so a baseline taken here will not match
+one taken on the runner. `snapshotPathTemplate` puts the platform in the filename, which
+is what lets both sets live side by side.
+
+`npm run test:e2e:update` only ever writes the set for the machine you are on. **A
+visual change needs both**: update the Windows set locally, then run the **Screenshot
+baselines** workflow (`gh workflow run baselines.yml`), download its artifact and commit
+the `-linux` files it wrote. That workflow deliberately does not commit them itself —
+a workflow that writes its own baselines makes every visual regression self-approving.
 
 Traps, all of which produced a green-but-meaningless test at some point:
 
@@ -152,7 +159,7 @@ by the Playwright screenshots instead, which run the real bundle.
 
 - **Hash routing.** URLs are `/#/duplicants`, and `HashRouter` lives in `root.tsx`. Routing state is not in redux — `connected-react-router` was removed and nothing selects off a router slice.
 - **`loadMockSave()`** is exposed on `window` in dev builds (`src/debug.ts`) and loads `src/__mocks__/save-game.json`. Use it to exercise the editor without a real `.sav`. `killMockDuplicant()` sits beside it and marks the first duplicant dead — no bundled save has one and the editor offers no way to kill one, so it is the only way to see that state.
-- **CI runs everything except the screenshots.** `.github/workflows/ci.yml` runs `format:check`, `lint`, `typecheck`, `test` and `build` on every push and pull request, and deploys `master` to GitHub Pages. Playwright is deliberately left out: the baselines are platform-specific and were taken on Windows, so a Linux runner matches none of them. `npm run test:e2e` is still yours to run.
+- **CI runs the lot.** `.github/workflows/ci.yml` runs `format:check`, `lint`, `typecheck`, `test`, `build` and the Playwright suite on every push and pull request, and deploys `master` to GitHub Pages. A failing screenshot uploads `playwright-report` and `test-results` as artifacts, so the `-actual` and `-diff` images are downloadable rather than lost with the runner.
 - **The service worker is production-only.** `GenerateSW` warns on every rebuild under `--watch` and webpack-dev-server renders warnings as a full-screen overlay, so it is gated behind `!isDev`. The Settings page's offline-mode toggle therefore cannot be tested via `npm start` (nothing serves `/service-worker.js`) — build and serve `dist/`.
 - **`webpack.config.js` is type-checked, but stays CommonJS JavaScript.** It opens with `// @ts-check` and types its export with `/** @type {import("webpack").Configuration} */`, which `tsconfig.node.json` enforces under `npm run typecheck`. That annotation must sit on a `const config`, not on `module.exports` directly — TypeScript ignores `@type` on a CommonJS export assignment and silently checks nothing. Keeping the file `.js` avoids making webpack-cli load a `.ts` config, which needs a loader (`tsx`/`ts-node`) or Node's native type stripping, and the two disagree about `__dirname`.
 - **The save-serializer runs in a web worker** via webpack 5's native `new Worker(new URL(...))`. `worker-loader` is gone.

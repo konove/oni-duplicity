@@ -42,13 +42,26 @@ jobs:
       - run: npm run typecheck
       - run: npm test
 
-      # Playwright is deliberately not here. The screenshot baselines are
-      # platform-specific and were taken on Windows, so a Linux runner matches
-      # none of them - it would fail every run while catching nothing. Making
-      # it useful means committing a second set of Linux baselines, which is
-      # the open half of ROADMAP 1.10. Until then it stays `npm run test:e2e`
-      # on a developer's machine.
       - run: npm run build
+
+      # The screenshots run against the -linux baselines beside the -win32
+      # ones; the platform is in the filename, so a Linux runner compares
+      # against shots taken on Linux. Generate them with the "Screenshot
+      # baselines" workflow, which is the only way to make them, and commit
+      # what it uploads.
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run test:e2e
+
+      - name: Upload the failed screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
 
       - name: Package the site
         if: github.ref == 'refs/heads/master'
