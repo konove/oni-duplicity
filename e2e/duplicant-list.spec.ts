@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 
-import { loadMockSave } from "./fixtures";
+import { loadMockSave, waitForSprites } from "./fixtures";
 
 /**
  * The list cards, at the sizes a save can actually reach.
@@ -17,6 +17,7 @@ async function goToList(page: Page): Promise<void> {
     window.location.hash = "#/duplicants";
   });
   await expect(page.locator('a[href^="#/duplicants/"]').first()).toBeVisible();
+  await waitForSprites(page);
 }
 
 /** The card for one duplicant, rather than any Paper on the page. */

@@ -31,10 +31,32 @@ interface MockSaveWindow {
   loadMockSave?: () => void;
 }
 
+/**
+ * Waits for the duplicant sprites to actually be on screen.
+ *
+ * The portrait layers are `<img>` elements, and Playwright's screenshot
+ * stabilisation cannot help with them: it waits for two identical frames, and
+ * an empty box is a perfectly stable frame. A shot taken before the sprite
+ * arrives is "stable" and simply has no duplicant in it.
+ *
+ * That is not hypothetical - it is what CI produced on its first run with the
+ * screenshots in it: a card whose portrait was missing entirely, 699 pixels
+ * different from a baseline generated on the same runner minutes earlier.
+ */
+export async function waitForSprites(page: Page): Promise<void> {
+  await page.waitForFunction(() =>
+    Array.from(document.images).every(
+      (image) => image.complete && image.naturalWidth > 0,
+    ),
+  );
+  await page.evaluate(() => document.fonts.ready);
+}
+
 /** Navigates by hash and settles, so a screenshot is not raced. */
 export async function goToPage(page: Page, hash: string): Promise<void> {
   await page.evaluate((h) => {
     window.location.hash = h;
   }, hash);
   await page.waitForLoadState("networkidle");
+  await waitForSprites(page);
 }

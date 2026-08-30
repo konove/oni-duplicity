@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 
-import { loadMockSave } from "./fixtures";
+import { loadMockSave, waitForSprites } from "./fixtures";
 
 /**
  * The editor shows the whole duplicant at once: identity and traits, the
@@ -31,6 +31,7 @@ async function openFirstDuplicant(page: Page): Promise<void> {
     window.location.hash = h.slice(1);
   }, href as string);
   await expect(page.getByRole("button", { name: "Actions" })).toBeVisible();
+  await waitForSprites(page);
 }
 
 test.describe("duplicant editor", () => {

@@ -121,6 +121,12 @@ Traps, all of which produced a green-but-meaningless test at some point:
   allows 11,520 changed pixels on a 1280×900 page — enough to move a control or reflow a
   table. The config uses an absolute `maxDiffPixels: 50`; same-machine reruns are
   deterministic, so anything larger is a real change.
+- **An empty box is a stable frame.** `toHaveScreenshot` waits for two identical
+  frames before it compares, which does nothing for content that has not arrived yet:
+  the duplicant sprites are three `<img>` requests per portrait, and a shot taken while
+  they are in flight is perfectly stable and simply has no duplicant in it. That is what
+  CI produced on its first run with the screenshots in it. `waitForSprites()` in
+  `e2e/fixtures.ts` is the fix, and `goToPage()` already calls it.
 - **Element screenshots clip to the element's box.** A focus ring drawn with
   `outlineOffset` paints _outside_ that box and is cropped away, giving a shot identical
   to the unfocused one. Screenshot a padded region of the page instead (see the focus

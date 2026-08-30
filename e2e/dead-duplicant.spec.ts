@@ -1,6 +1,6 @@
 import { test, expect, Page } from "@playwright/test";
 
-import { loadMockSave } from "./fixtures";
+import { loadMockSave, waitForSprites } from "./fixtures";
 
 /**
  * A dead duplicant, marked in the two places the design pass settled on: on the
@@ -16,6 +16,7 @@ async function goToList(page: Page): Promise<void> {
     window.location.hash = "#/duplicants";
   });
   await expect(page.locator('a[href^="#/duplicants/"]').first()).toBeVisible();
+  await waitForSprites(page);
 }
 
 async function kill(page: Page): Promise<number> {
