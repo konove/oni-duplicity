@@ -69,15 +69,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    # Pages has to be switched on by hand once, at
+    # Settings -> Pages -> Build and deployment -> Source -> "GitHub Actions".
+    # `actions/configure-pages` with `enablement: true` was here to spare
+    # anybody that, and it cannot: GITHUB_TOKEN is not allowed to create the
+    # Pages site, so the step failed and took the deploy with it. One switch,
+    # once, is better than a step that always fails until somebody flips it.
     steps:
-      # Turns Pages on if it is off, so the first run of this workflow is also
-      # what publishes the site for the first time - there has never been a
-      # deploy here, and requiring somebody to flip a switch in Settings first
-      # is exactly the kind of step that does not happen.
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       # Publishes the artifact directly rather than committing a build to a
       # gh-pages branch, which suits a dist/ that is already gitignored. It
       # also means Jekyll never runs over the output, so nothing beginning with
