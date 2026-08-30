@@ -12,20 +12,17 @@ export interface DuplicantAttributesProps {
 
 const styles = (theme: Theme) =>
   createStyles({
+    // One column, sized to what it holds.
+    //
+    // This was two columns wrapped inside a fixed 240x160 box, which worked
+    // only while every level was a single digit. A mega duplicant reads +9999
+    // on all eleven, the second column overran the box, and the card clipped
+    // it - so the numbers that had changed were the ones you could not read.
     root: {
       display: "flex",
       flexDirection: "column",
-      flexWrap: "wrap",
-      width: theme.spacing(30),
-      height: theme.spacing(20),
-      // Negate via spacing's own argument: since MUI v5 spacing() returns a
-      // string ("4px"), negating the result yields NaN.
-      marginLeft: theme.spacing(-0.5),
-      marginRight: theme.spacing(-0.5),
-    },
-    item: {
-      marginLeft: theme.spacing(0.5),
-      marginRight: theme.spacing(0.5),
+      minWidth: 0,
+      maxWidth: theme.spacing(22),
     },
   });
 
