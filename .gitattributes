@@ -2,3 +2,8 @@
 # everything the toolchain reads - except a shell script the container runs.
 # With CRLF the shebang ends in \r and Linux answers "sh: not found".
 *.sh text eol=lf
+
+# Save fixtures are binary. Without this git treats them as text on a CRLF
+# working tree and rewrites bytes on checkout, which corrupts the fixture in a
+# way that only shows up as a parse failure.
+*.sav binary
