@@ -660,14 +660,15 @@ Playwright's browser download and dev server cost about a minute. It was that `s
 had no `{platform}` in it, so every baseline was named as if it were universal and a Linux runner would
 have compared Linux renders against Windows shots: nineteen failures a run, catching nothing.
 
-The platform is in the filename now, the existing shots are `-win32`, and a `-linux` set sits beside
-them. Generating those needs Linux, so `.github/workflows/baselines.yml` does it on demand: write what
-is missing, then run the suite again with no flag to prove the shots are stable, and upload them to be
-committed by hand. **Deliberately by hand** — a workflow that commits its own baselines makes every
-visual regression self-approving, which is the one thing a screenshot test is for.
+That was solved first by putting `{platform}` in the filename and keeping two sets, `-win32` beside
+`-linux`, with `.github/workflows/baselines.yml` generating the Linux half on demand. It worked, and it
+cost too much to live with: every visual change meant updating one set locally, dispatching a workflow,
+waiting, downloading its artifact and committing the rest.
 
-The cost of that is real and worth knowing: a visual change now needs both sets updated, the local one
-with `npm run test:e2e:update` and the Linux one through that workflow. CLAUDE.md says so under
+**Superseded.** The suite runs in `mcr.microsoft.com/playwright` now, the same image locally and in CI,
+so there is one platform and one baseline per shot. `npm run test:e2e` is `docker compose run`, CI runs
+that same command, and `test:e2e:update` writes bytes CI accepts. `baselines.yml` is gone. The price is
+a Docker dependency and an image tag that has to move with `@playwright/test`. CLAUDE.md says so under
 "Screenshot tests".
 
 **Effort: S**, as estimated, and the open half came in at **S** as well.
