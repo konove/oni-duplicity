@@ -1,0 +1,55 @@
+{
+  "artboards": [
+    {
+      "file": "Today.dc.html",
+      "title": "Today — the screen a new arrival lands on",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 900
+    },
+    {
+      "file": "Main.dc.html",
+      "title": "Proposed — the landing, before a save is open",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 900
+    },
+    {
+      "file": "Loaded.dc.html",
+      "title": "Proposed — the Overview, once a save is open",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 900
+    },
+    {
+      "file": "NavStates.dc.html",
+      "title": "The sidebar across all four states",
+      "x": 0,
+      "y": 1060,
+      "w": 944,
+      "h": 800
+    }
+  ],
+  "annotations": [
+    {
+      "id": "brief",
+      "x": 0,
+      "y": -190,
+      "w": 620,
+      "text": "Roadmap 0.11 — \"The editor does not orient a new arrival.\"\n\nColour, type and geometry are lifted from the running app: MUI v9 dark defaults (#121212 ground, #1e1e1e paper, #272727 bar, #90caf9 / #ce93d8 accents), Roboto, a 200px permanent drawer and 64px bars. Today is recreated from a live screenshot of the no-save page."
+    },
+    {
+      "id": "open-questions",
+      "x": 1064,
+      "y": 1060,
+      "w": 560,
+      "text": "Three things to check before this becomes code:\n\n1. Step 3 is the part nothing currently says: Save downloads a new .sav rather than writing over the file you opened.\n\n2. SaveFilePaths.mac is null today, so macOS visitors get no path line at all. The Platform tweak on the landing shows the path from README.md instead.\n\n3. Counts on the Overview are the bundled example save (3 duplicants, 1 geyser, 0 creatures, 2 asteroids); the Materials count of 11 was read off the Materials page.\n\nGreying Worlds rather than hiding it means nav-links.ts needs a reason string per gated entry, not just requireDLC — Nav currently filters the list before rendering it."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

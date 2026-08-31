@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #121212; font-family: Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #90caf9; } a:hover { color: #b3dbff; }
+    .col { width: 200px; flex: none; display: flex; flex-direction: column; }
+    .drawer { background: #121212; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; display: flex; flex-direction: column; position: relative; }
+    .brand { height: 64px; flex: none; display: flex; align-items: center; padding-left: 24px; }
+    .item { height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center; gap: 8px; }
+    .label { font-size: 16px; letter-spacing: 0.15px; color: #fff; }
+    .head { font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.17px; color: #fff; }
+    .note { font-size: 12px; line-height: 16px; letter-spacing: 0.4px; color: rgba(255,255,255,0.5); }
+    .cap { margin-top: 2px; min-height: 80px; }
+  </style>
+</helmet>
+
+<div style="width: 944px; height: 800px; box-sizing: border-box; background: #121212; padding: 24px; display: flex; flex-direction: column;">
+
+  <div style="font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: 0.15px; color: #fff;">The sidebar, in every state it has</div>
+  <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7);">Six of the eight entries are unusable on arrival — five greyed, one missing — and nothing says why or for how long.</div>
+
+  <div style="margin-top: 20px; display: flex; gap: 32px; align-items: flex-start;">
+
+    <!-- Today -->
+    <div class="col">
+      <div class="head">Today — no save</div>
+      <div class="note cap">Greyed out with no explanation. Worlds is absent entirely, then appears once a Spaced Out! save loads.</div>
+      <div class="drawer" style="margin-top: 8px;">
+        <div class="brand"><span style="font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">Duplicity</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+        <div style="padding: 8px 0;">
+          <div class="item" style="background: rgba(144,202,249,0.16);"><span class="label">Overview</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Duplicants</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Geysers</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Creatures</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Materials</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Raw Editor</span></div>
+          <div class="item"><span class="label">Changelog</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposed, locked -->
+    <div class="col">
+      <div class="head" style="color: #90caf9;">Proposed — no save</div>
+      <div class="note cap">Worlds now holds its place. One line says what unlocks the run, and Changelog moves below the rule so the locked group reads as one thing.</div>
+      <div class="drawer" style="margin-top: 8px; border-color: rgba(144,202,249,0.5);">
+        <div class="brand"><span style="font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">Duplicity</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+        <div style="padding-top: 8px;">
+          <div class="item" style="background: rgba(144,202,249,0.16);"><span class="label">Overview</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Duplicants</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Geysers</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Creatures</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Worlds</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Materials</span></div>
+          <div class="item" style="opacity: 0.38;"><span class="label">Raw Editor</span></div>
+          <div style="padding: 4px 16px 12px; display: flex; align-items: flex-start; gap: 8px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)" aria-hidden="true" style="display: block; flex: none; margin-top: 1px;"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></svg>
+            <span class="note">Locked until a save is open</span>
+          </div>
+          <div style="height: 1px; background: rgba(255,255,255,0.12); margin: 4px 0;"></div>
+          <div class="item"><span class="label">Changelog</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spaced Out save -->
+    <div class="col">
+      <div class="head">Save open — Spaced Out!</div>
+      <div class="note cap">Everything available. The list is the same length it was a moment ago.</div>
+      <div class="drawer" style="margin-top: 8px;">
+        <div class="brand"><span style="font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">Duplicity</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+        <div style="padding: 8px 0;">
+          <div class="item" style="background: rgba(144,202,249,0.16);"><span class="label">Overview</span></div>
+          <div class="item"><span class="label">Duplicants</span></div>
+          <div class="item"><span class="label">Geysers</span></div>
+          <div class="item"><span class="label">Creatures</span></div>
+          <div class="item"><span class="label">Worlds</span></div>
+          <div class="item"><span class="label">Materials</span></div>
+          <div class="item"><span class="label">Raw Editor</span></div>
+          <div class="item"><span class="label">Changelog</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Base game save -->
+    <div class="col">
+      <div class="head" style="color: #90caf9;">Save open — base game</div>
+      <div class="note cap">Worlds stays greyed and carries the reason, rather than vanishing from the list.</div>
+      <div class="drawer" style="margin-top: 8px; border-color: rgba(144,202,249,0.5);">
+        <div class="brand"><span style="font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">Duplicity</span></div>
+        <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+        <div style="padding: 8px 0;">
+          <div class="item" style="background: rgba(144,202,249,0.16);"><span class="label">Overview</span></div>
+          <div class="item"><span class="label">Duplicants</span></div>
+          <div class="item"><span class="label">Geysers</span></div>
+          <div class="item"><span class="label">Creatures</span></div>
+          <div class="item">
+            <span class="label" style="flex: 1; min-width: 0; color: rgba(255,255,255,0.38);">Worlds</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="rgba(255,255,255,0.6)" aria-hidden="true" style="display: block; flex: none;"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+          </div>
+          <div class="item"><span class="label">Materials</span></div>
+          <div class="item"><span class="label">Raw Editor</span></div>
+          <div class="item"><span class="label">Changelog</span></div>
+        </div>
+        <div style="position: absolute; left: 20px; top: 302px; width: 172px; box-sizing: border-box; padding: 4px 8px; border-radius: 4px; background: rgba(97,97,97,0.92); color: #fff; font-size: 11px; font-weight: 500; line-height: 14px; letter-spacing: 0.2px;">This is a base game save. Only Spaced Out! colonies span more than one asteroid.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">The gate itself is unchanged — <span style="font-family: 'Roboto Mono', ui-monospace, Consolas, monospace; color: #fff;">requireDLC</span> in <span style="font-family: 'Roboto Mono', ui-monospace, Consolas, monospace; color: #fff;">nav-links.ts</span> still decides. Only its failure mode changes: greyed with a reason instead of absent. That gives a base game reader something to read where today they get nothing, and it stops the list changing length under their hand the moment a save opens.</div>
+
+</div>
+</x-dc>
+</body>
+</html>

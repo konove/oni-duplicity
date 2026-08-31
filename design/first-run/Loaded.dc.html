@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #121212; font-family: Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #90caf9; } a:hover { color: #b3dbff; }
+  </style>
+</helmet>
+
+<div style="width: 1280px; height: 900px; box-sizing: border-box; background: #121212; display: flex; overflow: hidden; position: relative;">
+
+  <!-- Drawer -->
+  <div style="width: 200px; height: 900px; flex: none; box-sizing: border-box; background: #121212; display: flex; flex-direction: column;">
+    <div style="height: 64px; flex: none; display: flex; align-items: center; padding-left: 24px;">
+      <span style="font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">Duplicity</span>
+      <div style="margin-left: auto; margin-right: 8px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" style="display: block;"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3z"></path></svg>
+      </div>
+    </div>
+    <div style="height: 1px; background: rgba(255,255,255,0.12);"></div>
+    <div style="padding-top: 8px; display: flex; flex-direction: column;">
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center; background: rgba(144,202,249,0.16);"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Overview</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Duplicants</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Geysers</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Creatures</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Worlds</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Materials</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Raw Editor</span></div>
+      <div style="height: 48px; box-sizing: border-box; padding: 8px 16px; display: flex; align-items: center;"><span style="font-size: 16px; letter-spacing: 0.15px; color: #fff;">Changelog</span></div>
+    </div>
+  </div>
+  <div style="position: absolute; left: 200px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.12); z-index: 3;"></div>
+
+  <!-- App -->
+  <div style="width: 1080px; flex: none; display: flex; flex-direction: column; min-width: 0;">
+    <div style="height: 64px; flex: none; box-sizing: border-box; background: #272727; display: flex; align-items: center; padding: 0 24px; box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12); position: relative; z-index: 2;">
+      <span style="flex: 1; font-size: 20px; font-weight: 500; line-height: 32px; letter-spacing: 0.15px; color: #fff;">Overview</span>
+      <div style="display: flex; gap: 8px; margin-right: 8px;">
+        <div style="height: 32px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 16px; background: #ce93d8; color: rgba(0,0,0,0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Spaced Out!</div>
+        <div style="height: 32px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 16px; background: #ce93d8; color: rgba(0,0,0,0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Aquatic Planet Pack</div>
+        <div style="height: 32px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 16px; background: #ce93d8; color: rgba(0,0,0,0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Frosty Planet Pack</div>
+        <div style="height: 32px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 16px; background: #ce93d8; color: rgba(0,0,0,0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Bionic Booster Pack</div>
+        <div style="height: 32px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 16px; background: #ce93d8; color: rgba(0,0,0,0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Prehistoric Planet Pack</div>
+      </div>
+      <div style="width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" style="display: block;"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"></path></svg></div>
+      <div style="width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" style="display: block;"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"></path></svg></div>
+      <div style="width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true" style="display: block;"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 0 1 8.4 12c0-1.98 1.62-3.6 3.6-3.6s3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"></path></svg></div>
+    </div>
+
+    <div style="flex: 1; min-height: 0; overflow: hidden; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column;">
+
+      <!-- Identity -->
+      <div style="display: flex; align-items: baseline; gap: 16px;">
+        <h1 style="margin: 0; font-size: 34px; font-weight: 400; line-height: 42px; letter-spacing: 0.25px; color: #fff;">Example Colony</h1>
+        <span style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: rgba(255,255,255,0.7);">cycle 42 · 3 duplicants · 2 asteroids</span>
+      </div>
+      <div style="margin-top: 2px; font-size: 12px; line-height: 20px; letter-spacing: 0.4px; color: rgba(255,255,255,0.5);">Save version 7.38 · dlc5::clusters/AquaticSpacedOutCluster</div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.12); margin: 16px 0;"></div>
+
+      <!-- Destinations -->
+      <div style="font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: 0.15px; color: #fff;">What you can change</div>
+      <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Duplicants</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 24px; color: #90caf9; font-variant-numeric: tabular-nums;">3</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">Names, traits, interests, skills, attributes, health and appearance. Revive the dead.</div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Geysers</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 24px; color: #90caf9; font-variant-numeric: tabular-nums;">1</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">How much it puts out, how often it erupts, and how long it lies dormant.</div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: rgba(255,255,255,0.5);">Creatures</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 24px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums;">0</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.5); text-wrap: pretty;">Nothing ranched or roaming in this colony. Eleven Dartle eggs are counted under Materials.</div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Worlds</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 24px; color: #90caf9; font-variant-numeric: tabular-nums;">2</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">Asteroid names, and which ones the colony has discovered or visited.</div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Materials</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 24px; color: #90caf9; font-variant-numeric: tabular-nums;">11</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">Mass and element of everything lying around or held in a container.</div>
+          <div style="margin-top: auto; padding-top: 10px; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffb74d" aria-hidden="true" style="display: block; flex: none;"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+            <span style="font-size: 12px; line-height: 16px; letter-spacing: 0.4px; color: #ffb74d;">Deletes and mass edits apply colony-wide</span>
+          </div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #1e1e1e; border-radius: 4px; padding: 16px; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: baseline; gap: 8px;">
+            <span style="flex: 1; min-width: 0; font-size: 16px; font-weight: 500; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Raw Editor</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">Every field in the save, exactly as it is stored.</div>
+          <div style="margin-top: auto; padding-top: 10px; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffb74d" aria-hidden="true" style="display: block; flex: none;"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg>
+            <span style="font-size: 12px; line-height: 16px; letter-spacing: 0.4px; color: #ffb74d;">No checks — a bad value crashes the game</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: rgba(255,255,255,0.12); margin: 20px 0 16px;"></div>
+
+      <!-- Difficulty -->
+      <div style="font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: 0.15px; color: #fff;">Difficulty</div>
+
+      <div style="margin-top: 4px; display: flex; align-items: center; gap: 0;">
+        <div style="width: 58px; height: 38px; flex: none; position: relative; display: flex; align-items: center; justify-content: center;">
+          <div style="width: 34px; height: 14px; border-radius: 7px; background: rgba(255,255,255,0.3);"></div>
+          <div style="position: absolute; left: 12px; top: 9px; width: 20px; height: 20px; border-radius: 50%; background: #bdbdbd; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+        </div>
+        <span style="font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Sandbox Mode</span>
+        <span style="margin-left: 12px; font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.5);">Unlocks the game's own build-anything tools next time you play.</span>
+      </div>
+
+      <div style="margin-top: 12px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <span style="width: 116px; flex: none; font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Disease</span>
+          <div style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px; display: flex; align-items: center; padding: 0 14px;"><span style="flex: 1; min-width: 0; font-size: 16px; color: #fff;">Default</span><svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true" style="display: block; flex: none;"><path d="M7 10l5 5 5-5z"></path></svg></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <span style="width: 116px; flex: none; font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Stress</span>
+          <div style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px; display: flex; align-items: center; padding: 0 14px;"><span style="flex: 1; min-width: 0; font-size: 16px; color: #fff;">Default</span><svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true" style="display: block; flex: none;"><path d="M7 10l5 5 5-5z"></path></svg></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <span style="width: 116px; flex: none; font-size: 16px; line-height: 20px; letter-spacing: 0.15px; color: #fff;">Stress reactions</span>
+          <div style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px; display: flex; align-items: center; padding: 0 14px;"><span style="flex: 1; min-width: 0; font-size: 16px; color: #fff;">Enabled</span><svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true" style="display: block; flex: none;"><path d="M7 10l5 5 5-5z"></path></svg></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <span style="width: 116px; flex: none; font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Morale</span>
+          <div style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px; display: flex; align-items: center; padding: 0 14px;"><span style="flex: 1; min-width: 0; font-size: 16px; color: #fff;">Default</span><svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true" style="display: block; flex: none;"><path d="M7 10l5 5 5-5z"></path></svg></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+          <span style="width: 116px; flex: none; font-size: 16px; line-height: 24px; letter-spacing: 0.15px; color: #fff;">Hunger</span>
+          <div style="flex: 1; min-width: 0; height: 56px; box-sizing: border-box; border: 1px solid rgba(255,255,255,0.23); border-radius: 4px; display: flex; align-items: center; padding: 0 14px;"><span style="flex: 1; min-width: 0; font-size: 16px; color: #fff;">Default</span><svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" aria-hidden="true" style="display: block; flex: none;"><path d="M7 10l5 5 5-5z"></path></svg></div>
+        </div>
+        <div></div>
+      </div>
+
+      <!-- Hand-back -->
+      <div style="margin-top: 20px; display: flex; align-items: flex-start; gap: 12px; box-sizing: border-box; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="rgba(255,255,255,0.5)" aria-hidden="true" style="display: block; flex: none;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z"></path></svg>
+        <span style="font-size: 14px; line-height: 20px; letter-spacing: 0.17px; color: rgba(255,255,255,0.7); text-wrap: pretty;">When you are done, Save downloads <span style="font-family: 'Roboto Mono', ui-monospace, Consolas, monospace; color: #fff;">Example Colony.sav</span> to your downloads folder — it does not touch the file you opened. Move it into <span style="font-family: 'Roboto Mono', ui-monospace, Consolas, monospace; color: #fff;">save_files</span> to play it.</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
