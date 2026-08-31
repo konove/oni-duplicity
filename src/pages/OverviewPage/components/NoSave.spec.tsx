@@ -25,7 +25,11 @@ jest.mock("@/components/PageContainer", () => ({
 
 // Windows is what CI and this machine report; the per-platform table has its
 // own spec in src/save-file-paths.spec.ts.
-jest.mock("@/runtime-env", () => ({ OSType: "windows", isProd: false }));
+jest.mock("@/runtime-env", () => ({
+  OSType: "windows",
+  isProd: false,
+  isDev: false,
+}));
 
 function renderNoSave() {
   const store = createStore(() => ({

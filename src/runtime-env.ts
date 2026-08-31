@@ -16,3 +16,13 @@ export const OSType: OSType = OS_WINDOWS.test(osPlatform)
       : "unknown";
 
 export const isProd: boolean = process.env.NODE_ENV === "production";
+
+/**
+ * True only under `webpack serve`.
+ *
+ * Deliberately not `!isProd`: there are three environments, not two, and jest
+ * runs in the third with `NODE_ENV=test`. Anything gated on "am I in
+ * development" - noisy logging, in-page debug output - has to ask this rather
+ * than negate `isProd`, or it turns itself on during the test run.
+ */
+export const isDev: boolean = process.env.NODE_ENV === "development";

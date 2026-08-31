@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { isProd } from "@/runtime-env";
+import { isDev } from "@/runtime-env";
 
 // TODO: Use backends to save on file space
 //  Deferring until I get a chance to focus on splitting the bundles.
@@ -42,7 +42,7 @@ void i18n.use(initReactI18next).init({
     },
   },
 
-  debug: !isProd,
+  debug: isDev,
 
   interpolation: {
     escapeValue: false, // not needed for react!!

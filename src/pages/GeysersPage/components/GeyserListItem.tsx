@@ -126,6 +126,18 @@ const GeyserListItem: React.FC<GeyserListItemProps> = ({
     [onChangeGeyserType],
   );
 
+  // The dropdown lists the types the editor knows. A save from a newer game
+  // can hold one it does not, and a Select given a value with no matching
+  // option warns and renders an empty box - which reads as "this geyser has no
+  // type" rather than "this is a type I cannot help you with". Carry the
+  // save's own value as an extra option so the card says what is actually
+  // stored, and picking a known type from the list still repairs it.
+  const knownTypes = geyserTypesByName(t);
+  const selectableTypes =
+    geyserType && !knownTypes.includes(geyserType)
+      ? [geyserType, ...knownTypes]
+      : knownTypes;
+
   const typeName = geyserType ? geyserDisplayName(geyserType, t) : "";
   const info = geyserType ? geyserTypeInfo(geyserType) : null;
   const readout = info && rolls ? geyserReadout(info, rolls) : null;
@@ -150,7 +162,7 @@ const GeyserListItem: React.FC<GeyserListItemProps> = ({
       </div>
       <Divider />
       <Select value={geyserType || ""} onChange={onGeyserTypeSelected}>
-        {geyserTypesByName(t).map((type) => (
+        {selectableTypes.map((type) => (
           <MenuItem key={type} value={type}>
             {geyserDisplayName(type, t)}
           </MenuItem>

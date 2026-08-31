@@ -256,4 +256,16 @@ describe("GeyserListItem", () => {
       screen.getByText(/type is not one the editor knows/i),
     ).toBeInTheDocument();
   });
+
+  // The dropdown's options are the types the editor knows, so an unknown one
+  // was a value with no matching option: MUI warned on every render and drew
+  // an empty box, which reads as "this geyser has no type" rather than "this
+  // is a type I cannot help you with".
+  it("still shows the type the save stores, even unknown", () => {
+    renderGeyser({ geyserType: "molten_unobtainium" });
+
+    expect(screen.getByRole("combobox")).toHaveTextContent(
+      "molten_unobtainium",
+    );
+  });
 });
