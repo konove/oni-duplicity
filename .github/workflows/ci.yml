@@ -24,11 +24,11 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # 22.15 is the floor package.json sets, which webpack-dev-server@6 is
       # what raised. 24 is what the project is developed against.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -57,7 +57,7 @@ jobs:
 
       - name: Upload the failed screenshots
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: playwright-report
           path: |
@@ -67,7 +67,7 @@ jobs:
 
       - name: Package the site
         if: github.ref == 'refs/heads/master'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -96,4 +96,4 @@ jobs:
       # also means Jekyll never runs over the output, so nothing beginning with
       # an underscore goes missing.
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
