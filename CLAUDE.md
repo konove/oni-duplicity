@@ -15,6 +15,16 @@ Node 22.15+ required (developed on 24 LTS). The floor is set by `webpack-dev-ser
 
 The application's TypeScript project lives at `src/tsconfig.json`, **not** the repo root, so any `tsc` invocation over app code needs `-p src`. The repo-root `tsconfig.node.json` covers only the build tooling (`webpack.config.js`, `eslint.config.ts`); there is deliberately no root `tsconfig.json`, so a bare `tsc` finds no project.
 
+**webpack is pinned to an exact 5.109.2, not a range.** 5.110.x breaks the
+production build: MUI's `.mjs` files import subpaths like `@mui/utils/refType`
+without an extension, webpack 5.110 resolves those to the CommonJS entry, and
+that entry declares its default with `Object.defineProperty(exports, "default",
+{get})` - which webpack's static analysis cannot see. Every MUI component that
+imports one fails with "export 'default' ... was not found ... (module has no
+exports)". Confirmed by bisection: MUI 9.4.0 builds fine on webpack 5.109.2, and
+MUI 9.3.1 fails on 5.110.2, so it is webpack's change and not MUI's. Drop the
+caret only when a build on a newer webpack actually succeeds.
+
 **On Windows**, this machine's PowerShell execution policy is `AllSigned`, which refuses npm's unsigned `npm.ps1`. Use `npm.cmd` / `npx.cmd` instead — plain `npm` fails with a `PSSecurityException`.
 
 ## Styling: `@/styles` is a local shim, not MUI
