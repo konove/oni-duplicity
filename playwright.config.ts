@@ -6,12 +6,14 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e",
 
-  // Baselines are per-platform: Chromium renders text differently on Windows
-  // and Linux, so a baseline taken here will not match one taken elsewhere.
-  // Playwright encodes the platform in the filename, which keeps that honest
-  // rather than silently failing.
-  snapshotPathTemplate:
-    "{testDir}/__screenshots__/{testFilePath}/{arg}-{platform}{ext}",
+  // One baseline per shot, no platform in the name. That only works because
+  // the suite always runs inside mcr.microsoft.com/playwright - see
+  // docker-compose.yml and the container: line in ci.yml. Chromium renders
+  // text through a different rasteriser on each OS (DirectWrite on Windows,
+  // FreeType on Linux), so the same image on both sides is what makes a single
+  // set possible. Run Playwright directly on the host and the screenshots will
+  // not match; `npm run test:e2e:native` skips comparing them for that reason.
+  snapshotPathTemplate: "{testDir}/__screenshots__/{testFilePath}/{arg}{ext}",
 
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),

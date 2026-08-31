@@ -1,0 +1,27 @@
+# The screenshot tests run here, and only here.
+#
+# Chromium rasterises text with DirectWrite on Windows and FreeType on Linux,
+# so the same page renders differently on a dev machine and on a CI runner.
+# That is not a tolerance to widen - the difference is tens of thousands of
+# pixels - so the fix is to stop having two platforms. This image is the one
+# platform, and .github/workflows/ci.yml runs the same one.
+#
+# The tag must stay in step with @playwright/test in package.json: a Playwright
+# upgrade means a new Chromium, which means the baselines are regenerated.
+services:
+  e2e:
+    image: mcr.microsoft.com/playwright:v1.62.1-noble
+    working_dir: /work
+    # Chromium exhausts the default 64MB /dev/shm and crashes mid-run.
+    ipc: host
+    volumes:
+      - .:/work
+      # The host's node_modules carries win32 native binaries (@rollup/*-win32,
+      # @unrs/resolver-binding-win32) that Linux cannot load, so the container
+      # gets its own. It is a named volume rather than a fresh install each
+      # run: the entrypoint reinstalls only when package-lock.json changes.
+      - e2e-node-modules:/work/node_modules
+    entrypoint: ["sh", "docker/e2e-entrypoint.sh"]
+
+volumes:
+  e2e-node-modules:

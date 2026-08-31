@@ -44,13 +44,15 @@ jobs:
 
       - run: npm run build
 
-      # The screenshots run against the -linux baselines beside the -win32
-      # ones; the platform is in the filename, so a Linux runner compares
-      # against shots taken on Linux. Generate them with the "Screenshot
-      # baselines" workflow, which is the only way to make them, and commit
-      # what it uploads.
-      - run: npx playwright install --with-deps chromium
-
+      # Deliberately the same command a developer runs: `npm run test:e2e` is
+      # `docker compose run --rm e2e`, so this checks the path people actually
+      # use rather than a parallel one that could drift from it. The suite runs
+      # inside mcr.microsoft.com/playwright, which is what lets a single set of
+      # baselines serve every machine - see docker-compose.yml.
+      #
+      # It costs an `npm ci` inside the container on top of the one above,
+      # because the container has its own node_modules. That is about forty
+      # seconds, and it buys one way to run the screenshots instead of two.
       - run: npm run test:e2e
 
       - name: Upload the failed screenshots

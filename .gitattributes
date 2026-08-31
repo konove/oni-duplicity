@@ -1,0 +1,4 @@
+# The working tree is CRLF on Windows (see .prettierrc), which is fine for
+# everything the toolchain reads - except a shell script the container runs.
+# With CRLF the shebang ends in \r and Linux answers "sh: not found".
+*.sh text eol=lf

@@ -80,8 +80,8 @@ changed:
 | A component's props, handlers, or semantics (an element becoming a `<button>`, an `aria-label`, a commit-on-blur) | `*.spec.tsx` with a `@jest-environment jsdom` docblock and `@testing-library/react` | beside the component |
 | Anything you can see — layout, spacing, a control's appearance, a focus ring                                      | Playwright screenshot                                                               | `e2e/`               |
 
-Commands: `npm test` (jest), `npm run test:e2e` (Playwright), `npm run test:e2e:update`
-to accept new screenshots.
+Commands: `npm test` (jest), `npm run test:e2e` (Playwright, in Docker),
+`npm run test:e2e:update` to accept new screenshots.
 
 ### Rules that are not optional
 
@@ -101,17 +101,32 @@ in dev builds — without it every page past the overview redirects away and the
 nothing to photograph. `e2e/fixtures.ts` wraps that; `playwright.config.ts` starts the
 server itself.
 
-Baselines live in `e2e/__screenshots__/` and are committed, **two per shot**:
-`editor-win32.png` and `editor-linux.png`. They are **platform specific** — Chromium
-renders text differently on Windows and Linux, so a baseline taken here will not match
-one taken on the runner. `snapshotPathTemplate` puts the platform in the filename, which
-is what lets both sets live side by side.
+**The suite runs in Docker, and only in Docker.** `npm run test:e2e` is
+`docker compose run --rm e2e`, which runs Playwright inside
+`mcr.microsoft.com/playwright:v1.62.1-noble`. CI runs the identical command, so the
+thing CI checks is the thing you ran.
 
-`npm run test:e2e:update` only ever writes the set for the machine you are on. **A
-visual change needs both**: update the Windows set locally, then run the **Screenshot
-baselines** workflow (`gh workflow run baselines.yml`), download its artifact and commit
-the `-linux` files it wrote. That workflow deliberately does not commit them itself —
-a workflow that writes its own baselines makes every visual regression self-approving.
+That is not ceremony. Chromium rasterises text with DirectWrite on Windows and
+FreeType on Linux — different hinting, different antialiasing — so the same page
+renders differently on a dev machine and on a runner. The gap is tens of thousands
+of pixels, far past any tolerance that would still catch a control moving. The
+baselines used to be kept in two sets with the platform in the filename, and a
+visual change meant updating one set locally and getting the other from a workflow
+by hand. One container instead of two platforms: **one baseline per shot**,
+`editor.png`, and `npm run test:e2e:update` writes bytes CI accepts.
+
+Requires Docker (Docker Desktop with the WSL2 backend on Windows). The first run
+pulls ~2GB and installs the container's own `node_modules` into a named volume —
+its own, because the host tree carries win32 native binaries Linux cannot load.
+Later runs reuse it and reinstall only when `package-lock.json` moves.
+
+`npm run test:e2e:native` runs Playwright straight on the host with
+`--ignore-snapshots`. Use it to debug the functional half of a spec without Docker;
+it deliberately cannot fail on pixels, because on Windows it always would.
+
+**The image tag is pinned to the Playwright version** in `docker-compose.yml`. Bump
+`@playwright/test` and the tag moves with it — a new Chromium is a new rasteriser,
+so expect to regenerate every baseline in the same commit.
 
 Traps, all of which produced a green-but-meaningless test at some point:
 
@@ -165,8 +180,8 @@ by the Playwright screenshots instead, which run the real bundle.
 
 - **Hash routing.** URLs are `/#/duplicants`, and `HashRouter` lives in `root.tsx`. Routing state is not in redux — `connected-react-router` was removed and nothing selects off a router slice.
 - **`loadMockSave()`** is exposed on `window` in dev builds (`src/debug.ts`) and loads `src/__mocks__/save-game.json`. Use it to exercise the editor without a real `.sav`. `killMockDuplicant()` sits beside it and marks the first duplicant dead — no bundled save has one and the editor offers no way to kill one, so it is the only way to see that state.
-- **CI runs the lot.** `.github/workflows/ci.yml` runs `format:check`, `lint`, `typecheck`, `test`, `build` and the Playwright suite on every push and pull request, and deploys `master` to GitHub Pages. A failing screenshot uploads `playwright-report` and `test-results` as artifacts, so the `-actual` and `-diff` images are downloadable rather than lost with the runner.
+- **CI runs the lot.** `.github/workflows/ci.yml` runs `format:check`, `lint`, `typecheck`, `test`, `build` and the Playwright suite, and deploys `master` to GitHub Pages. Note the trigger is `push` on **master only**, plus `pull_request` and `workflow_dispatch` — pushing a branch runs nothing, so a branch is checked by opening a PR or by `gh workflow run ci.yml --ref <branch>`. A failing screenshot uploads `playwright-report` and `test-results` as artifacts, so the `-actual` and `-diff` images are downloadable rather than lost with the runner.
 - **The service worker is production-only.** `GenerateSW` warns on every rebuild under `--watch` and webpack-dev-server renders warnings as a full-screen overlay, so it is gated behind `!isDev`. The Settings page's offline-mode toggle therefore cannot be tested via `npm start` (nothing serves `/service-worker.js`) — build and serve `dist/`.
 - **`webpack.config.js` is type-checked, but stays CommonJS JavaScript.** It opens with `// @ts-check` and types its export with `/** @type {import("webpack").Configuration} */`, which `tsconfig.node.json` enforces under `npm run typecheck`. That annotation must sit on a `const config`, not on `module.exports` directly — TypeScript ignores `@type` on a CommonJS export assignment and silently checks nothing. Keeping the file `.js` avoids making webpack-cli load a `.ts` config, which needs a loader (`tsx`/`ts-node`) or Node's native type stripping, and the two disagree about `__dirname`.
 - **The save-serializer runs in a web worker** via webpack 5's native `new Worker(new URL(...))`. `worker-loader` is gone.
-- **Prettier is enforced by CI, not by a hook.** `npm run format` writes, `npm run format:check` verifies; `.github/workflows/ci.yml` runs the check on every push and pull request, but there is no pre-commit hook, so nothing runs it before you commit. `.prettierrc` sets only `endOfLine: "auto"` — the working tree is CRLF on Windows, and prettier's `lf` default would otherwise rewrite every file. The one-time reformat commit is listed in `.git-blame-ignore-revs`.
+- **Prettier is enforced by CI, not by a hook.** `npm run format` writes, `npm run format:check` verifies; `.github/workflows/ci.yml` runs the check on master pushes and pull requests, but there is no pre-commit hook, so nothing runs it before you commit. `.prettierrc` sets only `endOfLine: "auto"` — the working tree is CRLF on Windows, and prettier's `lf` default would otherwise rewrite every file. The one-time reformat commit is listed in `.git-blame-ignore-revs`.
