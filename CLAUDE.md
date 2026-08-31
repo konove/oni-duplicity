@@ -15,6 +15,24 @@ Node 22.15+ required (developed on 24 LTS). The floor is set by `webpack-dev-ser
 
 The application's TypeScript project lives at `src/tsconfig.json`, **not** the repo root, so any `tsc` invocation over app code needs `-p src`. The repo-root `tsconfig.node.json` covers only the build tooling (`webpack.config.js`, `eslint.config.ts`); there is deliberately no root `tsconfig.json`, so a bare `tsc` finds no project.
 
+**TypeScript is held at 6.** `npm outdated` offers 7.0.2. `ts-jest` declares
+peer `typescript >=4.3 <7` and `typescript-eslint` declares `>=4.8.4 <6.1.0`, so
+taking 7 breaks the test runner and the linter in the same step. 6.0.3 satisfies
+both. Re-check both peer ranges before trying again.
+
+**react-router is held at 7.** 8.x is `"type": "module"` and ships no
+CommonJS build, so jest - which runs CommonJS here - cannot load it: the suites
+that render inside `MemoryRouter` die with "Must use import to load ES Module".
+Transforming it through babel is not enough; jest treats a `type: module`
+package as ESM whatever the transform does, so taking 8 means moving all 34
+suites to jest's ESM mode. The upgrade guide lists no breaking change to any of
+the nine router APIs this app uses (`HashRouter`, `Routes`, `Route`, `Navigate`,
+`Link`, `MemoryRouter`, `useHref`, `useLocation`, `useNavigate`) - v8's changes
+are framework-mode, Vite and Cloudflare features none of which are used here -
+so the upgrade buys nothing and costs the test runner. It also raises the Node
+floor to 22.22. Revisit if jest ESM support becomes routine, or if v8 gains
+something this app wants.
+
 **webpack is pinned to an exact 5.109.2, not a range.** 5.110.x breaks the
 production build: MUI's `.mjs` files import subpaths like `@mui/utils/refType`
 without an extension, webpack 5.110 resolves those to the CommonJS entry, and
