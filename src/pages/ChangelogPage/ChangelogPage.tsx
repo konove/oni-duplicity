@@ -14,6 +14,14 @@ type Props = WithTranslation;
 const useStyles = makeStyles((theme: Theme) => ({
   markdown: {
     margin: theme.spacing(2),
+    // react-markdown emits bare <a> elements. MUI never sees them, so without
+    // this they render in the browser's default #0000EE on a dark page.
+    "& a": {
+      color: theme.palette.primary.main,
+    },
+    "& a:hover": {
+      color: theme.palette.primary.light,
+    },
   },
 }));
 

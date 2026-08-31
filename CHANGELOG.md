@@ -1,3 +1,76 @@
+## 3.28.0
+
+Duplicity is published. It runs at
+[konove.github.io/oni-duplicity](https://konove.github.io/oni-duplicity/), so
+using it no longer means cloning the repository and starting a dev server.
+
+**Finding your way in**
+
+- The screen you land on with no save open now walks through opening a file,
+  changing something, and getting the result back into the game. That last step
+  was never stated anywhere: Save hands back a new `.sav` named after the colony
+  and leaves the file you opened untouched, so it has to be moved into
+  `save_files` yourself.
+- macOS is told where its saves live. The path table covered Windows and Linux
+  and had nothing for Mac, which is the one platform where the folder is
+  genuinely hard to find by hand.
+- The sidebar says why its greyed-out entries are greyed out. Worlds keeps its
+  place in the list rather than appearing from nowhere when a Spaced Out! save
+  loads, and on a base game save it stays visible and explains that only Spaced
+  Out! colonies have more than one asteroid.
+- The Overview says what the loaded colony actually holds - how many duplicants,
+  geysers, creatures and asteroids there are, and what each page changes - and
+  marks the two pages that are not sanity-checked.
+
+**Duplicants**
+
+- Dead duplicants are marked as dead, and can be revived. Death is a state
+  machine state rather than a flag, so reviving means undoing what killed them;
+  the field the editor would have set does not exist in the save at all.
+- **Heal and de-stress**: full health and breath, no stress, no disease.
+- The whole duplicant fits on one screen. The three panels get equal width and
+  larger type, identity folds into a band across the top, and the portrait is
+  framed around the head it actually draws.
+- Health values are sliders, which is what they already looked like.
+- List cards no longer clip their own numbers when an attribute is maxed out.
+- The actions menu says what each action does before you pick it.
+- The appearance picker can be driven from the keyboard.
+
+**Materials**
+
+- Mass is right. Element mass is stored in kilograms and was read as grams, so
+  every quantity on the page was reported 1000x low.
+- "Delete all loose materials" deletes all loose materials. It deleted only
+  Aerogel.
+- Seeds, eggs, food and equipment are listed. The page only understood elements,
+  so everything else in the colony was simply absent.
+- All 212 elements the game defines are recognised, rather than the subset the
+  parser happened to name - 285.4 tonnes were hidden in one test colony alone.
+- Every row has a menu, and it names the quantity it would delete.
+- Materials read as the game names them. A prefab id split into words lands
+  nowhere near the real name: `GardenForagePlant` is Snac Fruit.
+
+**Geysers**
+
+- Geysers have names instead of raw enum ids.
+- The sliders read in the game's own units - seconds, cycles, kg per cycle -
+  rather than the raw 0-to-1 rolls the save stores. The two are not
+  interchangeable: the game resamples a roll along a curve, so 99.6% is not
+  99.6% of the way to the maximum.
+- A fifth control, and a **Best case** button that sets output and active time
+  to their most generous and the full cycle to its shortest.
+
+**Elsewhere**
+
+- Difficulty settings read as the game words them - "Disease" rather than
+  `ImmuneSystem`, "Germ Susceptible" rather than "Weak". Sandbox mode gets its
+  own switch; it had shipped all along, unfindable in a grid as `SandboxMode`.
+- A failed import says what went wrong instead of doing nothing.
+- Every interface string is translatable, and the Health tab's own headers no
+  longer show English in five of six locales. Russian, Korean and Chinese take
+  trait, skill and element names from the game's own catalogue, so they match
+  what is on screen in game.
+
 ## 3.27.0
 
 - The Effects tab shows real names instead of raw ids - "Sore Back" and "Mess

@@ -33,17 +33,18 @@ Three conclusions shaped the ordering:
   All three are fixed — material mass by a factor of 1000 (0.2), 285.4 t of material missing entirely
   (0.7), and every geyser setting labelled as a percentage of nothing (0.10).
 
-**Where it stands.** Fifteen entries are marked **done** and carry a note saying what shipped: 0.1
-through 0.8, 0.10, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8, 1.9 and 1.10. A
-fifteenth, 0.9, closed the other way: the editor's totals differ from the game's panel because the panel
-hides unreachable material and counts one asteroid, so there was never anything to fix. **Tier 0 is down
-to three**, and all three are questions about how the thing is laid out rather than what it can see
-(0.11, 0.13, 0.14). Tier 1 has 1.2 through 1.6 open; 1.1 and 1.7 through 1.10 are done.
+**Where it stands.** Sixteen entries are marked **done** and carry a note saying what shipped: 0.1
+through 0.8, 0.10, 0.11, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8, 1.9 and
+1.10. A further one, 0.9, closed the other way: the editor's totals differ from the game's panel
+because the panel hides unreachable material and counts one asteroid, so there was never anything to
+fix. **Tier 0 is down to two**, and both are questions about how the thing is laid out rather than what
+it can see (0.13, 0.14). Tier 1 has 1.2, 1.3, 1.5 and 1.6 open; 1.1 and 1.7 through 1.10 are done, and
+1.4 is declined.
 
 **1.10 closed the largest gap in the document**, and it had nothing to do with the save format: nothing
-here was published, and nothing checked a change on the way in. There is a workflow now — every push and
-pull request runs the format check, lint, typecheck, unit tests, a production build and the screenshot
-suite, and `master` deploys to Pages at
+here was published, and nothing checked a change on the way in. There is a workflow now — every push to
+`master` and every pull request runs the format check, lint, typecheck, unit tests, a production build
+and the screenshot suite, and `master` deploys to Pages at
 [konove.github.io/oni-duplicity](https://konove.github.io/oni-duplicity/).
 
 ---
@@ -252,7 +253,46 @@ Needs the per-type tuning table — 27 types by roughly ten numbers, sitting in
 that produces it. **Effort: M**, and the risky half is done: the maths is
 verified rather than assumed.
 
-### 0.11 The editor does not orient a new arrival
+### 0.11 The editor does not orient a new arrival — **done**
+
+Shipped as three surfaces, drafted first on the canvas in `design/first-run/`.
+
+The no-save screen is three numbered steps. The third is the one nothing in the
+app had ever said: `save-onisave.ts` calls `saveAs()`, so saving hands back a
+download named after the colony and the file that was opened is untouched. That
+is where "I edited my colony and nothing changed" comes from. The backup warning
+dropped from an error-red `h6` to an outlined warning `Alert` — at 20px in
+`#f44336` it read as a failure the page had already suffered rather than as
+advice, and it was the first thing on the screen.
+
+The sidebar keeps every entry. Worlds was filtered out entirely until a save
+answered its `requireDLC` gate, so the list grew by a row under the reader's
+hand the moment one loaded, and a base game player — for whom the answer is
+permanent — had nothing to read. It stays put and greyed now with the reason on
+an icon beside it, which needed `NavItem` to carry a reason string rather than
+`requireDLC` alone. A note closes the save-gated run and says what unlocks it.
+
+The overview became a map of what the save holds: a count per page from the real
+selectors, an explicit line where there is nothing — the creatures page renders a
+blank screen for a colony with none — and a caution on the two pages that are not
+sanity-checked. Difficulty's five dropdowns were a two-column grid whose second
+column was `auto`, so every `Select` stretched 864px; they read down the page at a
+fixed width now.
+
+Also fixed on the way past: `SaveFilePaths.mac` was `null`, so macOS — the one
+platform where the folder is genuinely hard to find by hand — was shown no path at
+all. The table moved to `src/save-file-paths.ts` so all four values can be tested
+without a DOM.
+
+**Deliberately not done:** the bundled example colony stays unoffered. It is a
+JSON fixture rather than a `.sav`, so anyone who loaded it and pressed Save would
+be handed a file the game refuses to open. That answers 1.4 in the other
+direction, at least for this screen.
+
+Still open: the base game Worlds reason has no screenshot. Nothing in development
+can load a base game save — `loadMockSave()` only has the Spaced Out one — so the
+behaviour is covered by `Nav.spec.tsx` and the pixels are not. A
+`loadMockBaseGameSave()` beside it in `debug.ts` would close that.
 
 From "I have a .sav" to "I changed the thing I wanted" there is no guidance:
 most of the nav does nothing until a save loads, the overview is a name and four
@@ -554,12 +594,20 @@ clearing when a custom name is set, or the game may re-derive the display name f
 too. **Effort: S. Risk:** `numberOfCycles` likely lives in both the header and the `SaveGame` behavior —
 write both, exactly as `modify-difficulty.ts` already mirrors `sandboxEnabled`.
 
-### 1.4 Un-comment the example save — the cheapest item in this document
+### 1.4 Un-comment the example save — **declined, see 0.11**
 
-`NoSave.tsx` has a working `<LoadExampleButton />` and its copy sitting inside a JSX comment. The whole
-`load-example` action and reducer path is built and registered, and `ExampleChip` can currently never
-appear. Deleting two comment markers gives every first-time visitor a way to try the editor without
-owning a save. **Effort: XS.**
+Left commented out deliberately. The bundled example is `src/__mocks__/save-game.json`, a JSON fixture
+rather than a `.sav`: it loads into the editor fine, but pressing Save on it produces a file the game
+refuses to open, and the first-run screen is exactly where someone would try that. `ExampleChip` says
+"cannot be saved" once the save is loaded, which is a warning arriving after the mistake rather than
+before it. Worth revisiting only with a real `.sav` fixture behind it — at which point this stops being
+XS, because the fixture has to be bundled and kept current with the supported save versions.
+
+The original case, for the record: `NoSave.tsx` has a working `<LoadExampleButton />` and its copy
+sitting inside a JSX comment. The whole
+The whole `load-example` action and reducer path is built and registered, and `ExampleChip` can
+currently never appear. Deleting two comment markers gives every first-time visitor a way to try the
+editor without owning a save. **Effort: XS.**
 
 ### 1.5 Search and sort the duplicant list
 
@@ -840,10 +888,10 @@ the README apologises for.
 setting the dirty flag makes both the guard and the undo history lie. That one is done, so 1.6 is
 unblocked and nothing else in this milestone is in its way.
 
-### 2 — "Names and lists" — one of five shipped
+### 2 — "Names and lists" — one of five shipped, one declined
 
-0.5 import errors is done. Left: 1.2 rename, gender and voice · 1.3 colony rename and cycles · 1.4
-example save · 1.5 list search and sort. All small, and 1.5 builds the selector that 2.2 and 3.1 both
+0.5 import errors is done and 1.4 the example save is declined (see 0.11). Left: 1.2 rename, gender and
+voice · 1.3 colony rename and cycles · 1.5 list search and sort. All small, and 1.5 builds the selector that 2.2 and 3.1 both
 need.
 
 ### 3 — "Power tools"
