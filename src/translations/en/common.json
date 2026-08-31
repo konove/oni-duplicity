@@ -145,7 +145,8 @@
     "rover_visited": "Visited by a rover",
     "surface_revealed": "Surface revealed",
     "conditions": {
-      "none": "This save has no asteroids. Only Spaced Out! saves model the colony as a cluster of worlds."
+      "none": "This save has no asteroids. Only Spaced Out! saves model the colony as a cluster of worlds.",
+      "requires_spaced_out": "This is a base game save. Only Spaced Out! colonies span more than one asteroid."
     }
   },
   "material": {
@@ -239,7 +240,8 @@
       "load_titlecase": "Load",
       "save_titlecase": "Save",
       "load_example_titlecase": "Load Example",
-      "force_load": "Override safety checks and load the save"
+      "force_load": "Override safety checks and load the save",
+      "choose_titlecase": "Choose a save file"
     },
     "conditions": {
       "loading": "Loading",
@@ -260,14 +262,34 @@
     "title": "Overview",
     "no-save": {
       "title": "Choose a Save",
-      "prompt": "No save file has been loaded.",
       "save-location": "Save files can be found at <1>{{path}}</1>.",
-      "backup_warning": "Always back up a save before editing it. Editing can corrupt a colony, and a clean load here is no guarantee the game will accept the result.",
-      "supported_saves": "Reads and writes base game and Spaced Out! saves, including the Frosty Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet packs."
+      "supported_saves": "Reads and writes base game and Spaced Out! saves, including the Frosty Planet, Bionic Booster, Prehistoric Planet and Aquatic Planet packs.",
+      "headline": "Edit a saved colony",
+      "intro": "Duplicity opens an Oxygen Not Included save file, lets you change what is inside it, and writes a new one back out. Everything happens in this browser tab — the save is never uploaded anywhere.",
+      "backup_lead": "Back up the save first.",
+      "backup_detail": "Duplicity can write a file the game refuses to load, and a clean load here is no proof the game will accept the result.",
+      "save_versions": "Save versions 7.28 through 7.38; a newer save loads only behind an explicit override.",
+      "step_open_title": "Open your save file",
+      "step_edit_title": "Change what you came for",
+      "step_edit_detail": "Duplicants, geysers, creatures, asteroids and stored materials each get a page in the sidebar. They stay locked until a save is open, and the Overview then says what this colony actually has.",
+      "step_save_title": "Save, then move the file back",
+      "step_save_detail": "Save downloads a new <sav>.sav</sav> named after the colony — it does not write over the original. Put that file in <dir>save_files</dir> in place of the copy you backed up, then load the colony in game."
     },
     "difficulty_titlecase": "Difficulty",
     "colony_summary": "{{cycles}} cycles, {{duplicants}} duplicants.",
-    "save_version": "Save version {{version}}"
+    "save_version": "Save version {{version}}",
+    "destinations_titlecase": "What you can change",
+    "destination_empty": "Nothing of this kind in this colony.",
+    "destination_duplicants": "Names, traits, interests, skills, attributes, health and appearance. Revive the dead.",
+    "destination_geysers": "How much it puts out, how often it erupts, and how long it lies dormant.",
+    "destination_creatures": "Critters and their eggs, wherever they are in the colony.",
+    "destination_worlds": "Asteroid names, and which ones the colony has discovered or visited.",
+    "destination_materials": "Mass and element of everything lying around or held in a container.",
+    "destination_raw": "Every field in the save, exactly as it is stored.",
+    "caution_materials": "Deletes and mass edits apply colony-wide",
+    "caution_raw": "No checks — a bad value crashes the game",
+    "hand_back": "When you are done, Save downloads <file>{{file}}</file> to your downloads folder — it does not touch the file you opened. Move it into <dir>save_files</dir> to play it.",
+    "sandbox_hint": "Unlocks the game's own build-anything tools next time you play."
   },
   "raw-editor-page": {
     "title": "Raw Editor"
@@ -291,5 +313,8 @@
     "offline_enable": "Enable Offline Mode",
     "offline_enabled": "Offline Mode is now enabled. This web page will be available without internet access.",
     "language_titlecase": "Language"
+  },
+  "nav": {
+    "locked_until_save": "Locked until a save is open"
   }
 }

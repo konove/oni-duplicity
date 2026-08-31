@@ -21,8 +21,12 @@ export async function loadMockSave(page: Page): Promise<void> {
     load();
   });
 
-  // The nav only links past the overview once a save is in state.
-  await expect(page.getByRole("link", { name: /duplicants/i })).toBeVisible({
+  // The nav only links past the overview once a save is in state. Scoped to
+  // the <nav>: the overview's own "what you can change" cards are links to the
+  // same pages, so an unscoped match finds two.
+  await expect(
+    page.locator("nav").getByRole("link", { name: /duplicants/i }),
+  ).toBeVisible({
     timeout: 30_000,
   });
 }

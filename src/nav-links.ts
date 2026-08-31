@@ -5,10 +5,20 @@ export interface NavItem {
   path: string;
 
   /**
-   * Only show this item when the save has these content packs active.
+   * Only enable this item when the save has these content packs active.
    * Several ids mean "all of these". `DLCIds.None` means base game only.
    */
   requireDLC?: string | string[];
+
+  /**
+   * Why `requireDLC` is not satisfied, in words a player recognises.
+   *
+   * The gate used to hide the entry, which left a base game player with
+   * nothing to read and made the list grow by a row the moment a save opened.
+   * The entry now stays put and carries this instead, so every item needs one
+   * alongside its `requireDLC`.
+   */
+  requireDLCI18nKey?: string;
   i18nKey: string;
   saveRequired?: boolean;
 }
@@ -43,6 +53,7 @@ const NavItems: NavItem[] = [
     name: "Worlds",
     path: "/worlds",
     requireDLC: DLCIds.SpacedOut,
+    requireDLCI18nKey: "world.conditions.requires_spaced_out",
     i18nKey: "world.noun_titlecase_plural",
     saveRequired: true,
   },
