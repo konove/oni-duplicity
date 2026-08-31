@@ -172,7 +172,7 @@ const config = {
         // Versioned on its own schedule, and the only dependency the worker
         // needs.
         parser: {
-          test: /[\\/]node_modules[\\/](oni-save-parser|pako|text-encoding|jsonschema)[\\/]/,
+          test: /[\\/]node_modules[\\/](oni-save-parser|pako|jsonschema)[\\/]/,
           name: "npm.save-parser",
           priority: 30,
         },
