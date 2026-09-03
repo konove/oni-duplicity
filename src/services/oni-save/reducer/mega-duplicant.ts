@@ -5,7 +5,7 @@ import {
   MinionResumeBehavior,
   SaveGame,
   getHashedString,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import { defaultOniSaveState, OniSaveState } from "../state";
 import { isMegaDuplicantAction } from "../actions/mega-duplicant";

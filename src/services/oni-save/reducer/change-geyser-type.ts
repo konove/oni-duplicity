@@ -1,5 +1,9 @@
 import { UnknownAction } from "redux";
-import { HashedString, GeyserBehavior, SaveGame } from "oni-save-parser";
+import {
+  HashedString,
+  GeyserBehavior,
+  SaveGame,
+} from "@konove/oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState } from "../state";
 

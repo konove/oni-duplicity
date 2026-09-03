@@ -16,7 +16,7 @@ import {
   StateMachineControllerBehavior,
   writeStateMachineParameters,
   writeStateMachineResourceValue,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import {
   FactionAlignmentBehavior,

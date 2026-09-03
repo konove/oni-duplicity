@@ -1,5 +1,5 @@
 import { TFunction } from "i18next";
-import { MinionSkill, MinionSkills } from "oni-save-parser";
+import { MinionSkill, MinionSkills } from "@konove/oni-save-parser";
 
 /** Skill display strings are keyed by the exact skill id. */
 export function skillNameKey(skillId: string): string {

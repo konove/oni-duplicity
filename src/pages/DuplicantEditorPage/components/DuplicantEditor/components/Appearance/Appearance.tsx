@@ -8,7 +8,7 @@ import {
   AccessoryType,
   getAccessoryName,
   getIndexOfAccessoryType,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 import { merge, padStart } from "lodash";
 
 import { Theme, createStyles, withStyles, WithStyles } from "@/styles";

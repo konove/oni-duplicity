@@ -1,6 +1,9 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
-import { MinionIdentityBehavior, MinionResumeBehavior } from "oni-save-parser";
+import {
+  MinionIdentityBehavior,
+  MinionResumeBehavior,
+} from "@konove/oni-save-parser";
 import { findIndex } from "lodash";
 
 import { WithTranslation, withTranslation } from "react-i18next";

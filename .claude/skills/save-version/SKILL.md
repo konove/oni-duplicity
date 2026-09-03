@@ -67,7 +67,7 @@ version verified by one small save is weaker evidence than one backed by dozens.
 ## After changing the fork
 
 The app pins a specific commit. Once the fork is committed **and pushed**,
-re-pin `oni-save-parser` in `package.json` to the new sha, reinstall, and verify
+re-pin `@konove/oni-save-parser` in `package.json` to the new sha, reinstall, and verify
 with `npm run typecheck`, `npm test`, `npm run build`. Pushing is the user's
 call — ask.
 

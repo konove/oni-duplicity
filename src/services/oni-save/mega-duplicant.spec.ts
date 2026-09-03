@@ -1,4 +1,4 @@
-import { AI_TRAITS, MinionSkillGroupNames } from "oni-save-parser";
+import { AI_TRAITS, MinionSkillGroupNames } from "@konove/oni-save-parser";
 
 import { megaAptitudeIds, megaTraitIds } from "./mega-duplicant";
 

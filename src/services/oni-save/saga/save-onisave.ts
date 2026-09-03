@@ -1,7 +1,7 @@
 import { eventChannel, END, SagaIterator } from "redux-saga";
 import { put, select, takeEvery, take } from "redux-saga/effects";
 
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { saveAs } from "file-saver";
 

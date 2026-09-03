@@ -1,4 +1,4 @@
-import { parseSaveGame, writeSaveGame } from "oni-save-parser";
+import { parseSaveGame, writeSaveGame } from "@konove/oni-save-parser";
 
 // src/tsconfig.json restricts `types` to webpack-env and jest on purpose: this
 // is a browser bundle, and letting `process` or `Buffer` typecheck inside a

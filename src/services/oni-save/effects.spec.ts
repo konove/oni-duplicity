@@ -1,5 +1,5 @@
 import { TFunction } from "i18next";
-import { AI_EFFECT_IDS } from "oni-save-parser";
+import { AI_EFFECT_IDS } from "@konove/oni-save-parser";
 
 import { effectName, effectNameKey, sortEffectsByName } from "./effects";
 

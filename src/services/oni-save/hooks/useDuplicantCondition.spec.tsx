@@ -7,7 +7,7 @@ import {
   StateMachineControllerExtraData,
   writeStateMachineParameters,
   writeStateMachineResourceValue,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import useBehavior from "./useBehavior";
 import useDuplicantCondition from "./useDuplicantCondition";

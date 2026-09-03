@@ -1,4 +1,4 @@
-import { GameObjectBehavior, BehaviorName } from "oni-save-parser";
+import { GameObjectBehavior, BehaviorName } from "@konove/oni-save-parser";
 
 /**
  * Spaced Out! models each asteroid in the cluster as one game object in the

@@ -1,4 +1,4 @@
-import { MinionResumeBehavior } from "oni-save-parser";
+import { MinionResumeBehavior } from "@konove/oni-save-parser";
 import { createSelector } from "reselect";
 import { UnknownAction, Dispatch } from "redux";
 import { connect } from "react-redux";

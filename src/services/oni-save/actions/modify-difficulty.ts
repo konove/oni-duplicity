@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { QualityLevelSettings } from "oni-save-parser";
+import { QualityLevelSettings } from "@konove/oni-save-parser";
 
 export const ACTION_ONISAVE_MODIFY_DIFFICULTY = "oni-save/modify-difficulty";
 export const modifyDifficulty = (

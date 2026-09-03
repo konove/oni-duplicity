@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AITraitsBehavior } from "oni-save-parser";
+import { AITraitsBehavior } from "@konove/oni-save-parser";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 

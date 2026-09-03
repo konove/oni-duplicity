@@ -1,5 +1,5 @@
 import { createSelector } from "reselect";
-import { DLCIds } from "oni-save-parser";
+import { DLCIds } from "@konove/oni-save-parser";
 
 import { createServiceSelector } from "./utils";
 import { saveGameSelector } from "./save-game";

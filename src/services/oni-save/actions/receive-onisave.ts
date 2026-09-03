@@ -1,4 +1,4 @@
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 import { LoadingStatus } from "../state";
 import { UnknownAction } from "redux";
 

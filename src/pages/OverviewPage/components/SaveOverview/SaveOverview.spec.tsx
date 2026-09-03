@@ -8,7 +8,7 @@ import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import { legacy_createStore as createStore } from "redux";
 import { MemoryRouter } from "react-router";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { LoadingStatus } from "@/services/oni-save/state";
 

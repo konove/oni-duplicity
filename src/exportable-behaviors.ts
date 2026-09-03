@@ -4,7 +4,7 @@ import {
   AITraitsBehavior,
   MinionResumeBehavior,
   BehaviorName,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 export interface ExportableBehavior {
   name: string;

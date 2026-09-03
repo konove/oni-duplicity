@@ -1,4 +1,4 @@
-import { AI_TRAITS, MinionSkillGroupNames } from "oni-save-parser";
+import { AI_TRAITS, MinionSkillGroupNames } from "@konove/oni-save-parser";
 
 export const MEGA_ATTRIBUTE_LEVEL = 9999;
 export const MEGA_EXPERIENCE = 999999;

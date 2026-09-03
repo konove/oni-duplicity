@@ -3,7 +3,7 @@ import * as React from "react";
 import {
   MinionModifiersBehavior,
   StateMachineControllerBehavior,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import {
   FactionAlignmentBehavior,

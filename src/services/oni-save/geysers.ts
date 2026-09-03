@@ -1,4 +1,4 @@
-import { GeyserTypeNames } from "oni-save-parser";
+import { GeyserTypeNames } from "@konove/oni-save-parser";
 
 /** The subset of i18next's `t` this module needs, so it can be tested plainly. */
 export type NameTranslator = (

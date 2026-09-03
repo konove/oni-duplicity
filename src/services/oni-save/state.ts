@@ -1,5 +1,5 @@
 import { ImportFailureReason } from "./actions/import-behaviors";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 export enum LoadingStatus {
   Idle = "idle",

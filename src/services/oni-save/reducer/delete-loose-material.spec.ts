@@ -1,4 +1,4 @@
-import { SaveGame, SimHashNames } from "oni-save-parser";
+import { SaveGame, SimHashNames } from "@konove/oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState, LoadingStatus } from "../state";
 import { deleteLooseMaterial } from "../actions/delete-loose-material";

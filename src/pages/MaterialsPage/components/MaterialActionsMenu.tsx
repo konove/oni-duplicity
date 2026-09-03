@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SimHashName } from "oni-save-parser";
+import { SimHashName } from "@konove/oni-save-parser";
 import { useTranslation } from "react-i18next";
 
 import IconButton from "@mui/material/IconButton";

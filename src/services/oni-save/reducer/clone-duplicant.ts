@@ -6,7 +6,7 @@ import {
   GameObjectBehavior,
   SaveGame,
   getBehavior,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import { defaultOniSaveState, OniSaveState } from "../state";
 import { isCloneDuplicantAction } from "../actions/clone-duplicant";

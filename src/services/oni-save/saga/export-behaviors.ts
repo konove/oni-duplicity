@@ -3,7 +3,7 @@ import {
   getBehavior,
   MinionIdentityBehavior,
   GameObject,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 import objectHash from "object-hash";
 
 import { isDuplicantType } from "../duplicants";

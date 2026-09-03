@@ -1,4 +1,4 @@
-import { GeyserTypeNames } from "oni-save-parser";
+import { GeyserTypeNames } from "@konove/oni-save-parser";
 
 import { geyserDisplayName, geyserTypesByName } from "./geysers";
 

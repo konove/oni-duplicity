@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { GameObjectBehavior, BehaviorName } from "oni-save-parser";
+import { GameObjectBehavior, BehaviorName } from "@konove/oni-save-parser";
 
 export const ACTION_MODIFY_BEHAVIOR_PATH = "oni-save/modify-behavior-path";
 

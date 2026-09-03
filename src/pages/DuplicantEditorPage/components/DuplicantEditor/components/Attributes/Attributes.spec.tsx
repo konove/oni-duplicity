@@ -7,7 +7,7 @@ import { render, screen } from "@testing-library/react";
 // TypeScript that `toBeInTheDocument` exists.
 import "@testing-library/jest-dom";
 
-import { AttributeLevel } from "oni-save-parser";
+import { AttributeLevel } from "@konove/oni-save-parser";
 
 import useBehavior from "@/services/oni-save/hooks/useBehavior";
 

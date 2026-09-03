@@ -2,7 +2,7 @@ import {
   GameObjectBehavior,
   BehaviorName,
   AIAmountInstance,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 /**
  * Game object group names holding editable duplicants.

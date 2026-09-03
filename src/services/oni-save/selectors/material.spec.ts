@@ -1,4 +1,4 @@
-import { GameObjectGroup } from "oni-save-parser";
+import { GameObjectGroup } from "@konove/oni-save-parser";
 
 import { collectMaterials } from "./material";
 

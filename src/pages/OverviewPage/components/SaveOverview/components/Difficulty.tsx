@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { Trans, useTranslation } from "react-i18next";
-import { QualityLevelSettingValues } from "oni-save-parser";
+import { QualityLevelSettingValues } from "@konove/oni-save-parser";
 
 import { createStyles, withStyles, WithStyles } from "@/styles";
 import Box from "@mui/material/Box";

@@ -1,5 +1,9 @@
 import { useSelector } from "react-redux";
-import { GameObject, getBehavior, KPrefabIDBehavior } from "oni-save-parser";
+import {
+  GameObject,
+  getBehavior,
+  KPrefabIDBehavior,
+} from "@konove/oni-save-parser";
 import { gameObjectGroupsSelector } from "../selectors/game-objects";
 import { maybeArray, isNotNull } from "@/utils";
 

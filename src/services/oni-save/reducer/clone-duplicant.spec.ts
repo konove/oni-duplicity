@@ -4,7 +4,7 @@ import {
   getBehavior,
   GameObjectGroup,
   GameObject,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import mockState from "@/__mocks__/active-state";
 

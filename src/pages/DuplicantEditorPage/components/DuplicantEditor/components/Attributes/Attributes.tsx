@@ -1,5 +1,8 @@
 import * as React from "react";
-import { AIAttributeLevelsBehavior, AttributeLevel } from "oni-save-parser";
+import {
+  AIAttributeLevelsBehavior,
+  AttributeLevel,
+} from "@konove/oni-save-parser";
 import classnames from "classnames";
 
 import { WithTranslation, withTranslation } from "react-i18next";

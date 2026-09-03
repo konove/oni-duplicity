@@ -4,7 +4,7 @@ import {
   parseStateMachineParameters,
   writeStateMachineParameters,
   writeStateMachineResourceValue,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 /**
  * What a duplicant's state machines say about whether they are alive.

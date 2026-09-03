@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AIEffectsBehavior } from "oni-save-parser";
+import { AIEffectsBehavior } from "@konove/oni-save-parser";
 import { merge } from "lodash";
 
 import { WithTranslation, withTranslation } from "react-i18next";

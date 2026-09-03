@@ -76,7 +76,9 @@ const config = {
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader",
-        include: [path.resolve(PATHS.nodeModules, "oni-save-parser")],
+        include: [
+          path.resolve(PATHS.nodeModules, "@konove", "oni-save-parser"),
+        ],
       },
 
       {
@@ -172,7 +174,7 @@ const config = {
         // Versioned on its own schedule, and the only dependency the worker
         // needs.
         parser: {
-          test: /[\\/]node_modules[\\/](oni-save-parser|pako|jsonschema)[\\/]/,
+          test: /[\\/]node_modules[\\/](@konove[\\/]oni-save-parser|pako|jsonschema)[\\/]/,
           name: "npm.save-parser",
           priority: 30,
         },

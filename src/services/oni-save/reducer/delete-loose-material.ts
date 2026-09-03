@@ -1,5 +1,9 @@
 import { UnknownAction } from "redux";
-import { SimHashNames, GameObjectGroup, SimHashName } from "oni-save-parser";
+import {
+  SimHashNames,
+  GameObjectGroup,
+  SimHashName,
+} from "@konove/oni-save-parser";
 
 import { defaultOniSaveState, OniSaveState } from "../state";
 import { isDeleteLooseMaterialAction } from "../actions/delete-loose-material";

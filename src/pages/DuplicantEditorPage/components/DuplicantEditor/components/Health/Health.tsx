@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MinionModifiersBehavior } from "oni-save-parser";
+import { MinionModifiersBehavior } from "@konove/oni-save-parser";
 import { find } from "lodash";
 
 import { Trans, useTranslation } from "react-i18next";

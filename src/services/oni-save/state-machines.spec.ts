@@ -4,7 +4,7 @@ import {
   writeStateMachineParameters,
   writeStateMachineResourceValue,
   readStateMachineResourceValue,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import {
   ALIVE_STATE,

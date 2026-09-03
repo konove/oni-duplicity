@@ -1,4 +1,4 @@
-import { SimHashNames } from "oni-save-parser";
+import { SimHashNames } from "@konove/oni-save-parser";
 
 import { ELEMENT_PHASES, ElementPhase } from "./element-phases";
 import { FOOD_CALORIES_PER_UNIT } from "./food-calories";

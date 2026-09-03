@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState } from "../state";
 import { isModifyBehaviorPathAction } from "../actions/modify-behavior-path";

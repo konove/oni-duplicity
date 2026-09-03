@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { SimHashName } from "oni-save-parser";
+import { SimHashName } from "@konove/oni-save-parser";
 
 export const ACTION_ONISAVE_DELETE_LOOSE_MATERIAL =
   "oni-save/delete-loose-material";

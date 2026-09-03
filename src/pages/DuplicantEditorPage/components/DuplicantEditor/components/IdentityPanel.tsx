@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MinionIdentityBehavior } from "oni-save-parser";
+import { MinionIdentityBehavior } from "@konove/oni-save-parser";
 
 import { WithTranslation, withTranslation } from "react-i18next";
 

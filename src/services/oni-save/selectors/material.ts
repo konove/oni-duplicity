@@ -5,7 +5,7 @@ import {
   getBehavior,
   StorageBehavior,
   PrimaryElementBehavior,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 import { createSelector } from "reselect";
 import { values, orderBy } from "lodash";
 

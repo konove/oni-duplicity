@@ -7,7 +7,7 @@ import {
   getAccessoryOfType,
   Accessory,
   AccessoryType,
-} from "oni-save-parser";
+} from "@konove/oni-save-parser";
 
 import { createStyles, withStyles, WithStyles } from "@/styles";
 

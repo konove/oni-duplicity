@@ -55,7 +55,7 @@ try:
         [
             "node",
             "-e",
-            "console.log(require('oni-save-parser').AI_EFFECT_IDS.join('\\n'))",
+            "console.log(require('@konove/oni-save-parser').AI_EFFECT_IDS.join('\\n'))",
         ],
         capture_output=True,
         text=True,

@@ -71,7 +71,7 @@ Import portrait components from **`@/components/duplicant`**, never from `react-
 
 ## The save parser
 
-`oni-save-parser` is a **git dependency pinned to a commit** on the fork at `github.com/konove/oni-save-parser`, not the npm release. To change it: edit the fork, `npm run build` there (build output is committed), commit, push, then re-pin the new sha in `package.json`.
+The parser is imported as `@konove/oni-save-parser`: a **git dependency pinned to a commit** on the fork at `github.com/konove/oni-save-parser`, not an npm release. The unscoped `oni-save-parser` on npm is the original author's and stops at 14.0.1. To change it: edit the fork, commit, push, then re-pin the new sha in `package.json`. Build output is **not** committed in the fork; its `prepare` script compiles `lib/` and `dts/` when npm installs from the git URL, so a fresh install (and `npm ci` in CI) needs git and a working TypeScript toolchain to complete.
 
 The fork ships source maps with the TypeScript inlined (`inlineSources`), which is why `webpack.config.js` runs `source-map-loader` over this one package and no other — a parse failure then resolves to parser source rather than bundled output. Most other dependencies ship no maps, so a blanket rule would only produce warnings.
 

@@ -8,7 +8,7 @@ import "@testing-library/jest-dom";
 import { Provider } from "react-redux";
 import { legacy_createStore as createStore } from "redux";
 import { MemoryRouter } from "react-router";
-import { DLCIds } from "oni-save-parser";
+import { DLCIds } from "@konove/oni-save-parser";
 
 import Nav from "./Nav";
 

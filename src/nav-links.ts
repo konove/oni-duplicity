@@ -1,4 +1,4 @@
-import { DLCIds } from "oni-save-parser";
+import { DLCIds } from "@konove/oni-save-parser";
 
 export interface NavItem {
   name: string;

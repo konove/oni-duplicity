@@ -1,4 +1,4 @@
-import { parseSaveGame, writeSaveGame } from "oni-save-parser";
+import { parseSaveGame, writeSaveGame } from "@konove/oni-save-parser";
 
 import {
   SaveParserCommandEvent,

@@ -1,4 +1,4 @@
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 export const RESPONSE_PROGRESS = "progress";
 export const sendProgress = (message: string) => ({

@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { getBehavior } from "oni-save-parser";
+import { getBehavior } from "@konove/oni-save-parser";
 
 import { OniSaveState, defaultOniSaveState, BehaviorCopyData } from "../state";
 import { isCopyBehaviorsAction } from "../actions/copy-behaviors";

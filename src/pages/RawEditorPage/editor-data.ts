@@ -1,4 +1,8 @@
-import { SaveGame, GameObjectGroup, GameObjectBehavior } from "oni-save-parser";
+import {
+  SaveGame,
+  GameObjectGroup,
+  GameObjectBehavior,
+} from "@konove/oni-save-parser";
 import { get, last } from "lodash";
 
 interface PathSegmentData {

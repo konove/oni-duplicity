@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 import { set as setFp } from "lodash/fp";
 
 import { OniSaveState, defaultOniSaveState } from "../state";

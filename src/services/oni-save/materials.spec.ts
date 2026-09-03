@@ -1,4 +1,4 @@
-import { SimHashNames } from "oni-save-parser";
+import { SimHashNames } from "@konove/oni-save-parser";
 
 import {
   isMaterialGroup,

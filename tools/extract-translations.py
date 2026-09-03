@@ -123,7 +123,7 @@ def name_index(po, catalogue_group):
 
 
 SIM_HASHES = os.path.join(
-    "node_modules", "oni-save-parser", "dts", "save-structure", "const-data",
+    "node_modules", "@konove", "oni-save-parser", "dts", "save-structure", "const-data",
     "template-enumerations", "sim-hashes.d.ts")
 
 
@@ -297,7 +297,7 @@ def geysers_group(po, types, english):
 
 
 GEYSER_TYPES_SOURCE = os.path.join(
-    "node_modules", "oni-save-parser", "dts", "save-structure", "const-data",
+    "node_modules", "@konove", "oni-save-parser", "dts", "save-structure", "const-data",
     "geysers", "geyser-type.d.ts")
 
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { get } from "lodash";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

@@ -10,7 +10,7 @@ import {
   changeStateBehaviorData,
   replaceGameObject,
 } from "./utils";
-import { getGameObjectGroup, getBehavior } from "oni-save-parser";
+import { getGameObjectGroup, getBehavior } from "@konove/oni-save-parser";
 
 export default function modifyDifficultyReducer(
   state: OniSaveState = defaultOniSaveState,

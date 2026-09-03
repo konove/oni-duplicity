@@ -1,5 +1,5 @@
 import * as React from "react";
-import { AI_EFFECT_IDS, AIEffectsBehavior } from "oni-save-parser";
+import { AI_EFFECT_IDS, AIEffectsBehavior } from "@konove/oni-save-parser";
 import { difference } from "lodash";
 
 import { Trans } from "react-i18next";

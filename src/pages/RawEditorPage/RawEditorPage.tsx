@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { useTranslation } from "react-i18next";
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { makeStyles, Theme } from "@/styles";
 

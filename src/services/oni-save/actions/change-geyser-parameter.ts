@@ -1,5 +1,5 @@
 import { UnknownAction } from "redux";
-import { GeyserBehavior } from "oni-save-parser";
+import { GeyserBehavior } from "@konove/oni-save-parser";
 
 // Should probably export this from oni-save-parser.
 export type GeyserConfiguration = NonNullable<

@@ -1,6 +1,6 @@
 import { UnknownAction } from "redux";
 
-import { SaveGame } from "oni-save-parser";
+import { SaveGame } from "@konove/oni-save-parser";
 
 import { AppState } from "@/state";
 
