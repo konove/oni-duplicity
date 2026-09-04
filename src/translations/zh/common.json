@@ -94,6 +94,9 @@
   },
   "world": {
     "noun_titlecase_plural": "星球",
+    "all_titlecase": "全部",
+    "elsewhere": "其他",
+    "pick_titlecase": "小行星",
     "starting_world": "初始星球",
     "rocket_interior": "火箭内部",
     "name_titlecase": "名称",

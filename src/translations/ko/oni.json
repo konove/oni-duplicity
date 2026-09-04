@@ -4105,5 +4105,241 @@
     "slush_salt_water": {
       "NAME": "서늘한 소금 슬러시 분출구"
     }
+  },
+  "WORLDS": {
+    "AQUATICBASEGAME": {
+      "NAME": "마리네아"
+    },
+    "AQUATICCLASSIC": {
+      "NAME": "마리네아 소행성"
+    },
+    "AQUATICMIXING": {
+      "NAME": "마리네아 파편"
+    },
+    "AQUATICSPACEDOUT": {
+      "NAME": "마리네아 마이너"
+    },
+    "BADLANDS": {
+      "NAME": "배드랜즈"
+    },
+    "BIGEMPTY": {
+      "NAME": "개발자를 위한 큰 빈 공간"
+    },
+    "CERESBASEGAME": {
+      "NAME": "Ceres"
+    },
+    "CERESBASEGAMESHATTERED": {
+      "NAME": "폭파된 세레스"
+    },
+    "CERESCLASSIC": {
+      "NAME": "세레스 소행성"
+    },
+    "CERESCLASSICSHATTERED": {
+      "NAME": "폭파된 세레스"
+    },
+    "CERESMIXING": {
+      "NAME": "세레스 파편"
+    },
+    "CERESSPACEDOUT": {
+      "NAME": "세레스 마이너"
+    },
+    "FOREST_DEFAULT": {
+      "NAME": "아보리아"
+    },
+    "FOREST_HOT": {
+      "NAME": "아리디오"
+    },
+    "FOREST_LUSH": {
+      "NAME": "버단트"
+    },
+    "FORESTMOONLET": {
+      "NAME": "폴리아 소행성"
+    },
+    "HELICONA": {
+      "NAME": "헬리코나"
+    },
+    "IDEALLANDINGSITE": {
+      "NAME": "방사능 가득한 숲 소행성"
+    },
+    "MARSHYMOONLET": {
+      "NAME": "습지 소행성"
+    },
+    "MEDIUMFORESTYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "방사성 숲 소행성"
+    },
+    "MEDIUMFORESTYWASTELAND": {
+      "NAME": "글로우드 황무지 소행성"
+    },
+    "MEDIUMRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "방사성 늪 소행성"
+    },
+    "MEDIUMSANDYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "방사성 테라 소행성"
+    },
+    "MEDIUMSANDYSWAMP": {
+      "NAME": "방사성 테라보그 소행성"
+    },
+    "MEDIUMSWAMPY": {
+      "NAME": "악취 늪지대 소행성"
+    },
+    "METALHEAVYLANDINGSITE": {
+      "NAME": "방사능 가득한 습지 소행성"
+    },
+    "MINIBADLANDS": {
+      "NAME": "황량땅 소행성"
+    },
+    "MINIFLIPPED": {
+      "NAME": "뒤집힌 소행성"
+    },
+    "MINIFORESTFROZEN": {
+      "NAME": "얼어붙은 숲 소행성"
+    },
+    "MINIMETALLICSWAMPY": {
+      "NAME": "금속성 늪지대 소행성"
+    },
+    "MINIRADIOACTIVEOCEAN": {
+      "NAME": "방사성 바다 소행성"
+    },
+    "MINISHATTEREDGEO": {
+      "NAME": "세레스 핵 소행성"
+    },
+    "MINISHATTEREDSTART": {
+      "NAME": "세레스 맨틀 소행성"
+    },
+    "MINISHATTEREDWARP": {
+      "NAME": "달콤한 세레스 소행성"
+    },
+    "MOOMOONLET": {
+      "NAME": "음메 소행성"
+    },
+    "MOON_BARREN": {
+      "NAME": "불모의 달"
+    },
+    "NIOBIUMMOONLET": {
+      "NAME": "초전도 소행성"
+    },
+    "OASIS": {
+      "NAME": "오아시쎄"
+    },
+    "OCEANIA": {
+      "NAME": "오세아니아"
+    },
+    "OILRICHWARPTARGET": {
+      "NAME": "녹슨 기름 소행성"
+    },
+    "OILYMOONLET": {
+      "NAME": "점성 소행성"
+    },
+    "PREHISTORICBASEGAME": {
+      "NAME": "렐리카"
+    },
+    "PREHISTORICCLASSIC": {
+      "NAME": "렐리카 소행성"
+    },
+    "PREHISTORICMIXING": {
+      "NAME": "렐리카 파편"
+    },
+    "PREHISTORICSHATTERED": {
+      "NAME": "렐릭AAAA<sup>AAAGHH</sup>"
+    },
+    "PREHISTORICSPACEDOUT": {
+      "NAME": "렐리카 마이너"
+    },
+    "REGOLITHMOONLET": {
+      "NAME": "레골리스 소행성"
+    },
+    "SANDSTONE_DEFAULT": {
+      "NAME": "테라"
+    },
+    "SANDSTONE_FROZEN": {
+      "NAME": "라임"
+    },
+    "STRANGE_ASTEROID_KF23": {
+      "NAME": "Skewed Asteroid"
+    },
+    "STRANGERICHSANDSTONE": {
+      "NAME": "바위투성이 소행성"
+    },
+    "SULFURMOONLET": {
+      "NAME": "브림스토니아 소행성"
+    },
+    "SWAMPMOONLET": {
+      "NAME": "콰그미리스 소행성"
+    },
+    "SWAMPYLANDINGSITE": {
+      "NAME": "조사된 늪지대 소행성"
+    },
+    "TERRAMOONLET": {
+      "NAME": "테라니아 소행성"
+    },
+    "THE_ROCK": {
+      "NAME": "록"
+    },
+    "TINYEMPTY": {
+      "NAME": "개발자를 위한 작고 비어 있는 곳"
+    },
+    "TINYFOREST": {
+      "NAME": "개발자를 위한 작은 숲"
+    },
+    "TINYICE": {
+      "NAME": "개발자를 위한 작은 얼음"
+    },
+    "TINYMAGMA": {
+      "NAME": "개발자를 위한 작은 마그마"
+    },
+    "TINYSTART": {
+      "NAME": "개발자를 위한 작은 시작"
+    },
+    "TINYSURFACE": {
+      "NAME": "개발자를 위한 작은 표면"
+    },
+    "TUNDRAMOONLET": {
+      "NAME": "툰드라 소행성"
+    },
+    "TWINMOONLET": {
+      "NAME": "개발자를 위한 작은 쌍둥이 소행성"
+    },
+    "VANILLAARBORIA": {
+      "NAME": "아보리아 소행성"
+    },
+    "VANILLAARIDIO": {
+      "NAME": "아리디오 소행성"
+    },
+    "VANILLABADLANDS": {
+      "NAME": "배드랜즈 소행성"
+    },
+    "VANILLAFORESTDEFAULT": {
+      "NAME": "베르단테 소행성"
+    },
+    "VANILLAOASIS": {
+      "NAME": "오아시쎄 소행성"
+    },
+    "VANILLAOCEANIA": {
+      "NAME": "오세아니아 소행성"
+    },
+    "VANILLASANDSTONEDEFAULT": {
+      "NAME": "테라 소행성"
+    },
+    "VANILLASANDSTONEFROZEN": {
+      "NAME": "라임 소행성"
+    },
+    "VANILLASWAMPDEFAULT": {
+      "NAME": "스켈치 소행성"
+    },
+    "VANILLAVOLCANIC": {
+      "NAME": "볼카네아 소행성"
+    },
+    "VOLCANIC": {
+      "NAME": "볼카네아"
+    },
+    "WARPOILYSANDYSWAMP": {
+      "NAME": "기름이 많은 모래 늪 소행성"
+    },
+    "WARPOILYSWAMP": {
+      "NAME": "기름진 늪 소행성"
+    },
+    "WATERMOONLET": {
+      "NAME": "물 소행성"
+    }
   }
 }

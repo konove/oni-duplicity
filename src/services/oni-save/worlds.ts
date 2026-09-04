@@ -1,4 +1,10 @@
-import { GameObjectBehavior, BehaviorName } from "@konove/oni-save-parser";
+import {
+  GameObjectBehavior,
+  BehaviorName,
+  Vector3,
+} from "@konove/oni-save-parser";
+
+import { NameTranslator } from "./geysers";
 
 /**
  * Spaced Out! models each asteroid in the cluster as one game object in the
@@ -65,12 +71,14 @@ export interface ClusterManagerBehavior extends GameObjectBehavior {
 }
 
 /**
- * The display name for a world: the player's rename if they set one, else the
- * tail of the namespaced world name ("dlc4::worlds/PrehistoricClassicAsteroid"
- * becomes "PrehistoricClassicAsteroid").
+ * The display name for a world: the player's rename if they set one, else what
+ * the game calls that kind of world ("Irradiated Forest Asteroid"), looked up
+ * through the catalogue key the behavior carries in `worldType`. A world the
+ * catalogue does not know falls back to the tail of its namespaced id.
  */
 export function worldDisplayName(
   templateData: WorldContainerBehavior["templateData"] | null,
+  t: NameTranslator,
 ): string {
   if (!templateData) {
     return "";
@@ -80,10 +88,84 @@ export function worldDisplayName(
     return templateData.overrideName;
   }
 
-  const { worldName } = templateData;
-  if (!worldName) {
-    return `World ${templateData.id}`;
+  const { worldName, worldType } = templateData;
+  const fallback = worldName
+    ? worldName.slice(worldName.lastIndexOf("/") + 1)
+    : `World ${templateData.id}`;
+
+  const match = /^STRINGS\.WORLDS\.([A-Z0-9_]+)\.NAME$/.exec(worldType ?? "");
+  if (!match) {
+    return fallback;
+  }
+  return t(`oni:WORLDS.${match[1]}.NAME`, { defaultValue: fallback });
+}
+
+/** One world, with the game object that carries it. */
+export interface WorldRect {
+  gameObjectId: number;
+  id: number;
+  templateData: WorldContainerBehavior["templateData"];
+}
+
+/**
+ * The world whose rect contains the position, by `WorldContainer.id`.
+ *
+ * Rects are half open: worlds tile the grid edge to edge, so a position on the
+ * far edge of one belongs to the next. Null off every world, which is where a
+ * base game save's objects all are, since it has no worlds at all.
+ */
+export function worldIdForPosition(
+  worlds: WorldRect[],
+  position: Vector3 | undefined,
+): number | null {
+  if (!position) {
+    return null;
+  }
+  for (const { id, templateData } of worlds) {
+    const { worldOffset: offset, worldSize: size } = templateData;
+    if (
+      position.x >= offset.x &&
+      position.x < offset.x + size.x &&
+      position.y >= offset.y &&
+      position.y < offset.y + size.y
+    ) {
+      return id;
+    }
+  }
+  return null;
+}
+
+export interface WorldGroup {
+  /** Null for objects that sit outside every world. */
+  world: WorldRect | null;
+  gameObjectIds: number[];
+}
+
+/**
+ * The objects split by the world they sit on, in world order, each list in
+ * the order given. Only worlds that hold at least one object get a group;
+ * anything outside every world lands in a final group with no world.
+ */
+export function groupGameObjectsByWorld(
+  worlds: WorldRect[],
+  objects: Array<{ gameObjectId: number; position: Vector3 | undefined }>,
+): WorldGroup[] {
+  const byWorld = new Map<number | null, number[]>();
+  for (const { gameObjectId, position } of objects) {
+    const worldId = worldIdForPosition(worlds, position);
+    const ids = byWorld.get(worldId) ?? [];
+    ids.push(gameObjectId);
+    byWorld.set(worldId, ids);
   }
 
-  return worldName.slice(worldName.lastIndexOf("/") + 1);
+  const groups: WorldGroup[] = [...worlds]
+    .sort((a, b) => a.id - b.id)
+    .filter((world) => byWorld.has(world.id))
+    .map((world) => ({ world, gameObjectIds: byWorld.get(world.id)! }));
+
+  const unplaced = byWorld.get(null);
+  if (unplaced) {
+    groups.push({ world: null, gameObjectIds: unplaced });
+  }
+  return groups;
 }

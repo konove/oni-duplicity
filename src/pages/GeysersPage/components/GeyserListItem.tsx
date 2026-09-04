@@ -14,6 +14,7 @@ import Slider from "@mui/material/Slider";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 import useGeyser from "@/services/oni-save/hooks/useGeyser";
+import useSavedName from "@/services/oni-save/hooks/useSavedName";
 import {
   geyserDisplayName,
   geyserTypesByName,
@@ -119,6 +120,10 @@ const GeyserListItem: React.FC<GeyserListItemProps> = ({
     onApplyBestCase,
   } = useGeyser(gameObjectId);
 
+  // The game names each geyser at world generation, code and all. Two copper
+  // volcanoes are only the same card if the heading prints their type.
+  const savedName = useSavedName(gameObjectId);
+
   const onGeyserTypeSelected = React.useCallback(
     (e: SelectChangeEvent<string>) => {
       onChangeGeyserType(e.target.value);
@@ -149,7 +154,7 @@ const GeyserListItem: React.FC<GeyserListItemProps> = ({
   return (
     <Paper className={classnames(className, styles.root)}>
       <div className={styles.titleBar}>
-        <Typography variant="h6">{typeName}</Typography>
+        <Typography variant="h6">{savedName ?? typeName}</Typography>
         {info && (
           <Typography
             className={styles.temperature}

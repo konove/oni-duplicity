@@ -1,0 +1,138 @@
+{
+  "pages": [
+    {
+      "id": "chosen",
+      "name": "Chosen"
+    },
+    {
+      "id": "directions",
+      "name": "Directions"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "All tab",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "chosen"
+    },
+    {
+      "file": "Tabs.dc.html",
+      "title": "Home Base tab",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "chosen"
+    },
+    {
+      "file": "Today.dc.html",
+      "title": "Today: type as heading",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "directions"
+    },
+    {
+      "file": "Named.dc.html",
+      "title": "Name as heading",
+      "x": 1400,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "directions"
+    },
+    {
+      "file": "Sections.dc.html",
+      "title": "Sections per asteroid",
+      "x": 2800,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "directions"
+    },
+    {
+      "file": "Tagged.dc.html",
+      "title": "Tag on the card",
+      "x": 4200,
+      "y": 0,
+      "w": 1280,
+      "h": 1300,
+      "page": "directions"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "decision",
+      "x": 0,
+      "y": -760,
+      "w": 1000,
+      "page": "chosen",
+      "text": "0.14 · Chosen: tabs per asteroid, with the object's name as the card heading\n\nThe tab strip sits under the app bar: All, then one tab per world with its count. A world's tab shows only its cards. All shows every card, grouped under a heading per world, so the same names carry from the strip into the list and nothing is repeated on the cards.\n\nBase game: one world, so the strip is hidden and the headings are dropped; the page is the plain named list.\n\nStill to check before building: whether a never-renamed object stores an empty name (the heading then falls back to the type), and whether a world with no player name should show its raw id, which the tab strip prints in capitals."
+    },
+    {
+      "id": "all",
+      "x": 0,
+      "y": -420,
+      "w": 460,
+      "text": "All tab\n\nEvery geyser, grouped under its world. The headings are the tab labels again, without counts, since the strip already shows them. The second heading is below the fold in a 720px window; the strip is what says it exists.",
+      "page": "chosen"
+    },
+    {
+      "id": "homebase",
+      "x": 1400,
+      "y": -420,
+      "w": 460,
+      "text": "Home Base tab\n\nOne world at a time. No headings, no chips: the selected tab is the only place the asteroid is named, and it never scrolls away.",
+      "page": "chosen"
+    },
+    {
+      "id": "question",
+      "x": 0,
+      "y": -760,
+      "w": 1000,
+      "page": "directions",
+      "text": "The four directions that were on the table. Tabs per asteroid and name as heading were chosen; these stay for the record.\n\nOnly the chlorine vent is from the bundled save; the other four geysers are sample objects, with their numbers computed by the app's own geyser module."
+    },
+    {
+      "id": "today",
+      "x": 0,
+      "y": -420,
+      "w": 460,
+      "text": "Today · type as heading\n\nThe heading prints the type, and the dropdown prints it again. The two Cool Steam Vents carry the same heading, so telling them apart means reading five sliders, and nothing on the page says there are two asteroids.",
+      "page": "directions"
+    },
+    {
+      "id": "named",
+      "x": 1400,
+      "y": -420,
+      "w": 460,
+      "text": "Name as heading\n\nThe heading is the game's own name for the object, code and all; the type is left to the dropdown.\n\nFor: small, and fixes most of it on its own.\n\nAgainst: the names are long. The chlorine vent lands within a few pixels of the wrap point at 360px, and wraps in the fallback font. Still says nothing about the asteroid, which is why it was paired with tabs.",
+      "page": "directions"
+    },
+    {
+      "id": "sections",
+      "x": 2800,
+      "y": -420,
+      "w": 460,
+      "text": "Sections per asteroid\n\nA heading per world with a count and a collapse chevron.\n\nFor: the asteroid is stated once and the cards stay as they are.\n\nAgainst: cards are 845px tall, so in a 720px window the second heading is below the fold and only found by scrolling. Not chosen on its own; its headings survive inside the All tab.",
+      "page": "directions"
+    },
+    {
+      "id": "tagged",
+      "x": 4200,
+      "y": -420,
+      "w": 460,
+      "text": "Tag on the card\n\nNo grouping. A chip on each card names its asteroid.\n\nFor: every card is self-describing wherever it scrolls to.\n\nAgainst: the world name repeats on every card, and nothing says how many are where. Its two-line header is still worth borrowing if the long names wrap.",
+      "page": "directions"
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "chosen"
+  }
+}

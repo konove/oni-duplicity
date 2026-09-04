@@ -94,6 +94,9 @@
   },
   "world": {
     "noun_titlecase_plural": "Mundos",
+    "all_titlecase": "Todos",
+    "elsewhere": "En otro lugar",
+    "pick_titlecase": "Asteroide",
     "starting_world": "Mundo inicial",
     "rocket_interior": "Interior del cohete",
     "name_titlecase": "Nombre",

@@ -14,6 +14,7 @@ import {
   rollForValue,
 } from "@/services/oni-save/geyser-configuration";
 import useGeyser, { UseGeyser } from "@/services/oni-save/hooks/useGeyser";
+import useSavedName from "@/services/oni-save/hooks/useSavedName";
 
 import GeyserListItem from "./GeyserListItem";
 
@@ -49,7 +50,15 @@ jest.mock("@/services/oni-save/hooks/useGeyser", () => ({
   default: jest.fn(),
 }));
 
+jest.mock("@/services/oni-save/hooks/useSavedName", () => ({
+  __esModule: true,
+  default: jest.fn(() => null),
+}));
+
 const mockUseGeyser = useGeyser as jest.MockedFunction<typeof useGeyser>;
+const mockUseSavedName = useSavedName as jest.MockedFunction<
+  typeof useSavedName
+>;
 
 const COPPER = {
   minRate: 200,
@@ -267,5 +276,33 @@ describe("GeyserListItem", () => {
     expect(screen.getByRole("combobox")).toHaveTextContent(
       "molten_unobtainium",
     );
+  });
+});
+
+describe("GeyserListItem heading", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  // Two copper volcanoes used to be the same card: the heading printed the
+  // type, and the dropdown printed it again. The game names each one.
+  it("is the name the game gave the geyser", () => {
+    mockUseSavedName.mockReturnValue("Copper Volcano FP34‑1");
+    renderGeyser();
+
+    expect(
+      screen.getByRole("heading", { name: "Copper Volcano FP34‑1" }),
+    ).toBeInTheDocument();
+    // The type is still there to read, once, in the dropdown.
+    expect(screen.getAllByText("Copper Volcano")).toHaveLength(1);
+  });
+
+  it("falls back to the type when the geyser has no name", () => {
+    mockUseSavedName.mockReturnValue(null);
+    renderGeyser();
+
+    expect(
+      screen.getByRole("heading", { name: "Copper Volcano" }),
+    ).toBeInTheDocument();
   });
 });

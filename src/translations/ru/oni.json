@@ -4105,5 +4105,241 @@
     "slush_salt_water": {
       "NAME": "Гейзер с холодным соленым месивом"
     }
+  },
+  "WORLDS": {
+    "AQUATICBASEGAME": {
+      "NAME": "Маринея"
+    },
+    "AQUATICCLASSIC": {
+      "NAME": "Астероид Маринея"
+    },
+    "AQUATICMIXING": {
+      "NAME": "Фрагмент Маринеи"
+    },
+    "AQUATICSPACEDOUT": {
+      "NAME": "Малая Маринея"
+    },
+    "BADLANDS": {
+      "NAME": "Пустошь"
+    },
+    "BIGEMPTY": {
+      "NAME": "Большой и пустой ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "CERESBASEGAME": {
+      "NAME": "Церера"
+    },
+    "CERESBASEGAMESHATTERED": {
+      "NAME": "Церера после взрыва"
+    },
+    "CERESCLASSIC": {
+      "NAME": "Астероид Церера"
+    },
+    "CERESCLASSICSHATTERED": {
+      "NAME": "Церера после взрыва"
+    },
+    "CERESMIXING": {
+      "NAME": "Осколок Цереры"
+    },
+    "CERESSPACEDOUT": {
+      "NAME": "Малая Церера"
+    },
+    "FOREST_DEFAULT": {
+      "NAME": "Рощевица"
+    },
+    "FOREST_HOT": {
+      "NAME": "Аридия"
+    },
+    "FOREST_LUSH": {
+      "NAME": "Изумрудия"
+    },
+    "FORESTMOONLET": {
+      "NAME": "Лиственный астероид"
+    },
+    "HELICONA": {
+      "NAME": "Гелиокона"
+    },
+    "IDEALLANDINGSITE": {
+      "NAME": "Астероид с радиационным лесом"
+    },
+    "MARSHYMOONLET": {
+      "NAME": "Астероид с топью"
+    },
+    "MEDIUMFORESTYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Астероид с радиоактивными лесами"
+    },
+    "MEDIUMFORESTYWASTELAND": {
+      "NAME": "Астероид светящихся пустошей"
+    },
+    "MEDIUMRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Астероид с радиоактивными болотами"
+    },
+    "MEDIUMSANDYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Радиоактивный астероид Терра"
+    },
+    "MEDIUMSANDYSWAMP": {
+      "NAME": "Радиоактивный болотистый астероид Терра"
+    },
+    "MEDIUMSWAMPY": {
+      "NAME": "Вонючий болотистый астероид"
+    },
+    "METALHEAVYLANDINGSITE": {
+      "NAME": "Астероид с радиационной топью"
+    },
+    "MINIBADLANDS": {
+      "NAME": "Астероид Пустынных земель"
+    },
+    "MINIFLIPPED": {
+      "NAME": "Изнаночный астероид"
+    },
+    "MINIFORESTFROZEN": {
+      "NAME": "Астероид с ледяным лесом"
+    },
+    "MINIMETALLICSWAMPY": {
+      "NAME": "Металлический болотистый астероид"
+    },
+    "MINIRADIOACTIVEOCEAN": {
+      "NAME": "Радиоактивный океанический астероид"
+    },
+    "MINISHATTEREDGEO": {
+      "NAME": "Астероид Ядро Цереры"
+    },
+    "MINISHATTEREDSTART": {
+      "NAME": "Астероид Мантия Цереры"
+    },
+    "MINISHATTEREDWARP": {
+      "NAME": "Астероид Сладкая Церера"
+    },
+    "MOOMOONLET": {
+      "NAME": "Астероид му-му"
+    },
+    "MOON_BARREN": {
+      "NAME": "Бесплодная луна"
+    },
+    "NIOBIUMMOONLET": {
+      "NAME": "Сверхпроводниковый астероид"
+    },
+    "OASIS": {
+      "NAME": "Оазиссия"
+    },
+    "OCEANIA": {
+      "NAME": "Океания"
+    },
+    "OILRICHWARPTARGET": {
+      "NAME": "Ржавый астероид с нефтью"
+    },
+    "OILYMOONLET": {
+      "NAME": "Вязкий астероид"
+    },
+    "PREHISTORICBASEGAME": {
+      "NAME": "Релика"
+    },
+    "PREHISTORICCLASSIC": {
+      "NAME": "Астероид Релика"
+    },
+    "PREHISTORICMIXING": {
+      "NAME": "Осколок Релики"
+    },
+    "PREHISTORICSHATTERED": {
+      "NAME": "Релика-А-А-А-<sup>А-А-А-А</sup>"
+    },
+    "PREHISTORICSPACEDOUT": {
+      "NAME": "Малая Релика"
+    },
+    "REGOLITHMOONLET": {
+      "NAME": "Реголитовый астероид"
+    },
+    "SANDSTONE_DEFAULT": {
+      "NAME": "Терра"
+    },
+    "SANDSTONE_FROZEN": {
+      "NAME": "Иней"
+    },
+    "STRANGE_ASTEROID_KF23": {
+      "NAME": "Перекошенный астероид"
+    },
+    "STRANGERICHSANDSTONE": {
+      "NAME": "Каменистый астероид"
+    },
+    "SULFURMOONLET": {
+      "NAME": "Серный астероид"
+    },
+    "SWAMPMOONLET": {
+      "NAME": "Трясинный астероид"
+    },
+    "SWAMPYLANDINGSITE": {
+      "NAME": "Астероид с радиационными болотами"
+    },
+    "TERRAMOONLET": {
+      "NAME": "Астероид Террания"
+    },
+    "THE_ROCK": {
+      "NAME": "Скала"
+    },
+    "TINYEMPTY": {
+      "NAME": "Маленький и пустой ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TINYFOREST": {
+      "NAME": "Маленький лес ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TINYICE": {
+      "NAME": "Крохотный лед ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TINYMAGMA": {
+      "NAME": "Магма ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TINYSTART": {
+      "NAME": "Маленькая начальная локация ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TINYSURFACE": {
+      "NAME": "Крошечная земля ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "TUNDRAMOONLET": {
+      "NAME": "Астероид с тундрой"
+    },
+    "TWINMOONLET": {
+      "NAME": "Крохотные астероиды-близнецы ДЛЯ РАЗРАБОТЧИКОВ"
+    },
+    "VANILLAARBORIA": {
+      "NAME": "Астероид Рощевица"
+    },
+    "VANILLAARIDIO": {
+      "NAME": "Астероид Аридия"
+    },
+    "VANILLABADLANDS": {
+      "NAME": "Астероид Пустоши"
+    },
+    "VANILLAFORESTDEFAULT": {
+      "NAME": "Астероид Изумрудия"
+    },
+    "VANILLAOASIS": {
+      "NAME": "Астероид Оазиссия"
+    },
+    "VANILLAOCEANIA": {
+      "NAME": "Астероид Океания"
+    },
+    "VANILLASANDSTONEDEFAULT": {
+      "NAME": "Астероид Терра"
+    },
+    "VANILLASANDSTONEFROZEN": {
+      "NAME": "Астероид Иней"
+    },
+    "VANILLASWAMPDEFAULT": {
+      "NAME": "Хлюпающий астероид"
+    },
+    "VANILLAVOLCANIC": {
+      "NAME": "Астероид Вулкания"
+    },
+    "VOLCANIC": {
+      "NAME": "Вулкания"
+    },
+    "WARPOILYSANDYSWAMP": {
+      "NAME": "Песчаный астероид с нефтяными болотами"
+    },
+    "WARPOILYSWAMP": {
+      "NAME": "Астероид с нефтяными болотами"
+    },
+    "WATERMOONLET": {
+      "NAME": "Водный астероид"
+    }
   }
 }

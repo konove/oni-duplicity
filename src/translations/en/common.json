@@ -135,6 +135,9 @@
   },
   "world": {
     "noun_titlecase_plural": "Worlds",
+    "all_titlecase": "All",
+    "elsewhere": "Elsewhere",
+    "pick_titlecase": "Asteroid",
     "starting_world": "Starting world",
     "rocket_interior": "Rocket interior",
     "name_titlecase": "Name",

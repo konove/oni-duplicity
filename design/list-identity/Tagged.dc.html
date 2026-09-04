@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tag on the card</title>
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap">
+  <style>
+    body { margin: 0; background: #121212; color: #ffffff; font-family: Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #90caf9; } a:hover { color: #bbdefb; }
+  </style>
+</helmet>
+<div style="width: 1280px; height: 1300px; display: flex; flex-direction: row; background: #121212; overflow: hidden;">
+  <div style="width: 200px; height: 1300px; box-sizing: border-box; background: #1e1e1e; border-right: 1px solid rgba(255, 255, 255, 0.12); display: flex; flex-direction: column; flex-shrink: 0;">
+    <div style="display: flex; align-items: center; min-height: 64px; padding-left: 24px;">
+      <div style="font-size: 20px; line-height: 1.6; font-weight: 500; color: rgba(255, 255, 255, 0.7);">Duplicity</div>
+      <div style="margin-left: auto; margin-right: 8px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: #ffffff; flex-shrink: 0;"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></div>
+    </div>
+    <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+    <nav style="display: flex; flex-direction: column; padding: 8px 0;">
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Overview</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Duplicants</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: rgba(144, 202, 249, 0.16);">Geysers</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Creatures</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Worlds</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Materials</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Raw Editor</div>
+      <div style="display: flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 16px; font-size: 16px; line-height: 24px; color: #ffffff; background: transparent;">Changelog</div>
+    </nav>
+  </div>
+  <div style="display: flex; flex-direction: column; width: 1080px; height: 1300px;">
+    <div style="display: flex; align-items: center; height: 64px; padding: 0 24px; background: #272727; box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12); flex-shrink: 0;">
+      <div style="flex-grow: 1; font-size: 20px; line-height: 1.6; font-weight: 500; color: #ffffff;">Geysers</div>
+      <div style="display: flex; gap: 8px; margin-right: 8px;"><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 16px; background: #d7a7dc; color: rgba(0, 0, 0, 0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Spaced Out!</span><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 16px; background: #d7a7dc; color: rgba(0, 0, 0, 0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Aquatic Planet Pack</span><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 16px; background: #d7a7dc; color: rgba(0, 0, 0, 0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Frosty Planet Pack</span><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 16px; background: #d7a7dc; color: rgba(0, 0, 0, 0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Bionic Booster Pack</span><span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 16px; background: #d7a7dc; color: rgba(0, 0, 0, 0.87); font-size: 13px; line-height: 18px; white-space: nowrap;">Prehistoric Planet Pack</span></div>
+      <div style="display: flex;">
+        <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: #ffffff; flex-shrink: 0;"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3m3-10H5V5h10z"></path></svg></div>
+        <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: #ffffff; flex-shrink: 0;"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8z"></path></svg></div>
+        <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: #ffffff; flex-shrink: 0;"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6"></path></svg></div>
+      </div>
+    </div>
+    <div style="flex-grow: 1; overflow: hidden;">
+      <div style="display: flex; flex-direction: row; flex-wrap: wrap; margin: 8px;">
+      <div style="width: 360px; box-sizing: border-box; margin: 4px; padding: 16px; border-radius: 4px; background: #1e1e1e; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 20px; line-height: 1.6; font-weight: 500;">Cool Chlorine Gas Vent UO31‑3</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); font-size: 13px; line-height: 18px;">Home Base</span>
+            <span style="margin-left: auto; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">5 °C</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+        <div style="display: flex; align-items: center; height: 56px; box-sizing: border-box; margin-top: 12px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, 0.23); border-radius: 4px; font-size: 16px; line-height: 1.5;">
+          <span style="flex-grow: 1;">Cool Chlorine Gas Vent</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: rgba(255, 255, 255, 0.54); flex-shrink: 0;"><path d="m7 10 5 5 5-5z"></path></svg>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Eruption Cycle</span>
+            <span style="white-space: nowrap;">484 s</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 39.3%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 39.3%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>60 s</span>
+            <span>1140 s</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Erupting</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">202 s</span>41.7%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 39.6%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 39.6%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>10%</span>
+            <span>90%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Full Cycle</span>
+            <span style="white-space: nowrap;">87.1 cycles</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 31.1%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 31.1%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>25 cycles</span>
+            <span>225 cycles</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Active</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">52.7 cycles</span>60.5%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 51.2%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 51.2%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>40%</span>
+            <span>80%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Output</span>
+            <span style="white-space: nowrap;">95 kg/cycle</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 35.7%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 35.7%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>70 kg/cycle</span>
+            <span>140 kg/cycle</span>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 3px 9px; border: 1px solid rgba(144, 202, 249, 0.5); border-radius: 4px; color: #90caf9; font-size: 13px; line-height: 1.75; font-weight: 500; letter-spacing: 0.02857em; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" style="display: block; fill: #90caf9; flex-shrink: 0;"><path d="M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path><path d="M6 11 7.41 12.41 12 7.83l4.59 4.58L18 11l-6-6z"></path></svg>
+            <span>Best case</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 12px; border-radius: 4px; background: rgba(127, 127, 127, 0.08);">
+          <div style="font-size: 12px; line-height: 2.66; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7);">In game this reads</div>
+          <div style="margin-top: 8px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; font-size: 14px; line-height: 1.43;">
+            <div style="color: rgba(255, 255, 255, 0.7);">Chlorine Gas</div><div style="text-align: right;">379.7 g/s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Eruption Period</div><div style="text-align: right;">202 s every 484 s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Active Period</div><div style="text-align: right;">52.7 cycles every 87.1 cycles</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Average Output</div><div style="text-align: right;">95.8 g/s</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 360px; box-sizing: border-box; margin: 4px; padding: 16px; border-radius: 4px; background: #1e1e1e; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 20px; line-height: 1.6; font-weight: 500;">Cool Steam Vent UO31‑7</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); font-size: 13px; line-height: 18px;">Home Base</span>
+            <span style="margin-left: auto; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">110 °C</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+        <div style="display: flex; align-items: center; height: 56px; box-sizing: border-box; margin-top: 12px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, 0.23); border-radius: 4px; font-size: 16px; line-height: 1.5;">
+          <span style="flex-grow: 1;">Cool Steam Vent</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: rgba(255, 255, 255, 0.54); flex-shrink: 0;"><path d="m7 10 5 5 5-5z"></path></svg>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Eruption Cycle</span>
+            <span style="white-space: nowrap;">524 s</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 43.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 43.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>60 s</span>
+            <span>1140 s</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Erupting</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">269 s</span>51.3%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 51.7%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 51.7%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>10%</span>
+            <span>90%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Full Cycle</span>
+            <span style="white-space: nowrap;">139 cycles</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 57.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 57.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>25 cycles</span>
+            <span>225 cycles</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Active</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">82.5 cycles</span>59.3%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 48.3%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 48.3%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>40%</span>
+            <span>80%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Output</span>
+            <span style="white-space: nowrap;">1541 kg/cycle</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 54.1%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 54.1%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>1000 kg/cycle</span>
+            <span>2000 kg/cycle</span>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 3px 9px; border: 1px solid rgba(144, 202, 249, 0.5); border-radius: 4px; color: #90caf9; font-size: 13px; line-height: 1.75; font-weight: 500; letter-spacing: 0.02857em; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" style="display: block; fill: #90caf9; flex-shrink: 0;"><path d="M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path><path d="M6 11 7.41 12.41 12 7.83l4.59 4.58L18 11l-6-6z"></path></svg>
+            <span>Best case</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 12px; border-radius: 4px; background: rgba(127, 127, 127, 0.08);">
+          <div style="font-size: 12px; line-height: 2.66; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7);">In game this reads</div>
+          <div style="margin-top: 8px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; font-size: 14px; line-height: 1.43;">
+            <div style="color: rgba(255, 255, 255, 0.7);">Steam</div><div style="text-align: right;">5 kg/s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Eruption Period</div><div style="text-align: right;">269 s every 524 s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Active Period</div><div style="text-align: right;">82.5 cycles every 139 cycles</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Average Output</div><div style="text-align: right;">1.5 kg/s</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 360px; box-sizing: border-box; margin: 4px; padding: 16px; border-radius: 4px; background: #1e1e1e; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 20px; line-height: 1.6; font-weight: 500;">Cool Steam Vent NA52‑1</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); font-size: 13px; line-height: 18px;">IdealLandingSite</span>
+            <span style="margin-left: auto; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">110 °C</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+        <div style="display: flex; align-items: center; height: 56px; box-sizing: border-box; margin-top: 12px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, 0.23); border-radius: 4px; font-size: 16px; line-height: 1.5;">
+          <span style="flex-grow: 1;">Cool Steam Vent</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: rgba(255, 255, 255, 0.54); flex-shrink: 0;"><path d="m7 10 5 5 5-5z"></path></svg>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Eruption Cycle</span>
+            <span style="white-space: nowrap;">636 s</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 53.4%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 53.4%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>60 s</span>
+            <span>1140 s</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Erupting</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">292 s</span>45.9%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 44.9%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 44.9%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>10%</span>
+            <span>90%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Full Cycle</span>
+            <span style="white-space: nowrap;">125 cycles</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 50.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 50.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>25 cycles</span>
+            <span>225 cycles</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Active</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">78.5 cycles</span>62.8%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 57.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 57.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>40%</span>
+            <span>80%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Output</span>
+            <span style="white-space: nowrap;">1466 kg/cycle</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 46.6%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 46.6%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>1000 kg/cycle</span>
+            <span>2000 kg/cycle</span>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 3px 9px; border: 1px solid rgba(144, 202, 249, 0.5); border-radius: 4px; color: #90caf9; font-size: 13px; line-height: 1.75; font-weight: 500; letter-spacing: 0.02857em; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" style="display: block; fill: #90caf9; flex-shrink: 0;"><path d="M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path><path d="M6 11 7.41 12.41 12 7.83l4.59 4.58L18 11l-6-6z"></path></svg>
+            <span>Best case</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 12px; border-radius: 4px; background: rgba(127, 127, 127, 0.08);">
+          <div style="font-size: 12px; line-height: 2.66; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7);">In game this reads</div>
+          <div style="margin-top: 8px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; font-size: 14px; line-height: 1.43;">
+            <div style="color: rgba(255, 255, 255, 0.7);">Steam</div><div style="text-align: right;">5.3 kg/s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Eruption Period</div><div style="text-align: right;">292 s every 636 s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Active Period</div><div style="text-align: right;">78.5 cycles every 125 cycles</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Average Output</div><div style="text-align: right;">1.5 kg/s</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 360px; box-sizing: border-box; margin: 4px; padding: 16px; border-radius: 4px; background: #1e1e1e; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 20px; line-height: 1.6; font-weight: 500;">Natural Gas Geyser NA52‑2</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); font-size: 13px; line-height: 18px;">IdealLandingSite</span>
+            <span style="margin-left: auto; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">150 °C</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+        <div style="display: flex; align-items: center; height: 56px; box-sizing: border-box; margin-top: 12px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, 0.23); border-radius: 4px; font-size: 16px; line-height: 1.5;">
+          <span style="flex-grow: 1;">Natural Gas Geyser</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: rgba(255, 255, 255, 0.54); flex-shrink: 0;"><path d="m7 10 5 5 5-5z"></path></svg>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Eruption Cycle</span>
+            <span style="white-space: nowrap;">582 s</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 48.3%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 48.3%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>60 s</span>
+            <span>1140 s</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Erupting</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">307 s</span>52.7%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 53.4%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 53.4%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>10%</span>
+            <span>90%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Full Cycle</span>
+            <span style="white-space: nowrap;">106.8 cycles</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 40.9%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 40.9%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>25 cycles</span>
+            <span>225 cycles</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Active</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">64.1 cycles</span>60%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 50.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 50.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>40%</span>
+            <span>80%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Output</span>
+            <span style="white-space: nowrap;">113 kg/cycle</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 61.5%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 61.5%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>70 kg/cycle</span>
+            <span>140 kg/cycle</span>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 3px 9px; border: 1px solid rgba(144, 202, 249, 0.5); border-radius: 4px; color: #90caf9; font-size: 13px; line-height: 1.75; font-weight: 500; letter-spacing: 0.02857em; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" style="display: block; fill: #90caf9; flex-shrink: 0;"><path d="M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path><path d="M6 11 7.41 12.41 12 7.83l4.59 4.58L18 11l-6-6z"></path></svg>
+            <span>Best case</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 12px; border-radius: 4px; background: rgba(127, 127, 127, 0.08);">
+          <div style="font-size: 12px; line-height: 2.66; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7);">In game this reads</div>
+          <div style="margin-top: 8px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; font-size: 14px; line-height: 1.43;">
+            <div style="color: rgba(255, 255, 255, 0.7);">Natural Gas</div><div style="text-align: right;">357.5 g/s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Eruption Period</div><div style="text-align: right;">307 s every 582 s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Active Period</div><div style="text-align: right;">64.1 cycles every 106.8 cycles</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Average Output</div><div style="text-align: right;">113 g/s</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 360px; box-sizing: border-box; margin: 4px; padding: 16px; border-radius: 4px; background: #1e1e1e; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12); display: flex; flex-direction: column;">
+        <div style="margin-bottom: 8px;">
+          <div style="font-size: 20px; line-height: 1.6; font-weight: 500;">Cool Slush Geyser NA52‑4</div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); font-size: 13px; line-height: 18px;">IdealLandingSite</span>
+            <span style="margin-left: auto; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">-10 °C</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255, 255, 255, 0.12);"></div>
+        <div style="display: flex; align-items: center; height: 56px; box-sizing: border-box; margin-top: 12px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, 0.23); border-radius: 4px; font-size: 16px; line-height: 1.5;">
+          <span style="flex-grow: 1;">Cool Slush Geyser</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" style="display: block; fill: rgba(255, 255, 255, 0.54); flex-shrink: 0;"><path d="m7 10 5 5 5-5z"></path></svg>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Eruption Cycle</span>
+            <span style="white-space: nowrap;">698 s</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 59.1%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 59.1%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>60 s</span>
+            <span>1140 s</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Erupting</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">310 s</span>44.4%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 43.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 43.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>10%</span>
+            <span>90%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Full Cycle</span>
+            <span style="white-space: nowrap;">131.7 cycles</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 53.4%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 53.4%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>25 cycles</span>
+            <span>225 cycles</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Active</span>
+            <span style="white-space: nowrap;"><span style="font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, 0.7); margin-right: 8px;">81.7 cycles</span>62.1%</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 55.1%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 55.1%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>40%</span>
+            <span>80%</span>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 16px; line-height: 1.5;">
+            <span>Output</span>
+            <span style="white-space: nowrap;">1500 kg/cycle</span>
+          </div>
+          <div style="position: relative; height: 4px; margin: 13px 0; border-radius: 6px; background: rgba(144, 202, 249, 0.38);">
+            <div style="position: absolute; left: 0; top: 0; height: 4px; width: 50.0%; border-radius: 6px; background: #90caf9;"></div>
+            <div style="position: absolute; top: 50%; left: 50.0%; width: 20px; height: 20px; margin-left: -10px; margin-top: -10px; border-radius: 50%; background: #90caf9; box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">
+            <span>1000 kg/cycle</span>
+            <span>2000 kg/cycle</span>
+          </div>
+        </div>
+        <div style="margin-top: 16px; display: flex; flex-direction: column; align-items: flex-start;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 3px 9px; border: 1px solid rgba(144, 202, 249, 0.5); border-radius: 4px; color: #90caf9; font-size: 13px; line-height: 1.75; font-weight: 500; letter-spacing: 0.02857em; text-transform: uppercase;">
+            <svg width="18" height="18" viewBox="0 0 24 24" style="display: block; fill: #90caf9; flex-shrink: 0;"><path d="M6 17.59 7.41 19 12 14.42 16.59 19 18 17.59l-6-6z"></path><path d="M6 11 7.41 12.41 12 7.83l4.59 4.58L18 11l-6-6z"></path></svg>
+            <span>Best case</span>
+          </div>
+          <div style="margin-top: 4px; font-size: 12px; line-height: 1.66; color: rgba(255, 255, 255, 0.7);">Output and active time to their maximum, full cycle to its shortest: the most material, with the shortest gap to buffer.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 12px; border-radius: 4px; background: rgba(127, 127, 127, 0.08);">
+          <div style="font-size: 12px; line-height: 2.66; letter-spacing: 0.08333em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7);">In game this reads</div>
+          <div style="margin-top: 8px; display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 4px; font-size: 14px; line-height: 1.43;">
+            <div style="color: rgba(255, 255, 255, 0.7);">Polluted Water</div><div style="text-align: right;">5.6 kg/s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Eruption Period</div><div style="text-align: right;">310 s every 698 s</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Active Period</div><div style="text-align: right;">81.7 cycles every 131.7 cycles</div>
+            <div style="color: rgba(255, 255, 255, 0.7);">Average Output</div><div style="text-align: right;">1.6 kg/s</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

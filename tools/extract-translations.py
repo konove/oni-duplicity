@@ -280,6 +280,28 @@ def stats_group(po, english):
     return out
 
 
+WORLDS_ROOT = "STRINGS.WORLDS"
+WORLD_NAME = re.compile(r"^STRINGS\.WORLDS\.([A-Z0-9_]+)\.NAME$")
+
+
+def worlds_group(po, english):
+    """World display names, keyed by the tail of a WorldContainer's worldType.
+
+    A save names each asteroid's kind by catalogue key - "STRINGS.WORLDS.
+    IDEALLANDINGSITE.NAME" - which the Worlds page used to shorten to the raw
+    id. The catalogue is the only place the game's own name for it lives.
+    """
+    out = OrderedDict()
+    for key, (msgid, msgstr) in po.items():
+        match = WORLD_NAME.match(key)
+        if not match:
+            continue
+        value = msgid if english else msgstr
+        if value.strip():
+            out[match.group(1)] = OrderedDict([("NAME", normalize(value))])
+    return out
+
+
 GEYSER_ROOT = "STRINGS.CREATURES.SPECIES.GEYSER"
 
 
@@ -414,12 +436,13 @@ def main():
             po, english=True)
         en["DUPLICANTS"]["DISEASES"] = diseases_group(po, english=True)
         en["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=True)
+        en["WORLDS"] = worlds_group(po, english=True)
         io.open(en_path, "w", encoding="utf-8", newline="\n").write(
             json.dumps(en, ensure_ascii=False, indent=2) + "\n")
         print("seeded en/oni.json with %d element names and %d difficulty settings"
               % (len(en["ELEMENTS"]), len(en["DIFFICULTY"])))
-        print("  plus %d geyser names and %d item names"
-              % (len(en["GEYSERS"]), len(en["ITEMS"])))
+        print("  plus %d geyser names, %d world names and %d item names"
+              % (len(en["GEYSERS"]), len(en["WORLDS"]), len(en["ITEMS"])))
         return
 
     stats = {"total": 0, "translated": 0, "ambiguous": 0}
@@ -431,6 +454,7 @@ def main():
     stats["translated"] += len(result["ITEMS"])
     result["DIFFICULTY"] = difficulty_group(po, english=False)
     result["GEYSERS"] = geysers_group(po, geyser_type_names(repo_root), english=False)
+    result["WORLDS"] = worlds_group(po, english=False)
     stats["total"] += len(names)
     stats["translated"] += len(result["ELEMENTS"])
     out_path = os.path.join(here, "..", "src", "translations", lang, "oni.json")

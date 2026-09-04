@@ -94,6 +94,9 @@
   },
   "world": {
     "noun_titlecase_plural": "Миры",
+    "all_titlecase": "Все",
+    "elsewhere": "В другом месте",
+    "pick_titlecase": "Астероид",
     "starting_world": "Стартовый мир",
     "rocket_interior": "Внутри ракеты",
     "name_titlecase": "Название",

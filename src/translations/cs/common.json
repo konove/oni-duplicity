@@ -94,6 +94,9 @@
   },
   "world": {
     "noun_titlecase_plural": "Světy",
+    "all_titlecase": "Vše",
+    "elsewhere": "Jinde",
+    "pick_titlecase": "Asteroid",
     "starting_world": "Startovní svět",
     "rocket_interior": "Interiér rakety",
     "name_titlecase": "Název",

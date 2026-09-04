@@ -4361,5 +4361,241 @@
     "idle_mound": {
       "NAME": "Burrowed"
     }
+  },
+  "WORLDS": {
+    "AQUATICBASEGAME": {
+      "NAME": "Marinea"
+    },
+    "AQUATICCLASSIC": {
+      "NAME": "Marinea Asteroid"
+    },
+    "AQUATICMIXING": {
+      "NAME": "Marinea Fragment"
+    },
+    "AQUATICSPACEDOUT": {
+      "NAME": "Marinea Minor"
+    },
+    "BADLANDS": {
+      "NAME": "The Badlands"
+    },
+    "BIGEMPTY": {
+      "NAME": "Big Empty FOR DEVS"
+    },
+    "CERESBASEGAME": {
+      "NAME": "Ceres"
+    },
+    "CERESBASEGAMESHATTERED": {
+      "NAME": "Blasted Ceres"
+    },
+    "CERESCLASSIC": {
+      "NAME": "Ceres Asteroid"
+    },
+    "CERESCLASSICSHATTERED": {
+      "NAME": "Blasted Ceres"
+    },
+    "CERESMIXING": {
+      "NAME": "Ceres Fragment"
+    },
+    "CERESSPACEDOUT": {
+      "NAME": "Ceres Minor"
+    },
+    "FOREST_DEFAULT": {
+      "NAME": "Arboria"
+    },
+    "FOREST_HOT": {
+      "NAME": "Aridio"
+    },
+    "FOREST_LUSH": {
+      "NAME": "Verdante"
+    },
+    "FORESTMOONLET": {
+      "NAME": "Folia Asteroid"
+    },
+    "HELICONA": {
+      "NAME": "Helicona"
+    },
+    "IDEALLANDINGSITE": {
+      "NAME": "Irradiated Forest Asteroid"
+    },
+    "MARSHYMOONLET": {
+      "NAME": "Marshy Asteroid"
+    },
+    "MEDIUMFORESTYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Radioactive Forest Asteroid"
+    },
+    "MEDIUMFORESTYWASTELAND": {
+      "NAME": "Glowood Wasteland Asteroid"
+    },
+    "MEDIUMRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Radioactive Swamp Asteroid"
+    },
+    "MEDIUMSANDYRADIOACTIVEVANILLAWARPPLANET": {
+      "NAME": "Radioactive Terra Asteroid"
+    },
+    "MEDIUMSANDYSWAMP": {
+      "NAME": "Radioactive Terrabog Asteroid"
+    },
+    "MEDIUMSWAMPY": {
+      "NAME": "Stinko Swamp Asteroid"
+    },
+    "METALHEAVYLANDINGSITE": {
+      "NAME": "Irradiated Marsh Asteroid"
+    },
+    "MINIBADLANDS": {
+      "NAME": "The Desolands Asteroid"
+    },
+    "MINIFLIPPED": {
+      "NAME": "Flipped Asteroid"
+    },
+    "MINIFORESTFROZEN": {
+      "NAME": "Frozen Forest Asteroid"
+    },
+    "MINIMETALLICSWAMPY": {
+      "NAME": "Metallic Swampy Asteroid"
+    },
+    "MINIRADIOACTIVEOCEAN": {
+      "NAME": "Radioactive Ocean Asteroid"
+    },
+    "MINISHATTEREDGEO": {
+      "NAME": "Ceres Core Asteroid"
+    },
+    "MINISHATTEREDSTART": {
+      "NAME": "Ceres Mantle Asteroid"
+    },
+    "MINISHATTEREDWARP": {
+      "NAME": "Sweet Ceres Asteroid"
+    },
+    "MOOMOONLET": {
+      "NAME": "Moo Asteroid"
+    },
+    "MOON_BARREN": {
+      "NAME": "Barren Moon"
+    },
+    "NIOBIUMMOONLET": {
+      "NAME": "Superconductive Asteroid"
+    },
+    "OASIS": {
+      "NAME": "Oasisse"
+    },
+    "OCEANIA": {
+      "NAME": "Oceania"
+    },
+    "OILRICHWARPTARGET": {
+      "NAME": "Rusty Oil Asteroid"
+    },
+    "OILYMOONLET": {
+      "NAME": "Viscosia Asteroid"
+    },
+    "PREHISTORICBASEGAME": {
+      "NAME": "Relica"
+    },
+    "PREHISTORICCLASSIC": {
+      "NAME": "Relica Asteroid"
+    },
+    "PREHISTORICMIXING": {
+      "NAME": "Relica Fragment"
+    },
+    "PREHISTORICSHATTERED": {
+      "NAME": "RelicAAAA<sup>AAAGHH</sup>"
+    },
+    "PREHISTORICSPACEDOUT": {
+      "NAME": "Relica Minor"
+    },
+    "REGOLITHMOONLET": {
+      "NAME": "Regolith Asteroid"
+    },
+    "SANDSTONE_DEFAULT": {
+      "NAME": "Terra"
+    },
+    "SANDSTONE_FROZEN": {
+      "NAME": "Rime"
+    },
+    "STRANGE_ASTEROID_KF23": {
+      "NAME": "Skewed Asteroid"
+    },
+    "STRANGERICHSANDSTONE": {
+      "NAME": "Rocky Asteroid"
+    },
+    "SULFURMOONLET": {
+      "NAME": "Brimstonia Asteroid"
+    },
+    "SWAMPMOONLET": {
+      "NAME": "Quagmiris Asteroid"
+    },
+    "SWAMPYLANDINGSITE": {
+      "NAME": "Irradiated Swampy Asteroid"
+    },
+    "TERRAMOONLET": {
+      "NAME": "Terrania Asteroid"
+    },
+    "THE_ROCK": {
+      "NAME": "The Rock"
+    },
+    "TINYEMPTY": {
+      "NAME": "Tiny Empty FOR DEVS"
+    },
+    "TINYFOREST": {
+      "NAME": "Tiny Forest FOR DEVS"
+    },
+    "TINYICE": {
+      "NAME": "Tiny Ice FOR DEVS"
+    },
+    "TINYMAGMA": {
+      "NAME": "Tiny Magma FOR DEVS"
+    },
+    "TINYSTART": {
+      "NAME": "Tiny Start FOR DEVS"
+    },
+    "TINYSURFACE": {
+      "NAME": "Tiny Surface FOR DEVS"
+    },
+    "TUNDRAMOONLET": {
+      "NAME": "Tundra Asteroid"
+    },
+    "TWINMOONLET": {
+      "NAME": "Tiny Twin Asteroid FOR DEVS"
+    },
+    "VANILLAARBORIA": {
+      "NAME": "Arboria Asteroid"
+    },
+    "VANILLAARIDIO": {
+      "NAME": "Aridio Asteroid"
+    },
+    "VANILLABADLANDS": {
+      "NAME": "The Badlands Asteroid"
+    },
+    "VANILLAFORESTDEFAULT": {
+      "NAME": "Verdante Asteroid"
+    },
+    "VANILLAOASIS": {
+      "NAME": "Oasisse Asteroid"
+    },
+    "VANILLAOCEANIA": {
+      "NAME": "Oceania Asteroid"
+    },
+    "VANILLASANDSTONEDEFAULT": {
+      "NAME": "Terra Asteroid"
+    },
+    "VANILLASANDSTONEFROZEN": {
+      "NAME": "Rime Asteroid"
+    },
+    "VANILLASWAMPDEFAULT": {
+      "NAME": "Squelchy Asteroid"
+    },
+    "VANILLAVOLCANIC": {
+      "NAME": "Volcanea Asteroid"
+    },
+    "VOLCANIC": {
+      "NAME": "Volcanea"
+    },
+    "WARPOILYSANDYSWAMP": {
+      "NAME": "Oily Sandy Swamp Asteroid"
+    },
+    "WARPOILYSWAMP": {
+      "NAME": "Oily Swamp Asteroid"
+    },
+    "WATERMOONLET": {
+      "NAME": "Water Asteroid"
+    }
   }
 }

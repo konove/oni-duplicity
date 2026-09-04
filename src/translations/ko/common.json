@@ -94,6 +94,9 @@
   },
   "world": {
     "noun_titlecase_plural": "세계",
+    "all_titlecase": "전체",
+    "elsewhere": "기타",
+    "pick_titlecase": "소행성",
     "starting_world": "시작 세계",
     "rocket_interior": "로켓 내부",
     "name_titlecase": "이름",

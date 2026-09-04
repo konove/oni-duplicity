@@ -79,7 +79,9 @@ const WorldListItem: React.FC<WorldListItemProps> = ({
   return (
     <Paper className={classnames(className, styles.root)}>
       <div className={styles.titleBar}>
-        <Typography variant="h6">{worldDisplayName(templateData)}</Typography>
+        <Typography variant="h6">
+          {worldDisplayName(templateData, t)}
+        </Typography>
         {isStartWorld && (
           <Chip size="small" label={t("world.starting_world")} />
         )}

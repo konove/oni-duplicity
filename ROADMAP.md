@@ -37,8 +37,8 @@ Three conclusions shaped the ordering:
 through 0.8, 0.10, 0.11, 0.12, 1.1, 1.7 — which needed no code at all, only checking — 1.8, 1.9 and
 1.10. A further one, 0.9, closed the other way: the editor's totals differ from the game's panel
 because the panel hides unreachable material and counts one asteroid, so there was never anything to
-fix. **Tier 0 is down to two**, and both are questions about how the thing is laid out rather than what
-it can see (0.13, 0.14). Tier 1 has 1.2, 1.3, 1.5 and 1.6 open; 1.1 and 1.7 through 1.10 are done, and
+fix. **Tier 0 is down to one**, 0.13, which is a question about how the drawer is laid out rather than
+what it can see; 0.14 shipped as tabs per asteroid. Tier 1 has 1.2, 1.3, 1.5 and 1.6 open; 1.1 and 1.7 through 1.10 are done, and
 1.4 is declined.
 
 **1.10 closed the largest gap in the document**, and it had nothing to do with the save format: nothing
@@ -393,38 +393,32 @@ follows the save's object types rather than any task someone sits down to do.
 Worth asking whether the drawer should be organised around what people came to
 change. **Effort: L, and a design question before it is an engineering one.**
 
-### 0.14 Nothing in a list says _which_ one it is
+### 0.14 Nothing in a list says _which_ one it is — **done**
 
-Every list page renders identical cards. Two copper volcanoes are
-indistinguishable, and in a Spaced Out cluster the two next to each other in the
-grid may be on different asteroids — the page gives no hint either way. It
-affects Creatures and Duplicants the same way; geysers are just where it was
-noticed.
+Shipped on the Geysers page. The card heading is now the name the game gave
+the geyser — `UserNameable.savedName`, "Cool Chlorine Gas Vent UO31‑3", code
+and all — with the type left to the dropdown; every geyser in the 7.36 and
+7.38 saves on hand carries one, index 0 included, and an empty name falls back
+to the type. The asteroid is a tab strip under the app bar: **All**, then one
+tab per world with its count, where All groups the cards under a heading per
+world and a world's tab shows only its own. Tabs rather than section headings
+because a card is taller than a window, so a heading alone is off screen most
+of the time; the strip is what says which asteroids there are. With everything
+on one world — every base game save, and any cluster that keeps its geysers
+together — there is nothing to pick and the page is the plain list it was.
 
-Both halves of the answer are already in the save and thrown away:
+The position-to-world join is shared, as this entry asked: `worldsSelector`
+lists every world's rect, `worldIdForPosition` and `groupGameObjectsByWorld`
+in `worlds.ts` do the containment, and `useGameObjectWorlds(ids)` hands any
+list page its groups. Duplicants and Creatures can take the same strip from it.
 
-- **The object has a name.** A geyser carries a `UserNameable` behavior, and in
-  the mock save it holds `"Cool Chlorine Gas Vent UO31‑3"` — the game's own
-  per-object identifier, code and all. The card prints the _type_ name twice
-  instead, in the heading and again in the dropdown. Showing `savedName` as the
-  heading is small and fixes most of this on its own.
-- **The asteroid is a rectangle test.** There is no per-object world id;
-  `worlds.ts` already documents why. Worlds tile one global grid, so each owns
-  the rect at its `WorldContainer.worldOffset` of size `worldSize`, and an
-  object belongs to whichever rect contains its position. Confirmed against the
-  mock save, which has two asteroids: the geyser at `(111.5, 125)` resolves to
-  world 0 and only world 0. `worldDisplayName()` already exists for the heading.
-
-**Verify first:** whether `savedName` is ever empty. Only one geyser has been
-looked at. If a never-renamed object stores `""` rather than the auto-generated
-name, the heading needs a fallback to the type name.
-
-**Effort: S** for the name, **M** for grouping. **Decide up front** whether the
-position-to-world join is a shared selector — every list page wants it — or a
-one-off on the Geysers page. Doing it once is the reason to build it
-deliberately rather than inline. Grouping is also a layout question (headings,
-collapsing, what happens in a one-asteroid base-game save) and worth a design
-pass before code.
+Two things turned up on the way. A world the player never renamed used to
+print the tail of its namespaced id — "IdealLandingSite" — which is not a
+name the game ever shows; `worldDisplayName` now looks the kind up through
+the catalogue key in `worldType`, so it reads "Irradiated Forest Asteroid",
+and `tools/extract-translations.py` carries a `WORLDS` group for it. And
+creatures do not carry `UserNameable` unless renamed, so their heading will
+need a different source when their page takes this.
 
 ---
 
